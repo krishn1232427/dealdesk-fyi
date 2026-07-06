@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Opening Merchant | DealDesk</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell narrow-shell">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="/">DealDesk</a>
+        <div class="links">
+          <a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
+        </div>
+      </nav>
+
+      <section class="section">
+        <p class="eyebrow">Affiliate Disclosure</p>
+        <h1 class="compact-title">Opening merchant site.</h1>
+        <p id="status">
+          DealDesk may earn a commission from some purchases. The merchant cart remains
+          the source of truth for final price, taxes, shipping, availability, and return terms.
+        </p>
+        <p id="fallback" hidden>
+          <a class="button" id="merchant-link" href="/">Continue to merchant</a>
+        </p>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var sovrnAPIKey = "c7f1da3c99daa51ab64a1d51fc8b088f";
+        var params = new URLSearchParams(window.location.search);
+        var rawURL = params.get("url");
+        var subID = cleanSubID(params.get("subid")) || "dealdesksite";
+        var status = document.getElementById("status");
+        var fallback = document.getElementById("fallback");
+        var merchantLink = document.getElementById("merchant-link");
+
+        function fail(message) {
+          status.textContent = message;
+          fallback.hidden = true;
+        }
+
+        if (!rawURL) {
+          fail("No merchant URL was provided.");
+          return;
+        }
+
+        var destination;
+        try {
+          destination = new URL(rawURL);
+        } catch (error) {
+          fail("The merchant URL is not valid.");
+          return;
+        }
+
+        if (destination.protocol !== "http:" && destination.protocol !== "https:") {
+          fail("DealDesk can only open web merchant URLs.");
+          return;
+        }
+
+        var affiliateURL = new URL("https://redirect.viglink.com/");
+        affiliateURL.searchParams.set("key", sovrnAPIKey);
+        affiliateURL.searchParams.set("u", destination.href);
+        affiliateURL.searchParams.set("cuid", subID);
+
+        merchantLink.href = affiliateURL.href;
+        fallback.hidden = false;
+        window.setTimeout(function () {
+          window.location.replace(affiliateURL.href);
+        }, 350);
+
+        function cleanSubID(value) {
+          if (!value) return "";
+          return value.replace(/[^a-zA-Z0-9]/g, "").slice(0, 32);
+        }
+      })();
+    </script>
+  </body>
+</html>

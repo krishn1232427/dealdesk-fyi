@@ -38,6 +38,10 @@ a {
   padding: 28px 0 64px;
 }
 
+.narrow-shell {
+  width: min(640px, calc(100% - 40px));
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -87,6 +91,10 @@ h1 {
   letter-spacing: 0;
   line-height: .96;
   margin: 0 0 24px;
+}
+
+.compact-title {
+  font-size: clamp(34px, 7vw, 52px);
 }
 
 h2 {
