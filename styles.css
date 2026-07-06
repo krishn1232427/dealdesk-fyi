@@ -147,6 +147,46 @@ li {
   padding: 34px 0 0;
 }
 
+.reward-table {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.reward-row {
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  min-height: 54px;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+.reward-row span {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.reward-row strong {
+  color: var(--accent-dark);
+  flex: 0 0 auto;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.reward-row.muted strong {
+  color: var(--muted);
+}
+
 .footer {
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -167,6 +207,10 @@ li {
   }
 
   .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reward-table {
     grid-template-columns: 1fr;
   }
 }
