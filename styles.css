@@ -168,11 +168,32 @@ li {
   text-decoration: none;
 }
 
-.reward-row span {
+.reward-brand {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  min-width: 0;
+}
+
+.reward-logo {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  height: 34px;
+  object-fit: contain;
+  padding: 5px;
+  width: 34px;
+}
+
+.reward-row > span,
+.reward-brand span {
   color: var(--ink);
   font-size: 15px;
   font-weight: 750;
   line-height: 1.25;
+  min-width: 0;
 }
 
 .reward-row strong {
