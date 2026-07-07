@@ -114,6 +114,75 @@
       </section>
 
       <section class="section">
+        <p class="eyebrow">Best Deals</p>
+        <h2>Curated affiliate picks we can refresh without changing the app.</h2>
+        <p>
+          These picks prioritize merchants with clear preferred-network rewards after
+          DealDesk's 0.5% cut. Final payout eligibility is controlled by each merchant.
+        </p>
+        <div id="best-deals-grid" class="deal-picks" aria-label="Curated best deals"></div>
+        <script>
+          (function () {
+            var grid = document.getElementById("best-deals-grid");
+            if (!grid) {
+              return;
+            }
+
+            fetch("/data/best-deals.json", { cache: "no-store" })
+              .then(function (response) {
+                if (!response.ok) {
+                  throw new Error("Feed unavailable");
+                }
+                return response.json();
+              })
+              .then(function (feed) {
+                var deals = (feed.deals || []).slice(0, 9);
+                deals.forEach(function (deal) {
+                  if (!deal.url || !deal.title) {
+                    return;
+                  }
+
+                  var merchantURL = deal.merchantURL || deal.url;
+                  var card = document.createElement("a");
+                  card.className = "deal-pick";
+                  card.href = "/out/?url=" + encodeURIComponent(merchantURL) + "&subid=dealdesksite";
+                  card.rel = "sponsored nofollow";
+
+                  var brand = document.createElement("span");
+                  brand.className = "deal-pick-brand";
+
+                  var logo = document.createElement("img");
+                  logo.alt = "";
+                  logo.className = "deal-pick-logo";
+                  logo.loading = "lazy";
+                  logo.src = deal.imageURL || "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(new URL(merchantURL).hostname) + "&sz=64";
+
+                  var merchant = document.createElement("span");
+                  merchant.textContent = deal.merchantName || new URL(merchantURL).hostname.replace(/^www\./, "");
+
+                  var title = document.createElement("strong");
+                  title.textContent = deal.title;
+
+                  var summary = document.createElement("span");
+                  summary.className = "deal-pick-summary";
+                  summary.textContent = deal.summary || "Check merchant terms before buying.";
+
+                  brand.appendChild(logo);
+                  brand.appendChild(merchant);
+                  card.appendChild(brand);
+                  card.appendChild(title);
+                  card.appendChild(summary);
+                  grid.appendChild(card);
+                });
+              })
+              .catch(function () {
+                grid.innerHTML = '<p class="muted-copy">Curated picks are temporarily unavailable.</p>';
+              });
+          })();
+        </script>
+      </section>
+
+      <section class="section">
         <p class="eyebrow">Merchant Rewards</p>
         <h2>Preferred merchant rates after DealDesk's 0.5% cut.</h2>
         <p>

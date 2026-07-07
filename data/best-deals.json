@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-07T05:50:00Z",
+  "curationNote": "DealDesk picks prioritize preferred affiliate merchants with clear customer-facing reward rates after DealDesk's 0.5 percentage point cut. Final eligibility is controlled by each merchant and affiliate network.",
+  "deals": [
+    {
+      "id": "dealdesk-cvs-reward-20260707",
+      "title": "CVS pharmacy and essentials with 69.5% back eligible reward",
+      "url": "https://www.cvs.com/",
+      "merchantURL": "https://www.cvs.com/",
+      "merchantName": "CVS",
+      "imageURL": "https://www.google.com/s2/favicons?domain=cvs.com&sz=128",
+      "category": "Grocery",
+      "summary": "Top current DealDesk preferred merchant reward after our 0.5% cut. Check eligible items and merchant exclusions before buying.",
+      "publishedAt": "2026-07-07T05:50:00Z",
+      "priority": 1
+    },
+    {
+      "id": "dealdesk-bioptimizers-reward-20260707",
+      "title": "BiOptimizers supplements with 22% back eligible reward",
+      "url": "https://bioptimizers.com/",
+      "merchantURL": "https://bioptimizers.com/",
+      "merchantName": "BiOptimizers",
+      "imageURL": "https://www.google.com/s2/favicons?domain=bioptimizers.com&sz=128",
+      "category": "General",
+      "summary": "High customer-facing reward from the preferred merchant list. Confirm subscription terms, shipping, and exclusions.",
+      "publishedAt": "2026-07-07T05:49:00Z",
+      "priority": 2
+    },
+    {
+      "id": "dealdesk-savage-x-fenty-reward-20260707",
+      "title": "Savage X Fenty with 19.5% back eligible reward",
+      "url": "https://www.savagex.com/",
+      "merchantURL": "https://www.savagex.com/",
+      "merchantName": "Savage X Fenty",
+      "imageURL": "https://www.google.com/s2/favicons?domain=savagex.com&sz=128",
+      "category": "Style",
+      "summary": "Strong apparel reward after the DealDesk cut. Review membership terms before checkout.",
+      "publishedAt": "2026-07-07T05:48:00Z",
+      "priority": 3
+    },
+    {
+      "id": "dealdesk-beekeepers-naturals-reward-20260707",
+      "title": "Beekeeper's Naturals with 14.5% back eligible reward",
+      "url": "https://www.beekeepersnaturals.com/",
+      "merchantURL": "https://www.beekeepersnaturals.com/",
+      "merchantName": "Beekeeper's Naturals",
+      "imageURL": "https://www.google.com/s2/favicons?domain=beekeepersnaturals.com&sz=128",
+      "category": "General",
+      "summary": "Preferred merchant reward for wellness items. Confirm coupons and subscription settings before purchase.",
+      "publishedAt": "2026-07-07T05:47:00Z",
+      "priority": 4
+    },
+    {
+      "id": "dealdesk-zenni-reward-20260707",
+      "title": "Zenni Optical eyewear with 14.5% back eligible reward",
+      "url": "https://www.zennioptical.com/",
+      "merchantURL": "https://www.zennioptical.com/",
+      "merchantName": "Zenni Optical",
+      "imageURL": "https://www.google.com/s2/favicons?domain=zennioptical.com&sz=128",
+      "category": "Style",
+      "summary": "High eyewear reward from a preferred merchant. Check prescription details, shipping, and return limits.",
+      "publishedAt": "2026-07-07T05:46:00Z",
+      "priority": 5
+    },
+    {
+      "id": "dealdesk-aliexpress-reward-20260707",
+      "title": "AliExpress marketplace deals with 12.5% back eligible reward",
+      "url": "https://www.aliexpress.com/",
+      "merchantURL": "https://www.aliexpress.com/",
+      "merchantName": "AliExpress",
+      "imageURL": "https://www.google.com/s2/favicons?domain=aliexpress.com&sz=128",
+      "category": "General",
+      "summary": "Broad marketplace reward after the DealDesk cut. Compare shipping times and seller ratings.",
+      "publishedAt": "2026-07-07T05:45:00Z",
+      "priority": 6
+    },
+    {
+      "id": "dealdesk-stubhub-reward-20260707",
+      "title": "StubHub tickets with 11.5% back eligible reward",
+      "url": "https://www.stubhub.com/",
+      "merchantURL": "https://www.stubhub.com/",
+      "merchantName": "StubHub",
+      "imageURL": "https://www.google.com/s2/favicons?domain=stubhub.com&sz=128",
+      "category": "General",
+      "summary": "Ticket marketplace reward after the DealDesk cut. Review all fees before purchase.",
+      "publishedAt": "2026-07-07T05:44:00Z",
+      "priority": 7
+    },
+    {
+      "id": "dealdesk-kiehls-reward-20260707",
+      "title": "Kiehl's skincare with 11.5% back eligible reward",
+      "url": "https://www.kiehls.com/",
+      "merchantURL": "https://www.kiehls.com/",
+      "merchantName": "Kiehl's",
+      "imageURL": "https://www.google.com/s2/favicons?domain=kiehls.com&sz=128",
+      "category": "Style",
+      "summary": "Preferred beauty merchant reward. Check sample offers, coupon terms, and shipping thresholds.",
+      "publishedAt": "2026-07-07T05:43:00Z",
+      "priority": 8
+    },
+    {
+      "id": "dealdesk-getyourguide-reward-20260707",
+      "title": "GetYourGuide travel experiences with 10% back eligible reward",
+      "url": "https://www.getyourguide.com/",
+      "merchantURL": "https://www.getyourguide.com/",
+      "merchantName": "GetYourGuide",
+      "imageURL": "https://www.google.com/s2/favicons?domain=getyourguide.com&sz=128",
+      "category": "Travel",
+      "summary": "Travel activity reward after the DealDesk cut. Review date, cancellation, and local fee terms.",
+      "publishedAt": "2026-07-07T05:42:00Z",
+      "priority": 9
+    },
+    {
+      "id": "dealdesk-groupon-reward-20260707",
+      "title": "Groupon local deals with up to 9.5% back eligible reward",
+      "url": "https://www.groupon.com/",
+      "merchantURL": "https://www.groupon.com/",
+      "merchantName": "Groupon",
+      "imageURL": "https://www.google.com/s2/favicons?domain=groupon.com&sz=128",
+      "category": "General",
+      "summary": "Local and online Groupon offers with a reward range after DealDesk's cut. Confirm voucher restrictions.",
+      "publishedAt": "2026-07-07T05:41:00Z",
+      "priority": 10
+    },
+    {
+      "id": "dealdesk-kendra-scott-reward-20260707",
+      "title": "Kendra Scott jewelry with 9.5% back eligible reward",
+      "url": "https://www.kendrascott.com/",
+      "merchantURL": "https://www.kendrascott.com/",
+      "merchantName": "Kendra Scott",
+      "imageURL": "https://www.google.com/s2/favicons?domain=kendrascott.com&sz=128",
+      "category": "Style",
+      "summary": "Preferred jewelry merchant reward. Check sale exclusions and shipping before checkout.",
+      "publishedAt": "2026-07-07T05:40:00Z",
+      "priority": 11
+    },
+    {
+      "id": "dealdesk-pampered-chef-reward-20260707",
+      "title": "Pampered Chef kitchen goods with 9.5% back eligible reward",
+      "url": "https://www.pamperedchef.com/",
+      "merchantURL": "https://www.pamperedchef.com/",
+      "merchantName": "Pampered Chef",
+      "imageURL": "https://www.google.com/s2/favicons?domain=pamperedchef.com&sz=128",
+      "category": "Home",
+      "summary": "Kitchen merchant reward after the DealDesk cut. Confirm party, host, and offer eligibility.",
+      "publishedAt": "2026-07-07T05:39:00Z",
+      "priority": 12
+    }
+  ]
+}
