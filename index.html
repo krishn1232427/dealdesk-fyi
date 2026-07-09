@@ -183,6 +183,112 @@
       </section>
 
       <section class="section">
+        <p class="eyebrow">Awin Programs</p>
+        <h2>Direct affiliate links prepared from the Awin onboarding path.</h2>
+        <p>
+          The Awin account in the onboarding email is wired into DealDesk links when a public
+          advertiser ID is available. Payout still depends on joining the advertiser program,
+          following its terms, attribution, transaction validation, and completed payout setup.
+        </p>
+        <div id="affiliate-programs-grid" class="program-grid" aria-label="Awin affiliate programs"></div>
+        <p class="muted-copy">
+          Need more advertisers? Browse the
+          <a href="https://www.awin.com/us/search/advertiser-directory" rel="nofollow">
+            Awin advertiser directory
+          </a>
+          and add approved program IDs to this feed.
+        </p>
+        <script>
+          (function () {
+            var grid = document.getElementById("affiliate-programs-grid");
+            if (!grid) {
+              return;
+            }
+
+            fetch("/data/affiliate-programs.json", { cache: "no-store" })
+              .then(function (response) {
+                if (!response.ok) {
+                  throw new Error("Affiliate program feed unavailable");
+                }
+                return response.json();
+              })
+              .then(function (feed) {
+                var programs = (feed.programs || []).slice(0, 6);
+                programs.forEach(function (program) {
+                  if (!program.merchantURL || !program.advertiserID || program.network !== "awin") {
+                    return;
+                  }
+
+                  var merchantURL = new URL(program.merchantURL);
+                  var outURL = "/out/?network=awin&awinmid=" + encodeURIComponent(program.advertiserID)
+                    + "&url=" + encodeURIComponent(merchantURL.href)
+                    + "&subid=dealdesksite";
+
+                  var card = document.createElement("article");
+                  card.className = "program-card";
+
+                  var brand = document.createElement("span");
+                  brand.className = "deal-pick-brand";
+
+                  var logo = document.createElement("img");
+                  logo.alt = "";
+                  logo.className = "deal-pick-logo";
+                  logo.loading = "lazy";
+                  logo.src = "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(merchantURL.hostname) + "&sz=64";
+
+                  var merchant = document.createElement("span");
+                  merchant.textContent = program.merchantName || merchantURL.hostname.replace(/^www\./, "");
+
+                  var title = document.createElement("strong");
+                  title.textContent = program.merchantName + " Awin deep link";
+
+                  var summary = document.createElement("p");
+                  summary.className = "program-summary";
+                  summary.textContent = program.summary || "Review program terms before promoting.";
+
+                  var meta = document.createElement("p");
+                  meta.className = "program-meta";
+                  meta.textContent = [
+                    "Awin ID " + program.advertiserID,
+                    program.commission,
+                    program.attribution,
+                    program.status
+                  ].filter(Boolean).join(" | ");
+
+                  var actions = document.createElement("p");
+                  actions.className = "program-actions";
+
+                  var openLink = document.createElement("a");
+                  openLink.className = "button";
+                  openLink.href = outURL;
+                  openLink.rel = "sponsored nofollow";
+                  openLink.textContent = "Open Awin link";
+
+                  var profileLink = document.createElement("a");
+                  profileLink.href = program.profileURL || "https://www.awin.com/us/search/advertiser-directory";
+                  profileLink.rel = "nofollow";
+                  profileLink.textContent = "Awin profile";
+
+                  brand.appendChild(logo);
+                  brand.appendChild(merchant);
+                  actions.appendChild(openLink);
+                  actions.appendChild(profileLink);
+                  card.appendChild(brand);
+                  card.appendChild(title);
+                  card.appendChild(summary);
+                  card.appendChild(meta);
+                  card.appendChild(actions);
+                  grid.appendChild(card);
+                });
+              })
+              .catch(function () {
+                grid.innerHTML = '<p class="muted-copy">Awin program links are temporarily unavailable.</p>';
+              });
+          })();
+        </script>
+      </section>
+
+      <section class="section">
         <p class="eyebrow">Merchant Rewards</p>
         <h2>Preferred merchant rates after DealDesk's 0.5% cut.</h2>
         <p>

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-09T16:25:35Z",
+  "source": "Awin onboarding email and public Awin advertiser profile pages",
+  "publisherID": "2973087",
+  "disclosure": "Awin links are generated for approved advertiser programs when a public advertiser ID and clean merchant URL are available. Commission depends on advertiser approval, program terms, attribution, validation, and payout settings.",
+  "programs": [
+    {
+      "id": "awin-aliexpress-us-6378",
+      "network": "awin",
+      "merchantName": "AliExpress US",
+      "advertiserID": "6378",
+      "merchantURL": "https://www.aliexpress.com/",
+      "profileURL": "https://ui.awin.com/merchant-profile/6378",
+      "joinURL": "https://ui.awin.com/user/affiliate-signup/join/merchant/6378",
+      "category": "General",
+      "commission": "2.4%-7% by product category",
+      "attribution": "10 days",
+      "status": "Join/login required before payout",
+      "summary": "Public Awin profile lists deep linking as available for AliExpress US, with broad marketplace coverage across electronics, fashion, home, garden, beauty, health, and accessories.",
+      "publishedAt": "2026-07-09T16:25:35Z",
+      "priority": 1
+    }
+  ]
+}
