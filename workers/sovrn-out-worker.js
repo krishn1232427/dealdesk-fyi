@@ -1,6 +1,4 @@
-const SOVRN_REDIRECT_ENDPOINT = "https://redirect.viglink.com/";
-const AWIN_REDIRECT_ENDPOINT = "https://www.awin1.com/cread.php";
-const DEFAULT_AWIN_PUBLISHER_ID = "2973087";
+const APPROVED_AMAZON_TRACKING_ID = "dealdesk-20";
 
 export default {
   async fetch(request, env) {
@@ -8,7 +6,6 @@ export default {
     const merchantURL = requestURL.searchParams.get("url");
     const subID = cleanSubID(requestURL.searchParams.get("subid"));
     const network = cleanNetwork(requestURL.searchParams.get("network"));
-    const awinMID = cleanNumeric(requestURL.searchParams.get("awinmid"));
 
     if (!merchantURL) {
       return htmlResponse("Missing merchant URL.", 400);
@@ -25,35 +22,16 @@ export default {
       return htmlResponse("Only web merchant URLs are allowed.", 400);
     }
 
-    if (network === "awin") {
-      if (!awinMID) {
-        return htmlResponse("Missing Awin advertiser ID.", 400);
+    if (network === "amazon-associates") {
+      const hostname = destination.hostname.toLowerCase();
+      const isAmazon = hostname === "amazon.com" || hostname === "www.amazon.com";
+      if (!isAmazon || destination.searchParams.get("tag") !== APPROVED_AMAZON_TRACKING_ID) {
+        return htmlResponse("Amazon link is missing DealDesk commission tracking.", 400);
       }
-
-      const awinPublisherID = cleanNumeric(env.AWIN_PUBLISHER_ID) || DEFAULT_AWIN_PUBLISHER_ID;
-      const awinURL = new URL(AWIN_REDIRECT_ENDPOINT);
-      awinURL.searchParams.set("awinmid", awinMID);
-      awinURL.searchParams.set("awinaffid", awinPublisherID);
-      awinURL.searchParams.set("ued", destination.href);
-      if (subID) {
-        awinURL.searchParams.set("clickref", subID);
-      }
-
-      return Response.redirect(awinURL.href, 302);
-    }
-
-    if (!env.SOVRN_API_KEY) {
       return Response.redirect(destination.href, 302);
     }
 
-    const sovrnURL = new URL(SOVRN_REDIRECT_ENDPOINT);
-    sovrnURL.searchParams.set("key", env.SOVRN_API_KEY);
-    sovrnURL.searchParams.set("u", destination.href);
-    if (subID) {
-      sovrnURL.searchParams.set("cuid", subID);
-    }
-
-    return Response.redirect(sovrnURL.href, 302);
+    return htmlResponse("Merchant does not have an approved DealDesk commission path.", 403);
   },
 };
 
@@ -63,12 +41,7 @@ function cleanSubID(value) {
 }
 
 function cleanNetwork(value) {
-  return value === "awin" ? "awin" : "sovrn";
-}
-
-function cleanNumeric(value) {
-  if (!value) return "";
-  return value.replace(/\D/g, "").slice(0, 12);
+  return value === "amazon-associates" ? value : "unapproved";
 }
 
 function htmlResponse(message, status) {

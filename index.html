@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DealDesk | Purchase Planning and Deal Review</title>
+    <title>DealDesk | Verified Deals That Pay DealDesk</title>
     <meta
       name="description"
-      content="DealDesk is an iPhone and iPad purchase-planning app with native deal review, checkout math, saved buying plans, local finds, and disclosed purchase links."
+      content="DealDesk publishes verified, commission-eligible shopping and streaming deals with disclosed tracked links."
     />
     <meta
       name="impact-site-verification"
@@ -22,19 +22,8 @@
     />
     <!-- Impact-Site-Verification: 2876548c-0373-41f9-90da-6d5823b19752 -->
     <!-- Impact-Site-Verification: 06fbc2e7-9b0e-4278-a9ae-d7b61d1fda3b -->
-    <link rel="canonical" href="http://dealdesk.fyi/" />
+    <link rel="canonical" href="https://dealdesk.fyi/" />
     <link rel="stylesheet" href="/styles.css" />
-    <script>
-      var vglnk = { key: "c7f1da3c99daa51ab64a1d51fc8b088f", cuid: "dealdesksite" };
-      (function (documentRef, tagName) {
-        var script = documentRef.createElement(tagName);
-        script.type = "text/javascript";
-        script.async = true;
-        script.src = "//cdn.viglink.com/api/vglnk.js";
-        var firstScript = documentRef.getElementsByTagName(tagName)[0];
-        firstScript.parentNode.insertBefore(script, firstScript);
-      })(document, "script");
-    </script>
   </head>
   <body>
     <p class="impact-verification">
@@ -53,11 +42,11 @@
       <section class="hero">
         <div>
           <p class="eyebrow">DealDesk</p>
-          <h1>Purchase planning, deal review, and exact item links.</h1>
+          <h1>Only real deals. Only links that pay DealDesk.</h1>
           <p>
-            DealDesk helps shoppers review purchase candidates, calculate estimated checkout totals,
-            compare price signals, save buying plans, watch prices, review local finds, and open
-            exact merchant item pages when a valid purchase link is available.
+            DealDesk verifies the offer, the destination, and our commission eligibility before a
+            deal appears. Shoppers get a clear path to the merchant; DealDesk gets paid only when
+            the merchant or affiliate network records a qualifying action.
           </p>
           <p>
             <a class="button" href="https://apps.apple.com/us/app/dealdesk/id6782424624">
@@ -90,12 +79,7 @@
             DealDesk may earn a commission from some purchases when users choose to open merchant
             purchase links. The app shows this disclosure near Buy actions.
           </p>
-          <p>
-            Sample disclosed merchant link for affiliate network review:
-            <a href="https://sovrn.co/5idq6oy" rel="sponsored nofollow">
-              view merchant item
-            </a>.
-          </p>
+          <p>Only approved, commission-confirmed merchant links appear in the public deal feeds.</p>
         </article>
         <article class="card">
           <h2>Customer Control</h2>
@@ -114,11 +98,11 @@
       </section>
 
       <section class="section">
-        <p class="eyebrow">Best Deals</p>
-        <h2>Curated affiliate picks we can refresh without changing the app.</h2>
+        <p class="eyebrow">Commission-confirmed</p>
+        <h2>Today’s verified product deals.</h2>
         <p>
-          These picks prioritize merchants with clear preferred-network rewards after
-          DealDesk's 0.5% cut. Final payout eligibility is controlled by each merchant.
+          Every visible deal has an approved network, an active DealDesk tracking ID, and a
+          recently checked offer. Price and availability can still change at merchant checkout.
         </p>
         <div id="best-deals-grid" class="deal-picks" aria-label="Curated best deals"></div>
         <script>
@@ -136,16 +120,16 @@
                 return response.json();
               })
               .then(function (feed) {
-                var deals = (feed.deals || []).slice(0, 9);
+                var deals = (feed.deals || []).filter(isCommissionEligible).slice(0, 28);
                 deals.forEach(function (deal) {
-                  if (!deal.url || !deal.title) {
+                  if (!deal.affiliateURL || !deal.title) {
                     return;
                   }
 
-                  var merchantURL = deal.merchantURL || deal.url;
+                  var merchantURL = deal.merchantURL || deal.affiliateURL;
                   var card = document.createElement("a");
                   card.className = "deal-pick";
-                  card.href = "/out/?url=" + encodeURIComponent(merchantURL) + "&subid=dealdesksite";
+                  card.href = deal.affiliateURL;
                   card.rel = "sponsored nofollow";
 
                   var brand = document.createElement("span");
@@ -174,6 +158,20 @@
                   card.appendChild(summary);
                   grid.appendChild(card);
                 });
+
+                if (!grid.children.length) {
+                  grid.innerHTML = '<p class="muted-copy">No commission-confirmed product deals are live right now.</p>';
+                }
+
+                function isCommissionEligible(deal) {
+                  return Boolean(
+                    deal &&
+                    deal.commissionEligible === true &&
+                    deal.approvalStatus === "approved" &&
+                    deal.trackingID &&
+                    deal.affiliateURL
+                  );
+                }
               })
               .catch(function () {
                 grid.innerHTML = '<p class="muted-copy">Curated picks are temporarily unavailable.</p>';
@@ -182,6 +180,94 @@
         </script>
       </section>
 
+      <section class="section" id="streaming-deals">
+        <p class="eyebrow">Streaming deals</p>
+        <h2>Subscription offers that can earn DealDesk a bounty.</h2>
+        <p>
+          These links use the approved Amazon Associates tracking ID <strong>dealdesk-20</strong>.
+          A commission is earned only when the visitor completes the qualifying signup or purchase.
+        </p>
+        <div id="streaming-deals-grid" class="deal-picks" aria-label="Commission-eligible streaming deals"></div>
+        <script>
+          (function () {
+            var grid = document.getElementById("streaming-deals-grid");
+            if (!grid) return;
+
+            fetch("/data/streaming-deals.json", { cache: "no-store" })
+              .then(function (response) {
+                if (!response.ok) throw new Error("Streaming feed unavailable");
+                return response.json();
+              })
+              .then(function (feed) {
+                var deals = (feed.deals || []).filter(function (deal) {
+                  return Boolean(
+                    deal &&
+                    deal.commissionEligible === true &&
+                    deal.approvalStatus === "approved" &&
+                    deal.trackingID === "dealdesk-20" &&
+                    deal.affiliateURL &&
+                    deal.title
+                  );
+                });
+
+                deals.forEach(function (deal) {
+                  var card = document.createElement("a");
+                  card.className = "deal-pick";
+                  card.href = deal.affiliateURL;
+                  card.rel = "sponsored nofollow";
+
+                  var brand = document.createElement("span");
+                  brand.className = "deal-pick-brand";
+
+                  var logo = document.createElement("span");
+                  logo.className = "commission-badge";
+                  logo.textContent = "Paid";
+
+                  var merchant = document.createElement("span");
+                  merchant.textContent = deal.merchantName;
+
+                  var title = document.createElement("strong");
+                  title.textContent = deal.title;
+
+                  var summary = document.createElement("span");
+                  summary.className = "deal-pick-summary";
+                  summary.textContent = deal.summary;
+
+                  var proof = document.createElement("span");
+                  proof.className = "commission-proof";
+                  proof.textContent = "Commission confirmed · " + deal.commission;
+
+                  brand.appendChild(logo);
+                  brand.appendChild(merchant);
+                  card.appendChild(brand);
+                  card.appendChild(title);
+                  card.appendChild(summary);
+                  card.appendChild(proof);
+                  grid.appendChild(card);
+                });
+
+                if (!grid.children.length) {
+                  grid.innerHTML = '<p class="muted-copy">No commission-confirmed streaming deals are live right now.</p>';
+                }
+              })
+              .catch(function () {
+                grid.innerHTML = '<p class="muted-copy">Commission-confirmed streaming deals are temporarily unavailable.</p>';
+              });
+          })();
+        </script>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">Publishing rule</p>
+        <h2>Unapproved partners stay off the deal pages.</h2>
+        <p>
+          Awin, CJ, Rakuten Advertising, Impact, and Sovrn offers remain private until DealDesk is
+          approved for the advertiser and has a tested tracked link. This prevents attractive but
+          non-paying offers from entering the public feed.
+        </p>
+      </section>
+
+      <template id="inactive-partner-content">
       <section class="section">
         <p class="eyebrow">Awin Programs</p>
         <h2>Direct affiliate links prepared from the Awin onboarding path.</h2>
@@ -290,11 +376,12 @@
 
       <section class="section">
         <p class="eyebrow">Merchant Rewards</p>
-        <h2>Preferred merchant rates after DealDesk's 0.5% cut.</h2>
+        <h2>The broader preferred-merchant directory.</h2>
         <p>
-          These are estimated DealDesk display rates from the Sovrn preferred merchant table.
-          Final eligibility, eligible items, attribution, reversals, and payout are controlled by
-          each merchant and affiliate network.
+          Use the curated picks above for current customer-facing estimates and shopping context.
+          This broader directory preserves the underlying partner-list coverage, including
+          merchants whose current rate is unavailable. Final eligibility, eligible items,
+          attribution, reversals, and payout are controlled by each merchant and affiliate network.
         </p>
         <div class="reward-table" aria-label="Preferred merchant reward rates">
           <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.groupon.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Groupon</span><strong>Up to 9.5% back</strong></a>
@@ -386,6 +473,8 @@
           });
         </script>
       </section>
+
+      </template>
 
       <footer class="footer">
         <p>

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-31T23:45:00Z",
+  "curationNote": "Commission-only streaming feed. Offers are sourced from Amazon's current Associates Program Standard Commission Income Statement and use the approved tracking ID dealdesk-20. Customer eligibility and current terms are confirmed on Amazon.",
+  "deals": [
+    {
+      "id": "amazon-prime-video-free-trial-20260731",
+      "title": "Prime Video free trial",
+      "merchantName": "Amazon Prime Video",
+      "merchantURL": "https://www.amazon.com/gp/video/primesignup",
+      "affiliateURL": "https://www.amazon.com/gp/video/primesignup?tag=dealdesk-20",
+      "network": "amazon-associates",
+      "trackingID": "dealdesk-20",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "$2 qualifying signup bounty",
+      "category": "Streaming",
+      "summary": "Eligible customers can start a Prime Video trial. Amazon confirms a fixed bounty for a qualifying trial signup; verify trial length and renewal price before enrolling.",
+      "verifiedAt": "2026-07-31T23:45:00Z",
+      "priority": 1
+    },
+    {
+      "id": "amazon-prime-video-channels-free-trial-20260731",
+      "title": "Prime Video add-on channel free trials",
+      "merchantName": "Prime Video Channels",
+      "merchantURL": "https://www.amazon.com/gp/video/storefront/subscription/default",
+      "affiliateURL": "https://www.amazon.com/gp/video/storefront/subscription/default?tag=dealdesk-20",
+      "network": "amazon-associates",
+      "trackingID": "dealdesk-20",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "$2.50 qualifying signup bounty",
+      "category": "Streaming",
+      "summary": "Browse eligible add-on channels and their current trials in one place. The bounty applies when an eligible customer completes a qualifying channel trial signup.",
+      "verifiedAt": "2026-07-31T23:45:00Z",
+      "priority": 2
+    },
+    {
+      "id": "amazon-prime-video-channels-paid-20260731",
+      "title": "Prime Video paid add-on subscriptions",
+      "merchantName": "Prime Video Channels",
+      "merchantURL": "https://www.amazon.com/gp/video/storefront/subscription/default",
+      "affiliateURL": "https://www.amazon.com/gp/video/storefront/subscription/default?tag=dealdesk-20",
+      "network": "amazon-associates",
+      "trackingID": "dealdesk-20",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "$3 qualifying paid-subscription bounty",
+      "category": "Streaming",
+      "summary": "Choose from eligible Prime Video add-on subscriptions. Amazon confirms a fixed bounty for a qualifying paid subscription; channel pricing and terms vary.",
+      "verifiedAt": "2026-07-31T23:45:00Z",
+      "priority": 3
+    },
+    {
+      "id": "amazon-music-unlimited-20260731",
+      "title": "Amazon Music Unlimited trial or membership",
+      "merchantName": "Amazon Music Unlimited",
+      "merchantURL": "https://www.amazon.com/music/unlimited",
+      "affiliateURL": "https://www.amazon.com/music/unlimited?tag=dealdesk-20",
+      "network": "amazon-associates",
+      "trackingID": "dealdesk-20",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "$3 qualifying trial or paid-subscription bounty",
+      "category": "Streaming",
+      "summary": "Eligible customers can view the current Music Unlimited trial or membership offer. Amazon confirms a fixed bounty for a qualifying signup.",
+      "verifiedAt": "2026-07-31T23:45:00Z",
+      "priority": 4
+    }
+  ]
+}

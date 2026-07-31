@@ -32,12 +32,11 @@
 
     <script>
       (function () {
-        var sovrnAPIKey = "c7f1da3c99daa51ab64a1d51fc8b088f";
-        var awinPublisherID = "2973087";
+        var approvedAmazonTrackingID = "dealdesk-20";
         var params = new URLSearchParams(window.location.search);
         var rawURL = params.get("url");
         var subID = cleanSubID(params.get("subid")) || "dealdesksite";
-        var network = (params.get("network") || "sovrn").toLowerCase();
+        var network = (params.get("network") || "").toLowerCase();
         var status = document.getElementById("status");
         var fallback = document.getElementById("fallback");
         var merchantLink = document.getElementById("merchant-link");
@@ -77,28 +76,18 @@
         }, 350);
 
         function buildAffiliateURL(destinationURL, affiliateNetwork, clickRef) {
-          if (affiliateNetwork === "awin") {
-            var awinMID = cleanNumeric(params.get("awinmid"));
-            if (!awinMID) {
-              fail("Awin links need an advertiser ID before DealDesk can open the merchant.");
+          if (affiliateNetwork === "amazon-associates") {
+            var hostname = destinationURL.hostname.toLowerCase();
+            var isAmazon = hostname === "amazon.com" || hostname === "www.amazon.com";
+            if (!isAmazon || destinationURL.searchParams.get("tag") !== approvedAmazonTrackingID) {
+              fail("This Amazon link is missing DealDesk's approved commission tracking ID.");
               return null;
             }
-
-            var awinURL = new URL("https://www.awin1.com/cread.php");
-            awinURL.searchParams.set("awinmid", awinMID);
-            awinURL.searchParams.set("awinaffid", awinPublisherID);
-            awinURL.searchParams.set("ued", destinationURL.href);
-            if (clickRef) {
-              awinURL.searchParams.set("clickref", clickRef);
-            }
-            return awinURL;
+            return destinationURL;
           }
 
-          var sovrnURL = new URL("https://redirect.viglink.com/");
-          sovrnURL.searchParams.set("key", sovrnAPIKey);
-          sovrnURL.searchParams.set("u", destinationURL.href);
-          sovrnURL.searchParams.set("cuid", clickRef);
-          return sovrnURL;
+          fail("This merchant does not yet have an approved DealDesk commission path.");
+          return null;
         }
 
         function cleanSubID(value) {
@@ -106,10 +95,6 @@
           return value.replace(/[^a-zA-Z0-9]/g, "").slice(0, 32);
         }
 
-        function cleanNumeric(value) {
-          if (!value) return "";
-          return value.replace(/\D/g, "").slice(0, 12);
-        }
       })();
     </script>
   </body>

@@ -202,6 +202,26 @@ li {
   line-height: 1.45;
 }
 
+.commission-badge {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 999px;
+  color: #166534;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .04em;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.commission-proof {
+  color: #166534;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-top: auto;
+}
+
 .reward-table {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
