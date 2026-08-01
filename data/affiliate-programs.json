@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T19:14:59Z",
+  "updatedAt": "2026-08-01T20:35:50Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -37,6 +37,14 @@
       "status": "eBay account created; EPN publisher application prepared but not submitted",
       "email": "hello.launchdesk@gmail.com",
       "commissionAccess": false
+    },
+    {
+      "network": "expedia-group-direct",
+      "status": "active creator account; DealDesk Travel Shop published; bank details required for payout",
+      "email": "hello.launchdesk@gmail.com",
+      "commissionAccess": true,
+      "payoutReady": false,
+      "travelShopURL": "https://www.expedia.com/shop/dealdesk"
     }
   ],
   "disclosure": "Tracked links are generated only for approved advertiser relationships with commission terms visible in the publisher account. Commission depends on advertiser approval, program terms, attribution, validation, tax status, and payout settings.",
@@ -928,6 +936,17 @@
       "trackingURL": "https://www.hotels.com/affiliate/2B7dO8R",
       "trackingID": "2B7dO8R",
       "trackingLinkStatus": "verified",
+      "travelShopURL": "https://www.expedia.com/shop/dealdesk",
+      "travelShopStatus": "published",
+      "travelShopProfile": {
+        "name": "DealDesk",
+        "tags": [
+          "Budget",
+          "Family-friendly",
+          "Hidden gems"
+        ],
+        "bio": "DealDesk curates high-value hotel stays, family-friendly escapes, and hidden gems. Compare options, spot genuine savings, and book through Expedia—without fake urgency or inflated claims."
+      },
       "payoutSetupStatus": "bank details required",
       "commissionEligible": true,
       "publicPublishingAllowed": true,
@@ -1107,6 +1126,62 @@
       "restrictions": "Use only advertiser-approved creative and the price shown on the merchant site. Do not advertise coupon-adjusted prices, masked prices, or unapproved additional discounts. Verify that each SKU is commissionable and that the exact tracking link is payable before publication. Program financial terms are confidential.",
       "summary": "DealDesk submitted a focused application to JD Sports because the recognizable footwear and apparel retailer balances brand demand with workable expected earnings. Publication remains blocked until approval, an authorized live discount, SKU-level commission eligibility, and a DealDesk-specific payable link are verified.",
       "priority": 52
+    },
+    {
+      "id": "rakuten-purevpn-38687",
+      "network": "rakuten-advertising",
+      "merchantName": "PureVPN",
+      "advertiserID": "38687",
+      "publisherID": "4733148",
+      "merchantURL": "https://www.purevpn.com/",
+      "profileURL": "https://publisher.rakutenadvertising.com/advertisers/38687/profile",
+      "category": "VPN and online privacy subscription",
+      "commission": "25% of qualifying first sale; no recurring-sale commission",
+      "attribution": "90 days; last click",
+      "status": "Application reviewed and ready for terms acceptance; not submitted and not publishable",
+      "applicationStatus": "reviewed-not-submitted",
+      "reviewedAt": "2026-08-01T20:35:50Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "No trademark bidding, illegal-content placement, hacking or file-sharing promotion, or unapproved claims. Promote PureVPN only for internet security and online privacy. Direct and deep linking are allowed after approval; recurring sales are not commissioned.",
+      "summary": "Rakuten's live baseline offer lists a 25% first-sale commission and a 90-day cookie. The economics are attractive, but the application remains unsubmitted until the advertiser agreement is accepted. No PureVPN offer may appear on DealDesk until approval, an authorized live customer offer, and a payable DealDesk link are verified.",
+      "priority": 53
+    },
+    {
+      "id": "rakuten-beyond-yoga-54313",
+      "network": "rakuten-advertising",
+      "merchantName": "Beyond Yoga",
+      "advertiserID": "54313",
+      "publisherID": "4733148",
+      "merchantURL": "https://beyondyoga.com/",
+      "profileURL": "https://publisher.rakutenadvertising.com/advertisers/54313/profile",
+      "category": "Premium activewear and athleisure",
+      "commission": "Unavailable because DealDesk does not currently meet advertiser-supplied eligibility terms",
+      "status": "Ineligible in Rakuten — application unavailable; do not publish",
+      "applicationStatus": "ineligible",
+      "reviewedAt": "2026-08-01T20:35:50Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "summary": "Beyond Yoga is a recognizable premium activewear brand, but Rakuten currently blocks DealDesk from applying because the publisher does not meet advertiser-supplied eligibility terms. It remains a watch-list brand rather than a usable partnership.",
+      "priority": 54
+    },
+    {
+      "id": "rakuten-michael-kors-us-outlet-54310",
+      "network": "rakuten-advertising",
+      "merchantName": "Michael Kors US Outlet",
+      "advertiserID": "54310",
+      "publisherID": "4733148",
+      "merchantURL": "https://www.michaelkors.com/outlet/",
+      "profileURL": "https://publisher.rakutenadvertising.com/advertisers/54310/profile",
+      "category": "Designer outlet fashion and accessories",
+      "commission": "0%-2% last-click commission based on monthly tiers",
+      "status": "Reviewed and deprioritized — low starting economics; not applied and not publishable",
+      "applicationStatus": "deprioritized",
+      "reviewedAt": "2026-08-01T20:35:50Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "summary": "Michael Kors Outlet has strong brand recognition and useful outlet pricing, but its current Rakuten baseline pays only 0%-2% depending on monthly volume. DealDesk is holding the application behind programs with better expected earnings and customer value.",
+      "priority": 55
     }
   ]
 }
