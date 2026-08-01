@@ -307,6 +307,185 @@ select {
   position: relative;
 }
 
+.partner-showcase {
+  margin-top: 38px;
+}
+
+.partner-showcase-heading {
+  align-items: end;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.partner-showcase-heading h2 {
+  font-size: clamp(27px, 3.4vw, 40px);
+  letter-spacing: -0.052em;
+  line-height: 1;
+  margin: 0;
+}
+
+.partner-showcase-heading > p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0 0 2px;
+  max-width: 285px;
+  text-align: right;
+}
+
+.partner-showcase-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.partner-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  text-decoration: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.partner-card:hover {
+  border-color: rgba(214, 62, 11, 0.46);
+  box-shadow: 0 14px 32px rgba(37, 31, 24, 0.1);
+  transform: translateY(-3px);
+}
+
+.partner-card:focus-visible {
+  outline-offset: 4px;
+}
+
+.partner-card-media {
+  align-items: center;
+  background: var(--soft);
+  display: flex;
+  height: 165px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.partner-card-media img {
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: transform 200ms ease;
+  width: 100%;
+  z-index: 1;
+}
+
+.partner-card:hover .partner-card-media img {
+  transform: scale(1.04);
+}
+
+.partner-discount {
+  background: var(--accent);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 950;
+  left: 10px;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  padding: 6px 8px;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 10px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.partner-fallback {
+  font-size: 24px;
+  height: 68px;
+  width: 68px;
+}
+
+.partner-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 210px;
+  padding: 15px;
+}
+
+.partner-name {
+  color: var(--success);
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.partner-price-line {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.partner-price-line strong {
+  font-size: 24px;
+  font-weight: 950;
+  letter-spacing: -0.052em;
+  line-height: 1;
+}
+
+.partner-price-line del,
+.partner-renewal {
+  color: #76736d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.partner-renewal {
+  text-decoration: none;
+}
+
+.partner-saving {
+  color: var(--accent-dark);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-top: 8px;
+}
+
+.partner-title {
+  display: -webkit-box;
+  font-size: 13px;
+  line-height: 1.35;
+  margin-top: 11px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.partner-cta {
+  color: var(--accent-dark);
+  font-size: 11px;
+  font-weight: 950;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.partner-skeleton {
+  animation: pulse 1.15s ease-in-out infinite alternate;
+  background: #eae7e1;
+  border-radius: 17px;
+  min-height: 360px;
+}
+
 .featured-deal {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -1337,6 +1516,10 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .partner-showcase-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .streaming-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1381,6 +1564,7 @@ select {
 
   .page-heading,
   .deals-heading-row,
+  .partner-showcase-heading,
   .streaming-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -1394,6 +1578,15 @@ select {
   .page-heading > p {
     max-width: none;
     text-align: left;
+  }
+
+  .partner-showcase-heading > p {
+    max-width: none;
+    text-align: left;
+  }
+
+  .partner-showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .featured-deal {
@@ -1480,6 +1673,24 @@ select {
   .featured-media {
     min-height: 275px;
     padding: 28px;
+  }
+
+  .partner-showcase-grid {
+    display: grid;
+    gap: 12px;
+    grid-auto-columns: minmax(230px, 78vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    margin-inline: -14px;
+    overflow-x: auto;
+    padding: 2px 14px 12px;
+    scroll-padding-inline: 14px;
+    scroll-snap-type: x proximity;
+  }
+
+  .partner-card,
+  .partner-skeleton {
+    scroll-snap-align: start;
   }
 
   .featured-media img {

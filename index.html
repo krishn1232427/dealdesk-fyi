@@ -90,6 +90,23 @@
           </button>
         </article>
 
+        <section class="partner-showcase" id="verified-partners" aria-labelledby="partner-showcase-heading">
+          <header class="partner-showcase-heading">
+            <div>
+              <span class="page-kicker"><span aria-hidden="true"></span> Commission verified</span>
+              <h2 id="partner-showcase-heading">Shop our best partner deals</h2>
+            </div>
+            <p>Every offer here uses an approved, payable DealDesk link.</p>
+          </header>
+          <div class="partner-showcase-grid" id="partner-showcase-grid" aria-live="polite">
+            <span class="partner-skeleton" aria-hidden="true"></span>
+            <span class="partner-skeleton" aria-hidden="true"></span>
+            <span class="partner-skeleton" aria-hidden="true"></span>
+            <span class="partner-skeleton" aria-hidden="true"></span>
+            <span class="partner-skeleton" aria-hidden="true"></span>
+          </div>
+        </section>
+
         <section class="category-discovery" id="deal-categories" aria-labelledby="category-heading">
           <div class="category-intro">
             <span class="page-kicker"><span aria-hidden="true"></span> Deal finder</span>
@@ -277,6 +294,7 @@
         "use strict";
 
         var productGrid = document.getElementById("best-deals-grid");
+        var partnerShowcaseGrid = document.getElementById("partner-showcase-grid");
         var streamingGrid = document.getElementById("streaming-deals-grid");
         var filterBar = document.getElementById("filter-bar");
         var searchInput = document.getElementById("deal-search");
@@ -564,6 +582,76 @@
           return card;
         }
 
+        function makePartnerCard(deal) {
+          var prices = pricesFrom(deal);
+          var link = document.createElement("a");
+          link.className = "partner-card";
+          link.href = dealPageURL(deal);
+          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View verified partner deal");
+
+          var media = document.createElement("span");
+          media.className = "partner-card-media";
+          var badge = document.createElement("span");
+          badge.className = "partner-discount";
+          badge.textContent = discountFrom(deal);
+          var image = document.createElement("img");
+          image.loading = "lazy";
+          image.alt = cleanTitle(deal.title);
+          loadProductImage(image, deal, media);
+          var fallback = document.createElement("span");
+          fallback.className = "product-fallback partner-fallback";
+          fallback.setAttribute("aria-hidden", "true");
+          fallback.textContent = categoryIcon(deal.category);
+          media.appendChild(badge);
+          media.appendChild(image);
+          media.appendChild(fallback);
+
+          var body = document.createElement("span");
+          body.className = "partner-card-body";
+          var merchant = document.createElement("span");
+          merchant.className = "partner-name";
+          merchant.textContent = deal.merchantName;
+          var priceLine = document.createElement("span");
+          priceLine.className = "partner-price-line";
+          var current = document.createElement("strong");
+          current.textContent = prices.current;
+          priceLine.appendChild(current);
+          if (prices.original) {
+            var original = document.createElement(deal.referenceStyle === "renewal" ? "span" : "del");
+            original.textContent = (deal.referenceLabel || "Was") + " " + prices.original;
+            if (deal.referenceStyle === "renewal") original.className = "partner-renewal";
+            priceLine.appendChild(original);
+          }
+          var saving = document.createElement("span");
+          saving.className = "partner-saving";
+          saving.textContent = savingsFrom(prices, deal);
+          var title = document.createElement("strong");
+          title.className = "partner-title";
+          title.textContent = cleanTitle(deal.title);
+          var cta = document.createElement("span");
+          cta.className = "partner-cta";
+          cta.textContent = "See deal →";
+          body.appendChild(merchant);
+          body.appendChild(priceLine);
+          body.appendChild(saving);
+          body.appendChild(title);
+          body.appendChild(cta);
+          link.appendChild(media);
+          link.appendChild(body);
+          return link;
+        }
+
+        function renderPartnerShowcase() {
+          var merchantOrder = ["Amazon Prime", "NordVPN", "Surfshark", "Hotels.com", "NordPass"];
+          var partnerDeals = merchantOrder.map(function (merchant) {
+            return productDeals.filter(function (deal) { return deal.merchantName === merchant; })
+              .sort(function (a, b) { return rankingNumber(b) - rankingNumber(a); })[0];
+          }).filter(Boolean);
+          partnerShowcaseGrid.innerHTML = "";
+          partnerDeals.forEach(function (deal) { partnerShowcaseGrid.appendChild(makePartnerCard(deal)); });
+          document.getElementById("verified-partners").hidden = !partnerDeals.length;
+        }
+
         function filterMatches(deal) {
           var price = priceNumber(deal);
           var filterMatch =
@@ -785,6 +873,7 @@
           updateDiscoveryCounts();
           setFreshness(feeds[0], feeds[1]);
           setFeaturedDeal(productDeals[0]);
+          renderPartnerShowcase();
           renderProducts();
 
           streamingGrid.innerHTML = "";
