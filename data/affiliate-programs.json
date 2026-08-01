@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T20:35:50Z",
+  "updatedAt": "2026-08-01T20:37:58Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -40,10 +40,10 @@
     },
     {
       "network": "expedia-group-direct",
-      "status": "active creator account; DealDesk Travel Shop published; bank details required for payout",
+      "status": "active creator account; DealDesk Travel Shop published; USD payout account on file",
       "email": "hello.launchdesk@gmail.com",
       "commissionAccess": true,
-      "payoutReady": false,
+      "payoutReady": true,
       "travelShopURL": "https://www.expedia.com/shop/dealdesk"
     }
   ],
@@ -929,7 +929,7 @@
       "category": "Hotels, vacation rentals, packages, cars, and activities",
       "commission": "Hotel 4%; activity 4%; vacation rental 2%; package 2%; car 1.5%; flights and cruises 0%",
       "attribution": "7-day booking window; last click; booking must be completed",
-      "status": "Active — signed-in commission terms and a Hotels.com tracking link are verified; bank details still required for payout",
+      "status": "Active — signed-in commission terms, Hotels.com tracking, DealDesk Travel Shop, and payout account are verified",
       "applicationStatus": "active",
       "signupStartedAt": "2026-08-01T18:05:00Z",
       "email": "hello.launchdesk@gmail.com",
@@ -947,11 +947,11 @@
         ],
         "bio": "DealDesk curates high-value hotel stays, family-friendly escapes, and hidden gems. Compare options, spot genuine savings, and book through Expedia—without fake urgency or inflated claims."
       },
-      "payoutSetupStatus": "bank details required",
+      "payoutSetupStatus": "complete — USD payout account on file",
       "commissionEligible": true,
       "publicPublishingAllowed": true,
-      "restrictions": "Publish only Hotels.com hotel offers or another trip element with a non-zero signed-in rate. Do not publish flights or cruises as commission-eligible. Expedia pays only after a qualifying trip is completed; payout requires valid bank details and a monthly minimum of US$30.",
-      "summary": "DealDesk's Expedia Group Travel Creator account is active. The signed-in terms list Hotels.com hotel bookings at 4% of net transaction value with a 7-day booking window, not 12% of the traveler booking. The official Hotels.com link builder generated and verified DealDesk link 2B7dO8R for the current Member Prices page. Bank details are still required before cash payouts can be sent.",
+      "restrictions": "Publish only Hotels.com hotel offers or another trip element with a non-zero signed-in rate. Do not publish flights or cruises as commission-eligible. Expedia pays only after a qualifying trip is completed and the monthly payout minimum of US$30 is met.",
+      "summary": "DealDesk's Expedia Group Travel Creator account is active. The signed-in terms list Hotels.com hotel bookings at 4% of net transaction value with a 7-day booking window, not 12% of the traveler booking. The official Hotels.com link builder generated and verified DealDesk link 2B7dO8R for the current Member Prices page, the DealDesk Travel Shop is published, and a USD payout account is on file.",
       "priority": 44
     },
     {
