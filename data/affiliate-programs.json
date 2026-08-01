@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T07:57:37Z",
+  "updatedAt": "2026-08-01T09:49:47Z",
   "source": "Signed-in affiliate-network publisher accounts and advertiser program profiles",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -13,6 +13,13 @@
       "network": "cj",
       "publisherID": "8007406",
       "status": "active"
+    },
+    {
+      "network": "impact",
+      "publisherID": "7459747",
+      "status": "media-partner account active; Brands Marketplace access unavailable",
+      "brandsMarketplaceStatus": "not active — Discover is not present in the signed-in account",
+      "commissionAccess": false
     }
   ],
   "disclosure": "Tracked links are generated only for approved advertiser relationships with commission terms visible in the publisher account. Commission depends on advertiser approval, program terms, attribution, validation, tax status, and payout settings.",
@@ -673,6 +680,76 @@
       "publicPublishingAllowed": false,
       "summary": "DealDesk accepted Brightspeed's additional program terms and CJ confirms the application is pending. Trademark paid-search bidding is prohibited; publishing remains locked until approval and payable tracking are verified.",
       "priority": 34
+    },
+    {
+      "id": "awin-fiverr-global-6288",
+      "network": "awin",
+      "merchantName": "Fiverr Affiliates",
+      "advertiserID": "6288",
+      "publisherID": "2973087",
+      "merchantURL": "https://www.fiverr.com/",
+      "profileURL": "https://ui.awin.com/awin/affiliate/2973087/merchant-profile/6288",
+      "category": "Freelance services marketplace",
+      "commission": "20 USD default per first-time buyer; 25-50 USD for selected service categories; up to 150 USD for Fiverr Pro",
+      "attribution": "365 days",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T09:49:47Z",
+      "averagePaymentTime": "41 days",
+      "approvalRate": "96.18%",
+      "conversionRate": "1.97%",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "summary": "DealDesk's Fiverr Affiliates application is pending. The program combines a globally recognized brand with strong per-customer payouts and a 365-day attribution window, but commissions apply to qualifying first completed orders rather than signups. Public publishing remains blocked until approval and a DealDesk-specific payable link are verified.",
+      "priority": 35
+    },
+    {
+      "id": "awin-viator-us-11018",
+      "network": "awin",
+      "merchantName": "Viator - A Tripadvisor Company",
+      "advertiserID": "11018",
+      "publisherID": "2973087",
+      "merchantURL": "https://www.viator.com/",
+      "profileURL": "https://ui.awin.com/awin/affiliate/2973087/merchant-profile/11018",
+      "category": "Travel experiences",
+      "commission": "4% default commission; higher rates may apply",
+      "attribution": "30 days",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T09:49:47Z",
+      "averagePaymentTime": "95 days",
+      "approvalRate": "66.94%",
+      "productFeed": true,
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "No trademark bidding or discount-code promotion. Theme Parks, Virtual Tours, and Travel Agent bookings are excluded. Commission validates after the travel date if the booking is not cancelled.",
+      "summary": "DealDesk's Viator application is pending. The Tripadvisor-owned brand offers broad travel inventory, high average order values, and a frequently updated product feed, but public publishing remains blocked until approval and a DealDesk-specific payable link are verified.",
+      "priority": 36
+    },
+    {
+      "id": "awin-ticketnetwork-89223",
+      "network": "awin",
+      "merchantName": "TicketNetwork",
+      "advertiserID": "89223",
+      "publisherID": "2973087",
+      "merchantURL": "https://www.ticketnetwork.com/",
+      "profileURL": "https://ui.awin.com/awin/affiliate/2973087/merchant-profile/89223",
+      "category": "Sports, concert, and theater tickets",
+      "commission": "12% standard; 6% for ticket-comparison, loyalty/rewards, cashback, and coupon publishers",
+      "attribution": "Awin profile lists 30 days; advertiser program copy states 45 days — verify the approved contract before publishing",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T09:49:47Z",
+      "averageOrderValue": "Over 350 USD",
+      "averagePaymentTime": "36 days",
+      "approvalRate": "100%",
+      "conversionRate": "0.25%",
+      "epc": "0.22 USD",
+      "productFeed": true,
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "summary": "DealDesk's TicketNetwork application is pending. The program offers a large event catalog and high order values, making even the reduced deal-publisher rate potentially attractive. Because the two displayed attribution windows differ, DealDesk must verify the approved contract, payable rate, live offer, and tracked link before publication.",
+      "priority": 37
     }
   ]
 }
