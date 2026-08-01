@@ -47,8 +47,6 @@
         <div class="nav-links">
           <a href="/latest-deals/">Latest deals</a>
           <a href="#deal-categories">Categories</a>
-          <a href="#how-we-check">How we check</a>
-          <a href="#streaming">Streaming</a>
           <a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a>
         </div>
       </nav>
@@ -132,7 +130,7 @@
               <span>Appliances, furniture, comfort</span>
               <small><b data-category-count="Home">0</b> paid deals</small>
             </button>
-            <a class="category-card" href="#streaming">
+            <a class="category-card" id="streaming-category-card" href="#streaming" hidden>
               <span class="category-icon" aria-hidden="true">▶</span>
               <strong>Streaming</strong>
               <span>Trials, channels, music</span>
@@ -206,7 +204,7 @@
           </div>
         </section>
 
-        <section class="trust-section" id="how-we-check" aria-labelledby="trust-heading">
+        <section class="trust-section" id="how-we-check" aria-labelledby="trust-heading" hidden>
           <div class="trust-intro">
             <span class="page-kicker"><span aria-hidden="true"></span> DealDesk standard</span>
             <h2 id="trust-heading">A shorter list. A better reason to click.</h2>
@@ -251,7 +249,7 @@
         </section>
       </section>
 
-      <section class="streaming-section" id="streaming" aria-labelledby="streaming-heading">
+      <section class="streaming-section" id="streaming" aria-labelledby="streaming-heading" hidden>
         <div class="shell">
           <div class="streaming-heading">
             <div>
@@ -322,8 +320,23 @@
               deal.commissionEligible === true &&
               deal.approvalStatus === "approved" &&
               deal.trackingID &&
-              deal.affiliateURL
+              deal.affiliateURL &&
+              hasGenuineMerchantImage(deal)
           );
+        }
+
+        function hasGenuineMerchantImage(deal) {
+          var value = String((deal && deal.imageURL) || "");
+          if (value.indexOf("https://") !== 0) return false;
+          try {
+            var image = new URL(value);
+            if (deal.network === "ebay-partner-network" && deal.sourceType === "ebay-product") {
+              return image.hostname === "i.ebayimg.com";
+            }
+            return true;
+          } catch (error) {
+            return false;
+          }
         }
 
         function cleanTitle(title) {
@@ -382,39 +395,26 @@
         }
 
         function imageFor(deal) {
-          if (deal.imageURL) return deal.imageURL;
-          var asin = String(deal.id || "").match(/^amazon-([A-Z0-9]{10})-/i);
-          if (asin) {
-            return "https://images-na.ssl-images-amazon.com/images/P/" + asin[1] + ".01.LZZZZZZZ.jpg";
-          }
-          var category = String(deal.category || "").toLowerCase();
-          if (category.indexOf("fashion") !== -1) return "/assets/categories/fashion.svg";
-          if (category.indexOf("electronic") !== -1 || category.indexOf("tech") !== -1) return "/assets/categories/electronics.svg";
-          if (category.indexOf("home") !== -1) return "/assets/categories/home.svg";
-          if (category.indexOf("business") !== -1 || category.indexOf("industrial") !== -1) return "/assets/categories/business.svg";
-          if (category.indexOf("grocery") !== -1) return "/assets/categories/grocery.svg";
-          return "/assets/categories/collectibles.svg";
+          return hasGenuineMerchantImage(deal) ? deal.imageURL : "";
         }
 
-        function loadProductImage(image, deal, container) {
+        function loadProductImage(image, deal, container, rejectOffer) {
           var primary = imageFor(deal);
-          var fallback = deal.imageURL || "";
-          var triedFallback = false;
+          var rejected = false;
 
-          function showFallback() {
-            if (!triedFallback && fallback && fallback !== primary) {
-              triedFallback = true;
-              image.src = fallback;
-              return;
-            }
+          function reject() {
+            if (rejected) return;
+            rejected = true;
             image.hidden = true;
             container.classList.add("image-missing");
+            if (typeof rejectOffer === "function") rejectOffer();
           }
 
           image.addEventListener("load", function () {
-            if (image.naturalWidth <= 2 || image.naturalHeight <= 2) showFallback();
+            if (image.naturalWidth <= 2 || image.naturalHeight <= 2) reject();
           });
-          image.addEventListener("error", showFallback);
+          image.addEventListener("error", reject);
+          if (!primary) return reject();
           image.src = primary;
         }
 
@@ -543,14 +543,9 @@
           var image = document.createElement("img");
           image.loading = "lazy";
           image.alt = cleanTitle(deal.title);
-          loadProductImage(image, deal, media);
-          var fallback = document.createElement("span");
-          fallback.className = "product-fallback";
-          fallback.setAttribute("aria-hidden", "true");
-          fallback.textContent = categoryIcon(deal.category);
+          loadProductImage(image, deal, media, function () { card.remove(); });
           media.appendChild(badge);
           media.appendChild(image);
-          media.appendChild(fallback);
 
           var body = document.createElement("span");
           body.className = "deal-body";
@@ -611,14 +606,9 @@
           var image = document.createElement("img");
           image.loading = "lazy";
           image.alt = cleanTitle(deal.title);
-          loadProductImage(image, deal, media);
-          var fallback = document.createElement("span");
-          fallback.className = "product-fallback partner-fallback";
-          fallback.setAttribute("aria-hidden", "true");
-          fallback.textContent = categoryIcon(deal.category);
+          loadProductImage(image, deal, media, function () { link.remove(); });
           media.appendChild(badge);
           media.appendChild(image);
-          media.appendChild(fallback);
 
           var body = document.createElement("span");
           body.className = "partner-card-body";
@@ -772,7 +762,10 @@
           link.href = dealPageURL(deal);
           link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal details");
           image.alt = cleanTitle(deal.title);
-          loadProductImage(image, deal, image.parentElement);
+          loadProductImage(image, deal, image.parentElement, function () {
+            var featured = link.closest(".featured-wrap");
+            if (featured) featured.hidden = true;
+          });
           document.getElementById("featured-badge").textContent = discountFrom(deal);
           document.getElementById("featured-price").textContent = prices.current;
           document.getElementById("featured-original").textContent = prices.original;
@@ -876,6 +869,8 @@
             return (a.priority || 99) - (b.priority || 99);
           });
           streamingDealCount = streamingDeals.length;
+          document.getElementById("streaming").hidden = !streamingDeals.length;
+          document.getElementById("streaming-category-card").hidden = !streamingDeals.length;
 
           liveCount.textContent = productDeals.length + streamingDeals.length;
           document.getElementById("coverage-deal-count").textContent = productDeals.length + streamingDeals.length + " live offers";

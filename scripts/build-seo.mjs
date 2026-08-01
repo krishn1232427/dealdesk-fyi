@@ -32,8 +32,11 @@ const hasGenuineMerchantImage = (deal) => {
     return false;
   }
 };
-const liveDeals = feeds.flatMap((feed) => feed.deals || []).filter(isLiveDeal);
+const allFeedDeals = feeds.flatMap((feed) => feed.deals || []);
+const liveDeals = allFeedDeals.filter(isLiveDeal);
 const deals = liveDeals.filter(hasGenuineMerchantImage);
+const publicDealIDs = new Set(deals.map((deal) => deal.id));
+const nonPublicDeals = allFeedDeals.filter((deal) => !publicDealIDs.has(deal.id));
 const withheldDealCount = liveDeals.length - deals.length;
 
 const esc = (value) => String(value ?? "")
@@ -184,7 +187,7 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#deal-categories">Categories</a><a href="/#how-we-check">How we check</a><a href="/#streaming">Streaming</a></div></nav></header>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#deal-categories">Categories</a></div></nav></header>
   <main class="deal-detail shell">
     <nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><a href="/latest-deals/">Latest deals</a><span aria-hidden="true">›</span><span>${esc(title)}</span></nav>
     <article class="deal-detail-card">
@@ -202,6 +205,29 @@ ${deal.priceNote ? `        <p class="deal-detail-price-note">${esc(deal.priceNo
 ${prices.current ? `    <section class="deal-proof" aria-labelledby="deal-proof-title"><div><span class="page-kicker"><span aria-hidden="true"></span> Transparent deal math</span><h2 id="deal-proof-title">Why this price stands out</h2><p>${deal.savingsText ? esc(deal.savingsText) : discount ? `${discount}% below the displayed reference price` : "Current price shown clearly"}${deal.referenceStyle !== "renewal" && savings ? `, a difference of ${money(savings)} per displayed price unit` : ""}. No countdowns or popularity claims are added by DealDesk.</p></div><dl><div><dt>${deal.referenceStyle === "renewal" ? "Intro price" : "Current"}</dt><dd>${esc(prices.current)}</dd></div>${prices.original ? deal.referenceStyle === "renewal" ? `<div><dt>${esc(deal.referenceLabel || "Then")}</dt><dd>${esc(prices.original)}</dd></div>` : `<div><dt>Reference</dt><dd><del>${esc(prices.original)}</del></dd></div>` : ""}${deal.referenceStyle !== "renewal" && savings ? `<div><dt>Difference</dt><dd>${money(savings)}</dd></div>` : ""}<div><dt>Checked</dt><dd>${esc(isoDate(updated))}</dd></div></dl></section>\n` : ""}    <section class="deal-more"><h2>${relatedHTML ? "Compare three nearby picks" : "More deals worth seeing"}</h2>${relatedHTML ? `<div class="related-deals">${relatedHTML}</div>` : ""}<p><a href="/latest-deals/">Browse all current DealDesk picks</a></p></section>
   </main>
   <footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. You never pay more because of it.</div></footer>
+</body>
+</html>`;
+  const output = resolve(root, "deals", slug, "index.html");
+  await mkdir(dirname(output), { recursive: true });
+  await writeFile(output, html);
+}
+
+for (const deal of nonPublicDeals) {
+  const slug = slugFor(deal);
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offer not currently listed | DealDesk</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta http-equiv="refresh" content="0;url=/latest-deals/" />
+  <link rel="canonical" href="${site}/latest-deals/" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>This offer is not currently listed</h1><p class="deal-detail-summary">DealDesk only shows offers with genuine merchant imagery and a verified payable link.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse current verified deals</a></p></div></article></main>
+  <script>window.location.replace("/latest-deals/");</script>
 </body>
 </html>`;
   const output = resolve(root, "deals", slug, "index.html");
@@ -319,7 +345,7 @@ const latestHTML = `<!doctype html>
   <script type="application/ld+json">${JSON.stringify(latestSchema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#deal-categories">Categories</a><a href="/#how-we-check">How we check</a><a href="/#streaming">Streaming</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#deal-categories">Categories</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
   <main class="deal-home shell">
     <header class="page-heading">
       <div><span class="page-kicker"><span aria-hidden="true"></span> Checked ${lastmod}</span><h1>Latest verified deals</h1></div>
@@ -423,4 +449,18 @@ ${urls.map((entry) => `  <url><loc>${site}${entry.path}</loc><lastmod>${entry.la
 </urlset>\n`;
 await writeFile(resolve(root, "sitemap.xml"), sitemap);
 await writeFile(resolve(root, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
+await writeFile(resolve(root, "404.html"), `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found | DealDesk</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#deal-categories">Categories</a></div></nav></header>
+  <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>That page is no longer available</h1><p class="deal-detail-summary">The offer may have been removed because it no longer meets DealDesk's publishing requirements.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse current verified deals</a></p></div></article></main>
+</body>
+</html>\n`);
 console.log(`Built ${deals.length} image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery.`);
