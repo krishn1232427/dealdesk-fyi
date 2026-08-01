@@ -20,7 +20,21 @@ const isLiveDeal = (deal) => {
     now <= expiresAt &&
     now <= recheckAfter;
 };
-const deals = feeds.flatMap((feed) => feed.deals || []).filter(isLiveDeal);
+const hasGenuineMerchantImage = (deal) => {
+  try {
+    const image = new URL(String(deal?.imageURL || ""));
+    if (image.protocol !== "https:") return false;
+    if (deal.network === "ebay-partner-network" && deal.sourceType === "ebay-product") {
+      return image.hostname === "i.ebayimg.com";
+    }
+    return true;
+  } catch {
+    return false;
+  }
+};
+const liveDeals = feeds.flatMap((feed) => feed.deals || []).filter(isLiveDeal);
+const deals = liveDeals.filter(hasGenuineMerchantImage);
+const withheldDealCount = liveDeals.length - deals.length;
 
 const esc = (value) => String(value ?? "")
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
@@ -69,20 +83,7 @@ const savingsFrom = (prices) => {
 };
 const money = (value) => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
 const asinFrom = (deal) => String(deal.id || "").match(/amazon-([a-z0-9]{10})/i)?.[1]?.toUpperCase() || "";
-const categoryImage = (deal) => {
-  const category = String(deal?.category || "").toLowerCase();
-  if (category.includes("fashion")) return "/assets/categories/fashion.svg";
-  if (category.includes("electronic") || category.includes("tech")) return "/assets/categories/electronics.svg";
-  if (category.includes("home")) return "/assets/categories/home.svg";
-  if (category.includes("business") || category.includes("industrial")) return "/assets/categories/business.svg";
-  if (category.includes("grocery")) return "/assets/categories/grocery.svg";
-  return "/assets/categories/collectibles.svg";
-};
-const imageFor = (deal) => {
-  if (deal?.imageURL) return deal.imageURL;
-  const asin = asinFrom(deal);
-  return asin ? `https://images-na.ssl-images-amazon.com/images/P/${asin}.01.LZZZZZZZ.jpg` : categoryImage(deal);
-};
+const imageFor = (deal) => hasGenuineMerchantImage(deal) ? deal.imageURL : "";
 const earningPotential = (deal) => {
   const estimate = Number(deal?.estimatedCommission);
   if (Number.isFinite(estimate) && estimate >= 0) return estimate;
@@ -187,7 +188,7 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
   <main class="deal-detail shell">
     <nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><a href="/latest-deals/">Latest deals</a><span aria-hidden="true">›</span><span>${esc(title)}</span></nav>
     <article class="deal-detail-card">
-      <div class="deal-detail-media">${image ? `<img src="${esc(image)}" alt="${esc(title)}" />` : `<span class="product-fallback" aria-hidden="true">D</span>`}</div>
+      <div class="deal-detail-media"><img src="${esc(image)}" alt="${esc(title)}" /></div>
       <div class="deal-detail-content">
         <span class="page-kicker"><span aria-hidden="true"></span> ${esc(deal.category || "Featured deal")}</span>
         <h1>${esc(title)}</h1>
@@ -267,11 +268,10 @@ const latestCards = pricedDeals.slice(1).map((deal, index) => {
   const image = imageFor(deal);
   const updated = deal.publishedAt || deal.verifiedAt || lastmod;
   const initiallyVisible = index < 17;
-  const fallbackImage = categoryImage(deal);
   return `<article class="deal-card" data-category="${esc(String(deal.category || "Other").toLowerCase())}"${initiallyVisible ? "" : " hidden"}>
     <a class="deal-card-link" href="${canonical}" aria-label="${esc(title)}, ${esc(prices.current)}. View deal details">
       <span class="deal-media">
-${deal.badgeText ? `        <span class="discount-badge">${esc(deal.badgeText)}</span>\n` : discount ? `        <span class="discount-badge">${discount}% off</span>\n` : ""}        <img ${initiallyVisible ? `src="${esc(image)}" ` : ""}data-src="${esc(image)}" alt="${esc(title)}" width="800" height="520" loading="${initiallyVisible ? "eager" : "lazy"}" decoding="async"${initiallyVisible ? ' fetchpriority="high"' : ""} data-fallback="${esc(fallbackImage)}" />
+${deal.badgeText ? `        <span class="discount-badge">${esc(deal.badgeText)}</span>\n` : discount ? `        <span class="discount-badge">${discount}% off</span>\n` : ""}        <img ${initiallyVisible ? `src="${esc(image)}" ` : ""}data-src="${esc(image)}" data-merchant-image alt="${esc(title)}" width="800" height="520" loading="${initiallyVisible ? "eager" : "lazy"}" decoding="async"${initiallyVisible ? ' fetchpriority="high"' : ""} />
       </span>
       <span class="deal-body">
         <span class="price-line"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? `<span class="original-price">${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : `<span class="original-price">${esc(deal.referenceLabel || "Was")} <del>${esc(prices.original)}</del></span>` : ""}</span>
@@ -286,7 +286,7 @@ const featuredHTML = featuredDeal ? `<article class="featured-wrap latest-featur
   <a class="featured-deal" href="${featuredCanonical}" aria-label="${esc(featuredTitle)}, ${esc(featuredPrices.current)}. View top deal">
     <span class="featured-media">
       <span class="featured-badge">Recommended</span>
-      <img src="${esc(imageFor(featuredDeal))}" alt="${esc(featuredTitle)}" width="800" height="520" fetchpriority="high" decoding="async" data-fallback="${esc(categoryImage(featuredDeal))}" />
+      <img src="${esc(imageFor(featuredDeal))}" data-merchant-image alt="${esc(featuredTitle)}" width="800" height="520" fetchpriority="high" decoding="async" />
     </span>
     <span class="featured-content">
       <span class="featured-label">Recommended first · Checked ${esc(isoDate(featuredDeal.publishedAt || lastmod))}</span>
@@ -328,7 +328,7 @@ const latestHTML = `<!doctype html>
     ${featuredHTML}
     <aside class="latest-trust-strip" aria-label="How this page is organized">
       <span><strong>Focused first view</strong><small>Start with 18 recommendations, then reveal more when you choose.</small></span>
-      <span><strong>Useful variety</strong><small>Categories and merchants are mixed to reduce repetitive choices.</small></span>
+      <span><strong>Genuine imagery only</strong><small>Offers without real merchant-provided imagery stay out of this visual catalog.</small></span>
       <span><strong>Transparent ordering</strong><small>Value, freshness, merchant confidence, and estimated affiliate earnings influence order.</small></span>
     </aside>
     <section class="deals-heading-row" aria-labelledby="latest-deals-heading">
@@ -360,11 +360,12 @@ const latestHTML = `<!doctype html>
         var query = input.value.trim().toLowerCase();
         var selectedCategory = category.value;
         var matching = cards.filter(function (card) {
+          if (card.dataset.imageFailed === "true") return false;
           var queryMatch = !query || card.textContent.toLowerCase().indexOf(query) !== -1;
           var categoryMatch = selectedCategory === "all" || card.dataset.category === selectedCategory;
           return queryMatch && categoryMatch;
         });
-        var featuredMatch = featured && selectedCategory === "all" && (!query || featured.textContent.toLowerCase().indexOf(query) !== -1);
+        var featuredMatch = featured && featured.dataset.imageFailed !== "true" && selectedCategory === "all" && (!query || featured.textContent.toLowerCase().indexOf(query) !== -1);
         if (featured) featured.hidden = !featuredMatch;
         var cardLimit = Math.max(0, visibleLimit - (featuredMatch ? 1 : 0));
         cards.forEach(function (card) { card.hidden = true; });
@@ -381,11 +382,16 @@ const latestHTML = `<!doctype html>
       }
 
       cards.concat(featured ? [featured] : []).forEach(function (card) {
-        var image = card.querySelector("img[data-fallback]");
+        var image = card.querySelector("img[data-merchant-image]");
         if (!image) return;
-        image.addEventListener("error", function () {
-          if (image.src !== image.dataset.fallback) image.src = image.dataset.fallback;
-        });
+        var rejectCard = function () {
+          if (card.dataset.imageFailed === "true") return;
+          card.dataset.imageFailed = "true";
+          card.hidden = true;
+          filterDeals();
+        };
+        image.addEventListener("error", rejectCard);
+        if (image.getAttribute("src") && image.complete && image.naturalWidth === 0) rejectCard();
       });
       input.addEventListener("input", function () { visibleLimit = 18; filterDeals(); });
       category.addEventListener("change", function () { visibleLimit = 18; filterDeals(); });
@@ -417,4 +423,4 @@ ${urls.map((entry) => `  <url><loc>${site}${entry.path}</loc><lastmod>${entry.la
 </urlset>\n`;
 await writeFile(resolve(root, "sitemap.xml"), sitemap);
 await writeFile(resolve(root, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
-console.log(`Built ${deals.length} indexable deal pages and sitemap.xml.`);
+console.log(`Built ${deals.length} image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery.`);

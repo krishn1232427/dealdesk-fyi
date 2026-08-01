@@ -54,6 +54,14 @@ const cleanURL = (value) => {
   return canonical;
 };
 const conditionPattern = /^(New(?: other)?|Open box|Certified Refurbished|Excellent - Refurbished|Very Good - Refurbished|Good - Refurbished|Seller refurbished|Manufacturer refurbished|Refurbished|Used|Pre-owned)$/i;
+const merchantImage = (value) => {
+  try {
+    const image = new URL(String(value || ""));
+    return image.protocol === "https:" && image.hostname === "i.ebayimg.com" ? image.href : "";
+  } catch {
+    return "";
+  }
+};
 
 const candidates = [];
 const seenURLs = new Set();
@@ -105,6 +113,7 @@ const imported = candidates.map(({ record, merchant, lines, title, prices, curre
     merchantName: "eBay",
     sourceType: "ebay-product",
     sourcePromotionURL: record.eventURL,
+    ...(merchantImage(record.imageURL) ? { imageURL: merchantImage(record.imageURL) } : {}),
     category: category(record.eventCategory),
     badgeText: discountPercent ? `${discountPercent}% off` : "Live eBay price",
     currentPrice: current,
