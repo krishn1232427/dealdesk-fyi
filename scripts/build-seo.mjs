@@ -209,8 +209,30 @@ ${prices.current ? `    <section class="deal-proof" aria-labelledby="deal-proof-
 }
 
 const lastmod = isoDate(Math.max(...feeds.map((feed) => new Date(feed.updatedAt || 0).getTime())));
-const pricedDeals = deals.filter((deal) => pricesFrom(deal).current)
+const diversifyDeals = (items, seed = []) => {
+  const pool = [...items];
+  const ordered = [...seed];
+  while (pool.length) {
+    const recentCategories = new Set(ordered.slice(-2).map((deal) => deal.category));
+    const previousMerchant = ordered.at(-1)?.merchantName;
+    let index = pool.findIndex((deal) => !recentCategories.has(deal.category) && deal.merchantName !== previousMerchant);
+    if (index < 0) index = pool.findIndex((deal) => deal.merchantName !== previousMerchant);
+    if (index < 0) index = 0;
+    ordered.push(pool.splice(index, 1)[0]);
+  }
+  return ordered.slice(seed.length);
+};
+const rankedDeals = deals.filter((deal) => pricesFrom(deal).current)
   .sort((a, b) => earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a));
+const earningLeaders = rankedDeals.filter((deal) => earningPotential(deal) > 0);
+const leadingDeals = earningLeaders.slice(0, 3);
+const pricedDeals = [
+  ...leadingDeals,
+  ...diversifyDeals([
+    ...earningLeaders.slice(3),
+    ...rankedDeals.filter((deal) => earningPotential(deal) === 0)
+  ], leadingDeals)
+];
 const featuredDeal = pricedDeals[0];
 const featuredPrices = pricesFrom(featuredDeal);
 const featuredDiscount = discountFrom(featuredPrices, featuredDeal);
@@ -234,7 +256,9 @@ const latestSchema = {
     }))
   }
 };
-const latestCards = pricedDeals.slice(1).map((deal) => {
+const categoryOptions = [...new Set(pricedDeals.map((deal) => deal.category || "Other"))].sort()
+  .map((category) => `<option value="${esc(category.toLowerCase())}">${esc(category)}</option>`).join("");
+const latestCards = pricedDeals.slice(1).map((deal, index) => {
   const title = cleanTitle(deal.title);
   const prices = pricesFrom(deal);
   const discount = discountFrom(prices, deal);
@@ -242,10 +266,12 @@ const latestCards = pricedDeals.slice(1).map((deal) => {
   const canonical = `/deals/${slugFor(deal)}/`;
   const image = imageFor(deal);
   const updated = deal.publishedAt || deal.verifiedAt || lastmod;
-  return `<article class="deal-card">
+  const initiallyVisible = index < 17;
+  const fallbackImage = categoryImage(deal);
+  return `<article class="deal-card" data-category="${esc(String(deal.category || "Other").toLowerCase())}"${initiallyVisible ? "" : " hidden"}>
     <a class="deal-card-link" href="${canonical}" aria-label="${esc(title)}, ${esc(prices.current)}. View deal details">
       <span class="deal-media">
-${deal.badgeText ? `        <span class="discount-badge">${esc(deal.badgeText)}</span>\n` : discount ? `        <span class="discount-badge">${discount}% off</span>\n` : ""}        ${image ? `<img src="${esc(image)}" alt="${esc(title)}" loading="lazy" />` : `<span class="product-fallback" aria-hidden="true">D</span>`}
+${deal.badgeText ? `        <span class="discount-badge">${esc(deal.badgeText)}</span>\n` : discount ? `        <span class="discount-badge">${discount}% off</span>\n` : ""}        <img ${initiallyVisible ? `src="${esc(image)}" ` : ""}data-src="${esc(image)}" alt="${esc(title)}" width="800" height="520" loading="${initiallyVisible ? "eager" : "lazy"}" decoding="async"${initiallyVisible ? ' fetchpriority="high"' : ""} data-fallback="${esc(fallbackImage)}" />
       </span>
       <span class="deal-body">
         <span class="price-line"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? `<span class="original-price">${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : `<span class="original-price">${esc(deal.referenceLabel || "Was")} <del>${esc(prices.original)}</del></span>` : ""}</span>
@@ -259,11 +285,11 @@ ${deal.savingsText ? `        <span class="saving-text">${esc(deal.savingsText)}
 const featuredHTML = featuredDeal ? `<article class="featured-wrap latest-featured">
   <a class="featured-deal" href="${featuredCanonical}" aria-label="${esc(featuredTitle)}, ${esc(featuredPrices.current)}. View top deal">
     <span class="featured-media">
-      <span class="featured-badge">Top earning offer</span>
-      <img src="${esc(imageFor(featuredDeal))}" alt="${esc(featuredTitle)}" />
+      <span class="featured-badge">Recommended</span>
+      <img src="${esc(imageFor(featuredDeal))}" alt="${esc(featuredTitle)}" width="800" height="520" fetchpriority="high" decoding="async" data-fallback="${esc(categoryImage(featuredDeal))}" />
     </span>
     <span class="featured-content">
-      <span class="featured-label">DealDesk top earning pick · Checked ${esc(isoDate(featuredDeal.publishedAt || lastmod))}</span>
+      <span class="featured-label">Recommended first · Checked ${esc(isoDate(featuredDeal.publishedAt || lastmod))}</span>
       <span class="featured-price-line"><strong>${esc(featuredPrices.current)}</strong>${featuredPrices.original ? featuredDeal.referenceStyle === "renewal" ? `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Then")} ${esc(featuredPrices.original)}</span>` : `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Was")} <del>${esc(featuredPrices.original)}</del></span>` : ""}</span>
       ${featuredDeal.savingsText ? `<span class="featured-saving">${esc(featuredDeal.savingsText)}</span>` : featuredSavings ? `<span class="featured-saving">Save ${money(featuredSavings)} · ${featuredDiscount}% off</span>` : ""}
       ${featuredDeal.priceNote ? `<span class="price-note">${esc(featuredDeal.priceNote)}</span>` : ""}
@@ -297,13 +323,24 @@ const latestHTML = `<!doctype html>
   <main class="deal-home shell">
     <header class="page-heading">
       <div><span class="page-kicker"><span aria-hidden="true"></span> Checked ${lastmod}</span><h1>Latest verified deals</h1></div>
-      <p><strong>${pricedDeals.length}</strong> current product deals with clear savings</p>
+      <p><strong>${pricedDeals.length}</strong> verified offers, presented in focused batches</p>
     </header>
     ${featuredHTML}
+    <aside class="latest-trust-strip" aria-label="How this page is organized">
+      <span><strong>Focused first view</strong><small>Start with 18 recommendations, then reveal more when you choose.</small></span>
+      <span><strong>Useful variety</strong><small>Categories and merchants are mixed to reduce repetitive choices.</small></span>
+      <span><strong>Transparent ordering</strong><small>Value, freshness, merchant confidence, and estimated affiliate earnings influence order.</small></span>
+    </aside>
     <section class="deals-heading-row" aria-labelledby="latest-deals-heading">
-      <div><h2 id="latest-deals-heading">More deals worth seeing</h2><p>Compare current prices and savings at a glance.</p></div>
+      <div><h2 id="latest-deals-heading">More deals worth seeing</h2><p>Filter first, compare a manageable set, and expand only when useful.</p></div>
     </section>
-    <div class="deal-grid">${latestCards}</div>
+    <section class="latest-controls" aria-label="Filter the deal catalog">
+      <label for="latest-category">Category<select id="latest-category"><option value="all">All categories</option>${categoryOptions}</select></label>
+      <p id="latest-catalog-status" role="status">Showing 18 of ${pricedDeals.length} verified offers</p>
+    </section>
+    <div class="deal-grid" id="latest-deal-grid">${latestCards}</div>
+    <p class="latest-empty" id="latest-empty" hidden>No matching verified deals. Try another search or category.</p>
+    <div class="load-more-wrap"><button class="load-more" id="latest-load-more" type="button">Show 18 more deals</button></div>
   </main>
   <footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. You never pay more because of it. Prices and availability can change at checkout.</div></footer>
   <script>
@@ -313,17 +350,48 @@ const latestHTML = `<!doctype html>
       var input = document.getElementById("latest-deal-search");
       var cards = Array.prototype.slice.call(document.querySelectorAll(".deal-card"));
       var featured = document.querySelector(".latest-featured");
+      var category = document.getElementById("latest-category");
+      var status = document.getElementById("latest-catalog-status");
+      var loadMore = document.getElementById("latest-load-more");
+      var empty = document.getElementById("latest-empty");
+      var visibleLimit = 18;
 
       function filterDeals() {
         var query = input.value.trim().toLowerCase();
-        cards.forEach(function (card) {
-          card.hidden = Boolean(query && card.textContent.toLowerCase().indexOf(query) === -1);
+        var selectedCategory = category.value;
+        var matching = cards.filter(function (card) {
+          var queryMatch = !query || card.textContent.toLowerCase().indexOf(query) !== -1;
+          var categoryMatch = selectedCategory === "all" || card.dataset.category === selectedCategory;
+          return queryMatch && categoryMatch;
         });
-        if (featured) featured.hidden = Boolean(query && featured.textContent.toLowerCase().indexOf(query) === -1);
+        var featuredMatch = featured && selectedCategory === "all" && (!query || featured.textContent.toLowerCase().indexOf(query) !== -1);
+        if (featured) featured.hidden = !featuredMatch;
+        var cardLimit = Math.max(0, visibleLimit - (featuredMatch ? 1 : 0));
+        cards.forEach(function (card) { card.hidden = true; });
+        matching.slice(0, cardLimit).forEach(function (card) {
+          var image = card.querySelector("img[data-src]");
+          if (image && !image.getAttribute("src")) image.setAttribute("src", image.dataset.src);
+          card.hidden = false;
+        });
+        var shown = Math.min(matching.length, cardLimit) + (featuredMatch ? 1 : 0);
+        var total = matching.length + (featuredMatch ? 1 : 0);
+        status.textContent = "Showing " + shown + " of " + total + " matching verified offers";
+        loadMore.hidden = matching.length <= cardLimit;
+        empty.hidden = total !== 0;
       }
 
-      input.addEventListener("input", filterDeals);
+      cards.concat(featured ? [featured] : []).forEach(function (card) {
+        var image = card.querySelector("img[data-fallback]");
+        if (!image) return;
+        image.addEventListener("error", function () {
+          if (image.src !== image.dataset.fallback) image.src = image.dataset.fallback;
+        });
+      });
+      input.addEventListener("input", function () { visibleLimit = 18; filterDeals(); });
+      category.addEventListener("change", function () { visibleLimit = 18; filterDeals(); });
+      loadMore.addEventListener("click", function () { visibleLimit += 18; filterDeals(); });
       form.addEventListener("submit", function (event) { event.preventDefault(); });
+      filterDeals();
     }());
   </script>
 </body>
