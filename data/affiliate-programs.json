@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T18:36:00Z",
+  "updatedAt": "2026-08-01T19:14:59Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -24,6 +24,18 @@
       "publisherID": "7459747",
       "status": "media-partner account active; Brands Marketplace access unavailable",
       "brandsMarketplaceStatus": "not active — Discover is not present in the signed-in account",
+      "commissionAccess": false
+    },
+    {
+      "network": "rakuten-advertising",
+      "publisherID": "4733148",
+      "status": "active publisher account; advertiser applications pending; tax and payment profile incomplete",
+      "commissionAccess": false
+    },
+    {
+      "network": "ebay-partner-network",
+      "status": "eBay account created; EPN publisher application prepared but not submitted",
+      "email": "hello.launchdesk@gmail.com",
       "commissionAccess": false
     }
   ],
@@ -1035,6 +1047,66 @@
       "restrictions": "No commission for gift cards, excluded bike brands and SKUs, charitable donations and fees, unauthorized coupon codes, or transactions closed through email, SMS, or paid search channels. Use only approved program links and offers.",
       "summary": "Backcountry's official partner page and live Impact offer confirm an 8% base payout, 30-day attribution, and more than 35,000 outdoor gear and apparel SKUs. DealDesk accepted the offer terms and reached the existing Impact-account sign-in step. The application is not submitted until authentication succeeds, and no deal may publish before approval and payable-link verification.",
       "priority": 49
+    },
+    {
+      "id": "rakuten-sensibo-50234",
+      "network": "rakuten-advertising",
+      "merchantName": "Sensibo",
+      "advertiserID": "50234",
+      "publisherID": "4733148",
+      "merchantURL": "https://sensibo.com/",
+      "profileURL": "https://publisher.rakutenadvertising.com/advertisers/50234/profile",
+      "category": "Smart home climate control, air quality, and energy savings",
+      "commission": "Confidential tiered qualifying-sale commission; exact terms retained in the Rakuten publisher dashboard",
+      "attribution": "Program-specific last-click attribution; exact terms retained in the Rakuten publisher dashboard",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T19:14:59Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Use approved qualifying links and accurate, substantiated claims. Before any Sensibo link is published, confirm the site's privacy disclosure, applicable cookie consent and opt-out handling, advertiser policies, current offer, and exact payable link. Program financial terms are confidential.",
+      "summary": "DealDesk submitted a focused application to Sensibo after an internal economics and catalog-fit review. Its smart climate, air-quality, and energy-saving products fit the Home and Tech audience and can offer clear consumer value. Publication remains blocked until approval, privacy and tracking compliance, a live merchant-authorized offer, and a DealDesk-specific payable link are verified.",
+      "priority": 50
+    },
+    {
+      "id": "rakuten-costway-41626",
+      "network": "rakuten-advertising",
+      "merchantName": "Costway",
+      "advertiserID": "41626",
+      "publisherID": "4733148",
+      "merchantURL": "https://www.costway.com/",
+      "profileURL": "https://publisher.rakutenadvertising.com/advertisers/41626/profile",
+      "category": "Furniture, home, garden, appliances, sporting goods, and toys",
+      "commission": "Confidential qualifying-sale commission; exact terms retained in the Rakuten publisher dashboard",
+      "attribution": "Program-specific last-click attribution; exact terms retained in the Rakuten publisher dashboard",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T19:14:59Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Use only approved qualifying links, current merchant-authorized prices and promotions, and accurate claims. Confirm privacy, tracking, and advertiser-policy compliance before publication. Program financial terms are confidential.",
+      "summary": "DealDesk submitted a focused application to Costway after reviewing the broad home and lifestyle catalog and expected earnings. The merchant can add useful furniture, patio, appliance, sporting, and toy inventory that is not covered well by DealDesk's current approved programs. Publication remains blocked until approval, a live customer-value offer, and a DealDesk-specific payable link are verified.",
+      "priority": 51
+    },
+    {
+      "id": "rakuten-jd-sports-43953",
+      "network": "rakuten-advertising",
+      "merchantName": "JD Sports",
+      "advertiserID": "43953",
+      "publisherID": "4733148",
+      "merchantURL": "https://www.jdsports.com/",
+      "profileURL": "https://publisher.rakutenadvertising.com/advertisers/43953/profile",
+      "category": "Athletic footwear, apparel, and accessories",
+      "commission": "Confidential tiered qualifying-sale commission with noncommissionable SKUs; exact terms retained in the Rakuten publisher dashboard",
+      "attribution": "Program-specific last-click attribution; exact terms retained in the Rakuten publisher dashboard",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T19:14:59Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Use only advertiser-approved creative and the price shown on the merchant site. Do not advertise coupon-adjusted prices, masked prices, or unapproved additional discounts. Verify that each SKU is commissionable and that the exact tracking link is payable before publication. Program financial terms are confidential.",
+      "summary": "DealDesk submitted a focused application to JD Sports because the recognizable footwear and apparel retailer balances brand demand with workable expected earnings. Publication remains blocked until approval, an authorized live discount, SKU-level commission eligibility, and a DealDesk-specific payable link are verified.",
+      "priority": 52
     }
   ]
 }

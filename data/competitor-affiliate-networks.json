@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T10:50:43Z",
+  "updatedAt": "2026-08-01T19:14:59Z",
   "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
   "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
   "competitors": [
@@ -112,9 +112,9 @@
     },
     {
       "network": "eBay Partner Network",
-      "access": "not yet connected",
+      "access": "eBay account created; EPN application prepared",
       "canPublish": false,
-      "nextAction": "Sign in with the intended eBay account, complete the US publisher profile in USD, then verify a DealDesk campaign link before publishing.",
+      "nextAction": "Enter DealDesk's truthful US business address and phone, submit the prepared EPN publisher profile, complete payout and tax setup, then verify a DealDesk campaign link before publishing.",
       "priority": 1
     },
     {
@@ -126,9 +126,11 @@
     },
     {
       "network": "Rakuten Advertising",
-      "access": "registration prepared",
+      "access": "active publisher account; advertiser applications pending",
+      "publisherReference": "4733148",
       "canPublish": false,
-      "nextAction": "Choose a new account password, verify the company email, complete the publisher profile, and apply first to Sam's Club and other high-value merchants that fit DealDesk.",
+      "notes": "DealDesk's publisher channel is active and its advertiser-facing name, description, demographics, categories, and channel declarations are complete. Sensibo, Costway, and JD Sports applications are pending. Sam's Club, Dyson, and LEGO currently report that DealDesk does not meet their supplied eligibility terms.",
+      "nextAction": "Complete the truthful company address, W-9 taxpayer certification, and payment method. Monitor pending advertisers and publish nothing until approval and exact payable-link verification.",
       "priority": 3
     },
     {
