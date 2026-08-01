@@ -3,486 +3,373 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DealDesk | Verified Deals That Pay DealDesk</title>
+    <title>DealDesk — Hand-picked deals worth clicking</title>
     <meta
       name="description"
-      content="DealDesk publishes verified, commission-eligible shopping and streaming deals with disclosed tracked links."
+      content="Fresh, hand-picked deals on home, tech, everyday essentials, and streaming—all in one clean place."
     />
+    <meta name="theme-color" content="#ff5c35" />
+    <meta property="og:title" content="DealDesk — Great deals. Zero digging." />
     <meta
-      name="impact-site-verification"
-      content="2876548c-0373-41f9-90da-6d5823b19752"
+      property="og:description"
+      content="Fresh finds, real savings, and a fast path to the retailer."
     />
-    <meta
-      name="impact-site-verification"
-      value="2876548c-0373-41f9-90da-6d5823b19752"
-    />
-    <meta
-      name="impact-site-verification"
-      content="06fbc2e7-9b0e-4278-a9ae-d7b61d1fda3b"
-    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dealdesk.fyi/" />
+    <meta name="impact-site-verification" content="2876548c-0373-41f9-90da-6d5823b19752" />
+    <meta name="impact-site-verification" value="2876548c-0373-41f9-90da-6d5823b19752" />
+    <meta name="impact-site-verification" content="06fbc2e7-9b0e-4278-a9ae-d7b61d1fda3b" />
     <!-- Impact-Site-Verification: 2876548c-0373-41f9-90da-6d5823b19752 -->
     <!-- Impact-Site-Verification: 06fbc2e7-9b0e-4278-a9ae-d7b61d1fda3b -->
     <link rel="canonical" href="https://dealdesk.fyi/" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <p class="impact-verification">
+    <span class="verification-token" aria-hidden="true">
       Impact-Site-Verification: 2876548c-0373-41f9-90da-6d5823b19752
-    </p>
-    <main class="shell">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="/">DealDesk</a>
-        <div class="links">
-          <a href="/support/">Support</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="https://apps.apple.com/us/app/dealdesk/id6782424624">App Store</a>
+    </span>
+
+    <div class="top-note">Fresh picks, checked daily <span aria-hidden="true">·</span> Prices can change fast</div>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="DealDesk home">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span>DealDesk</span>
+        </a>
+        <div class="nav-links">
+          <a href="#top-deals">Top deals</a>
+          <a href="#streaming">Streaming</a>
+          <a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a>
         </div>
       </nav>
+    </header>
 
-      <section class="hero">
+    <main>
+      <section class="hero shell">
+        <div class="hero-copy">
+          <span class="hero-kicker">Today’s smartest finds</span>
+          <h1>Great deals.<br /><em>Zero digging.</em></h1>
+          <p>Fresh prices from stores you trust, hand-picked and easy to shop.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#top-deals">Shop today’s deals</a>
+            <a class="button button-quiet" href="#streaming">See streaming offers <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="trust-row" aria-label="Why shop DealDesk">
+            <span><i aria-hidden="true">✓</i> Checked today</span>
+            <span><i aria-hidden="true">✓</i> Direct to retailer</span>
+            <span><i aria-hidden="true">✓</i> No membership needed</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="shape shape-one"></div>
+          <div class="shape shape-two"></div>
+          <div class="price-bubble bubble-one"><span>save</span><strong>42%</strong></div>
+          <div class="price-bubble bubble-two"><span>deal</span><strong>↓</strong></div>
+          <div class="hero-card">
+            <span class="hero-card-label">Deal of the day</span>
+            <div class="hero-card-image-wrap">
+              <img id="hero-product-image" alt="" />
+              <span class="hero-card-placeholder">★</span>
+            </div>
+            <strong id="hero-product-title">Loading today’s top pick…</strong>
+            <span id="hero-product-price">Fresh price</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="deals-section shell" id="top-deals">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">Worth a look</span>
+            <h2>Today’s top deals</h2>
+          </div>
+          <p><span id="live-count">Fresh</span> hand-picked offers</p>
+        </div>
+
+        <div class="category-bar" id="category-bar" aria-label="Filter deals by category">
+          <button class="category-chip active" type="button" data-category="All">All deals</button>
+        </div>
+
+        <div class="deal-grid" id="best-deals-grid" aria-live="polite">
+          <div class="deal-skeleton"></div>
+          <div class="deal-skeleton"></div>
+          <div class="deal-skeleton"></div>
+          <div class="deal-skeleton"></div>
+        </div>
+      </section>
+
+      <section class="streaming-section" id="streaming">
+        <div class="shell streaming-inner">
+          <div class="streaming-intro">
+            <span class="section-kicker section-kicker-light">Watch for less</span>
+            <h2>Streaming offers,<br />minus the searching.</h2>
+            <p>Trials and subscription offers collected in one place.</p>
+          </div>
+          <div class="streaming-grid" id="streaming-deals-grid" aria-live="polite">
+            <div class="stream-skeleton"></div>
+            <div class="stream-skeleton"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="app-banner shell">
         <div>
-          <p class="eyebrow">DealDesk</p>
-          <h1>Only real deals. Only links that pay DealDesk.</h1>
-          <p>
-            DealDesk verifies the offer, the destination, and our commission eligibility before a
-            deal appears. Shoppers get a clear path to the merchant; DealDesk gets paid only when
-            the merchant or affiliate network records a qualifying action.
-          </p>
-          <p>
-            <a class="button" href="https://apps.apple.com/us/app/dealdesk/id6782424624">
-              View on the App Store
-            </a>
-          </p>
+          <span class="section-kicker">DealDesk in your pocket</span>
+          <h2>Save the deals you actually want.</h2>
+          <p>Compare your favorites and make the call without the tab overload.</p>
         </div>
-        <aside class="panel">
-          <p class="eyebrow">How it works</p>
-          <h2>Review stays native. Buy goes to the merchant.</h2>
-          <p>
-            Review opens a DealDesk decision sheet with price, coupon, shipping, seller, evidence,
-            and risk signals. Buy opens the merchant item page so the customer can confirm checkout
-            details directly with the merchant.
-          </p>
-        </aside>
+        <a class="button button-dark" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Download on the App Store</a>
       </section>
-
-      <section class="grid">
-        <article class="card">
-          <h2>Decision Tools</h2>
-          <p>
-            Save buying plans, compare candidates, watch prices, estimate checkout totals, review
-            coupon status, and export decision summaries.
-          </p>
-        </article>
-        <article class="card">
-          <h2>Affiliate Disclosure</h2>
-          <p>
-            DealDesk may earn a commission from some purchases when users choose to open merchant
-            purchase links. The app shows this disclosure near Buy actions.
-          </p>
-          <p>Only approved, commission-confirmed merchant links appear in the public deal feeds.</p>
-        </article>
-        <article class="card">
-          <h2>Customer Control</h2>
-          <p>
-            The merchant cart remains the source of truth for final price, taxes, shipping,
-            availability, return terms, and checkout conditions.
-          </p>
-        </article>
-        <article class="card">
-          <h2>Publisher</h2>
-          <p>
-            DealDesk is published by Launchdesk LLC. The app does not use adware, browser
-            extensions, cookie stuffing, hidden link replacement, or misleading purchase flows.
-          </p>
-        </article>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">Commission-confirmed</p>
-        <h2>Today’s verified product deals.</h2>
-        <p>
-          Every visible deal has an approved network, an active DealDesk tracking ID, and a
-          recently checked offer. Price and availability can still change at merchant checkout.
-        </p>
-        <div id="best-deals-grid" class="deal-picks" aria-label="Curated best deals"></div>
-        <script>
-          (function () {
-            var grid = document.getElementById("best-deals-grid");
-            if (!grid) {
-              return;
-            }
-
-            fetch("/data/best-deals.json", { cache: "no-store" })
-              .then(function (response) {
-                if (!response.ok) {
-                  throw new Error("Feed unavailable");
-                }
-                return response.json();
-              })
-              .then(function (feed) {
-                var deals = (feed.deals || []).filter(isCommissionEligible).slice(0, 28);
-                deals.forEach(function (deal) {
-                  if (!deal.affiliateURL || !deal.title) {
-                    return;
-                  }
-
-                  var merchantURL = deal.merchantURL || deal.affiliateURL;
-                  var card = document.createElement("a");
-                  card.className = "deal-pick";
-                  card.href = deal.affiliateURL;
-                  card.rel = "sponsored nofollow";
-
-                  var brand = document.createElement("span");
-                  brand.className = "deal-pick-brand";
-
-                  var logo = document.createElement("img");
-                  logo.alt = "";
-                  logo.className = "deal-pick-logo";
-                  logo.loading = "lazy";
-                  logo.src = deal.imageURL || "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(new URL(merchantURL).hostname) + "&sz=64";
-
-                  var merchant = document.createElement("span");
-                  merchant.textContent = deal.merchantName || new URL(merchantURL).hostname.replace(/^www\./, "");
-
-                  var title = document.createElement("strong");
-                  title.textContent = deal.title;
-
-                  var summary = document.createElement("span");
-                  summary.className = "deal-pick-summary";
-                  summary.textContent = deal.summary || "Check merchant terms before buying.";
-
-                  brand.appendChild(logo);
-                  brand.appendChild(merchant);
-                  card.appendChild(brand);
-                  card.appendChild(title);
-                  card.appendChild(summary);
-                  grid.appendChild(card);
-                });
-
-                if (!grid.children.length) {
-                  grid.innerHTML = '<p class="muted-copy">No commission-confirmed product deals are live right now.</p>';
-                }
-
-                function isCommissionEligible(deal) {
-                  return Boolean(
-                    deal &&
-                    deal.commissionEligible === true &&
-                    deal.approvalStatus === "approved" &&
-                    deal.trackingID &&
-                    deal.affiliateURL
-                  );
-                }
-              })
-              .catch(function () {
-                grid.innerHTML = '<p class="muted-copy">Curated picks are temporarily unavailable.</p>';
-              });
-          })();
-        </script>
-      </section>
-
-      <section class="section" id="streaming-deals">
-        <p class="eyebrow">Streaming deals</p>
-        <h2>Subscription offers that can earn DealDesk a bounty.</h2>
-        <p>
-          These links use the approved Amazon Associates tracking ID <strong>dealdesk-20</strong>.
-          A commission is earned only when the visitor completes the qualifying signup or purchase.
-        </p>
-        <div id="streaming-deals-grid" class="deal-picks" aria-label="Commission-eligible streaming deals"></div>
-        <script>
-          (function () {
-            var grid = document.getElementById("streaming-deals-grid");
-            if (!grid) return;
-
-            fetch("/data/streaming-deals.json", { cache: "no-store" })
-              .then(function (response) {
-                if (!response.ok) throw new Error("Streaming feed unavailable");
-                return response.json();
-              })
-              .then(function (feed) {
-                var deals = (feed.deals || []).filter(function (deal) {
-                  return Boolean(
-                    deal &&
-                    deal.commissionEligible === true &&
-                    deal.approvalStatus === "approved" &&
-                    deal.trackingID === "dealdesk-20" &&
-                    deal.affiliateURL &&
-                    deal.title
-                  );
-                });
-
-                deals.forEach(function (deal) {
-                  var card = document.createElement("a");
-                  card.className = "deal-pick";
-                  card.href = deal.affiliateURL;
-                  card.rel = "sponsored nofollow";
-
-                  var brand = document.createElement("span");
-                  brand.className = "deal-pick-brand";
-
-                  var logo = document.createElement("span");
-                  logo.className = "commission-badge";
-                  logo.textContent = "Paid";
-
-                  var merchant = document.createElement("span");
-                  merchant.textContent = deal.merchantName;
-
-                  var title = document.createElement("strong");
-                  title.textContent = deal.title;
-
-                  var summary = document.createElement("span");
-                  summary.className = "deal-pick-summary";
-                  summary.textContent = deal.summary;
-
-                  var proof = document.createElement("span");
-                  proof.className = "commission-proof";
-                  proof.textContent = "Commission confirmed · " + deal.commission;
-
-                  brand.appendChild(logo);
-                  brand.appendChild(merchant);
-                  card.appendChild(brand);
-                  card.appendChild(title);
-                  card.appendChild(summary);
-                  card.appendChild(proof);
-                  grid.appendChild(card);
-                });
-
-                if (!grid.children.length) {
-                  grid.innerHTML = '<p class="muted-copy">No commission-confirmed streaming deals are live right now.</p>';
-                }
-              })
-              .catch(function () {
-                grid.innerHTML = '<p class="muted-copy">Commission-confirmed streaming deals are temporarily unavailable.</p>';
-              });
-          })();
-        </script>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">Publishing rule</p>
-        <h2>Unapproved partners stay off the deal pages.</h2>
-        <p>
-          Awin, CJ, Rakuten Advertising, Impact, and Sovrn offers remain private until DealDesk is
-          approved for the advertiser and has a tested tracked link. This prevents attractive but
-          non-paying offers from entering the public feed.
-        </p>
-      </section>
-
-      <template id="inactive-partner-content">
-      <section class="section">
-        <p class="eyebrow">Awin Programs</p>
-        <h2>Direct affiliate links prepared from the Awin onboarding path.</h2>
-        <p>
-          The Awin account in the onboarding email is wired into DealDesk links when a public
-          advertiser ID is available. Payout still depends on joining the advertiser program,
-          following its terms, attribution, transaction validation, and completed payout setup.
-        </p>
-        <div id="affiliate-programs-grid" class="program-grid" aria-label="Awin affiliate programs"></div>
-        <p class="muted-copy">
-          Need more advertisers? Browse the
-          <a href="https://www.awin.com/us/search/advertiser-directory" rel="nofollow">
-            Awin advertiser directory
-          </a>
-          and add approved program IDs to this feed.
-        </p>
-        <script>
-          (function () {
-            var grid = document.getElementById("affiliate-programs-grid");
-            if (!grid) {
-              return;
-            }
-
-            fetch("/data/affiliate-programs.json", { cache: "no-store" })
-              .then(function (response) {
-                if (!response.ok) {
-                  throw new Error("Affiliate program feed unavailable");
-                }
-                return response.json();
-              })
-              .then(function (feed) {
-                var programs = (feed.programs || []).slice(0, 6);
-                programs.forEach(function (program) {
-                  if (!program.merchantURL || !program.advertiserID || program.network !== "awin") {
-                    return;
-                  }
-
-                  var merchantURL = new URL(program.merchantURL);
-                  var outURL = "/out/?network=awin&awinmid=" + encodeURIComponent(program.advertiserID)
-                    + "&url=" + encodeURIComponent(merchantURL.href)
-                    + "&subid=dealdesksite";
-
-                  var card = document.createElement("article");
-                  card.className = "program-card";
-
-                  var brand = document.createElement("span");
-                  brand.className = "deal-pick-brand";
-
-                  var logo = document.createElement("img");
-                  logo.alt = "";
-                  logo.className = "deal-pick-logo";
-                  logo.loading = "lazy";
-                  logo.src = "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(merchantURL.hostname) + "&sz=64";
-
-                  var merchant = document.createElement("span");
-                  merchant.textContent = program.merchantName || merchantURL.hostname.replace(/^www\./, "");
-
-                  var title = document.createElement("strong");
-                  title.textContent = program.merchantName + " Awin deep link";
-
-                  var summary = document.createElement("p");
-                  summary.className = "program-summary";
-                  summary.textContent = program.summary || "Review program terms before promoting.";
-
-                  var meta = document.createElement("p");
-                  meta.className = "program-meta";
-                  meta.textContent = [
-                    "Awin ID " + program.advertiserID,
-                    program.commission,
-                    program.attribution,
-                    program.status
-                  ].filter(Boolean).join(" | ");
-
-                  var actions = document.createElement("p");
-                  actions.className = "program-actions";
-
-                  var openLink = document.createElement("a");
-                  openLink.className = "button";
-                  openLink.href = outURL;
-                  openLink.rel = "sponsored nofollow";
-                  openLink.textContent = "Open Awin link";
-
-                  var profileLink = document.createElement("a");
-                  profileLink.href = program.profileURL || "https://www.awin.com/us/search/advertiser-directory";
-                  profileLink.rel = "nofollow";
-                  profileLink.textContent = "Awin profile";
-
-                  brand.appendChild(logo);
-                  brand.appendChild(merchant);
-                  actions.appendChild(openLink);
-                  actions.appendChild(profileLink);
-                  card.appendChild(brand);
-                  card.appendChild(title);
-                  card.appendChild(summary);
-                  card.appendChild(meta);
-                  card.appendChild(actions);
-                  grid.appendChild(card);
-                });
-              })
-              .catch(function () {
-                grid.innerHTML = '<p class="muted-copy">Awin program links are temporarily unavailable.</p>';
-              });
-          })();
-        </script>
-      </section>
-
-      <section class="section">
-        <p class="eyebrow">Merchant Rewards</p>
-        <h2>The broader preferred-merchant directory.</h2>
-        <p>
-          Use the curated picks above for current customer-facing estimates and shopping context.
-          This broader directory preserves the underlying partner-list coverage, including
-          merchants whose current rate is unavailable. Final eligibility, eligible items,
-          attribution, reversals, and payout are controlled by each merchant and affiliate network.
-        </p>
-        <div class="reward-table" aria-label="Preferred merchant reward rates">
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.groupon.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Groupon</span><strong>Up to 9.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.aliexpress.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>AliExpress</span><strong>12.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fooni.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Ooni</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.unode50.com%2Fes%2F&subid=dealdesksite" rel="sponsored nofollow"><span>UNOde50 ES</span><strong>11.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.riversol.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Riversol</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.revolve.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Revolve Clothing</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.discountelectronics.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>DiscountElectronics.com</span><strong>8.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fmontirex.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Montirex</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Ffeature.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>FEATURE</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.beekeepersnaturals.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Beekeeper's Naturals</span><strong>14.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fhigherdose.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>HigherDOSE</span><strong>4.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.getyourguide.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>GetYourGuide</span><strong>10% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.hillhousehome.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Hill House Home</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.creditkarma.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Credit Karma</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.omahasteaks.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Omaha Steak Company</span><strong>8.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fcomfrt.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Comfrt</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.fwrd.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>FWRD</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.kiehls.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Kiehl's</span><strong>11.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.zennioptical.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Zenni Optical</span><strong>14.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.onbuy.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>onbuy.com</span><strong>5.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.ernestjones.co.uk%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Ernest Jones</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.hsamuel.co.uk%2F&subid=dealdesksite" rel="sponsored nofollow"><span>H Samuel</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.davidsbridal.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>David's Bridal</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fcosori.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>COSORI</span><strong>4.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.officedepot.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Office Depot and OfficeMax</span><strong>4.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.whimstay.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Whimstay</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.angara.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Angara</span><strong>4.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.kendrascott.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Kendra Scott</span><strong>9.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.assouline.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Assouline.com</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.uspoloassn.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>U.S. Polo Assn</span><strong>3.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fbioptimizers.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>BiOptimizers</span><strong>22% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.cvs.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>CVS</span><strong>69.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.stubhub.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>StubHub</span><strong>11.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.airindia.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Air India</span><strong>0.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.thewalkingcompany.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>The Walking Company</span><strong>3.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.viagogo.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>viagogo</span><strong>9.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.dtlr.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>DTLR</span><strong>4.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.scheels.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Scheels</span><strong>7.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.solostove.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>solostove.com</span><strong>7% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.shein.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Shein</span><strong>4.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.academy.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Academy Sports + Outdoors</span><strong>2.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.stanley1913.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Stanley 1913</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.jcpenney.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>JCPenney</span><strong>4.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.savagex.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Savage X Fenty</span><strong>19.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.aventon.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Aventon Bikes</span><strong>5.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.extendedstayamerica.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>extendedstayamerica.com</span><strong>2.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fpurple-brand.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Purple Brand</span><strong>8.5% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.ethiopianairlines.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Ethiopian Airlines</span><strong>3% back</strong></a>
-          <a class="reward-row" href="/out/?url=https%3A%2F%2Fwww.pamperedchef.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Pampered Chef</span><strong>9.5% back</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.titlenine.com%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Title Nine</span><strong>Rate unavailable</strong></a>
-          <a class="reward-row muted" href="/out/?url=https%3A%2F%2Fwww.ribblecycles.co.uk%2F&subid=dealdesksite" rel="sponsored nofollow"><span>Ribble Cycles</span><strong>Rate unavailable</strong></a>
-        </div>
-        <script>
-          document.querySelectorAll(".reward-row").forEach(function (row) {
-            if (row.querySelector(".reward-brand")) {
-              return;
-            }
-
-            var label = row.querySelector("span");
-            var href = row.getAttribute("href");
-            if (!label || !href) {
-              return;
-            }
-
-            try {
-              var outboundURL = new URL(href, window.location.origin);
-              var merchantURL = outboundURL.searchParams.get("url");
-              if (!merchantURL) {
-                return;
-              }
-
-              var merchantHost = new URL(merchantURL).hostname;
-              var logo = document.createElement("img");
-              logo.alt = "";
-              logo.className = "reward-logo";
-              logo.loading = "lazy";
-              logo.src = "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(merchantHost) + "&sz=64";
-
-              var brand = document.createElement("span");
-              brand.className = "reward-brand";
-              row.insertBefore(brand, label);
-              brand.appendChild(logo);
-              brand.appendChild(label);
-            } catch (error) {
-              return;
-            }
-          });
-        </script>
-      </section>
-
-      </template>
-
-      <footer class="footer">
-        <p>
-          Support: <a href="mailto:hello.launchdesk@gmail.com">hello.launchdesk@gmail.com</a>
-        </p>
-        <p>Impact-Site-Verification: 2876548c-0373-41f9-90da-6d5823b19752</p>
-        <p>Impact-Site-Verification: 06fbc2e7-9b0e-4278-a9ae-d7b61d1fda3b</p>
-      </footer>
     </main>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <a class="brand footer-brand" href="/">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span>DealDesk</span>
+        </a>
+        <p>Good finds. Better decisions.</p>
+        <div class="footer-links">
+          <a href="/support/">Support</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="mailto:hello.launchdesk@gmail.com">Contact</a>
+        </div>
+      </div>
+      <div class="shell disclosure">
+        DealDesk may earn a commission when you buy through our links. You never pay more because of it.
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var productGrid = document.getElementById("best-deals-grid");
+        var streamingGrid = document.getElementById("streaming-deals-grid");
+        var categoryBar = document.getElementById("category-bar");
+        var liveCount = document.getElementById("live-count");
+        var productDeals = [];
+
+        function eligible(deal) {
+          return Boolean(
+            deal &&
+              deal.commissionEligible === true &&
+              deal.approvalStatus === "approved" &&
+              deal.trackingID &&
+              deal.affiliateURL
+          );
+        }
+
+        function cleanTitle(title) {
+          return String(title || "Deal").replace(/\s+[—–-]\s+\d+%\s+off\s*$/i, "");
+        }
+
+        function discountFrom(deal) {
+          var match = String(deal.title || "").match(/(\d+%\s+off)/i);
+          return match ? match[1].toUpperCase() : "TOP PICK";
+        }
+
+        function pricesFrom(summary) {
+          var matches = String(summary || "").match(/\$[\d,]+(?:\.\d{2})?/g) || [];
+          return {
+            current: matches[0] || "See price",
+            original: matches[1] || ""
+          };
+        }
+
+        function imageFor(deal) {
+          var asin = String(deal.id || "").match(/^amazon-([A-Z0-9]{10})-/i);
+          if (asin) {
+            return "https://images-na.ssl-images-amazon.com/images/P/" + asin[1] + ".01.LZZZZZZZ.jpg";
+          }
+          return deal.imageURL || "";
+        }
+
+        function shortStreamingCopy(deal) {
+          var title = String(deal.title || "").toLowerCase();
+          if (title.indexOf("free trial") !== -1) return "Start an eligible free trial and see what’s on tonight.";
+          if (title.indexOf("music") !== -1) return "Millions of songs, playlists, and podcasts—ready when you are.";
+          if (title.indexOf("paid") !== -1) return "Add a channel you want without another long search.";
+          return "Open the offer and confirm the latest terms on Amazon.";
+        }
+
+        function categoryIcon(category) {
+          var value = String(category || "").toLowerCase();
+          if (value.indexOf("home") !== -1) return "⌂";
+          if (value.indexOf("tech") !== -1 || value.indexOf("elect") !== -1) return "⌁";
+          if (value.indexOf("kitchen") !== -1) return "◒";
+          if (value.indexOf("health") !== -1 || value.indexOf("beauty") !== -1) return "✦";
+          if (value.indexOf("travel") !== -1) return "↗";
+          return "◇";
+        }
+
+        function makeProductCard(deal) {
+          var prices = pricesFrom(deal.summary);
+          var link = document.createElement("a");
+          link.className = "deal-card";
+          link.href = deal.affiliateURL;
+          link.target = "_blank";
+          link.rel = "sponsored nofollow noopener";
+          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". See deal at " + (deal.merchantName || "retailer"));
+
+          var media = document.createElement("span");
+          media.className = "deal-media";
+          var discount = document.createElement("span");
+          discount.className = "discount-badge";
+          discount.textContent = discountFrom(deal);
+          var image = document.createElement("img");
+          image.loading = "lazy";
+          image.alt = cleanTitle(deal.title);
+          image.src = imageFor(deal);
+          image.addEventListener("error", function () {
+            image.hidden = true;
+            media.classList.add("image-missing");
+          });
+          var fallback = document.createElement("span");
+          fallback.className = "product-fallback";
+          fallback.textContent = categoryIcon(deal.category);
+          media.appendChild(discount);
+          media.appendChild(image);
+          media.appendChild(fallback);
+
+          var body = document.createElement("span");
+          body.className = "deal-body";
+          var meta = document.createElement("span");
+          meta.className = "deal-meta";
+          meta.textContent = (deal.merchantName || "Retailer") + " · " + (deal.category || "Deal");
+          var title = document.createElement("strong");
+          title.className = "deal-title";
+          title.textContent = cleanTitle(deal.title);
+          var priceRow = document.createElement("span");
+          priceRow.className = "price-row";
+          var current = document.createElement("strong");
+          current.textContent = prices.current;
+          var original = document.createElement("del");
+          original.textContent = prices.original;
+          var cta = document.createElement("span");
+          cta.className = "deal-cta";
+          cta.textContent = "See deal";
+          priceRow.appendChild(current);
+          if (prices.original) priceRow.appendChild(original);
+          priceRow.appendChild(cta);
+          body.appendChild(meta);
+          body.appendChild(title);
+          body.appendChild(priceRow);
+
+          link.appendChild(media);
+          link.appendChild(body);
+          return link;
+        }
+
+        function renderProducts(category) {
+          var filtered = category === "All"
+            ? productDeals
+            : productDeals.filter(function (deal) { return deal.category === category; });
+          productGrid.innerHTML = "";
+          filtered.forEach(function (deal) { productGrid.appendChild(makeProductCard(deal)); });
+          if (!filtered.length) productGrid.innerHTML = '<p class="empty-state">No fresh deals in this category right now.</p>';
+        }
+
+        function buildCategoryFilters() {
+          var categories = [];
+          productDeals.forEach(function (deal) {
+            if (deal.category && categories.indexOf(deal.category) === -1) categories.push(deal.category);
+          });
+          categories.forEach(function (category) {
+            var button = document.createElement("button");
+            button.className = "category-chip";
+            button.type = "button";
+            button.dataset.category = category;
+            button.textContent = category;
+            categoryBar.appendChild(button);
+          });
+          categoryBar.addEventListener("click", function (event) {
+            var button = event.target.closest("button[data-category]");
+            if (!button) return;
+            categoryBar.querySelectorAll("button").forEach(function (item) { item.classList.remove("active"); });
+            button.classList.add("active");
+            renderProducts(button.dataset.category);
+          });
+        }
+
+        function setHeroDeal(deal) {
+          if (!deal) return;
+          var image = document.getElementById("hero-product-image");
+          var title = document.getElementById("hero-product-title");
+          var price = document.getElementById("hero-product-price");
+          var prices = pricesFrom(deal.summary);
+          image.src = imageFor(deal);
+          image.alt = cleanTitle(deal.title);
+          image.addEventListener("error", function () {
+            image.hidden = true;
+            image.parentElement.classList.add("image-missing");
+          }, { once: true });
+          title.textContent = cleanTitle(deal.title);
+          price.textContent = prices.current + " · " + discountFrom(deal);
+        }
+
+        function makeStreamingCard(deal, index) {
+          var link = document.createElement("a");
+          link.className = "stream-card stream-card-" + ((index % 4) + 1);
+          link.href = deal.affiliateURL;
+          link.target = "_blank";
+          link.rel = "sponsored nofollow noopener";
+          var mark = document.createElement("span");
+          mark.className = "stream-mark";
+          mark.textContent = index % 2 === 0 ? "▶" : "♫";
+          var tag = document.createElement("span");
+          tag.className = "stream-tag";
+          tag.textContent = deal.title.toLowerCase().indexOf("trial") !== -1 ? "FREE TRIAL" : "STREAMING";
+          var title = document.createElement("strong");
+          title.textContent = cleanTitle(deal.title);
+          var copy = document.createElement("span");
+          copy.className = "stream-copy";
+          copy.textContent = shortStreamingCopy(deal);
+          var cta = document.createElement("span");
+          cta.className = "stream-cta";
+          cta.textContent = "Get offer →";
+          link.appendChild(mark);
+          link.appendChild(tag);
+          link.appendChild(title);
+          link.appendChild(copy);
+          link.appendChild(cta);
+          return link;
+        }
+
+        Promise.all([
+          fetch("/data/best-deals.json", { cache: "no-store" }).then(function (response) {
+            if (!response.ok) throw new Error("Product feed unavailable");
+            return response.json();
+          }),
+          fetch("/data/streaming-deals.json", { cache: "no-store" }).then(function (response) {
+            if (!response.ok) throw new Error("Streaming feed unavailable");
+            return response.json();
+          })
+        ]).then(function (feeds) {
+          productDeals = (feeds[0].deals || []).filter(eligible).sort(function (a, b) {
+            return (a.priority || 99) - (b.priority || 99);
+          });
+          var streamingDeals = (feeds[1].deals || []).filter(eligible).sort(function (a, b) {
+            return (a.priority || 99) - (b.priority || 99);
+          });
+
+          liveCount.textContent = productDeals.length + streamingDeals.length;
+          buildCategoryFilters();
+          renderProducts("All");
+          setHeroDeal(productDeals[0]);
+
+          streamingGrid.innerHTML = "";
+          streamingDeals.forEach(function (deal, index) {
+            streamingGrid.appendChild(makeStreamingCard(deal, index));
+          });
+          if (!streamingDeals.length) streamingGrid.innerHTML = '<p class="empty-state empty-state-dark">More streaming offers are on the way.</p>';
+        }).catch(function () {
+          productGrid.innerHTML = '<p class="empty-state">Today’s picks are refreshing. Please check back in a moment.</p>';
+          streamingGrid.innerHTML = '<p class="empty-state empty-state-dark">Streaming offers are refreshing.</p>';
+        });
+      })();
+    </script>
   </body>
 </html>
