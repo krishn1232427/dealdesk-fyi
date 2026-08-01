@@ -3,17 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DealDesk — Hand-picked deals worth clicking</title>
+    <title>DealDesk — Today’s best deals, clearly priced</title>
     <meta
       name="description"
-      content="Fresh, hand-picked deals on home, tech, everyday essentials, and streaming—all in one clean place."
+      content="Shop hand-picked Amazon deals with the current price, original price, and savings shown clearly."
     />
-    <meta name="theme-color" content="#ff5c35" />
-    <meta property="og:title" content="DealDesk — Great deals. Zero digging." />
-    <meta
-      property="og:description"
-      content="Fresh finds, real savings, and a fast path to the retailer."
-    />
+    <meta name="theme-color" content="#ff5a1f" />
+    <meta property="og:title" content="DealDesk — Today’s best deals" />
+    <meta property="og:description" content="Real products, clear prices, and a fast path to the deal." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dealdesk.fyi/" />
     <meta name="impact-site-verification" content="2876548c-0373-41f9-90da-6d5823b19752" />
@@ -35,8 +32,14 @@
           <span class="brand-mark" aria-hidden="true">D</span>
           <span>DealDesk</span>
         </a>
+
+        <form class="site-search" id="deal-search-form" role="search">
+          <label class="sr-only" for="deal-search">Search deals</label>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg>
+          <input id="deal-search" type="search" placeholder="Search today’s deals" autocomplete="off" />
+        </form>
+
         <div class="nav-links">
-          <a href="#top-deals">Top deals</a>
           <a href="#streaming">Streaming</a>
           <a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a>
         </div>
@@ -44,65 +47,75 @@
     </header>
 
     <main>
-      <section class="hero shell">
-        <div class="hero-copy">
-          <span class="hero-kicker">Hand-picked daily</span>
-          <h1>Deals worth<br />your time.</h1>
-          <p>The best prices we found today—clean, simple, and ready to shop.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#top-deals">Browse today’s deals</a>
-          </div>
-          <p class="hero-proof">Price checked <span aria-hidden="true">·</span> Direct to retailer <span aria-hidden="true">·</span> No clutter</p>
-        </div>
-
-        <a class="featured-deal" id="hero-deal-link" href="#top-deals" aria-label="See today’s featured deal">
-          <div class="featured-image">
-            <span class="featured-badge" id="hero-product-badge">Top deal</span>
-            <div class="hero-card-image-wrap">
-              <img id="hero-product-image" alt="" />
-              <span class="hero-card-placeholder" aria-hidden="true">D</span>
-            </div>
-          </div>
-          <div class="featured-details">
-            <span>Today’s standout</span>
-            <strong class="featured-price" id="hero-product-price">Fresh price</strong>
-            <span class="featured-compare">
-              <span>Was <del id="hero-product-original"></del></span>
-              <span id="hero-product-save">Top deal</span>
-            </span>
-            <span class="featured-title" id="hero-product-title">Loading today’s top pick…</span>
-            <span class="featured-cta">See deal <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-      </section>
-
-      <section class="deals-section shell" id="top-deals">
-        <div class="section-heading">
+      <section class="deal-home shell">
+        <header class="page-heading">
           <div>
-            <span class="section-kicker">Worth a look</span>
-            <h2>Today’s top deals</h2>
+            <span class="page-kicker"><span aria-hidden="true"></span> Fresh picks</span>
+            <h1>Today’s best deals</h1>
           </div>
-          <p><span id="live-count">Fresh</span> hand-picked offers</p>
-        </div>
+          <p><strong id="live-count">Fresh</strong> hand-picked offers <span aria-hidden="true">·</span> <span id="freshness-label">Checked daily</span></p>
+        </header>
 
-        <div class="category-bar" id="category-bar" aria-label="Filter deals by category">
-          <button class="category-chip active" type="button" data-category="All">All deals</button>
-        </div>
+        <a class="featured-deal" id="featured-deal-link" href="#all-deals" aria-label="View today’s top deal">
+          <span class="featured-media">
+            <span class="featured-badge" id="featured-badge">Top deal</span>
+            <img id="featured-image" alt="" />
+            <span class="featured-placeholder" aria-hidden="true">D</span>
+          </span>
+          <span class="featured-content">
+            <span class="featured-label">DealDesk top pick</span>
+            <span class="featured-price-line">
+              <strong id="featured-price">See price</strong>
+              <span class="featured-original">Was <del id="featured-original"></del></span>
+            </span>
+            <span class="featured-saving" id="featured-saving">Today’s best value</span>
+            <strong class="featured-title" id="featured-title">Loading today’s top pick…</strong>
+            <span class="featured-merchant" id="featured-merchant">Amazon</span>
+            <span class="featured-cta">View deal on Amazon <span aria-hidden="true">→</span></span>
+            <span class="featured-fineprint">Price and availability can change at checkout.</span>
+          </span>
+        </a>
 
-        <div class="deal-grid" id="best-deals-grid" aria-live="polite">
-          <div class="deal-skeleton"></div>
-          <div class="deal-skeleton"></div>
-          <div class="deal-skeleton"></div>
-          <div class="deal-skeleton"></div>
-        </div>
+        <section class="deals-section" id="all-deals" aria-labelledby="deals-heading">
+          <div class="deals-heading-row">
+            <div>
+              <h2 id="deals-heading">More deals worth seeing</h2>
+              <p id="result-count" aria-live="polite">Loading fresh deals…</p>
+            </div>
+            <label class="sort-control" for="deal-sort">
+              <span>Sort by</span>
+              <select id="deal-sort">
+                <option value="discount">Biggest discount</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="filter-bar" id="filter-bar" aria-label="Filter deals">
+            <button class="filter-chip active" type="button" data-filter="all">All deals</button>
+            <button class="filter-chip" type="button" data-filter="under-50">Under $50</button>
+            <button class="filter-chip" type="button" data-filter="under-100">Under $100</button>
+            <button class="filter-chip" type="button" data-filter="Home">Home</button>
+            <button class="filter-chip" type="button" data-filter="Tech">Tech</button>
+          </div>
+
+          <div class="deal-grid" id="best-deals-grid" aria-live="polite">
+            <div class="deal-skeleton"></div>
+            <div class="deal-skeleton"></div>
+            <div class="deal-skeleton"></div>
+          </div>
+        </section>
       </section>
 
-      <section class="streaming-section shell" id="streaming">
-        <div class="streaming-inner">
-          <div class="streaming-intro">
-            <span class="section-kicker">Streaming</span>
-            <h2>More to watch.<br />Less to search.</h2>
-            <p>Trials and subscription offers worth a quick look.</p>
+      <section class="streaming-section" id="streaming" aria-labelledby="streaming-heading">
+        <div class="shell">
+          <div class="streaming-heading">
+            <div>
+              <span class="streaming-kicker">Watch for less</span>
+              <h2 id="streaming-heading">Streaming deals</h2>
+            </div>
+            <p>Trials and subscriptions through Amazon.</p>
           </div>
           <div class="streaming-grid" id="streaming-deals-grid" aria-live="polite">
             <div class="stream-skeleton"></div>
@@ -110,7 +123,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
@@ -119,7 +131,7 @@
           <span class="brand-mark" aria-hidden="true">D</span>
           <span>DealDesk</span>
         </a>
-        <p>Deals worth your time.</p>
+        <p>Clear prices. Better clicks.</p>
         <div class="footer-links">
           <a href="/support/">Support</a>
           <a href="/privacy/">Privacy</a>
@@ -127,7 +139,7 @@
         </div>
       </div>
       <div class="shell disclosure">
-        DealDesk may earn a commission when you buy through our links. You never pay more because of it.
+        DealDesk may earn a commission when you buy through our links. You never pay more because of it. Prices and availability can change at checkout.
       </div>
     </footer>
 
@@ -137,9 +149,16 @@
 
         var productGrid = document.getElementById("best-deals-grid");
         var streamingGrid = document.getElementById("streaming-deals-grid");
-        var categoryBar = document.getElementById("category-bar");
+        var filterBar = document.getElementById("filter-bar");
+        var searchInput = document.getElementById("deal-search");
+        var searchForm = document.getElementById("deal-search-form");
+        var sortControl = document.getElementById("deal-sort");
+        var resultCount = document.getElementById("result-count");
         var liveCount = document.getElementById("live-count");
+        var freshnessLabel = document.getElementById("freshness-label");
         var productDeals = [];
+        var activeFilter = "all";
+        var searchQuery = "";
 
         function eligible(deal) {
           return Boolean(
@@ -155,20 +174,14 @@
           return String(title || "Deal").replace(/\s+[—–-]\s+\d+%\s+off\s*$/i, "");
         }
 
-        function discountFrom(deal) {
-          var match = String(deal.title || "").match(/(\d+%\s+off)/i);
-          return match ? match[1].toUpperCase() : "TOP PICK";
+        function discountNumber(deal) {
+          var match = String(deal.title || "").match(/(\d+)%\s+off/i);
+          return match ? Number(match[1]) : 0;
         }
 
-        function savingsFrom(prices, deal) {
-          var current = Number(String(prices.current || "").replace(/[^0-9.]/g, ""));
-          var original = Number(String(prices.original || "").replace(/[^0-9.]/g, ""));
-          var discount = discountFrom(deal).toLowerCase();
-          if (current && original && original > current) {
-            var amount = (original - current).toFixed(2).replace(/\.00$/, "");
-            return "Save $" + amount + " · " + discount;
-          }
-          return discount;
+        function discountFrom(deal) {
+          var discount = discountNumber(deal);
+          return discount ? discount + "% off" : "Top pick";
         }
 
         function pricesFrom(summary) {
@@ -179,6 +192,23 @@
           };
         }
 
+        function priceNumber(deal) {
+          var current = pricesFrom(deal.summary).current;
+          var value = Number(String(current).replace(/[^0-9.]/g, ""));
+          return Number.isFinite(value) ? value : Number.MAX_VALUE;
+        }
+
+        function savingsFrom(prices, deal) {
+          var current = Number(String(prices.current || "").replace(/[^0-9.]/g, ""));
+          var original = Number(String(prices.original || "").replace(/[^0-9.]/g, ""));
+          var discount = discountNumber(deal);
+          if (current && original && original > current) {
+            var amount = (original - current).toFixed(2).replace(/\.00$/, "");
+            return "Save $" + amount + (discount ? " · " + discount + "% off" : "");
+          }
+          return discount ? discount + "% off" : "Top pick";
+        }
+
         function imageFor(deal) {
           var asin = String(deal.id || "").match(/^amazon-([A-Z0-9]{10})-/i);
           if (asin) {
@@ -187,22 +217,30 @@
           return deal.imageURL || "";
         }
 
-        function shortStreamingCopy(deal) {
-          var title = String(deal.title || "").toLowerCase();
-          if (title.indexOf("free trial") !== -1) return "Start an eligible free trial and see what’s on tonight.";
-          if (title.indexOf("music") !== -1) return "Millions of songs, playlists, and podcasts—ready when you are.";
-          if (title.indexOf("paid") !== -1) return "Add a channel you want without another long search.";
-          return "Open the offer and confirm the latest terms on Amazon.";
+        function loadProductImage(image, deal, container) {
+          var primary = imageFor(deal);
+          var fallback = deal.imageURL || "";
+          var triedFallback = false;
+
+          function showFallback() {
+            if (!triedFallback && fallback && fallback !== primary) {
+              triedFallback = true;
+              image.src = fallback;
+              return;
+            }
+            image.hidden = true;
+            container.classList.add("image-missing");
+          }
+
+          image.addEventListener("load", function () {
+            if (image.naturalWidth <= 2 || image.naturalHeight <= 2) showFallback();
+          });
+          image.addEventListener("error", showFallback);
+          image.src = primary;
         }
 
         function categoryIcon(category) {
-          var value = String(category || "").toLowerCase();
-          if (value.indexOf("home") !== -1) return "⌂";
-          if (value.indexOf("tech") !== -1 || value.indexOf("elect") !== -1) return "⌁";
-          if (value.indexOf("kitchen") !== -1) return "◒";
-          if (value.indexOf("health") !== -1 || value.indexOf("beauty") !== -1) return "✦";
-          if (value.indexOf("travel") !== -1) return "↗";
-          return "◇";
+          return String(category || "").toLowerCase().indexOf("tech") !== -1 ? "⌁" : "⌂";
         }
 
         function makeProductCard(deal) {
@@ -212,42 +250,40 @@
           link.href = deal.affiliateURL;
           link.target = "_blank";
           link.rel = "sponsored nofollow noopener";
-          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". See deal at " + (deal.merchantName || "retailer"));
+          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal on " + (deal.merchantName || "Amazon"));
 
           var media = document.createElement("span");
           media.className = "deal-media";
-          var discount = document.createElement("span");
-          discount.className = "discount-badge";
-          discount.textContent = discountFrom(deal);
+          var badge = document.createElement("span");
+          badge.className = "discount-badge";
+          badge.textContent = discountFrom(deal);
           var image = document.createElement("img");
           image.loading = "lazy";
           image.alt = cleanTitle(deal.title);
-          image.src = imageFor(deal);
-          image.addEventListener("error", function () {
-            image.hidden = true;
-            media.classList.add("image-missing");
-          });
+          loadProductImage(image, deal, media);
           var fallback = document.createElement("span");
           fallback.className = "product-fallback";
+          fallback.setAttribute("aria-hidden", "true");
           fallback.textContent = categoryIcon(deal.category);
-          media.appendChild(discount);
+          media.appendChild(badge);
           media.appendChild(image);
           media.appendChild(fallback);
 
           var body = document.createElement("span");
           body.className = "deal-body";
-          var priceRow = document.createElement("span");
-          priceRow.className = "price-row";
+          var priceLine = document.createElement("span");
+          priceLine.className = "price-line";
           var current = document.createElement("strong");
           current.textContent = prices.current;
-          var comparison = document.createElement("span");
-          comparison.className = "price-comparison";
           var originalWrap = document.createElement("span");
           originalWrap.className = "original-price";
           originalWrap.textContent = "Was ";
           var original = document.createElement("del");
           original.textContent = prices.original;
           originalWrap.appendChild(original);
+          priceLine.appendChild(current);
+          if (prices.original) priceLine.appendChild(originalWrap);
+
           var saving = document.createElement("span");
           saving.className = "saving-text";
           saving.textContent = savingsFrom(prices, deal);
@@ -256,110 +292,137 @@
           title.textContent = cleanTitle(deal.title);
           var meta = document.createElement("span");
           meta.className = "deal-meta";
-          meta.textContent = (deal.merchantName || "Retailer") + " · " + (deal.category || "Deal");
+          meta.textContent = (deal.merchantName || "Amazon") + " · " + (deal.category || "Deal");
           var cta = document.createElement("span");
           cta.className = "deal-cta";
-          cta.textContent = "See deal";
-          priceRow.appendChild(current);
-          if (prices.original) comparison.appendChild(originalWrap);
-          comparison.appendChild(saving);
-          body.appendChild(priceRow);
-          body.appendChild(comparison);
+          cta.textContent = "View on " + (deal.merchantName || "Amazon");
+
+          body.appendChild(priceLine);
+          body.appendChild(saving);
           body.appendChild(title);
           body.appendChild(meta);
           body.appendChild(cta);
-
           link.appendChild(media);
           link.appendChild(body);
           return link;
         }
 
-        function renderProducts(category) {
-          var filtered = category === "All"
-            ? productDeals
-            : productDeals.filter(function (deal) { return deal.category === category; });
+        function filterMatches(deal) {
+          var price = priceNumber(deal);
+          var filterMatch =
+            activeFilter === "all" ||
+            (activeFilter === "under-50" && price < 50) ||
+            (activeFilter === "under-100" && price < 100) ||
+            deal.category === activeFilter;
+          var searchable = [deal.title, deal.category, deal.merchantName].join(" ").toLowerCase();
+          return filterMatch && (!searchQuery || searchable.indexOf(searchQuery) !== -1);
+        }
+
+        function renderProducts() {
+          var isDefaultView = activeFilter === "all" && !searchQuery;
+          var filtered = productDeals.filter(filterMatches);
+          if (isDefaultView) filtered = filtered.slice(1);
+          var sortMode = sortControl.value;
+          filtered.sort(function (a, b) {
+            if (sortMode === "price-low") return priceNumber(a) - priceNumber(b);
+            if (sortMode === "price-high") return priceNumber(b) - priceNumber(a);
+            return discountNumber(b) - discountNumber(a);
+          });
+
           productGrid.innerHTML = "";
           filtered.forEach(function (deal) { productGrid.appendChild(makeProductCard(deal)); });
-          if (!filtered.length) productGrid.innerHTML = '<p class="empty-state">No fresh deals in this category right now.</p>';
+          resultCount.textContent = filtered.length + (filtered.length === 1 ? " deal" : " deals");
+          if (!filtered.length) {
+            productGrid.innerHTML = '<p class="empty-state">No matching deals today. Try another filter or search.</p>';
+          }
         }
 
-        function buildCategoryFilters() {
-          var categories = [];
-          productDeals.forEach(function (deal) {
-            if (deal.category && categories.indexOf(deal.category) === -1) categories.push(deal.category);
-          });
-          categories.forEach(function (category) {
-            var button = document.createElement("button");
-            button.className = "category-chip";
-            button.type = "button";
-            button.dataset.category = category;
-            button.textContent = category;
-            categoryBar.appendChild(button);
-          });
-          categoryBar.addEventListener("click", function (event) {
-            var button = event.target.closest("button[data-category]");
-            if (!button) return;
-            categoryBar.querySelectorAll("button").forEach(function (item) { item.classList.remove("active"); });
-            button.classList.add("active");
-            renderProducts(button.dataset.category);
-          });
-        }
-
-        function setHeroDeal(deal) {
+        function setFeaturedDeal(deal) {
           if (!deal) return;
-          var link = document.getElementById("hero-deal-link");
-          var image = document.getElementById("hero-product-image");
-          var title = document.getElementById("hero-product-title");
-          var price = document.getElementById("hero-product-price");
-          var original = document.getElementById("hero-product-original");
-          var saving = document.getElementById("hero-product-save");
-          var badge = document.getElementById("hero-product-badge");
           var prices = pricesFrom(deal.summary);
+          var link = document.getElementById("featured-deal-link");
+          var image = document.getElementById("featured-image");
           link.href = deal.affiliateURL;
           link.target = "_blank";
           link.rel = "sponsored nofollow noopener";
-          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". See featured deal at " + (deal.merchantName || "retailer"));
-          image.src = imageFor(deal);
+          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal on " + (deal.merchantName || "Amazon"));
           image.alt = cleanTitle(deal.title);
-          image.addEventListener("error", function () {
-            image.hidden = true;
-            image.parentElement.classList.add("image-missing");
-          }, { once: true });
-          title.textContent = cleanTitle(deal.title);
-          price.textContent = prices.current;
-          original.textContent = prices.original;
-          original.hidden = !prices.original;
-          saving.textContent = savingsFrom(prices, deal);
-          badge.textContent = discountFrom(deal);
+          loadProductImage(image, deal, image.parentElement);
+          document.getElementById("featured-badge").textContent = discountFrom(deal);
+          document.getElementById("featured-price").textContent = prices.current;
+          document.getElementById("featured-original").textContent = prices.original;
+          document.getElementById("featured-saving").textContent = savingsFrom(prices, deal);
+          document.getElementById("featured-title").textContent = cleanTitle(deal.title);
+          document.getElementById("featured-merchant").textContent = "Sold by " + (deal.merchantName || "Amazon") + " · " + (deal.category || "Deal");
+        }
+
+        function streamingCopy(deal) {
+          var title = String(deal.title || "").toLowerCase();
+          if (title.indexOf("free trial") !== -1) return "Start an eligible trial and confirm the latest terms on Amazon.";
+          if (title.indexOf("music") !== -1) return "Songs, playlists, and podcasts with an eligible trial or membership.";
+          if (title.indexOf("paid") !== -1) return "Add the channel you want through your Prime Video account.";
+          return "Open the offer and confirm the latest terms on Amazon.";
         }
 
         function makeStreamingCard(deal, index) {
           var link = document.createElement("a");
-          link.className = "stream-card stream-card-" + ((index % 4) + 1);
+          link.className = "stream-card";
           link.href = deal.affiliateURL;
           link.target = "_blank";
           link.rel = "sponsored nofollow noopener";
           var mark = document.createElement("span");
           mark.className = "stream-mark";
           mark.textContent = index % 2 === 0 ? "▶" : "♫";
+          var body = document.createElement("span");
+          body.className = "stream-body";
           var tag = document.createElement("span");
           tag.className = "stream-tag";
-          tag.textContent = deal.title.toLowerCase().indexOf("trial") !== -1 ? "FREE TRIAL" : "STREAMING";
+          tag.textContent = deal.title.toLowerCase().indexOf("trial") !== -1 ? "Free trial" : "Streaming";
           var title = document.createElement("strong");
           title.textContent = cleanTitle(deal.title);
           var copy = document.createElement("span");
           copy.className = "stream-copy";
-          copy.textContent = shortStreamingCopy(deal);
+          copy.textContent = streamingCopy(deal);
           var cta = document.createElement("span");
           cta.className = "stream-cta";
-          cta.textContent = "Get offer →";
+          cta.textContent = "View on Amazon →";
+          body.appendChild(tag);
+          body.appendChild(title);
+          body.appendChild(copy);
+          body.appendChild(cta);
           link.appendChild(mark);
-          link.appendChild(tag);
-          link.appendChild(title);
-          link.appendChild(copy);
-          link.appendChild(cta);
+          link.appendChild(body);
           return link;
         }
+
+        function setFreshness(productFeed, streamingFeed) {
+          var dates = [productFeed.updatedAt, streamingFeed.updatedAt]
+            .map(function (value) { return new Date(value); })
+            .filter(function (value) { return !Number.isNaN(value.getTime()); });
+          if (!dates.length) return;
+          var latest = new Date(Math.max.apply(null, dates));
+          var today = new Date();
+          var sameDay = latest.toDateString() === today.toDateString();
+          freshnessLabel.textContent = sameDay
+            ? "Updated today"
+            : "Updated " + latest.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+        }
+
+        filterBar.addEventListener("click", function (event) {
+          var button = event.target.closest("button[data-filter]");
+          if (!button) return;
+          activeFilter = button.dataset.filter;
+          filterBar.querySelectorAll("button").forEach(function (item) { item.classList.remove("active"); });
+          button.classList.add("active");
+          renderProducts();
+        });
+
+        searchInput.addEventListener("input", function () {
+          searchQuery = searchInput.value.trim().toLowerCase();
+          renderProducts();
+        });
+        searchForm.addEventListener("submit", function (event) { event.preventDefault(); });
+        sortControl.addEventListener("change", renderProducts);
 
         Promise.all([
           fetch("/data/best-deals.json", { cache: "no-store" }).then(function (response) {
@@ -379,9 +442,9 @@
           });
 
           liveCount.textContent = productDeals.length + streamingDeals.length;
-          buildCategoryFilters();
-          renderProducts("All");
-          setHeroDeal(productDeals[0]);
+          setFreshness(feeds[0], feeds[1]);
+          setFeaturedDeal(productDeals[0]);
+          renderProducts();
 
           streamingGrid.innerHTML = "";
           streamingDeals.forEach(function (deal, index) {
@@ -390,6 +453,7 @@
           if (!streamingDeals.length) streamingGrid.innerHTML = '<p class="empty-state empty-state-dark">More streaming offers are on the way.</p>';
         }).catch(function () {
           productGrid.innerHTML = '<p class="empty-state">Today’s picks are refreshing. Please check back in a moment.</p>';
+          resultCount.textContent = "Deals refreshing";
           streamingGrid.innerHTML = '<p class="empty-state empty-state-dark">Streaming offers are refreshing.</p>';
         });
       })();
