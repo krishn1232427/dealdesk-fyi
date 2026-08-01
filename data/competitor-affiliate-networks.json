@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T19:14:59Z",
+  "updatedAt": "2026-08-01T21:00:53Z",
   "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
   "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
   "competitors": [
@@ -108,20 +108,20 @@
       "access": "media-partner account active; Brands Marketplace unavailable",
       "publisherReference": "7459747",
       "canPublish": false,
-      "notes": "The signed-in account cannot discover or join the retail and streaming brands observed on competitor links. This account state must be fixed before Impact can add payable inventory."
+      "notes": "The signed-in Trackonomics media-partner account cannot discover or join the retail and streaming brands observed on competitor links. Direct Backcountry and Klutch enrollment flows return to the account home page without attaching either campaign. The Impact account type must be corrected before it can add payable inventory."
     },
     {
       "network": "eBay Partner Network",
-      "access": "eBay account created; EPN application prepared",
+      "access": "publisher application submitted; under review",
       "canPublish": false,
-      "nextAction": "Enter DealDesk's truthful US business address and phone, submit the prepared EPN publisher profile, complete payout and tax setup, then verify a DealDesk campaign link before publishing.",
+      "nextAction": "Monitor the EPN review. After acceptance, complete any requested payout and tax steps and verify a DealDesk campaign link before publishing.",
       "priority": 1
     },
     {
       "network": "B&H direct",
-      "access": "application prepared",
+      "access": "application submitted; under review",
       "canPublish": false,
-      "nextAction": "Enter DealDesk's correct business ZIP and submit the prepared application. Approval and a DealDesk BI/KBID link are required before publishing.",
+      "nextAction": "Monitor the stated one-to-two-week review window. Approval and a verified DealDesk BI/KBID link are required before publishing.",
       "priority": 2
     },
     {
@@ -129,22 +129,22 @@
       "access": "active publisher account; advertiser applications pending",
       "publisherReference": "4733148",
       "canPublish": false,
-      "notes": "DealDesk's publisher channel is active and its advertiser-facing name, description, demographics, categories, and channel declarations are complete. Sensibo, Costway, and JD Sports applications are pending. Sam's Club, Dyson, and LEGO currently report that DealDesk does not meet their supplied eligibility terms.",
-      "nextAction": "Complete the truthful company address, W-9 taxpayer certification, and payment method. Monitor pending advertisers and publish nothing until approval and exact payable-link verification.",
+      "notes": "DealDesk's publisher channel is active, its PayPal payment method is verified, and the profile is 3/4 complete. Sensibo, Costway, JD Sports, and PureVPN applications are pending. Sam's Club, Dyson, and LEGO currently report that DealDesk does not meet their supplied eligibility terms.",
+      "nextAction": "Secure at least one advertiser approval to complete the remaining partnership milestone. Publish nothing until approval and exact payable-link verification.",
       "priority": 3
     },
     {
       "network": "Expedia Group Travel Creator Program",
-      "access": "email verification required",
-      "canPublish": false,
-      "nextAction": "Enter the six-digit code sent to hello.launchdesk@gmail.com and finish the publisher profile. Expedia Group advertises up to 4% on qualifying transactions across Expedia, Hotels.com, Vrbo, and related brands.",
+      "access": "active creator account; DealDesk Travel Shop published; USD payout account on file",
+      "canPublish": true,
+      "notes": "The DealDesk Travel Shop is live at https://www.expedia.com/shop/dealdesk and the USD payout profile is ready. Use only Expedia-generated payable links and verify the displayed traveler offer before publication.",
       "priority": 4
     },
     {
       "network": "MagicLinks",
-      "access": "candidate — not yet applied",
+      "access": "creator application inspected; not submitted because required creator identity and social-channel data is unavailable",
       "canPublish": false,
-      "nextAction": "Apply only after DealDesk can provide the requested creator/content profile. MagicLinks can cover major retailers, but direct advertiser programs should be preferred when their payout and attribution are better.",
+      "nextAction": "Proceed only if DealDesk establishes genuine creator social channels and the account owner supplies the required date of birth. Do not fabricate personal or audience information. Prefer direct advertiser programs when their payout and attribution are better.",
       "priority": 5
     }
   ],

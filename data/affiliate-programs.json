@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T20:39:35Z",
+  "updatedAt": "2026-08-01T21:00:53Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -29,16 +29,16 @@
     {
       "network": "rakuten-advertising",
       "publisherID": "4733148",
-      "status": "active publisher account; advertiser applications pending; profile 2/4 complete; PayPal verification code pending",
-      "profileCompletion": "2/4",
-      "payoutSetupStatus": "PayPal selected; email verification code pending",
+      "status": "active publisher account; advertiser applications pending; profile 3/4 complete; PayPal payment method verified",
+      "profileCompletion": "3/4",
+      "payoutSetupStatus": "PayPal selected and verified",
       "commissionAccess": false
     },
     {
       "network": "ebay-partner-network",
-      "status": "eBay account created; EPN publisher application prepared but not submitted; current session is blocked by an account mismatch",
+      "status": "publisher application submitted; eBay Partner Network review pending",
       "email": "hello.launchdesk@gmail.com",
-      "accessStatus": "blocked by signed-in account mismatch",
+      "accessStatus": "authenticated; application under review",
       "commissionAccess": false
     },
     {
@@ -968,13 +968,13 @@
       "category": "Credit cards and financial technology",
       "commission": "Undisclosed competitive payout for approved cardholders, plus potential first-purchase and spend-milestone bonuses",
       "attribution": "30 days",
-      "status": "Direct Impact offer reviewed — existing account authentication is required before submission; do not publish",
+      "status": "Direct Impact offer reviewed — the signed-in Trackonomics media-partner account cannot attach the brand campaign; do not publish",
       "applicationStatus": "onboarding",
       "signupStartedAt": "2026-08-01T18:10:00Z",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
       "restrictions": "Financial-product advertising requires the approved Impact offer, current issuer disclosures, eligibility and fee accuracy, prominent affiliate disclosure, and compliance review before publication.",
-      "summary": "Klutch's official affiliate page confirms a 30-day attribution window and payouts tied to approved cardholders, first purchases, and spending milestones through Impact. DealDesk reached the existing-account sign-in step after reviewing the direct offer, but the application is not submitted until Impact authentication succeeds. No financial listing is payable or public yet.",
+      "summary": "Klutch's official affiliate page confirms a 30-day attribution window and payouts tied to approved cardholders, first purchases, and spending milestones through Impact. DealDesk authenticated the existing Impact account, but that Trackonomics media-partner account loops back to its home page and cannot attach the direct brand campaign. No financial listing is payable or public yet.",
       "priority": 45
     },
     {
@@ -1061,13 +1061,13 @@
       "commission": "8% of qualifying item sale amount",
       "attribution": "30 days; last click",
       "productCount": "35,000+ gear and apparel SKUs",
-      "status": "Offer terms accepted — existing Impact account authentication required before submission; do not publish",
+      "status": "Offer terms accepted — the signed-in Trackonomics media-partner account cannot attach the brand campaign; do not publish",
       "applicationStatus": "onboarding",
       "signupStartedAt": "2026-08-01T18:35:00Z",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
       "restrictions": "No commission for gift cards, excluded bike brands and SKUs, charitable donations and fees, unauthorized coupon codes, or transactions closed through email, SMS, or paid search channels. Use only approved program links and offers.",
-      "summary": "Backcountry's official partner page and live Impact offer confirm an 8% base payout, 30-day attribution, and more than 35,000 outdoor gear and apparel SKUs. DealDesk accepted the offer terms and reached the existing Impact-account sign-in step. The application is not submitted until authentication succeeds, and no deal may publish before approval and payable-link verification.",
+      "summary": "Backcountry's official partner page and live Impact offer confirm an 8% base payout, 30-day attribution, and more than 35,000 outdoor gear and apparel SKUs. DealDesk accepted the offer terms and authenticated its existing Impact account, but that Trackonomics media-partner account loops back to its home page instead of attaching the campaign. No deal may publish before approval and payable-link verification.",
       "priority": 49
     },
     {
@@ -1141,14 +1141,32 @@
       "category": "VPN and online privacy subscription",
       "commission": "25% of qualifying first sale; no recurring-sale commission",
       "attribution": "90 days; last click",
-      "status": "Application reviewed and ready for terms acceptance; not submitted and not publishable",
-      "applicationStatus": "reviewed-not-submitted",
+      "status": "Application submitted; pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T21:00:53Z",
       "reviewedAt": "2026-08-01T20:35:50Z",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
       "restrictions": "No trademark bidding, illegal-content placement, hacking or file-sharing promotion, or unapproved claims. Promote PureVPN only for internet security and online privacy. Direct and deep linking are allowed after approval; recurring sales are not commissioned.",
-      "summary": "Rakuten's live baseline offer lists a 25% first-sale commission and a 90-day cookie. The economics are attractive, but the application remains unsubmitted until the advertiser agreement is accepted. No PureVPN offer may appear on DealDesk until approval, an authorized live customer offer, and a payable DealDesk link are verified.",
+      "summary": "Rakuten's live baseline offer lists a 25% first-sale commission and a 90-day cookie. DealDesk accepted the advertiser agreement and submitted the partnership request. No PureVPN offer may appear on DealDesk until approval, an authorized live customer offer, and a payable DealDesk link are verified.",
       "priority": 53
+    },
+    {
+      "id": "bh-direct-affiliate",
+      "network": "bh-direct",
+      "merchantName": "B&H Photo Video",
+      "merchantURL": "https://www.bhphotovideo.com/c/find/shared/affiliates.jsp",
+      "profileURL": "https://affiliates.bhphotovideo.com/app/",
+      "category": "Cameras, computers, electronics, pro audio, video, and accessories",
+      "commission": "2% base; 8% on more than 3,000 eligible products",
+      "status": "Application submitted; B&H review pending — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T21:00:53Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Use only B&H-authorized links and assets, avoid trademark misuse, and verify the current product price, availability, eligibility, and exact DealDesk BI/KBID attribution before publication.",
+      "summary": "DealDesk submitted B&H's direct affiliate application. B&H publicly advertises a 2% base commission and 8% on more than 3,000 eligible products, but no B&H deal may publish until acceptance and a payable DealDesk-specific tracking link are verified.",
+      "priority": 54
     },
     {
       "id": "rakuten-beyond-yoga-54313",
