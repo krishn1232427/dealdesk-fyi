@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T20:37:58Z",
+  "updatedAt": "2026-08-01T20:39:35Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -29,13 +29,16 @@
     {
       "network": "rakuten-advertising",
       "publisherID": "4733148",
-      "status": "active publisher account; advertiser applications pending; tax and payment profile incomplete",
+      "status": "active publisher account; advertiser applications pending; profile 2/4 complete; PayPal verification code pending",
+      "profileCompletion": "2/4",
+      "payoutSetupStatus": "PayPal selected; email verification code pending",
       "commissionAccess": false
     },
     {
       "network": "ebay-partner-network",
-      "status": "eBay account created; EPN publisher application prepared but not submitted",
+      "status": "eBay account created; EPN publisher application prepared but not submitted; current session is blocked by an account mismatch",
       "email": "hello.launchdesk@gmail.com",
+      "accessStatus": "blocked by signed-in account mismatch",
       "commissionAccess": false
     },
     {
