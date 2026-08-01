@@ -4,13 +4,23 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const site = "https://dealdesk.fyi";
+const now = Date.now();
 const feeds = await Promise.all([
   readFile(resolve(root, "data/best-deals.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/streaming-deals.json"), "utf8").then(JSON.parse)
 ]);
-const deals = feeds.flatMap((feed) => feed.deals || []).filter((deal) =>
-  deal.commissionEligible === true && deal.approvalStatus === "approved" && deal.affiliateURL
-);
+const isLiveDeal = (deal) => {
+  const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
+  const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
+  return deal.status === "active" &&
+    deal.commissionEligible === true &&
+    deal.approvalStatus === "approved" &&
+    Boolean(deal.affiliateURL) &&
+    Boolean(deal.verifiedAt) &&
+    now <= expiresAt &&
+    now <= recheckAfter;
+};
+const deals = feeds.flatMap((feed) => feed.deals || []).filter(isLiveDeal);
 
 const esc = (value) => String(value ?? "")
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
@@ -18,6 +28,14 @@ const esc = (value) => String(value ?? "")
 const cleanTitle = (title) => String(title || "Deal").replace(/\s+[—–-]\s+(?:up to\s+)?\d+%\s+off\s*$/i, "");
 const slugFor = (deal) => String(deal.id || "deal").replace(/-\d{8}$/, "").toLowerCase()
   .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const outboundURL = (deal, placement = "detail") => {
+  const params = new URLSearchParams({
+    network: deal.network,
+    url: deal.affiliateURL,
+    subid: `${placement}-${deal.id}`.replace(/[^a-zA-Z0-9]/g, "").slice(0, 32),
+  });
+  return `/out/?${params.toString()}`;
+};
 const pricesFrom = (deal) => {
   const matches = String(deal?.summary || deal || "").match(/\$[\d,]+(?:\.\d{2})?/g) || [];
   return {
@@ -31,6 +49,9 @@ const isoDate = (value) => {
   const date = new Date(value || Date.now());
   return Number.isNaN(date.getTime()) ? new Date().toISOString().slice(0, 10) : date.toISOString().slice(0, 10);
 };
+const lifecycleText = (deal) => deal.expiresAt
+  ? `Offer scheduled through ${isoDate(deal.expiresAt)}`
+  : `Next verification due ${isoDate(deal.recheckAfter)}`;
 const discountFrom = (prices, deal) => {
   if (Number.isFinite(Number(deal?.discountPercent))) return Number(deal.discountPercent);
   const current = numberFromPrice(prices.current);
@@ -144,8 +165,8 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
         <h1>${esc(title)}</h1>
         ${prices.current ? `<p class="deal-detail-price"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? ` <span>${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : ` <span>${esc(deal.referenceLabel || "Reference price")} <del>${esc(prices.original)}</del></span>` : ""}</p>` : ""}
 ${deal.priceNote ? `        <p class="deal-detail-price-note">${esc(deal.priceNote)}</p>\n` : ""}        <p class="deal-detail-summary">${esc(description)}</p>
-        <p class="deal-detail-meta">Listed by ${esc(deal.merchantName || "Amazon")} · Checked ${esc(isoDate(updated))}</p>
-        <a class="deal-detail-cta" href="${esc(deal.affiliateURL)}" rel="sponsored nofollow noopener" target="_blank">View live deal on ${esc(deal.merchantName || "Amazon")} <span aria-hidden="true">→</span></a>
+        <p class="deal-detail-meta">Listed by ${esc(deal.merchantName || "Amazon")} · Checked ${esc(isoDate(deal.verifiedAt))} · ${esc(lifecycleText(deal))}</p>
+        <a class="deal-detail-cta" href="${esc(outboundURL(deal))}" rel="sponsored nofollow noopener" target="_blank">View live deal on ${esc(deal.merchantName || "Amazon")} <span aria-hidden="true">→</span></a>
         <p class="deal-detail-fineprint">Affiliate link: DealDesk may earn a commission. Price, eligibility, and availability can change; confirm final terms with the merchant.</p>
       </div>
     </article>
@@ -201,9 +222,8 @@ const latestCards = pricedDeals.slice(1).map((deal) => {
       </span>
       <span class="deal-body">
         <span class="price-line"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? `<span class="original-price">${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : `<span class="original-price">${esc(deal.referenceLabel || "Was")} <del>${esc(prices.original)}</del></span>` : ""}</span>
-        ${deal.savingsText ? `<span class="saving-text">${esc(deal.savingsText)}</span>` : savings ? `<span class="saving-text">Save ${money(savings)} · ${discount}% off</span>` : ""}
-${deal.priceNote ? `        <span class="price-note">${esc(deal.priceNote)}</span>\n` : ""}        <strong class="deal-title">${esc(title)}</strong>
-        <span class="deal-meta">${esc(deal.merchantName || "Amazon")} · ${esc(deal.category || "Deal")} · Checked ${esc(isoDate(updated))}</span>
+${deal.savingsText ? `        <span class="saving-text">${esc(deal.savingsText)}</span>\n` : savings ? `        <span class="saving-text">Save ${money(savings)} · ${discount}% off</span>\n` : ""}${deal.priceNote ? `        <span class="price-note">${esc(deal.priceNote)}</span>\n` : ""}        <strong class="deal-title">${esc(title)}</strong>
+        <span class="deal-meta">${esc(deal.merchantName || "Amazon")} · ${esc(deal.category || "Deal")} · Checked ${esc(isoDate(deal.verifiedAt))}</span>
         <span class="deal-cta">View deal details</span>
       </span>
     </a>

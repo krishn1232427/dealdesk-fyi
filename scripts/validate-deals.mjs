@@ -8,8 +8,12 @@ const cjPrograms = new Map((affiliateRegistry.programs || [])
 const expediaPrograms = new Map((affiliateRegistry.programs || [])
   .filter((program) => program.network === "expedia-group-direct")
   .map((program) => [String(program.trackingID), program]));
+const ebayProgram = (affiliateRegistry.programs || [])
+  .find((program) => program.id === "ebay-partner-network-default");
 const seenIDs = new Set();
 const errors = [];
+const now = Date.now();
+const validDate = (value) => value && Number.isFinite(new Date(value).getTime());
 
 for (const feedPath of feedPaths) {
   const feed = JSON.parse(await readFile(new URL(`../${feedPath}`, import.meta.url), "utf8"));
@@ -26,9 +30,23 @@ for (const feedPath of feedPaths) {
     if (deal.id) seenIDs.add(deal.id);
     if (deal.commissionEligible !== true) errors.push(`${label}: commissionEligible must be true`);
     if (deal.approvalStatus !== "approved") errors.push(`${label}: approvalStatus must be approved`);
+    if (deal.status !== "active") errors.push(`${label}: status must be active`);
     if (!deal.trackingID) errors.push(`${label}: trackingID is required`);
     if (!deal.affiliateURL) errors.push(`${label}: affiliateURL is required`);
-    if (!deal.title || !deal.summary) errors.push(`${label}: title and summary are required`);
+    if (!deal.title || !deal.summary || !deal.merchantName || !deal.category) {
+      errors.push(`${label}: title, summary, merchantName, and category are required`);
+    }
+    if (!validDate(deal.verifiedAt)) errors.push(`${label}: verifiedAt must be a valid timestamp`);
+    if (!validDate(deal.publishedAt)) errors.push(`${label}: publishedAt must be a valid timestamp`);
+    if (!validDate(deal.expiresAt) && !validDate(deal.recheckAfter)) {
+      errors.push(`${label}: expiresAt or recheckAfter is required`);
+    }
+    if (validDate(deal.expiresAt) && new Date(deal.expiresAt).getTime() <= now) {
+      errors.push(`${label}: expiresAt is in the past`);
+    }
+    if (validDate(deal.recheckAfter) && new Date(deal.recheckAfter).getTime() <= now) {
+      errors.push(`${label}: recheckAfter is in the past`);
+    }
 
     let affiliateURL;
     try {
@@ -86,6 +104,24 @@ for (const feedPath of feedPaths) {
         if (program.commissionEligible !== true) errors.push(`${label}: Expedia Group program is not commission eligible`);
         if (program.publicPublishingAllowed !== true) errors.push(`${label}: Expedia Group program is not approved for public publishing`);
         if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: Hotels.com URL does not match the verified program URL`);
+      }
+    } else if (deal.network === "ebay-partner-network") {
+      const allowedEbayHosts = new Set(["rover.ebay.com", "ebay.us", "www.ebay.com"]);
+      const hasTrackingSignal = affiliateURL.hostname !== "www.ebay.com" ||
+        affiliateURL.searchParams.has("campid") || affiliateURL.searchParams.has("mkcid");
+
+      if (!allowedEbayHosts.has(affiliateURL.hostname) || !hasTrackingSignal) {
+        errors.push(`${label}: eBay URL must be an EPN-generated tracking link`);
+      }
+      if (deal.affiliateURL === deal.merchantURL) {
+        errors.push(`${label}: eBay affiliateURL cannot equal the untracked merchantURL`);
+      }
+      if (!ebayProgram || ebayProgram.applicationStatus !== "active" ||
+          ebayProgram.commissionEligible !== true || ebayProgram.publicPublishingAllowed !== true) {
+        errors.push(`${label}: eBay Partner Network relationship is not approved for publishing`);
+      }
+      if (deal.trackingID !== ebayProgram?.campaignName) {
+        errors.push(`${label}: eBay trackingID must match the approved campaign`);
       }
     } else {
       errors.push(`${label}: network is not approved for the public DealDesk feed`);

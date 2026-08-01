@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "campaign": "default",
+  "verifiedAt": "2026-08-01T21:40:00Z",
+  "deals": [
+    {
+      "id": "ebay-refurbished-samsung-20260801",
+      "title": "Samsung devices — up to 80% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/ebay-refurbished-samsung",
+      "category": "Electronics",
+      "badgeText": "Up to 80% off",
+      "currentPrice": "Up to 80% off",
+      "priceNote": "eBay Refurbished · one- or two-year warranty",
+      "summary": "Save up to 80% on eligible eBay Refurbished Samsung devices. Eligible products include a one- or two-year warranty; confirm the listing condition, seller, final price, and warranty at checkout.",
+      "expiresAt": "2028-01-31T23:59:59Z",
+      "rankingScore": 93
+    },
+    {
+      "id": "ebay-refurbished-cell-phones-20260801",
+      "title": "Top phone brands — up to 70% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/shop-all-ebay-refurbished-cell-phones",
+      "category": "Electronics",
+      "badgeText": "Up to 70% off",
+      "currentPrice": "Up to 70% off",
+      "priceNote": "eBay Refurbished · warranty included on eligible listings",
+      "summary": "Save up to 70% on eligible refurbished phones from leading brands. Confirm the device condition, seller, warranty term, compatibility, and final price on eBay.",
+      "expiresAt": "2045-08-11T23:59:59Z",
+      "rankingScore": 90
+    },
+    {
+      "id": "ebay-smartphones-20260801",
+      "title": "Smartphones — up to 70% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/save-on-cell-phones",
+      "category": "Electronics",
+      "badgeText": "Up to 70% off",
+      "currentPrice": "Up to 70% off",
+      "priceNote": "One- or two-year warranty on eligible refurbished devices",
+      "summary": "Save up to 70% on eligible smartphones with a one- or two-year warranty on qualifying refurbished listings. Confirm current inventory, condition, carrier compatibility, and final price on eBay.",
+      "expiresAt": "2026-08-31T23:59:59Z",
+      "rankingScore": 92
+    },
+    {
+      "id": "ebay-refurbished-home-audio-20260801",
+      "title": "eBay Refurbished home audio — up to 60% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/ebay-refurbished-home-audio",
+      "category": "Electronics",
+      "badgeText": "Up to 60% off",
+      "currentPrice": "Up to 60% off",
+      "priceNote": "Warranty included on eligible eBay Refurbished listings",
+      "summary": "Save up to 60% on eligible eBay Refurbished home-audio products with a warranty. Confirm the listing condition, included accessories, seller, and final price on eBay.",
+      "expiresAt": "2026-11-30T23:59:59Z",
+      "rankingScore": 84
+    },
+    {
+      "id": "ebay-refurbished-irobot-20260801",
+      "title": "eBay Refurbished iRobot — up to 60% off",
+      "merchantURL": "https://www.ebay.com/e/home-garden/certified-refurbished-irobot",
+      "category": "Home",
+      "badgeText": "Up to 60% off",
+      "currentPrice": "Up to 60% off",
+      "priceNote": "Warranty included on eligible refurbished products",
+      "summary": "Save up to 60% on eligible eBay Refurbished iRobot products with a warranty. Confirm the model, condition, seller, included accessories, and final price on eBay.",
+      "expiresAt": "2028-01-31T23:59:59Z",
+      "rankingScore": 86
+    },
+    {
+      "id": "ebay-gaming-gear-20260801",
+      "title": "Gaming gear — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/x-condition-gaming",
+      "category": "Gaming",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Xbox, PlayStation, and other eligible gaming products",
+      "summary": "Save up to 50% on eligible gaming gear, including Xbox, PlayStation, and related products. Confirm the item condition, seller, compatibility, warranty, and final price on eBay.",
+      "expiresAt": "2027-04-29T23:59:59Z",
+      "rankingScore": 88
+    },
+    {
+      "id": "ebay-cameras-drones-20260801",
+      "title": "Cameras and drones — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/new-and-ebay-refurbished-camera-and-drones",
+      "category": "Electronics",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "New and eligible eBay Refurbished products",
+      "summary": "Save up to 50% on eligible cameras, drones, and related equipment across new and eBay Refurbished listings. Confirm condition, seller, warranty, and final price on eBay.",
+      "expiresAt": "2027-01-31T23:59:59Z",
+      "rankingScore": 85
+    },
+    {
+      "id": "ebay-refurbished-dyson-20260801",
+      "title": "eBay Refurbished Dyson — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/home-garden/certified-refurbished-dyson",
+      "category": "Home",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Direct-from-brand offer on eligible refurbished products",
+      "summary": "Save up to 50% on eligible eBay Refurbished Dyson products offered directly by the brand. Confirm the model, condition, warranty, included accessories, and final price on eBay.",
+      "expiresAt": "2028-01-31T23:59:59Z",
+      "rankingScore": 87
+    },
+    {
+      "id": "ebay-refurbished-makita-20260801",
+      "title": "eBay Refurbished Makita — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/home-garden/certified-refurbished-makita-brand-outlet",
+      "category": "Home",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Eligible products from an authorized seller",
+      "summary": "Save up to 50% on eligible eBay Refurbished Makita products from an authorized seller. Confirm the tool model, battery inclusion, condition, warranty, and final price on eBay.",
+      "expiresAt": "2026-09-30T23:59:59Z",
+      "rankingScore": 83
+    },
+    {
+      "id": "ebay-jbl-20260801",
+      "title": "JBL products — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/brand-outlet-jbl",
+      "category": "Electronics",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Eligible products from a trusted seller",
+      "summary": "Save up to 50% on eligible JBL audio products from a trusted seller. Confirm the model, condition, seller, warranty, and final price on eBay.",
+      "expiresAt": "2045-09-22T23:59:59Z",
+      "rankingScore": 82
+    }
+  ]
+}

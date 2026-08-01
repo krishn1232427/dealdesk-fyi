@@ -17,7 +17,10 @@
       "category": "Streaming",
       "summary": "Eligible customers can start a Prime Video trial. Amazon confirms a fixed bounty for a qualifying trial signup; verify trial length and renewal price before enrolling.",
       "verifiedAt": "2026-07-31T23:45:00Z",
-      "priority": 1
+      "priority": 1,
+      "status": "active",
+      "recheckAfter": "2026-08-07T23:45:00.000Z",
+      "publishedAt": "2026-07-31T23:45:00Z"
     },
     {
       "id": "amazon-prime-video-channels-free-trial-20260731",
@@ -33,7 +36,10 @@
       "category": "Streaming",
       "summary": "Browse eligible add-on channels and their current trials in one place. The bounty applies when an eligible customer completes a qualifying channel trial signup.",
       "verifiedAt": "2026-07-31T23:45:00Z",
-      "priority": 2
+      "priority": 2,
+      "status": "active",
+      "recheckAfter": "2026-08-07T23:45:00.000Z",
+      "publishedAt": "2026-07-31T23:45:00Z"
     },
     {
       "id": "amazon-prime-video-channels-paid-20260731",
@@ -49,7 +55,10 @@
       "category": "Streaming",
       "summary": "Choose from eligible Prime Video add-on subscriptions. Amazon confirms a fixed bounty for a qualifying paid subscription; channel pricing and terms vary.",
       "verifiedAt": "2026-07-31T23:45:00Z",
-      "priority": 3
+      "priority": 3,
+      "status": "active",
+      "recheckAfter": "2026-08-07T23:45:00.000Z",
+      "publishedAt": "2026-07-31T23:45:00Z"
     },
     {
       "id": "amazon-music-unlimited-20260731",
@@ -65,7 +74,10 @@
       "category": "Streaming",
       "summary": "Eligible customers can view the current Music Unlimited trial or membership offer. Amazon confirms a fixed bounty for a qualifying signup.",
       "verifiedAt": "2026-07-31T23:45:00Z",
-      "priority": 4
+      "priority": 4,
+      "status": "active",
+      "recheckAfter": "2026-08-07T23:45:00.000Z",
+      "publishedAt": "2026-07-31T23:45:00Z"
     }
   ]
 }

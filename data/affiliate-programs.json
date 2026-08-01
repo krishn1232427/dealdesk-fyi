@@ -36,10 +36,10 @@
     },
     {
       "network": "ebay-partner-network",
-      "status": "publisher application submitted; eBay Partner Network review pending",
+      "status": "active media-partner account; default campaign and promotable-link tools available",
       "email": "hello.launchdesk@gmail.com",
-      "accessStatus": "authenticated; application under review",
-      "commissionAccess": false
+      "accessStatus": "authenticated; campaign dashboard, reporting, and EPN link generator available",
+      "commissionAccess": true
     },
     {
       "network": "expedia-group-direct",
@@ -1273,6 +1273,26 @@
       "restrictions": "Do not fabricate a LinkedIn profile, audience size, or business metrics. Join and publish individual programs only after Network approval, merchant approval, and exact payable-link verification.",
       "summary": "PartnerStack exposes strong subscription economics from recognizable B2B brands, including recurring and high fixed-bounty programs. DealDesk's account and business team are active, but the Network application cannot be truthfully completed without a real LinkedIn profile and verified audience details.",
       "priority": 58
+    },
+    {
+      "id": "ebay-partner-network-default",
+      "network": "ebay-partner-network",
+      "merchantName": "eBay",
+      "merchantURL": "https://www.ebay.com/",
+      "profileURL": "https://partner.ebay.com/secure/mediapartner/home/pview.ihtml#/",
+      "category": "Marketplace",
+      "commission": "1%-4% of qualifying transaction value by category",
+      "attribution": "Last click; qualifying Buy It Now purchase within 24 hours, with separate auction and Best Offer rules",
+      "status": "Approved — active default campaign and bulk promotable-link generator verified",
+      "applicationStatus": "active",
+      "campaignName": "default",
+      "trackingLinkStatus": "generator-access-verified",
+      "offerVerifiedAt": "2026-08-01T21:40:00Z",
+      "commissionEligible": true,
+      "publicPublishingAllowed": true,
+      "restrictions": "Publish only EPN-generated DealDesk tracking links. Offer prices, eligibility, condition, warranty, availability, expiration, and attribution terms must remain accurate. Do not treat the 24-hour click attribution window as the offer expiration date.",
+      "summary": "DealDesk's authenticated EPN account exposes its default campaign, reports, 1%-4% contract terms, and single and bulk promotable-link tools. Each public eBay listing remains blocked until its exact EPN-converted URL is captured and validated.",
+      "priority": 59
     }
   ]
 }

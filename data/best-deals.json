@@ -1,8 +1,248 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-01T21:15:00Z",
+  "updatedAt": "2026-08-01T21:40:00Z",
   "curationNote": "Commission-only feed. Every listing requires an active affiliate relationship, an exact DealDesk tracking link, and a live offer check. Prices and availability can change at any time.",
   "deals": [
+    {
+      "id": "ebay-refurbished-samsung-20260801",
+      "title": "Samsung devices — up to 80% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/ebay-refurbished-samsung",
+      "category": "Electronics",
+      "badgeText": "Up to 80% off",
+      "currentPrice": "Up to 80% off",
+      "priceNote": "eBay Refurbished · one- or two-year warranty",
+      "summary": "Save up to 80% on eligible eBay Refurbished Samsung devices. Eligible products include a one- or two-year warranty; confirm the listing condition, seller, final price, and warranty at checkout.",
+      "expiresAt": "2028-01-31T23:59:59Z",
+      "rankingScore": 93,
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-samsung?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/_electronics/ebay-refurbished-samsung?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 1
+    },
+    {
+      "id": "ebay-refurbished-cell-phones-20260801",
+      "title": "Top phone brands — up to 70% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/shop-all-ebay-refurbished-cell-phones",
+      "category": "Electronics",
+      "badgeText": "Up to 70% off",
+      "currentPrice": "Up to 70% off",
+      "priceNote": "eBay Refurbished · warranty included on eligible listings",
+      "summary": "Save up to 70% on eligible refurbished phones from leading brands. Confirm the device condition, seller, warranty term, compatibility, and final price on eBay.",
+      "expiresAt": "2045-08-11T23:59:59Z",
+      "rankingScore": 90,
+      "url": "https://www.ebay.com/e/_electronics/shop-all-ebay-refurbished-cell-phones?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/_electronics/shop-all-ebay-refurbished-cell-phones?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 2
+    },
+    {
+      "id": "ebay-smartphones-20260801",
+      "title": "Smartphones — up to 70% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/save-on-cell-phones",
+      "category": "Electronics",
+      "badgeText": "Up to 70% off",
+      "currentPrice": "Up to 70% off",
+      "priceNote": "One- or two-year warranty on eligible refurbished devices",
+      "summary": "Save up to 70% on eligible smartphones with a one- or two-year warranty on qualifying refurbished listings. Confirm current inventory, condition, carrier compatibility, and final price on eBay.",
+      "expiresAt": "2026-08-31T23:59:59Z",
+      "rankingScore": 92,
+      "url": "https://www.ebay.com/e/_electronics/save-on-cell-phones?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/_electronics/save-on-cell-phones?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 3
+    },
+    {
+      "id": "ebay-refurbished-home-audio-20260801",
+      "title": "eBay Refurbished home audio — up to 60% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/ebay-refurbished-home-audio",
+      "category": "Electronics",
+      "badgeText": "Up to 60% off",
+      "currentPrice": "Up to 60% off",
+      "priceNote": "Warranty included on eligible eBay Refurbished listings",
+      "summary": "Save up to 60% on eligible eBay Refurbished home-audio products with a warranty. Confirm the listing condition, included accessories, seller, and final price on eBay.",
+      "expiresAt": "2026-11-30T23:59:59Z",
+      "rankingScore": 84,
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-home-audio?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/_electronics/ebay-refurbished-home-audio?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 4
+    },
+    {
+      "id": "ebay-refurbished-irobot-20260801",
+      "title": "eBay Refurbished iRobot — up to 60% off",
+      "merchantURL": "https://www.ebay.com/e/home-garden/certified-refurbished-irobot",
+      "category": "Home",
+      "badgeText": "Up to 60% off",
+      "currentPrice": "Up to 60% off",
+      "priceNote": "Warranty included on eligible refurbished products",
+      "summary": "Save up to 60% on eligible eBay Refurbished iRobot products with a warranty. Confirm the model, condition, seller, included accessories, and final price on eBay.",
+      "expiresAt": "2028-01-31T23:59:59Z",
+      "rankingScore": 86,
+      "url": "https://www.ebay.com/e/home-garden/certified-refurbished-irobot?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/home-garden/certified-refurbished-irobot?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 5
+    },
+    {
+      "id": "ebay-gaming-gear-20260801",
+      "title": "Gaming gear — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/x-condition-gaming",
+      "category": "Gaming",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Xbox, PlayStation, and other eligible gaming products",
+      "summary": "Save up to 50% on eligible gaming gear, including Xbox, PlayStation, and related products. Confirm the item condition, seller, compatibility, warranty, and final price on eBay.",
+      "expiresAt": "2027-04-29T23:59:59Z",
+      "rankingScore": 88,
+      "url": "https://www.ebay.com/e/_electronics/x-condition-gaming?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/_electronics/x-condition-gaming?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 6
+    },
+    {
+      "id": "ebay-cameras-drones-20260801",
+      "title": "Cameras and drones — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/new-and-ebay-refurbished-camera-and-drones",
+      "category": "Electronics",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "New and eligible eBay Refurbished products",
+      "summary": "Save up to 50% on eligible cameras, drones, and related equipment across new and eBay Refurbished listings. Confirm condition, seller, warranty, and final price on eBay.",
+      "expiresAt": "2027-01-31T23:59:59Z",
+      "rankingScore": 85,
+      "url": "https://www.ebay.com/e/_electronics/new-and-ebay-refurbished-camera-and-drones?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/_electronics/new-and-ebay-refurbished-camera-and-drones?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 7
+    },
+    {
+      "id": "ebay-refurbished-dyson-20260801",
+      "title": "eBay Refurbished Dyson — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/home-garden/certified-refurbished-dyson",
+      "category": "Home",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Direct-from-brand offer on eligible refurbished products",
+      "summary": "Save up to 50% on eligible eBay Refurbished Dyson products offered directly by the brand. Confirm the model, condition, warranty, included accessories, and final price on eBay.",
+      "expiresAt": "2028-01-31T23:59:59Z",
+      "rankingScore": 87,
+      "url": "https://www.ebay.com/e/home-garden/certified-refurbished-dyson?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/home-garden/certified-refurbished-dyson?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 8
+    },
+    {
+      "id": "ebay-refurbished-makita-20260801",
+      "title": "eBay Refurbished Makita — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/home-garden/certified-refurbished-makita-brand-outlet",
+      "category": "Home",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Eligible products from an authorized seller",
+      "summary": "Save up to 50% on eligible eBay Refurbished Makita products from an authorized seller. Confirm the tool model, battery inclusion, condition, warranty, and final price on eBay.",
+      "expiresAt": "2026-09-30T23:59:59Z",
+      "rankingScore": 83,
+      "url": "https://www.ebay.com/e/home-garden/certified-refurbished-makita-brand-outlet?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/home-garden/certified-refurbished-makita-brand-outlet?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 9
+    },
+    {
+      "id": "ebay-jbl-20260801",
+      "title": "JBL products — up to 50% off",
+      "merchantURL": "https://www.ebay.com/e/_electronics/brand-outlet-jbl",
+      "category": "Electronics",
+      "badgeText": "Up to 50% off",
+      "currentPrice": "Up to 50% off",
+      "priceNote": "Eligible products from a trusted seller",
+      "summary": "Save up to 50% on eligible JBL audio products from a trusted seller. Confirm the model, condition, seller, warranty, and final price on eBay.",
+      "expiresAt": "2045-09-22T23:59:59Z",
+      "rankingScore": 82,
+      "url": "https://www.ebay.com/e/_electronics/brand-outlet-jbl?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "affiliateURL": "https://www.ebay.com/e/_electronics/brand-outlet-jbl?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339181076&toolid=20014&customid=&mkevt=1",
+      "network": "ebay-partner-network",
+      "trackingID": "default",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "1%-4% of qualifying transaction value by category",
+      "merchantName": "eBay",
+      "status": "active",
+      "publishedAt": "2026-08-01T21:40:00Z",
+      "verifiedAt": "2026-08-01T21:40:00Z",
+      "priority": 10
+    },
     {
       "id": "expedia-hotels-member-prices-20260801",
       "title": "Hotels.com Member Prices — save 10% or more",
@@ -27,7 +267,9 @@
       "verifiedAt": "2026-08-01T18:20:00Z",
       "rankingScore": 84,
       "rankingReason": "4% hotel commission, strong Hotels.com brand demand, and a clear 10%+ member saving",
-      "priority": 4
+      "priority": 4,
+      "status": "active",
+      "recheckAfter": "2026-08-08T18:20:00.000Z"
     },
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -55,7 +297,9 @@
       "verifiedAt": "2026-08-01T08:14:02Z",
       "rankingScore": 100,
       "rankingReason": "$30 fixed bounty, Amazon Prime brand demand, and six months of customer value",
-      "priority": 1
+      "priority": 1,
+      "status": "active",
+      "recheckAfter": "2026-08-08T08:14:02.000Z"
     },
     {
       "id": "cj-nordvpn-2-year-20260801",
@@ -82,7 +326,9 @@
       "verifiedAt": "2026-08-01T07:47:44Z",
       "rankingScore": 94,
       "rankingReason": "40% commission, high brand demand, and a verified 69% multi-year discount",
-      "priority": 1
+      "priority": 1,
+      "status": "active",
+      "recheckAfter": "2026-08-08T07:47:44.000Z"
     },
     {
       "id": "cj-surfshark-starter-20260801",
@@ -109,7 +355,9 @@
       "verifiedAt": "2026-08-01T07:57:37Z",
       "rankingScore": 91,
       "rankingReason": "40% commission, high brand demand, and 85% off with extra months",
-      "priority": 2
+      "priority": 2,
+      "status": "active",
+      "recheckAfter": "2026-08-08T07:57:37.000Z"
     },
     {
       "id": "cj-nordpass-premium-20260801",
@@ -136,7 +384,9 @@
       "verifiedAt": "2026-08-01T07:57:37Z",
       "rankingScore": 72,
       "rankingReason": "30% consumer-plan commission and a clear 53% discount",
-      "priority": 3
+      "priority": 3,
+      "status": "active",
+      "recheckAfter": "2026-08-08T07:57:37.000Z"
     },
     {
       "id": "amazon-audible-standard-trial-20260801",
@@ -164,7 +414,9 @@
       "verifiedAt": "2026-08-01T08:14:02Z",
       "rankingScore": 88,
       "rankingReason": "$20 fixed bounty, strong Audible recognition, and a useful 30-day trial",
-      "priority": 4
+      "priority": 4,
+      "status": "active",
+      "recheckAfter": "2026-08-08T08:14:02.000Z"
     },
     {
       "id": "amazon-kindle-unlimited-two-months-20260801",
@@ -190,7 +442,9 @@
       "verifiedAt": "2026-08-01T08:14:02Z",
       "rankingScore": 68,
       "rankingReason": "$3 fixed bounty balanced by Amazon demand and a 96% two-month discount",
-      "priority": 5
+      "priority": 5,
+      "status": "active",
+      "recheckAfter": "2026-08-08T08:14:02.000Z"
     },
     {
       "id": "amazon-kids-plus-trial-20260801",
@@ -218,7 +472,9 @@
       "verifiedAt": "2026-08-01T08:14:02Z",
       "rankingScore": 55,
       "rankingReason": "$3 fixed bounty, trusted Amazon brand, and a useful family trial",
-      "priority": 6
+      "priority": 6,
+      "status": "active",
+      "recheckAfter": "2026-08-08T08:14:02.000Z"
     },
     {
       "id": "amazon-B089TQB1RB-20260730",
@@ -235,7 +491,10 @@
       "category": "Home",
       "summary": "$279.99 (reference price $479.99). Limited-time deal; estimated Home commission rate 3%. Verify price and availability at checkout.",
       "publishedAt": "2026-07-31T02:36:00Z",
-      "priority": 1
+      "priority": 1,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:36:00Z",
+      "recheckAfter": "2026-08-03T02:36:00.000Z"
     },
     {
       "id": "amazon-B09XS7JWHH-20260730",
@@ -252,7 +511,10 @@
       "category": "Tech",
       "summary": "$248.00 (reference price $399.99). Selling fast; estimated Headphones commission rate 3%.",
       "publishedAt": "2026-07-31T02:35:00Z",
-      "priority": 2
+      "priority": 2,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:35:00Z",
+      "recheckAfter": "2026-08-03T02:35:00.000Z"
     },
     {
       "id": "amazon-B0C1GP88C4-20260730",
@@ -269,7 +531,10 @@
       "category": "Home",
       "summary": "$35.98 (reference price $59.99). Limited-time deal; estimated Home commission rate 3%.",
       "publishedAt": "2026-07-31T02:34:00Z",
-      "priority": 3
+      "priority": 3,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:34:00Z",
+      "recheckAfter": "2026-08-03T02:34:00.000Z"
     },
     {
       "id": "amazon-B0GVYZ1WK7-20260730",
@@ -286,7 +551,10 @@
       "category": "Home",
       "summary": "$47.95 (reference price $69.99). Limited-time deal; estimated Outdoor commission rate 3%.",
       "publishedAt": "2026-07-31T02:33:00Z",
-      "priority": 4
+      "priority": 4,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:33:00Z",
+      "recheckAfter": "2026-08-03T02:33:00.000Z"
     },
     {
       "id": "amazon-B0GF6PYHD1-20260730",
@@ -303,7 +571,10 @@
       "category": "Home",
       "summary": "$69.98 (reference price $99.99). Limited-time deal; estimated Home commission rate 3%.",
       "publishedAt": "2026-07-31T02:32:00Z",
-      "priority": 5
+      "priority": 5,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:32:00Z",
+      "recheckAfter": "2026-08-03T02:32:00.000Z"
     },
     {
       "id": "amazon-B0BVZFQ4DF-20260730",
@@ -320,7 +591,10 @@
       "category": "Home",
       "summary": "$54.93 (reference price $74.99). Selling fast; estimated Home commission rate 3%.",
       "publishedAt": "2026-07-31T02:31:00Z",
-      "priority": 6
+      "priority": 6,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:31:00Z",
+      "recheckAfter": "2026-08-03T02:31:00.000Z"
     },
     {
       "id": "amazon-B0BPM7C8RT-20260730",
@@ -337,7 +611,10 @@
       "category": "Home",
       "summary": "$207.57 (reference price $279.99). Limited-time deal; conservative Outdoor commission rate 3%.",
       "publishedAt": "2026-07-31T02:30:00Z",
-      "priority": 7
+      "priority": 7,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:30:00Z",
+      "recheckAfter": "2026-08-03T02:30:00.000Z"
     },
     {
       "id": "amazon-B0DVCDZBWV-20260730",
@@ -354,7 +631,10 @@
       "category": "Tech",
       "summary": "$379.99 (reference price $449.99). Limited-time deal; estimated Computers commission rate 2.5%.",
       "publishedAt": "2026-07-31T02:29:00Z",
-      "priority": 8
+      "priority": 8,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:29:00Z",
+      "recheckAfter": "2026-08-03T02:29:00.000Z"
     },
     {
       "id": "amazon-B0CXDXP8VR-20260730",
@@ -371,7 +651,10 @@
       "category": "Tech",
       "summary": "$59.98 (reference price $69.99). Limited-time deal; conservative All Other commission rate 4%.",
       "publishedAt": "2026-07-31T02:28:00Z",
-      "priority": 9
+      "priority": 9,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:28:00Z",
+      "recheckAfter": "2026-08-03T02:28:00.000Z"
     },
     {
       "id": "amazon-B0DQDQVTT3-20260730",
@@ -388,7 +671,10 @@
       "category": "Home",
       "summary": "$69.93 (reference price $79.99). Limited-time deal; estimated Home commission rate 3%.",
       "publishedAt": "2026-07-31T02:27:00Z",
-      "priority": 10
+      "priority": 10,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:27:00Z",
+      "recheckAfter": "2026-08-03T02:27:00.000Z"
     },
     {
       "id": "amazon-B0C3HCD34R-20260730",
@@ -405,7 +691,10 @@
       "category": "Tech",
       "summary": "$39.98 (reference price $44.99). Selling fast; estimated Headphones commission rate 3%.",
       "publishedAt": "2026-07-31T02:26:00Z",
-      "priority": 11
+      "priority": 11,
+      "status": "active",
+      "verifiedAt": "2026-07-31T02:26:00Z",
+      "recheckAfter": "2026-08-03T02:26:00.000Z"
     },
     {
       "id": "amazon-B00JH98GR4-20260801",
@@ -424,7 +713,10 @@
       "discountPercent": 25,
       "summary": "$149.00 limited-time deal (list price $199.99) for the Shark NV360 Lift-Away vacuum with HEPA filtration.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 12
+      "priority": 12,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B01MSP50CY-20260801",
@@ -443,7 +735,10 @@
       "discountPercent": 10,
       "summary": "$31.46 limited-time deal (typical price $34.96) for four MERV 8 HVAC filters.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 13
+      "priority": 13,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B0DSP8J476-20260801",
@@ -462,7 +757,10 @@
       "discountPercent": 44,
       "summary": "$499.98 limited-time deal (list price $899.99) for the self-emptying Roborock Qrevo S5V.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 14
+      "priority": 14,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B07VVK39F7-20260801",
@@ -481,7 +779,10 @@
       "discountPercent": 15,
       "summary": "$84.99 limited-time deal (list price $99.99) for the Levoit Core 300 air purifier.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 15
+      "priority": 15,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B07D5DN269-20260801",
@@ -500,7 +801,10 @@
       "discountPercent": 46,
       "summary": "$37.89 time-limited deal (list price $69.99) for a queen-size cooling mattress topper.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 16
+      "priority": 16,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B0BJZ9GT1J-20260801",
@@ -519,7 +823,10 @@
       "discountPercent": 25,
       "summary": "$89.99 limited-time deal (typical price $119.99) for a six-pack of True Classic crew-neck T-shirts; size and color availability varies.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 17
+      "priority": 17,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B0GT2DG9SK-20260801",
@@ -538,7 +845,10 @@
       "discountPercent": 23,
       "summary": "$299.99 time-limited deal (list price $389.99) for the Dyson V8 cordless vacuum.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 18
+      "priority": 18,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B0DGF616XN-20260801",
@@ -557,7 +867,10 @@
       "discountPercent": 40,
       "summary": "$23.98 time-limited deal (list price $39.99) for six zippered moving and storage bags.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 19
+      "priority": 19,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B0CP1LR1PW-20260801",
@@ -576,7 +889,10 @@
       "discountPercent": 11,
       "summary": "$67.00 limited-time deal (typical price $74.99) for a twin-size Zinus Green Tea memory-foam mattress.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 20
+      "priority": 20,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     },
     {
       "id": "amazon-B07MJL8NXR-20260801",
@@ -595,7 +911,10 @@
       "discountPercent": 12,
       "summary": "$27.99 limited-time deal (typical price $31.98) for twelve 11.5-ounce Premier Protein chocolate shakes.",
       "publishedAt": "2026-08-01T21:15:00Z",
-      "priority": 21
+      "priority": 21,
+      "status": "active",
+      "verifiedAt": "2026-08-01T21:15:00Z",
+      "recheckAfter": "2026-08-04T21:15:00.000Z"
     }
   ]
 }
