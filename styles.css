@@ -244,6 +244,10 @@ select {
   font-weight: 800;
 }
 
+.featured-wrap {
+  position: relative;
+}
+
 .featured-deal {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -266,6 +270,47 @@ select {
 
 .featured-deal:focus-visible {
   outline-offset: 4px;
+}
+
+.save-button {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #d7d3cb;
+  border-radius: 999px;
+  color: #3c3a36;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  gap: 6px;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 14px;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.save-button:hover {
+  border-color: #9b968d;
+  transform: translateY(-1px);
+}
+
+.save-button.saved {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+.save-icon {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.featured-save {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 5;
 }
 
 .featured-media {
@@ -497,14 +542,17 @@ select {
 }
 
 .filter-chip {
+  align-items: center;
   background: var(--paper);
   border: 1px solid #d6d2ca;
   border-radius: 999px;
   color: #514f4a;
   cursor: pointer;
+  display: inline-flex;
   flex: 0 0 auto;
   font-size: 12px;
   font-weight: 850;
+  justify-content: center;
   min-height: 44px;
   padding: 0 17px;
   transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
@@ -518,6 +566,28 @@ select {
   background: var(--ink);
   border-color: var(--ink);
   color: #fff;
+}
+
+.saved-filter {
+  gap: 7px;
+}
+
+.filter-count {
+  align-items: center;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  display: inline-flex;
+  font-size: 10px;
+  height: 21px;
+  justify-content: center;
+  min-width: 21px;
+  padding-inline: 6px;
+}
+
+.filter-chip.active .filter-count {
+  background: #fff;
+  color: var(--ink);
 }
 
 .deal-grid {
@@ -535,8 +605,17 @@ select {
   flex-direction: column;
   min-width: 0;
   overflow: hidden;
-  text-decoration: none;
+  position: relative;
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.deal-card-link {
+  color: var(--ink);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  text-decoration: none;
 }
 
 .deal-card:hover {
@@ -545,8 +624,15 @@ select {
   transform: translateY(-4px);
 }
 
-.deal-card:focus-visible {
+.deal-card-link:focus-visible {
   outline-offset: 4px;
+}
+
+.card-save {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 4;
 }
 
 .deal-media {
@@ -817,10 +903,46 @@ select {
   text-align: center;
 }
 
+.empty-state strong,
+.empty-state span {
+  display: block;
+}
+
+.empty-state strong {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.empty-state span {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 8px auto 0;
+  max-width: 430px;
+}
+
 .empty-state-dark {
   background: #2b2b29;
   border-color: #4a4945;
   color: #aaa8a2;
+}
+
+.save-toast {
+  background: var(--ink);
+  border-radius: 999px;
+  bottom: 24px;
+  box-shadow: 0 14px 36px rgba(20, 20, 18, 0.24);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 850;
+  left: 50%;
+  padding: 13px 18px;
+  position: fixed;
+  transform: translateX(-50%);
+  z-index: 40;
+}
+
+.save-toast[hidden] {
+  display: none;
 }
 
 /* Shared support and privacy pages */

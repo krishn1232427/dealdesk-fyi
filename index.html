@@ -56,25 +56,31 @@
           <p><strong id="live-count">Fresh</strong> hand-picked offers <span aria-hidden="true">·</span> <span id="freshness-label">Checked daily</span></p>
         </header>
 
-        <a class="featured-deal" id="featured-deal-link" href="#all-deals" aria-label="View today’s top deal">
-          <span class="featured-media">
-            <span class="featured-badge" id="featured-badge">Top deal</span>
-            <img id="featured-image" alt="" />
-            <span class="featured-placeholder" aria-hidden="true">D</span>
-          </span>
-          <span class="featured-content">
-            <span class="featured-label">DealDesk top pick</span>
-            <span class="featured-price-line">
-              <strong id="featured-price">See price</strong>
-              <span class="featured-original">Was <del id="featured-original"></del></span>
+        <article class="featured-wrap">
+          <a class="featured-deal" id="featured-deal-link" href="#all-deals" aria-label="View today’s top deal">
+            <span class="featured-media">
+              <span class="featured-badge" id="featured-badge">Top deal</span>
+              <img id="featured-image" alt="" />
+              <span class="featured-placeholder" aria-hidden="true">D</span>
             </span>
-            <span class="featured-saving" id="featured-saving">Today’s best value</span>
-            <strong class="featured-title" id="featured-title">Loading today’s top pick…</strong>
-            <span class="featured-merchant" id="featured-merchant">Amazon</span>
-            <span class="featured-cta">View deal on Amazon <span aria-hidden="true">→</span></span>
-            <span class="featured-fineprint">Price and availability can change at checkout.</span>
-          </span>
-        </a>
+            <span class="featured-content">
+              <span class="featured-label">DealDesk top pick</span>
+              <span class="featured-price-line">
+                <strong id="featured-price">See price</strong>
+                <span class="featured-original">Was <del id="featured-original"></del></span>
+              </span>
+              <span class="featured-saving" id="featured-saving">Today’s best value</span>
+              <strong class="featured-title" id="featured-title">Loading today’s top pick…</strong>
+              <span class="featured-merchant" id="featured-merchant">Amazon</span>
+              <span class="featured-cta">View deal on Amazon <span aria-hidden="true">→</span></span>
+              <span class="featured-fineprint">Price and availability can change at checkout.</span>
+            </span>
+          </a>
+          <button class="save-button featured-save" id="featured-save" type="button" aria-pressed="false">
+            <span class="save-icon" aria-hidden="true">♡</span>
+            <span class="save-label">Save</span>
+          </button>
+        </article>
 
         <section class="deals-section" id="all-deals" aria-labelledby="deals-heading">
           <div class="deals-heading-row">
@@ -98,6 +104,9 @@
             <button class="filter-chip" type="button" data-filter="under-100">Under $100</button>
             <button class="filter-chip" type="button" data-filter="Home">Home</button>
             <button class="filter-chip" type="button" data-filter="Tech">Tech</button>
+            <button class="filter-chip saved-filter" type="button" data-filter="saved">
+              Saved <span class="filter-count" id="saved-count">0</span>
+            </button>
           </div>
 
           <div class="deal-grid" id="best-deals-grid" aria-live="polite">
@@ -124,6 +133,8 @@
         </div>
       </section>
     </main>
+
+    <div class="save-toast" id="save-toast" role="status" aria-live="polite" hidden></div>
 
     <footer class="footer">
       <div class="shell footer-inner">
@@ -156,9 +167,15 @@
         var resultCount = document.getElementById("result-count");
         var liveCount = document.getElementById("live-count");
         var freshnessLabel = document.getElementById("freshness-label");
+        var savedCount = document.getElementById("saved-count");
+        var featuredSave = document.getElementById("featured-save");
+        var saveToast = document.getElementById("save-toast");
         var productDeals = [];
         var activeFilter = "all";
         var searchQuery = "";
+        var savedStorageKey = "dealdesk-saved-deals-v1";
+        var savedDealKeys = loadSavedDealKeys();
+        var toastTimer;
 
         function eligible(deal) {
           return Boolean(
@@ -243,10 +260,95 @@
           return String(category || "").toLowerCase().indexOf("tech") !== -1 ? "⌁" : "⌂";
         }
 
+        function dealKey(deal) {
+          var asin = String(deal.id || "").match(/^amazon-([A-Z0-9]{10})-/i);
+          return asin ? "amazon-" + asin[1].toUpperCase() : String(deal.id || "");
+        }
+
+        function loadSavedDealKeys() {
+          try {
+            var saved = JSON.parse(window.localStorage.getItem(savedStorageKey) || "[]");
+            return new Set(Array.isArray(saved) ? saved.filter(function (key) { return typeof key === "string"; }) : []);
+          } catch (error) {
+            return new Set();
+          }
+        }
+
+        function persistSavedDealKeys() {
+          try {
+            window.localStorage.setItem(savedStorageKey, JSON.stringify(Array.from(savedDealKeys)));
+          } catch (error) {
+            /* The shortlist still works for this visit when storage is unavailable. */
+          }
+        }
+
+        function savedDealsAvailable() {
+          return productDeals.filter(function (deal) { return savedDealKeys.has(dealKey(deal)); }).length;
+        }
+
+        function updateSavedCount() {
+          savedCount.textContent = String(productDeals.length ? savedDealsAvailable() : savedDealKeys.size);
+        }
+
+        function setSaveButtonState(button, deal) {
+          var saved = savedDealKeys.has(dealKey(deal));
+          button.dataset.saveDeal = dealKey(deal);
+          button.setAttribute("aria-pressed", String(saved));
+          button.setAttribute("aria-label", (saved ? "Remove " : "Save ") + cleanTitle(deal.title) + (saved ? " from saved deals" : " for later"));
+          button.classList.toggle("saved", saved);
+          button.querySelector(".save-icon").textContent = saved ? "♥" : "♡";
+          button.querySelector(".save-label").textContent = saved ? "Saved" : "Save";
+        }
+
+        function showSaveToast(message) {
+          window.clearTimeout(toastTimer);
+          saveToast.textContent = message;
+          saveToast.hidden = false;
+          toastTimer = window.setTimeout(function () { saveToast.hidden = true; }, 2400);
+        }
+
+        function toggleSavedDeal(deal) {
+          var key = dealKey(deal);
+          var nowSaved;
+          if (savedDealKeys.has(key)) {
+            savedDealKeys.delete(key);
+            nowSaved = false;
+          } else {
+            savedDealKeys.add(key);
+            nowSaved = true;
+          }
+          persistSavedDealKeys();
+          updateSavedCount();
+          document.querySelectorAll("button[data-save-deal]").forEach(function (button) {
+            if (button.dataset.saveDeal === key) setSaveButtonState(button, deal);
+          });
+          if (activeFilter === "saved") renderProducts();
+          showSaveToast(nowSaved ? "Saved for next time" : "Removed from saved deals");
+        }
+
+        function makeSaveButton(deal, extraClass) {
+          var button = document.createElement("button");
+          button.className = "save-button " + (extraClass || "");
+          if (extraClass === "featured-save") button.id = "featured-save";
+          button.type = "button";
+          var icon = document.createElement("span");
+          icon.className = "save-icon";
+          icon.setAttribute("aria-hidden", "true");
+          var label = document.createElement("span");
+          label.className = "save-label";
+          button.appendChild(icon);
+          button.appendChild(label);
+          setSaveButtonState(button, deal);
+          button.addEventListener("click", function () { toggleSavedDeal(deal); });
+          return button;
+        }
+
         function makeProductCard(deal) {
           var prices = pricesFrom(deal.summary);
+          var card = document.createElement("article");
+          card.className = "deal-card";
           var link = document.createElement("a");
-          link.className = "deal-card";
+          link.className = "deal-card-link";
           link.href = deal.affiliateURL;
           link.target = "_blank";
           link.rel = "sponsored nofollow noopener";
@@ -304,7 +406,9 @@
           body.appendChild(cta);
           link.appendChild(media);
           link.appendChild(body);
-          return link;
+          card.appendChild(link);
+          card.appendChild(makeSaveButton(deal, "card-save"));
+          return card;
         }
 
         function filterMatches(deal) {
@@ -313,6 +417,7 @@
             activeFilter === "all" ||
             (activeFilter === "under-50" && price < 50) ||
             (activeFilter === "under-100" && price < 100) ||
+            (activeFilter === "saved" && savedDealKeys.has(dealKey(deal))) ||
             deal.category === activeFilter;
           var searchable = [deal.title, deal.category, deal.merchantName].join(" ").toLowerCase();
           return filterMatch && (!searchQuery || searchable.indexOf(searchQuery) !== -1);
@@ -331,9 +436,11 @@
 
           productGrid.innerHTML = "";
           filtered.forEach(function (deal) { productGrid.appendChild(makeProductCard(deal)); });
-          resultCount.textContent = filtered.length + (filtered.length === 1 ? " deal" : " deals");
+          resultCount.textContent = filtered.length + (activeFilter === "saved" ? (filtered.length === 1 ? " saved deal" : " saved deals") : (filtered.length === 1 ? " deal" : " deals"));
           if (!filtered.length) {
-            productGrid.innerHTML = '<p class="empty-state">No matching deals today. Try another filter or search.</p>';
+            productGrid.innerHTML = activeFilter === "saved"
+              ? '<p class="empty-state"><strong>No saved deals yet.</strong><span>Tap Save on any deal and it will be waiting here next time on this device.</span></p>'
+              : '<p class="empty-state">No matching deals today. Try another filter or search.</p>';
           }
         }
 
@@ -354,6 +461,8 @@
           document.getElementById("featured-saving").textContent = savingsFrom(prices, deal);
           document.getElementById("featured-title").textContent = cleanTitle(deal.title);
           document.getElementById("featured-merchant").textContent = "Sold by " + (deal.merchantName || "Amazon") + " · " + (deal.category || "Deal");
+          featuredSave.replaceWith(makeSaveButton(deal, "featured-save"));
+          featuredSave = document.getElementById("featured-save") || document.querySelector(".featured-save");
         }
 
         function streamingCopy(deal) {
@@ -442,6 +551,7 @@
           });
 
           liveCount.textContent = productDeals.length + streamingDeals.length;
+          updateSavedCount();
           setFreshness(feeds[0], feeds[1]);
           setFeaturedDeal(productDeals[0]);
           renderProducts();
