@@ -246,24 +246,39 @@ const latestHTML = `<!doctype html>
   <script type="application/ld+json">${JSON.stringify(latestSchema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#streaming">Streaming</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#streaming">Streaming</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
   <main class="deal-home shell">
     <header class="page-heading">
       <div><span class="page-kicker"><span aria-hidden="true"></span> Checked ${lastmod}</span><h1>Latest verified deals</h1></div>
       <p><strong>${pricedDeals.length}</strong> current product deals with clear savings</p>
     </header>
     ${featuredHTML}
-    <section class="latest-trust-strip" aria-label="DealDesk standards">
-      <span><strong>Price first</strong><small>Current and original price together</small></span>
-      <span><strong>Verified links</strong><small>Only active commission relationships</small></span>
-      <span><strong>Honest urgency</strong><small>Freshness shown; no fake countdowns</small></span>
-    </section>
     <section class="deals-heading-row" aria-labelledby="latest-deals-heading">
-      <div><h2 id="latest-deals-heading">More deals worth seeing</h2><p>Curated for fast comparison. Every listing uses a verified commission-eligible link.</p></div>
+      <div><h2 id="latest-deals-heading">More deals worth seeing</h2><p>Compare current prices and savings at a glance.</p></div>
     </section>
     <div class="deal-grid">${latestCards}</div>
   </main>
   <footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. You never pay more because of it. Prices and availability can change at checkout.</div></footer>
+  <script>
+    (function () {
+      "use strict";
+      var form = document.getElementById("latest-deal-search-form");
+      var input = document.getElementById("latest-deal-search");
+      var cards = Array.prototype.slice.call(document.querySelectorAll(".deal-card"));
+      var featured = document.querySelector(".latest-featured");
+
+      function filterDeals() {
+        var query = input.value.trim().toLowerCase();
+        cards.forEach(function (card) {
+          card.hidden = Boolean(query && card.textContent.toLowerCase().indexOf(query) === -1);
+        });
+        if (featured) featured.hidden = Boolean(query && featured.textContent.toLowerCase().indexOf(query) === -1);
+      }
+
+      input.addEventListener("input", filterDeals);
+      form.addEventListener("submit", function (event) { event.preventDefault(); });
+    }());
+  </script>
 </body>
 </html>`;
 await mkdir(resolve(root, "latest-deals"), { recursive: true });
