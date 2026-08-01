@@ -1549,7 +1549,24 @@ select {
     grid-row: 2;
   }
 
-  .nav-links > a:not(.nav-app),
+  .nav-links {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links > a {
+    flex: 0 0 auto;
+  }
+
   .links > a:not(:last-child) {
     display: none;
   }
