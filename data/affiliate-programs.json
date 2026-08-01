@@ -1,9 +1,14 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T09:49:47Z",
-  "source": "Signed-in affiliate-network publisher accounts and advertiser program profiles",
+  "updatedAt": "2026-08-01T10:50:43Z",
+  "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
+    {
+      "network": "amazon-associates",
+      "publisherID": "dealdesk-20",
+      "status": "active — payable DealDesk-tagged links are live"
+    },
     {
       "network": "awin",
       "publisherID": "2973087",
@@ -750,6 +755,49 @@
       "publicPublishingAllowed": false,
       "summary": "DealDesk's TicketNetwork application is pending. The program offers a large event catalog and high order values, making even the reduced deal-publisher rate potentially attractive. Because the two displayed attribution windows differ, DealDesk must verify the approved contract, payable rate, live offer, and tracked link before publication.",
       "priority": 37
+    },
+    {
+      "id": "cj-woot-4909784",
+      "network": "cj",
+      "merchantName": "Woot!",
+      "advertiserID": "4909784",
+      "publisherID": "8007406",
+      "merchantURL": "https://www.woot.com/",
+      "profileURL": "https://members.cj.com/member/7685648/publisher/advertisers/findAdvertisers.cj",
+      "category": "Daily deals and discount retail",
+      "commission": "2% on computers and electronics; 10% on Shirt.Woot; 4% on most other commissionable categories",
+      "attribution": "3 days",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T10:31:00Z",
+      "manualReview": true,
+      "productFeed": true,
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Wine and designated Biss items are noncommissionable. Coupon or promotional-code promotion is prohibited. Woot content and links must follow the advertiser's creative, trademark, disclosure, paid-search, and product-feed restrictions.",
+      "summary": "DealNews monetizes Woot through CJ, and DealDesk has now submitted its own CJ application. Woot offers strong daily-deal inventory and a full product feed, but no Woot listing may publish until CJ shows approval and the exact category-specific payout, live price, availability, and DealDesk tracking link are verified.",
+      "priority": 38
+    },
+    {
+      "id": "awin-egifter-89461",
+      "network": "awin",
+      "merchantName": "eGifter",
+      "advertiserID": "89461",
+      "publisherID": "2973087",
+      "merchantURL": "https://www.egifter.com/",
+      "profileURL": "https://ui.awin.com/awin/affiliate/2973087/merchant-profile/89461",
+      "category": "Digital gift cards",
+      "commission": "1% of qualifying gift-card revenue",
+      "attribution": "30 days",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T10:18:00Z",
+      "averagePaymentTime": "70 days",
+      "productFeed": true,
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "summary": "DealSea monetizes discounted gift-card offers through eGifter's Awin program. DealDesk submitted its own application for access to 300+ branded gift cards, advertiser promotions, creative, and a product feed. The 1% rate makes eGifter a coverage play rather than a top-slot payout play, and publication remains blocked until approval, a live discount, and a DealDesk-specific payable link are verified.",
+      "priority": 39
     }
   ]
 }

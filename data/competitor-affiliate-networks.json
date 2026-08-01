@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-01T10:50:43Z",
+  "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
+  "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
+  "competitors": [
+    {
+      "name": "DealSea",
+      "observedNetworks": [
+        {
+          "network": "Amazon Associates",
+          "merchantExamples": ["Amazon"],
+          "evidence": "Observed Amazon tag d000001-20"
+        },
+        {
+          "network": "eBay Partner Network",
+          "merchantExamples": ["eBay"],
+          "evidence": "Observed direct eBay campid 5335819673"
+        },
+        {
+          "network": "Impact",
+          "merchantExamples": ["Lenovo", "Walmart", "Best Buy", "Adidas", "Gap", "Banana Republic Factory"],
+          "evidence": "Observed Impact redirect domains and DealSea partner id 56357"
+        },
+        {
+          "network": "Awin",
+          "merchantExamples": ["eGifter"],
+          "evidence": "Observed Awin advertiser 89461 and DealSea affiliate id 240533"
+        },
+        {
+          "network": "CJ",
+          "merchantExamples": ["Macy's", "Woot!"],
+          "evidence": "Observed CJ publisher id 889052"
+        },
+        {
+          "network": "Rakuten Advertising",
+          "merchantExamples": ["Sam's Club"],
+          "evidence": "Observed LinkShare merchant id 38733"
+        },
+        {
+          "network": "B&H direct",
+          "merchantExamples": ["B&H Photo Video"],
+          "evidence": "Observed B&H BI and KBID tracking parameters"
+        }
+      ],
+      "observedUnmonetizedExamples": ["Target", "Bare Necessities"]
+    },
+    {
+      "name": "DealNews",
+      "observedNetworks": [
+        {
+          "network": "Amazon Associates",
+          "merchantExamples": ["Amazon"],
+          "evidence": "Observed Amazon tag dealnewscom"
+        },
+        {
+          "network": "eBay Partner Network",
+          "merchantExamples": ["eBay"],
+          "evidence": "Observed direct eBay campid 5336250274"
+        },
+        {
+          "network": "Impact",
+          "merchantExamples": ["Walmart", "Disney+"],
+          "evidence": "Observed Impact parameters including Walmart partner imp_52269 and Disney campaign attribution"
+        },
+        {
+          "network": "CJ",
+          "merchantExamples": ["Woot!", "DIRECTV"],
+          "evidence": "Observed Woot CJ attribution and identified DIRECTV CJ advertiser 5300312"
+        },
+        {
+          "network": "MagicLinks",
+          "merchantExamples": ["Best Buy", "Samsung"],
+          "evidence": "Observed MagicLinks attribution on Best Buy and Samsung destination URLs"
+        },
+        {
+          "network": "Rakuten Advertising",
+          "merchantExamples": ["Samsung"],
+          "evidence": "Observed Rakuten parameters on a Samsung link attributed through MagicLinks"
+        }
+      ]
+    }
+  ],
+  "dealDeskAccess": [
+    {
+      "network": "Amazon Associates",
+      "access": "active",
+      "publisherReference": "dealdesk-20",
+      "canPublish": true,
+      "notes": "Fifteen current DealDesk listings use payable Amazon Associates links. Continue to verify price and eligibility before publishing."
+    },
+    {
+      "network": "CJ",
+      "access": "active publisher account",
+      "publisherReference": "8007406",
+      "canPublish": true,
+      "notes": "NordVPN, Surfshark, and NordPass are approved with verified payable links. Woot and multiple streaming, software, news, internet, and subscription programs are pending."
+    },
+    {
+      "network": "Awin",
+      "access": "active publisher account",
+      "publisherReference": "2973087",
+      "canPublish": false,
+      "notes": "Current Awin advertiser applications are pending, including eGifter, Fiverr, Viator, TicketNetwork, AliExpress US, INIU, and Yaber. Do not publish their links until approval."
+    },
+    {
+      "network": "Impact",
+      "access": "media-partner account active; Brands Marketplace unavailable",
+      "publisherReference": "7459747",
+      "canPublish": false,
+      "notes": "The signed-in account cannot discover or join the retail and streaming brands observed on competitor links. This account state must be fixed before Impact can add payable inventory."
+    },
+    {
+      "network": "eBay Partner Network",
+      "access": "not yet connected",
+      "canPublish": false,
+      "nextAction": "Sign in with the intended eBay account, complete the US publisher profile in USD, then verify a DealDesk campaign link before publishing.",
+      "priority": 1
+    },
+    {
+      "network": "B&H direct",
+      "access": "application prepared",
+      "canPublish": false,
+      "nextAction": "Enter DealDesk's correct business ZIP and submit the prepared application. Approval and a DealDesk BI/KBID link are required before publishing.",
+      "priority": 2
+    },
+    {
+      "network": "Rakuten Advertising",
+      "access": "registration prepared",
+      "canPublish": false,
+      "nextAction": "Choose a new account password, verify the company email, complete the publisher profile, and apply first to Sam's Club and other high-value merchants that fit DealDesk.",
+      "priority": 3
+    },
+    {
+      "network": "Expedia Group Travel Creator Program",
+      "access": "email verification required",
+      "canPublish": false,
+      "nextAction": "Enter the six-digit code sent to hello.launchdesk@gmail.com and finish the publisher profile. Expedia Group advertises up to 4% on qualifying transactions across Expedia, Hotels.com, Vrbo, and related brands.",
+      "priority": 4
+    },
+    {
+      "network": "MagicLinks",
+      "access": "candidate — not yet applied",
+      "canPublish": false,
+      "nextAction": "Apply only after DealDesk can provide the requested creator/content profile. MagicLinks can cover major retailers, but direct advertiser programs should be preferred when their payout and attribution are better.",
+      "priority": 5
+    }
+  ],
+  "recommendedRankingPolicy": [
+    "Exclude every deal without an approved payable relationship and exact tracking link.",
+    "Score expected DealDesk earnings as commission rate or bounty multiplied by realistic order value and conversion probability.",
+    "Balance expected earnings with merchant trust, product demand, discount depth, total customer value, and refund or reversal risk.",
+    "Use direct programs when they improve payout, product feeds, or attribution; use aggregator networks for otherwise unavailable retailer coverage.",
+    "Never rank a weak customer offer above a genuinely better deal solely because its commission is higher."
+  ]
+}
