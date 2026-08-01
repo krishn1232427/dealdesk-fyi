@@ -265,6 +265,14 @@
           return asin ? "amazon-" + asin[1].toUpperCase() : String(deal.id || "");
         }
 
+        function dealPageURL(deal) {
+          return "/deals/" + String(deal.id || "deal")
+            .replace(/-\d{8}$/, "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-|-$/g, "") + "/";
+        }
+
         function loadSavedDealKeys() {
           try {
             var saved = JSON.parse(window.localStorage.getItem(savedStorageKey) || "[]");
@@ -349,10 +357,8 @@
           card.className = "deal-card";
           var link = document.createElement("a");
           link.className = "deal-card-link";
-          link.href = deal.affiliateURL;
-          link.target = "_blank";
-          link.rel = "sponsored nofollow noopener";
-          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal on " + (deal.merchantName || "Amazon"));
+          link.href = dealPageURL(deal);
+          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal details");
 
           var media = document.createElement("span");
           media.className = "deal-media";
@@ -397,7 +403,7 @@
           meta.textContent = (deal.merchantName || "Amazon") + " · " + (deal.category || "Deal");
           var cta = document.createElement("span");
           cta.className = "deal-cta";
-          cta.textContent = "View on " + (deal.merchantName || "Amazon");
+          cta.textContent = "View deal details";
 
           body.appendChild(priceLine);
           body.appendChild(saving);
@@ -449,10 +455,8 @@
           var prices = pricesFrom(deal.summary);
           var link = document.getElementById("featured-deal-link");
           var image = document.getElementById("featured-image");
-          link.href = deal.affiliateURL;
-          link.target = "_blank";
-          link.rel = "sponsored nofollow noopener";
-          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal on " + (deal.merchantName || "Amazon"));
+          link.href = dealPageURL(deal);
+          link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal details");
           image.alt = cleanTitle(deal.title);
           loadProductImage(image, deal, image.parentElement);
           document.getElementById("featured-badge").textContent = discountFrom(deal);
@@ -476,9 +480,7 @@
         function makeStreamingCard(deal, index) {
           var link = document.createElement("a");
           link.className = "stream-card";
-          link.href = deal.affiliateURL;
-          link.target = "_blank";
-          link.rel = "sponsored nofollow noopener";
+          link.href = dealPageURL(deal);
           var mark = document.createElement("span");
           mark.className = "stream-mark";
           mark.textContent = index % 2 === 0 ? "▶" : "♫";
@@ -494,7 +496,7 @@
           copy.textContent = streamingCopy(deal);
           var cta = document.createElement("span");
           cta.className = "stream-cta";
-          cta.textContent = "View on Amazon →";
+          cta.textContent = "View deal details →";
           body.appendChild(tag);
           body.appendChild(title);
           body.appendChild(copy);
