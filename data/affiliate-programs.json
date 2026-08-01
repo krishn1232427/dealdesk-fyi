@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T10:50:43Z",
+  "updatedAt": "2026-08-01T17:40:55Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -798,6 +798,52 @@
       "publicPublishingAllowed": false,
       "summary": "DealSea monetizes discounted gift-card offers through eGifter's Awin program. DealDesk submitted its own application for access to 300+ branded gift cards, advertiser promotions, creative, and a product feed. The 1% rate makes eGifter a coverage play rather than a top-slot payout play, and publication remains blocked until approval, a live discount, and a DealDesk-specific payable link are verified.",
       "priority": 39
+    },
+    {
+      "id": "cj-abt-electronics-4601919",
+      "network": "cj",
+      "merchantName": "Abt Electronics",
+      "advertiserID": "4601919",
+      "publisherID": "8007406",
+      "merchantURL": "https://www.abt.com/",
+      "profileURL": "https://members.cj.com/member/7685648/publisher/advertisers/findAdvertisers.cj",
+      "category": "Consumer electronics, appliances, furniture, and home",
+      "commission": "1% base; 3% electronics and gourmet; 4% appliances and furniture; 6% watches and sunglasses",
+      "attribution": "30 days",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T17:32:00Z",
+      "manualReview": true,
+      "averageOrderValue": "700 USD",
+      "epc": "60.49 USD three-month; 70.68 USD seven-day",
+      "productFeed": true,
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Gift cards, Apple products, video games and consoles, Briggs & Riley, Bosch tools, cellular contracts, and several other listed categories are noncommissionable. No trademark search bidding, search-engine display use of the Abt name, or unapproved coupons. Use only CJ-authorized offers and links; the advertiser terms state that direct linking is not permitted.",
+      "summary": "DealDesk submitted an application after reviewing the current CJ program terms. Abt is a strong catalog fit with 30,000+ products, major brands, frequent promotions, a 30-day referral window, and category commissions up to 6%. Publication remains blocked until approval, a qualifying product, current price, authorized creative, and a DealDesk-specific payable link are verified.",
+      "priority": 40
+    },
+    {
+      "id": "cj-mercatalyst-stores-5184799",
+      "network": "cj",
+      "merchantName": "MorningSave, Meh, SideDeal, and Hammacher",
+      "advertiserID": "5184799",
+      "publisherID": "8007406",
+      "merchantURL": "https://morningsave.com/",
+      "profileURL": "https://members.cj.com/member/7685648/publisher/advertisers/findAdvertisers.cj",
+      "category": "Daily deals and discount retail",
+      "commission": "5% per qualifying purchase across MorningSave, Meh, SideDeal, and Hammacher",
+      "attribution": "30 days",
+      "status": "Pending advertiser approval — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T17:38:00Z",
+      "manualReview": true,
+      "epc": "16.23 USD three-month; 10.88 USD seven-day",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Search marketing, incentivized traffic, software, and sub-affiliates are not allowed. Publish only coupons and promotional codes supplied exclusively through the CJ affiliate program.",
+      "summary": "DealDesk submitted an application to Mercatalyst's daily-deal portfolio. The four-store program is unusually well matched to a daily deals product, pays 5% on valid purchases, and offers a 30-day referral period with potential custom terms and bonuses. Publication remains blocked until approval, a current merchant-authorized deal, and a DealDesk-specific payable link are verified.",
+      "priority": 41
     }
   ]
 }
