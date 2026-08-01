@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T21:00:53Z",
+  "updatedAt": "2026-08-01T21:26:40Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -48,6 +48,25 @@
       "commissionAccess": true,
       "payoutReady": true,
       "travelShopURL": "https://www.expedia.com/shop/dealdesk"
+    },
+    {
+      "network": "sovrn-commerce",
+      "status": "DealDesk site submitted; Sovrn Commerce review pending",
+      "email": "hello.launchdesk@gmail.com",
+      "accessStatus": "authenticated; site under review",
+      "commissionAccess": false
+    },
+    {
+      "network": "travelpayouts",
+      "status": "authenticated account; 90+ travel-program onboarding reached; automatic Drive installation intentionally deferred",
+      "email": "hello.launchdesk@gmail.com",
+      "commissionAccess": false
+    },
+    {
+      "network": "partnerstack",
+      "status": "account and DealDesk business team created; PartnerStack Network application requires a verified LinkedIn profile",
+      "email": "hello.launchdesk@gmail.com",
+      "commissionAccess": false
     }
   ],
   "disclosure": "Tracked links are generated only for approved advertiser relationships with commission terms visible in the publisher account. Commission depends on advertiser approval, program terms, attribution, validation, tax status, and payout settings.",
@@ -1203,6 +1222,57 @@
       "publicPublishingAllowed": false,
       "summary": "Michael Kors Outlet has strong brand recognition and useful outlet pricing, but its current Rakuten baseline pays only 0%-2% depending on monthly volume. DealDesk is holding the application behind programs with better expected earnings and customer value.",
       "priority": 55
+    },
+    {
+      "id": "sovrn-commerce-network",
+      "network": "sovrn-commerce",
+      "merchantName": "Sovrn Commerce merchant network",
+      "merchantURL": "https://www.sovrn.com/sovrn-for-creators/",
+      "profileURL": "https://platform.sovrn.com/commerce/getting-started",
+      "category": "Shopping, retail, product links, CPC and CPA offers",
+      "commission": "Program-specific CPC or CPA commissions across more than 50,000 merchants",
+      "status": "DealDesk site submitted; Sovrn review pending for 1-3 business days — do not publish tracked links yet",
+      "applicationStatus": "pending",
+      "appliedAt": "2026-08-01T21:26:40Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Clicks generated before approval are not commission-eligible. Publish only after DealDesk is approved and the exact Sovrn tracking link, merchant eligibility, price, availability, and commission terms are verified.",
+      "summary": "DealDesk authenticated its Sovrn account and reached the authoritative 'Under review' status for Commerce. Sovrn can broaden retail coverage through CPC and CPA links, but no Sovrn offer is public or payable until site approval and exact-link verification.",
+      "priority": 56
+    },
+    {
+      "id": "travelpayouts-network",
+      "network": "travelpayouts",
+      "merchantName": "Travelpayouts travel network",
+      "merchantURL": "https://www.travelpayouts.com/",
+      "profileURL": "https://app.travelpayouts.com/dashboard",
+      "category": "Hotels, flights, tours, insurance, rentals, cruises, transfers, trains, and buses",
+      "commission": "Program-specific booking or lead rewards across 90+ travel brands",
+      "status": "Authenticated account reached travel-program onboarding; automatic Drive installation deferred to protect existing payable links",
+      "applicationStatus": "onboarding",
+      "reviewedAt": "2026-08-01T21:26:40Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Do not install automatic link rewriting until exclusions for existing Amazon, CJ, Expedia, and other payable DealDesk links are verified. Publish only exact Travelpayouts links whose program terms and DealDesk attribution are confirmed.",
+      "summary": "Travelpayouts offers more than 90 travel programs through one dashboard. DealDesk reached the installation stage but did not install Drive because automatic rewriting could replace existing commission-bearing links. Manual program and link verification is required before any public travel deal is added.",
+      "priority": 57
+    },
+    {
+      "id": "partnerstack-network",
+      "network": "partnerstack",
+      "merchantName": "PartnerStack Network",
+      "merchantURL": "https://partnerstack.com/marketplace",
+      "profileURL": "https://dash.partnerstack.com/marketplace/network_application",
+      "category": "B2B software, AI, productivity, marketing, security, payroll, and business subscriptions",
+      "commission": "Program-specific recurring revenue share, CPA, CPL, and fixed bounties",
+      "status": "Account and DealDesk business team created; Network application not submitted because a verified LinkedIn profile is required",
+      "applicationStatus": "onboarding",
+      "signupStartedAt": "2026-08-01T21:26:40Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Do not fabricate a LinkedIn profile, audience size, or business metrics. Join and publish individual programs only after Network approval, merchant approval, and exact payable-link verification.",
+      "summary": "PartnerStack exposes strong subscription economics from recognizable B2B brands, including recurring and high fixed-bounty programs. DealDesk's account and business team are active, but the Network application cannot be truthfully completed without a real LinkedIn profile and verified audience details.",
+      "priority": 58
     }
   ]
 }

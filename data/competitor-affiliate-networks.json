@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T21:00:53Z",
+  "updatedAt": "2026-08-01T21:26:40Z",
   "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
   "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
   "competitors": [
@@ -146,6 +146,54 @@
       "canPublish": false,
       "nextAction": "Proceed only if DealDesk establishes genuine creator social channels and the account owner supplies the required date of birth. Do not fabricate personal or audience information. Prefer direct advertiser programs when their payout and attribution are better.",
       "priority": 5
+    },
+    {
+      "network": "Sovrn Commerce",
+      "access": "authenticated; DealDesk site submitted and under review",
+      "canPublish": false,
+      "notes": "Sovrn reports that DealDesk is under review, with an expected response in 1-3 business days. Its Commerce marketplace covers more than 50,000 merchants through CPC and CPA offers.",
+      "nextAction": "Monitor approval, then verify the first exact DealDesk tracking link and merchant rate before publishing. Pre-approval clicks do not earn commission.",
+      "priority": 6
+    },
+    {
+      "network": "Travelpayouts",
+      "access": "authenticated; 90+ travel-program onboarding reached",
+      "canPublish": false,
+      "notes": "Travelpayouts covers hotels, flights, tours, insurance, rentals, cruises, transfers, trains, and buses. DealDesk intentionally did not install its Drive auto-rewriting script because it could replace existing payable Amazon, CJ, or Expedia links.",
+      "nextAction": "Use manual program enrollment and exact travel links after confirming DealDesk attribution; keep automatic rewriting disabled until link exclusions are proven safe.",
+      "priority": 7
+    },
+    {
+      "network": "PartnerStack",
+      "access": "account and DealDesk business team created; Network application incomplete",
+      "canPublish": false,
+      "notes": "PartnerStack exposes more than 400 B2B SaaS programs with recurring revenue-share, CPA, CPL, and fixed-bounty offers. The required Network application cannot be submitted truthfully without a real LinkedIn profile and verified audience details.",
+      "nextAction": "Provide DealDesk's company LinkedIn URL or the account owner's matching personal LinkedIn URL, then complete the Network profile and apply to high-value programs such as 1Password, Webflow, Kit, Thinkific, Brevo, and ActiveCampaign.",
+      "priority": 8
+    },
+    {
+      "network": "FlexOffers",
+      "access": "publisher application opened; account not created",
+      "canPublish": false,
+      "notes": "FlexOffers advertises more than 12,000 advertiser programs plus product and promotional feeds, which is a strong match for a deals publisher.",
+      "nextAction": "Complete account creation with a user-managed password, then submit DealDesk's traffic-source profile and verification.",
+      "priority": 9
+    },
+    {
+      "network": "Skimlinks",
+      "access": "publisher application opened; account not created",
+      "canPublish": false,
+      "notes": "Skimlinks advertises access to 48,500 merchants and more than 50 affiliate networks for editorial publishers and shopping or deals platforms.",
+      "nextAction": "Complete account creation with a user-managed password, submit dealdesk.fyi, and verify the site before using any Skimlinks attribution.",
+      "priority": 10
+    },
+    {
+      "network": "AvantLink",
+      "access": "researched; not submitted because the application requires a verified mailing address and contact details",
+      "canPublish": false,
+      "notes": "AvantLink is a reputable retail and outdoor-oriented network with product feeds, deep links, APIs, and strict manual publisher review.",
+      "nextAction": "Submit only after the account owner provides or confirms the complete business mailing address and phone for AvantLink's publisher application.",
+      "priority": 11
     }
   ],
   "recommendedRankingPolicy": [
