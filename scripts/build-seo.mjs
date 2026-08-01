@@ -26,6 +26,7 @@ const pricesFrom = (deal) => {
   };
 };
 const numberFromPrice = (price) => Number(String(price).replace(/[^0-9.]/g, ""));
+const hasMonetaryPrice = (price) => /^\s*(?:US)?\$\s*\d/.test(String(price || ""));
 const isoDate = (value) => {
   const date = new Date(value || Date.now());
   return Number.isNaN(date.getTime()) ? new Date().toISOString().slice(0, 10) : date.toISOString().slice(0, 10);
@@ -88,7 +89,7 @@ for (const deal of deals) {
       <span class="related-deal-copy"><span><strong>${esc(candidatePrices.current)}</strong>${candidatePrices.original ? candidate.referenceStyle === "renewal" ? ` <small>${esc(candidate.referenceLabel || "Then")} ${esc(candidatePrices.original)}</small>` : ` <del>${esc(candidatePrices.original)}</del>` : ""}</span><b>${esc(candidateTitle)}</b><small>${candidate.badgeText ? `${esc(candidate.badgeText)} · ` : candidateDiscount ? `${candidateDiscount}% off · ` : ""}${esc(candidate.merchantName || "Amazon")}</small></span>
     </a>`;
   }).join("\n");
-  const schema = prices.current ? {
+  const schema = hasMonetaryPrice(prices.current) ? {
     "@context": "https://schema.org",
     "@type": "Product",
     name: title,
@@ -124,7 +125,7 @@ for (const deal of deals) {
   <meta name="description" content="${esc(description)}" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="${canonical}" />
-  <meta property="og:type" content="${prices.current ? "product" : "website"}" />
+  <meta property="og:type" content="${hasMonetaryPrice(prices.current) ? "product" : "website"}" />
   <meta property="og:title" content="${esc(title)} deal" />
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${canonical}" />

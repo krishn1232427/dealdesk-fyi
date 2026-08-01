@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Hotel room overlooking a coastal city</title>
+  <desc id="desc">A bright editorial illustration of a welcoming hotel room, travel bag, ocean, and city skyline.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff5ff"/>
+      <stop offset="1" stop-color="#fff3df"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#55b7c9"/>
+      <stop offset="1" stop-color="#227f9b"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#14324a" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="48" fill="#f6f1e9"/>
+  <rect x="68" y="64" width="1064" height="438" rx="28" fill="url(#sky)"/>
+  <circle cx="930" cy="170" r="72" fill="#ffca55"/>
+  <path d="M68 376c170-48 310-45 464 8 157 54 349 52 600-18v136H68z" fill="url(#sea)"/>
+  <path d="M120 332h76v89h-76zm98-58h90v147h-90zm112 34h70v113h-70zm620-50h86v163h-86zm108 42h48v121h-48z" fill="#f9fbfc" opacity=".9"/>
+  <path d="M140 350h36m64-44h44m690-16h38m62 40h28" stroke="#83a1ad" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+  <rect x="160" y="410" width="880" height="270" rx="30" fill="#fff" filter="url(#shadow)"/>
+  <rect x="210" y="498" width="540" height="132" rx="26" fill="#1f3558"/>
+  <rect x="242" y="466" width="216" height="84" rx="24" fill="#fff" stroke="#d9e4ea" stroke-width="8"/>
+  <rect x="470" y="466" width="216" height="84" rx="24" fill="#fff" stroke="#d9e4ea" stroke-width="8"/>
+  <path d="M210 586h540" stroke="#f2ad55" stroke-width="18"/>
+  <rect x="796" y="496" width="170" height="150" rx="24" fill="#dd5a4f"/>
+  <path d="M830 496v-30c0-38 25-64 51-64s51 26 51 64v30" fill="none" stroke="#1f3558" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="839" cy="566" r="10" fill="#fff" opacity=".85"/>
+  <path d="M133 698h934" stroke="#d7cdc0" stroke-width="18" stroke-linecap="round"/>
+  <g transform="translate(92 92)">
+    <rect width="272" height="112" rx="56" fill="#10233f"/>
+    <text x="136" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#fff">MEMBER PRICES</text>
+    <text x="136" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffcf65">SAVE 10% OR MORE</text>
+  </g>
+</svg>

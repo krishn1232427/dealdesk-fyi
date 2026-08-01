@@ -5,6 +5,9 @@ const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-p
 const cjPrograms = new Map((affiliateRegistry.programs || [])
   .filter((program) => program.network === "cj")
   .map((program) => [String(program.advertiserID), program]));
+const expediaPrograms = new Map((affiliateRegistry.programs || [])
+  .filter((program) => program.network === "expedia-group-direct")
+  .map((program) => [String(program.trackingID), program]));
 const seenIDs = new Set();
 const errors = [];
 
@@ -64,6 +67,25 @@ for (const feedPath of feedPaths) {
         if (program.publicPublishingAllowed !== true) errors.push(`${label}: CJ program is not approved for public publishing`);
         if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: CJ URL does not match the verified program URL`);
         if (String(program.linkID) !== String(deal.linkID)) errors.push(`${label}: CJ linkID does not match the verified program linkID`);
+      }
+    } else if (deal.network === "expedia-group-direct") {
+      const program = expediaPrograms.get(String(deal.trackingID || ""));
+      const expectedPath = `/affiliate/${deal.trackingID}`;
+
+      if (affiliateURL.hostname !== "www.hotels.com") {
+        errors.push(`${label}: Expedia Group public travel deal must use the verified Hotels.com host`);
+      }
+      if (affiliateURL.pathname !== expectedPath) {
+        errors.push(`${label}: Hotels.com affiliate path must match trackingID`);
+      }
+      if (!program) {
+        errors.push(`${label}: Expedia Group tracking relationship is missing from affiliate-programs.json`);
+      } else {
+        if (program.applicationStatus !== "active") errors.push(`${label}: Expedia Group relationship is not active`);
+        if (program.trackingLinkStatus !== "verified") errors.push(`${label}: Expedia Group tracking link is not verified`);
+        if (program.commissionEligible !== true) errors.push(`${label}: Expedia Group program is not commission eligible`);
+        if (program.publicPublishingAllowed !== true) errors.push(`${label}: Expedia Group program is not approved for public publishing`);
+        if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: Hotels.com URL does not match the verified program URL`);
       }
     } else {
       errors.push(`${label}: network is not approved for the public DealDesk feed`);

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T17:59:10Z",
+  "updatedAt": "2026-08-01T18:20:00Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -894,6 +894,54 @@
       "publicPublishingAllowed": false,
       "summary": "DealDesk submitted an application to Clarks after confirming the current 4% commission, 30-day cookie, strong network approval and conversion rates, and a current 14,713-product feed. The recognizable brand and meaningful seasonal discounts fit the DealDesk audience, but publication remains blocked until approval, a current merchant-authorized offer, and a DealDesk-specific payable link are verified.",
       "priority": 43
+    },
+    {
+      "id": "expedia-group-travel-creator-hotels-com",
+      "network": "expedia-group-direct",
+      "merchantName": "Expedia Group Travel Creator Program",
+      "brands": [
+        "Hotels.com",
+        "Expedia",
+        "Vrbo"
+      ],
+      "merchantURL": "https://www.hotels.com/",
+      "profileURL": "https://creator.expediagroup.com/",
+      "category": "Hotels, vacation rentals, packages, cars, and activities",
+      "commission": "Hotel 4%; activity 4%; vacation rental 2%; package 2%; car 1.5%; flights and cruises 0%",
+      "attribution": "7-day booking window; last click; booking must be completed",
+      "status": "Active — signed-in commission terms and a Hotels.com tracking link are verified; bank details still required for payout",
+      "applicationStatus": "active",
+      "signupStartedAt": "2026-08-01T18:05:00Z",
+      "email": "hello.launchdesk@gmail.com",
+      "trackingURL": "https://www.hotels.com/affiliate/2B7dO8R",
+      "trackingID": "2B7dO8R",
+      "trackingLinkStatus": "verified",
+      "payoutSetupStatus": "bank details required",
+      "commissionEligible": true,
+      "publicPublishingAllowed": true,
+      "restrictions": "Publish only Hotels.com hotel offers or another trip element with a non-zero signed-in rate. Do not publish flights or cruises as commission-eligible. Expedia pays only after a qualifying trip is completed; payout requires valid bank details and a monthly minimum of US$30.",
+      "summary": "DealDesk's Expedia Group Travel Creator account is active. The signed-in terms list Hotels.com hotel bookings at 4% of net transaction value with a 7-day booking window, not 12% of the traveler booking. The official Hotels.com link builder generated and verified DealDesk link 2B7dO8R for the current Member Prices page. Bank details are still required before cash payouts can be sent.",
+      "priority": 44
+    },
+    {
+      "id": "impact-klutch-card-51872",
+      "network": "impact",
+      "merchantName": "Klutch Card",
+      "advertiserID": "51872",
+      "publisherID": "7459747",
+      "merchantURL": "https://www.klutchcard.com/",
+      "profileURL": "https://app.impact.com/campaign-promo-signup/Klutch-Card.brand",
+      "category": "Credit cards and financial technology",
+      "commission": "Undisclosed competitive payout for approved cardholders, plus potential first-purchase and spend-milestone bonuses",
+      "attribution": "30 days",
+      "status": "Direct Impact application opened — account authentication and offer acceptance required; do not publish",
+      "applicationStatus": "onboarding",
+      "signupStartedAt": "2026-08-01T18:10:00Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "restrictions": "Financial-product advertising requires the approved Impact offer, current issuer disclosures, eligibility and fee accuracy, prominent affiliate disclosure, and compliance review before publication.",
+      "summary": "Klutch's official affiliate page confirms a 30-day attribution window and payouts tied to approved cardholders, first purchases, and spending milestones through Impact. The direct campaign application is open, but DealDesk must authenticate its Impact account and accept the current offer before any financial listing can be considered payable.",
+      "priority": 45
     }
   ]
 }

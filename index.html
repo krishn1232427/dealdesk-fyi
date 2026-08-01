@@ -41,11 +41,12 @@
         <form class="site-search" id="deal-search-form" role="search">
           <label class="sr-only" for="deal-search">Search deals</label>
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg>
-          <input id="deal-search" type="search" placeholder="Search today’s deals" autocomplete="off" />
+          <input id="deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" />
         </form>
 
         <div class="nav-links">
           <a href="/latest-deals/">Latest deals</a>
+          <a href="#deal-categories">Categories</a>
           <a href="#streaming">Streaming</a>
           <a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a>
         </div>
@@ -88,30 +89,93 @@
           </button>
         </article>
 
+        <section class="category-discovery" id="deal-categories" aria-labelledby="category-heading">
+          <div class="category-intro">
+            <span class="page-kicker"><span aria-hidden="true"></span> Deal finder</span>
+            <h2 id="category-heading">Shop by what you need</h2>
+            <p id="best-category-insight">Finding today’s strongest category from verified, commission-eligible deals…</p>
+          </div>
+          <div class="category-list" id="category-list">
+            <button class="category-card" type="button" data-filter="Subscriptions">
+              <span class="category-icon" aria-hidden="true">✓</span>
+              <strong>Subscriptions</strong>
+              <span>Trials, memberships, security</span>
+              <small><b data-category-count="Subscriptions">0</b> paid deals</small>
+            </button>
+            <button class="category-card" type="button" data-filter="Tech">
+              <span class="category-icon" aria-hidden="true">⌁</span>
+              <strong>Tech</strong>
+              <span>Headphones, computers, charging</span>
+              <small><b data-category-count="Tech">0</b> paid deals</small>
+            </button>
+            <button class="category-card" type="button" data-filter="Home">
+              <span class="category-icon" aria-hidden="true">⌂</span>
+              <strong>Home</strong>
+              <span>Appliances, furniture, comfort</span>
+              <small><b data-category-count="Home">0</b> paid deals</small>
+            </button>
+            <a class="category-card" href="#streaming">
+              <span class="category-icon" aria-hidden="true">▶</span>
+              <strong>Streaming</strong>
+              <span>Trials, channels, music</span>
+              <small><b id="streaming-category-count">0</b> paid deals</small>
+            </a>
+            <button class="category-card" type="button" data-filter="Travel">
+              <span class="category-icon" aria-hidden="true">✈</span>
+              <strong>Travel & hotels</strong>
+              <span>Stays and activities</span>
+              <small><b data-category-count="Travel">0</b> live deals</small>
+            </button>
+            <button class="category-card" type="button" data-filter="Rentals">
+              <span class="category-icon" aria-hidden="true">◇</span>
+              <strong>Cars & rentals</strong>
+              <span>Cars and vacation rentals</span>
+              <small><b data-category-count="Rentals">0</b> live deals</small>
+            </button>
+            <button class="category-card" type="button" data-filter="Finance">
+              <span class="category-icon" aria-hidden="true">$</span>
+              <strong>Cards & finance</strong>
+              <span>Approved financial offers only</span>
+              <small><b data-category-count="Finance">0</b> live deals</small>
+            </button>
+          </div>
+        </section>
+
         <section class="deals-section" id="all-deals" aria-labelledby="deals-heading">
           <div class="deals-heading-row">
             <div>
               <h2 id="deals-heading">More deals worth seeing</h2>
               <p id="result-count" aria-live="polite">Loading fresh deals…</p>
             </div>
-            <label class="sort-control" for="deal-sort">
-              <span>Sort by</span>
-              <select id="deal-sort">
-                <option value="best">Best overall</option>
-                <option value="discount">Biggest discount</option>
-                <option value="price-low">Price: low to high</option>
-                <option value="price-high">Price: high to low</option>
-              </select>
-            </label>
+            <div class="deal-controls">
+              <label class="sort-control merchant-control" for="merchant-filter">
+                <span>Merchant</span>
+                <select id="merchant-filter">
+                  <option value="all">All merchants</option>
+                </select>
+              </label>
+              <label class="sort-control" for="deal-sort">
+                <span>Sort by</span>
+                <select id="deal-sort">
+                  <option value="best">Best overall</option>
+                  <option value="discount">Biggest discount</option>
+                  <option value="price-low">Price: low to high</option>
+                  <option value="price-high">Price: high to low</option>
+                </select>
+              </label>
+            </div>
           </div>
 
           <div class="filter-bar" id="filter-bar" aria-label="Filter deals">
-            <button class="filter-chip active" type="button" data-filter="all">All deals</button>
-            <button class="filter-chip" type="button" data-filter="under-50">Under $50</button>
-            <button class="filter-chip" type="button" data-filter="under-100">Under $100</button>
-            <button class="filter-chip" type="button" data-filter="Home">Home</button>
-            <button class="filter-chip" type="button" data-filter="Tech">Tech</button>
-            <button class="filter-chip" type="button" data-filter="Subscriptions">Subscriptions</button>
+            <button class="filter-chip active" type="button" data-filter="all">All <span class="filter-count" data-filter-count="all">0</span></button>
+            <button class="filter-chip" type="button" data-filter="under-50">Under $50 <span class="filter-count" data-filter-count="under-50">0</span></button>
+            <button class="filter-chip" type="button" data-filter="under-100">Under $100 <span class="filter-count" data-filter-count="under-100">0</span></button>
+            <button class="filter-chip" type="button" data-filter="Subscriptions">Subscriptions <span class="filter-count" data-filter-count="Subscriptions">0</span></button>
+            <button class="filter-chip" type="button" data-filter="Tech">Tech <span class="filter-count" data-filter-count="Tech">0</span></button>
+            <button class="filter-chip" type="button" data-filter="Home">Home <span class="filter-count" data-filter-count="Home">0</span></button>
+            <button class="filter-chip" type="button" data-filter="Travel">Travel & hotels <span class="filter-count" data-filter-count="Travel">0</span></button>
+            <button class="filter-chip" type="button" data-filter="Rentals">Cars & rentals <span class="filter-count" data-filter-count="Rentals">0</span></button>
+            <button class="filter-chip" type="button" data-filter="Finance">Cards & finance <span class="filter-count" data-filter-count="Finance">0</span></button>
             <button class="filter-chip saved-filter" type="button" data-filter="saved">
               Saved <span class="filter-count" id="saved-count">0</span>
             </button>
@@ -173,6 +237,7 @@
         var searchInput = document.getElementById("deal-search");
         var searchForm = document.getElementById("deal-search-form");
         var sortControl = document.getElementById("deal-sort");
+        var merchantFilter = document.getElementById("merchant-filter");
         var resultCount = document.getElementById("result-count");
         var liveCount = document.getElementById("live-count");
         var freshnessLabel = document.getElementById("freshness-label");
@@ -180,7 +245,9 @@
         var featuredSave = document.getElementById("featured-save");
         var saveToast = document.getElementById("save-toast");
         var productDeals = [];
+        var streamingDealCount = 0;
         var activeFilter = "all";
+        var activeMerchant = "all";
         var searchQuery = "";
         var savedStorageKey = "dealdesk-saved-deals-v1";
         var savedDealKeys = loadSavedDealKeys();
@@ -227,6 +294,7 @@
 
         function priceNumber(deal) {
           var current = pricesFrom(deal).current;
+          if (!/^\s*(?:US)?\$\s*\d/.test(String(current))) return Number.MAX_VALUE;
           var value = Number(String(current).replace(/[^0-9.]/g, ""));
           return Number.isFinite(value) ? value : Number.MAX_VALUE;
         }
@@ -276,7 +344,18 @@
         function categoryIcon(category) {
           var normalized = String(category || "").toLowerCase();
           if (normalized.indexOf("subscription") !== -1) return "✓";
+          if (normalized.indexOf("travel") !== -1 || normalized.indexOf("hotel") !== -1) return "✈";
+          if (normalized.indexOf("rental") !== -1 || normalized.indexOf("car") !== -1) return "◇";
+          if (normalized.indexOf("finance") !== -1 || normalized.indexOf("card") !== -1) return "$";
           return normalized.indexOf("tech") !== -1 ? "⌁" : "⌂";
+        }
+
+        function dealMatchesCategory(deal, filter) {
+          var category = String((deal && deal.category) || "").toLowerCase();
+          if (filter === "Travel") return /travel|hotel|flight|activity/.test(category);
+          if (filter === "Rentals") return /rental|car hire|vacation rental/.test(category);
+          if (filter === "Finance") return /finance|credit card|banking/.test(category);
+          return deal.category === filter;
         }
 
         function dealKey(deal) {
@@ -447,13 +526,78 @@
             (activeFilter === "under-50" && price < 50) ||
             (activeFilter === "under-100" && price < 100) ||
             (activeFilter === "saved" && savedDealKeys.has(dealKey(deal))) ||
-            deal.category === activeFilter;
+            dealMatchesCategory(deal, activeFilter);
+          var merchantMatch = activeMerchant === "all" || deal.merchantName === activeMerchant;
           var searchable = [deal.title, deal.category, deal.merchantName].join(" ").toLowerCase();
-          return filterMatch && (!searchQuery || searchable.indexOf(searchQuery) !== -1);
+          return filterMatch && merchantMatch && (!searchQuery || searchable.indexOf(searchQuery) !== -1);
+        }
+
+        function emptyStateForFilter() {
+          if (activeFilter === "saved") return '<p class="empty-state"><strong>No saved deals yet.</strong><span>Tap Save on any deal and it will be waiting here next time on this device.</span></p>';
+          if (activeFilter === "Travel") return '<p class="empty-state"><strong>Paid travel deals are being verified.</strong><span>Hotels and activities will appear only after the partner approves DealDesk and a payable tracking link is confirmed.</span></p>';
+          if (activeFilter === "Rentals") return '<p class="empty-state"><strong>No commission-verified rental deals yet.</strong><span>Car and vacation-rental offers stay hidden until the relationship, live rate, and payable link are verified.</span></p>';
+          if (activeFilter === "Finance") return '<p class="empty-state"><strong>Financial offers require extra verification.</strong><span>DealDesk will show credit-card or banking offers only after partner approval, payout verification, and compliance review.</span></p>';
+          return '<p class="empty-state"><strong>No matching paid deals today.</strong><span>Try another category, merchant, price filter, or search.</span></p>';
+        }
+
+        function selectFilter(filter, shouldScroll) {
+          activeFilter = filter;
+          filterBar.querySelectorAll("button[data-filter]").forEach(function (item) {
+            item.classList.toggle("active", item.dataset.filter === activeFilter);
+          });
+          document.querySelectorAll("#category-list button[data-filter]").forEach(function (item) {
+            item.setAttribute("aria-pressed", String(item.dataset.filter === activeFilter));
+          });
+          renderProducts();
+          if (shouldScroll) document.getElementById("all-deals").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function populateMerchantFilter() {
+          var merchants = Array.from(new Set(productDeals.map(function (deal) { return deal.merchantName; }).filter(Boolean))).sort();
+          merchantFilter.innerHTML = '<option value="all">All merchants</option>';
+          merchants.forEach(function (merchant) {
+            var option = document.createElement("option");
+            option.value = merchant;
+            option.textContent = merchant;
+            merchantFilter.appendChild(option);
+          });
+        }
+
+        function updateDiscoveryCounts() {
+          var filters = ["all", "under-50", "under-100", "Subscriptions", "Tech", "Home", "Travel", "Rentals", "Finance"];
+          filters.forEach(function (filter) {
+            var count = productDeals.filter(function (deal) {
+              if (filter === "all") return true;
+              if (filter === "under-50") return priceNumber(deal) < 50;
+              if (filter === "under-100") return priceNumber(deal) < 100;
+              return dealMatchesCategory(deal, filter);
+            }).length;
+            document.querySelectorAll('[data-filter-count="' + filter + '"]').forEach(function (node) { node.textContent = String(count); });
+            document.querySelectorAll('[data-category-count="' + filter + '"]').forEach(function (node) {
+              node.textContent = String(count);
+              node.closest(".category-card").classList.toggle("category-empty", count === 0);
+            });
+          });
+          document.getElementById("streaming-category-count").textContent = String(streamingDealCount);
+
+          var categoryNames = ["Subscriptions", "Home", "Tech", "Travel"];
+          var best = categoryNames.map(function (category) {
+            var deals = productDeals.filter(function (deal) { return dealMatchesCategory(deal, category); });
+            return {
+              name: category,
+              deals: deals,
+              score: deals.reduce(function (total, deal) { return total + rankingNumber(deal); }, 0) / Math.max(deals.length, 1)
+            };
+          }).filter(function (category) { return category.deals.length >= 2; })
+            .sort(function (a, b) { return b.score - a.score; })[0];
+          if (best && best.deals.length) {
+            var strongestDiscount = Math.max.apply(null, best.deals.map(discountNumber));
+            document.getElementById("best-category-insight").innerHTML = '<strong>Best value today: ' + best.name + '.</strong> ' + best.deals.length + (best.deals.length === 1 ? ' verified offer' : ' verified offers') + (strongestDiscount ? ', with savings up to ' + strongestDiscount + '%.' : '.');
+          }
         }
 
         function renderProducts() {
-          var isDefaultView = activeFilter === "all" && !searchQuery;
+          var isDefaultView = activeFilter === "all" && activeMerchant === "all" && !searchQuery;
           var filtered = productDeals.filter(filterMatches);
           if (isDefaultView) filtered = filtered.slice(1);
           var sortMode = sortControl.value;
@@ -466,11 +610,10 @@
 
           productGrid.innerHTML = "";
           filtered.forEach(function (deal) { productGrid.appendChild(makeProductCard(deal)); });
-          resultCount.textContent = filtered.length + (activeFilter === "saved" ? (filtered.length === 1 ? " saved deal" : " saved deals") : (filtered.length === 1 ? " deal" : " deals"));
+          var merchantSuffix = activeMerchant === "all" ? "" : " from " + activeMerchant;
+          resultCount.textContent = filtered.length + (activeFilter === "saved" ? (filtered.length === 1 ? " saved deal" : " saved deals") : (filtered.length === 1 ? " deal" : " deals")) + merchantSuffix;
           if (!filtered.length) {
-            productGrid.innerHTML = activeFilter === "saved"
-              ? '<p class="empty-state"><strong>No saved deals yet.</strong><span>Tap Save on any deal and it will be waiting here next time on this device.</span></p>'
-              : '<p class="empty-state">No matching deals today. Try another filter or search.</p>';
+            productGrid.innerHTML = emptyStateForFilter();
           }
         }
 
@@ -549,10 +692,13 @@
         filterBar.addEventListener("click", function (event) {
           var button = event.target.closest("button[data-filter]");
           if (!button) return;
-          activeFilter = button.dataset.filter;
-          filterBar.querySelectorAll("button").forEach(function (item) { item.classList.remove("active"); });
-          button.classList.add("active");
-          renderProducts();
+          selectFilter(button.dataset.filter, false);
+        });
+
+        document.getElementById("category-list").addEventListener("click", function (event) {
+          var button = event.target.closest("button[data-filter]");
+          if (!button) return;
+          selectFilter(button.dataset.filter, true);
         });
 
         searchInput.addEventListener("input", function () {
@@ -561,6 +707,10 @@
         });
         searchForm.addEventListener("submit", function (event) { event.preventDefault(); });
         sortControl.addEventListener("change", renderProducts);
+        merchantFilter.addEventListener("change", function () {
+          activeMerchant = merchantFilter.value;
+          renderProducts();
+        });
 
         Promise.all([
           fetch("/data/best-deals.json", { cache: "no-store" }).then(function (response) {
@@ -578,9 +728,12 @@
           var streamingDeals = (feeds[1].deals || []).filter(eligible).sort(function (a, b) {
             return (a.priority || 99) - (b.priority || 99);
           });
+          streamingDealCount = streamingDeals.length;
 
           liveCount.textContent = productDeals.length + streamingDeals.length;
           updateSavedCount();
+          populateMerchantFilter();
+          updateDiscoveryCounts();
           setFreshness(feeds[0], feeds[1]);
           setFeaturedDeal(productDeals[0]);
           renderProducts();
