@@ -89,6 +89,13 @@ const earningPotential = (deal) => {
   const fixedBounty = String(deal?.commission || "").match(/^\$(\d+(?:\.\d+)?)/);
   return fixedBounty ? Number(fixedBounty[1]) : 0;
 };
+const itemConditionFor = (deal) => {
+  const text = String(deal?.priceNote || "").toLowerCase();
+  if (text.includes("refurbished")) return "https://schema.org/RefurbishedCondition";
+  if (/\b(used|pre-owned|open box)\b/.test(text)) return "https://schema.org/UsedCondition";
+  if (/\bnew\b/.test(text)) return "https://schema.org/NewCondition";
+  return "";
+};
 const publicDescription = (deal, title, prices, updated) => {
   const merchant = deal.merchantName || "the merchant";
   const discount = discountFrom(prices, deal);
@@ -118,6 +125,7 @@ for (const deal of deals) {
   const asin = asinFrom(deal);
   const discount = discountFrom(prices, deal);
   const savings = savingsFrom(prices);
+  const itemCondition = itemConditionFor(deal);
   const relatedDeals = deals.filter((candidate) =>
     candidate.id !== deal.id && candidate.category === deal.category && pricesFrom(candidate).current
   ).slice(0, 3);
@@ -146,7 +154,7 @@ for (const deal of deals) {
       priceCurrency: "USD",
       price: numberFromPrice(prices.current).toFixed(2),
       availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
+      ...(itemCondition ? { itemCondition } : {}),
       seller: { "@type": "Organization", name: deal.merchantName || "Amazon" }
     }
   } : {

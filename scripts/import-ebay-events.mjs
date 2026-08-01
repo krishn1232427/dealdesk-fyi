@@ -21,9 +21,13 @@ if (JSON.stringify(program.trackingParameters) !== JSON.stringify(source.trackin
   throw new Error("The extracted eBay event tracking parameters do not match the approved registry values");
 }
 
-const existingEbay = (feed.deals || []).filter((deal) => deal.network === "ebay-partner-network");
+const isPromotion = (deal) => deal.sourceType === "ebay-promotion" ||
+  /^https:\/\/www\.ebay\.com\/e\//.test(deal.merchantURL || "");
+const existingEbay = (feed.deals || []).filter((deal) =>
+  deal.network === "ebay-partner-network" && isPromotion(deal));
 const existingByURL = new Map(existingEbay.map((deal) => [deal.merchantURL, deal]));
-const nonEbayDeals = (feed.deals || []).filter((deal) => deal.network !== "ebay-partner-network");
+const preservedDeals = (feed.deals || []).filter((deal) =>
+  deal.network !== "ebay-partner-network" || !isPromotion(deal));
 const existingIDs = new Set((feed.deals || []).map((deal) => deal.id));
 const trackingEntries = Object.entries(source.trackingParameters || {});
 const slug = (value) => String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -85,6 +89,7 @@ const imported = candidates.map((event, index) => {
     commission: program.commission,
     merchantURL: event.url,
     merchantName: "eBay",
+    sourceType: "ebay-promotion",
     category: category(event.category),
     ...(discount ? { badgeText: currentPrice, discountPercent: discount, savingsText: currentPrice } : {}),
     currentPrice,
@@ -104,7 +109,7 @@ const imported = candidates.map((event, index) => {
 const importedURLs = new Set(imported.map((deal) => deal.merchantURL));
 const removed = existingEbay.filter((deal) => !importedURLs.has(deal.merchantURL));
 const created = imported.filter((deal) => !existingByURL.has(deal.merchantURL));
-feed.deals = [...nonEbayDeals, ...imported];
+feed.deals = [...preservedDeals, ...imported];
 feed.updatedAt = source.extractedAt;
 await writeFile(feedPath, `${JSON.stringify(feed, null, 2)}\n`);
 console.log(`Refreshed ${imported.length} verified eBay events (${created.length} new, ${removed.length} removed).`);
