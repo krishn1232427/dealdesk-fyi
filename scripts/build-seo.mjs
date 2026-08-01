@@ -155,7 +155,7 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#streaming">Streaming</a></div></nav></header>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#deal-categories">Categories</a><a href="/#how-we-check">How we check</a><a href="/#streaming">Streaming</a></div></nav></header>
   <main class="deal-detail shell">
     <nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><a href="/latest-deals/">Latest deals</a><span aria-hidden="true">›</span><span>${esc(title)}</span></nav>
     <article class="deal-detail-card">
@@ -217,8 +217,7 @@ const latestCards = pricedDeals.slice(1).map((deal) => {
   return `<article class="deal-card">
     <a class="deal-card-link" href="${canonical}" aria-label="${esc(title)}, ${esc(prices.current)}. View deal details">
       <span class="deal-media">
-        ${deal.badgeText ? `<span class="discount-badge">${esc(deal.badgeText)}</span>` : discount ? `<span class="discount-badge">${discount}% off</span>` : ""}
-        ${image ? `<img src="${esc(image)}" alt="${esc(title)}" loading="lazy" />` : `<span class="product-fallback" aria-hidden="true">D</span>`}
+${deal.badgeText ? `        <span class="discount-badge">${esc(deal.badgeText)}</span>\n` : discount ? `        <span class="discount-badge">${discount}% off</span>\n` : ""}        ${image ? `<img src="${esc(image)}" alt="${esc(title)}" loading="lazy" />` : `<span class="product-fallback" aria-hidden="true">D</span>`}
       </span>
       <span class="deal-body">
         <span class="price-line"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? `<span class="original-price">${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : `<span class="original-price">${esc(deal.referenceLabel || "Was")} <del>${esc(prices.original)}</del></span>` : ""}</span>
@@ -266,7 +265,7 @@ const latestHTML = `<!doctype html>
   <script type="application/ld+json">${JSON.stringify(latestSchema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#streaming">Streaming</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#deal-categories">Categories</a><a href="/#how-we-check">How we check</a><a href="/#streaming">Streaming</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
   <main class="deal-home shell">
     <header class="page-heading">
       <div><span class="page-kicker"><span aria-hidden="true"></span> Checked ${lastmod}</span><h1>Latest verified deals</h1></div>

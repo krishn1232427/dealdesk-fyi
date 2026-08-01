@@ -51,9 +51,9 @@
     },
     {
       "network": "sovrn-commerce",
-      "status": "DealDesk site submitted; Sovrn Commerce review pending",
+      "status": "DealDesk site submitted; Sovrn Commerce review pending; link generator access verified but not sufficient for publishing",
       "email": "hello.launchdesk@gmail.com",
-      "accessStatus": "authenticated; site under review",
+      "accessStatus": "authenticated; campaign 6614868 link generator available; site remains under review",
       "commissionAccess": false
     },
     {
@@ -1234,10 +1234,12 @@
       "status": "DealDesk site submitted; Sovrn review pending for 1-3 business days — do not publish tracked links yet",
       "applicationStatus": "pending",
       "appliedAt": "2026-08-01T21:26:40Z",
+      "campaignID": "6614868",
+      "trackingLinkStatus": "generator-access-verified; site approval pending",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
-      "restrictions": "Clicks generated before approval are not commission-eligible. Publish only after DealDesk is approved and the exact Sovrn tracking link, merchant eligibility, price, availability, and commission terms are verified.",
-      "summary": "DealDesk authenticated its Sovrn account and reached the authoritative 'Under review' status for Commerce. Sovrn can broaden retail coverage through CPC and CPA links, but no Sovrn offer is public or payable until site approval and exact-link verification.",
+      "restrictions": "A sovrn.co URL or a preferred-merchant rate is not enough. Publish only after dealdesk.fyi appears under Approved, payment eligibility is verified, and the exact DealDesk campaign link, merchant eligibility, price, availability, and commission terms are confirmed.",
+      "summary": "DealDesk can access Sovrn campaign 6614868, the preferred-merchants catalog, and the tracked-link generator. However, dealdesk.fyi still appears in Sovrn's pending review state and the Approved list contains no site, so Sovrn offers remain blocked from the public feed.",
       "priority": 56
     },
     {
@@ -1292,6 +1294,7 @@
         "siteid": "0",
         "campid": "5339181076",
         "toolid": "20014",
+        "customid": "",
         "mkevt": "1"
       },
       "trackingLinkStatus": "generator-access-verified",

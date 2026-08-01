@@ -1,0 +1,907 @@
+{
+  "version": 1,
+  "source": "eBay Partner Network Sales + Events (eBay US, Featured, default campaign)",
+  "extractedAt": "2026-08-01T22:10:00Z",
+  "trackingParameters": {
+    "mkcid": "1",
+    "mkrid": "711-53200-19255-0",
+    "siteid": "0",
+    "campid": "5339181076",
+    "toolid": "20014",
+    "customid": "",
+    "mkevt": "1"
+  },
+  "excluded": [
+    {
+      "title": "Test event nova",
+      "url": "https://www.ebay.com/e/topstar/test-event-nova",
+      "reason": "Internal test or APAC placeholder campaign"
+    },
+    {
+      "title": "26 RW30 APAC SFC Alternative Energy",
+      "url": "https://www.ebay.com/e/daily-deals/26-rw30-apac-sfc-alternative-energy",
+      "reason": "Internal test or APAC placeholder campaign"
+    },
+    {
+      "title": "26 RW30 APAC SFC Main",
+      "url": "https://www.ebay.com/e/daily-deals/26-rw30-apac-sfc-main",
+      "reason": "Internal test or APAC placeholder campaign"
+    },
+    {
+      "title": "26 RW30 APAC SFC Lifestyle",
+      "url": "https://www.ebay.com/e/daily-deals/26-rw30-apac-sfc-lifestyle",
+      "reason": "Internal test or APAC placeholder campaign"
+    },
+    {
+      "title": "26 RW30 APAC SFC Home and Garden",
+      "url": "https://www.ebay.com/e/daily-deals/26-rw30-apac-sfc-home-and-garden",
+      "reason": "Internal test or APAC placeholder campaign"
+    },
+    {
+      "title": "26 RW30 APAC SFC Tech",
+      "url": "https://www.ebay.com/e/daily-deals/26-rw30-apac-sfc-tech",
+      "reason": "Internal test or APAC placeholder campaign"
+    },
+    {
+      "title": "26 RW30 APAC SFC PA",
+      "url": "https://www.ebay.com/e/daily-deals/26-rw30-apac-sfc-pa",
+      "reason": "Internal test or APAC placeholder campaign"
+    }
+  ],
+  "events": [
+    {
+      "category": "Fashion",
+      "title": "Up to 70% off diamond jewelry",
+      "description": "Shine bright with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/diamond-jewelry-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off Gucci jewelry",
+      "description": "Add a statement piece to your look.",
+      "url": "https://www.ebay.com/e/fashion/gucci-jewelry-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Enjoy up to 25% off Cartier",
+      "description": "It’s classic. It’s Cartier. It’s yours.",
+      "url": "https://www.ebay.com/e/fashion/cartier-jewelry-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Shine with Tiffany & Co.",
+      "description": "Up to 30% off jewelry.",
+      "url": "https://www.ebay.com/e/fashion/tiffany-co-jewelry-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off Balenciaga is yours",
+      "description": "Shop bold bags that make a statement.",
+      "url": "https://www.ebay.com/e/fashion/balenciaga-handbags-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Real jewelry. Checked by experts.",
+      "description": "Shop with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/all-ag-jewelry-062222",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Stack up your wrist",
+      "description": "Bracelets backed by Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-bracelets-071822",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Necklaces to treasure forever",
+      "description": "Browse pieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-necklaces-071822",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Stunning rings you can’t resist",
+      "description": "Explore elegance with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-rings-071822",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Earrings for every occasion",
+      "description": "Explore pieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-earrings-071822",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Go glam in Christian Louboutin",
+      "description": "Shop styles with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-louboutin-handbags-091222",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Coveted jewelry for men",
+      "description": "Shop accessories with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-mens-jewelry-101022",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Dazzle in David Yurman jewellery",
+      "description": "Shop styles with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-david-yurman-jewelry-110122",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "A symbol of lifelong love",
+      "description": "Rings backed by Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-wedding-engagement-071822",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Couture. Chic. Van Cleef & Arpels.",
+      "description": "Wear elegance with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-van-cleef-arpels-jewelry-110122",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Classic styles by Tiffany & Co.",
+      "description": "Now covered with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-tiffany-co-jewelry-110122",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Italian luxury from Roberto Coin",
+      "description": "Shop chic pieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-roberto-coin-jewelry-110122",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Antique and vintage gems",
+      "description": "Discover jewelry with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-vintage-antique-jewelry-101022",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Discover luxury pieces by Cartier",
+      "description": "Now covered with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-cartier-jewelry-110122",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Look elegant in Bvlgari jewelry",
+      "description": "Discover dazzling styles.",
+      "url": "https://www.ebay.com/e/fashion/bvlgari-jewelry-110122",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Going once, going twice...",
+      "description": "Bid on classic timepieces.",
+      "url": "https://www.ebay.com/e/fashion/watches-auction-event-091222",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Organize your cards in style",
+      "description": "Women’s wallets with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-womens-wallets-042722",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Love luxury? Love Tom Ford.",
+      "description": "Find your staple with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-tom-ford-100322",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Take up to 40% off Bvlgari",
+      "description": "Italian brand with classic Hollywood history.",
+      "url": "https://www.ebay.com/e/fashion/bvlgari-jewelry-030122",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Men's luxury you can trust",
+      "description": "Bags and more with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-mens-bags-022222",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 50% off smart home picks",
+      "description": "Shop and get a warranty.",
+      "url": "https://www.ebay.com/e/_electronics/refurbished-smart-home-and-surveillance",
+      "expiry": "2026/11/07"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off Bottega Veneta",
+      "description": "Find it all, from staples to bold pieces.",
+      "url": "https://www.ebay.com/e/fashion/bottega-veneta-handbags-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "eBay Refurbished home audio",
+      "description": "Get up to 60% off and a warranty.",
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-home-audio",
+      "expiry": "2026/11/30"
+    },
+    {
+      "category": "Fashion",
+      "title": "Find your next iconic pair",
+      "description": "Designer shoes with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-luxe-sneakers",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "VANS and Converse",
+      "description": "Sneakers with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-vans-converse-022621",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Get a pair of Yeezys",
+      "description": "Sneakers with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/yeezy-ag-110202",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Irresistible. Iconic. VERSACE.",
+      "description": "Italian-made, with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-versace-030623",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Go bold with Alexander McQueen",
+      "description": "Shop bags with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-alexander-mcqueen-030623",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Accessories made to charm",
+      "description": "Shop pieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-accessories-030623",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Be unique with Dolce & Gabbana",
+      "description": "Shop Authenticity Guarantee pieces.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-dolce-gabbana-030623",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 70% off Tissot",
+      "description": "Add one more timepiece to your collection.",
+      "url": "https://www.ebay.com/e/fashion/tissot-032023",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 40% off Franck Muller",
+      "description": "Explore dream watches that fit your style.",
+      "url": "https://www.ebay.com/e/fashion/franck-muller-032023",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 40% off Longines",
+      "description": "Choose watches that last a lifetime.",
+      "url": "https://www.ebay.com/e/fashion/longines-032023",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Explore fine jewelry",
+      "description": "Backed by Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-fine-jewelry-032723",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "John Hardy artisanal jewels",
+      "description": "Shop pieces backed by Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-jewelry-john-hardy-032723",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Get iconic Chanel pieces",
+      "description": "Treat yourself to luxury.",
+      "url": "https://www.ebay.com/e/fashion/ag-jewelry-chanel-032723",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Get your jewelry fix",
+      "description": "Browse styles with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-fashion-jewelry-032723",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Fierce finds from Fendi",
+      "description": "Shop bags with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-fendi-040323",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Impress with Louis Vuitton",
+      "description": "Shop luxury with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-louis-vuitton-040323",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Delight in Dior",
+      "description": "Shop bags with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-dior-040323",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 20% off DJI",
+      "description": "Direct from brand.",
+      "url": "https://www.ebay.com/e/_electronics/dji-brand-outlet",
+      "expiry": "2043/04/07"
+    },
+    {
+      "category": "Fashion",
+      "title": "Dooney & Bourke up to 65% off",
+      "description": "Direct from the brand.",
+      "url": "https://www.ebay.com/e/fashion/dooney-bourke-certified-by-brand-031523",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Le Vian jewelry up to 70% off",
+      "description": "Shop pieces from an authorized seller.",
+      "url": "https://www.ebay.com/e/fashion/levian-certified-by-brand-042723",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Luxury streetwear from Off-White",
+      "description": "Shop iconic bags with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-off-white-050123",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Embrace elegance with The Row",
+      "description": "Timeless pieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-the-row-050123",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Stella McCartney chic",
+      "description": "Handbags with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-stella-mccartney-050123",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Jimmy Choo looks good on you",
+      "description": "Shop luxury with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-jimmy-choo-050123",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 65% off John Hardy",
+      "description": "Stunning pieces for your jewelry collection.",
+      "url": "https://www.ebay.com/e/fashion/john-hardy-050823",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Real, radiant, ravishing",
+      "description": "Get verified amethyst, quartz, and more.",
+      "url": "https://www.ebay.com/e/fashion/ag-gemstone-jewelry-071023",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Limited time luxe handbag deals",
+      "description": "Free shipping included.",
+      "url": "https://www.ebay.com/e/fashion/luxe-handbag-deals-082823",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Handbags deals under $500",
+      "description": "Limited time, with free shipping.",
+      "url": "https://www.ebay.com/e/fashion/handbag-deals-under-500-082823",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Jewelry deals under $500",
+      "description": "Limited time, with free shipping.",
+      "url": "https://www.ebay.com/e/fashion/jewelry-deals-under-500-091823",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Limited time luxe jewelry deals",
+      "description": "Free shipping included.",
+      "url": "https://www.ebay.com/e/fashion/luxe-jewelry-deals-091823",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Radiant jewelry under $1,000",
+      "description": "Pieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/jewelry-luxe-for-less-092123",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Shop Citizen watches up to 65% off",
+      "description": "From an Authorized Seller.",
+      "url": "https://www.ebay.com/e/fashion/citizen-certified-by-brand-100323",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 65% off Bulova",
+      "description": "From an Authorized Seller.",
+      "url": "https://www.ebay.com/e/fashion/bulova-certified-by-brand-100323",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Brands with Authenticity Guarantee",
+      "description": "Browse Marni, Mark Cross, Lanvin, and more.",
+      "url": "https://www.ebay.com/e/fashion/ag-handbags-new-brands-100423",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 15% off fine jewelry",
+      "description": "Shop top brands with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/jewelry-ag-branded-100923",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "Save up to 70% on laptops",
+      "description": "Shop eBay Refurbished laptops.",
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-laptops",
+      "expiry": "2027/08/31"
+    },
+    {
+      "category": "Fashion",
+      "title": "The promise of forever",
+      "description": "Up to 70% off engagement and wedding rings.",
+      "url": "https://www.ebay.com/e/fashion/engagement-rings-120623",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Watch deals under $500",
+      "description": "Limited time, with free shipping.",
+      "url": "https://www.ebay.com/e/fashion/watches-deals-under-500-010124",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Luxury watches from Japan",
+      "description": "Shop top brands with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/watches-from-japan-010124",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Limited time luxury watches deals",
+      "description": "Free shipping included.",
+      "url": "https://www.ebay.com/e/fashion/luxe-watches-deals-010124",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Peace of mind for your next pair",
+      "description": "Shop with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/sneakers-all-ag-020321",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 50% off gaming gear",
+      "description": "Shop Xbox, Playstation and more.",
+      "url": "https://www.ebay.com/e/_electronics/x-condition-gaming",
+      "expiry": "2027/04/29"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 20% off top jewelry brands",
+      "description": "Indulge in stunning pieces.",
+      "url": "https://www.ebay.com/e/fashion/bro-all-jewelry-020524",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off top watch brands",
+      "description": "It's time to get your dream piece.",
+      "url": "https://www.ebay.com/e/fashion/bro-all-watches-020524",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off top handbag brands",
+      "description": "A luxury bag for life.",
+      "url": "https://www.ebay.com/e/fashion/bro-all-handbags-020524",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 70% off smartphones",
+      "description": "With a one to two year warranty.",
+      "url": "https://www.ebay.com/e/_electronics/save-on-cell-phones",
+      "expiry": "2026/08/31"
+    },
+    {
+      "category": "Electronics",
+      "title": "Smart Watches up to 50% off",
+      "description": "Save more on smart watches.",
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-smart-watches",
+      "expiry": "2026/11/30"
+    },
+    {
+      "category": "Home & Garden",
+      "title": "Up to 40% off WORX",
+      "description": "Great deals direct from the brand.",
+      "url": "https://www.ebay.com/e/home-garden/certified-refurbished-worx-brand-outlet",
+      "expiry": "2027/05/31"
+    },
+    {
+      "category": "Home & Garden",
+      "title": "eBay Refurbished WORX",
+      "description": "Up to 40% off direct from the brand.",
+      "url": "https://www.ebay.com/e/home-garden/worx-certified-refurbished",
+      "expiry": "2028/01/31"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off pre-loved handbags",
+      "description": "Shop runway-ready designer pieces.",
+      "url": "https://www.ebay.com/e/fashion/pre-loved-handbags-061024",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off pre-loved watches",
+      "description": "Shop timeless luxury pieces.",
+      "url": "https://www.ebay.com/e/fashion/pre-loved-watches-061024",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off jewelry",
+      "description": "Make a statement with pre-loved pieces.",
+      "url": "https://www.ebay.com/e/fashion/pre-loved-jewelry-061024",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "Capture the memory",
+      "description": "Up to 50% off cameras, drones and more.",
+      "url": "https://www.ebay.com/e/_electronics/new-and-ebay-refurbished-camera-and-drones",
+      "expiry": "2027/01/31"
+    },
+    {
+      "category": "Sports Fan",
+      "title": "Build an all-star roster",
+      "description": "Trusted sellers, authenticity guarantee.",
+      "url": "https://www.ebay.com/e/sports-fan-shop/sports-trading-cards-authenticity-guarantee",
+      "expiry": "2026/12/31"
+    },
+    {
+      "category": "Toys & Hobby",
+      "title": "Build a deck of grails",
+      "description": "Trusted sellers, authenticity guarantee.",
+      "url": "https://www.ebay.com/e/toys/collectible-card-games-authenticity-guarantee",
+      "expiry": "2026/12/31"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 25% off chic Chloé pieces",
+      "description": "Shop effortless glamour for less.",
+      "url": "https://www.ebay.com/e/fashion/chloe-handbags-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "B&I",
+      "title": "Heavy equipment from bidadoo",
+      "description": "Weekly no-reserve auctions, ending Tuesdays.",
+      "url": "https://www.ebay.com/e/b&i/bidadoo-heavy-equipment-auction-072619",
+      "expiry": "2026/12/31"
+    },
+    {
+      "category": "B&I",
+      "title": "Attachments from $99",
+      "description": "Shop deals on buckets, grapples, and more.",
+      "url": "https://www.ebay.com/e/b&i/attachments-from-99-062119",
+      "expiry": "2026/12/31"
+    },
+    {
+      "category": "Collectibles",
+      "title": "Build your pop culture collection",
+      "description": "Trusted sellers, authenticity guarantee.",
+      "url": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
+      "expiry": "2026/12/31"
+    },
+    {
+      "category": "Fashion",
+      "title": "Up to 30% off Breitling watches",
+      "description": "Indulge in tasteful luxury for less.",
+      "url": "https://www.ebay.com/e/fashion/breitling-030220",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Toys & Hobby",
+      "title": "Add To Your Collection.",
+      "description": "Shop best prices on collectable card games.",
+      "url": "https://www.ebay.com/e/toys/ccg-deals",
+      "expiry": "2027/01/01"
+    },
+    {
+      "category": "Fashion",
+      "title": "Luxe at its finest",
+      "description": "Patek Philippe up to 20% off.",
+      "url": "https://www.ebay.com/e/fashion/patek-philippe-110121",
+      "expiry": "2027/02/15"
+    },
+    {
+      "category": "Fashion",
+      "title": "Explore iconic Rolex watches",
+      "description": "Shop timepieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-rolex-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Embrace luxury with Breitling",
+      "description": "Shop wristwear with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-breitling-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Discover the power of OMEGA",
+      "description": "Shop watches with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-omega-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Luxury wristwear from TAG Heuer",
+      "description": "Shop watches with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-tag-heuer-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Genevan luxury from Patek Philippe",
+      "description": "Own yours with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-patek-philippe-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Finely-crafted Cartier timepieces",
+      "description": "Discover watches with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-cartier-watches-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Italian craftsmanship by Panerai",
+      "description": "Find yours with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-panerai-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Audemars Piguet for your wrist",
+      "description": "Shop Authenticity Guarantee timepieces.",
+      "url": "https://www.ebay.com/e/fashion/ag-audemars-piguet-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Add Hublot to your collection",
+      "description": "Find a favorite with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-hublot-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Renowned timepieces from IWC",
+      "description": "Shop watches with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-iwc-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Shop style and quality with TUDOR",
+      "description": "Timepieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-tudor-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Handcrafted by Jaeger-LeCoultre",
+      "description": "Get timepieces with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/ag-jaeger-lecoultre-030325",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Collectibles",
+      "title": "The gift of play, now for less",
+      "description": "Turn their toy box into a treasure chest.",
+      "url": "https://www.ebay.com/e/_collectibles/holiday-toy-gifts-deals",
+      "expiry": "2027/02/06"
+    },
+    {
+      "category": "Fashion",
+      "title": "Luxury jewelry from Japan",
+      "description": "Shop top brands with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/jewelry-from-japan-0324225",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 30% off Bose",
+      "description": "Great deals direct from the brand.",
+      "url": "https://www.ebay.com/e/_electronics/certified-refurbished-bose-brand-outlet",
+      "expiry": "2027/10/27"
+    },
+    {
+      "category": "Home & Garden",
+      "title": "eBay Refurbished Makita",
+      "description": "Up to 50% off from authorized seller.",
+      "url": "https://www.ebay.com/e/home-garden/certified-refurbished-makita-brand-outlet",
+      "expiry": "2026/09/30"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 80% off Samsung devices",
+      "description": "Plus a one- or two-year warranty.",
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-samsung",
+      "expiry": "2028/01/31"
+    },
+    {
+      "category": "Electronics",
+      "title": "Save up to 70% on Lenovo",
+      "description": "Shop eBay Refurbished.",
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-lenovo",
+      "expiry": "2028/01/31"
+    },
+    {
+      "category": "Home & Garden",
+      "title": "eBay Refurbished iRobot",
+      "description": "Get up to 60% off and a warranty.",
+      "url": "https://www.ebay.com/e/home-garden/certified-refurbished-irobot",
+      "expiry": "2028/01/31"
+    },
+    {
+      "category": "Home-Garden",
+      "title": "eBay Refurbished Dyson",
+      "description": "Up to 50% off direct from the brand.",
+      "url": "https://www.ebay.com/e/home-garden/certified-refurbished-dyson",
+      "expiry": "2028/01/31"
+    },
+    {
+      "category": "Electronics",
+      "title": "Save on Acer products",
+      "description": "Shop eBay Refurbished.",
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-acer",
+      "expiry": "2028/01/31"
+    },
+    {
+      "category": "Electronics",
+      "title": "Save on Excellent Refurbished tech",
+      "description": "Like-new condition, plus a one-year warranty.",
+      "url": "https://www.ebay.com/e/_electronics/shop-all-excellent-refurbished",
+      "expiry": "2028/01/31"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 70% off top phone brands",
+      "description": "eBay Refurbished finds. All with a warranty.",
+      "url": "https://www.ebay.com/e/_electronics/shop-all-ebay-refurbished-cell-phones",
+      "expiry": "2045/08/11"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 50% off JBL",
+      "description": "Great deals from a trusted seller.",
+      "url": "https://www.ebay.com/e/_electronics/brand-outlet-jbl",
+      "expiry": "2045/09/22"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 20% off Seagate",
+      "description": "Great deals direct from the brand.",
+      "url": "https://www.ebay.com/e/_electronics/ebay-refurbished-seagate",
+      "expiry": "2045/09/24"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 30% off Sonos",
+      "description": "Great deals direct from the brand.",
+      "url": "https://www.ebay.com/e/_electronics/save-on-sonos",
+      "expiry": "2045/09/29"
+    },
+    {
+      "category": "Home & Garden",
+      "title": "Up to 30% off KitchenAid",
+      "description": "Great deals direct from the brand.",
+      "url": "https://www.ebay.com/e/home-garden/kitchenaid-certified-refurbished-brand-outlet",
+      "expiry": "2046/01/07"
+    },
+    {
+      "category": "Home & Garden",
+      "title": "Up to 50% off EcoFlow",
+      "description": "Great deals direct from the brand.",
+      "url": "https://www.ebay.com/e/home-garden/ecoflow-certified-refurbished-brand-outlet",
+      "expiry": "2046/01/07"
+    },
+    {
+      "category": "Fashion",
+      "title": "Find a J for every day",
+      "description": "Jordans with Authenticity Guarantee.",
+      "url": "https://www.ebay.com/e/fashion/jordan-ag-110220",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Fashion",
+      "title": "Givenchy chic. Up to 30% off.",
+      "description": "Explore luxury bags from a timeless brand.",
+      "url": "https://www.ebay.com/e/fashion/givenchy-handbags-110121",
+      "expiry": "2027/02/08"
+    },
+    {
+      "category": "Collectibles",
+      "title": "Collectibles Marquee Auction",
+      "description": "Build your dream lineup. Ends 5/3.",
+      "url": "https://www.ebay.com/e/_collectibles/marquee-auction-eg",
+      "expiry": "2046/05/21"
+    },
+    {
+      "category": "Electronics",
+      "title": "Up to 10% off Arlo",
+      "description": "Great deals from an authorized seller.",
+      "url": "https://www.ebay.com/e/_electronics/certified-refurbished-arlo-brand-outlet",
+      "expiry": "2046/05/21"
+    }
+  ]
+}
