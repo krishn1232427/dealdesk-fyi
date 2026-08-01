@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Kindle Unlimited reading illustration</title>
+  <desc id="desc">An open digital book surrounded by a deep blue reading landscape.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#073d57"/>
+      <stop offset=".58" stop-color="#087ca1"/>
+      <stop offset="1" stop-color="#36b8b0"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#d8fbf7"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#032c40" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <path d="M0 650c185-108 325 80 498-9 173-89 315 80 480 1 94-45 160-34 222 2v256H0Z" fill="#8ce5dc" opacity=".25"/>
+  <text x="82" y="128" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Kindle Unlimited</text>
+  <text x="84" y="180" fill="#b9f0ed" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" letter-spacing="3">READ WITHOUT LIMITS</text>
+  <g filter="url(#shadow)">
+    <path d="M234 308c151-20 276 15 366 106 90-91 215-126 366-106v394c-151-20-276 15-366 106-90-91-215-126-366-106Z" fill="url(#page)"/>
+    <path d="M600 414v394" stroke="#0b6883" stroke-width="16" opacity=".42"/>
+    <path d="M305 416c91-9 162 10 215 57M305 494c91-9 162 10 215 57M305 572c91-9 162 10 215 57M895 416c-91-9-162 10-215 57M895 494c-91-9-162 10-215 57M895 572c-91-9-162 10-215 57" fill="none" stroke="#1592a7" stroke-width="17" stroke-linecap="round" opacity=".62"/>
+  </g>
+</svg>

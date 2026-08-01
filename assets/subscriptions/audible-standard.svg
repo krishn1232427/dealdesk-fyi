@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Audible Standard audiobook illustration</title>
+  <desc id="desc">Headphones surrounding a glowing audiobook and sound waves.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4b183f"/>
+      <stop offset=".55" stop-color="#9e3c35"/>
+      <stop offset="1" stop-color="#f08b34"/>
+    </linearGradient>
+    <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff9e8"/>
+      <stop offset="1" stop-color="#ffd48d"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="27" flood-color="#2d0c28" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="1050" cy="70" r="270" fill="#ffca6a" opacity=".18"/>
+  <circle cx="80" cy="850" r="300" fill="#2c0c29" opacity=".28"/>
+  <text x="82" y="128" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Audible Standard</text>
+  <text x="84" y="180" fill="#ffe0b1" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" letter-spacing="3">ONE AUDIOBOOK EVERY MONTH</text>
+  <g filter="url(#shadow)">
+    <path d="M350 588V440c0-151 112-266 250-266s250 115 250 266v148" fill="none" stroke="#fff" stroke-width="54" stroke-linecap="round"/>
+    <rect x="254" y="510" width="145" height="230" rx="66" fill="#fff"/>
+    <rect x="801" y="510" width="145" height="230" rx="66" fill="#fff"/>
+    <path d="M449 395c62-34 116-33 151 4 35-37 89-38 151-4v273c-62-34-116-33-151 4-35-37-89-38-151-4Z" fill="url(#book)"/>
+    <path d="M600 400v269" stroke="#d76a31" stroke-width="12" opacity=".75"/>
+    <path d="M525 468v122m45-156v190m105-156v122m-45-156v190" stroke="#9e3c35" stroke-width="20" stroke-linecap="round" opacity=".68"/>
+  </g>
+</svg>

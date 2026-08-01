@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Prime for Young Adults value illustration</title>
+  <desc id="desc">A package, streaming screen, headphones, and savings spark arranged for young adults.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#082f49"/>
+      <stop offset=".5" stop-color="#075985"/>
+      <stop offset="1" stop-color="#06a7c7"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d9f7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="25" stdDeviation="28" flood-color="#031d30" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="64" fill="url(#bg)"/>
+  <circle cx="1060" cy="80" r="270" fill="#67e8f9" opacity=".16"/>
+  <circle cx="90" cy="850" r="290" fill="#031d30" opacity=".3"/>
+  <text x="82" y="128" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Prime for Young Adults</text>
+  <text x="84" y="180" fill="#b9f5ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" letter-spacing="3">SHOP · STREAM · SAVE</text>
+  <g filter="url(#shadow)">
+    <rect x="224" y="290" width="752" height="430" rx="54" fill="url(#card)"/>
+    <rect x="278" y="342" width="390" height="244" rx="26" fill="#0c5374"/>
+    <path d="m436 402 124 62-124 62Z" fill="#67e8f9"/>
+    <path d="M730 390h150l48 55v158H682V445Z" fill="#ffcc68"/>
+    <path d="m730 390 76 56 74-56m-198 55 124 64 122-64" fill="none" stroke="#a86510" stroke-width="12" stroke-linejoin="round" opacity=".62"/>
+    <path d="M345 647c0-53 39-94 87-94s87 41 87 94" fill="none" stroke="#ff6b55" stroke-width="28" stroke-linecap="round"/>
+    <rect x="321" y="625" width="45" height="76" rx="20" fill="#ff6b55"/>
+    <rect x="498" y="625" width="45" height="76" rx="20" fill="#ff6b55"/>
+    <circle cx="800" cy="270" r="92" fill="#fff"/>
+    <text x="800" y="296" fill="#075985" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="900" text-anchor="middle">$0</text>
+  </g>
+</svg>

@@ -73,7 +73,7 @@
               <span class="featured-label">DealDesk top pick</span>
               <span class="featured-price-line">
                 <strong id="featured-price">See price</strong>
-                <span class="featured-original">Was <del id="featured-original"></del></span>
+                <span class="featured-original" id="featured-original-wrap"><span id="featured-original-label">Was</span> <span class="struck" id="featured-original"></span></span>
               </span>
               <span class="featured-saving" id="featured-saving">Today’s best value</span>
               <strong class="featured-title" id="featured-title">Loading today’s top pick…</strong>
@@ -97,6 +97,7 @@
             <label class="sort-control" for="deal-sort">
               <span>Sort by</span>
               <select id="deal-sort">
+                <option value="best">Best overall</option>
                 <option value="discount">Biggest discount</option>
                 <option value="price-low">Price: low to high</option>
                 <option value="price-high">Price: high to low</option>
@@ -206,8 +207,14 @@
         }
 
         function discountFrom(deal) {
+          if (deal && deal.badgeText) return deal.badgeText;
           var discount = discountNumber(deal);
           return discount ? discount + "% off" : "Top pick";
+        }
+
+        function rankingNumber(deal) {
+          var score = Number(deal && deal.rankingScore);
+          return Number.isFinite(score) ? score : discountNumber(deal);
         }
 
         function pricesFrom(deal) {
@@ -397,8 +404,8 @@
           current.textContent = prices.current;
           var originalWrap = document.createElement("span");
           originalWrap.className = "original-price";
-          originalWrap.textContent = "Was ";
-          var original = document.createElement("del");
+          originalWrap.textContent = (deal.referenceLabel || "Was") + " ";
+          var original = document.createElement(deal.referenceStyle === "renewal" ? "span" : "del");
           original.textContent = prices.original;
           originalWrap.appendChild(original);
           priceLine.appendChild(current);
@@ -453,7 +460,8 @@
           filtered.sort(function (a, b) {
             if (sortMode === "price-low") return priceNumber(a) - priceNumber(b);
             if (sortMode === "price-high") return priceNumber(b) - priceNumber(a);
-            return discountNumber(b) - discountNumber(a);
+            if (sortMode === "discount") return discountNumber(b) - discountNumber(a);
+            return rankingNumber(b) - rankingNumber(a);
           });
 
           productGrid.innerHTML = "";
@@ -478,6 +486,8 @@
           document.getElementById("featured-badge").textContent = discountFrom(deal);
           document.getElementById("featured-price").textContent = prices.current;
           document.getElementById("featured-original").textContent = prices.original;
+          document.getElementById("featured-original-label").textContent = deal.referenceLabel || "Was";
+          document.getElementById("featured-original-wrap").classList.toggle("renewal-price", deal.referenceStyle === "renewal");
           document.getElementById("featured-saving").textContent = savingsFrom(prices, deal);
           document.getElementById("featured-title").textContent = cleanTitle(deal.title);
           document.getElementById("featured-merchant").textContent = "Sold by " + (deal.merchantName || "Amazon") + " · " + (deal.category || "Deal");
@@ -563,7 +573,7 @@
           })
         ]).then(function (feeds) {
           productDeals = (feeds[0].deals || []).filter(eligible).sort(function (a, b) {
-            return (a.priority || 99) - (b.priority || 99);
+            return rankingNumber(b) - rankingNumber(a) || (a.priority || 99) - (b.priority || 99);
           });
           var streamingDeals = (feeds[1].deals || []).filter(eligible).sort(function (a, b) {
             return (a.priority || 99) - (b.priority || 99);

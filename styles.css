@@ -486,9 +486,18 @@ select {
 }
 
 .featured-original del,
+.featured-original .struck,
 .original-price del {
   text-decoration-color: var(--accent-dark);
   text-decoration-thickness: 1.5px;
+}
+
+.featured-original .struck {
+  text-decoration-line: line-through;
+}
+
+.featured-original.renewal-price .struck {
+  text-decoration: none;
 }
 
 .featured-saving,

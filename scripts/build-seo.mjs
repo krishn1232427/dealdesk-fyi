@@ -36,6 +36,10 @@ const discountFrom = (prices, deal) => {
   const original = numberFromPrice(prices.original);
   return original > current && current > 0 ? Math.round((1 - current / original) * 100) : 0;
 };
+const rankingNumber = (deal) => {
+  const score = Number(deal?.rankingScore);
+  return Number.isFinite(score) ? score : discountFrom(pricesFrom(deal), deal);
+};
 const savingsFrom = (prices) => {
   const current = numberFromPrice(prices.current);
   const original = numberFromPrice(prices.original);
@@ -47,6 +51,9 @@ const publicDescription = (deal, title, prices, updated) => {
   const merchant = deal.merchantName || "the merchant";
   const discount = discountFrom(prices, deal);
   if (prices.current && prices.original) {
+    if (deal.referenceStyle === "renewal") {
+      return `DealDesk found ${title} at ${merchant} for ${prices.current} during the introductory period. ${deal.referenceLabel || "Then"} ${prices.original}. ${deal.savingsText || "Confirm eligibility and renewal terms"}. Price checked ${isoDate(updated)}; availability can change.`;
+    }
     const priceContext = deal.savingsText ? `. The live offer advertises ${deal.savingsText}.` : discount ? ` (${discount}% off).` : ".";
     return `DealDesk found ${title} at ${merchant} for ${prices.current}, down from ${prices.original}${priceContext} Price checked ${isoDate(updated)}; availability can change.`;
   }
@@ -78,7 +85,7 @@ for (const deal of deals) {
     const candidateDiscount = discountFrom(candidatePrices, candidate);
     return `<a class="related-deal" href="/deals/${slugFor(candidate)}/">
       <span class="related-deal-media">${candidate.imageURL ? `<img src="${esc(candidate.imageURL)}" alt="${esc(candidateTitle)}" loading="lazy" />` : `<span class="product-fallback" aria-hidden="true">D</span>`}</span>
-      <span class="related-deal-copy"><span><strong>${esc(candidatePrices.current)}</strong>${candidatePrices.original ? ` <del>${esc(candidatePrices.original)}</del>` : ""}</span><b>${esc(candidateTitle)}</b><small>${candidateDiscount ? `${candidateDiscount}% off · ` : ""}${esc(candidate.merchantName || "Amazon")}</small></span>
+      <span class="related-deal-copy"><span><strong>${esc(candidatePrices.current)}</strong>${candidatePrices.original ? candidate.referenceStyle === "renewal" ? ` <small>${esc(candidate.referenceLabel || "Then")} ${esc(candidatePrices.original)}</small>` : ` <del>${esc(candidatePrices.original)}</del>` : ""}</span><b>${esc(candidateTitle)}</b><small>${candidate.badgeText ? `${esc(candidate.badgeText)} · ` : candidateDiscount ? `${candidateDiscount}% off · ` : ""}${esc(candidate.merchantName || "Amazon")}</small></span>
     </a>`;
   }).join("\n");
   const schema = prices.current ? {
@@ -134,14 +141,14 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
       <div class="deal-detail-content">
         <span class="page-kicker"><span aria-hidden="true"></span> ${esc(deal.category || "Featured deal")}</span>
         <h1>${esc(title)}</h1>
-        ${prices.current ? `<p class="deal-detail-price"><strong>${esc(prices.current)}</strong>${prices.original ? ` <span>Reference price <del>${esc(prices.original)}</del></span>` : ""}</p>` : ""}
+        ${prices.current ? `<p class="deal-detail-price"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? ` <span>${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : ` <span>${esc(deal.referenceLabel || "Reference price")} <del>${esc(prices.original)}</del></span>` : ""}</p>` : ""}
 ${deal.priceNote ? `        <p class="deal-detail-price-note">${esc(deal.priceNote)}</p>\n` : ""}        <p class="deal-detail-summary">${esc(description)}</p>
         <p class="deal-detail-meta">Listed by ${esc(deal.merchantName || "Amazon")} · Checked ${esc(isoDate(updated))}</p>
         <a class="deal-detail-cta" href="${esc(deal.affiliateURL)}" rel="sponsored nofollow noopener" target="_blank">View live deal on ${esc(deal.merchantName || "Amazon")} <span aria-hidden="true">→</span></a>
         <p class="deal-detail-fineprint">Affiliate link: DealDesk may earn a commission. Price, eligibility, and availability can change; confirm final terms with the merchant.</p>
       </div>
     </article>
-${prices.current ? `    <section class="deal-proof" aria-labelledby="deal-proof-title"><div><span class="page-kicker"><span aria-hidden="true"></span> Transparent deal math</span><h2 id="deal-proof-title">Why this price stands out</h2><p>${deal.savingsText ? esc(deal.savingsText) : discount ? `${discount}% below the displayed reference price` : "Current price shown clearly"}${savings ? `, a difference of ${money(savings)} per displayed price unit` : ""}. No countdowns or popularity claims are added by DealDesk.</p></div><dl><div><dt>Current</dt><dd>${esc(prices.current)}</dd></div>${prices.original ? `<div><dt>Reference</dt><dd><del>${esc(prices.original)}</del></dd></div>` : ""}${savings ? `<div><dt>Difference</dt><dd>${money(savings)}</dd></div>` : ""}<div><dt>Checked</dt><dd>${esc(isoDate(updated))}</dd></div></dl></section>\n` : ""}    <section class="deal-more"><h2>${relatedHTML ? "Compare three nearby picks" : "More deals worth seeing"}</h2>${relatedHTML ? `<div class="related-deals">${relatedHTML}</div>` : ""}<p><a href="/latest-deals/">Browse all current DealDesk picks</a></p></section>
+${prices.current ? `    <section class="deal-proof" aria-labelledby="deal-proof-title"><div><span class="page-kicker"><span aria-hidden="true"></span> Transparent deal math</span><h2 id="deal-proof-title">Why this price stands out</h2><p>${deal.savingsText ? esc(deal.savingsText) : discount ? `${discount}% below the displayed reference price` : "Current price shown clearly"}${deal.referenceStyle !== "renewal" && savings ? `, a difference of ${money(savings)} per displayed price unit` : ""}. No countdowns or popularity claims are added by DealDesk.</p></div><dl><div><dt>${deal.referenceStyle === "renewal" ? "Intro price" : "Current"}</dt><dd>${esc(prices.current)}</dd></div>${prices.original ? deal.referenceStyle === "renewal" ? `<div><dt>${esc(deal.referenceLabel || "Then")}</dt><dd>${esc(prices.original)}</dd></div>` : `<div><dt>Reference</dt><dd><del>${esc(prices.original)}</del></dd></div>` : ""}${deal.referenceStyle !== "renewal" && savings ? `<div><dt>Difference</dt><dd>${money(savings)}</dd></div>` : ""}<div><dt>Checked</dt><dd>${esc(isoDate(updated))}</dd></div></dl></section>\n` : ""}    <section class="deal-more"><h2>${relatedHTML ? "Compare three nearby picks" : "More deals worth seeing"}</h2>${relatedHTML ? `<div class="related-deals">${relatedHTML}</div>` : ""}<p><a href="/latest-deals/">Browse all current DealDesk picks</a></p></section>
   </main>
   <footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. You never pay more because of it.</div></footer>
 </body>
@@ -153,7 +160,7 @@ ${prices.current ? `    <section class="deal-proof" aria-labelledby="deal-proof-
 
 const lastmod = isoDate(Math.max(...feeds.map((feed) => new Date(feed.updatedAt || 0).getTime())));
 const pricedDeals = deals.filter((deal) => pricesFrom(deal).current)
-  .sort((a, b) => discountFrom(pricesFrom(b), b) - discountFrom(pricesFrom(a), a));
+  .sort((a, b) => rankingNumber(b) - rankingNumber(a));
 const featuredDeal = pricedDeals[0];
 const featuredPrices = pricesFrom(featuredDeal);
 const featuredDiscount = discountFrom(featuredPrices, featuredDeal);
@@ -188,11 +195,11 @@ const latestCards = pricedDeals.slice(1).map((deal) => {
   return `<article class="deal-card">
     <a class="deal-card-link" href="${canonical}" aria-label="${esc(title)}, ${esc(prices.current)}. View deal details">
       <span class="deal-media">
-        ${discount ? `<span class="discount-badge">${discount}% off</span>` : ""}
+        ${deal.badgeText ? `<span class="discount-badge">${esc(deal.badgeText)}</span>` : discount ? `<span class="discount-badge">${discount}% off</span>` : ""}
         ${image ? `<img src="${esc(image)}" alt="${esc(title)}" loading="lazy" />` : `<span class="product-fallback" aria-hidden="true">D</span>`}
       </span>
       <span class="deal-body">
-        <span class="price-line"><strong>${esc(prices.current)}</strong>${prices.original ? `<span class="original-price">Was <del>${esc(prices.original)}</del></span>` : ""}</span>
+        <span class="price-line"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? `<span class="original-price">${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : `<span class="original-price">${esc(deal.referenceLabel || "Was")} <del>${esc(prices.original)}</del></span>` : ""}</span>
         ${deal.savingsText ? `<span class="saving-text">${esc(deal.savingsText)}</span>` : savings ? `<span class="saving-text">Save ${money(savings)} · ${discount}% off</span>` : ""}
 ${deal.priceNote ? `        <span class="price-note">${esc(deal.priceNote)}</span>\n` : ""}        <strong class="deal-title">${esc(title)}</strong>
         <span class="deal-meta">${esc(deal.merchantName || "Amazon")} · ${esc(deal.category || "Deal")} · Checked ${esc(isoDate(updated))}</span>
@@ -204,12 +211,12 @@ ${deal.priceNote ? `        <span class="price-note">${esc(deal.priceNote)}</spa
 const featuredHTML = featuredDeal ? `<article class="featured-wrap latest-featured">
   <a class="featured-deal" href="${featuredCanonical}" aria-label="${esc(featuredTitle)}, ${esc(featuredPrices.current)}. View top deal">
     <span class="featured-media">
-      <span class="featured-badge">Largest current discount</span>
+      <span class="featured-badge">Best overall</span>
       ${featuredDeal.imageURL ? `<img src="${esc(featuredDeal.imageURL)}" alt="${esc(featuredTitle)}" />` : `<span class="featured-placeholder" aria-hidden="true">D</span>`}
     </span>
     <span class="featured-content">
       <span class="featured-label">DealDesk top pick · Checked ${esc(isoDate(featuredDeal.publishedAt || lastmod))}</span>
-      <span class="featured-price-line"><strong>${esc(featuredPrices.current)}</strong>${featuredPrices.original ? `<span class="featured-original">Was <del>${esc(featuredPrices.original)}</del></span>` : ""}</span>
+      <span class="featured-price-line"><strong>${esc(featuredPrices.current)}</strong>${featuredPrices.original ? featuredDeal.referenceStyle === "renewal" ? `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Then")} ${esc(featuredPrices.original)}</span>` : `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Was")} <del>${esc(featuredPrices.original)}</del></span>` : ""}</span>
       ${featuredDeal.savingsText ? `<span class="featured-saving">${esc(featuredDeal.savingsText)}</span>` : featuredSavings ? `<span class="featured-saving">Save ${money(featuredSavings)} · ${featuredDiscount}% off</span>` : ""}
       ${featuredDeal.priceNote ? `<span class="price-note">${esc(featuredDeal.priceNote)}</span>` : ""}
       <strong class="featured-title">${esc(featuredTitle)}</strong>
