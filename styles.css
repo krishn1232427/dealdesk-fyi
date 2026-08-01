@@ -736,6 +736,107 @@ select {
   min-width: 176px;
 }
 
+.trust-section {
+  margin: 5.5rem 0 1rem;
+  padding: 3.5rem;
+  border: 1px solid #e8e2d8;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(255, 90, 31, 0.12), transparent 28%),
+    #fffdf9;
+}
+
+.trust-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 1rem 4rem;
+  align-items: end;
+  margin-bottom: 2.25rem;
+}
+
+.trust-intro .page-kicker { grid-column: 1 / -1; }
+
+.trust-intro h2 {
+  margin: 0;
+  max-width: 700px;
+  font-size: clamp(2rem, 4vw, 3.45rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.trust-intro > p {
+  margin: 0;
+  color: #625d55;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #e8e2d8;
+  border-radius: 20px;
+  background: #e8e2d8;
+}
+
+.trust-card {
+  min-height: 230px;
+  padding: 1.6rem;
+  background: #fff;
+}
+
+.trust-number {
+  display: inline-flex;
+  margin-bottom: 2.4rem;
+  color: #ff5a1f;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.trust-card h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.12rem;
+  letter-spacing: -0.025em;
+}
+
+.trust-card p {
+  margin: 0;
+  color: #6f6a62;
+  font-size: 0.91rem;
+  line-height: 1.55;
+}
+
+.coverage-bar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1.15rem 1.35rem;
+  border-radius: 16px;
+  background: #171714;
+  color: #fff;
+}
+
+.coverage-bar div { display: grid; gap: 0.2rem; }
+.coverage-bar strong { font-size: 0.96rem; }
+.coverage-bar span { color: #aaa69e; font-size: 0.78rem; }
+
+@media (max-width: 900px) {
+  .trust-section { padding: 2.25rem; }
+  .trust-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .trust-section { margin-top: 3.5rem; padding: 1.35rem; border-radius: 22px; }
+  .trust-grid, .coverage-bar { grid-template-columns: 1fr; }
+  .trust-card { min-height: 0; }
+  .trust-number { margin-bottom: 1.25rem; }
+}
+
 .filter-bar {
   display: flex;
   gap: 8px;

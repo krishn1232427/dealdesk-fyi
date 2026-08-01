@@ -47,6 +47,7 @@
         <div class="nav-links">
           <a href="/latest-deals/">Latest deals</a>
           <a href="#deal-categories">Categories</a>
+          <a href="#how-we-check">How we check</a>
           <a href="#streaming">Streaming</a>
           <a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a>
         </div>
@@ -185,6 +186,50 @@
             <div class="deal-skeleton"></div>
             <div class="deal-skeleton"></div>
             <div class="deal-skeleton"></div>
+          </div>
+        </section>
+
+        <section class="trust-section" id="how-we-check" aria-labelledby="trust-heading">
+          <div class="trust-intro">
+            <span class="page-kicker"><span aria-hidden="true"></span> DealDesk standard</span>
+            <h2 id="trust-heading">A shorter list. A better reason to click.</h2>
+            <p>DealDesk does not publish every promotion it finds. A deal appears only after its price, destination, and commission eligibility pass our checks.</p>
+          </div>
+          <div class="trust-grid">
+            <article class="trust-card">
+              <span class="trust-number">01</span>
+              <h3>Price made clear</h3>
+              <p>We show the current price, the comparison price when one is verifiable, and the real savings without burying the math.</p>
+            </article>
+            <article class="trust-card">
+              <span class="trust-number">02</span>
+              <h3>Merchant first</h3>
+              <p>Every offer names the seller and leads to a dedicated detail page before sending you to the merchant.</p>
+            </article>
+            <article class="trust-card">
+              <span class="trust-number">03</span>
+              <h3>Payable link verified</h3>
+              <p>Pending partnerships stay hidden. Displayed offers use an approved DealDesk tracking path from the merchant or its affiliate network.</p>
+            </article>
+            <article class="trust-card">
+              <span class="trust-number">04</span>
+              <h3>Your value wins</h3>
+              <p>Commission never turns a weak offer into a top pick. Discount depth, merchant trust, demand, and restrictions all affect ranking.</p>
+            </article>
+          </div>
+          <div class="coverage-bar" aria-label="Current DealDesk coverage">
+            <div>
+              <strong id="coverage-deal-count">Fresh deals</strong>
+              <span>approved offers currently visible</span>
+            </div>
+            <div>
+              <strong id="coverage-merchant-count">Multiple merchants</strong>
+              <span>with verified destinations</span>
+            </div>
+            <div>
+              <strong>Independent curation</strong>
+              <span>not a copied merchant feed</span>
+            </div>
           </div>
         </section>
       </section>
@@ -731,6 +776,10 @@
           streamingDealCount = streamingDeals.length;
 
           liveCount.textContent = productDeals.length + streamingDeals.length;
+          document.getElementById("coverage-deal-count").textContent = productDeals.length + streamingDeals.length + " live offers";
+          document.getElementById("coverage-merchant-count").textContent = new Set(productDeals.concat(streamingDeals).map(function (deal) {
+            return deal.merchantName;
+          }).filter(Boolean)).size + " merchants";
           updateSavedCount();
           populateMerchantFilter();
           updateDiscoveryCounts();
