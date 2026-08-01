@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Fashion and accessories</title><desc id="desc">A polished illustration of a watch, handbag, and jewelry on a warm background.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fff1e8"/><stop offset="1" stop-color="#ffd0be"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".16"/></filter></defs>
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/><circle cx="660" cy="84" r="145" fill="#ff7747" opacity=".18"/><circle cx="124" cy="450" r="170" fill="#d13f15" opacity=".1"/>
+  <g filter="url(#s)" stroke="#2b211d" stroke-width="14" stroke-linejoin="round"><path d="M250 205h230l34 222H216z" fill="#ff7043"/><path d="M304 212c0-83 124-83 124 0" fill="none"/><circle cx="585" cy="275" r="82" fill="#fff"/><circle cx="585" cy="275" r="48" fill="#ffe1d4"/><path d="M585 227v48l34 20" fill="none" stroke-linecap="round"/><path d="M530 111h110v82H530z" fill="#2b211d"/></g>
+  <g fill="#fff" stroke="#d13f15" stroke-width="10"><circle cx="167" cy="188" r="38"/><circle cx="167" cy="188" r="13" fill="#ff7043"/></g>
+  <text x="56" y="78" fill="#6e2f1a" font-family="Arial,sans-serif" font-size="30" font-weight="700">FASHION &amp; LUXURY</text>
+</svg>

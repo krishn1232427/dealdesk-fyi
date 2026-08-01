@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Business and industrial</title><desc id="desc">Industrial equipment, tools, and a hard hat on a golden background.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fff7df"/><stop offset="1" stop-color="#ffe09a"/></linearGradient><filter id="s"><feDropShadow dy="14" stdDeviation="18" flood-opacity=".16"/></filter></defs>
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/><circle cx="680" cy="95" r="155" fill="#e18d19" opacity=".15"/><g filter="url(#s)" stroke="#332b20" stroke-width="14" stroke-linejoin="round"><path d="M128 363h301l-48-150H225l-56 69h-41z" fill="#f5a623"/><circle cx="205" cy="399" r="50" fill="#4c5560"/><circle cx="373" cy="399" r="50" fill="#4c5560"/><path d="M253 213v-77h99l68 77" fill="none"/><path d="M511 361c0-97 151-97 151 0z" fill="#f5a623"/><path d="M489 364h195" fill="none" stroke-linecap="round"/><path d="M586 280v-65" fill="none"/></g>
+  <text x="56" y="78" fill="#815115" font-family="Arial,sans-serif" font-size="30" font-weight="700">BUSINESS &amp; INDUSTRIAL</text>
+</svg>

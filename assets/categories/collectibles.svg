@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Collectibles and hobbies</title><desc id="desc">Trading cards, a trophy, and a game piece on a purple background.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f5eeff"/><stop offset="1" stop-color="#dbc7ff"/></linearGradient><filter id="s"><feDropShadow dy="14" stdDeviation="18" flood-opacity=".15"/></filter></defs>
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/><circle cx="675" cy="95" r="155" fill="#7651b7" opacity=".15"/><g filter="url(#s)" stroke="#2d2440" stroke-width="14" stroke-linejoin="round"><rect x="157" y="161" width="176" height="248" rx="18" fill="#fff" transform="rotate(-8 245 285)"/><rect x="292" y="143" width="176" height="248" rx="18" fill="#ffcf56" transform="rotate(8 380 267)"/><path d="M539 168h120v85c0 76-120 76-120 0z" fill="#ffcf56"/><path d="M562 326h74v84h-74zM530 416h138" fill="none" stroke-linecap="round"/><path d="M539 188h-62c0 66 27 99 82 99M659 188h62c0 66-27 99-82 99" fill="none"/></g><path d="m376 206 20 41 45 7-33 32 8 45-40-21-40 21 8-45-33-32 45-7z" fill="#7651b7"/>
+  <text x="56" y="78" fill="#513b78" font-family="Arial,sans-serif" font-size="30" font-weight="700">COLLECTIBLES</text>
+</svg>

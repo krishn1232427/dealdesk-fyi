@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Home and garden</title><desc id="desc">A welcoming home, plant, and appliance on a green background.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f0faee"/><stop offset="1" stop-color="#ccebc4"/></linearGradient><filter id="s"><feDropShadow dy="14" stdDeviation="18" flood-opacity=".14"/></filter></defs>
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/><circle cx="665" cy="100" r="155" fill="#4b9d48" opacity=".14"/><g filter="url(#s)" stroke="#253626" stroke-width="14" stroke-linejoin="round"><path d="M145 283 345 126l200 157v164H145z" fill="#fff"/><path d="M250 447V305h102v142" fill="#f0a65c"/><path d="M405 310h76v75h-76z" fill="#9dd2ff"/><rect x="579" y="252" width="95" height="194" rx="20" fill="#fff"/><circle cx="626" cy="325" r="30" fill="#aee2ff"/></g><path d="M102 414c73-3 93-53 86-118-72 9-107 56-86 118Zm0 0c-31-37-24-79 4-115" fill="#56a75a" stroke="#253626" stroke-width="12" stroke-linecap="round"/>
+  <text x="56" y="78" fill="#316b34" font-family="Arial,sans-serif" font-size="30" font-weight="700">HOME &amp; GARDEN</text>
+</svg>

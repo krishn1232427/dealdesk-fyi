@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Grocery and everyday essentials</title><desc id="desc">A shopping basket filled with groceries on a coral background.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#fff0ed"/><stop offset="1" stop-color="#ffc9be"/></linearGradient><filter id="s"><feDropShadow dy="14" stdDeviation="18" flood-opacity=".15"/></filter></defs>
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/><circle cx="670" cy="90" r="150" fill="#e55242" opacity=".14"/><g filter="url(#s)" stroke="#3b2825" stroke-width="14" stroke-linejoin="round"><path d="M196 259h418l-48 183H244z" fill="#ff775f"/><path d="M292 272c0-166 226-166 226 0" fill="none"/><path d="M288 208c-47-73 35-116 64-55 36-59 110-10 59 58" fill="#67ac5b"/><rect x="434" y="137" width="99" height="140" rx="20" fill="#fff"/><circle cx="483" cy="194" r="25" fill="#ffcb55"/></g>
+  <text x="56" y="78" fill="#8d372c" font-family="Arial,sans-serif" font-size="30" font-weight="700">EVERYDAY ESSENTIALS</text>
+</svg>

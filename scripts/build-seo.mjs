@@ -69,6 +69,26 @@ const savingsFrom = (prices) => {
 };
 const money = (value) => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
 const asinFrom = (deal) => String(deal.id || "").match(/amazon-([a-z0-9]{10})/i)?.[1]?.toUpperCase() || "";
+const categoryImage = (deal) => {
+  const category = String(deal?.category || "").toLowerCase();
+  if (category.includes("fashion")) return "/assets/categories/fashion.svg";
+  if (category.includes("electronic") || category.includes("tech")) return "/assets/categories/electronics.svg";
+  if (category.includes("home")) return "/assets/categories/home.svg";
+  if (category.includes("business") || category.includes("industrial")) return "/assets/categories/business.svg";
+  if (category.includes("grocery")) return "/assets/categories/grocery.svg";
+  return "/assets/categories/collectibles.svg";
+};
+const imageFor = (deal) => {
+  if (deal?.imageURL) return deal.imageURL;
+  const asin = asinFrom(deal);
+  return asin ? `https://images-na.ssl-images-amazon.com/images/P/${asin}.01.LZZZZZZZ.jpg` : categoryImage(deal);
+};
+const earningPotential = (deal) => {
+  const estimate = Number(deal?.estimatedCommission);
+  if (Number.isFinite(estimate) && estimate >= 0) return estimate;
+  const fixedBounty = String(deal?.commission || "").match(/^\$(\d+(?:\.\d+)?)/);
+  return fixedBounty ? Number(fixedBounty[1]) : 0;
+};
 const publicDescription = (deal, title, prices, updated) => {
   const merchant = deal.merchantName || "the merchant";
   const discount = discountFrom(prices, deal);
@@ -92,7 +112,7 @@ for (const deal of deals) {
   const canonical = `${site}/deals/${slug}/`;
   const title = cleanTitle(deal.title);
   const prices = pricesFrom(deal);
-  const image = deal.imageURL || "";
+  const image = imageFor(deal);
   const updated = deal.publishedAt || deal.verifiedAt || feeds[0].updatedAt;
   const description = publicDescription(deal, title, prices, updated);
   const asin = asinFrom(deal);
@@ -106,7 +126,7 @@ for (const deal of deals) {
     const candidatePrices = pricesFrom(candidate);
     const candidateDiscount = discountFrom(candidatePrices, candidate);
     return `<a class="related-deal" href="/deals/${slugFor(candidate)}/">
-      <span class="related-deal-media">${candidate.imageURL ? `<img src="${esc(candidate.imageURL)}" alt="${esc(candidateTitle)}" loading="lazy" />` : `<span class="product-fallback" aria-hidden="true">D</span>`}</span>
+      <span class="related-deal-media"><img src="${esc(imageFor(candidate))}" alt="${esc(candidateTitle)}" loading="lazy" /></span>
       <span class="related-deal-copy"><span><strong>${esc(candidatePrices.current)}</strong>${candidatePrices.original ? candidate.referenceStyle === "renewal" ? ` <small>${esc(candidate.referenceLabel || "Then")} ${esc(candidatePrices.original)}</small>` : ` <del>${esc(candidatePrices.original)}</del>` : ""}</span><b>${esc(candidateTitle)}</b><small>${candidate.badgeText ? `${esc(candidate.badgeText)} · ` : candidateDiscount ? `${candidateDiscount}% off · ` : ""}${esc(candidate.merchantName || "Amazon")}</small></span>
     </a>`;
   }).join("\n");
@@ -182,7 +202,7 @@ ${prices.current ? `    <section class="deal-proof" aria-labelledby="deal-proof-
 
 const lastmod = isoDate(Math.max(...feeds.map((feed) => new Date(feed.updatedAt || 0).getTime())));
 const pricedDeals = deals.filter((deal) => pricesFrom(deal).current)
-  .sort((a, b) => rankingNumber(b) - rankingNumber(a));
+  .sort((a, b) => earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a));
 const featuredDeal = pricedDeals[0];
 const featuredPrices = pricesFrom(featuredDeal);
 const featuredDiscount = discountFrom(featuredPrices, featuredDeal);
@@ -212,7 +232,7 @@ const latestCards = pricedDeals.slice(1).map((deal) => {
   const discount = discountFrom(prices, deal);
   const savings = savingsFrom(prices);
   const canonical = `/deals/${slugFor(deal)}/`;
-  const image = deal.imageURL || "";
+  const image = imageFor(deal);
   const updated = deal.publishedAt || deal.verifiedAt || lastmod;
   return `<article class="deal-card">
     <a class="deal-card-link" href="${canonical}" aria-label="${esc(title)}, ${esc(prices.current)}. View deal details">
@@ -231,11 +251,11 @@ ${deal.savingsText ? `        <span class="saving-text">${esc(deal.savingsText)}
 const featuredHTML = featuredDeal ? `<article class="featured-wrap latest-featured">
   <a class="featured-deal" href="${featuredCanonical}" aria-label="${esc(featuredTitle)}, ${esc(featuredPrices.current)}. View top deal">
     <span class="featured-media">
-      <span class="featured-badge">Best overall</span>
-      ${featuredDeal.imageURL ? `<img src="${esc(featuredDeal.imageURL)}" alt="${esc(featuredTitle)}" />` : `<span class="featured-placeholder" aria-hidden="true">D</span>`}
+      <span class="featured-badge">Top earning offer</span>
+      <img src="${esc(imageFor(featuredDeal))}" alt="${esc(featuredTitle)}" />
     </span>
     <span class="featured-content">
-      <span class="featured-label">DealDesk top pick · Checked ${esc(isoDate(featuredDeal.publishedAt || lastmod))}</span>
+      <span class="featured-label">DealDesk top earning pick · Checked ${esc(isoDate(featuredDeal.publishedAt || lastmod))}</span>
       <span class="featured-price-line"><strong>${esc(featuredPrices.current)}</strong>${featuredPrices.original ? featuredDeal.referenceStyle === "renewal" ? `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Then")} ${esc(featuredPrices.original)}</span>` : `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Was")} <del>${esc(featuredPrices.original)}</del></span>` : ""}</span>
       ${featuredDeal.savingsText ? `<span class="featured-saving">${esc(featuredDeal.savingsText)}</span>` : featuredSavings ? `<span class="featured-saving">Save ${money(featuredSavings)} · ${featuredDiscount}% off</span>` : ""}
       ${featuredDeal.priceNote ? `<span class="price-note">${esc(featuredDeal.priceNote)}</span>` : ""}

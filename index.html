@@ -72,7 +72,7 @@
               <span class="featured-placeholder" aria-hidden="true">D</span>
             </span>
             <span class="featured-content">
-              <span class="featured-label">DealDesk top pick</span>
+              <span class="featured-label">DealDesk top earning pick</span>
               <span class="featured-price-line">
                 <strong id="featured-price">See price</strong>
                 <span class="featured-original" id="featured-original-wrap"><span id="featured-original-label">Was</span> <span class="struck" id="featured-original"></span></span>
@@ -175,7 +175,7 @@
               <label class="sort-control" for="deal-sort">
                 <span>Sort by</span>
                 <select id="deal-sort">
-                  <option value="best">Best overall</option>
+                  <option value="best">Highest earning</option>
                   <option value="discount">Biggest discount</option>
                   <option value="price-low">Price: low to high</option>
                   <option value="price-high">Price: high to low</option>
@@ -225,8 +225,8 @@
             </article>
             <article class="trust-card">
               <span class="trust-number">03</span>
-              <h3>Your value wins</h3>
-              <p>Commission never turns a weak offer into a top pick. Discount depth, merchant trust, demand, and restrictions all affect ranking.</p>
+              <h3>Commission-aware ranking</h3>
+              <p>Higher verified earning potential can place an eligible offer higher. Expired, unapproved, or untracked offers remain excluded.</p>
             </article>
             <article class="trust-card">
               <span class="trust-number">04</span>
@@ -347,6 +347,13 @@
           return Number.isFinite(score) ? score : discountNumber(deal);
         }
 
+        function earningPotential(deal) {
+          var estimate = Number(deal && deal.estimatedCommission);
+          if (Number.isFinite(estimate) && estimate >= 0) return estimate;
+          var fixedBounty = String((deal && deal.commission) || "").match(/^\$(\d+(?:\.\d+)?)/);
+          return fixedBounty ? Number(fixedBounty[1]) : 0;
+        }
+
         function pricesFrom(deal) {
           var matches = String((deal && deal.summary) || deal || "").match(/\$[\d,]+(?:\.\d{2})?/g) || [];
           return {
@@ -375,11 +382,18 @@
         }
 
         function imageFor(deal) {
+          if (deal.imageURL) return deal.imageURL;
           var asin = String(deal.id || "").match(/^amazon-([A-Z0-9]{10})-/i);
           if (asin) {
             return "https://images-na.ssl-images-amazon.com/images/P/" + asin[1] + ".01.LZZZZZZZ.jpg";
           }
-          return deal.imageURL || "";
+          var category = String(deal.category || "").toLowerCase();
+          if (category.indexOf("fashion") !== -1) return "/assets/categories/fashion.svg";
+          if (category.indexOf("electronic") !== -1 || category.indexOf("tech") !== -1) return "/assets/categories/electronics.svg";
+          if (category.indexOf("home") !== -1) return "/assets/categories/home.svg";
+          if (category.indexOf("business") !== -1 || category.indexOf("industrial") !== -1) return "/assets/categories/business.svg";
+          if (category.indexOf("grocery") !== -1) return "/assets/categories/grocery.svg";
+          return "/assets/categories/collectibles.svg";
         }
 
         function loadProductImage(image, deal, container) {
@@ -738,7 +752,7 @@
             if (sortMode === "price-low") return priceNumber(a) - priceNumber(b);
             if (sortMode === "price-high") return priceNumber(b) - priceNumber(a);
             if (sortMode === "discount") return discountNumber(b) - discountNumber(a);
-            return rankingNumber(b) - rankingNumber(a);
+            return earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a);
           });
 
           productGrid.innerHTML = "";
@@ -856,7 +870,7 @@
           })
         ]).then(function (feeds) {
           productDeals = (feeds[0].deals || []).filter(eligible).sort(function (a, b) {
-            return rankingNumber(b) - rankingNumber(a) || (a.priority || 99) - (b.priority || 99);
+            return earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a) || (a.priority || 99) - (b.priority || 99);
           });
           var streamingDeals = (feeds[1].deals || []).filter(eligible).sort(function (a, b) {
             return (a.priority || 99) - (b.priority || 99);

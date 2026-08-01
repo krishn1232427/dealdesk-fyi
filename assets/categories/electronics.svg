@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Electronics</title><desc id="desc">A laptop, headphones, and phone on a blue background.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#eaf5ff"/><stop offset="1" stop-color="#b9ddff"/></linearGradient><filter id="s"><feDropShadow dy="14" stdDeviation="18" flood-opacity=".15"/></filter></defs>
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/><circle cx="690" cy="92" r="160" fill="#1677d2" opacity=".14"/><g filter="url(#s)" stroke="#172b3a" stroke-width="14" stroke-linejoin="round"><rect x="160" y="150" width="360" height="230" rx="18" fill="#fff"/><path d="M116 396h448l-35 48H151z" fill="#318be0"/><rect x="566" y="191" width="112" height="218" rx="24" fill="#fff"/><path d="M345 223a85 85 0 0 1 170 0v105" fill="none"/><rect x="322" y="256" width="48" height="93" rx="20" fill="#318be0"/><rect x="490" y="256" width="48" height="93" rx="20" fill="#318be0"/></g><circle cx="622" cy="375" r="8" fill="#172b3a"/>
+  <text x="56" y="78" fill="#174d79" font-family="Arial,sans-serif" font-size="30" font-weight="700">ELECTRONICS</text>
+</svg>
