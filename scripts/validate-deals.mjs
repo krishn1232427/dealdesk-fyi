@@ -1,6 +1,10 @@
 import { readFile } from "node:fs/promises";
 
 const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
+const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-programs.json", import.meta.url), "utf8"));
+const cjPrograms = new Map((affiliateRegistry.programs || [])
+  .filter((program) => program.network === "cj")
+  .map((program) => [String(program.advertiserID), program]));
 const seenIDs = new Set();
 const errors = [];
 
@@ -40,8 +44,29 @@ for (const feedPath of feedPaths) {
       if (affiliateURL.searchParams.get("tag") !== deal.trackingID) {
         errors.push(`${label}: Amazon tag must match trackingID`);
       }
+    } else if (deal.network === "cj") {
+      const allowedCJHosts = new Set(["www.kqzyfj.com", "www.tkqlhce.com"]);
+      const expectedPath = `/click-${deal.trackingID}-${deal.linkID}`;
+      const program = cjPrograms.get(String(deal.advertiserID || ""));
+
+      if (!allowedCJHosts.has(affiliateURL.hostname)) {
+        errors.push(`${label}: CJ link must use an approved CJ tracking host`);
+      }
+      if (!deal.linkID || affiliateURL.pathname !== expectedPath) {
+        errors.push(`${label}: CJ path must match trackingID and linkID`);
+      }
+      if (!program) {
+        errors.push(`${label}: CJ advertiser is missing from affiliate-programs.json`);
+      } else {
+        if (program.applicationStatus !== "active") errors.push(`${label}: CJ advertiser relationship is not active`);
+        if (program.trackingLinkStatus !== "verified") errors.push(`${label}: CJ tracking link is not verified`);
+        if (program.commissionEligible !== true) errors.push(`${label}: CJ program is not commission eligible`);
+        if (program.publicPublishingAllowed !== true) errors.push(`${label}: CJ program is not approved for public publishing`);
+        if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: CJ URL does not match the verified program URL`);
+        if (String(program.linkID) !== String(deal.linkID)) errors.push(`${label}: CJ linkID does not match the verified program linkID`);
+      }
     } else {
-      errors.push(`${label}: network is not yet approved for the public DealDesk feed`);
+      errors.push(`${label}: network is not approved for the public DealDesk feed`);
     }
   }
 }

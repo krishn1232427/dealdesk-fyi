@@ -6,7 +6,7 @@
     <title>DealDesk — Today’s best deals, clearly priced</title>
     <meta
       name="description"
-      content="Shop hand-picked Amazon deals with the current price, original price, and savings shown clearly."
+      content="Shop verified product and subscription deals with the current price, original price, and savings shown clearly."
     />
     <meta name="theme-color" content="#ff5a1f" />
     <meta property="og:title" content="DealDesk — Today’s best deals" />
@@ -45,6 +45,7 @@
         </form>
 
         <div class="nav-links">
+          <a href="/latest-deals/">Latest deals</a>
           <a href="#streaming">Streaming</a>
           <a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a>
         </div>
@@ -77,7 +78,7 @@
               <span class="featured-saving" id="featured-saving">Today’s best value</span>
               <strong class="featured-title" id="featured-title">Loading today’s top pick…</strong>
               <span class="featured-merchant" id="featured-merchant">Amazon</span>
-              <span class="featured-cta">View deal on Amazon <span aria-hidden="true">→</span></span>
+              <span class="featured-cta" id="featured-cta">View deal details <span aria-hidden="true">→</span></span>
               <span class="featured-fineprint">Price and availability can change at checkout.</span>
             </span>
           </a>
@@ -109,6 +110,7 @@
             <button class="filter-chip" type="button" data-filter="under-100">Under $100</button>
             <button class="filter-chip" type="button" data-filter="Home">Home</button>
             <button class="filter-chip" type="button" data-filter="Tech">Tech</button>
+            <button class="filter-chip" type="button" data-filter="Subscriptions">Subscriptions</button>
             <button class="filter-chip saved-filter" type="button" data-filter="saved">
               Saved <span class="filter-count" id="saved-count">0</span>
             </button>
@@ -149,6 +151,7 @@
         </a>
         <p>Clear prices. Better clicks.</p>
         <div class="footer-links">
+          <a href="/latest-deals/">Latest deals</a>
           <a href="/support/">Support</a>
           <a href="/privacy/">Privacy</a>
           <a href="mailto:hello.launchdesk@gmail.com">Contact</a>
@@ -193,10 +196,11 @@
         }
 
         function cleanTitle(title) {
-          return String(title || "Deal").replace(/\s+[—–-]\s+\d+%\s+off\s*$/i, "");
+          return String(title || "Deal").replace(/\s+[—–-]\s+(?:up to\s+)?\d+%\s+off\s*$/i, "");
         }
 
         function discountNumber(deal) {
+          if (Number.isFinite(Number(deal && deal.discountPercent))) return Number(deal.discountPercent);
           var match = String(deal.title || "").match(/(\d+)%\s+off/i);
           return match ? Number(match[1]) : 0;
         }
@@ -206,21 +210,22 @@
           return discount ? discount + "% off" : "Top pick";
         }
 
-        function pricesFrom(summary) {
-          var matches = String(summary || "").match(/\$[\d,]+(?:\.\d{2})?/g) || [];
+        function pricesFrom(deal) {
+          var matches = String((deal && deal.summary) || deal || "").match(/\$[\d,]+(?:\.\d{2})?/g) || [];
           return {
-            current: matches[0] || "See price",
-            original: matches[1] || ""
+            current: (deal && deal.currentPrice) || matches[0] || "See price",
+            original: (deal && deal.originalPrice) || matches[1] || ""
           };
         }
 
         function priceNumber(deal) {
-          var current = pricesFrom(deal.summary).current;
+          var current = pricesFrom(deal).current;
           var value = Number(String(current).replace(/[^0-9.]/g, ""));
           return Number.isFinite(value) ? value : Number.MAX_VALUE;
         }
 
         function savingsFrom(prices, deal) {
+          if (deal && deal.savingsText) return deal.savingsText;
           var current = Number(String(prices.current || "").replace(/[^0-9.]/g, ""));
           var original = Number(String(prices.original || "").replace(/[^0-9.]/g, ""));
           var discount = discountNumber(deal);
@@ -262,7 +267,9 @@
         }
 
         function categoryIcon(category) {
-          return String(category || "").toLowerCase().indexOf("tech") !== -1 ? "⌁" : "⌂";
+          var normalized = String(category || "").toLowerCase();
+          if (normalized.indexOf("subscription") !== -1) return "✓";
+          return normalized.indexOf("tech") !== -1 ? "⌁" : "⌂";
         }
 
         function dealKey(deal) {
@@ -357,7 +364,7 @@
         }
 
         function makeProductCard(deal) {
-          var prices = pricesFrom(deal.summary);
+          var prices = pricesFrom(deal);
           var card = document.createElement("article");
           card.className = "deal-card";
           var link = document.createElement("a");
@@ -400,6 +407,9 @@
           var saving = document.createElement("span");
           saving.className = "saving-text";
           saving.textContent = savingsFrom(prices, deal);
+          var priceNote = document.createElement("span");
+          priceNote.className = "price-note";
+          priceNote.textContent = deal.priceNote || "";
           var title = document.createElement("strong");
           title.className = "deal-title";
           title.textContent = cleanTitle(deal.title);
@@ -412,6 +422,7 @@
 
           body.appendChild(priceLine);
           body.appendChild(saving);
+          if (deal.priceNote) body.appendChild(priceNote);
           body.appendChild(title);
           body.appendChild(meta);
           body.appendChild(cta);
@@ -457,7 +468,7 @@
 
         function setFeaturedDeal(deal) {
           if (!deal) return;
-          var prices = pricesFrom(deal.summary);
+          var prices = pricesFrom(deal);
           var link = document.getElementById("featured-deal-link");
           var image = document.getElementById("featured-image");
           link.href = dealPageURL(deal);
@@ -470,6 +481,7 @@
           document.getElementById("featured-saving").textContent = savingsFrom(prices, deal);
           document.getElementById("featured-title").textContent = cleanTitle(deal.title);
           document.getElementById("featured-merchant").textContent = "Sold by " + (deal.merchantName || "Amazon") + " · " + (deal.category || "Deal");
+          document.getElementById("featured-cta").innerHTML = "View deal details <span aria-hidden=\"true\">→</span>";
           featuredSave.replaceWith(makeSaveButton(deal, "featured-save"));
           featuredSave = document.getElementById("featured-save") || document.querySelector(".featured-save");
         }

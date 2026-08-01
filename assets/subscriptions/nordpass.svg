@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">NordPass password manager illustration</title>
+  <desc id="desc">A bright password vault and key on a deep indigo background.</desc>
+  <defs>
+    <linearGradient id="vault-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17113d"/>
+      <stop offset="1" stop-color="#5537b8"/>
+    </linearGradient>
+    <linearGradient id="vault" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d9d3ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="25" stdDeviation="28" flood-color="#0b0824" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="64" fill="url(#vault-bg)"/>
+  <circle cx="1048" cy="66" r="250" fill="#8167df" opacity=".25"/>
+  <circle cx="70" cy="846" r="300" fill="#08051f" opacity=".32"/>
+  <text x="82" y="128" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">NordPass</text>
+  <text x="84" y="180" fill="#cdc3ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" letter-spacing="3">PASSWORDS, SIMPLIFIED</text>
+  <g filter="url(#shadow)">
+    <rect x="254" y="270" width="692" height="460" rx="70" fill="url(#vault)"/>
+    <rect x="309" y="325" width="582" height="350" rx="42" fill="none" stroke="#7b65d5" stroke-width="14" opacity=".55"/>
+    <circle cx="600" cy="500" r="117" fill="#342478"/>
+    <circle cx="600" cy="500" r="60" fill="#b9aaff"/>
+    <path d="M600 550v76" stroke="#342478" stroke-width="30" stroke-linecap="round"/>
+    <path d="M966 408h95c46 0 83 37 83 83s-37 83-83 83h-95" fill="none" stroke="#f6d365" stroke-width="35" stroke-linecap="round"/>
+    <path d="M1048 574v84m-58-84v51" stroke="#f6d365" stroke-width="35" stroke-linecap="round"/>
+  </g>
+</svg>

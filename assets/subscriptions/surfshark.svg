@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Surfshark secure internet illustration</title>
+  <desc id="desc">A teal and navy ocean scene surrounding a protected globe.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#092f39"/>
+      <stop offset=".55" stop-color="#075a68"/>
+      <stop offset="1" stop-color="#10a9a5"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="35%" cy="25%">
+      <stop offset="0" stop-color="#ecffff"/>
+      <stop offset="1" stop-color="#75e3da"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#032329" flood-opacity=".4"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" rx="64" fill="url(#sea)"/>
+  <path d="M0 590c165-103 294 106 454 13 169-99 281 78 451-9 139-71 219-30 295 28v278H0Z" fill="#19c7bd" opacity=".42"/>
+  <path d="M0 680c167-88 289 86 456 6 172-82 300 86 469 0 125-64 205-29 275 22v192H0Z" fill="#e2fffb" opacity=".14"/>
+  <text x="82" y="128" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800">Surfshark</text>
+  <text x="84" y="180" fill="#a5f2ea" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" letter-spacing="3">ONE PLAN. MANY DEVICES.</text>
+  <g filter="url(#shadow)">
+    <circle cx="630" cy="470" r="245" fill="url(#orb)"/>
+    <ellipse cx="630" cy="470" rx="106" ry="245" fill="none" stroke="#08717a" stroke-width="17" opacity=".6"/>
+    <path d="M385 470h490M422 352h416M422 588h416" fill="none" stroke="#08717a" stroke-width="17" stroke-linecap="round" opacity=".6"/>
+    <path d="M898 320c74 38 129 39 170 39v139c0 106-67 189-170 227-103-38-170-121-170-227V359c41 0 96-1 170-39Z" fill="#fff"/>
+    <path d="m833 495 43 44 92-107" fill="none" stroke="#0aa59f" stroke-width="31" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

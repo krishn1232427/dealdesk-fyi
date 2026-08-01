@@ -24,14 +24,52 @@
 .deal-detail-price { display: flex; align-items: baseline; gap: 14px; margin: 0 0 20px; }
 .deal-detail-price strong { color: #111827; font-size: 2rem; }
 .deal-detail-price span { color: #6b7280; }
+.deal-detail-price-note { color: #504c47; font-size: .92rem; font-weight: 750; margin: -10px 0 12px; }
 .deal-detail-summary { max-width: 65ch; color: #4b5563; line-height: 1.7; }
 .deal-detail-meta, .deal-detail-fineprint { color: #6b7280; font-size: .9rem; line-height: 1.55; }
 .deal-detail-cta { align-self: flex-start; margin: 18px 0 12px; padding: 15px 20px; border-radius: 12px; background: #ff5a1f; color: #fff; font-weight: 800; text-decoration: none; }
 .deal-more { padding-top: 42px; text-align: center; }
 .deal-more a { color: #c2410c; font-weight: 750; }
+.deal-proof {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e7e2db;
+  border-radius: 22px;
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr);
+  margin-top: 28px;
+  padding: clamp(26px, 4vw, 42px);
+}
+.deal-proof h2 { margin: 10px 0 8px; font-size: clamp(1.5rem, 3vw, 2.2rem); letter-spacing: -.035em; }
+.deal-proof p { color: #5f5b55; line-height: 1.65; margin: 0; }
+.deal-proof dl { display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+.deal-proof dl div { background: #f7f5f1; border-radius: 14px; padding: 16px; text-align: left; }
+.deal-proof dt { color: #6b6862; font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.deal-proof dd { color: #171717; font-size: 1.18rem; font-weight: 900; margin: 6px 0 0; }
+.related-deals { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 22px 0 28px; text-align: left; }
+.related-deal { background: #fff; border: 1px solid #e4dfd7; border-radius: 16px; color: #171717 !important; display: grid; grid-template-columns: 112px minmax(0, 1fr); min-width: 0; overflow: hidden; text-decoration: none; transition: border-color 180ms ease, transform 180ms ease; }
+.related-deal:hover { border-color: rgba(214, 62, 11, .48); transform: translateY(-2px); }
+.related-deal-media { align-items: center; background: #f3f1ed; display: flex; justify-content: center; min-height: 126px; padding: 14px; }
+.related-deal-media img { height: 100%; max-height: 104px; object-fit: contain; width: 100%; }
+.related-deal-copy { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 15px; }
+.related-deal-copy span { align-items: baseline; display: flex; gap: 7px; }
+.related-deal-copy span strong { font-size: 1.18rem; }
+.related-deal-copy del { color: #77736d; font-size: .82rem; }
+.related-deal-copy b { font-size: .88rem; line-height: 1.35; margin-top: 8px; }
+.related-deal-copy small { color: #6b6862; font-weight: 750; margin-top: 7px; }
+.latest-trust-strip { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: -6px 0 24px; }
+.latest-trust-strip span { background: #fff; border: 1px solid #e5e0d8; border-radius: 14px; display: flex; flex-direction: column; padding: 15px 17px; }
+.latest-trust-strip strong { font-size: .88rem; }
+.latest-trust-strip small { color: #6b6862; line-height: 1.4; margin-top: 4px; }
+.latest-featured { margin-bottom: 42px; }
 @media (max-width: 760px) {
   .deal-detail-card { grid-template-columns: 1fr; }
   .deal-detail-media { min-height: 300px; padding: 24px; }
+  .deal-proof { grid-template-columns: 1fr; }
+  .deal-proof dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .related-deals, .latest-trust-strip { grid-template-columns: 1fr; }
+  .related-deal { grid-template-columns: 96px minmax(0, 1fr); }
 }
 
 * {
@@ -362,6 +400,12 @@ select {
   z-index: 1;
 }
 
+.featured-media img[src$=".svg"],
+.deal-media img[src$=".svg"] {
+  border-radius: 14px;
+  object-fit: cover;
+}
+
 .featured-deal:hover .featured-media img {
   transform: scale(1.025);
 }
@@ -456,6 +500,14 @@ select {
   font-weight: 900;
   margin-top: 12px;
   padding: 7px 9px;
+}
+
+.price-note {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.45;
+  margin-top: 9px;
 }
 
 .featured-title {
