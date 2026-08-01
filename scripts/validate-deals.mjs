@@ -11,6 +11,7 @@ const expediaPrograms = new Map((affiliateRegistry.programs || [])
 const ebayProgram = (affiliateRegistry.programs || [])
   .find((program) => program.id === "ebay-partner-network-default");
 const seenIDs = new Set();
+const seenNetworks = new Set();
 const errors = [];
 const now = Date.now();
 const validDate = (value) => value && Number.isFinite(new Date(value).getTime());
@@ -25,6 +26,7 @@ for (const feedPath of feedPaths) {
 
   for (const deal of feed.deals) {
     const label = `${feedPath}:${deal.id || "missing-id"}`;
+    if (deal.network) seenNetworks.add(deal.network);
 
     if (!deal.id || seenIDs.has(deal.id)) errors.push(`${label}: missing or duplicate id`);
     if (deal.id) seenIDs.add(deal.id);
@@ -123,8 +125,25 @@ for (const feedPath of feedPaths) {
       if (deal.trackingID !== ebayProgram?.campaignName) {
         errors.push(`${label}: eBay trackingID must match the approved campaign`);
       }
+      for (const [key, value] of Object.entries(ebayProgram?.trackingParameters || {})) {
+        if (affiliateURL.searchParams.get(key) !== value) {
+          errors.push(`${label}: eBay ${key} does not match the approved EPN tracking value`);
+        }
+      }
     } else {
       errors.push(`${label}: network is not approved for the public DealDesk feed`);
+    }
+  }
+}
+
+if (seenNetworks.has("ebay-partner-network")) {
+  const outboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+  if (!outboundPage.includes('affiliateNetwork === "ebay-partner-network"')) {
+    errors.push("out/index.html: eBay Partner Network links are not enabled in the outbound safety gate");
+  }
+  for (const value of Object.values(ebayProgram?.trackingParameters || {})) {
+    if (!outboundPage.includes(JSON.stringify(value))) {
+      errors.push(`out/index.html: approved eBay tracking value ${value} is missing`);
     }
   }
 }

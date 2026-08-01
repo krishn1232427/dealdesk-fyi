@@ -1286,6 +1286,14 @@
       "status": "Approved — active default campaign and bulk promotable-link generator verified",
       "applicationStatus": "active",
       "campaignName": "default",
+      "trackingParameters": {
+        "mkcid": "1",
+        "mkrid": "711-53200-19255-0",
+        "siteid": "0",
+        "campid": "5339181076",
+        "toolid": "20014",
+        "mkevt": "1"
+      },
       "trackingLinkStatus": "generator-access-verified",
       "offerVerifiedAt": "2026-08-01T21:40:00Z",
       "commissionEligible": true,

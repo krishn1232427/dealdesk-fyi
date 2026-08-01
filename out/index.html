@@ -33,6 +33,14 @@
     <script>
       (function () {
         var approvedAmazonTrackingID = "dealdesk-20";
+        var approvedEbayTracking = {
+          mkcid: "1",
+          mkrid: "711-53200-19255-0",
+          siteid: "0",
+          campid: "5339181076",
+          toolid: "20014",
+          mkevt: "1"
+        };
         var approvedDestinations = {
           "https://www.kqzyfj.com/click-101847838-13756265": "cj",
           "https://www.tkqlhce.com/click-101847838-15438560": "cj",
@@ -87,6 +95,18 @@
             var isAmazon = hostname === "amazon.com" || hostname === "www.amazon.com";
             if (!isAmazon || destinationURL.searchParams.get("tag") !== approvedAmazonTrackingID) {
               fail("This Amazon link is missing DealDesk's approved commission tracking ID.");
+              return null;
+            }
+            return destinationURL;
+          }
+
+          if (affiliateNetwork === "ebay-partner-network") {
+            var isEbay = destinationURL.hostname.toLowerCase() === "www.ebay.com";
+            var hasApprovedTracking = isEbay && Object.keys(approvedEbayTracking).every(function (key) {
+              return destinationURL.searchParams.get(key) === approvedEbayTracking[key];
+            });
+            if (!hasApprovedTracking) {
+              fail("This eBay link is missing DealDesk's approved EPN campaign tracking.");
               return null;
             }
             return destinationURL;
