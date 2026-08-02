@@ -1,6 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-01T21:26:40Z",
+  "updatedAt": "2026-08-02T07:33:24Z",
+  "canonicalDealDeskNetworkRegistry": "data/affiliate-networks.json",
   "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
   "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
   "competitors": [
@@ -87,7 +88,7 @@
       "access": "active",
       "publisherReference": "dealdesk-20",
       "canPublish": true,
-      "notes": "Fifteen current DealDesk listings use payable Amazon Associates links. Continue to verify price and eligibility before publishing."
+      "notes": "Current DealDesk listings use payable Amazon Associates links. Continue to verify price, image, availability, eligibility, and exact DealDesk tagging before publishing."
     },
     {
       "network": "CJ",
@@ -112,9 +113,10 @@
     },
     {
       "network": "eBay Partner Network",
-      "access": "publisher application submitted; under review",
-      "canPublish": false,
-      "nextAction": "Monitor the EPN review. After acceptance, complete any requested payout and tax steps and verify a DealDesk campaign link before publishing.",
+      "access": "active media-partner account; default campaign and promotable-link tools verified",
+      "canPublish": true,
+      "notes": "DealDesk has active EPN commission access and payable listings. This is not blanket authorization: every item still requires its exact EPN link, genuine listing image, price, condition, seller, and availability verification.",
+      "nextAction": "Continue daily link and listing validation and monitor EPN account, payment, and policy status.",
       "priority": 1
     },
     {
@@ -173,10 +175,10 @@
     },
     {
       "network": "FlexOffers",
-      "access": "publisher application opened; account not created",
+      "access": "publisher registration and DealDesk website verification submitted; review pending",
       "canPublish": false,
-      "notes": "FlexOffers advertises more than 12,000 advertiser programs plus product and promotional feeds, which is a strong match for a deals publisher.",
-      "nextAction": "Complete account creation with a user-managed password, then submit DealDesk's traffic-source profile and verification.",
+      "notes": "FlexOffers advertises broad advertiser, product, and promotional-feed coverage, but no offer is payable until DealDesk is approved and the specific advertiser and tracking link are verified.",
+      "nextAction": "Monitor the publisher review, then complete payout and tax requirements and verify the first approved advertiser link before publishing.",
       "priority": 9
     },
     {
