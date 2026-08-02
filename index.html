@@ -25,7 +25,7 @@
     <link rel="canonical" href="https://dealdesk.fyi/" />
     <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
     <link rel="apple-touch-icon" href="/assets/dealdesk-publisher-logo.png" />
-    <link rel="stylesheet" href="/styles.css?v=20260801-mobile-shell" />
+    <link rel="stylesheet" href="/styles.css?v=20260801-mobile-shell-smooth" />
   </head>
   <body>
     <span class="verification-token" aria-hidden="true">
@@ -327,7 +327,11 @@
         var headerUpdateQueued = false;
 
         function updateMobileHeader() {
-          siteHeader.classList.toggle("is-compact", mobileHeaderQuery.matches && window.scrollY > 80);
+          var compact = siteHeader.classList.contains("is-compact");
+          if (!mobileHeaderQuery.matches) compact = false;
+          else if (!compact && window.scrollY > 120) compact = true;
+          else if (compact && window.scrollY < 20) compact = false;
+          siteHeader.classList.toggle("is-compact", compact);
           headerUpdateQueued = false;
         }
 
