@@ -25,7 +25,7 @@
     <link rel="canonical" href="https://dealdesk.fyi/" />
     <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
     <link rel="apple-touch-icon" href="/assets/dealdesk-publisher-logo.png" />
-    <link rel="stylesheet" href="/styles.css?v=20260801-mobile-finder" />
+    <link rel="stylesheet" href="/styles.css?v=20260801-mobile-partners" />
   </head>
   <body>
     <span class="verification-token" aria-hidden="true">
@@ -96,6 +96,11 @@
               <h2 id="partner-showcase-heading">Shop our best partner deals</h2>
             </div>
             <p>Every offer here uses an approved, payable DealDesk link.</p>
+            <div class="partner-scroll-controls" id="partner-scroll-controls" aria-label="Browse partner deals" hidden>
+              <span>More deals</span>
+              <button id="partner-scroll-prev" type="button" aria-label="Previous partner deal" aria-controls="partner-showcase-grid">←</button>
+              <button id="partner-scroll-next" type="button" aria-label="Next partner deal" aria-controls="partner-showcase-grid">→</button>
+            </div>
           </header>
           <div class="partner-showcase-grid" id="partner-showcase-grid" aria-live="polite">
             <span class="partner-skeleton" aria-hidden="true"></span>
@@ -294,6 +299,9 @@
 
         var productGrid = document.getElementById("best-deals-grid");
         var partnerShowcaseGrid = document.getElementById("partner-showcase-grid");
+        var partnerScrollControls = document.getElementById("partner-scroll-controls");
+        var partnerScrollPrev = document.getElementById("partner-scroll-prev");
+        var partnerScrollNext = document.getElementById("partner-scroll-next");
         var streamingGrid = document.getElementById("streaming-deals-grid");
         var filterBar = document.getElementById("filter-bar");
         var searchInput = document.getElementById("deal-search");
@@ -655,6 +663,20 @@
           partnerShowcaseGrid.innerHTML = "";
           partnerDeals.forEach(function (deal) { partnerShowcaseGrid.appendChild(makePartnerCard(deal)); });
           document.getElementById("verified-partners").hidden = !partnerDeals.length;
+          requestAnimationFrame(updatePartnerScrollControls);
+        }
+
+        function updatePartnerScrollControls() {
+          var maxScroll = Math.max(0, partnerShowcaseGrid.scrollWidth - partnerShowcaseGrid.clientWidth);
+          partnerScrollControls.hidden = maxScroll < 4;
+          partnerScrollPrev.disabled = partnerShowcaseGrid.scrollLeft < 4;
+          partnerScrollNext.disabled = partnerShowcaseGrid.scrollLeft > maxScroll - 4;
+        }
+
+        function scrollPartnerDeals(direction) {
+          var firstCard = partnerShowcaseGrid.querySelector(".partner-card");
+          var cardStep = firstCard ? firstCard.getBoundingClientRect().width + 12 : partnerShowcaseGrid.clientWidth * 0.78;
+          partnerShowcaseGrid.scrollBy({ left: direction * cardStep, behavior: "smooth" });
         }
 
         function filterMatches(deal) {
@@ -852,6 +874,10 @@
           activeMerchant = merchantFilter.value;
           renderProducts();
         });
+        partnerScrollPrev.addEventListener("click", function () { scrollPartnerDeals(-1); });
+        partnerScrollNext.addEventListener("click", function () { scrollPartnerDeals(1); });
+        partnerShowcaseGrid.addEventListener("scroll", updatePartnerScrollControls, { passive: true });
+        window.addEventListener("resize", updatePartnerScrollControls);
 
         Promise.all([
           fetch("/data/best-deals.json", { cache: "no-store" }).then(function (response) {

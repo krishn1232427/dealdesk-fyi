@@ -368,6 +368,10 @@ select {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.partner-scroll-controls {
+  display: none;
+}
+
 .partner-card {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -1720,6 +1724,7 @@ select {
   }
 
   .partner-showcase-grid {
+    -webkit-overflow-scrolling: touch;
     display: grid;
     gap: 12px;
     grid-auto-columns: minmax(230px, 78vw);
@@ -1728,8 +1733,42 @@ select {
     margin-inline: -14px;
     overflow-x: auto;
     padding: 2px 14px 12px;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
     scroll-padding-inline: 14px;
     scroll-snap-type: x proximity;
+  }
+
+  .partner-scroll-controls {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+  }
+
+  .partner-scroll-controls > span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 850;
+    margin-right: 2px;
+  }
+
+  .partner-scroll-controls button {
+    align-items: center;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 18px;
+    height: 44px;
+    justify-content: center;
+    width: 44px;
+  }
+
+  .partner-scroll-controls button:disabled {
+    cursor: default;
+    opacity: 0.35;
   }
 
   .partner-card,
