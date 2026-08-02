@@ -656,7 +656,6 @@ select {
   z-index: 3;
 }
 
-.featured-placeholder,
 .product-fallback {
   align-items: center;
   background: #e5e0d8;
@@ -1198,12 +1197,6 @@ select {
   transform: scale(1.035);
 }
 
-.product-fallback {
-  font-size: 34px;
-  height: 92px;
-  width: 92px;
-}
-
 .deal-body {
   display: flex;
   flex: 1;
@@ -1314,7 +1307,7 @@ select {
 .streaming-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .stream-card {
@@ -1324,8 +1317,8 @@ select {
   color: #fff;
   display: flex;
   flex-direction: column;
-  min-height: 255px;
-  padding: 20px;
+  min-height: 330px;
+  padding: 12px;
   text-decoration: none;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
@@ -1336,23 +1329,28 @@ select {
   transform: translateY(-3px);
 }
 
-.stream-mark {
+.stream-media {
   align-items: center;
-  background: var(--accent);
-  border-radius: 11px;
-  color: #fff;
+  aspect-ratio: 16 / 9;
+  background: #f5f4f1;
+  border-radius: 12px;
   display: flex;
-  font-size: 13px;
-  height: 42px;
   justify-content: center;
-  margin-bottom: 22px;
-  width: 42px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.stream-media img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
 }
 
 .stream-body {
   display: flex;
   flex: 1;
   flex-direction: column;
+  padding: 0 8px 8px;
 }
 
 .stream-tag {

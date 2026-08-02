@@ -32,7 +32,15 @@ for (const feedPath of feedPaths) {
     if (deal.id) seenIDs.add(deal.id);
     if (deal.commissionEligible !== true) errors.push(`${label}: commissionEligible must be true`);
     if (deal.approvalStatus !== "approved") errors.push(`${label}: approvalStatus must be approved`);
-    if (deal.status !== "active") errors.push(`${label}: status must be active`);
+    if (!["active", "unavailable", "superseded"].includes(deal.status)) {
+      errors.push(`${label}: status must be active, unavailable, or superseded`);
+    }
+    if (deal.status === "unavailable" && !validDate(deal.unavailableAt)) {
+      errors.push(`${label}: unavailableAt is required for unavailable deals`);
+    }
+    if (deal.status === "superseded" && !deal.supersededBy) {
+      errors.push(`${label}: supersededBy is required for superseded deals`);
+    }
     if (!deal.trackingID) errors.push(`${label}: trackingID is required`);
     if (!deal.affiliateURL) errors.push(`${label}: affiliateURL is required`);
     if (!deal.title || !deal.summary || !deal.merchantName || !deal.category) {

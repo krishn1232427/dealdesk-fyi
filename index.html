@@ -25,7 +25,7 @@
     <link rel="canonical" href="https://dealdesk.fyi/" />
     <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
     <link rel="apple-touch-icon" href="/assets/dealdesk-publisher-logo.png" />
-    <link rel="stylesheet" href="/styles.css?v=20260802-latest-mobile-parity" />
+    <link rel="stylesheet" href="/styles.css?v=20260802-genuine-stream-images" />
     <script src="/assets/site-shell.js?v=20260802-latest-mobile-parity" defer></script>
   </head>
   <body>
@@ -64,12 +64,11 @@
           <p><strong id="live-count">Fresh</strong> hand-picked offers <span aria-hidden="true">·</span> <span id="freshness-label">Checked daily</span></p>
         </header>
 
-        <article class="featured-wrap">
+        <article class="featured-wrap" hidden>
           <a class="featured-deal" id="featured-deal-link" href="#all-deals" aria-label="View today’s top deal">
             <span class="featured-media">
               <span class="featured-badge" id="featured-badge">Top deal</span>
               <img id="featured-image" alt="" />
-              <span class="featured-placeholder" aria-hidden="true">D</span>
             </span>
             <span class="featured-content">
               <span class="featured-label">DealDesk top earning pick</span>
@@ -209,6 +208,7 @@
             <div class="deal-skeleton"></div>
             <div class="deal-skeleton"></div>
           </div>
+          <div class="load-more-wrap"><button class="load-more" id="home-load-more" type="button" hidden>Show 18 more deals</button></div>
         </section>
 
         <section class="trust-section" id="how-we-check" aria-labelledby="trust-heading" hidden>
@@ -310,6 +310,7 @@
         var sortControl = document.getElementById("deal-sort");
         var merchantFilter = document.getElementById("merchant-filter");
         var resultCount = document.getElementById("result-count");
+        var homeLoadMore = document.getElementById("home-load-more");
         var liveCount = document.getElementById("live-count");
         var freshnessLabel = document.getElementById("freshness-label");
         var savedCount = document.getElementById("saved-count");
@@ -322,15 +323,23 @@
         var searchQuery = "";
         var savedStorageKey = "dealdesk-saved-deals-v1";
         var savedDealKeys = loadSavedDealKeys();
+        var productVisibleLimit = 18;
         var toastTimer;
 
         function eligible(deal) {
+          var now = Date.now();
+          var expiresAt = deal && deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
+          var recheckAfter = deal && deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
           return Boolean(
             deal &&
+              deal.status === "active" &&
               deal.commissionEligible === true &&
               deal.approvalStatus === "approved" &&
               deal.trackingID &&
               deal.affiliateURL &&
+              deal.verifiedAt &&
+              (!deal.expiresAt || (Number.isFinite(expiresAt) && now <= expiresAt)) &&
+              (!deal.recheckAfter || (Number.isFinite(recheckAfter) && now <= recheckAfter)) &&
               hasGenuineMerchantImage(deal)
           );
         }
@@ -408,7 +417,7 @@
           return hasGenuineMerchantImage(deal) ? deal.imageURL : "";
         }
 
-        function loadProductImage(image, deal, container, rejectOffer) {
+        function loadProductImage(image, deal, container, rejectOffer, acceptOffer) {
           var primary = imageFor(deal);
           var rejected = false;
 
@@ -421,7 +430,9 @@
           }
 
           image.addEventListener("load", function () {
-            if (image.naturalWidth <= 2 || image.naturalHeight <= 2) reject();
+            if (image.naturalWidth <= 2 || image.naturalHeight <= 2) return reject();
+            container.classList.remove("image-missing");
+            if (typeof acceptOffer === "function") acceptOffer();
           });
           image.addEventListener("error", reject);
           if (!primary) return reject();
@@ -703,6 +714,7 @@
 
         function selectFilter(filter, shouldScroll) {
           activeFilter = filter;
+          productVisibleLimit = 18;
           filterBar.querySelectorAll("button[data-filter]").forEach(function (item) {
             item.classList.toggle("active", item.dataset.filter === activeFilter);
           });
@@ -769,11 +781,14 @@
             return earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a);
           });
 
+          var total = filtered.length;
+          var visibleDeals = filtered.slice(0, productVisibleLimit);
           productGrid.innerHTML = "";
-          filtered.forEach(function (deal) { productGrid.appendChild(makeProductCard(deal)); });
+          visibleDeals.forEach(function (deal) { productGrid.appendChild(makeProductCard(deal)); });
           var merchantSuffix = activeMerchant === "all" ? "" : " from " + activeMerchant;
-          resultCount.textContent = filtered.length + (activeFilter === "saved" ? (filtered.length === 1 ? " saved deal" : " saved deals") : (filtered.length === 1 ? " deal" : " deals")) + merchantSuffix;
-          if (!filtered.length) {
+          resultCount.textContent = "Showing " + visibleDeals.length + " of " + total + (activeFilter === "saved" ? (total === 1 ? " saved deal" : " saved deals") : (total === 1 ? " deal" : " deals")) + merchantSuffix;
+          homeLoadMore.hidden = total <= productVisibleLimit;
+          if (!total) {
             productGrid.innerHTML = emptyStateForFilter();
           }
         }
@@ -783,12 +798,15 @@
           var prices = pricesFrom(deal);
           var link = document.getElementById("featured-deal-link");
           var image = document.getElementById("featured-image");
+          var featured = link.closest(".featured-wrap");
+          if (featured) featured.hidden = true;
           link.href = dealPageURL(deal);
           link.setAttribute("aria-label", cleanTitle(deal.title) + ", " + prices.current + ". View deal details");
           image.alt = cleanTitle(deal.title);
           loadProductImage(image, deal, image.parentElement, function () {
-            var featured = link.closest(".featured-wrap");
             if (featured) featured.hidden = true;
+          }, function () {
+            if (featured) featured.hidden = false;
           });
           document.getElementById("featured-badge").textContent = discountFrom(deal);
           document.getElementById("featured-price").textContent = prices.current;
@@ -804,6 +822,7 @@
         }
 
         function streamingCopy(deal) {
+          if (deal.cardCopy) return deal.cardCopy;
           var title = String(deal.title || "").toLowerCase();
           if (title.indexOf("free trial") !== -1) return "Start an eligible trial and confirm the latest terms on Amazon.";
           if (title.indexOf("music") !== -1) return "Songs, playlists, and podcasts with an eligible trial or membership.";
@@ -815,14 +834,37 @@
           var link = document.createElement("a");
           link.className = "stream-card";
           link.href = dealPageURL(deal);
-          var mark = document.createElement("span");
-          mark.className = "stream-mark";
-          mark.textContent = index % 2 === 0 ? "▶" : "♫";
+          link.setAttribute("aria-label", cleanTitle(deal.title) + ". View deal details");
+          var media = document.createElement("span");
+          media.className = "stream-media";
+          var image = document.createElement("img");
+          image.alt = cleanTitle(deal.title);
+          image.width = 1200;
+          image.height = 650;
+          image.loading = "lazy";
+          image.decoding = "async";
+          image.setAttribute("data-merchant-image", "");
+          var imageRejected = false;
+          image.addEventListener("error", function () {
+            if (imageRejected) return;
+            imageRejected = true;
+            link.dataset.imageFailed = "true";
+            link.remove();
+            streamingDealCount = Math.max(0, streamingDealCount - 1);
+            liveCount.textContent = productDeals.length + streamingDealCount;
+            document.getElementById("coverage-deal-count").textContent = productDeals.length + streamingDealCount + " live offers";
+            updateDiscoveryCounts();
+            if (!streamingGrid.querySelector(".stream-card")) {
+              streamingGrid.innerHTML = '<p class="empty-state empty-state-dark">More streaming offers are on the way.</p>';
+            }
+          });
+          image.src = deal.imageURL;
+          media.appendChild(image);
           var body = document.createElement("span");
           body.className = "stream-body";
           var tag = document.createElement("span");
           tag.className = "stream-tag";
-          tag.textContent = deal.title.toLowerCase().indexOf("trial") !== -1 ? "Free trial" : "Streaming";
+          tag.textContent = deal.badgeText || (deal.title.toLowerCase().indexOf("trial") !== -1 ? "Eligibility varies" : "Streaming");
           var title = document.createElement("strong");
           title.textContent = cleanTitle(deal.title);
           var copy = document.createElement("span");
@@ -835,7 +877,7 @@
           body.appendChild(title);
           body.appendChild(copy);
           body.appendChild(cta);
-          link.appendChild(mark);
+          link.appendChild(media);
           link.appendChild(body);
           return link;
         }
@@ -867,12 +909,21 @@
 
         searchInput.addEventListener("input", function () {
           searchQuery = searchInput.value.trim().toLowerCase();
+          productVisibleLimit = 18;
           renderProducts();
         });
         searchForm.addEventListener("submit", function (event) { event.preventDefault(); });
-        sortControl.addEventListener("change", renderProducts);
+        sortControl.addEventListener("change", function () {
+          productVisibleLimit = 18;
+          renderProducts();
+        });
         merchantFilter.addEventListener("change", function () {
           activeMerchant = merchantFilter.value;
+          productVisibleLimit = 18;
+          renderProducts();
+        });
+        homeLoadMore.addEventListener("click", function () {
+          productVisibleLimit += 18;
           renderProducts();
         });
         partnerScrollPrev.addEventListener("click", function () { scrollPartnerDeals(-1); });
@@ -894,7 +945,7 @@
             return earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a) || (a.priority || 99) - (b.priority || 99);
           });
           var streamingDeals = (feeds[1].deals || []).filter(eligible).sort(function (a, b) {
-            return (a.priority || 99) - (b.priority || 99);
+            return earningPotential(b) - earningPotential(a) || (a.priority || 99) - (b.priority || 99);
           });
           streamingDealCount = streamingDeals.length;
           document.getElementById("streaming").hidden = !streamingDeals.length;

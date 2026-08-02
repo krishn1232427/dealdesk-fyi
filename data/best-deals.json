@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-01T23:05:00Z",
+  "updatedAt": "2026-08-02T10:58:40.780Z",
   "curationNote": "Commission-only feed. Every listing requires an active affiliate relationship, an exact DealDesk tracking link, and a live offer check. Prices and availability can change at any time.",
   "deals": [
     {
@@ -5430,14 +5430,16 @@
       "savingsText": "Save $17.75",
       "priceNote": "Refurbished · ✅ Night Owl 4K Wi-Fi IP 2-Way Audio Camera WNIP8 WNIP-8LTA-BS-V2 FREE SHIPPING ✅",
       "summary": "✅ Night Owl 4K Wi-Fi IP 2-Way Audio Camera WNIP8 WNIP-8LTA-BS-V2 FREE SHIPPING ✅ was listed for $26.00, reduced from $43.75 inside eBay’s active “Up to 50% off smart home picks — Shop and get a warranty.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-11-07T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 75.5,
       "rankingReason": "41% item-level saving in an active eBay promotion",
-      "priority": 245
+      "priority": 245,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-384518689755",
@@ -8941,14 +8943,16 @@
       "currentPrice": "$249.99",
       "priceNote": "Refurbished · Free shipping",
       "summary": "Dell Latitude 5320 13.3\" 16GB 512GB, Titan Grey was listed for $249.99 inside eBay’s active “Save up to 70% on laptops — Shop eBay Refurbished laptops.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-08-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 360
+      "priority": 360,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-254075847053",
@@ -9035,12 +9039,14 @@
       "summary": "Dell Precision 3540 Laptop i5-8365U | 16 GB | 256 GB NVMe | WiFi+BT | Win11 Pro was listed for $199.99, reduced from $249.99 inside eBay’s active “Save up to 70% on laptops — Shop eBay Refurbished laptops.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-08-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 65,
       "rankingReason": "20% item-level saving in an active eBay promotion",
-      "priority": 363
+      "priority": 363,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/VN0AAeSw~UhqRWJm/s-l1600.jpg"
     },
     {
       "id": "ebay-item-298044051654",
@@ -11778,14 +11784,16 @@
       "currentPrice": "$119.99",
       "priceNote": "Refurbished · Free shipping",
       "summary": "Samsung Galaxy S20 FE 5G - 128GB - Unlocked - GOOD Condition was listed for $119.99 inside eBay’s active “Up to 80% off Samsung devices — Plus a one- or two-year warranty.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2028-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 452
+      "priority": 452,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-256593723619-556848297635",
@@ -12023,12 +12031,14 @@
       "summary": "Apple iPhone 15 Plus 128GB Unlocked - Good was listed for $390.99, reduced from $899.00 inside eBay’s active “Up to 70% off smartphones — With a one to two year warranty.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-08-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 83.5,
       "rankingReason": "57% item-level saving in an active eBay promotion",
-      "priority": 460
+      "priority": 460,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/dYUAAeSw2iZpc-bT/s-l400.jpg"
     },
     {
       "id": "ebay-item-255788146936-555925536746",
@@ -13636,12 +13646,14 @@
       "summary": "Fujifilm XF 16-55mm f2.8 R LM WR Lens #055 was listed for $637.37 inside eBay’s active “Capture the memory — Up to 50% off cameras, drones and more.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 511
+      "priority": 511,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/XkIAAeSwFuJqblK2/s-l1600.jpg"
     },
     {
       "id": "ebay-item-206448540138",
@@ -13760,12 +13772,14 @@
       "summary": "Viltrox AF 135mm f1.8 LAB Nikon Z Mount #UKH was listed for $721.18 inside eBay’s active “Capture the memory — Up to 50% off cameras, drones and more.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 515
+      "priority": 515,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/SXYAAeSwAbdqblMS/s-l1600.jpg"
     },
     {
       "id": "ebay-item-306791888900",
@@ -13916,12 +13930,14 @@
       "summary": "Canon EF 14mm f2.8 L USM Lens #152 was listed for $291.50, reduced from $310.11 inside eBay’s active “Capture the memory — Up to 50% off cameras, drones and more.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 58,
       "rankingReason": "6% item-level saving in an active eBay promotion",
-      "priority": 520
+      "priority": 520,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/E-IAAeSwBrJqOwoe/s-l1600.jpg"
     },
     {
       "id": "ebay-item-358872193058",
@@ -13973,12 +13989,14 @@
       "summary": "Topps 2026 The National VJ Edgecombe NBA-47 Rookie Orange Refractor /25 CGC 10 was listed for $450.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 522
+      "priority": 522,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/5OQAAeSwZlJqbm-H/s-l1600.jpg"
     },
     {
       "id": "ebay-item-358872187414",
@@ -14059,12 +14077,14 @@
       "summary": "2023 Panini Donruss - Downtown! Jordan Addison #D-18 (RC) 📈 was listed for $400.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 525
+      "priority": 525,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/nfUAAeSwlaJpMnfE/s-l1600.jpg"
     },
     {
       "id": "ebay-item-227458089890",
@@ -14116,12 +14136,14 @@
       "summary": "BROCK BOWERS #PK-9 2025 TOPPS FINEST POWER KINGS | BLACK GEOMETRIC /10 RAIDERS was listed for $399.99 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 527
+      "priority": 527,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/PNgAAeSwlOZqbm07/s-l1600.jpg"
     },
     {
       "id": "ebay-item-318665280091",
@@ -14144,12 +14166,14 @@
       "summary": "2023-24 Premier Rookie /3 Laundry Neckline Adidas Tag Simon Edvinsson #123 was listed for $500.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 528
+      "priority": 528,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/fFwAAeSwN-lqbm1z/s-l1600.jpg"
     },
     {
       "id": "ebay-item-800445406733",
@@ -14196,17 +14220,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/sports-fan-shop/sports-trading-cards-authenticity-guarantee",
       "category": "Sports collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$375.00",
+      "currentPrice": "$360.00",
       "priceNote": "Pre-Owned",
-      "summary": "Topps UCL Chrome 2025-26 Bradley Barcola Paris Saint-Germain #63 Serial /5 SSP was listed for $375.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "Topps UCL Chrome 2025-26 Bradley Barcola Paris Saint-Germain #63 Serial /5 SSP was listed for $360.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 530
+      "priority": 530,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/Wt0AAeSw-~pqbm17/s-l1600.jpg"
     },
     {
       "id": "ebay-item-128005995992",
@@ -14258,12 +14284,14 @@
       "summary": "2026 Topps Chrome Mariano Rivera Auto On Card Yankees 2000 World Series /100💎 was listed for $350.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 532
+      "priority": 532,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/8dMAAeSwo9lqbm1m/s-l1600.jpg"
     },
     {
       "id": "ebay-item-257655378695",
@@ -14284,14 +14312,16 @@
       "currentPrice": "$375.00",
       "priceNote": "Pre-Owned",
       "summary": "Jonathan Santucci 2024 Bowman Chrome 1st Auto Orange/25 was listed for $375.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 533
+      "priority": 533,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-398239544559",
@@ -14314,12 +14344,14 @@
       "summary": "2024 Topps Chrome MLS Sapphire Aaron Bibout Padparadscha Superfractor RC 1/1 was listed for $999.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 534
+      "priority": 534,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/pOEAAeSwsIxqbm1i/s-l1600.jpg"
     },
     {
       "id": "ebay-item-398239575761",
@@ -14342,12 +14374,14 @@
       "summary": "2024 Topps Chrome MLS Sapphire Diego Gomez Padparadscha Superfractor RC 1/1 was listed for $799.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 535
+      "priority": 535,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/DUYAAeSwN09qbm~R/s-l1600.jpg"
     },
     {
       "id": "ebay-item-318665280406",
@@ -14370,12 +14404,14 @@
       "summary": "Pinnacle 1995 Pinnacle Base Set #24 Ken Griffey Jr. Seattle Mariners was listed for $250.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 536
+      "priority": 536,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/2VoAAeSwrndqbm2g/s-l1600.jpg"
     },
     {
       "id": "ebay-item-206458390969",
@@ -14485,12 +14521,14 @@
       "summary": "2023-24 Panini Contenders - Supernatural Victor Wembanyama #1 (RC) was listed for $390.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 540
+      "priority": 540,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/y6AAAeSw24Rqbm1T/s-l1600.jpg"
     },
     {
       "id": "ebay-item-318664954966",
@@ -14566,17 +14604,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/sports-fan-shop/sports-trading-cards-authenticity-guarantee",
       "category": "Sports collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$399.99",
+      "currentPrice": "$299.99",
       "priceNote": "Pre-Owned",
-      "summary": "2026 Topps Chrome NSCC Seth Hernandez Bowman Refractor National Orange #/25 was listed for $399.99 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "2026 Topps Chrome NSCC Seth Hernandez Bowman Refractor National Orange #/25 was listed for $299.99 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 543
+      "priority": 543,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/X-cAAeSwraVqbm0b/s-l1600.jpg"
     },
     {
       "id": "ebay-item-407113399795",
@@ -14628,12 +14668,14 @@
       "summary": "2022 Topps Chrome Black Yadier Molina Red Refractor /5 St. Louis Cardinals was listed for $300.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 545
+      "priority": 545,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/9EAAAeSw2~5qbm2I/s-l1600.jpg"
     },
     {
       "id": "ebay-item-206457918766",
@@ -14656,12 +14698,14 @@
       "summary": "2025 Panini Donruss - Downtown! Matthew Golden #18 (RC) PSA 9 MINT was listed for $375.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 546
+      "priority": 546,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/xlEAAeSwMndqbiMk/s-l1600.jpg"
     },
     {
       "id": "ebay-item-398239543271",
@@ -14684,12 +14728,14 @@
       "summary": "Topps Resurgence 2025 Arc Flash Auto Vernon Davis Auto Orange /25 AFA-VD 49ers was listed for $250.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 547
+      "priority": 547,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/SF0AAeSwK8xqbm2C/s-l1600.jpg"
     },
     {
       "id": "ebay-item-168581412306",
@@ -14712,12 +14758,14 @@
       "summary": "Leaf 2024 Spectacular Nick Saban Alabama Authentic Signatures Auto SI-NS1 1/2 was listed for $500.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 548
+      "priority": 548,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/c~4AAeSwEMdqbm30/s-l1600.png"
     },
     {
       "id": "ebay-item-198540538241",
@@ -14740,12 +14788,14 @@
       "summary": "Panini 2025 Absolute Kaboom! Horizontal Jayden Higgins RC Texans #36 was listed for $404.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 549
+      "priority": 549,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/ckAAAeSwPFVqbmr0/s-l1600.jpg"
     },
     {
       "id": "ebay-item-137575733431",
@@ -14824,14 +14874,16 @@
       "currentPrice": "$249.00",
       "priceNote": "Pre-Owned",
       "summary": "1998-99 Skybox Premium Soul of the Game Shaquille O'Neal #8 SG was listed for $249.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 552
+      "priority": 552,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-366579665487",
@@ -14883,12 +14935,14 @@
       "summary": "2008-09 Topps - LeBron James Chalk Toss!! #23 Great Centering And Condition!! was listed for $300.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 554
+      "priority": 554,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/4GQAAeSwU7hqbm07/s-l1600.jpg"
     },
     {
       "id": "ebay-item-327290798955",
@@ -14911,12 +14965,14 @@
       "summary": "2025 Topps Chrome MLS Cavan Sullivan RC Rookie Blue Sapphire Refractor Auto was listed for $350.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 555
+      "priority": 555,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/U8gAAeSw3Cxqbmzn/s-l1600.jpg"
     },
     {
       "id": "ebay-item-198540534860",
@@ -14939,12 +14995,14 @@
       "summary": "Topps 2022 Luminaries Miguel Cabrera Auto Relic Home Run Kings #3 /10 Tigers was listed for $350.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 556
+      "priority": 556,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/IHwAAeSwtPhqbmoJ/s-l1600.jpg"
     },
     {
       "id": "ebay-item-298551486080",
@@ -14965,14 +15023,16 @@
       "currentPrice": "$299.95",
       "priceNote": "Free shipping",
       "summary": "1995-96 Hoops Power Palette #1 Michael Jordan, BGS 7 NM w/ 9.5 Centering was listed for $299.95 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 557
+      "priority": 557,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-178364479116",
@@ -14993,14 +15053,16 @@
       "currentPrice": "$499.99",
       "priceNote": "Pre-Owned",
       "summary": "2026 Topps NSCC Kade Anderson Bowman Red Lava Refractor #/5 SSP was listed for $499.99 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 558
+      "priority": 558,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-336720454872",
@@ -15023,12 +15085,14 @@
       "summary": "2026 Bowman Baseball Munetaka Murakami Rookie #9 White Sox /150 was listed for $320.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 559
+      "priority": 559,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/Uk4AAeSw0ZZqbmsI/s-l1600.jpg"
     },
     {
       "id": "ebay-item-398239528425",
@@ -15051,12 +15115,14 @@
       "summary": "2019 Panini Certified AJ Brown Freshman Fabric Gold RPA RC Auto /10 #209 was listed for $399.99 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 560
+      "priority": 560,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/J~MAAeSwh~xqbmlk/s-l1600.jpg"
     },
     {
       "id": "ebay-item-377387359374",
@@ -15079,12 +15145,14 @@
       "summary": "2025 Bowman 1st Chrome Auto Asbel Gonzalez Orange Refractor 15/25 CPA-AG was listed for $499.95 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 561
+      "priority": 561,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/6BUAAeSwycZqbm4h/s-l1600.jpg"
     },
     {
       "id": "ebay-item-407113402214",
@@ -15107,12 +15175,14 @@
       "summary": "2022 Panini Donruss Bomb Squad #BS3 Shohei Ohtani Bomb Squad-Diamond PSA 10 was listed for $350.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 562
+      "priority": 562,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/7i8AAeSwLuxqbm~C/s-l1600.jpg"
     },
     {
       "id": "ebay-item-327290796862",
@@ -15135,12 +15205,14 @@
       "summary": "2024 National Treasures Caleb Williams Century Materials Patch Holo Silver /25 was listed for $399.99 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 563
+      "priority": 563,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/j4MAAeSwDDdqbmtG/s-l1600.png"
     },
     {
       "id": "ebay-item-178364478414",
@@ -15163,12 +15235,14 @@
       "summary": "2025 Bowman Sapphire Chrome Prospect Auto 1st Sammy Stafura #CPS-SS Orange /25 was listed for $349.99 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 564
+      "priority": 564,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/-k0AAeSwcGlqbmzS/s-l1600.jpg"
     },
     {
       "id": "ebay-item-377387320447",
@@ -15191,12 +15265,14 @@
       "summary": "2026 Topps NSCC Travis Bazzana Bowman Chrome Prospects Red Refractor /5 was listed for $250.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 565
+      "priority": 565,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/etMAAeSw6Ppqbmeu/s-l1600.jpg"
     },
     {
       "id": "ebay-item-128005984889",
@@ -15219,12 +15295,14 @@
       "summary": "2025-2026 Select Angel Di Maria Stained Glass Case Hit SSP Argentina Case Hit was listed for $500.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 566
+      "priority": 566,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/xqwAAeSw3jFqbm0-/s-l1600.jpg"
     },
     {
       "id": "ebay-item-287497523439",
@@ -15242,17 +15320,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/sports-fan-shop/sports-trading-cards-authenticity-guarantee",
       "category": "Sports collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$299.00",
+      "currentPrice": "$99.00",
       "priceNote": "Pre-Owned",
-      "summary": "Topps 2026 Series 2 Glove Work Elly De La Cruz Orange Foil /25 GW-65 was listed for $299.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "Topps 2026 Series 2 Glove Work Elly De La Cruz Orange Foil /25 GW-65 was listed for $99.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 567
+      "priority": 567,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/nfoAAeSwnxdqbmo5/s-l1600.jpg"
     },
     {
       "id": "ebay-item-128006000636",
@@ -15275,12 +15355,14 @@
       "summary": "Deion Sanders 2026 Panini Donruss Elite Kaboom! #12 Case Hit SSP was listed for $400.00 inside eBay’s active “Build an all-star roster — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 568
+      "priority": 568,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/M7MAAeSwObdqbm~F/s-l1600.jpg"
     },
     {
       "id": "ebay-item-287481273739",
@@ -15448,12 +15530,14 @@
       "summary": "Pokemon Gengar ex Holo EX Fire Red & Leaf Green 108 PSA 1 was listed for $800.00 inside eBay’s active “Build a deck of grails — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 574
+      "priority": 574,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/8gIAAeSwBDpqV7r8/s-l1600.jpg"
     },
     {
       "id": "ebay-item-127997460946",
@@ -16312,17 +16396,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/toys/collectible-card-games-authenticity-guarantee",
       "category": "Toys & hobbies",
       "badgeText": "Live eBay price",
-      "currentPrice": "$1,990.00",
+      "currentPrice": "$1990.00",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
-      "summary": "Pokemon Pikachu Cosmic Eclipse 241/236 Secret Rare PSA 10 Gem Mint was listed for $1,990.00 inside eBay’s active “Build a deck of grails — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "Pokemon Pikachu Cosmic Eclipse 241/236 Secret Rare PSA 10 Gem Mint was listed for $1990.00 inside eBay’s active “Build a deck of grails — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 604
+      "priority": 604,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/SRwAAeSwD-BqYh5h/s-l1600.jpg"
     },
     {
       "id": "ebay-item-377374262116",
@@ -16601,17 +16687,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/toys/collectible-card-games-authenticity-guarantee",
       "category": "Toys & hobbies",
       "badgeText": "Live eBay price",
-      "currentPrice": "$457.00",
+      "currentPrice": "$525.00",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
-      "summary": "2026 One Piece Azure Sea's Seven Boa Hancock Special Card #OP14-112 BGS 9.5 was listed for $457.00 inside eBay’s active “Build a deck of grails — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "summary": "2026 One Piece Azure Sea's Seven Boa Hancock Special Card #OP14-112 BGS 9.5 was listed for $525.00 inside eBay’s active “Build a deck of grails — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 614
+      "priority": 614,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-227438210700",
@@ -16634,12 +16722,14 @@
       "summary": "2026 POKEMON CHAOS RISING ILLUSTRATION RARE #116 MEGA GRENINJA EX PSA 10 was listed for $719.00 inside eBay’s active “Build a deck of grails — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 615
+      "priority": 615,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/8qYAAeSwhQNqXQ5q/s-l1600.jpg"
     },
     {
       "id": "ebay-item-127997415540",
@@ -19557,17 +19647,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$3,999.99",
+      "currentPrice": "$3999.99",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
-      "summary": "2026 Riftbound Unleashed Jhin Signature Overnumber PSA 10 was listed for $3,999.99 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "2026 Riftbound Unleashed Jhin Signature Overnumber PSA 10 was listed for $3999.99 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 716
+      "priority": 716,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/uSIAAeSwQw5qbm4D/s-l1600.jpg"
     },
     {
       "id": "ebay-item-227458089187",
@@ -19585,17 +19677,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$2,500.00",
+      "currentPrice": "$2500.00",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
-      "summary": "2023 TOPPS CHROME DISNEY100 #43 MIKE WAZOWSKI 62/100 PSA 10 was listed for $2,500.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "summary": "2023 TOPPS CHROME DISNEY100 #43 MIKE WAZOWSKI 62/100 PSA 10 was listed for $2500.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 717
+      "priority": 717,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-147476899377",
@@ -19674,14 +19768,16 @@
       "currentPrice": "$685.00",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
       "summary": "2023 Topps Chrome Disney 100 Tinker Bell Purple Refractor /299 PSA 10 was listed for $685.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 720
+      "priority": 720,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-178364129791",
@@ -19786,17 +19882,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$2,400.00",
+      "currentPrice": "$2400.00",
       "priceNote": "Free shipping",
-      "summary": "2015 Marvel Fleer Retro Doctor Strange PMG BGS 8 Marvel Precious Metal Gems /50 was listed for $2,400.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "2015 Marvel Fleer Retro Doctor Strange PMG BGS 8 Marvel Precious Metal Gems /50 was listed for $2400.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 724
+      "priority": 724,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/rh0AAeSwZl5qbm2J/s-l1600.jpg"
     },
     {
       "id": "ebay-item-206458387222",
@@ -19872,17 +19970,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$2,999.99",
+      "currentPrice": "$2999.99",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
-      "summary": "2026 Riftbound Unleashed Vex Signature Overnumber PSA 10 was listed for $2,999.99 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
-      "status": "active",
+      "summary": "2026 Riftbound Unleashed Vex Signature Overnumber PSA 10 was listed for $2999.99 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "status": "unavailable",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 727
+      "priority": 727,
+      "availabilityStatus": "OutOfStock",
+      "unavailableAt": "2026-08-02T10:58:40.780Z"
     },
     {
       "id": "ebay-item-327290810967",
@@ -19987,17 +20087,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$2,200.00",
+      "currentPrice": "$2200.00",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
-      "summary": "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #95 LIGHTNING MCQUEEN 313/399 PSA 10 was listed for $2,200.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #95 LIGHTNING MCQUEEN 313/399 PSA 10 was listed for $2200.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 731
+      "priority": 731,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/xjQAAeSwD-lqbmvh/s-l1600.jpg"
     },
     {
       "id": "ebay-item-407113384923",
@@ -20015,17 +20117,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$2,500.00",
+      "currentPrice": "$2500.00",
       "priceNote": "Confirm condition, shipping, seller, and availability on eBay",
-      "summary": "2026 Riftbound Unleashed Ivern Signature Overnumber PSA 10 was listed for $2,500.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "2026 Riftbound Unleashed Ivern Signature Overnumber PSA 10 was listed for $2500.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 732
+      "priority": 732,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/MrsAAeSwa3tqbmvG/s-l1600.jpg"
     },
     {
       "id": "ebay-item-358871682512",
@@ -20101,17 +20205,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$5,000.00",
+      "currentPrice": "$5000.00",
       "priceNote": "Pre-Owned",
-      "summary": "Topps Chrome Disney Superrefractor Caterpillar #1/1 was listed for $5,000.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "Topps Chrome Disney Superrefractor Caterpillar #1/1 was listed for $5000.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 735
+      "priority": 735,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/hn4AAeSwan9qbmCB/s-l1600.jpg"
     },
     {
       "id": "ebay-item-287496838208",
@@ -20366,12 +20472,14 @@
       "summary": "2026 Topps Chrome VeeFriends Accountable Ant Iconics was listed for $255.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 744
+      "priority": 744,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/49sAAeSwROhqbmkH/s-l1600.jpg"
     },
     {
       "id": "ebay-item-318664486392",
@@ -20423,12 +20531,14 @@
       "summary": "Captain America Winter Soldier 2025 Topps Chrome Marvel Studios Reflections #4 was listed for $275.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 746
+      "priority": 746,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/2~YAAeSwROhqbknf/s-l1600.jpg"
     },
     {
       "id": "ebay-item-298551343369",
@@ -20509,12 +20619,14 @@
       "summary": "2026 Topps Chrome Sapphire Disney Dr. Facilier Red Sapphire 5/5 SSP Bookend 🔥🔥 was listed for $600.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 749
+      "priority": 749,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/1CMAAeSwPGtqbmN~/s-l1600.jpg"
     },
     {
       "id": "ebay-item-358871728424",
@@ -20624,12 +20736,14 @@
       "summary": "Skybox The Boys Erin Moriarty And Dominique Mcelligot Dual Auto Starlight,Maeve was listed for $250.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 753
+      "priority": 753,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/3wwAAeSwxMpqbl~e/s-l1600.jpg"
     },
     {
       "id": "ebay-item-800444666760",
@@ -20705,17 +20819,19 @@
       "sourcePromotionURL": "https://www.ebay.com/e/_collectibles/non-sports-trading-cards-authenticity-guarantee",
       "category": "Collectibles",
       "badgeText": "Live eBay price",
-      "currentPrice": "$1,000.00",
+      "currentPrice": "$1000.00",
       "priceNote": "Pre-Owned",
-      "summary": "Spider-Man & Venom 2025 Topps Chrome Marvel Studios Reflections R-2 SSP was listed for $1,000.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
+      "summary": "Spider-Man & Venom 2025 Topps Chrome Marvel Studios Reflections R-2 SSP was listed for $1000.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 756
+      "priority": 756,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/mJgAAeSwW3hqbkg6/s-l1600.jpg"
     },
     {
       "id": "ebay-item-318665229198",
@@ -20738,12 +20854,14 @@
       "summary": "Tecmo Bowl Bo Jackson Battle Arena Sweetest of Sweet Ice 1st Ed 2026 EP471 was listed for $320.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 757
+      "priority": 757,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/V04AAeSwPFVqbmfS/s-l1600.jpg"
     },
     {
       "id": "ebay-item-257655076887",
@@ -20795,12 +20913,14 @@
       "summary": "2022 Star Wars Sapphire #56 A Day of Rejoicing! Orange 01/25 PSA 10 was listed for $265.00 inside eBay’s active “Build your pop culture collection — Trusted sellers, authenticity guarantee.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-12-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 759
+      "priority": 759,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/cksAAeSw6wpqbmYf/s-l1600.jpg"
     },
     {
       "id": "ebay-item-336653631060",
@@ -23132,12 +23252,14 @@
       "summary": "Marvel Spider-Man Ultimate Showdown Action Figure Set - 6pk was listed for $22.99, reduced from $44.49 inside eBay’s active “The gift of play, now for less — Turn their toy box into a treasure chest.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-02-06T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 79,
       "rankingReason": "48% item-level saving in an active eBay promotion",
-      "priority": 836
+      "priority": 836,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/biIAAeSwx71qbttq/s-l1600.jpg"
     },
     {
       "id": "ebay-item-307061813498",
@@ -23547,12 +23669,14 @@
       "summary": "LEGO Disney Princess Ariel Crystal Cavern and Treasure Chest 43254 was listed for $14.99, reduced from $29.99 inside eBay’s active “The gift of play, now for less — Turn their toy box into a treasure chest.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-02-06T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 80,
       "rankingReason": "50% item-level saving in an active eBay promotion",
-      "priority": 849
+      "priority": 849,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/vhEAAeSwrFJqbtqu/s-l1600.jpg"
     },
     {
       "id": "ebay-item-178320037079",
@@ -23738,12 +23862,14 @@
       "summary": "Beast Kingdom - Dynamic 8ction Heroes - DC Comic - Superman [New Toy] Action F was listed for $49.00, reduced from $58.99 inside eBay’s active “The gift of play, now for less — Turn their toy box into a treasure chest.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2027-02-06T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 63.5,
       "rankingReason": "17% item-level saving in an active eBay promotion",
-      "priority": 855
+      "priority": 855,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/ljEAAeSw4PxqKgPL/s-l1600.jpg"
     },
     {
       "id": "ebay-item-166819315978-466480779179",
@@ -24816,12 +24942,13 @@
       "summary": "Makita XT269T 18V LXT Lithium-Ion Brushless Cordless 2-Pc. Combo Kit was listed for $447.76, reduced from $594.00 inside eBay’s active “eBay Refurbished Makita — Up to 50% off from authorized seller.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2026-09-30T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 67.5,
       "rankingReason": "25% item-level saving in an active eBay promotion",
-      "priority": 889
+      "priority": 889,
+      "availabilityStatus": "InStock"
     },
     {
       "id": "ebay-item-256372465052-556454234750",
@@ -25071,12 +25198,14 @@
       "summary": "Samsung Galaxy S24 Ultra 256GB S928U Unlocked - Good was listed for $499.99, reduced from $1,299.99 inside eBay’s active “Up to 80% off Samsung devices — Plus a one- or two-year warranty.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2028-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 86,
       "rankingReason": "62% item-level saving in an active eBay promotion",
-      "priority": 897
+      "priority": 897,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/GjMAAeSwRv9oL3Ee/s-l400.jpg"
     },
     {
       "id": "ebay-item-157857931569-459241782961",
@@ -25724,12 +25853,14 @@
       "summary": "Samsung Galaxy S24 128GB Unlocked AT&T T-Mobile Verizon Very Good Condition was listed for $323.97, reduced from $799.99 inside eBay’s active “Up to 80% off Samsung devices — Plus a one- or two-year warranty.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2028-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 85,
       "rankingReason": "60% item-level saving in an active eBay promotion",
-      "priority": 918
+      "priority": 918,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/bCUAAeSwkElqKYd0/s-l1600.jpg"
     },
     {
       "id": "ebay-item-227252931632",
@@ -26768,12 +26899,14 @@
       "summary": "LENOVO ThinkPad P15s 15.6\" Laptop Core i7 32Gb Ram 512gb NVME Nvidia P520 W11Pro was listed for $499.99 inside eBay’s active “Save up to 70% on Lenovo — Shop eBay Refurbished.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2028-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 953
+      "priority": 953,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/yUQAAOSwjXpoFVR4/s-l1600.jpg"
     },
     {
       "id": "ebay-item-277471921016",
@@ -30312,12 +30445,14 @@
       "summary": "Apple iPad Pro 11-inch M4 Chip 256GB Wi-Fi Black MVV83LL/A Excellent Condition was listed for $736.00 inside eBay’s active “Save on Excellent Refurbished tech — Like-new condition, plus a one-year warranty.” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.",
       "status": "active",
       "publishedAt": "2026-08-01T23:05:00Z",
-      "verifiedAt": "2026-08-01T23:05:00Z",
+      "verifiedAt": "2026-08-02T10:58:40.780Z",
       "expiresAt": "2028-01-31T23:59:59Z",
-      "recheckAfter": "2026-08-02T23:05:00.000Z",
+      "recheckAfter": "2026-08-03T10:58:40.780Z",
       "rankingScore": 52,
       "rankingReason": "Current item price in an active eBay promotion",
-      "priority": 1065
+      "priority": 1065,
+      "availabilityStatus": "InStock",
+      "imageURL": "https://i.ebayimg.com/images/g/zqQAAeSw0pJo4DQD/s-l1600.jpg"
     },
     {
       "id": "ebay-item-156298884340-458990418421",
