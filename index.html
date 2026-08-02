@@ -25,7 +25,8 @@
     <link rel="canonical" href="https://dealdesk.fyi/" />
     <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
     <link rel="apple-touch-icon" href="/assets/dealdesk-publisher-logo.png" />
-    <link rel="stylesheet" href="/styles.css?v=20260801-mobile-shell-smooth" />
+    <link rel="stylesheet" href="/styles.css?v=20260802-latest-mobile-parity" />
+    <script src="/assets/site-shell.js?v=20260802-latest-mobile-parity" defer></script>
   </head>
   <body>
     <span class="verification-token" aria-hidden="true">
@@ -314,8 +315,6 @@
         var savedCount = document.getElementById("saved-count");
         var featuredSave = document.getElementById("featured-save");
         var saveToast = document.getElementById("save-toast");
-        var siteHeader = document.querySelector(".site-header");
-        var mobileHeaderQuery = window.matchMedia("(max-width: 740px)");
         var productDeals = [];
         var streamingDealCount = 0;
         var activeFilter = "all";
@@ -324,22 +323,6 @@
         var savedStorageKey = "dealdesk-saved-deals-v1";
         var savedDealKeys = loadSavedDealKeys();
         var toastTimer;
-        var headerUpdateQueued = false;
-
-        function updateMobileHeader() {
-          var compact = siteHeader.classList.contains("is-compact");
-          if (!mobileHeaderQuery.matches) compact = false;
-          else if (!compact && window.scrollY > 120) compact = true;
-          else if (compact && window.scrollY < 20) compact = false;
-          siteHeader.classList.toggle("is-compact", compact);
-          headerUpdateQueued = false;
-        }
-
-        function queueMobileHeaderUpdate() {
-          if (headerUpdateQueued) return;
-          headerUpdateQueued = true;
-          requestAnimationFrame(updateMobileHeader);
-        }
 
         function eligible(deal) {
           return Boolean(
@@ -896,9 +879,6 @@
         partnerScrollNext.addEventListener("click", function () { scrollPartnerDeals(1); });
         partnerShowcaseGrid.addEventListener("scroll", updatePartnerScrollControls, { passive: true });
         window.addEventListener("resize", updatePartnerScrollControls);
-        window.addEventListener("scroll", queueMobileHeaderUpdate, { passive: true });
-        window.addEventListener("resize", queueMobileHeaderUpdate);
-        updateMobileHeader();
 
         Promise.all([
           fetch("/data/best-deals.json", { cache: "no-store" }).then(function (response) {

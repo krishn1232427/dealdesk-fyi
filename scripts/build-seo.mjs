@@ -341,10 +341,11 @@ const latestHTML = `<!doctype html>
   <meta property="og:url" content="${site}/latest-deals/" />
   <meta property="og:image" content="${site}/assets/dealdesk-publisher-logo.png" />
   <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=20260802-latest-mobile-parity" />
+  <script src="/assets/site-shell.js?v=20260802-latest-mobile-parity" defer></script>
   <script type="application/ld+json">${JSON.stringify(latestSchema).replaceAll("<", "\\u003c")}</script>
 </head>
-<body>
+<body class="latest-page">
   <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#deal-categories">Categories</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
   <main class="deal-home shell">
     <header class="page-heading">
