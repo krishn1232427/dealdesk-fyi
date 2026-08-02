@@ -1,6 +1,6 @@
 # DealDesk affiliate-network register
 
-Last refreshed: 2026-08-02T07:33:24Z
+Last refreshed: 2026-08-02T09:43:38Z
 
 This is DealDesk's cumulative working list of 45 credible affiliate networks, commerce platforms, and important merchant-owned programs. It is refreshed daily because the market is open-ended and networks, signup routes, ownership, and DealDesk approvals change.
 
@@ -22,12 +22,11 @@ This is DealDesk's cumulative working list of 45 credible affiliate networks, co
 | [Awin](https://www.awin.com/us/) | affiliate network | global | active no payable program | No | [Apply / enroll](https://ui.awin.com/publisher-signup/en/awin) | Monitor advertiser decisions and verify the first approved merchant's exact payable link. |
 | [impact.com](https://impact.com/) | partnership network | global | active limited | No | [Apply / enroll](https://app.impact.com/signup/none/create-new-mediapartner-account-flow.ihtml) | Correct or upgrade the account type before applying to brands. |
 | [Rakuten Advertising](https://rakutenadvertising.com/) | affiliate network | global | active no payable program | No | [Apply / enroll](https://rakutenadvertising.com/affiliate/) | Complete the publisher profile and monitor current applications. |
-| [FlexOffers](https://www.flexoffers.com/) | affiliate network | global, US | pending review | No | [Apply / enroll](https://publisherprobeta.flexoffers.com/signup/accountInfo) | Monitor the stated review window and complete payout, tax, and first-link verification only after acceptance. |
 | [Sovrn Commerce](https://www.sovrn.com/commerce/) | commerce subnetwork | global | pending review | No | [Apply / enroll](https://platform.sovrn.com/signup) | Monitor site approval, then verify merchant terms and the first exact campaign link. |
 | [PartnerStack](https://partnerstack.com/) | saas partner network | global | onboarding | No | [Apply / enroll](https://dash.partnerstack.com/handshake) | Complete the Network profile only with truthful owner-supplied identity and audience information. |
 | [Travelpayouts](https://www.travelpayouts.com/) | travel partner network | global | onboarding | No | [Apply / enroll](https://www.travelpayouts.com/) | Enroll manually in suitable programs and verify each exact DealDesk link. |
 | [B&H Photo Affiliate Program](https://www.bhphotovideo.com/c/find/shared/affiliates.jsp) | direct program | US | pending review | No | [Apply / enroll](https://affiliates.bhphotovideo.com/app/) | Monitor approval and verify the first payable DealDesk BI/KBID link before publishing. |
-| [DiscoverCars.com Affiliate Program](https://www.discovercars.com/affiliate) | direct program | global | onboarding | No | [Apply / enroll](https://www.discovercars.com/affiliate) | Complete emailed onboarding instructions and verify a tracked rental offer. |
+| [DiscoverCars.com Affiliate Program](https://www.discovercars.com/affiliate) | direct program | global | onboarding | No | [Apply / enroll](https://www.discovercars.com/affiliate) | Sign in to the affiliate dashboard, verify the exact a_aid link and payout setup, then verify a live rental offer with genuine merchant imagery. |
 
 ## Networks and programs to monitor
 
@@ -65,6 +64,12 @@ This is DealDesk's cumulative working list of 45 credible affiliate networks, co
 | [Perform&#91;cb&#93;](https://www.performcb.com/) | cpa network | global | not started | No | [Apply / enroll](https://login.performcb.com/auth/register/affiliate) | Monitor only for reputable consumer offers with clear customer value. |
 | [Walmart Affiliates](https://affiliates.walmart.com/) | direct program | US | not started | No | [Apply / enroll](https://affiliates.walmart.com/) | Confirm current publisher eligibility and network routing before applying. |
 | [Walmart Creator](https://creator.walmart.com/) | direct creator program | US | not started | No | [Apply / enroll](https://creator.walmart.com/) | Keep separate from Walmart Affiliates and apply only with truthful qualifying creator channels. |
+
+## Declined or unavailable
+
+| Network / program | Type | Region | DealDesk status | Can publish paid offers? | Publisher route | Next action |
+|---|---|---|---|---|---|---|
+| [FlexOffers](https://www.flexoffers.com/) | affiliate network | global, US | declined | No | [Apply / enroll](https://publisherprobeta.flexoffers.com/signup/accountInfo) | Resolve the cited traffic-source and site-quality concerns with FlexOffers support before any reapplication; do not publish FlexOffers links. |
 
 ## Legacy names and migrations
 

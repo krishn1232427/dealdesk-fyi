@@ -195,8 +195,7 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
       <div class="deal-detail-content">
         <span class="page-kicker"><span aria-hidden="true"></span> ${esc(deal.category || "Featured deal")}</span>
         <h1>${esc(title)}</h1>
-        ${prices.current ? `<p class="deal-detail-price"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? ` <span>${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : ` <span>${esc(deal.referenceLabel || "Reference price")} <del>${esc(prices.original)}</del></span>` : ""}</p>` : ""}
-${deal.priceNote ? `        <p class="deal-detail-price-note">${esc(deal.priceNote)}</p>\n` : ""}        <p class="deal-detail-summary">${esc(description)}</p>
+${prices.current ? `        <p class="deal-detail-price"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? ` <span>${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : ` <span>${esc(deal.referenceLabel || "Reference price")} <del>${esc(prices.original)}</del></span>` : ""}</p>\n` : ""}${deal.priceNote ? `        <p class="deal-detail-price-note">${esc(deal.priceNote)}</p>\n` : ""}        <p class="deal-detail-summary">${esc(description)}</p>
         <p class="deal-detail-meta">Listed by ${esc(deal.merchantName || "Amazon")} · Checked ${esc(isoDate(deal.verifiedAt))} · ${esc(lifecycleText(deal))}</p>
         <a class="deal-detail-cta" href="${esc(outboundURL(deal))}" rel="sponsored nofollow noopener" target="_blank">View live deal on ${esc(deal.merchantName || "Amazon")} <span aria-hidden="true">→</span></a>
         <p class="deal-detail-fineprint">Affiliate link: DealDesk may earn a commission. Price, eligibility, and availability can change; confirm final terms with the merchant.</p>

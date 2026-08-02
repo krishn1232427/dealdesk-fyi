@@ -58,6 +58,7 @@ const rows = (items) => items
 const payable = registry.networks.filter((network) => network.canPublish);
 const inProgress = registry.networks.filter((network) => ["active_no_payable_program", "active_limited", "pending_review", "onboarding"].includes(network.dealDeskStatus));
 const watchlist = registry.networks.filter((network) => ["not_started", "migrating"].includes(network.dealDeskStatus));
+const unavailable = registry.networks.filter((network) => ["declined", "closed"].includes(network.dealDeskStatus));
 
 const tableHeader = "| Network / program | Type | Region | DealDesk status | Can publish paid offers? | Publisher route | Next action |\n|---|---|---|---|---|---|---|";
 const legacyRows = registry.legacyMappings
@@ -89,6 +90,11 @@ ${rows(inProgress)}
 
 ${tableHeader}
 ${rows(watchlist)}
+
+## Declined or unavailable
+
+${tableHeader}
+${rows(unavailable)}
 
 ## Legacy names and migrations
 

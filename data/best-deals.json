@@ -15,6 +15,7 @@
       "commission": "4% of net transaction value on qualifying completed hotel stays",
       "merchantURL": "https://www.hotels.com/lp/b/coupons?locale=en_US&pos=HCOM_US&siteid=300000001",
       "merchantName": "Hotels.com",
+      "imageURL": "https://images.trvl-media.com/place/179899/eb7e249d-ccd0-4342-bf0d-7a6024d66dc9.jpg?impolicy=fcrop&w=1000&h=563&p=1&q=medium",
       "category": "Travel & hotels",
       "badgeText": "10%+ off",
       "currentPrice": "10%+ off",

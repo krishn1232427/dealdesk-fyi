@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-02T07:33:24Z",
+  "updatedAt": "2026-08-02T09:43:38Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -24,6 +24,7 @@
     "active_no_payable_program": "The publisher account is active, but no approved payable merchant relationship is currently available.",
     "active_limited": "The account exists, but its type or access level blocks the programs DealDesk needs.",
     "pending_review": "An application or site review is pending.",
+    "declined": "DealDesk's application was declined; no offer may publish through this network unless a later approval is verified.",
     "onboarding": "An account exists, but required onboarding or program-level verification is incomplete.",
     "not_started": "No DealDesk application has been submitted.",
     "migrating": "The platform is being moved into another canonical network and should not receive a new standalone application.",
@@ -150,14 +151,14 @@
       "publisherSignupUrl": "https://publisherprobeta.flexoffers.com/signup/accountInfo",
       "dashboardUrl": "https://publisherprobeta.flexoffers.com/",
       "priority": "high",
-      "dealDeskStatus": "pending_review",
+      "dealDeskStatus": "declined",
       "accountReference": null,
       "commissionAccess": false,
       "canPublish": false,
-      "blockingReason": "DealDesk's publisher registration and website verification were submitted; approval is pending.",
-      "nextAction": "Monitor the stated review window and complete payout, tax, and first-link verification only after acceptance.",
-      "lastCheckedAt": "2026-08-02T07:33:24Z",
-      "evidenceUrl": "https://publisherprobeta.flexoffers.com/register/confirmation"
+      "blockingReason": "FlexOffers declined DealDesk's publisher application and traffic source on August 1, 2026; no FlexOffers link is payable.",
+      "nextAction": "Resolve the cited traffic-source and site-quality concerns with FlexOffers support before any reapplication; do not publish FlexOffers links.",
+      "lastCheckedAt": "2026-08-02T09:43:38Z",
+      "evidenceUrl": "https://publisherprobeta.flexoffers.com/"
     },
     {
       "id": "sovrn-commerce",
@@ -173,9 +174,9 @@
       "accountReference": "campaign 6614868",
       "commissionAccess": false,
       "canPublish": false,
-      "blockingReason": "The DealDesk site remains under review; generator access does not make pre-approval links payable.",
+      "blockingReason": "The Sovrn dashboard shows dealdesk.fyi in Pending and no sites in Approved; generator access does not make pre-approval links payable.",
       "nextAction": "Monitor site approval, then verify merchant terms and the first exact campaign link.",
-      "lastCheckedAt": "2026-08-02T07:33:24Z",
+      "lastCheckedAt": "2026-08-02T09:43:38Z",
       "evidenceUrl": "https://knowledge.sovrn.com/kb/connect-your-affiliate-networks-to-commerce"
     },
     {
@@ -914,9 +915,9 @@
       "accountReference": "dealdeskfyi",
       "commissionAccess": false,
       "canPublish": false,
-      "blockingReason": "The account exists, but onboarding, payout settings, and an exact payable tracking link are not verified.",
-      "nextAction": "Complete emailed onboarding instructions and verify a tracked rental offer.",
-      "lastCheckedAt": "2026-08-02T07:33:24Z",
+      "blockingReason": "DiscoverCars approved DealDesk's affiliate account on August 1, 2026, but the exact a_aid tracking ID and payout setup are not verified.",
+      "nextAction": "Sign in to the affiliate dashboard, verify the exact a_aid link and payout setup, then verify a live rental offer with genuine merchant imagery.",
+      "lastCheckedAt": "2026-08-02T09:43:38Z",
       "evidenceUrl": "https://www.discovercars.com/affiliate"
     }
   ]
