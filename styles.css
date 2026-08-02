@@ -1646,15 +1646,15 @@ select {
   }
 
   .deals-section {
-    padding-top: 56px;
+    padding-top: 40px;
   }
 
   .deals-heading-row {
     gap: 20px;
   }
 
-  .category-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .category-discovery {
+    display: none;
   }
 
   .deal-controls {
