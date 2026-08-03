@@ -318,7 +318,7 @@
         var saveToast = document.getElementById("save-toast");
         var productDeals = [];
         var streamingDealCount = 0;
-        var payoutReadyByNetwork = {};
+        var commissionAccrualReadyByNetwork = {};
         var activeFilter = "all";
         var activeMerchant = "all";
         var searchQuery = "";
@@ -336,7 +336,7 @@
               deal.status === "active" &&
               deal.commissionEligible === true &&
               deal.approvalStatus === "approved" &&
-              payoutReadyByNetwork[deal.network] === true &&
+              commissionAccrualReadyByNetwork[deal.network] === true &&
               deal.trackingID &&
               deal.affiliateURL &&
               deal.verifiedAt &&
@@ -950,8 +950,8 @@
             return response.json();
           })
         ]).then(function (feeds) {
-          payoutReadyByNetwork = (feeds[2].publisherAccounts || []).reduce(function (map, account) {
-            map[account.network] = account.payoutReady;
+          commissionAccrualReadyByNetwork = (feeds[2].publisherAccounts || []).reduce(function (map, account) {
+            map[account.network] = account.commissionAccrualReady;
             return map;
           }, {});
           productDeals = (feeds[0].deals || []).filter(eligible).sort(function (a, b) {

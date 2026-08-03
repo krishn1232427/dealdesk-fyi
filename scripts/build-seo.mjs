@@ -10,16 +10,16 @@ const feeds = await Promise.all([
   readFile(resolve(root, "data/streaming-deals.json"), "utf8").then(JSON.parse)
 ]);
 const affiliateRegistry = JSON.parse(await readFile(resolve(root, "data/affiliate-programs.json"), "utf8"));
-const payoutReadyByNetwork = new Map((affiliateRegistry.publisherAccounts || [])
-  .map((account) => [account.network, account.payoutReady]));
-const hasPayoutPath = (deal) => payoutReadyByNetwork.get(deal.network) === true;
+const commissionAccrualReadyByNetwork = new Map((affiliateRegistry.publisherAccounts || [])
+  .map((account) => [account.network, account.commissionAccrualReady]));
+const hasCommissionPath = (deal) => commissionAccrualReadyByNetwork.get(deal.network) === true;
 const isLiveDeal = (deal) => {
   const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
   const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
   return deal.status === "active" &&
     deal.commissionEligible === true &&
     deal.approvalStatus === "approved" &&
-    hasPayoutPath(deal) &&
+    hasCommissionPath(deal) &&
     Boolean(deal.affiliateURL) &&
     Boolean(deal.verifiedAt) &&
     now <= expiresAt &&
@@ -45,11 +45,11 @@ const hasGenuineMerchantImage = (deal) => {
   }
 };
 const allFeedDeals = feeds.flatMap((feed) => feed.deals || []);
-const payoutBlockedDealCount = allFeedDeals.filter((deal) => {
+const commissionBlockedDealCount = allFeedDeals.filter((deal) => {
   const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
   const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
   return deal.status === "active" && deal.commissionEligible === true &&
-    deal.approvalStatus === "approved" && !hasPayoutPath(deal) &&
+    deal.approvalStatus === "approved" && !hasCommissionPath(deal) &&
     Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
     now <= expiresAt && now <= recheckAfter;
 }).length;
@@ -756,4 +756,4 @@ await writeFile(resolve(root, "404.html"), `<!doctype html>
   <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>That page is no longer available</h1><p class="deal-detail-summary">The offer may have been removed because it no longer meets DealDesk's publishing requirements.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse current verified deals</a></p></div></article></main>
 </body>
 </html>\n`);
-console.log(`Built ${deals.length} payout-ready image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${payoutBlockedDealCount} offers on payout-blocked accounts.`);
+console.log(`Built ${deals.length} commission-qualified image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${commissionBlockedDealCount} offers without a verified commission-accrual path.`);

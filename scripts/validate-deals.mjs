@@ -20,9 +20,9 @@ const rakutenPrograms = new Map((affiliateRegistry.programs || [])
   .map((program) => [String(program.advertiserID), program]));
 const ebayProgram = (affiliateRegistry.programs || [])
   .find((program) => program.id === "ebay-partner-network-default");
-const payoutReadyByNetwork = new Map((affiliateRegistry.publisherAccounts || [])
-  .map((account) => [account.network, account.payoutReady]));
-const hasPayoutPath = (deal) => payoutReadyByNetwork.get(deal.network) === true;
+const commissionAccrualReadyByNetwork = new Map((affiliateRegistry.publisherAccounts || [])
+  .map((account) => [account.network, account.commissionAccrualReady]));
+const hasCommissionPath = (deal) => commissionAccrualReadyByNetwork.get(deal.network) === true;
 const seenIDs = new Set();
 const seenNetworks = new Set();
 const seenDeals = [];
@@ -56,7 +56,7 @@ const isPublicDeal = (deal) => {
   const expiresAt = validDate(deal.expiresAt) ? new Date(deal.expiresAt).getTime() : Infinity;
   const recheckAfter = validDate(deal.recheckAfter) ? new Date(deal.recheckAfter).getTime() : Infinity;
   return deal.status === "active" && deal.commissionEligible === true &&
-    deal.approvalStatus === "approved" && hasPayoutPath(deal) &&
+    deal.approvalStatus === "approved" && hasCommissionPath(deal) &&
     Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
     now <= expiresAt && now <= recheckAfter && hasGenuineMerchantImage(deal);
 };
@@ -451,8 +451,8 @@ const lifecycleOutboundPage = await readFile(new URL("../out/index.html", import
 const lifecycleWorkerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
 const homepageSource = await readFile(new URL("../index.html", import.meta.url), "utf8");
 if (!homepageSource.includes('/data/affiliate-programs.json') ||
-    !homepageSource.includes('payoutReadyByNetwork[deal.network] === true')) {
-  errors.push("index.html: homepage listings must fail closed against verified network payout readiness");
+    !homepageSource.includes('commissionAccrualReadyByNetwork[deal.network] === true')) {
+  errors.push("index.html: homepage listings must fail closed against verified network commission-accrual readiness");
 }
 if (!lifecycleOutboundPage.includes("/data/outbound-approvals.json") ||
     !lifecycleOutboundPage.includes("deal.validUntil === requestedValidUntil") ||
@@ -501,4 +501,4 @@ if (errors.length) {
 }
 
 if (staleDeals.length) console.log(`Withheld ${staleDeals.length} expired or due-for-recheck deals from public output.`);
-console.log(`Validated ${seenIDs.size} affiliate deal records; ${publicDeals.length} are currently payout-ready and public.`);
+console.log(`Validated ${seenIDs.size} affiliate deal records; ${publicDeals.length} are currently commission-qualified and public.`);
