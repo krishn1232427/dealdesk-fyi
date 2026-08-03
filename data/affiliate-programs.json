@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-02T09:43:38Z",
+  "updatedAt": "2026-08-03T07:21:53Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -1014,13 +1014,16 @@
       "epc": "0.52 USD",
       "productFeed": true,
       "productCount": 242,
-      "status": "Pending advertiser approval — do not publish tracked links yet",
-      "applicationStatus": "pending",
+      "status": "Advertiser acceptance confirmed by BLUETTI US welcome email; exact payable Awin link and live offer remain unverified — do not publish",
+      "applicationStatus": "approved",
       "appliedAt": "2026-08-01T18:26:00Z",
+      "approvalEvidence": "BLUETTI US Affiliate Partnership Team welcome email supplied by the user on 2026-08-03",
+      "reviewedAt": "2026-08-03T07:21:53Z",
+      "trackingLinkStatus": "not_verified",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
-      "restrictions": "No BLUETTI trademark bidding or direct-link paid advertising. Promote only program-authorized coupon codes and assets, use an FTC disclosure, and avoid misleading claims or urgency.",
-      "summary": "DealDesk submitted a focused application to BLUETTI US. Its 5%-10% rate on a stated 1,000+ USD average order value gives the program strong expected payout potential, while portable power and home backup products fit the Tech and Home audience. Publication remains blocked until advertiser approval, an authorized live offer, and a DealDesk-specific payable link are verified.",
+      "restrictions": "No BLUETTI trademark bidding or direct-link paid advertising. Promote only program-authorized coupon codes and assets, use an FTC disclosure, and avoid misleading claims or urgency. The general offer of coupon, campaign, and creative support is not authorization for any specific code, promotion, or asset.",
+      "summary": "The BLUETTI US Affiliate Partnership Team sent a welcome message confirming onboarding and offered support for authorized coupons, seasonal campaigns, creatives, product assets, and possible commission optimization. The message confirms advertiser acceptance but does not verify a specific live promotion, a DealDesk-specific payable Awin link, current payable terms, or payout onboarding. Publication remains blocked until the signed-in Awin relationship, exact tracking link, live customer offer, and genuine merchant or product imagery are verified.",
       "priority": 46
     },
     {
