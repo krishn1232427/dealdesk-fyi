@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T09:00:17Z",
+  "updatedAt": "2026-08-03T16:13:15Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -120,7 +120,7 @@
       "canPublish": false,
       "blockingReason": "BLUETTI US advertiser acceptance is evidenced by a welcome email, but the signed-in Awin relationship, exact DealDesk tracking link, live offer, and payout onboarding have not been verified.",
       "nextAction": "Open BLUETTI US in the signed-in Awin dashboard, confirm Joined/Active status and current terms, generate and test the exact DealDesk tracking link, verify payout onboarding, then verify a live offer and genuine imagery before publication.",
-      "lastCheckedAt": "2026-08-03T07:21:53Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.awin.com/us/news-and-events/awin-news/awin-shareasale-new-era"
     },
     {
@@ -139,7 +139,7 @@
       "canPublish": true,
       "blockingReason": null,
       "nextAction": "Keep NordVPN, Surfshark, and NordPass links verified; monitor pending advertiser applications.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.cj.com/publisher"
     },
     {
@@ -158,7 +158,7 @@
       "canPublish": false,
       "blockingReason": "The signed-in media-partner account cannot access Brands Marketplace or attach the retail campaigns DealDesk needs.",
       "nextAction": "Correct or upgrade the account type before applying to brands.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://impact.com/partners/affiliate-partners/"
     },
     {
@@ -177,7 +177,7 @@
       "canPublish": true,
       "blockingReason": null,
       "nextAction": "Recheck the verified Sensibo product, active offer, exclusion list, price, availability, and imagery every 24 hours; continue reviewing pending Rakuten advertiser applications separately.",
-      "lastCheckedAt": "2026-08-03T09:00:17Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://rakutenadvertising.com/affiliate/"
     },
     {
@@ -196,7 +196,7 @@
       "canPublish": false,
       "blockingReason": "FlexOffers declined DealDesk's publisher application and traffic source on August 1, 2026; no FlexOffers link is payable.",
       "nextAction": "Resolve the cited traffic-source and site-quality concerns with FlexOffers support before any reapplication; do not publish FlexOffers links.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://publisherprobeta.flexoffers.com/"
     },
     {
@@ -215,7 +215,7 @@
       "canPublish": false,
       "blockingReason": "The Sovrn dashboard shows dealdesk.fyi in Pending and no sites in Approved; generator access does not make pre-approval links payable.",
       "nextAction": "Monitor site approval, then verify merchant terms and the first exact campaign link.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://knowledge.sovrn.com/kb/connect-your-affiliate-networks-to-commerce"
     },
     {
@@ -234,7 +234,7 @@
       "canPublish": false,
       "blockingReason": "The application requires owner-confirmed business contact and mailing details.",
       "nextAction": "Apply after the account owner confirms the required contact information.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.avantlink.com/signup/publisher-united-states/"
     },
     {
@@ -244,7 +244,9 @@
       "regions": ["Europe", "US", "Australia"],
       "focus": ["retail", "travel", "electronics", "fashion"],
       "officialUrl": "https://www.webgains.com/public/en/",
-      "publisherSignupUrl": "https://www.webgains.com/front/user/signup/",
+      "ownershipNote": "Webgains is part of ad pepper media International N.V. and remains an active affiliate network.",
+      "ownershipEvidenceUrl": "https://www.webgains.com/public/en/webgains-company-details/",
+      "publisherSignupUrl": "https://platform.webgains.io/publisher/sign-up?locale=en-GB",
       "dashboardUrl": "https://platform.webgains.io/",
       "priority": "high",
       "dealDeskStatus": "not_started",
@@ -253,7 +255,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk publisher account or approved program is verified.",
       "nextAction": "Review US merchant coverage before applying; some enrollment is country-specific.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.webgains.com/public/en/publishers/"
     },
     {
@@ -272,7 +274,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk publisher account or approved program is verified.",
       "nextAction": "Check current US-accessible merchants and application requirements.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.tradedoubler.com/register"
     },
     {
@@ -291,7 +293,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk partner account or approved campaign is verified.",
       "nextAction": "Apply through the official partner signup and assess both Partnerize and Ascend campaign access.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://partnerize.com/partners"
     },
     {
@@ -310,7 +312,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk application or approved merchant is verified.",
       "nextAction": "Review current merchant fit and manual approval requirements before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.linkconnector.com/affiliates/"
     },
     {
@@ -320,6 +322,8 @@
       "regions": ["global", "Europe", "Asia"],
       "focus": ["ecommerce", "services", "international merchants"],
       "officialUrl": "https://www.admitad.com/",
+      "ownershipNote": "Admitad became part of the Mitgo parent holding company in 2023 and continues to operate as its partner-marketing brand.",
+      "ownershipEvidenceUrl": "https://careers.mitgo.com/blog/meet-mitgo-the-new-parent-holding-company-to-assume-all-previous-admitad-entities/",
       "publisherSignupUrl": "https://store.admitad.com/en/welcome/",
       "dashboardUrl": "https://store.admitad.com/en/sso/login/",
       "priority": "high",
@@ -329,7 +333,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account or approved program is verified.",
       "nextAction": "Verify the current US publisher enrollment route and merchant coverage.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.admitad.com/"
     },
     {
@@ -348,7 +352,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account or product-level quality review is verified.",
       "nextAction": "Apply only if products can pass strict claims, refund-risk, merchant-quality, and customer-value review.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.clickbank.com/affiliates/"
     },
     {
@@ -358,6 +362,8 @@
       "regions": ["global"],
       "focus": ["B2B SaaS", "subscriptions", "recurring commissions"],
       "officialUrl": "https://partnerstack.com/",
+      "ownershipNote": "PartnerStack became part of AppDirect in April 2026 and continues to operate as PartnerStack.",
+      "ownershipEvidenceUrl": "https://partnerstack.com/company",
       "publisherSignupUrl": "https://dash.partnerstack.com/handshake",
       "dashboardUrl": "https://dash.partnerstack.com/marketplace/network_application",
       "priority": "high",
@@ -367,7 +373,7 @@
       "canPublish": false,
       "blockingReason": "The Network application requires a genuine verified LinkedIn profile and audience details.",
       "nextAction": "Complete the Network profile only with truthful owner-supplied identity and audience information.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://partnerstack.com/partners-and-publishers"
     },
     {
@@ -379,7 +385,7 @@
       "officialUrl": "https://www.skimlinks.com/",
       "ownershipNote": "Skimlinks is part of Connexity, which is owned by Taboola; the Skimlinks platform remains active.",
       "ownershipEvidenceUrl": "https://www.taboola.com/press-releases/taboola-acquires-connexity/",
-      "publisherSignupUrl": "https://hub.skimlinks.com/signup",
+      "publisherSignupUrl": "https://signup.skimlinks.com/",
       "dashboardUrl": "https://hub.skimlinks.com/",
       "priority": "high",
       "dealDeskStatus": "not_started",
@@ -388,8 +394,8 @@
       "canPublish": false,
       "blockingReason": "No DealDesk application or site approval is verified.",
       "nextAction": "Apply and verify that automatic rewriting can exclude existing payable links before any installation.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
-      "evidenceUrl": "https://support.skimlinks.com/hc/en-us/articles/360003184458-Joining-Skimlinks-as-a-Publisher"
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "evidenceUrl": "https://support.skimlinks.com/hc/en-us/articles/360025011673-How-do-I-join-Skimlinks-as-a-Publisher"
     },
     {
       "id": "travelpayouts",
@@ -398,6 +404,8 @@
       "regions": ["global"],
       "focus": ["hotels", "flights", "tours", "insurance", "rentals"],
       "officialUrl": "https://www.travelpayouts.com/",
+      "ownershipNote": "Travelpayouts is part of the international travel holding Go Travel Un Limited and remains active.",
+      "ownershipEvidenceUrl": "https://www.travelpayouts.com/about/",
       "publisherSignupUrl": "https://www.travelpayouts.com/",
       "dashboardUrl": "https://app.travelpayouts.com/",
       "priority": "high",
@@ -407,8 +415,8 @@
       "canPublish": false,
       "blockingReason": "Program enrollment and exact payable tracking are not verified; automatic link rewriting is intentionally disabled.",
       "nextAction": "Enroll manually in suitable programs and verify each exact DealDesk link.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
-      "evidenceUrl": "https://www.travelpayouts.com/"
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "evidenceUrl": "https://www.travelpayouts.com/about/"
     },
     {
       "id": "adtraction",
@@ -426,7 +434,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account or approved program is verified.",
       "nextAction": "Monitor US relevance and the Affiliate Future migration before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://adtraction.com/partner-sign-up/"
     },
     {
@@ -447,7 +455,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account or approved program is verified.",
       "nextAction": "Review whether merchant coverage serves DealDesk's US audience before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.commissionfactory.com/affiliates/"
     },
     {
@@ -466,7 +474,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account or approved program is verified.",
       "nextAction": "Monitor international merchant fit; apply only when DealDesk has matching audience coverage.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://daisycon.com/en/publishers/"
     },
     {
@@ -485,7 +493,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account or approved program is verified.",
       "nextAction": "Check US-accessible campaigns and site acceptance requirements.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.kwanko.com/publishers/"
     },
     {
@@ -504,7 +512,7 @@
       "canPublish": false,
       "blockingReason": "Enrollment and merchant availability are country-specific; no DealDesk account is verified.",
       "nextAction": "Identify the correct country enrollment and current US-relevant programs.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://tradetracker.com/"
     },
     {
@@ -516,8 +524,8 @@
       "officialUrl": "https://belboon.com/",
       "ownershipNote": "belboon joined Linehub and collaborates with Daisycon while retaining its existing systems and contacts.",
       "ownershipEvidenceUrl": "https://belboon.com/en/belboon-and-daisycon-join-forces-under-the-linehub-umbrella/",
-      "publisherSignupUrl": "https://belboon.com/account/",
-      "dashboardUrl": "https://belboon.com/account/",
+      "publisherSignupUrl": "https://login.daisycon.com/de/register/publisher/20588",
+      "dashboardUrl": "https://partner.service.belboon.com/app/index.html",
       "priority": "medium",
       "dealDeskStatus": "not_started",
       "payoutReadiness": "not_started",
@@ -525,7 +533,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account; regional domain and legal-imprint requirements may apply.",
       "nextAction": "Monitor only until DealDesk has meaningful DACH audience coverage.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://belboon.com/account/"
     },
     {
@@ -544,18 +552,18 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account; current US relevance is limited.",
       "nextAction": "Monitor until DealDesk has DACH audience or merchant demand.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.adcell.de/affiliates"
     },
     {
       "id": "optimise-media",
       "name": "Optimise Media",
       "kind": "affiliate_network",
-      "regions": ["UK", "APAC", "India", "global"],
+      "regions": ["US", "UK", "APAC", "India", "global"],
       "focus": ["retail", "finance", "travel", "performance campaigns"],
       "officialUrl": "https://optimisemedia.com/",
-      "publisherSignupUrl": "https://optimisemedia.com/affiliate-network/",
-      "dashboardUrl": null,
+      "publisherSignupUrl": "https://optimisemedia.com/apply/",
+      "dashboardUrl": "https://dashboard.optimisemedia.com/",
       "priority": "medium",
       "dealDeskStatus": "not_started",
       "payoutReadiness": "not_started",
@@ -563,7 +571,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account or approved program is verified.",
       "nextAction": "Review current US-accessible advertiser coverage before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://optimisemedia.com/affiliate-network/"
     },
     {
@@ -582,7 +590,7 @@
       "canPublish": false,
       "blockingReason": "Adtraction acquired Affiliate Future in October 2025 and migration is underway during 2026.",
       "nextAction": "Do not open a legacy account; monitor the transition and use Adtraction for future enrollment.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://adtraction.com/affiliate-future/"
     },
     {
@@ -601,7 +609,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account; merchant fit is primarily Southeast Asian.",
       "nextAction": "Monitor until DealDesk has regional audience or relevant global offers.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://involve.asia/"
     },
     {
@@ -620,26 +628,26 @@
       "canPublish": false,
       "blockingReason": "Registration and merchant availability are country-specific; no DealDesk account is verified.",
       "nextAction": "Monitor until regional audience and merchant coverage justify enrollment.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://accesstrade.global/publisher"
     },
     {
       "id": "vcommission",
       "name": "vCommission",
       "kind": "affiliate_network",
-      "regions": ["India", "APAC"],
+      "regions": ["US", "India", "APAC"],
       "focus": ["ecommerce", "finance", "lead generation"],
       "officialUrl": "https://www.vcommission.com/",
-      "publisherSignupUrl": "https://www.vcommission.com/affiliates/",
-      "dashboardUrl": null,
+      "publisherSignupUrl": "https://www.vcommission.com/affiliate/signup/",
+      "dashboardUrl": "https://network.vcommission.com/",
       "priority": "medium",
       "dealDeskStatus": "not_started",
       "payoutReadiness": "not_started",
       "commissionAccess": false,
       "canPublish": false,
-      "blockingReason": "No DealDesk account; current US audience fit is limited.",
-      "nextAction": "Monitor for US-accessible campaigns before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "blockingReason": "No DealDesk account or verified US consumer-retail program access.",
+      "nextAction": "Review current US consumer-retail campaigns with accurate DealDesk traffic facts before applying.",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.vcommission.com/affiliates/"
     },
     {
@@ -658,7 +666,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account; merchant coverage is India-focused.",
       "nextAction": "Monitor until regional audience or suitable global campaigns emerge.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.cuelinks.com/signup"
     },
     {
@@ -677,7 +685,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk creator or publisher account, approved brand relationship, or exact payable link is verified.",
       "nextAction": "Review DealDesk eligibility and marketplace coverage, then apply only with account-owner approval; verify each brand relationship and exact link separately.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://levanta.io/creators/"
     },
     {
@@ -696,7 +704,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account, approved seller partnership, or exact payable Amazon Attribution link is verified.",
       "nextAction": "Review seller quality and publisher eligibility before applying; treat every seller offer as a separate approval and tracking check.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.archeraffiliates.com/"
     },
     {
@@ -715,7 +723,7 @@
       "canPublish": false,
       "blockingReason": "Shopify is not accepting general new creator signups; access currently requires a merchant invitation or an approved merchant-specific application.",
       "nextAction": "Monitor signup availability and merchant invitations; never treat a Shopify-hosted affiliate app as blanket network approval.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://help.shopify.com/en/manual/promoting-marketing/collabs/creators"
     },
     {
@@ -734,7 +742,7 @@
       "canPublish": false,
       "blockingReason": "The official Collective Voice site states that the program is closed.",
       "nextAction": "Do not apply or publish Collective Voice links; retain the record only to identify and retire legacy ShopStyle Collective or Collective Voice links.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://support.collectivevoice.com/hc/en-us/articles/41869202764301-FAQ"
     },
     {
@@ -745,15 +753,15 @@
       "focus": ["editorial commerce", "creators", "retail"],
       "officialUrl": "https://www.howl.link/",
       "publisherSignupUrl": "https://app.howl.link/sign-up",
-      "dashboardUrl": null,
+      "dashboardUrl": "https://app.howl.link/sign-in",
       "priority": "low",
       "dealDeskStatus": "not_started",
       "payoutReadiness": "not_started",
       "commissionAccess": false,
       "canPublish": false,
-      "blockingReason": "No DealDesk application; publisher acceptance is curated.",
-      "nextAction": "Monitor eligibility for standalone deal publishers before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "blockingReason": "No DealDesk account, verified merchant access, payout onboarding, or exact payable link.",
+      "nextAction": "With user action-time approval, create an account using accurate DealDesk facts; then verify merchant access, payout onboarding, and each exact payable link.",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.howl.link/"
     },
     {
@@ -765,17 +773,36 @@
       "officialUrl": "https://www.joinmavely.com/",
       "ownershipNote": "Mavely was acquired by Later and continues to operate as an active creator-commerce platform.",
       "ownershipEvidenceUrl": "https://www.joinmavely.com/news/later-acquires-mavely-in-landmark-deal/",
-      "publisherSignupUrl": "https://www.joinmavely.com/",
-      "dashboardUrl": null,
+      "publisherSignupUrl": "https://creators.mave.ly/auth/signup",
+      "dashboardUrl": "https://creators.joinmavely.com/auth/login",
       "priority": "low",
       "dealDeskStatus": "not_started",
       "payoutReadiness": "not_started",
       "commissionAccess": false,
       "canPublish": false,
-      "blockingReason": "No DealDesk application; the platform favors individual creators and social distribution.",
-      "nextAction": "Monitor whether website-first publishers can qualify without fabricated creator metrics.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "blockingReason": "No DealDesk account, verified merchant access, payout onboarding, or exact payable link.",
+      "nextAction": "With user action-time approval, use the no-application signup with accurate DealDesk facts; then verify merchant access, payout onboarding, and each exact payable link.",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.joinmavely.com/"
+    },
+    {
+      "id": "shopyourlikes",
+      "name": "ShopYourLikes",
+      "kind": "creator_commerce_network",
+      "regions": ["US", "UK"],
+      "focus": ["creator affiliate links", "retail", "cost per click", "brand sponsorships"],
+      "officialUrl": "https://www.shopyourlikes.com/",
+      "publisherSignupUrl": "https://my.shopyourlikes.com/register",
+      "dashboardUrl": "https://my.shopyourlikes.com/login",
+      "priority": "medium",
+      "dealDeskStatus": "not_started",
+      "payoutReadiness": "not_started",
+      "commissionAccess": false,
+      "canPublish": false,
+      "blockingReason": "No DealDesk account; creator eligibility, merchant access, payout onboarding, and exact payable links are unverified.",
+      "nextAction": "With user action-time approval, review eligibility and apply using only accurate DealDesk audience facts; verify every merchant relationship and exact link before publishing.",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "evidenceUrl": "https://www.shopyourlikes.com/"
     },
     {
       "id": "ltk",
@@ -793,7 +820,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk application; a genuine creator profile and audience are expected.",
       "nextAction": "Apply only if DealDesk develops qualifying creator channels.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://company.shopltk.com/creatorapplication_search"
     },
     {
@@ -812,7 +839,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk application; an established creator audience is generally expected.",
       "nextAction": "Monitor eligibility and never invent audience or social-profile data.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://shopmy.us/home/creators"
     },
     {
@@ -831,7 +858,7 @@
       "canPublish": false,
       "blockingReason": "The inspected application requires genuine creator identity, date of birth, and social-channel information.",
       "nextAction": "Apply only after DealDesk has qualifying creator channels and owner-supplied personal information.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.magiclinks.com/creators"
     },
     {
@@ -852,7 +879,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk application or payable merchant access is verified.",
       "nextAction": "Confirm current publisher eligibility and merchant coverage before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://brandcycle.com/creators/creator-faqs/"
     },
     {
@@ -871,7 +898,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk marketplace account or merchant approval is verified; not every Refersion program is publicly listed.",
       "nextAction": "Review marketplace quality and recognizable merchant coverage before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://marketplace.refersion.com/"
     },
     {
@@ -892,7 +919,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account; CPA offers require strict claims, consent, quality, and customer-value review.",
       "nextAction": "Apply only if a recognizable, customer-beneficial offer fits DealDesk's editorial standards.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.maxbounty.com/"
     },
     {
@@ -911,7 +938,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk account; current product-deal fit is lower than retail CPS networks.",
       "nextAction": "Monitor only for reputable consumer offers with clear customer value.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.performcb.com/work-with-us/affiliate-partners/"
     },
     {
@@ -930,7 +957,7 @@
       "canPublish": true,
       "blockingReason": null,
       "nextAction": "Continue price, image, availability, eligibility, and exact tag verification for every listing.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://affiliate-program.amazon.com/"
     },
     {
@@ -949,7 +976,7 @@
       "canPublish": true,
       "blockingReason": null,
       "nextAction": "Keep each EPN URL, item condition, seller data, price, availability, and genuine listing image verified; confirm Bank Account, Tax Documents, and Identity Verification completion without storing financial details.",
-      "lastCheckedAt": "2026-08-03T05:19:06Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://partnernetwork.ebay.com/"
     },
     {
@@ -968,7 +995,7 @@
       "canPublish": false,
       "blockingReason": "No DealDesk approval or exact payable Walmart tracking is verified.",
       "nextAction": "Confirm current publisher eligibility and network routing before applying.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://affiliates.walmart.com/"
     },
     {
@@ -987,7 +1014,7 @@
       "canPublish": false,
       "blockingReason": "This is creator-oriented and no qualifying DealDesk creator profile or approval is verified.",
       "nextAction": "Keep separate from Walmart Affiliates and apply only with truthful qualifying creator channels.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://creator.walmart.com/"
     },
     {
@@ -1006,7 +1033,7 @@
       "canPublish": false,
       "blockingReason": "No Target program approval or exact payable DealDesk tracking link is verified; DealDesk's current impact.com account access must be corrected first.",
       "nextAction": "Resolve the impact.com account limitation, then review and submit the Target application only with account-owner approval.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://partners.target.com/faqs"
     },
     {
@@ -1025,7 +1052,7 @@
       "canPublish": false,
       "blockingReason": "No Best Buy publisher approval or exact payable DealDesk tracking link is verified; DealDesk's current impact.com account access must be corrected first.",
       "nextAction": "Resolve the impact.com account limitation, then review Best Buy eligibility and apply only with account-owner approval.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.bestbuy.com/site/misc/best-buy-affiliate-program/pcmcat198500050002.c?id=pcmcat198500050002"
     },
     {
@@ -1044,7 +1071,7 @@
       "canPublish": false,
       "blockingReason": "No Home Depot program approval or exact payable DealDesk Impact link is verified; DealDesk's current impact.com account access must be corrected first.",
       "nextAction": "Resolve the impact.com account limitation, then review the Home Depot terms and apply only with account-owner approval.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.homedepot.com/c/SF_MS_Affiliate_Program_FAQs"
     },
     {
@@ -1063,7 +1090,7 @@
       "canPublish": false,
       "blockingReason": "No Lowe's Creator approval or exact payable DealDesk tracking link is verified.",
       "nextAction": "Review the creator terms and application requirements, then apply only with account-owner approval and truthful publisher information.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.lowes.com/l/creator/joinlowescreator"
     },
     {
@@ -1082,7 +1109,7 @@
       "canPublish": false,
       "blockingReason": "No Booking.com program approval or exact payable DealDesk tracking link is verified; DealDesk's general CJ access is not Booking.com authorization.",
       "nextAction": "Review the current US registration route and apply only with account-owner approval, then verify the first exact payable Booking.com link.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.booking.com/affiliate-program/v2/index.html"
     },
     {
@@ -1101,7 +1128,7 @@
       "canPublish": true,
       "blockingReason": null,
       "nextAction": "Publish only Expedia-generated links for trip elements with a verified non-zero signed-in rate and current offer.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.expedia.com/shop/dealdesk"
     },
     {
@@ -1120,7 +1147,7 @@
       "canPublish": false,
       "blockingReason": "DealDesk's direct affiliate application is under review.",
       "nextAction": "Monitor approval and verify the first payable DealDesk BI/KBID link before publishing.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.bhphotovideo.com/c/find/shared/affiliates.jsp"
     },
     {
@@ -1139,7 +1166,7 @@
       "canPublish": false,
       "blockingReason": "DiscoverCars approved DealDesk's affiliate account on August 1, 2026, but the exact a_aid tracking ID and payout setup are not verified.",
       "nextAction": "Sign in to the affiliate dashboard, verify the exact a_aid link and payout setup, then verify a live rental offer with genuine merchant imagery.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "lastCheckedAt": "2026-08-03T16:13:15Z",
       "evidenceUrl": "https://www.discovercars.com/affiliate"
     }
   ]
