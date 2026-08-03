@@ -20,6 +20,7 @@ const APPROVED_RAKUTEN_TRACKING = {
   type: "2",
   murl: "https://sensibo.com/products/sensibo-air-bundle?variant=33051046838324",
 };
+const APPROVAL_CATALOG_URL = "https://dealdesk.fyi/data/outbound-approvals.json";
 
 export default {
   async fetch(request, env) {
@@ -27,9 +28,32 @@ export default {
     const merchantURL = requestURL.searchParams.get("url");
     const subID = cleanSubID(requestURL.searchParams.get("subid"));
     const network = cleanNetwork(requestURL.searchParams.get("network"));
+    const requestedValidUntil = requestURL.searchParams.get("until");
 
     if (!merchantURL) {
       return htmlResponse("Missing merchant URL.", 400);
+    }
+
+    let approvalCatalog;
+    try {
+      const approvalResponse = await fetch(APPROVAL_CATALOG_URL, {
+        headers: { accept: "application/json" },
+        cf: { cacheEverything: true, cacheTtl: 300 },
+      });
+      if (!approvalResponse.ok) throw new Error("approval catalog unavailable");
+      approvalCatalog = await approvalResponse.json();
+    } catch {
+      return htmlResponse("DealDesk could not verify this offer. Please return to Latest deals.", 503);
+    }
+
+    const approval = (approvalCatalog.deals || []).find((deal) =>
+      deal.network === network &&
+      deal.affiliateURL === merchantURL &&
+      deal.validUntil === requestedValidUntil
+    );
+    const validUntil = approval ? Date.parse(approval.validUntil) : NaN;
+    if (!approval || !Number.isFinite(validUntil) || Date.now() > validUntil) {
+      return htmlResponse("This offer is no longer within DealDesk's verified availability window.", 410);
     }
 
     let destination;

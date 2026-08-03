@@ -21,10 +21,33 @@ const ebayProgram = (affiliateRegistry.programs || [])
   .find((program) => program.id === "ebay-partner-network-default");
 const seenIDs = new Set();
 const seenNetworks = new Set();
+const seenDeals = [];
 const errors = [];
+const staleDeals = [];
 const now = Date.now();
 const validDate = (value) => value && Number.isFinite(new Date(value).getTime());
 const usdNumber = (value) => Number(String(value || "").replace(/[$,]/g, ""));
+const slugFor = (deal) => String(deal.id || "deal").replace(/-\d{8}$/, "").toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const validUntilFor = (deal) => {
+  const deadlines = [deal.expiresAt, deal.recheckAfter]
+    .filter(Boolean)
+    .map((value) => new Date(value).getTime())
+    .filter(Number.isFinite);
+  return deadlines.length ? new Date(Math.min(...deadlines)).toISOString() : "";
+};
+const hasGenuineMerchantImage = (deal) => {
+  try {
+    const image = new URL(String(deal?.imageURL || ""));
+    if (image.protocol !== "https:") return false;
+    if (deal.network === "ebay-partner-network" && deal.sourceType === "ebay-product") {
+      return image.hostname === "i.ebayimg.com";
+    }
+    return true;
+  } catch {
+    return false;
+  }
+};
 
 for (const feedPath of feedPaths) {
   const feed = JSON.parse(await readFile(new URL(`../${feedPath}`, import.meta.url), "utf8"));
@@ -36,6 +59,7 @@ for (const feedPath of feedPaths) {
 
   for (const deal of feed.deals) {
     const label = `${feedPath}:${deal.id || "missing-id"}`;
+    seenDeals.push(deal);
     if (deal.network) seenNetworks.add(deal.network);
 
     if (!deal.id || seenIDs.has(deal.id)) errors.push(`${label}: missing or duplicate id`);
@@ -61,12 +85,9 @@ for (const feedPath of feedPaths) {
     if (!validDate(deal.expiresAt) && !validDate(deal.recheckAfter)) {
       errors.push(`${label}: expiresAt or recheckAfter is required`);
     }
-    if (validDate(deal.expiresAt) && new Date(deal.expiresAt).getTime() <= now) {
-      errors.push(`${label}: expiresAt is in the past`);
-    }
-    if (validDate(deal.recheckAfter) && new Date(deal.recheckAfter).getTime() <= now) {
-      errors.push(`${label}: recheckAfter is in the past`);
-    }
+    const expiresAt = validDate(deal.expiresAt) ? new Date(deal.expiresAt).getTime() : Infinity;
+    const recheckAfter = validDate(deal.recheckAfter) ? new Date(deal.recheckAfter).getTime() : Infinity;
+    if (expiresAt <= now || recheckAfter <= now) staleDeals.push({ deal, label });
 
     let affiliateURL;
     try {
@@ -306,9 +327,108 @@ if (seenNetworks.has("rakuten-advertising")) {
   }
 }
 
+const outboundApprovals = JSON.parse(await readFile(new URL("../data/outbound-approvals.json", import.meta.url), "utf8"));
+const approvalByID = new Map();
+for (const approval of outboundApprovals.deals || []) {
+  if (!approval.id || approvalByID.has(approval.id)) {
+    errors.push(`data/outbound-approvals.json: missing or duplicate approval id ${approval.id || "unknown"}`);
+    continue;
+  }
+  approvalByID.set(approval.id, approval);
+}
+
+const publicDeals = seenDeals.filter((deal) => {
+  const expiresAt = validDate(deal.expiresAt) ? new Date(deal.expiresAt).getTime() : Infinity;
+  const recheckAfter = validDate(deal.recheckAfter) ? new Date(deal.recheckAfter).getTime() : Infinity;
+  return deal.status === "active" && deal.commissionEligible === true &&
+    deal.approvalStatus === "approved" && Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
+    now <= expiresAt && now <= recheckAfter && hasGenuineMerchantImage(deal);
+});
+const publicDealIDs = new Set(publicDeals.map((deal) => deal.id));
+for (const deal of publicDeals) {
+  const approval = approvalByID.get(deal.id);
+  if (!approval) {
+    errors.push(`data/outbound-approvals.json:${deal.id}: current public deal is missing`);
+    continue;
+  }
+  if (approval.network !== deal.network || approval.affiliateURL !== deal.affiliateURL ||
+      approval.validUntil !== validUntilFor(deal)) {
+    errors.push(`data/outbound-approvals.json:${deal.id}: approval does not exactly match the verified deal and deadline`);
+  }
+  let detailPage = "";
+  try {
+    detailPage = await readFile(new URL(`../deals/${slugFor(deal)}/index.html`, import.meta.url), "utf8");
+  } catch {
+    errors.push(`deals/${slugFor(deal)}: current public deal detail page is missing`);
+    continue;
+  }
+  if (!detailPage.includes(`Date.parse(${JSON.stringify(validUntilFor(deal))})`)) {
+    errors.push(`deals/${slugFor(deal)}: detail page is missing its exact runtime verification deadline`);
+  }
+  const ctaMatch = detailPage.match(/class="deal-detail-cta" href="([^"]+)"/);
+  let ctaURL;
+  try {
+    ctaURL = new URL(String(ctaMatch?.[1] || "").replaceAll("&amp;", "&"), "https://dealdesk.fyi");
+  } catch {}
+  if (ctaURL?.pathname !== "/out/" || ctaURL.searchParams.get("network") !== deal.network ||
+      ctaURL.searchParams.get("url") !== deal.affiliateURL ||
+      ctaURL.searchParams.get("until") !== validUntilFor(deal)) {
+    errors.push(`deals/${slugFor(deal)}: detail CTA must carry the exact approved URL and verification deadline`);
+  }
+}
+for (const approval of approvalByID.values()) {
+  if (!publicDealIDs.has(approval.id)) {
+    errors.push(`data/outbound-approvals.json:${approval.id}: nonpublic deal must not have an outbound approval`);
+  }
+}
+
+const lifecycleOutboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+const lifecycleWorkerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
+if (!lifecycleOutboundPage.includes("/data/outbound-approvals.json") ||
+    !lifecycleOutboundPage.includes("deal.validUntil === requestedValidUntil") ||
+    !lifecycleOutboundPage.includes("Date.now() > validUntil")) {
+  errors.push("out/index.html: outbound links must fail closed against the generated approval catalog and deadline");
+}
+if (!lifecycleWorkerSource.includes("https://dealdesk.fyi/data/outbound-approvals.json") ||
+    !lifecycleWorkerSource.includes("deal.affiliateURL === merchantURL") ||
+    !lifecycleWorkerSource.includes("deal.validUntil === requestedValidUntil") ||
+    !lifecycleWorkerSource.includes("Date.now() > validUntil")) {
+  errors.push("workers/sovrn-out-worker.js: outbound links must fail closed against the generated approval catalog and deadline");
+}
+
+if (staleDeals.length) {
+  const latestDeals = JSON.parse(await readFile(new URL("../data/latest-deals.json", import.meta.url), "utf8"));
+  const latestDealIDs = new Set((latestDeals.deals || []).map((deal) => deal.id));
+  const sitemap = await readFile(new URL("../sitemap.xml", import.meta.url), "utf8");
+
+  for (const { deal, label } of staleDeals) {
+    const slug = slugFor(deal);
+    let detailPage = "";
+    try {
+      detailPage = await readFile(new URL(`../deals/${slug}/index.html`, import.meta.url), "utf8");
+    } catch {
+      errors.push(`${label}: stale deal must have a retired detail page`);
+      continue;
+    }
+    if (!detailPage.includes('content="noindex,nofollow"')) {
+      errors.push(`${label}: stale detail page must be noindex,nofollow`);
+    }
+    if (detailPage.includes(deal.affiliateURL) || detailPage.includes("View live deal")) {
+      errors.push(`${label}: stale detail page must not expose a live affiliate CTA`);
+    }
+    if (latestDealIDs.has(deal.id)) {
+      errors.push(`${label}: stale deal must not appear in latest-deals.json`);
+    }
+    if (sitemap.includes(`/deals/${slug}/`)) {
+      errors.push(`${label}: stale deal must not appear in sitemap.xml`);
+    }
+  }
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
 }
 
-console.log(`Validated ${seenIDs.size} commission-eligible deals.`);
+if (staleDeals.length) console.log(`Withheld ${staleDeals.length} expired or due-for-recheck deals from public output.`);
+console.log(`Validated ${seenIDs.size} payable deal records; ${publicDeals.length} are currently public.`);

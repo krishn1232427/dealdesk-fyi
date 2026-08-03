@@ -31,7 +31,7 @@
     </main>
 
     <script>
-      (function () {
+      (async function () {
         var approvedAmazonTrackingID = "dealdesk-20";
         var approvedEbayTracking = {
           mkcid: "1",
@@ -56,6 +56,7 @@
         };
         var params = new URLSearchParams(window.location.search);
         var rawURL = params.get("url");
+        var requestedValidUntil = params.get("until");
         var subID = cleanSubID(params.get("subid")) || "dealdesksite";
         var network = (params.get("network") || "").toLowerCase();
         var status = document.getElementById("status");
@@ -69,6 +70,30 @@
 
         if (!rawURL) {
           fail("No merchant URL was provided.");
+          return;
+        }
+
+        var approval;
+        try {
+          var approvalResponse = await fetch("/data/outbound-approvals.json", {
+            cache: "no-store",
+            credentials: "same-origin"
+          });
+          if (!approvalResponse.ok) throw new Error("approval catalog unavailable");
+          var approvalCatalog = await approvalResponse.json();
+          approval = (approvalCatalog.deals || []).find(function (deal) {
+            return deal.network === network &&
+              deal.affiliateURL === rawURL &&
+              deal.validUntil === requestedValidUntil;
+          });
+        } catch (error) {
+          fail("DealDesk could not verify this offer. Please return to Latest deals.");
+          return;
+        }
+
+        var validUntil = approval ? Date.parse(approval.validUntil) : NaN;
+        if (!approval || !Number.isFinite(validUntil) || Date.now() > validUntil) {
+          fail("This offer is no longer within DealDesk's verified availability window.");
           return;
         }
 

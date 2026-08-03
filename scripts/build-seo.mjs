@@ -20,6 +20,13 @@ const isLiveDeal = (deal) => {
     now <= expiresAt &&
     now <= recheckAfter;
 };
+const validUntilFor = (deal) => {
+  const deadlines = [deal.expiresAt, deal.recheckAfter]
+    .filter(Boolean)
+    .map((value) => new Date(value).getTime())
+    .filter(Number.isFinite);
+  return deadlines.length ? new Date(Math.min(...deadlines)).toISOString() : "";
+};
 const hasGenuineMerchantImage = (deal) => {
   try {
     const image = new URL(String(deal?.imageURL || ""));
@@ -50,6 +57,7 @@ const outboundURL = (deal, placement = "detail") => {
     network: deal.network,
     url: deal.affiliateURL,
     subid: `${placement}-${deal.id}`.replace(/[^a-zA-Z0-9]/g, "").slice(0, 32),
+    until: validUntilFor(deal),
   });
   return `/out/?${params.toString()}`;
 };
@@ -203,6 +211,7 @@ for (const deal of deals) {
 ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
   <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll("<", "\\u003c")}</script>
+  <script>(function(){if(Date.now()>Date.parse(${JSON.stringify(validUntilFor(deal))})){document.documentElement.hidden=true;window.location.replace("/latest-deals/");}}());</script>
 </head>
 <body>
   <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#deal-categories">Categories</a></div></nav></header>
@@ -688,6 +697,15 @@ await writeFile(resolve(root, "data", "latest-deals.json"), `${JSON.stringify({
   total: latestDealData.length,
   deals: latestDealData
 })}\n`);
+await writeFile(resolve(root, "data", "outbound-approvals.json"), `${JSON.stringify({
+  generatedAt: new Date(latestFeedTime).toISOString(),
+  deals: deals.map((deal) => ({
+    id: deal.id,
+    network: deal.network,
+    affiliateURL: deal.affiliateURL,
+    validUntil: validUntilFor(deal)
+  }))
+}, null, 2)}\n`);
 await writeFile(resolve(root, "latest-deals", "index.html"), latestHTML);
 
 const urls = [

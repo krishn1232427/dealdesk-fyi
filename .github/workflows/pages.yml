@@ -3,6 +3,8 @@ name: Publish DealDesk site
 on:
   push:
     branches: [master]
+  schedule:
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -27,11 +29,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validate and build verified deals
+      - name: Build and validate verified deals
         run: |
           node scripts/render-affiliate-networks.mjs
-          node scripts/validate-deals.mjs
           node scripts/build-seo.mjs
+          node scripts/validate-deals.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
