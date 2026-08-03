@@ -1,13 +1,22 @@
 import { readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 
 const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
 const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-programs.json", import.meta.url), "utf8"));
+const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
+const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
+const sensiboExclusionSnapshotHash = createHash("sha256").update(sensiboExclusionSnapshot).digest("hex");
+const sensiboExclusionSnapshotSKUs = sensiboExclusionSnapshot.trim().split(/\r?\n/)
+  .map((row) => row.split("\t", 1)[0]);
 const cjPrograms = new Map((affiliateRegistry.programs || [])
   .filter((program) => program.network === "cj")
   .map((program) => [String(program.advertiserID), program]));
 const expediaPrograms = new Map((affiliateRegistry.programs || [])
   .filter((program) => program.network === "expedia-group-direct")
   .map((program) => [String(program.trackingID), program]));
+const rakutenPrograms = new Map((affiliateRegistry.programs || [])
+  .filter((program) => program.network === "rakuten-advertising")
+  .map((program) => [String(program.advertiserID), program]));
 const ebayProgram = (affiliateRegistry.programs || [])
   .find((program) => program.id === "ebay-partner-network-default");
 const seenIDs = new Set();
@@ -15,6 +24,7 @@ const seenNetworks = new Set();
 const errors = [];
 const now = Date.now();
 const validDate = (value) => value && Number.isFinite(new Date(value).getTime());
+const usdNumber = (value) => Number(String(value || "").replace(/[$,]/g, ""));
 
 for (const feedPath of feedPaths) {
   const feed = JSON.parse(await readFile(new URL(`../${feedPath}`, import.meta.url), "utf8"));
@@ -115,6 +125,99 @@ for (const feedPath of feedPaths) {
         if (program.publicPublishingAllowed !== true) errors.push(`${label}: Expedia Group program is not approved for public publishing`);
         if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: Hotels.com URL does not match the verified program URL`);
       }
+    } else if (deal.network === "rakuten-advertising") {
+      const program = rakutenPrograms.get(String(deal.advertiserID || ""));
+      const expectedEvidenceRecord = "data/affiliate-evidence/sensibo-rakuten-20260803.json";
+      const expectedOfferID = `${deal.offerID}.${deal.linkID}`;
+      const expectedParamNames = new Set(["id", "offerid", "type", "murl"]);
+      const affiliateParams = [...affiliateURL.searchParams.entries()];
+
+      if (affiliateURL.origin !== "https://click.linksynergy.com" || affiliateURL.pathname !== "/link" || affiliateURL.hash) {
+        errors.push(`${label}: Rakuten link must use the approved click.linksynergy.com path`);
+      }
+      if (affiliateParams.length !== 4 || affiliateParams.some(([name]) => !expectedParamNames.has(name))) {
+        errors.push(`${label}: Rakuten link contains missing, duplicate, or unapproved parameters`);
+      }
+      if (affiliateURL.searchParams.get("id") !== deal.trackingID) {
+        errors.push(`${label}: Rakuten publisher token must match trackingID`);
+      }
+      if (!deal.offerID || !deal.linkID || affiliateURL.searchParams.get("offerid") !== expectedOfferID) {
+        errors.push(`${label}: Rakuten offerid must match offerID and linkID`);
+      }
+      if (affiliateURL.searchParams.get("type") !== "2") {
+        errors.push(`${label}: Rakuten product link type must be 2`);
+      }
+      if (affiliateURL.searchParams.get("murl") !== deal.merchantURL) {
+        errors.push(`${label}: Rakuten merchant destination must match merchantURL exactly`);
+      }
+      if (!program) {
+        errors.push(`${label}: Rakuten advertiser is missing from affiliate-programs.json`);
+      } else {
+        if (program.applicationStatus !== "active") errors.push(`${label}: Rakuten advertiser relationship is not active`);
+        if (program.trackingLinkStatus !== "verified") errors.push(`${label}: Rakuten tracking link is not verified`);
+        if (program.commissionEligible !== true) errors.push(`${label}: Rakuten program is not commission eligible`);
+        if (program.publicPublishingAllowed !== true) errors.push(`${label}: Rakuten program is not approved for public publishing`);
+        if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: Rakuten URL does not match the verified program URL`);
+        if (String(program.trackingID) !== String(deal.trackingID)) errors.push(`${label}: Rakuten trackingID does not match the verified program`);
+        if (String(program.offerID) !== String(deal.offerID)) errors.push(`${label}: Rakuten offerID does not match the verified program`);
+        if (String(program.linkID) !== String(deal.linkID)) errors.push(`${label}: Rakuten linkID does not match the verified program`);
+        if (String(program.productSKU) !== String(deal.productSKU)) errors.push(`${label}: Rakuten product SKU does not match the verified program`);
+        if (String(program.rakutenCatalogSKU) !== String(deal.catalogVariantID)) errors.push(`${label}: Rakuten catalog variant does not match the verified program`);
+        if (program.evidenceRecord !== expectedEvidenceRecord || deal.evidenceRecord !== expectedEvidenceRecord) errors.push(`${label}: Rakuten program and deal must reference the authenticated evidence record`);
+      }
+
+      const excludedSKUs = sensiboEvidence?.exclusionFile?.excludedMerchantSKUs || [];
+      if (sensiboEvidence?.advertiser?.relationship !== "Partnered" ||
+          String(sensiboEvidence?.advertiser?.mid) !== String(deal.advertiserID) ||
+          String(sensiboEvidence?.offer?.groupOfferID) !== String(deal.offerID) ||
+          String(sensiboEvidence?.offer?.exclusionListID) !== String(deal.skuExclusionListID) ||
+          String(sensiboEvidence?.productLink?.linkID) !== String(deal.linkID) ||
+          String(sensiboEvidence?.productLink?.catalogVariantID) !== String(deal.catalogVariantID) ||
+          sensiboEvidence?.productLink?.trackingURL !== deal.affiliateURL ||
+          sensiboEvidence?.merchantProduct?.merchantSKU !== deal.productSKU ||
+          sensiboEvidence?.merchantProduct?.merchantURL !== deal.merchantURL ||
+          sensiboEvidence?.merchantProduct?.imageURL !== deal.imageURL ||
+          sensiboEvidence?.merchantProduct?.availability !== deal.availabilityStatus ||
+          sensiboEvidence?.reviewedAt !== deal.verifiedAt) {
+        errors.push(`${label}: Sensibo deal does not match its authenticated evidence record`);
+      }
+      if (sensiboEvidence?.exclusionFile?.rowCount !== excludedSKUs.length || excludedSKUs.includes(deal.productSKU)) {
+        errors.push(`${label}: Sensibo merchant SKU is missing from or excluded by the reviewed offer-rule evidence`);
+      }
+      if (sensiboEvidence?.exclusionFile?.sanitizedSnapshotSha256 !== sensiboExclusionSnapshotHash ||
+          JSON.stringify(excludedSKUs) !== JSON.stringify(sensiboExclusionSnapshotSKUs)) {
+        errors.push(`${label}: Sensibo exclusion snapshot does not match its evidence manifest`);
+      }
+
+      let merchantURL;
+      let imageURL;
+      try { merchantURL = new URL(deal.merchantURL); } catch {}
+      try { imageURL = new URL(deal.imageURL); } catch {}
+      if (deal.sourceType !== "rakuten-product") errors.push(`${label}: Rakuten deal must be a verified product link`);
+      if (merchantURL?.hostname !== "sensibo.com" || merchantURL.pathname !== "/products/sensibo-air-bundle") {
+        errors.push(`${label}: Sensibo product must use the verified merchant product page`);
+      }
+      if (imageURL?.hostname !== "cdn.shopify.com" || !imageURL.pathname.includes("/files/Bundle_")) {
+        errors.push(`${label}: Sensibo product must use the verified genuine Shopify product image`);
+      }
+      if (deal.productSKU !== "SEN-AIR-SET-01" || deal.skuEligibilityStatus !== "verified_not_excluded" || deal.skuExclusionListID !== "2061577") {
+        errors.push(`${label}: Sensibo SKU must be verified against the active offer exclusion list`);
+      }
+      if (deal.availabilityStatus !== "InStock") errors.push(`${label}: Sensibo product must be verified in stock`);
+      if (!/^\$[\d,]+(?:\.\d{2})?$/.test(String(deal.currentPrice || "")) ||
+          !/^\$[\d,]+(?:\.\d{2})?$/.test(String(deal.originalPrice || ""))) {
+        errors.push(`${label}: Sensibo product must have exact current and compare-at USD prices`);
+      }
+      if (usdNumber(deal.currentPrice) !== sensiboEvidence?.merchantProduct?.priceUSD ||
+          usdNumber(deal.originalPrice) !== sensiboEvidence?.merchantProduct?.compareAtPriceUSD) {
+        errors.push(`${label}: Sensibo prices do not match the authenticated merchant evidence`);
+      }
+      const verifiedAt = new Date(deal.verifiedAt).getTime();
+      const recheckAfter = new Date(deal.recheckAfter).getTime();
+      if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
+          recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
+        errors.push(`${label}: Sensibo verification window must be no more than 24 hours`);
+      }
     } else if (deal.network === "ebay-partner-network") {
       const hasTrackingSignal = affiliateURL.searchParams.has("campid") &&
         affiliateURL.searchParams.has("mkcid");
@@ -183,6 +286,22 @@ if (seenNetworks.has("ebay-partner-network")) {
   for (const value of Object.values(ebayProgram?.trackingParameters || {})) {
     if (!outboundPage.includes(JSON.stringify(value))) {
       errors.push(`out/index.html: approved eBay tracking value ${value} is missing`);
+    }
+  }
+}
+
+if (seenNetworks.has("rakuten-advertising")) {
+  const outboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+  const workerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
+  const sensiboProgram = rakutenPrograms.get("50234");
+  for (const source of [outboundPage, workerSource]) {
+    if (!source.includes('rakuten-advertising')) {
+      errors.push("Rakuten Advertising links are not enabled in every outbound safety gate");
+    }
+    for (const value of [sensiboProgram?.trackingID, sensiboProgram?.offerID, sensiboProgram?.linkID, sensiboProgram?.merchantProductURL]) {
+      if (value && !source.includes(String(value))) {
+        errors.push(`Outbound safety gate is missing verified Rakuten value ${value}`);
+      }
     }
   }
 }

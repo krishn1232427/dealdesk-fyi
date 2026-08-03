@@ -382,6 +382,9 @@
         function earningPotential(deal) {
           var estimate = Number(deal && deal.estimatedCommission);
           if (Number.isFinite(estimate) && estimate >= 0) return estimate;
+          var band = String((deal && deal.earningsBand) || "").toLowerCase();
+          var bandValue = { "very-high": 40, high: 25, medium: 10, low: 1 }[band];
+          if (Number.isFinite(bandValue)) return bandValue;
           var fixedBounty = String((deal && deal.commission) || "").match(/^\$(\d+(?:\.\d+)?)/);
           return fixedBounty ? Number(fixedBounty[1]) : 0;
         }

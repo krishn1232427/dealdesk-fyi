@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-03T09:00:17Z",
+  "source": "Signed-in Rakuten Advertising publisher dashboard, downloaded active-offer exclusion file, and live Sensibo merchant product data",
+  "advertiser": {
+    "name": "Sensibo",
+    "mid": "50234",
+    "relationship": "Partnered"
+  },
+  "offer": {
+    "groupOfferID": "2061576",
+    "exclusionListID": "2061577",
+    "cookieDays": 14,
+    "endsAt": "2026-09-11T21:00:00Z"
+  },
+  "productLink": {
+    "trackingID": "JyyDRUQnGvw",
+    "linkID": "5023433051046838324",
+    "catalogVariantID": "33051046838324",
+    "trackingURL": "https://click.linksynergy.com/link?id=JyyDRUQnGvw&offerid=2061576.5023433051046838324&type=2&murl=https%3a%2f%2fsensibo.com%2fproducts%2fsensibo-air-bundle%3fvariant%3d33051046838324"
+  },
+  "merchantProduct": {
+    "merchantProductID": "4859255029812",
+    "merchantSKU": "SEN-AIR-SET-01",
+    "merchantURL": "https://sensibo.com/products/sensibo-air-bundle?variant=33051046838324",
+    "availability": "InStock",
+    "priceUSD": 159,
+    "compareAtPriceUSD": 229,
+    "imageURL": "https://cdn.shopify.com/s/files/1/1669/6891/files/Bundle_0a505e1a-36a2-4f20-a90f-551d7f67ca79.jpg?v=1750047335",
+    "imageWidth": 800,
+    "imageHeight": 800
+  },
+  "exclusionFile": {
+    "fileNamePattern": "*_2061577-SKU_to_exclude.txt.csv",
+    "originalDownloadSha256": "3bc14138cf05f231b5422a75c2ca646cbd1af3ac5b79e67b454238b1b3202a49",
+    "sanitizedSnapshotPath": "data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv",
+    "sanitizedSnapshotSha256": "19d171723813065f786713b8d0b5712d44e7fc7f12e65be43edc3700f90a89d7",
+    "rowCount": 4,
+    "excludedMerchantSKUs": [
+      "SEN-AIRQ-FLR-01",
+      "SEN-PLUS-MONTH-01",
+      "SEN-PLUS-YR-01",
+      "SEN-PUR-FILTER-2PACK"
+    ]
+  },
+  "privacy": "No passwords, cookies, session tokens, banking data, tax data, or confidential commission rates are stored in this evidence record."
+}

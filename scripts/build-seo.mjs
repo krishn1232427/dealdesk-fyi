@@ -91,6 +91,8 @@ const imageFor = (deal) => hasGenuineMerchantImage(deal) ? deal.imageURL : "";
 const earningPotential = (deal) => {
   const estimate = Number(deal?.estimatedCommission);
   if (Number.isFinite(estimate) && estimate >= 0) return estimate;
+  const bandValue = { "very-high": 40, high: 25, medium: 10, low: 1 }[String(deal?.earningsBand || "").toLowerCase()];
+  if (Number.isFinite(bandValue)) return bandValue;
   const fixedBounty = String(deal?.commission || "").match(/^\$(\d+(?:\.\d+)?)/);
   return fixedBounty ? Number(fixedBounty[1]) : 0;
 };
@@ -400,7 +402,7 @@ const latestHTML = `<!doctype html>
     <aside class="latest-trust-strip" aria-label="How this page is organized">
       <span><strong>Focused first view</strong><small>Start with 18 recommendations, then reveal more when you choose.</small></span>
       <span><strong>Genuine imagery only</strong><small>Offers without real merchant-provided imagery stay out of this visual catalog.</small></span>
-      <span><strong>Transparent ordering</strong><small>Known bounties and verified earnings estimates come first; variable-rate offers then use value and freshness.</small></span>
+      <span><strong>Transparent ordering</strong><small>Known payouts and conservative earnings bands come first; customer value and freshness break close calls.</small></span>
     </aside>
     <section class="deals-heading-row" aria-labelledby="latest-deals-heading">
       <div><h2 id="latest-deals-heading">More deals worth seeing</h2><p>Filter first, compare a manageable set, and expand only when useful.</p></div>

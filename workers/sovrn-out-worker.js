@@ -1,4 +1,25 @@
 const APPROVED_AMAZON_TRACKING_ID = "dealdesk-20";
+const APPROVED_EBAY_TRACKING = {
+  mkcid: "1",
+  mkrid: "711-53200-19255-0",
+  siteid: "0",
+  campid: "5339181076",
+  toolid: "20014",
+  customid: "",
+  mkevt: "1",
+};
+const APPROVED_DESTINATIONS = {
+  "https://www.kqzyfj.com/click-101847838-13756265": "cj",
+  "https://www.tkqlhce.com/click-101847838-15438560": "cj",
+  "https://www.kqzyfj.com/click-101847838-15642853": "cj",
+  "https://www.hotels.com/affiliate/2B7dO8R": "expedia-group-direct",
+};
+const APPROVED_RAKUTEN_TRACKING = {
+  id: "JyyDRUQnGvw",
+  offerid: "2061576.5023433051046838324",
+  type: "2",
+  murl: "https://sensibo.com/products/sensibo-air-bundle?variant=33051046838324",
+};
 
 export default {
   async fetch(request, env) {
@@ -31,6 +52,36 @@ export default {
       return Response.redirect(destination.href, 302);
     }
 
+    if (network === "ebay-partner-network") {
+      const isEbay = destination.hostname.toLowerCase() === "www.ebay.com";
+      const hasApprovedTracking = isEbay && Object.entries(APPROVED_EBAY_TRACKING)
+        .every(([key, value]) => destination.searchParams.get(key) === value);
+      if (!hasApprovedTracking) {
+        return htmlResponse("eBay link is missing DealDesk EPN campaign tracking.", 400);
+      }
+      return Response.redirect(destination.href, 302);
+    }
+
+    if (network === "rakuten-advertising") {
+      const parameters = [...destination.searchParams.entries()];
+      const isRakuten = destination.origin === "https://click.linksynergy.com" &&
+        destination.pathname === "/link" && !destination.hash;
+      const hasApprovedTracking = isRakuten &&
+        parameters.length === Object.keys(APPROVED_RAKUTEN_TRACKING).length &&
+        Object.entries(APPROVED_RAKUTEN_TRACKING)
+          .every(([key, value]) => destination.searchParams.get(key) === value);
+      if (!hasApprovedTracking) {
+        return htmlResponse("Rakuten link is not the exact approved DealDesk product link.", 400);
+      }
+      return Response.redirect(destination.href, 302);
+    }
+
+    const canonical = destination.origin + destination.pathname;
+    if (APPROVED_DESTINATIONS[canonical] === network) {
+      if (network === "cj" && subID) destination.searchParams.set("sid", subID);
+      return Response.redirect(destination.href, 302);
+    }
+
     return htmlResponse("Merchant does not have an approved DealDesk commission path.", 403);
   },
 };
@@ -41,7 +92,14 @@ function cleanSubID(value) {
 }
 
 function cleanNetwork(value) {
-  return value === "amazon-associates" ? value : "unapproved";
+  const approved = new Set([
+    "amazon-associates",
+    "ebay-partner-network",
+    "cj",
+    "expedia-group-direct",
+    "rakuten-advertising",
+  ]);
+  return approved.has(value) ? value : "unapproved";
 }
 
 function htmlResponse(message, status) {

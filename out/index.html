@@ -42,6 +42,12 @@
           customid: "",
           mkevt: "1"
         };
+        var approvedRakutenTracking = {
+          id: "JyyDRUQnGvw",
+          offerid: "2061576.5023433051046838324",
+          type: "2",
+          murl: "https://sensibo.com/products/sensibo-air-bundle?variant=33051046838324"
+        };
         var approvedDestinations = {
           "https://www.kqzyfj.com/click-101847838-13756265": "cj",
           "https://www.tkqlhce.com/click-101847838-15438560": "cj",
@@ -108,6 +114,22 @@
             });
             if (!hasApprovedTracking) {
               fail("This eBay link is missing DealDesk's approved EPN campaign tracking.");
+              return null;
+            }
+            return destinationURL;
+          }
+
+          if (affiliateNetwork === "rakuten-advertising") {
+            var rakutenParameters = Array.from(destinationURL.searchParams.entries());
+            var isRakuten = destinationURL.origin === "https://click.linksynergy.com" &&
+              destinationURL.pathname === "/link" && !destinationURL.hash;
+            var hasApprovedRakutenTracking = isRakuten &&
+              rakutenParameters.length === Object.keys(approvedRakutenTracking).length &&
+              Object.keys(approvedRakutenTracking).every(function (key) {
+                return destinationURL.searchParams.get(key) === approvedRakutenTracking[key];
+              });
+            if (!hasApprovedRakutenTracking) {
+              fail("This Rakuten link is not the exact approved DealDesk product link.");
               return null;
             }
             return destinationURL;
