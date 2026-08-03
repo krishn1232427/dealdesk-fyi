@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T07:21:53Z",
+  "updatedAt": "2026-08-03T08:32:22Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -171,13 +171,13 @@
       "publisherSignupUrl": "https://rakutenadvertising.com/affiliate/",
       "dashboardUrl": "https://publisher.rakutenadvertising.com/",
       "priority": "high",
-      "dealDeskStatus": "active_no_payable_program",
+      "dealDeskStatus": "onboarding",
       "payoutReadiness": "verified",
       "commissionAccess": false,
       "canPublish": false,
-      "blockingReason": "Advertiser applications are pending or ineligible; no approved payable program is verified.",
-      "nextAction": "Complete the publisher profile and monitor current applications.",
-      "lastCheckedAt": "2026-08-02T16:12:42Z",
+      "blockingReason": "Rakuten Advertising confirmed Sensibo's approval of DealDesk, but the signed-in relationship, current offer terms, exact DealDesk tracking link, live offer, and genuine imagery have not been verified.",
+      "nextAction": "Open Sensibo in the signed-in Rakuten dashboard, confirm active status and current terms, generate and test the exact DealDesk link, then verify a live offer and genuine imagery before publication.",
+      "lastCheckedAt": "2026-08-03T08:32:22Z",
       "evidenceUrl": "https://rakutenadvertising.com/affiliate/"
     },
     {

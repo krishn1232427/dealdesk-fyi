@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T07:21:53Z",
+  "updatedAt": "2026-08-03T08:32:22Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherID": "2973087",
   "publisherAccounts": [
@@ -29,7 +29,7 @@
     {
       "network": "rakuten-advertising",
       "publisherID": "4733148",
-      "status": "active publisher account; advertiser applications pending; profile 3/4 complete; PayPal payment method verified",
+      "status": "active publisher account; Sensibo approved; exact Sensibo link unverified; other advertiser applications pending; profile 3/4 complete; PayPal payment method verified",
       "profileCompletion": "3/4",
       "payoutSetupStatus": "PayPal selected and verified",
       "commissionAccess": false
@@ -1105,13 +1105,16 @@
       "category": "Smart home climate control, air quality, and energy savings",
       "commission": "Confidential tiered qualifying-sale commission; exact terms retained in the Rakuten publisher dashboard",
       "attribution": "Program-specific last-click attribution; exact terms retained in the Rakuten publisher dashboard",
-      "status": "Pending advertiser approval — do not publish tracked links yet",
-      "applicationStatus": "pending",
+      "status": "Advertiser approval confirmed by Rakuten Advertising application-success email; exact payable link and live offer remain unverified — do not publish",
+      "applicationStatus": "approved",
       "appliedAt": "2026-08-01T19:14:59Z",
+      "approvalEvidence": "Rakuten Advertising application-success email supplied by the user on 2026-08-03",
+      "reviewedAt": "2026-08-03T08:32:22Z",
+      "trackingLinkStatus": "not_verified",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
-      "restrictions": "Use approved qualifying links and accurate, substantiated claims. Before any Sensibo link is published, confirm the site's privacy disclosure, applicable cookie consent and opt-out handling, advertiser policies, current offer, and exact payable link. Program financial terms are confidential.",
-      "summary": "DealDesk submitted a focused application to Sensibo after an internal economics and catalog-fit review. Its smart climate, air-quality, and energy-saving products fit the Home and Tech audience and can offer clear consumer value. Publication remains blocked until approval, privacy and tracking compliance, a live merchant-authorized offer, and a DealDesk-specific payable link are verified.",
+      "restrictions": "Use approved qualifying links and accurate, substantiated claims. Before any Sensibo link is published, confirm the site's privacy disclosure, applicable cookie consent and opt-out handling, advertiser policies, current offer, and exact payable link. Program financial terms are confidential. Rakuten's generic Available Links route is not an exact payable DealDesk link.",
+      "summary": "Rakuten Advertising confirmed that Sensibo approved DealDesk's marketing channel. The notice confirms advertiser acceptance but does not verify the signed-in relationship state, current confidential offer terms, a DealDesk-specific payable link, a live customer offer, or genuine merchant imagery. Publication remains blocked until those items are verified.",
       "priority": 50
     },
     {

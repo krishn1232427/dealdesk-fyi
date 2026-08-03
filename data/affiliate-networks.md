@@ -1,6 +1,6 @@
 # DealDesk affiliate-network register
 
-Last refreshed: 2026-08-03T07:21:53Z
+Last refreshed: 2026-08-03T08:32:22Z
 
 This is DealDesk's cumulative working list of 54 credible affiliate networks, commerce platforms, and important merchant-owned programs. It is refreshed daily because the market is open-ended and networks, signup routes, ownership, and DealDesk approvals change.
 
@@ -21,7 +21,7 @@ This is DealDesk's cumulative working list of 54 credible affiliate networks, co
 |---|---|---|---|---|---|---|---|---|---|
 | [Awin](https://www.awin.com/us/) | affiliate network | global | active no payable program | unverified | No | [Apply / enroll](https://ui.awin.com/publisher-signup/en/awin) | [Official source](https://www.awin.com/us/news-and-events/awin-news/awin-shareasale-new-era) | 2026-08-03T07:21:53Z | Open BLUETTI US in the signed-in Awin dashboard, confirm Joined/Active status and current terms, generate and test the exact DealDesk tracking link, verify payout onboarding, then verify a live offer and genuine imagery before publication. |
 | [impact.com](https://impact.com/) | partnership network | global | active limited | unverified | No | [Apply / enroll](https://app.impact.com/signup/none/create-new-mediapartner-account-flow.ihtml) | [Official source](https://impact.com/partners/affiliate-partners/) | 2026-08-02T16:12:42Z | Correct or upgrade the account type before applying to brands. |
-| [Rakuten Advertising](https://rakutenadvertising.com/) | affiliate network | global | active no payable program | verified | No | [Apply / enroll](https://rakutenadvertising.com/affiliate/) | [Official source](https://rakutenadvertising.com/affiliate/) | 2026-08-02T16:12:42Z | Complete the publisher profile and monitor current applications. |
+| [Rakuten Advertising](https://rakutenadvertising.com/) | affiliate network | global | onboarding | verified | No | [Apply / enroll](https://rakutenadvertising.com/affiliate/) | [Official source](https://rakutenadvertising.com/affiliate/) | 2026-08-03T08:32:22Z | Open Sensibo in the signed-in Rakuten dashboard, confirm active status and current terms, generate and test the exact DealDesk link, then verify a live offer and genuine imagery before publication. |
 | [Sovrn Commerce](https://www.sovrn.com/commerce/) | commerce subnetwork | global | pending review | unverified | No | [Apply / enroll](https://platform.sovrn.com/signup) | [Official source](https://knowledge.sovrn.com/kb/connect-your-affiliate-networks-to-commerce) | 2026-08-02T16:12:42Z | Monitor site approval, then verify merchant terms and the first exact campaign link. |
 | [PartnerStack](https://partnerstack.com/) | saas partner network | global | onboarding | unverified | No | [Apply / enroll](https://dash.partnerstack.com/handshake) | [Official source](https://partnerstack.com/partners-and-publishers) | 2026-08-02T16:12:42Z | Complete the Network profile only with truthful owner-supplied identity and audience information. |
 | [Travelpayouts](https://www.travelpayouts.com/) | travel partner network | global | onboarding | unverified | No | [Apply / enroll](https://www.travelpayouts.com/) | [Official source](https://www.travelpayouts.com/) | 2026-08-02T16:12:42Z | Enroll manually in suitable programs and verify each exact DealDesk link. |
