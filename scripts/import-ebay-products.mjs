@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
-const sourcePath = resolve(root, "data/ebay-products-2026-08-01.json");
+const sourcePath = resolve(root, process.argv[2] || "data/ebay-products-2026-08-02.json");
 const eventsPath = resolve(root, "data/ebay-events-2026-08-01.json");
 const feedPath = resolve(root, "data/best-deals.json");
 const registryPath = resolve(root, "data/affiliate-programs.json");
@@ -16,6 +16,12 @@ const eventExpiryByURL = new Map((eventsSource.events || []).map((event) => [eve
 const capturedAt = new Date(source.capturedAt);
 
 if (!Number.isFinite(capturedAt.getTime())) throw new Error("Product capture timestamp is invalid");
+if (capturedAt.getTime() > Date.now() + 5 * 60 * 1000) {
+  throw new Error("Product capture timestamp is in the future");
+}
+if (Date.now() - capturedAt.getTime() > 3 * 60 * 60 * 1000) {
+  throw new Error("Product capture is too old to import; perform a fresh eBay recheck");
+}
 if (!program || program.applicationStatus !== "active" || program.commissionEligible !== true ||
     program.publicPublishingAllowed !== true) {
   throw new Error("The approved eBay Partner Network program is not active");
@@ -54,6 +60,7 @@ const cleanURL = (value) => {
   return canonical;
 };
 const conditionPattern = /^(New(?: other)?|Open box|Certified Refurbished|Excellent - Refurbished|Very Good - Refurbished|Good - Refurbished|Seller refurbished|Manufacturer refurbished|Refurbished|Used|Pre-owned)$/i;
+const auctionPattern = /\b\d+\s+bids?\b/i;
 const merchantImage = (value) => {
   try {
     const image = new URL(String(value || ""));
@@ -65,24 +72,29 @@ const merchantImage = (value) => {
 
 const candidates = [];
 const seenURLs = new Set();
+const seenVisuals = new Set();
 for (const record of source.records || []) {
   let merchant;
   try { merchant = cleanURL(record.merchantURL); } catch { merchant = null; }
   if (!merchant || seenURLs.has(merchant.href)) continue;
   const lines = String(record.rawText || "").split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
   const title = lines[0];
+  const isAuction = lines.some((line) => auctionPattern.test(line));
   const prices = lines.filter((line) => money.test(line));
   const current = prices[0];
   const currentValue = dollars(current);
   const expiresAt = expiryISO(record.expiresAt || eventExpiryByURL.get(record.eventURL));
-  if (!title || title.length < 5 || !Number.isFinite(currentValue) || currentValue <= 0 ||
-      !expiresAt || new Date(expiresAt) <= capturedAt) continue;
+  const imageURL = merchantImage(record.imageURL);
+  const visualSignature = `${String(title || "").toLowerCase()}|${current || ""}|${imageURL}`;
+  if (!title || title.length < 5 || isAuction || !Number.isFinite(currentValue) || currentValue <= 0 ||
+      !imageURL || !expiresAt || new Date(expiresAt) <= capturedAt || seenVisuals.has(visualSignature)) continue;
   seenURLs.add(merchant.href);
-  candidates.push({ record, merchant, lines, title, prices, current, currentValue, expiresAt });
+  seenVisuals.add(visualSignature);
+  candidates.push({ record, merchant, lines, title, prices, current, currentValue, expiresAt, imageURL });
 }
 
 const recheckAfter = new Date(capturedAt.getTime() + 24 * 60 * 60 * 1000).toISOString();
-const imported = candidates.map(({ record, merchant, lines, title, prices, current, currentValue, expiresAt }, index) => {
+const imported = candidates.map(({ record, merchant, lines, title, prices, current, currentValue, expiresAt, imageURL }, index) => {
   const existing = existingByURL.get(merchant.href);
   const original = prices.slice(1).find((price) => dollars(price) > currentValue);
   const originalValue = original ? dollars(original) : 0;
@@ -112,8 +124,9 @@ const imported = candidates.map(({ record, merchant, lines, title, prices, curre
     merchantURL: merchant.href,
     merchantName: "eBay",
     sourceType: "ebay-product",
+    listingFormat: "FixedPrice",
     sourcePromotionURL: record.eventURL,
-    ...(merchantImage(record.imageURL) ? { imageURL: merchantImage(record.imageURL) } : {}),
+    imageURL,
     category: category(record.eventCategory),
     badgeText: discountPercent ? `${discountPercent}% off` : "Live eBay price",
     currentPrice: current,
@@ -121,6 +134,8 @@ const imported = candidates.map(({ record, merchant, lines, title, prices, curre
     priceNote: details || "Confirm condition, shipping, seller, and availability on eBay",
     summary: `${title} was listed for ${current}${original ? `, reduced from ${original}` : ""} inside eBay’s active “${eventClaim}” promotion when checked. Price, variant, condition, seller, shipping, warranty, and availability can change; confirm the exact item on eBay.`,
     status: "active",
+    availabilityStatus: "InStock",
+    verificationSource: source.source,
     publishedAt: existing?.publishedAt || source.capturedAt,
     verifiedAt: source.capturedAt,
     expiresAt,

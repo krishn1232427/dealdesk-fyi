@@ -1,6 +1,6 @@
 # DealDesk affiliate-network register
 
-Last refreshed: 2026-08-02T16:12:42Z
+Last refreshed: 2026-08-03T05:19:06Z
 
 This is DealDesk's cumulative working list of 54 credible affiliate networks, commerce platforms, and important merchant-owned programs. It is refreshed daily because the market is open-ended and networks, signup routes, ownership, and DealDesk approvals change.
 
@@ -12,7 +12,7 @@ This is DealDesk's cumulative working list of 54 credible affiliate networks, co
 |---|---|---|---|---|---|---|---|---|---|
 | [CJ](https://www.cj.com/) | affiliate network | global | active payable | unknown | Yes — program-specific | [Apply / enroll](https://public.cj.com/signup/publisher) | [Official source](https://www.cj.com/publisher) | 2026-08-02T16:12:42Z | Keep NordVPN, Surfshark, and NordPass links verified; monitor pending advertiser applications. |
 | [Amazon Associates](https://affiliate-program.amazon.com/) | direct program | US, country-specific programs | active payable | unknown | Yes — program-specific | [Apply / enroll](https://affiliate-program.amazon.com/) | [Official source](https://affiliate-program.amazon.com/) | 2026-08-02T16:12:42Z | Continue price, image, availability, eligibility, and exact tag verification for every listing. |
-| [eBay Partner Network](https://partnernetwork.ebay.com/) | direct program | global | active payable | unknown | Yes — program-specific | [Apply / enroll](https://partnernetwork.ebay.com/) | [Official source](https://partnernetwork.ebay.com/) | 2026-08-02T16:12:42Z | Keep each EPN URL, item condition, seller data, price, availability, and genuine listing image verified. |
+| [eBay Partner Network](https://partnernetwork.ebay.com/) | direct program | global | active payable | unknown | Yes — program-specific | [Apply / enroll](https://partnernetwork.ebay.com/) | [Official source](https://partnernetwork.ebay.com/) | 2026-08-03T05:19:06Z | Keep each EPN URL, item condition, seller data, price, availability, and genuine listing image verified; confirm Bank Account, Tax Documents, and Identity Verification completion without storing financial details. |
 | [Expedia Group Travel Creator Program](https://creator.expediagroup.com/) | direct program | global | active payable | verified | Yes — program-specific | [Apply / enroll](https://creator.expediagroup.com/) | [Official source](https://www.expedia.com/shop/dealdesk) | 2026-08-02T16:12:42Z | Publish only Expedia-generated links for trip elements with a verified non-zero signed-in rate and current offer. |
 
 ## Accounts and applications in progress

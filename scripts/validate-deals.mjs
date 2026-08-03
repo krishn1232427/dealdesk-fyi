@@ -116,11 +116,10 @@ for (const feedPath of feedPaths) {
         if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: Hotels.com URL does not match the verified program URL`);
       }
     } else if (deal.network === "ebay-partner-network") {
-      const allowedEbayHosts = new Set(["rover.ebay.com", "ebay.us", "www.ebay.com"]);
-      const hasTrackingSignal = affiliateURL.hostname !== "www.ebay.com" ||
-        affiliateURL.searchParams.has("campid") || affiliateURL.searchParams.has("mkcid");
+      const hasTrackingSignal = affiliateURL.searchParams.has("campid") &&
+        affiliateURL.searchParams.has("mkcid");
 
-      if (!allowedEbayHosts.has(affiliateURL.hostname) || !hasTrackingSignal) {
+      if (affiliateURL.hostname !== "www.ebay.com" || !hasTrackingSignal) {
         errors.push(`${label}: eBay URL must be an EPN-generated tracking link`);
       }
       if (deal.affiliateURL === deal.merchantURL) {
@@ -132,6 +131,38 @@ for (const feedPath of feedPaths) {
       }
       if (deal.trackingID !== ebayProgram?.campaignName) {
         errors.push(`${label}: eBay trackingID must match the approved campaign`);
+      }
+      if (deal.sourceType === "ebay-product") {
+        let merchantURL;
+        let imageURL;
+        try { merchantURL = new URL(deal.merchantURL); } catch {}
+        try { imageURL = new URL(deal.imageURL); } catch {}
+        if (merchantURL?.hostname !== "www.ebay.com" || !/^\/itm\/\d+/.test(merchantURL.pathname)) {
+          errors.push(`${label}: eBay product must have a canonical item URL`);
+        }
+        if (imageURL?.hostname !== "i.ebayimg.com" ||
+            !imageURL.pathname.startsWith("/images/g/") ||
+            !imageURL.pathname.endsWith("/s-l640.webp")) {
+          errors.push(`${label}: eBay product must have a genuine 640px item image`);
+        }
+        if (!/^\$[\d,]+(?:\.\d{2})?$/.test(String(deal.currentPrice || ""))) {
+          errors.push(`${label}: eBay product must have an exact USD price`);
+        }
+        if (deal.listingFormat !== "FixedPrice") {
+          errors.push(`${label}: eBay product must be a verified fixed-price listing`);
+        }
+        if (deal.availabilityStatus !== "InStock") {
+          errors.push(`${label}: eBay product must be verified in stock`);
+        }
+        if (!String(deal.verificationSource || "").includes("eBay promotion-page product cards")) {
+          errors.push(`${label}: eBay product must include verification provenance`);
+        }
+        const verifiedAt = new Date(deal.verifiedAt).getTime();
+        const recheckAfter = new Date(deal.recheckAfter).getTime();
+        if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
+            recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
+          errors.push(`${label}: eBay product verification window must be no more than 24 hours`);
+        }
       }
       for (const [key, value] of Object.entries(ebayProgram?.trackingParameters || {})) {
         if (affiliateURL.searchParams.get(key) !== value) {
