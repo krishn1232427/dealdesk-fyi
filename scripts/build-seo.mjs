@@ -9,12 +9,17 @@ const feeds = await Promise.all([
   readFile(resolve(root, "data/best-deals.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/streaming-deals.json"), "utf8").then(JSON.parse)
 ]);
+const affiliateRegistry = JSON.parse(await readFile(resolve(root, "data/affiliate-programs.json"), "utf8"));
+const payoutReadyByNetwork = new Map((affiliateRegistry.publisherAccounts || [])
+  .map((account) => [account.network, account.payoutReady]));
+const hasPayoutPath = (deal) => payoutReadyByNetwork.get(deal.network) === true;
 const isLiveDeal = (deal) => {
   const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
   const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
   return deal.status === "active" &&
     deal.commissionEligible === true &&
     deal.approvalStatus === "approved" &&
+    hasPayoutPath(deal) &&
     Boolean(deal.affiliateURL) &&
     Boolean(deal.verifiedAt) &&
     now <= expiresAt &&
@@ -40,6 +45,14 @@ const hasGenuineMerchantImage = (deal) => {
   }
 };
 const allFeedDeals = feeds.flatMap((feed) => feed.deals || []);
+const payoutBlockedDealCount = allFeedDeals.filter((deal) => {
+  const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
+  const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
+  return deal.status === "active" && deal.commissionEligible === true &&
+    deal.approvalStatus === "approved" && !hasPayoutPath(deal) &&
+    Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
+    now <= expiresAt && now <= recheckAfter;
+}).length;
 const liveDeals = allFeedDeals.filter(isLiveDeal);
 const deals = liveDeals.filter(hasGenuineMerchantImage);
 const publicDealIDs = new Set(deals.map((deal) => deal.id));
@@ -156,6 +169,8 @@ for (const deal of deals) {
   const discount = discountFrom(prices, deal);
   const savings = savingsFrom(prices);
   const itemCondition = itemConditionFor(deal);
+  const isServiceOffer = deal.offerType === "subscription" ||
+    String(deal.category || "").toLowerCase() === "subscriptions";
   const relatedDeals = deals.filter((candidate) =>
     candidate.id !== deal.id && candidate.category === deal.category && pricesFrom(candidate).current
   ).slice(0, 3);
@@ -170,21 +185,21 @@ for (const deal of deals) {
   }).join("\n");
   const schema = hasMonetaryPrice(prices.current) ? {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": isServiceOffer ? "Service" : "Product",
     name: title,
     description,
     category: deal.category || "Deals",
     url: canonical,
     mainEntityOfPage: canonical,
-    ...(asin ? { sku: asin } : {}),
+    ...(!isServiceOffer && asin ? { sku: asin } : {}),
     ...(image ? { image: [image] } : {}),
     offers: {
       "@type": "Offer",
       url: deal.affiliateURL,
       priceCurrency: "USD",
       price: numberFromPrice(prices.current).toFixed(2),
-      availability: "https://schema.org/InStock",
-      ...(itemCondition ? { itemCondition } : {}),
+      ...(!isServiceOffer ? { availability: "https://schema.org/InStock" } : {}),
+      ...(!isServiceOffer && itemCondition ? { itemCondition } : {}),
       seller: { "@type": "Organization", name: deal.merchantName || "Amazon" }
     }
   } : {
@@ -204,7 +219,7 @@ for (const deal of deals) {
   <meta name="description" content="${esc(description)}" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="${canonical}" />
-  <meta property="og:type" content="${hasMonetaryPrice(prices.current) ? "product" : "website"}" />
+  <meta property="og:type" content="${hasMonetaryPrice(prices.current) && !isServiceOffer ? "product" : "website"}" />
   <meta property="og:title" content="${esc(title)} deal" />
   <meta property="og:description" content="${esc(description)}" />
   <meta property="og:url" content="${canonical}" />
@@ -352,7 +367,7 @@ const latestDealData = pricedDeals.map((deal) => {
 const latestCardHTML = (deal) => `<article class="deal-card" data-deal-id="${esc(deal.id)}" data-category="${esc(deal.category)}" data-expires-at="${esc(deal.expiresAt)}" data-recheck-after="${esc(deal.recheckAfter)}">
     <a class="deal-card-link" href="${esc(deal.url)}" aria-label="${esc(deal.title)}, ${esc(deal.currentPrice)}. View deal details">
       <span class="deal-media">
-${deal.badgeText ? `        <span class="discount-badge">${esc(deal.badgeText)}</span>\n` : ""}        <img src="${esc(deal.imageURL)}" data-merchant-image alt="${esc(deal.title)}" width="800" height="520" loading="eager" decoding="async" fetchpriority="high" />
+${deal.badgeText ? `        <span class="discount-badge">${esc(deal.badgeText)}</span>\n` : ""}        <img src="${esc(deal.imageURL)}" data-merchant-image alt="${esc(deal.title)}" width="800" height="520" loading="lazy" decoding="async" />
       </span>
       <span class="deal-body">
         <span class="price-line"><strong>${esc(deal.currentPrice)}</strong>${deal.originalPrice ? deal.referenceStyle === "renewal" ? `<span class="original-price">${esc(deal.referenceLabel)} ${esc(deal.originalPrice)}</span>` : `<span class="original-price">${esc(deal.referenceLabel)} <del>${esc(deal.originalPrice)}</del></span>` : ""}</span>
@@ -418,7 +433,7 @@ const latestHTML = `<!doctype html>
     </section>
     <section class="latest-controls" aria-label="Filter the deal catalog">
       <label for="latest-category">Category<select id="latest-category"><option value="all">All categories</option>${categoryOptions}</select></label>
-      <p id="latest-catalog-status" role="status">Showing 18 of ${pricedDeals.length} verified offers</p>
+      <p id="latest-catalog-status" role="status">Showing ${Math.min(18, pricedDeals.length)} of ${pricedDeals.length} verified offers</p>
     </section>
     <div class="deal-grid" id="latest-deal-grid">${latestCards}</div>
     <p class="latest-empty" id="latest-empty" hidden>No matching verified deals. Try another search or category.</p>
@@ -489,6 +504,7 @@ const latestHTML = `<!doctype html>
         image.width = 800;
         image.height = 520;
         image.loading = eager ? "eager" : "lazy";
+        if (eager) image.setAttribute("fetchpriority", "high");
         image.decoding = "async";
         image.setAttribute("data-merchant-image", "");
         var rejectCard = function () {
@@ -560,7 +576,7 @@ const latestHTML = `<!doctype html>
         var shownDeals = matching.slice(0, cardLimit);
         var fragment = document.createDocumentFragment();
         shownDeals.forEach(function (deal, index) {
-          fragment.appendChild(makeCard(deal, index < 6));
+          fragment.appendChild(makeCard(deal, !featuredMatch && index === 0));
         });
         grid.replaceChildren(fragment);
         var shown = shownDeals.length + (featuredMatch ? 1 : 0);
@@ -740,4 +756,4 @@ await writeFile(resolve(root, "404.html"), `<!doctype html>
   <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>That page is no longer available</h1><p class="deal-detail-summary">The offer may have been removed because it no longer meets DealDesk's publishing requirements.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse current verified deals</a></p></div></article></main>
 </body>
 </html>\n`);
-console.log(`Built ${deals.length} image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery.`);
+console.log(`Built ${deals.length} payout-ready image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${payoutBlockedDealCount} offers on payout-blocked accounts.`);

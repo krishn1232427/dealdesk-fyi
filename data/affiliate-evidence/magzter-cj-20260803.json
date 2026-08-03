@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-03T20:41:02Z",
+  "source": "Signed-in CJ publisher dashboard, exact CJ tracking link, and live Magzter offer page",
+  "publisher": {
+    "cjCompanyID": "8007406",
+    "cjMemberID": "7685648",
+    "cjSiteID": "101847838",
+    "payoutReadiness": "verified"
+  },
+  "advertiser": {
+    "name": "Magzter",
+    "advertiserID": "5305397",
+    "relationship": "Active"
+  },
+  "promotion": {
+    "linkID": "17217038",
+    "title": "50% Off on Annual GOLD Subscription",
+    "endsAt": "2026-11-30T06:00:00Z",
+    "trackingURL": "https://www.tkqlhce.com/click-101847838-17217038",
+    "destinationURL": "https://www.magzter.com/magztergold/1year-subscription-offer"
+  },
+  "merchantOffer": {
+    "availability": "Available",
+    "priceUSD": 74.99,
+    "compareAtPriceUSD": 149.99,
+    "imageURL": "https://cdn.magzter.com/home/banner/web.webp",
+    "imageWidth": 1920,
+    "imageHeight": 1152,
+    "customerValue": "Annual Magzter GOLD access to more than 10,000 magazines and newspapers"
+  },
+  "commission": {
+    "advertisedRange": "30%-50% of qualifying sales; separate 5 USD actions may apply",
+    "conservativeRate": 0.3,
+    "conservativeEstimatedCommissionUSD": 22.5
+  },
+  "privacy": "No passwords, cookies, session tokens, banking data, tax data, or confidential account details are stored in this evidence record."
+}

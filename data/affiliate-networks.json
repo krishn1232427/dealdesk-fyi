@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T16:13:15Z",
+  "updatedAt": "2026-08-03T21:27:23Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -114,13 +114,13 @@
       "publisherSignupUrl": "https://ui.awin.com/publisher-signup/en/awin",
       "dashboardUrl": "https://ui.awin.com/",
       "priority": "high",
-      "dealDeskStatus": "active_no_payable_program",
+      "dealDeskStatus": "onboarding",
       "payoutReadiness": "unverified",
-      "commissionAccess": false,
+      "commissionAccess": true,
       "canPublish": false,
-      "blockingReason": "BLUETTI US advertiser acceptance is evidenced by a welcome email, but the signed-in Awin relationship, exact DealDesk tracking link, live offer, and payout onboarding have not been verified.",
-      "nextAction": "Open BLUETTI US in the signed-in Awin dashboard, confirm Joined/Active status and current terms, generate and test the exact DealDesk tracking link, verify payout onboarding, then verify a live offer and genuine imagery before publication.",
-      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "blockingReason": "BLUETTI US is Joined and its exact product link, live offer, and genuine image are verified, but Awin states it cannot pay DealDesk until required tax information is complete.",
+      "nextAction": "The account owner completes Awin's required tax information; then reverify payout readiness and the BLUETTI link, price, availability, and imagery before publication.",
+      "lastCheckedAt": "2026-08-03T20:41:02Z",
       "evidenceUrl": "https://www.awin.com/us/news-and-events/awin-news/awin-shareasale-new-era"
     },
     {
@@ -134,12 +134,12 @@
       "dashboardUrl": "https://members.cj.com/member/login/#/",
       "priority": "high",
       "dealDeskStatus": "active_payable",
-      "payoutReadiness": "unknown",
+      "payoutReadiness": "verified",
       "commissionAccess": true,
       "canPublish": true,
       "blockingReason": null,
-      "nextAction": "Keep NordVPN, Surfshark, and NordPass links verified; monitor pending advertiser applications.",
-      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "nextAction": "Keep NordVPN, Surfshark, NordPass, and Magzter links and live offers verified; monitor pending advertiser applications.",
+      "lastCheckedAt": "2026-08-03T20:41:02Z",
       "evidenceUrl": "https://www.cj.com/publisher"
     },
     {
@@ -176,8 +176,8 @@
       "commissionAccess": true,
       "canPublish": true,
       "blockingReason": null,
-      "nextAction": "Recheck the verified Sensibo product, active offer, exclusion list, price, availability, and imagery every 24 hours; continue reviewing pending Rakuten advertiser applications separately.",
-      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "nextAction": "Recheck Sensibo every 24 hours. JD Sports is Partnered, but publish only a real markdown whose exact tracking link, non-excluded SKU, availability, and genuine product image are verified together.",
+      "lastCheckedAt": "2026-08-03T20:41:02Z",
       "evidenceUrl": "https://rakutenadvertising.com/affiliate/"
     },
     {
@@ -215,7 +215,7 @@
       "canPublish": false,
       "blockingReason": "The Sovrn dashboard shows dealdesk.fyi in Pending and no sites in Approved; generator access does not make pre-approval links payable.",
       "nextAction": "Monitor site approval, then verify merchant terms and the first exact campaign link.",
-      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "lastCheckedAt": "2026-08-03T20:41:02Z",
       "evidenceUrl": "https://knowledge.sovrn.com/kb/connect-your-affiliate-networks-to-commerce"
     },
     {
@@ -951,13 +951,13 @@
       "publisherSignupUrl": "https://affiliate-program.amazon.com/",
       "dashboardUrl": "https://affiliate-program.amazon.com/",
       "priority": "high",
-      "dealDeskStatus": "active_payable",
-      "payoutReadiness": "unknown",
+      "dealDeskStatus": "onboarding",
+      "payoutReadiness": "unverified",
       "commissionAccess": true,
-      "canPublish": true,
-      "blockingReason": null,
-      "nextAction": "Continue price, image, availability, eligibility, and exact tag verification for every listing.",
-      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "canPublish": false,
+      "blockingReason": "The signed-in Amazon Associates account shows U.S. tax status complete, but Payment Methods says a bank account is required and no bank accounts are added. DealDesk cannot treat tagged offers as payout-ready.",
+      "nextAction": "The account owner adds and verifies an Amazon payout method; then reverify payout readiness and every tagged offer before restoring publication.",
+      "lastCheckedAt": "2026-08-03T21:27:23Z",
       "evidenceUrl": "https://affiliate-program.amazon.com/"
     },
     {
@@ -970,13 +970,13 @@
       "publisherSignupUrl": "https://partnernetwork.ebay.com/",
       "dashboardUrl": "https://partner.ebay.com/secure/mediapartner/home/pview.ihtml#/",
       "priority": "high",
-      "dealDeskStatus": "active_payable",
-      "payoutReadiness": "unknown",
+      "dealDeskStatus": "onboarding",
+      "payoutReadiness": "unverified",
       "commissionAccess": true,
-      "canPublish": true,
-      "blockingReason": null,
-      "nextAction": "Keep each EPN URL, item condition, seller data, price, availability, and genuine listing image verified; confirm Bank Account, Tax Documents, and Identity Verification completion without storing financial details.",
-      "lastCheckedAt": "2026-08-03T16:13:15Z",
+      "canPublish": false,
+      "blockingReason": "DealDesk's eBay campaign and link tools are verified, but Bank Account, Tax Documents, and Identity Verification completion have not been confirmed. EPN offers are withheld until payout readiness is positively verified.",
+      "nextAction": "Sign in and confirm Bank Account, Tax Documents, and Identity Verification completion without storing financial details; then reverify each EPN offer before restoring publication.",
+      "lastCheckedAt": "2026-08-03T21:27:23Z",
       "evidenceUrl": "https://partnernetwork.ebay.com/"
     },
     {

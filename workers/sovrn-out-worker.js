@@ -12,6 +12,7 @@ const APPROVED_DESTINATIONS = {
   "https://www.kqzyfj.com/click-101847838-13756265": "cj",
   "https://www.tkqlhce.com/click-101847838-15438560": "cj",
   "https://www.kqzyfj.com/click-101847838-15642853": "cj",
+  "https://www.tkqlhce.com/click-101847838-17217038": "cj",
   "https://www.hotels.com/affiliate/2B7dO8R": "expedia-group-direct",
 };
 const APPROVED_RAKUTEN_TRACKING = {

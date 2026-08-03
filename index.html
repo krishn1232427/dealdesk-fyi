@@ -318,6 +318,7 @@
         var saveToast = document.getElementById("save-toast");
         var productDeals = [];
         var streamingDealCount = 0;
+        var payoutReadyByNetwork = {};
         var activeFilter = "all";
         var activeMerchant = "all";
         var searchQuery = "";
@@ -335,6 +336,7 @@
               deal.status === "active" &&
               deal.commissionEligible === true &&
               deal.approvalStatus === "approved" &&
+              payoutReadyByNetwork[deal.network] === true &&
               deal.trackingID &&
               deal.affiliateURL &&
               deal.verifiedAt &&
@@ -942,8 +944,16 @@
           fetch("/data/streaming-deals.json", { cache: "no-store" }).then(function (response) {
             if (!response.ok) throw new Error("Streaming feed unavailable");
             return response.json();
+          }),
+          fetch("/data/affiliate-programs.json", { cache: "no-store" }).then(function (response) {
+            if (!response.ok) throw new Error("Affiliate payout registry unavailable");
+            return response.json();
           })
         ]).then(function (feeds) {
+          payoutReadyByNetwork = (feeds[2].publisherAccounts || []).reduce(function (map, account) {
+            map[account.network] = account.payoutReady;
+            return map;
+          }, {});
           productDeals = (feeds[0].deals || []).filter(eligible).sort(function (a, b) {
             return earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a) || (a.priority || 99) - (b.priority || 99);
           });

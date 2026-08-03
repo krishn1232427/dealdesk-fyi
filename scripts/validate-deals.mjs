@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 
 const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
 const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-programs.json", import.meta.url), "utf8"));
+const magzterEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/magzter-cj-20260803.json", import.meta.url), "utf8"));
 const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
 const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
 const sensiboExclusionSnapshotHash = createHash("sha256").update(sensiboExclusionSnapshot).digest("hex");
@@ -19,6 +20,9 @@ const rakutenPrograms = new Map((affiliateRegistry.programs || [])
   .map((program) => [String(program.advertiserID), program]));
 const ebayProgram = (affiliateRegistry.programs || [])
   .find((program) => program.id === "ebay-partner-network-default");
+const payoutReadyByNetwork = new Map((affiliateRegistry.publisherAccounts || [])
+  .map((account) => [account.network, account.payoutReady]));
+const hasPayoutPath = (deal) => payoutReadyByNetwork.get(deal.network) === true;
 const seenIDs = new Set();
 const seenNetworks = new Set();
 const seenDeals = [];
@@ -47,6 +51,14 @@ const hasGenuineMerchantImage = (deal) => {
   } catch {
     return false;
   }
+};
+const isPublicDeal = (deal) => {
+  const expiresAt = validDate(deal.expiresAt) ? new Date(deal.expiresAt).getTime() : Infinity;
+  const recheckAfter = validDate(deal.recheckAfter) ? new Date(deal.recheckAfter).getTime() : Infinity;
+  return deal.status === "active" && deal.commissionEligible === true &&
+    deal.approvalStatus === "approved" && hasPayoutPath(deal) &&
+    Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
+    now <= expiresAt && now <= recheckAfter && hasGenuineMerchantImage(deal);
 };
 
 for (const feedPath of feedPaths) {
@@ -126,6 +138,52 @@ for (const feedPath of feedPaths) {
         if (program.publicPublishingAllowed !== true) errors.push(`${label}: CJ program is not approved for public publishing`);
         if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: CJ URL does not match the verified program URL`);
         if (String(program.linkID) !== String(deal.linkID)) errors.push(`${label}: CJ linkID does not match the verified program linkID`);
+      }
+      if (String(deal.advertiserID) === "5305397") {
+        const expectedEvidenceRecord = "data/affiliate-evidence/magzter-cj-20260803.json";
+        let merchantURL;
+        let imageURL;
+        try { merchantURL = new URL(deal.merchantURL); } catch {}
+        try { imageURL = new URL(deal.imageURL); } catch {}
+
+        if (program?.evidenceRecord !== expectedEvidenceRecord || deal.evidenceRecord !== expectedEvidenceRecord) {
+          errors.push(`${label}: Magzter program and deal must reference the authenticated evidence record`);
+        }
+        if (magzterEvidence?.advertiser?.relationship !== "Active" ||
+            String(magzterEvidence?.advertiser?.advertiserID) !== String(deal.advertiserID) ||
+            String(magzterEvidence?.publisher?.cjSiteID) !== String(deal.trackingID) ||
+            String(magzterEvidence?.promotion?.linkID) !== String(deal.linkID) ||
+            magzterEvidence?.promotion?.trackingURL !== deal.affiliateURL ||
+            magzterEvidence?.promotion?.destinationURL !== deal.merchantURL ||
+            magzterEvidence?.merchantOffer?.imageURL !== deal.imageURL ||
+            magzterEvidence?.reviewedAt !== deal.verifiedAt) {
+          errors.push(`${label}: Magzter deal does not match its authenticated evidence record`);
+        }
+        if (merchantURL?.hostname !== "www.magzter.com" ||
+            merchantURL.pathname !== "/magztergold/1year-subscription-offer") {
+          errors.push(`${label}: Magzter must use the verified annual GOLD offer page`);
+        }
+        if (imageURL?.hostname !== "cdn.magzter.com" || imageURL.pathname !== "/home/banner/web.webp") {
+          errors.push(`${label}: Magzter must use the verified genuine merchant hero image`);
+        }
+        if (deal.sourceType !== "cj-text-link" || deal.offerType !== "subscription") {
+          errors.push(`${label}: Magzter must be a verified CJ subscription link`);
+        }
+        if (usdNumber(deal.currentPrice) !== magzterEvidence?.merchantOffer?.priceUSD ||
+            usdNumber(deal.originalPrice) !== magzterEvidence?.merchantOffer?.compareAtPriceUSD ||
+            Number(deal.discountPercent) !== 50 ||
+            Number(deal.estimatedCommission) !== magzterEvidence?.commission?.conservativeEstimatedCommissionUSD) {
+          errors.push(`${label}: Magzter price, discount, or conservative commission estimate does not match evidence`);
+        }
+        if (deal.expiresAt !== magzterEvidence?.promotion?.endsAt || program?.offerExpiresAt !== deal.expiresAt) {
+          errors.push(`${label}: Magzter promotion deadline does not match the verified CJ schedule`);
+        }
+        const verifiedAt = new Date(deal.verifiedAt).getTime();
+        const recheckAfter = new Date(deal.recheckAfter).getTime();
+        if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
+            recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
+          errors.push(`${label}: Magzter verification window must be no more than 24 hours`);
+        }
       }
     } else if (deal.network === "expedia-group-direct") {
       const program = expediaPrograms.get(String(deal.trackingID || ""));
@@ -311,6 +369,19 @@ if (seenNetworks.has("ebay-partner-network")) {
   }
 }
 
+if (seenNetworks.has("cj")) {
+  const outboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+  const workerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
+  const currentCJDeals = seenDeals.filter((deal) => deal.network === "cj" && isPublicDeal(deal));
+  for (const source of [outboundPage, workerSource]) {
+    for (const deal of currentCJDeals) {
+      if (!source.includes(JSON.stringify(deal.affiliateURL))) {
+        errors.push(`Outbound safety gate is missing verified CJ URL ${deal.affiliateURL}`);
+      }
+    }
+  }
+}
+
 if (seenNetworks.has("rakuten-advertising")) {
   const outboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
   const workerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
@@ -337,13 +408,7 @@ for (const approval of outboundApprovals.deals || []) {
   approvalByID.set(approval.id, approval);
 }
 
-const publicDeals = seenDeals.filter((deal) => {
-  const expiresAt = validDate(deal.expiresAt) ? new Date(deal.expiresAt).getTime() : Infinity;
-  const recheckAfter = validDate(deal.recheckAfter) ? new Date(deal.recheckAfter).getTime() : Infinity;
-  return deal.status === "active" && deal.commissionEligible === true &&
-    deal.approvalStatus === "approved" && Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
-    now <= expiresAt && now <= recheckAfter && hasGenuineMerchantImage(deal);
-});
+const publicDeals = seenDeals.filter(isPublicDeal);
 const publicDealIDs = new Set(publicDeals.map((deal) => deal.id));
 for (const deal of publicDeals) {
   const approval = approvalByID.get(deal.id);
@@ -384,6 +449,11 @@ for (const approval of approvalByID.values()) {
 
 const lifecycleOutboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
 const lifecycleWorkerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
+const homepageSource = await readFile(new URL("../index.html", import.meta.url), "utf8");
+if (!homepageSource.includes('/data/affiliate-programs.json') ||
+    !homepageSource.includes('payoutReadyByNetwork[deal.network] === true')) {
+  errors.push("index.html: homepage listings must fail closed against verified network payout readiness");
+}
 if (!lifecycleOutboundPage.includes("/data/outbound-approvals.json") ||
     !lifecycleOutboundPage.includes("deal.validUntil === requestedValidUntil") ||
     !lifecycleOutboundPage.includes("Date.now() > validUntil")) {
@@ -431,4 +501,4 @@ if (errors.length) {
 }
 
 if (staleDeals.length) console.log(`Withheld ${staleDeals.length} expired or due-for-recheck deals from public output.`);
-console.log(`Validated ${seenIDs.size} payable deal records; ${publicDeals.length} are currently public.`);
+console.log(`Validated ${seenIDs.size} affiliate deal records; ${publicDeals.length} are currently payout-ready and public.`);
