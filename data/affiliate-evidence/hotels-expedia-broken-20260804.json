@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-04T08:14:24.473Z",
+  "source": "Live DealDesk outbound path and normal-browser Hotels.com affiliate-route check",
+  "program": {
+    "name": "Expedia Group Travel Creator Program",
+    "relationship": "Active",
+    "payoutReadiness": "verified",
+    "hotelCommissionRate": 0.04
+  },
+  "trackingLink": {
+    "trackingID": "2B7dO8R",
+    "trackingURL": "https://www.hotels.com/affiliate/2B7dO8R",
+    "status": "broken",
+    "observedURL": "https://www.hotels.com/affiliate/2B7dO8R",
+    "observedPageTitle": "Sorry, we couldn't find the page you were looking for",
+    "redirectedToMerchantOffer": false
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "No current payable Hotels.com tracking link reaches the verified Member Prices merchant offer.",
+    "replacementRequirement": "Generate a fresh Expedia-issued Hotels.com link and verify its attribution, live destination, customer offer, and genuine imagery before republishing."
+  },
+  "privacy": "No passwords, cookies, session tokens, banking data, tax data, or confidential account details are stored in this evidence record."
+}

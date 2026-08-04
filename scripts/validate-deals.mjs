@@ -6,6 +6,7 @@ const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-p
 const magzterEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/magzter-cj-20260803.json", import.meta.url), "utf8"));
 const protonEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/proton-cj-20260804.json", import.meta.url), "utf8"));
 const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
+const hotelsBrokenEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/hotels-expedia-broken-20260804.json", import.meta.url), "utf8"));
 const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
 const sensiboExclusionSnapshotHash = createHash("sha256").update(sensiboExclusionSnapshot).digest("hex");
 const sensiboExclusionSnapshotSKUs = sensiboExclusionSnapshot.trim().split(/\r?\n/)
@@ -77,7 +78,9 @@ for (const feedPath of feedPaths) {
 
     if (!deal.id || seenIDs.has(deal.id)) errors.push(`${label}: missing or duplicate id`);
     if (deal.id) seenIDs.add(deal.id);
-    if (deal.commissionEligible !== true) errors.push(`${label}: commissionEligible must be true`);
+    if (deal.status === "active" && deal.commissionEligible !== true) {
+      errors.push(`${label}: active deals must be commission eligible`);
+    }
     if (deal.approvalStatus !== "approved") errors.push(`${label}: approvalStatus must be approved`);
     if (!["active", "unavailable", "superseded"].includes(deal.status)) {
       errors.push(`${label}: status must be active, unavailable, or superseded`);
@@ -89,7 +92,7 @@ for (const feedPath of feedPaths) {
       errors.push(`${label}: supersededBy is required for superseded deals`);
     }
     if (!deal.trackingID) errors.push(`${label}: trackingID is required`);
-    if (!deal.affiliateURL) errors.push(`${label}: affiliateURL is required`);
+    if (deal.status === "active" && !deal.affiliateURL) errors.push(`${label}: active deals require affiliateURL`);
     if (!deal.title || !deal.summary || !deal.merchantName || !deal.category) {
       errors.push(`${label}: title, summary, merchantName, and category are required`);
     }
@@ -103,14 +106,16 @@ for (const feedPath of feedPaths) {
     if (expiresAt <= now || recheckAfter <= now) staleDeals.push({ deal, label });
 
     let affiliateURL;
-    try {
-      affiliateURL = new URL(deal.affiliateURL);
-    } catch {
-      errors.push(`${label}: affiliateURL is invalid`);
-      continue;
+    if (deal.affiliateURL) {
+      try {
+        affiliateURL = new URL(deal.affiliateURL);
+      } catch {
+        errors.push(`${label}: affiliateURL is invalid`);
+        continue;
+      }
     }
 
-    if (affiliateURL.protocol !== "https:") errors.push(`${label}: affiliateURL must use HTTPS`);
+    if (affiliateURL && affiliateURL.protocol !== "https:") errors.push(`${label}: affiliateURL must use HTTPS`);
 
     if (deal.network === "amazon-associates") {
       if (affiliateURL.hostname !== "www.amazon.com") {
@@ -274,20 +279,40 @@ for (const feedPath of feedPaths) {
       const program = expediaPrograms.get(String(deal.trackingID || ""));
       const expectedPath = `/affiliate/${deal.trackingID}`;
 
-      if (affiliateURL.hostname !== "www.hotels.com") {
-        errors.push(`${label}: Expedia Group public travel deal must use the verified Hotels.com host`);
-      }
-      if (affiliateURL.pathname !== expectedPath) {
-        errors.push(`${label}: Hotels.com affiliate path must match trackingID`);
+      if (deal.status === "active") {
+        if (affiliateURL?.hostname !== "www.hotels.com") {
+          errors.push(`${label}: Expedia Group public travel deal must use the verified Hotels.com host`);
+        }
+        if (affiliateURL?.pathname !== expectedPath) {
+          errors.push(`${label}: Hotels.com affiliate path must match trackingID`);
+        }
       }
       if (!program) {
         errors.push(`${label}: Expedia Group tracking relationship is missing from affiliate-programs.json`);
       } else {
         if (program.applicationStatus !== "active") errors.push(`${label}: Expedia Group relationship is not active`);
-        if (program.trackingLinkStatus !== "verified") errors.push(`${label}: Expedia Group tracking link is not verified`);
         if (program.commissionEligible !== true) errors.push(`${label}: Expedia Group program is not commission eligible`);
-        if (program.publicPublishingAllowed !== true) errors.push(`${label}: Expedia Group program is not approved for public publishing`);
-        if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: Hotels.com URL does not match the verified program URL`);
+        if (deal.status === "active") {
+          if (program.trackingURL !== deal.affiliateURL) errors.push(`${label}: Hotels.com URL does not match the registered program URL`);
+          if (program.trackingLinkStatus !== "verified") errors.push(`${label}: active Hotels.com link is not verified`);
+          if (program.publicPublishingAllowed !== true) errors.push(`${label}: active Hotels.com program is not approved for public publishing`);
+        } else if (deal.status === "unavailable") {
+          if (deal.commissionEligible !== false || program.trackingLinkStatus !== "broken" ||
+              program.publicPublishingAllowed !== false || !validDate(deal.unavailableAt) ||
+              !String(deal.unavailableReason || "").includes("page-not-found")) {
+            errors.push(`${label}: broken Hotels.com offer must remain unavailable and fail closed`);
+          }
+          const expectedEvidenceRecord = "data/affiliate-evidence/hotels-expedia-broken-20260804.json";
+          if (deal.evidenceRecord !== expectedEvidenceRecord || program.evidenceRecord !== expectedEvidenceRecord ||
+              hotelsBrokenEvidence?.reviewedAt !== deal.unavailableAt ||
+              hotelsBrokenEvidence?.trackingLink?.trackingID !== deal.trackingID ||
+              hotelsBrokenEvidence?.trackingLink?.trackingURL !== program.trackingURL ||
+              hotelsBrokenEvidence?.trackingLink?.status !== "broken" ||
+              hotelsBrokenEvidence?.trackingLink?.redirectedToMerchantOffer !== false ||
+              hotelsBrokenEvidence?.publication?.allowed !== false) {
+            errors.push(`${label}: broken Hotels.com state must match its browser-verification evidence`);
+          }
+        }
       }
     } else if (deal.network === "rakuten-advertising") {
       const program = rakutenPrograms.get(String(deal.advertiserID || ""));
@@ -462,6 +487,23 @@ if (seenNetworks.has("cj")) {
     for (const deal of currentCJDeals) {
       if (!source.includes(JSON.stringify(deal.affiliateURL))) {
         errors.push(`Outbound safety gate is missing verified CJ URL ${deal.affiliateURL}`);
+      }
+    }
+  }
+}
+
+if (seenNetworks.has("expedia-group-direct")) {
+  const outboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+  const workerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
+  const expediaDeals = seenDeals.filter((deal) => deal.network === "expedia-group-direct");
+  for (const source of [outboundPage, workerSource]) {
+    for (const deal of expediaDeals) {
+      const registeredURL = deal.affiliateURL || expediaPrograms.get(String(deal.trackingID || ""))?.trackingURL;
+      if (isPublicDeal(deal) && !source.includes(JSON.stringify(registeredURL))) {
+        errors.push(`Outbound safety gate is missing verified Hotels.com URL ${registeredURL}`);
+      }
+      if (!isPublicDeal(deal) && registeredURL && source.includes(JSON.stringify(registeredURL))) {
+        errors.push(`Outbound safety gate must reject nonpublic Hotels.com URL ${registeredURL}`);
       }
     }
   }
