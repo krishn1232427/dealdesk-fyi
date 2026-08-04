@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
 const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-programs.json", import.meta.url), "utf8"));
 const magzterEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/magzter-cj-20260803.json", import.meta.url), "utf8"));
+const protonEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/proton-cj-20260804.json", import.meta.url), "utf8"));
 const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
 const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
 const sensiboExclusionSnapshotHash = createHash("sha256").update(sensiboExclusionSnapshot).digest("hex");
@@ -183,6 +184,73 @@ for (const feedPath of feedPaths) {
         if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
             recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
           errors.push(`${label}: Magzter verification window must be no more than 24 hours`);
+        }
+      }
+      if (String(deal.advertiserID) === "5227916") {
+        const expectedEvidenceRecord = "data/affiliate-evidence/proton-cj-20260804.json";
+        let merchantURL;
+        let imageURL;
+        let checkoutURL;
+        let redirectDestinationURL;
+        try { merchantURL = new URL(deal.merchantURL); } catch {}
+        try { imageURL = new URL(deal.imageURL); } catch {}
+        try { checkoutURL = new URL(protonEvidence?.promotion?.checkoutURL); } catch {}
+        try { redirectDestinationURL = new URL(protonEvidence?.promotion?.redirectDestinationURL); } catch {}
+
+        if (program?.evidenceRecord !== expectedEvidenceRecord || deal.evidenceRecord !== expectedEvidenceRecord) {
+          errors.push(`${label}: Proton program and deal must reference the authenticated evidence record`);
+        }
+        if (protonEvidence?.advertiser?.relationship !== "Active" ||
+            String(protonEvidence?.advertiser?.advertiserID) !== String(deal.advertiserID) ||
+            String(protonEvidence?.publisher?.cjSiteID) !== String(deal.trackingID) ||
+            String(protonEvidence?.promotion?.linkID) !== String(deal.linkID) ||
+            protonEvidence?.promotion?.trackingURL !== deal.affiliateURL ||
+            protonEvidence?.merchantOffer?.landingURL !== deal.merchantURL ||
+            protonEvidence?.merchantOffer?.imageURL !== deal.imageURL ||
+            protonEvidence?.reviewedAt !== deal.verifiedAt ||
+            program?.offerVerifiedAt !== deal.verifiedAt) {
+          errors.push(`${label}: Proton deal does not match its authenticated evidence record`);
+        }
+        if (merchantURL?.origin !== "https://protonvpn.com" ||
+            merchantURL.pathname !== "/l/special-partner-offer" || merchantURL.search || merchantURL.hash) {
+          errors.push(`${label}: Proton must use the verified partner-offer landing page`);
+        }
+        if (redirectDestinationURL?.origin !== "https://protonvpn.com" ||
+            redirectDestinationURL.pathname !== "/l/special-partner-offer" ||
+            redirectDestinationURL.searchParams.get("utm_source") !== "aid-cj-8007406") {
+          errors.push(`${label}: Proton CJ redirect destination is not the verified DealDesk partner landing`);
+        }
+        if (checkoutURL?.origin !== "https://account.protonvpn.com" || checkoutURL.pathname !== "/signup" ||
+            checkoutURL.searchParams.get("plan") !== "vpn2024" ||
+            checkoutURL.searchParams.get("billing") !== "24" ||
+            checkoutURL.searchParams.get("currency") !== "USD" ||
+            checkoutURL.searchParams.get("coupon") !== "VPNINTROPRICE2025") {
+          errors.push(`${label}: Proton evidence must use the verified two-year USD checkout`);
+        }
+        if (imageURL?.hostname !== "vpncdn.protonweb.com" || imageURL.pathname !== "/image-transformation/" ||
+            imageURL.searchParams.get("image") !== "proton_vpn_one_vpn_limitless_possibilities_1fbfebb9d7.png" ||
+            imageURL.searchParams.get("width") !== "1280" || imageURL.searchParams.get("height") !== "586") {
+          errors.push(`${label}: Proton must use the verified genuine merchant product-interface image`);
+        }
+        if (deal.sourceType !== "cj-text-link" || deal.offerType !== "subscription") {
+          errors.push(`${label}: Proton must be a verified CJ subscription link`);
+        }
+        if (usdNumber(deal.currentPrice) !== protonEvidence?.merchantOffer?.priceUSD ||
+            usdNumber(deal.originalPrice) !== protonEvidence?.merchantOffer?.compareAtTotalUSD ||
+            Number(deal.discountPercent) !== protonEvidence?.merchantOffer?.discountPercent ||
+            Number(deal.estimatedCommission) !== protonEvidence?.commission?.conservativeEstimatedInitialCommissionUSD ||
+            deal.referenceStyle !== "comparison" || deal.referenceLabel !== "24-month monthly-price equivalent" ||
+            !String(deal.priceNote || "").includes("$83.88/year")) {
+          errors.push(`${label}: Proton price, renewal disclosure, discount, or conservative commission estimate does not match evidence`);
+        }
+        if (deal.expiresAt) {
+          errors.push(`${label}: Proton must not invent an offer expiration that was not supplied`);
+        }
+        const verifiedAt = new Date(deal.verifiedAt).getTime();
+        const recheckAfter = new Date(deal.recheckAfter).getTime();
+        if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
+            recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
+          errors.push(`${label}: Proton verification window must be no more than 24 hours`);
         }
       }
     } else if (deal.network === "expedia-group-direct") {

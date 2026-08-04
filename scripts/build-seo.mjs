@@ -131,6 +131,9 @@ const publicDescription = (deal, title, prices, updated) => {
     if (deal.referenceStyle === "renewal") {
       return `DealDesk found ${title} at ${merchant} for ${prices.current} during the introductory period. ${deal.referenceLabel || "Then"} ${prices.original}. ${deal.savingsText || "Confirm eligibility and renewal terms"}. Price checked ${isoDate(updated)}; availability can change.`;
     }
+    if (deal.referenceStyle === "comparison") {
+      return `DealDesk found ${title} at ${merchant} for ${prices.current}. The displayed ${deal.referenceLabel || "comparison reference"} is ${prices.original}. ${deal.savingsText || "Confirm the comparison basis with the merchant"}. Price checked ${isoDate(updated)}; availability can change.`;
+    }
     const priceContext = deal.savingsText ? `. The live offer advertises ${deal.savingsText}.` : discount ? ` (${discount}% off).` : ".";
     return `DealDesk found ${title} at ${merchant} for ${prices.current}, down from ${prices.original}${priceContext} Price checked ${isoDate(updated)}; availability can change.`;
   }

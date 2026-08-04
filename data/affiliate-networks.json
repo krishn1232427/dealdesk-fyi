@@ -138,8 +138,8 @@
       "commissionAccess": true,
       "canPublish": true,
       "blockingReason": null,
-      "nextAction": "Keep NordVPN, Surfshark, NordPass, and Magzter links and live offers verified; monitor pending advertiser applications.",
-      "lastCheckedAt": "2026-08-03T20:41:02Z",
+      "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, and Proton links and live offers verified; monitor pending advertiser applications.",
+      "lastCheckedAt": "2026-08-04T07:51:10.186Z",
       "evidenceUrl": "https://www.cj.com/publisher"
     },
     {
@@ -1160,14 +1160,14 @@
       "publisherSignupUrl": "https://www.discovercars.com/affiliate",
       "dashboardUrl": "https://discover-car-hire.postaffiliatepro.com/affiliates/login.php",
       "priority": "high",
-      "dealDeskStatus": "onboarding",
+      "dealDeskStatus": "active_limited",
       "payoutReadiness": "unverified",
-      "commissionAccess": false,
+      "commissionAccess": true,
       "canPublish": false,
-      "blockingReason": "DiscoverCars approved DealDesk's affiliate account on August 1, 2026, but the exact a_aid tracking ID and payout setup are not verified.",
-      "nextAction": "Sign in to the affiliate dashboard, verify the exact a_aid link and payout setup, then verify a live rental offer with genuine merchant imagery.",
-      "lastCheckedAt": "2026-08-03T16:13:15Z",
-      "evidenceUrl": "https://www.discovercars.com/affiliate"
+      "blockingReason": "The signed-in account and exact a_aid=dealdeskfyi link are active, but official terms require explicit affiliate-manager approval for coupon or discount-code sites and payout readiness is unverified.",
+      "nextAction": "Obtain written affiliate-manager approval for DealDesk's deal-site placement and verify payout setup before validating a live rental offer and genuine approved imagery.",
+      "lastCheckedAt": "2026-08-04T07:50:14Z",
+      "evidenceUrl": "https://www.discovercars.com/affiliate-conditions"
     }
   ]
 }
