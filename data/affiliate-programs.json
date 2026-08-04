@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T22:29:26Z",
+  "updatedAt": "2026-08-04T08:06:44.635Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherAccounts": [
     {
@@ -705,13 +705,19 @@
       "offerURL": "https://www.magzter.com/magztergold/1year-subscription-offer",
       "profileURL": "https://members.cj.com/member/7685648/publisher/advertisers/findAdvertisers.cj",
       "category": "Digital-magazine subscription",
-      "commission": "30%-50% of qualifying sales; 5.00 USD qualifying actions may apply",
+      "commission": "GOLD subscription 50%; GOLD 7-day trial renewal $5; individual publications 30%; 30-day cookie",
+      "commissionSchedule": {
+        "goldSubscriptionRate": 0.5,
+        "goldTrialRenewalUSD": 5,
+        "individualPublicationRate": 0.3,
+        "cookieDays": 30
+      },
       "status": "Approved — DealDesk tracking link and current payable offer verified",
       "applicationStatus": "active",
       "appliedAt": "2026-08-01T07:47:44Z",
       "acceptedAt": "2026-08-03",
-      "reviewedAt": "2026-08-03T20:41:02Z",
-      "approvalEvidence": "Signed-in CJ advertiser relationship shows Magzter active",
+      "reviewedAt": "2026-08-04T08:06:44.635Z",
+      "approvalEvidence": "Signed-in CJ advertiser relationship and program description show Magzter active and GOLD sales payable at 50%",
       "trackingID": "101847838",
       "linkID": "17217038",
       "trackingURL": "https://www.tkqlhce.com/click-101847838-17217038",
@@ -719,12 +725,12 @@
       "currentOffer": "Magzter GOLD annual subscription for 74.99 USD, down from 149.99 USD; 50% off",
       "offerStartsOn": "2025-12-11",
       "offerExpiresAt": "2026-11-30T06:00:00Z",
-      "offerVerifiedAt": "2026-08-03T20:41:02Z",
+      "offerVerifiedAt": "2026-08-04T08:06:44.635Z",
       "imageURL": "https://cdn.magzter.com/home/banner/web.webp",
       "commissionEligible": true,
       "publicPublishingAllowed": true,
       "evidenceRecord": "data/affiliate-evidence/magzter-cj-20260803.json",
-      "summary": "The signed-in CJ account shows an active Magzter relationship and active link 17217038. DealDesk verified the exact tracked redirect, live annual GOLD price, reference price, claim action, and genuine Magzter imagery.",
+      "summary": "The signed-in CJ account shows an active Magzter relationship, GOLD sales payable at 50%, and active link 17217038. DealDesk verified the exact tracked redirect, live annual GOLD price, reference price, claim action, and genuine Magzter imagery. Stale generic and expired coupon offers remain excluded.",
       "priority": 19
     },
     {

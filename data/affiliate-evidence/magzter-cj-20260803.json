@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "reviewedAt": "2026-08-03T20:41:02Z",
-  "source": "Signed-in CJ publisher dashboard, exact CJ tracking link, and live Magzter offer page",
+  "reviewedAt": "2026-08-04T08:06:44.635Z",
+  "source": "Signed-in CJ publisher dashboard and program description, exact CJ tracking link, and live Magzter offer page",
   "publisher": {
     "cjCompanyID": "8007406",
     "cjMemberID": "7685648",
@@ -30,9 +30,17 @@
     "customerValue": "Annual Magzter GOLD access to more than 10,000 magazines and newspapers"
   },
   "commission": {
-    "advertisedRange": "30%-50% of qualifying sales; separate 5 USD actions may apply",
-    "conservativeRate": 0.3,
-    "conservativeEstimatedCommissionUSD": 22.5
+    "goldSubscriptionRate": 0.5,
+    "goldTrialRenewalUSD": 5,
+    "individualPublicationRate": 0.3,
+    "cookieDays": 30,
+    "conservativeRate": 0.5,
+    "conservativeCalculation": "Floor the exact GOLD sale commission to the nearest cent",
+    "conservativeEstimatedCommissionUSD": 37.49
+  },
+  "excludedPromotions": {
+    "genericEvergreenPaths": "The emailed annualbestoffer and three-years-for-one paths do not currently render their claimed offers and have no verified DealDesk tracking links",
+    "expiredCoupons": "CJNMGF55OFF and CJNMAGF30OFF expired on 2022-12-31 and are not published"
   },
   "privacy": "No passwords, cookies, session tokens, banking data, tax data, or confidential account details are stored in this evidence record."
 }

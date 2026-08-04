@@ -1,6 +1,6 @@
 # DealDesk affiliate-network register
 
-Last refreshed: 2026-08-03T22:29:26Z
+Last refreshed: 2026-08-04T08:06:44.635Z
 
 This is DealDesk's cumulative working list of 55 credible affiliate networks, commerce platforms, and important merchant-owned programs. It is refreshed daily because the market is open-ended and networks, signup routes, ownership, and DealDesk approvals change.
 
@@ -10,7 +10,7 @@ This is DealDesk's cumulative working list of 55 credible affiliate networks, co
 
 | Network / program | Type | Region | DealDesk status | Payout onboarding | Can publish paid offers? | Publisher route | Evidence | Last checked | Next action |
 |---|---|---|---|---|---|---|---|---|---|
-| [CJ](https://www.cj.com/) | affiliate network | global | active payable | verified | Yes — program-specific | [Apply / enroll](https://public.cj.com/signup/publisher) | [Official source](https://www.cj.com/publisher) | 2026-08-04T07:51:10.186Z | Keep NordVPN, Surfshark, NordPass, Magzter, and Proton links and live offers verified; monitor pending advertiser applications. |
+| [CJ](https://www.cj.com/) | affiliate network | global | active payable | verified | Yes — program-specific | [Apply / enroll](https://public.cj.com/signup/publisher) | [Official source](https://www.cj.com/publisher) | 2026-08-04T08:06:44.635Z | Keep NordVPN, Surfshark, NordPass, Magzter, and Proton links and live offers verified; monitor pending advertiser applications. |
 | [Rakuten Advertising](https://rakutenadvertising.com/) | affiliate network | global | active payable | verified | Yes — program-specific | [Apply / enroll](https://rakutenadvertising.com/affiliate/) | [Official source](https://rakutenadvertising.com/affiliate/) | 2026-08-03T20:41:02Z | Recheck Sensibo every 24 hours. JD Sports is Partnered, but publish only a real markdown whose exact tracking link, non-excluded SKU, availability, and genuine product image are verified together. |
 | [Amazon Associates](https://affiliate-program.amazon.com/) | direct program | US, country-specific programs | active payable | unverified | Yes — program-specific | [Apply / enroll](https://affiliate-program.amazon.com/) | [Official source](https://affiliate-program.amazon.com/) | 2026-08-03T21:27:23Z | Keep every tagged offer, current price, availability, eligibility, and genuine image verified. Separately add and verify a bank payout method so accrued commissions can be disbursed. |
 | [eBay Partner Network](https://partnernetwork.ebay.com/) | direct program | global | active payable | unverified | Yes — program-specific | [Apply / enroll](https://partnernetwork.ebay.com/) | [Official source](https://partnernetwork.ebay.com/) | 2026-08-03T21:27:23Z | Keep each exact EPN URL, fixed-price status, item condition, price, availability, and genuine listing image verified. Separately confirm Bank Account, Tax Documents, and Identity Verification completion without storing financial details. |

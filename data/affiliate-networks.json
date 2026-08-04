@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T22:29:26Z",
+  "updatedAt": "2026-08-04T08:06:44.635Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -139,7 +139,7 @@
       "canPublish": true,
       "blockingReason": null,
       "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, and Proton links and live offers verified; monitor pending advertiser applications.",
-      "lastCheckedAt": "2026-08-04T07:51:10.186Z",
+      "lastCheckedAt": "2026-08-04T08:06:44.635Z",
       "evidenceUrl": "https://www.cj.com/publisher"
     },
     {

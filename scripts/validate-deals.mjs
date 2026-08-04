@@ -176,6 +176,23 @@ for (const feedPath of feedPaths) {
             Number(deal.estimatedCommission) !== magzterEvidence?.commission?.conservativeEstimatedCommissionUSD) {
           errors.push(`${label}: Magzter price, discount, or conservative commission estimate does not match evidence`);
         }
+        const expectedGoldCommission = Math.floor(
+          Number(magzterEvidence?.merchantOffer?.priceUSD) *
+          Number(magzterEvidence?.commission?.goldSubscriptionRate) * 100
+        ) / 100;
+        if (magzterEvidence?.commission?.goldSubscriptionRate !== 0.5 ||
+            magzterEvidence?.commission?.goldTrialRenewalUSD !== 5 ||
+            magzterEvidence?.commission?.individualPublicationRate !== 0.3 ||
+            magzterEvidence?.commission?.cookieDays !== 30 ||
+            magzterEvidence?.commission?.conservativeRate !== 0.5 ||
+            magzterEvidence?.commission?.conservativeEstimatedCommissionUSD !== expectedGoldCommission ||
+            deal.commission !== "50% of qualifying Magzter GOLD sale" ||
+            program?.commissionSchedule?.goldSubscriptionRate !== 0.5 ||
+            program?.commissionSchedule?.goldTrialRenewalUSD !== 5 ||
+            program?.commissionSchedule?.individualPublicationRate !== 0.3 ||
+            program?.commissionSchedule?.cookieDays !== 30) {
+          errors.push(`${label}: Magzter commission schedule must match the authenticated GOLD-specific CJ terms`);
+        }
         if (deal.expiresAt !== magzterEvidence?.promotion?.endsAt || program?.offerExpiresAt !== deal.expiresAt) {
           errors.push(`${label}: Magzter promotion deadline does not match the verified CJ schedule`);
         }
