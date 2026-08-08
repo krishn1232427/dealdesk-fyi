@@ -330,7 +330,6 @@
         function eligible(deal) {
           var now = Date.now();
           var expiresAt = deal && deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
-          var recheckAfter = deal && deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
           return Boolean(
             deal &&
               deal.status === "active" &&
@@ -341,7 +340,6 @@
               deal.affiliateURL &&
               deal.verifiedAt &&
               (!deal.expiresAt || (Number.isFinite(expiresAt) && now <= expiresAt)) &&
-              (!deal.recheckAfter || (Number.isFinite(recheckAfter) && now <= recheckAfter)) &&
               hasGenuineMerchantImage(deal)
           );
         }
