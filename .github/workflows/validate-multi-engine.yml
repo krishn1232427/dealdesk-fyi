@@ -1,0 +1,49 @@
+name: Validate DealDesk multi-engine discovery
+
+on:
+  push:
+    branches:
+      - agent/multi-engine-discovery
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out discovery branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/multi-engine-discovery
+
+      - name: Configure Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check scripts
+        run: |
+          node --check scripts/build-search-discovery.mjs
+          node --check scripts/validate-search-discovery.mjs
+          node --check scripts/submit-indexnow.mjs
+
+      - name: Rebuild base site
+        run: |
+          node scripts/build-seo.mjs
+          node scripts/validate-deals.mjs
+          node scripts/build-indexing-hubs.mjs
+          node scripts/validate-indexing.mjs
+          node scripts/build-seo-authority.mjs
+          node scripts/validate-seo-authority.mjs
+
+      - name: Build and validate multi-engine discovery
+        run: |
+          node scripts/build-search-discovery.mjs
+          node scripts/validate-search-discovery.mjs
+
+      - name: Validate IndexNow payload without sending
+        env:
+          INDEXNOW_DRY_RUN: 'true'
+        run: node scripts/submit-indexnow.mjs
