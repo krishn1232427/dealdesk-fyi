@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -47,3 +47,36 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Record deployment result
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          git fetch origin deployment-status
+          git worktree add /tmp/dealdesk-deployment-status origin/deployment-status
+          cd /tmp/dealdesk-deployment-status
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          payload = {
+              "status": os.environ.get("JOB_STATUS", "unknown"),
+              "deployedCommit": os.environ.get("GITHUB_SHA", ""),
+              "pageUrl": os.environ.get("PAGE_URL", ""),
+              "runId": os.environ.get("GITHUB_RUN_ID", ""),
+              "runAttempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
+              "workflow": os.environ.get("GITHUB_WORKFLOW", ""),
+              "recordedAt": datetime.now(timezone.utc).isoformat(),
+          }
+          with open("deploy-status.json", "w", encoding="utf-8") as handle:
+              json.dump(payload, handle, indent=2)
+              handle.write("\n")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deploy-status.json
+          git commit -m "Record DealDesk Pages deployment result"
+          git push origin HEAD:deployment-status
