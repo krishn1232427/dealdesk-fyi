@@ -5,6 +5,8 @@ on:
     branches:
       - master
   workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * *'
 
 permissions:
   contents: write
@@ -17,6 +19,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -24,17 +27,56 @@ jobs:
     steps:
       - name: Check out master
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configure Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
+      - name: Install final indexing sources when present
+        id: indexing-install
+        shell: bash
+        run: |
+          if [[ -f scripts/install-final-indexing-v3.mjs ]]; then
+            node scripts/install-final-indexing-v3.mjs
+            echo "installed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "installed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check indexing scripts
+        run: |
+          node --check scripts/build-indexing-hubs.mjs
+          node --check scripts/validate-indexing.mjs
+
       - name: Rebuild current DealDesk release
         run: node scripts/build-seo.mjs
 
-      - name: Validate deal, outbound, and indexing rules
+      - name: Validate deal and outbound rules
         run: node scripts/validate-deals.mjs
+
+      - name: Build static crawl architecture
+        run: node scripts/build-indexing-hubs.mjs
+
+      - name: Validate indexing architecture
+        run: node scripts/validate-indexing.mjs
+
+      - name: Commit finalized indexing release to master
+        id: release
+        shell: bash
+        run: |
+          if [[ "${{ steps.indexing-install.outputs.installed }}" == "true" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            if ! git diff --cached --quiet; then
+              git commit -m "Finalize crawlable DealDesk indexing architecture"
+              git push origin HEAD:master
+            fi
+          fi
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -53,6 +95,7 @@ jobs:
         env:
           JOB_STATUS: ${{ job.status }}
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          DEPLOYED_COMMIT: ${{ steps.release.outputs.commit }}
         run: |
           git fetch origin deployment-status
           git worktree add /tmp/dealdesk-deployment-status origin/deployment-status
@@ -64,7 +107,7 @@ jobs:
 
           payload = {
               "status": os.environ.get("JOB_STATUS", "unknown"),
-              "deployedCommit": os.environ.get("GITHUB_SHA", ""),
+              "deployedCommit": os.environ.get("DEPLOYED_COMMIT") or os.environ.get("GITHUB_SHA", ""),
               "pageUrl": os.environ.get("PAGE_URL", ""),
               "runId": os.environ.get("GITHUB_RUN_ID", ""),
               "runAttempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
@@ -78,5 +121,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add deploy-status.json
-          git commit -m "Record DealDesk Pages deployment result"
+          git commit -m "Record DealDesk Pages deployment result" || true
           git push origin HEAD:deployment-status
