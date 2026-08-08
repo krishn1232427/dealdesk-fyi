@@ -1,0 +1,63 @@
+name: Build DealDesk SEO authority engine
+
+on:
+  push:
+    branches:
+      - agent/seo-authority-engine
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-validate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/seo-authority-engine
+          fetch-depth: 0
+
+      - name: Configure Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install SEO authority sources
+        run: node scripts/install-seo-authority.mjs
+
+      - name: Check SEO authority scripts
+        run: |
+          node --check scripts/build-seo-authority.mjs
+          node --check scripts/validate-seo-authority.mjs
+
+      - name: Rebuild base DealDesk release
+        run: node scripts/build-seo.mjs
+
+      - name: Validate deal and outbound rules
+        run: node scripts/validate-deals.mjs
+
+      - name: Build crawl architecture
+        run: node scripts/build-indexing-hubs.mjs
+
+      - name: Build SEO authority engine
+        run: node scripts/build-seo-authority.mjs
+
+      - name: Validate crawl architecture
+        run: node scripts/validate-indexing.mjs
+
+      - name: Validate SEO authority engine
+        run: node scripts/validate-seo-authority.mjs
+
+      - name: Commit generated authority release
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "Build DealDesk SEO authority engine"
+            git push origin HEAD:agent/seo-authority-engine
+          fi
