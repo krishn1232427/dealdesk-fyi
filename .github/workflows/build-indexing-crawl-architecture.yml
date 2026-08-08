@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install indexing scripts
-        run: node scripts/install-indexing-architecture.mjs
+      - name: Apply indexing refinements
+        run: node scripts/upgrade-indexing-v3.mjs
 
       - name: Check scripts
         run: |
@@ -52,6 +52,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
           else
-            git commit -m "Build crawlable DealDesk catalog architecture"
+            git commit -m "Refine DealDesk crawl architecture"
             git push origin HEAD:agent/indexing-crawl-architecture
           fi
