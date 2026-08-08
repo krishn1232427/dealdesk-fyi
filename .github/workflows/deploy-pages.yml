@@ -36,25 +36,24 @@ jobs:
           node-version: '22'
 
       - name: Install final indexing sources when present
-        id: indexing-install
         shell: bash
         run: |
           if [[ -f scripts/install-final-indexing-v3.mjs ]]; then
             node scripts/install-final-indexing-v3.mjs
-            echo "installed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "installed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Install final SEO authority sources when present
-        id: seo-install
         shell: bash
         run: |
           if [[ -f scripts/install-seo-authority.mjs ]]; then
             node scripts/install-seo-authority.mjs
-            echo "installed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "installed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install content-integrity safeguards when present
+        shell: bash
+        run: |
+          if [[ -f scripts/install-content-integrity.mjs ]]; then
+            node scripts/install-content-integrity.mjs
           fi
 
       - name: Check build scripts
@@ -67,6 +66,7 @@ jobs:
           node --check scripts/validate-search-discovery.mjs
           node --check scripts/build-price-history.mjs
           node --check scripts/validate-price-history.mjs
+          node --check scripts/validate-content-integrity.mjs
           node --check scripts/submit-indexnow.mjs
 
       - name: Rebuild current DealDesk release
@@ -98,6 +98,9 @@ jobs:
 
       - name: Validate first-party price history
         run: node scripts/validate-price-history.mjs
+
+      - name: Validate comparison and history integrity
+        run: node scripts/validate-content-integrity.mjs
 
       - name: Commit finalized DealDesk release to master
         id: release
