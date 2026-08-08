@@ -46,10 +46,12 @@ jobs:
             echo "installed=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Check indexing scripts
+      - name: Check build scripts
         run: |
           node --check scripts/build-indexing-hubs.mjs
           node --check scripts/validate-indexing.mjs
+          node --check scripts/build-seo-authority.mjs
+          node --check scripts/validate-seo-authority.mjs
 
       - name: Rebuild current DealDesk release
         run: node scripts/build-seo.mjs
@@ -60,8 +62,14 @@ jobs:
       - name: Build static crawl architecture
         run: node scripts/build-indexing-hubs.mjs
 
+      - name: Build SEO authority engine
+        run: node scripts/build-seo-authority.mjs
+
       - name: Validate indexing architecture
         run: node scripts/validate-indexing.mjs
+
+      - name: Validate SEO authority engine
+        run: node scripts/validate-seo-authority.mjs
 
       - name: Commit finalized indexing release to master
         id: release
