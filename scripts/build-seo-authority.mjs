@@ -587,14 +587,20 @@ const ensureAuthorityStylesheet = (html) => {
   return html.replace(/(<link rel="stylesheet" href="\/assets\/indexing\.css[^>]*>)/, `$1\n  <link rel="stylesheet" href="/assets/seo-authority.css?v=${buildID}" />`);
 };
 const replaceMeta = (html, name, value) => {
-  const pattern = new RegExp(`<meta name="${name}" content="[^"]*" \\/>`);
-  if (pattern.test(html)) return html.replace(pattern, `<meta name="${name}" content="${esc(value)}" />`);
-  return html.replace(/<\/title>/, `</title>\n  <meta name="${name}" content="${esc(value)}" />`);
+  const tagPattern = /<meta\b[^>]*>/gi;
+  const cleaned = html.replace(tagPattern, (tag) => {
+    const match = tag.match(/\bname\s*=\s*["']([^"']+)["']/i);
+    return match?.[1]?.toLowerCase() === String(name).toLowerCase() ? "" : tag;
+  });
+  return cleaned.replace(/<\/title>/, `</title>\n  <meta name="${name}" content="${esc(value)}" />`);
 };
 const replaceProperty = (html, property, value) => {
-  const pattern = new RegExp(`<meta property="${property}" content="[^"]*" \\/>`);
-  if (pattern.test(html)) return html.replace(pattern, `<meta property="${property}" content="${esc(value)}" />`);
-  return html.replace(/<\/title>/, `</title>\n  <meta property="${property}" content="${esc(value)}" />`);
+  const tagPattern = /<meta\b[^>]*>/gi;
+  const cleaned = html.replace(tagPattern, (tag) => {
+    const match = tag.match(/\bproperty\s*=\s*["']([^"']+)["']/i);
+    return match?.[1]?.toLowerCase() === String(property).toLowerCase() ? "" : tag;
+  });
+  return cleaned.replace(/<\/title>/, `</title>\n  <meta property="${property}" content="${esc(value)}" />`);
 };
 
 const seoTargets = [];

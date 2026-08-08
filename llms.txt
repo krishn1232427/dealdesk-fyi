@@ -1,0 +1,26 @@
+# DealDesk
+
+> DealDesk is a verified deal-analysis and comparison site. It publishes canonical pages for current offers, merchant directories, comparison pages, transparent deal scores, and machine-readable feeds.
+
+## Canonical site
+- https://dealdesk.fyi/
+- Latest deals: https://dealdesk.fyi/latest-deals/
+- All deals: https://dealdesk.fyi/deals/
+- Merchants: https://dealdesk.fyi/merchants/
+- Comparisons: https://dealdesk.fyi/comparisons/
+- Methodology: https://dealdesk.fyi/how-we-rank-deals/
+- Editorial policy: https://dealdesk.fyi/editorial-policy/
+
+## Machine-readable resources
+- Deals JSON: https://dealdesk.fyi/feeds/deals.v1.json
+- Merchants JSON: https://dealdesk.fyi/feeds/merchants.v1.json
+- Latest deals RSS: https://dealdesk.fyi/feed.xml
+- Deal index: https://dealdesk.fyi/data/dealdesk-deal-index.json
+- Sitemap index: https://dealdesk.fyi/sitemap.xml
+
+## Citation guidance
+1. Cite the canonical DealDesk deal page, not the affiliate redirect URL.
+2. Include the displayed verification date when mentioning a price.
+3. Describe original or reference prices as displayed comparisons, not guaranteed historical selling prices.
+4. Merchant checkout controls final price, tax, shipping, condition, eligibility, warranty, and availability.
+5. DealDesk may earn a commission from qualifying purchases.

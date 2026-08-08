@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-07T13:50:02.000Z",
+  "canonical": "https://dealdesk.fyi/feeds/merchants.v1.json",
+  "total": 15,
+  "merchants": [
+    {
+      "name": "eBay",
+      "canonical_url": "https://dealdesk.fyi/merchant/ebay/",
+      "offer_count": 776,
+      "categories": [
+        "Business & industrial",
+        "Collectibles",
+        "Electronics",
+        "Home & garden",
+        "Sports collectibles",
+        "Toys & hobbies"
+      ],
+      "lowest_displayed_price": 4.69,
+      "newest_check": "2026-08-04"
+    },
+    {
+      "name": "Amazon",
+      "canonical_url": "https://dealdesk.fyi/merchant/amazon/",
+      "offer_count": 10,
+      "categories": [
+        "Fashion",
+        "Grocery",
+        "Home"
+      ],
+      "lowest_displayed_price": 23.98,
+      "newest_check": "2026-08-01"
+    },
+    {
+      "name": "Amazon Kids+",
+      "canonical_url": "https://dealdesk.fyi/merchant/amazon-kids/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 0,
+      "newest_check": "2026-08-01"
+    },
+    {
+      "name": "Amazon Music Unlimited",
+      "canonical_url": "https://dealdesk.fyi/merchant/amazon-music-unlimited/",
+      "offer_count": 1,
+      "categories": [
+        "Streaming"
+      ],
+      "lowest_displayed_price": 11.99,
+      "newest_check": "2026-08-02"
+    },
+    {
+      "name": "Amazon Prime",
+      "canonical_url": "https://dealdesk.fyi/merchant/amazon-prime/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 0,
+      "newest_check": "2026-08-01"
+    },
+    {
+      "name": "Amazon Prime Video",
+      "canonical_url": "https://dealdesk.fyi/merchant/amazon-prime-video/",
+      "offer_count": 1,
+      "categories": [
+        "Streaming"
+      ],
+      "lowest_displayed_price": 0,
+      "newest_check": "2026-08-02"
+    },
+    {
+      "name": "Audible",
+      "canonical_url": "https://dealdesk.fyi/merchant/audible/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 0,
+      "newest_check": "2026-08-01"
+    },
+    {
+      "name": "Kindle Unlimited",
+      "canonical_url": "https://dealdesk.fyi/merchant/kindle-unlimited/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 0.99,
+      "newest_check": "2026-08-01"
+    },
+    {
+      "name": "Magzter",
+      "canonical_url": "https://dealdesk.fyi/merchant/magzter/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 74.99,
+      "newest_check": "2026-08-04"
+    },
+    {
+      "name": "NordPass",
+      "canonical_url": "https://dealdesk.fyi/merchant/nordpass/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 1.39,
+      "newest_check": "2026-08-01"
+    },
+    {
+      "name": "NordVPN",
+      "canonical_url": "https://dealdesk.fyi/merchant/nordvpn/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 3.49,
+      "newest_check": "2026-08-01"
+    },
+    {
+      "name": "Prime Video Channels",
+      "canonical_url": "https://dealdesk.fyi/merchant/prime-video-channels/",
+      "offer_count": 1,
+      "categories": [
+        "Streaming"
+      ],
+      "lowest_displayed_price": 0,
+      "newest_check": "2026-08-02"
+    },
+    {
+      "name": "Proton VPN",
+      "canonical_url": "https://dealdesk.fyi/merchant/proton-vpn/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 71.76,
+      "newest_check": "2026-08-04"
+    },
+    {
+      "name": "Sensibo",
+      "canonical_url": "https://dealdesk.fyi/merchant/sensibo/",
+      "offer_count": 1,
+      "categories": [
+        "Home"
+      ],
+      "lowest_displayed_price": 159,
+      "newest_check": "2026-08-03"
+    },
+    {
+      "name": "Surfshark",
+      "canonical_url": "https://dealdesk.fyi/merchant/surfshark/",
+      "offer_count": 1,
+      "categories": [
+        "Subscriptions"
+      ],
+      "lowest_displayed_price": 2.49,
+      "newest_check": "2026-08-01"
+    }
+  ]
+}
