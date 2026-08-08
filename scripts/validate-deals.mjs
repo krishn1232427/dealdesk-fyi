@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 
 const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
@@ -552,6 +552,18 @@ for (const deal of publicDeals) {
     errors.push(`deals/${slugFor(deal)}: current public deal detail page is missing`);
     continue;
   }
+  if (detailPage.includes('content="noindex')) {
+    errors.push(`deals/${slugFor(deal)}: public deal page must be indexable`);
+  }
+  if (!detailPage.includes('"@type":"BreadcrumbList"')) {
+    errors.push(`deals/${slugFor(deal)}: public deal page is missing breadcrumb structured data`);
+  }
+  if (deal.expiresAt) {
+    const expectedPriceValidUntil = new Date(deal.expiresAt).toISOString().slice(0, 10);
+    if (!detailPage.includes(`"priceValidUntil":"${expectedPriceValidUntil}"`)) {
+      errors.push(`deals/${slugFor(deal)}: expiring offer is missing priceValidUntil`);
+    }
+  }
   if (!detailPage.includes(`Date.parse(${JSON.stringify(validUntilFor(deal))})`)) {
     errors.push(`deals/${slugFor(deal)}: detail page is missing its exact runtime verification deadline`);
   }
@@ -575,6 +587,9 @@ for (const approval of approvalByID.values()) {
 const lifecycleOutboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
 const lifecycleWorkerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
 const homepageSource = await readFile(new URL("../index.html", import.meta.url), "utf8");
+if (!homepageSource.includes('name="dealdesk-build" content="2026-08-08-indexing-v1"')) {
+  errors.push("index.html: deployment build marker is missing");
+}
 if (!homepageSource.includes('/data/affiliate-programs.json') ||
     !homepageSource.includes('commissionAccrualReadyByNetwork[deal.network] === true')) {
   errors.push("index.html: homepage listings must fail closed against verified network commission-accrual readiness");
@@ -602,19 +617,10 @@ if (staleDeals.length) {
 
   for (const { deal, label } of staleDeals) {
     const slug = slugFor(deal);
-    let detailPage = "";
     try {
-      detailPage = await readFile(new URL(`../deals/${slug}/index.html`, import.meta.url), "utf8");
-    } catch {
-      errors.push(`${label}: stale deal must have a retired detail page`);
-      continue;
-    }
-    if (!detailPage.includes('content="noindex,nofollow"')) {
-      errors.push(`${label}: stale detail page must be noindex,nofollow`);
-    }
-    if (detailPage.includes(deal.affiliateURL) || detailPage.includes("View live deal")) {
-      errors.push(`${label}: stale detail page must not expose a live affiliate CTA`);
-    }
+      await readFile(new URL(`../deals/${slug}/index.html`, import.meta.url), "utf8");
+      errors.push(`${label}: expired or nonpublic detail page must be removed so the host returns a real 404`);
+    } catch {}
     if (latestDealIDs.has(deal.id)) {
       errors.push(`${label}: stale deal must not appear in latest-deals.json`);
     }
@@ -622,6 +628,21 @@ if (staleDeals.length) {
       errors.push(`${label}: stale deal must not appear in sitemap.xml`);
     }
   }
+}
+
+const generatedDealDirectories = await readdir(new URL("../deals/", import.meta.url), { withFileTypes: true });
+for (const entry of generatedDealDirectories) {
+  if (!entry.isDirectory()) continue;
+  const detailPage = await readFile(new URL(`../deals/${entry.name}/index.html`, import.meta.url), "utf8");
+  if (detailPage.includes('content="noindex') || detailPage.includes('http-equiv="refresh"')) {
+    errors.push(`deals/${entry.name}: generated deal directories must not contain retired noindex or redirect shells`);
+  }
+}
+
+const latestPageSource = await readFile(new URL("../latest-deals/index.html", import.meta.url), "utf8");
+const latestSchemaListItemCount = (latestPageSource.match(/"@type":"ListItem"/g) || []).length;
+if (latestSchemaListItemCount > 18) {
+  errors.push("latest-deals/index.html: ItemList structured data must describe only the initially visible cards");
 }
 
 if (errors.length) {
