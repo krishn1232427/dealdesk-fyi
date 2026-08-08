@@ -52,8 +52,9 @@ export default {
       deal.affiliateURL === merchantURL &&
       deal.validUntil === requestedValidUntil
     );
-    const validUntil = approval ? Date.parse(approval.validUntil) : NaN;
-    if (!approval || !Number.isFinite(validUntil) || Date.now() > validUntil) {
+    const hasHardDeadline = Boolean(approval && approval.validUntil);
+    const validUntil = hasHardDeadline ? Date.parse(approval.validUntil) : Infinity;
+    if (!approval || (hasHardDeadline && (!Number.isFinite(validUntil) || Date.now() > validUntil))) {
       return htmlResponse("This offer is no longer within DealDesk's verified availability window.", 410);
     }
 

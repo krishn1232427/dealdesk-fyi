@@ -92,8 +92,9 @@
           return;
         }
 
-        var validUntil = approval ? Date.parse(approval.validUntil) : NaN;
-        if (!approval || !Number.isFinite(validUntil) || Date.now() > validUntil) {
+        var hasHardDeadline = Boolean(approval && approval.validUntil);
+        var validUntil = hasHardDeadline ? Date.parse(approval.validUntil) : Infinity;
+        if (!approval || (hasHardDeadline && (!Number.isFinite(validUntil) || Date.now() > validUntil))) {
           fail("This offer is no longer within DealDesk's verified availability window.");
           return;
         }

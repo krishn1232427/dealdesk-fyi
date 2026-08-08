@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-04T08:14:24.473Z",
+  "updatedAt": "2026-08-07T13:50:02.000Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -39,51 +39,76 @@
   },
   "legacyMappings": [
     {
-      "legacyNames": ["ShareASale"],
+      "legacyNames": [
+        "ShareASale"
+      ],
       "canonicalNetworkId": "awin",
       "status": "closed_and_migrated",
       "note": "ShareASale closed on 2025-10-06 after active customers moved to Awin."
     },
     {
-      "legacyNames": ["Affiliate Window", "Zanox", "affilinet"],
+      "legacyNames": [
+        "Affiliate Window",
+        "Zanox",
+        "affilinet"
+      ],
       "canonicalNetworkId": "awin",
       "status": "historical_rebrands",
       "note": "These are historical Awin brands; use Awin for current applications and account access."
     },
     {
-      "legacyNames": ["Commission Junction"],
+      "legacyNames": [
+        "Commission Junction"
+      ],
       "canonicalNetworkId": "cj",
       "status": "rebranded"
     },
     {
-      "legacyNames": ["VigLink"],
+      "legacyNames": [
+        "VigLink"
+      ],
       "canonicalNetworkId": "sovrn-commerce",
       "status": "rebranded"
     },
     {
-      "legacyNames": ["LinkShare", "Rakuten LinkShare"],
+      "legacyNames": [
+        "LinkShare",
+        "Rakuten LinkShare"
+      ],
       "canonicalNetworkId": "rakuten-advertising",
       "status": "rebranded"
     },
     {
-      "legacyNames": ["Pepperjam", "Ascend Affiliate Network"],
+      "legacyNames": [
+        "Pepperjam",
+        "Ascend Affiliate Network"
+      ],
       "canonicalNetworkId": "partnerize",
       "status": "integrated",
       "note": "Partnerize operates the former Pepperjam network as Ascend alongside the Partnerize network."
     },
     {
-      "legacyNames": ["rewardStyle", "LIKEtoKNOW.it"],
+      "legacyNames": [
+        "rewardStyle",
+        "LIKEtoKNOW.it"
+      ],
       "canonicalNetworkId": "ltk",
       "status": "rebranded"
     },
     {
-      "legacyNames": ["Clickbooth", "Adperio", "Ignite OPM"],
+      "legacyNames": [
+        "Clickbooth",
+        "Adperio",
+        "Ignite OPM"
+      ],
       "canonicalNetworkId": "performcb",
       "status": "consolidated_rebrand",
       "note": "The three brands were consolidated into Perform[cb]."
     },
     {
-      "legacyNames": ["ShopStyle Collective"],
+      "legacyNames": [
+        "ShopStyle Collective"
+      ],
       "canonicalNetworkId": "collective-voice",
       "status": "rebranded_then_closed",
       "note": "ShopStyle Collective became Collective Voice; the official Collective Voice site now states that the program is closed."
@@ -108,8 +133,14 @@
       "id": "awin",
       "name": "Awin",
       "kind": "affiliate_network",
-      "regions": ["global"],
-      "focus": ["retail", "travel", "services"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "retail",
+        "travel",
+        "services"
+      ],
       "officialUrl": "https://www.awin.com/us/",
       "publisherSignupUrl": "https://ui.awin.com/publisher-signup/en/awin",
       "dashboardUrl": "https://ui.awin.com/",
@@ -118,17 +149,24 @@
       "payoutReadiness": "unverified",
       "commissionAccess": true,
       "canPublish": false,
-      "blockingReason": "BLUETTI US is Joined and its exact product link, live offer, and genuine image are verified, but Awin states it cannot pay DealDesk until required tax information is complete.",
-      "nextAction": "The account owner completes Awin's required tax information; then reverify payout readiness and the BLUETTI link, price, availability, and imagery before publication.",
-      "lastCheckedAt": "2026-08-03T20:41:02Z",
+      "blockingReason": "BLUETTI US and TicketNetwork are approved advertiser relationships, but Awin states it cannot pay DealDesk until required tax information is complete. TicketNetwork's exact payable link and signed-in commercial terms are also unverified.",
+      "nextAction": "Complete Awin tax onboarding; then verify TicketNetwork advertiser 89223 terms and an exact payable link, and reverify every BLUETTI or TicketNetwork offer before publication.",
+      "lastCheckedAt": "2026-08-07T13:50:02.000Z",
       "evidenceUrl": "https://www.awin.com/us/news-and-events/awin-news/awin-shareasale-new-era"
     },
     {
       "id": "cj",
       "name": "CJ",
       "kind": "affiliate_network",
-      "regions": ["global"],
-      "focus": ["retail", "subscriptions", "services", "travel"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "retail",
+        "subscriptions",
+        "services",
+        "travel"
+      ],
       "officialUrl": "https://www.cj.com/",
       "publisherSignupUrl": "https://public.cj.com/signup/publisher",
       "dashboardUrl": "https://members.cj.com/member/login/#/",
@@ -138,16 +176,23 @@
       "commissionAccess": true,
       "canPublish": true,
       "blockingReason": null,
-      "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, and Proton links and live offers verified; monitor pending advertiser applications.",
-      "lastCheckedAt": "2026-08-04T08:06:44.635Z",
+      "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, and Proton links verified. Malwarebytes advertiser 3743656 is now active; generate and verify its first exact CJ link and live offer before publication.",
+      "lastCheckedAt": "2026-08-07T13:50:02.000Z",
       "evidenceUrl": "https://www.cj.com/publisher"
     },
     {
       "id": "impact",
       "name": "impact.com",
       "kind": "partnership_network",
-      "regions": ["global"],
-      "focus": ["retail", "travel", "finance", "subscriptions"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "retail",
+        "travel",
+        "finance",
+        "subscriptions"
+      ],
       "officialUrl": "https://impact.com/",
       "publisherSignupUrl": "https://app.impact.com/signup/none/create-new-mediapartner-account-flow.ihtml",
       "dashboardUrl": "https://app.impact.com/",
@@ -165,8 +210,14 @@
       "id": "rakuten-advertising",
       "name": "Rakuten Advertising",
       "kind": "affiliate_network",
-      "regions": ["global"],
-      "focus": ["major retailers", "consumer brands", "services"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "major retailers",
+        "consumer brands",
+        "services"
+      ],
       "officialUrl": "https://rakutenadvertising.com/",
       "publisherSignupUrl": "https://rakutenadvertising.com/affiliate/",
       "dashboardUrl": "https://publisher.rakutenadvertising.com/",
@@ -184,8 +235,15 @@
       "id": "flexoffers",
       "name": "FlexOffers",
       "kind": "affiliate_network",
-      "regions": ["global", "US"],
-      "focus": ["retail", "services", "subnetwork"],
+      "regions": [
+        "global",
+        "US"
+      ],
+      "focus": [
+        "retail",
+        "services",
+        "subnetwork"
+      ],
       "officialUrl": "https://www.flexoffers.com/",
       "publisherSignupUrl": "https://publisherprobeta.flexoffers.com/signup/accountInfo",
       "dashboardUrl": "https://publisherprobeta.flexoffers.com/",
@@ -203,8 +261,14 @@
       "id": "sovrn-commerce",
       "name": "Sovrn Commerce",
       "kind": "commerce_subnetwork",
-      "regions": ["global"],
-      "focus": ["retail", "automated link monetization", "merchant aggregation"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "retail",
+        "automated link monetization",
+        "merchant aggregation"
+      ],
       "officialUrl": "https://www.sovrn.com/commerce/",
       "publisherSignupUrl": "https://platform.sovrn.com/signup",
       "dashboardUrl": "https://platform.sovrn.com/commerce/merchants?campaignId=6614868&tab=preferred",
@@ -222,8 +286,17 @@
       "id": "avantlink",
       "name": "AvantLink",
       "kind": "affiliate_network",
-      "regions": ["US", "Canada", "Australia"],
-      "focus": ["outdoor", "retail", "apparel", "product feeds"],
+      "regions": [
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "focus": [
+        "outdoor",
+        "retail",
+        "apparel",
+        "product feeds"
+      ],
       "officialUrl": "https://www.avantlink.com/",
       "publisherSignupUrl": "https://www.avantlink.com/signup/publisher-united-states/",
       "dashboardUrl": "https://arches.avantlink.com/login",
@@ -241,8 +314,17 @@
       "id": "webgains",
       "name": "Webgains",
       "kind": "affiliate_network",
-      "regions": ["Europe", "US", "Australia"],
-      "focus": ["retail", "travel", "electronics", "fashion"],
+      "regions": [
+        "Europe",
+        "US",
+        "Australia"
+      ],
+      "focus": [
+        "retail",
+        "travel",
+        "electronics",
+        "fashion"
+      ],
       "officialUrl": "https://www.webgains.com/public/en/",
       "ownershipNote": "Webgains is part of ad pepper media International N.V. and remains an active affiliate network.",
       "ownershipEvidenceUrl": "https://www.webgains.com/public/en/webgains-company-details/",
@@ -262,8 +344,15 @@
       "id": "tradedoubler",
       "name": "Tradedoubler",
       "kind": "affiliate_network",
-      "regions": ["Europe", "global"],
-      "focus": ["retail", "services", "travel"],
+      "regions": [
+        "Europe",
+        "global"
+      ],
+      "focus": [
+        "retail",
+        "services",
+        "travel"
+      ],
       "officialUrl": "https://www.tradedoubler.com/",
       "publisherSignupUrl": "https://publishers.tradedoubler.com/en/publishers/signup/",
       "dashboardUrl": "https://publishers.tradedoubler.com/",
@@ -281,8 +370,15 @@
       "id": "partnerize",
       "name": "Partnerize",
       "kind": "partnership_network",
-      "regions": ["global"],
-      "focus": ["enterprise retail", "travel", "finance", "subscriptions"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "enterprise retail",
+        "travel",
+        "finance",
+        "subscriptions"
+      ],
       "officialUrl": "https://partnerize.com/",
       "publisherSignupUrl": "https://signup.partnerize.com/signup/en",
       "dashboardUrl": "https://console.partnerize.com/",
@@ -300,8 +396,13 @@
       "id": "linkconnector",
       "name": "LinkConnector",
       "kind": "affiliate_network",
-      "regions": ["US"],
-      "focus": ["retail", "direct-to-consumer"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "retail",
+        "direct-to-consumer"
+      ],
       "officialUrl": "https://www.linkconnector.com/",
       "publisherSignupUrl": "https://www.linkconnector.com/affiliates/affiliate-application/",
       "dashboardUrl": null,
@@ -319,8 +420,16 @@
       "id": "admitad",
       "name": "Admitad",
       "kind": "affiliate_network",
-      "regions": ["global", "Europe", "Asia"],
-      "focus": ["ecommerce", "services", "international merchants"],
+      "regions": [
+        "global",
+        "Europe",
+        "Asia"
+      ],
+      "focus": [
+        "ecommerce",
+        "services",
+        "international merchants"
+      ],
       "officialUrl": "https://www.admitad.com/",
       "ownershipNote": "Admitad became part of the Mitgo parent holding company in 2023 and continues to operate as its partner-marketing brand.",
       "ownershipEvidenceUrl": "https://careers.mitgo.com/blog/meet-mitgo-the-new-parent-holding-company-to-assume-all-previous-admitad-entities/",
@@ -340,8 +449,14 @@
       "id": "clickbank",
       "name": "ClickBank",
       "kind": "digital_marketplace",
-      "regions": ["global"],
-      "focus": ["digital products", "subscriptions", "selected physical products"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "digital products",
+        "subscriptions",
+        "selected physical products"
+      ],
       "officialUrl": "https://www.clickbank.com/",
       "publisherSignupUrl": "https://www.clickbank.com/affiliates/",
       "dashboardUrl": "https://accounts.clickbank.com/",
@@ -359,8 +474,14 @@
       "id": "partnerstack",
       "name": "PartnerStack",
       "kind": "saas_partner_network",
-      "regions": ["global"],
-      "focus": ["B2B SaaS", "subscriptions", "recurring commissions"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "B2B SaaS",
+        "subscriptions",
+        "recurring commissions"
+      ],
       "officialUrl": "https://partnerstack.com/",
       "ownershipNote": "PartnerStack became part of AppDirect in April 2026 and continues to operate as PartnerStack.",
       "ownershipEvidenceUrl": "https://partnerstack.com/company",
@@ -380,8 +501,14 @@
       "id": "skimlinks",
       "name": "Skimlinks",
       "kind": "commerce_subnetwork",
-      "regions": ["global"],
-      "focus": ["editorial commerce", "automated link monetization", "merchant aggregation"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "editorial commerce",
+        "automated link monetization",
+        "merchant aggregation"
+      ],
       "officialUrl": "https://www.skimlinks.com/",
       "ownershipNote": "Skimlinks is part of Connexity, which is owned by Taboola; the Skimlinks platform remains active.",
       "ownershipEvidenceUrl": "https://www.taboola.com/press-releases/taboola-acquires-connexity/",
@@ -401,8 +528,16 @@
       "id": "travelpayouts",
       "name": "Travelpayouts",
       "kind": "travel_partner_network",
-      "regions": ["global"],
-      "focus": ["hotels", "flights", "tours", "insurance", "rentals"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "hotels",
+        "flights",
+        "tours",
+        "insurance",
+        "rentals"
+      ],
       "officialUrl": "https://www.travelpayouts.com/",
       "ownershipNote": "Travelpayouts is part of the international travel holding Go Travel Un Limited and remains active.",
       "ownershipEvidenceUrl": "https://www.travelpayouts.com/about/",
@@ -422,8 +557,14 @@
       "id": "adtraction",
       "name": "Adtraction",
       "kind": "affiliate_network",
-      "regions": ["Europe"],
-      "focus": ["ecommerce", "finance", "retail"],
+      "regions": [
+        "Europe"
+      ],
+      "focus": [
+        "ecommerce",
+        "finance",
+        "retail"
+      ],
       "officialUrl": "https://adtraction.com/",
       "publisherSignupUrl": "https://adtraction.com/partner-sign-up/",
       "dashboardUrl": "https://partner.adtraction.com/",
@@ -441,8 +582,15 @@
       "id": "commission-factory",
       "name": "Commission Factory",
       "kind": "affiliate_network",
-      "regions": ["Australia", "New Zealand", "APAC"],
-      "focus": ["retail", "ecommerce"],
+      "regions": [
+        "Australia",
+        "New Zealand",
+        "APAC"
+      ],
+      "focus": [
+        "retail",
+        "ecommerce"
+      ],
       "officialUrl": "https://www.commissionfactory.com/",
       "ownershipNote": "Awin fully acquired Commission Factory; Commission Factory continues to operate its own platform.",
       "ownershipEvidenceUrl": "https://www.commissionfactory.com/market-insights/news-events/awin-fully-acquires-commission-factory",
@@ -462,8 +610,17 @@
       "id": "daisycon",
       "name": "Daisycon",
       "kind": "affiliate_network",
-      "regions": ["Benelux", "Europe"],
-      "focus": ["retail", "telecom", "energy", "travel", "lead generation"],
+      "regions": [
+        "Benelux",
+        "Europe"
+      ],
+      "focus": [
+        "retail",
+        "telecom",
+        "energy",
+        "travel",
+        "lead generation"
+      ],
       "officialUrl": "https://daisycon.com/en/",
       "publisherSignupUrl": "https://login.daisycon.com/en/register/publisher",
       "dashboardUrl": "https://login.daisycon.com/",
@@ -481,8 +638,15 @@
       "id": "kwanko",
       "name": "Kwanko",
       "kind": "affiliate_network",
-      "regions": ["Europe", "Latin America"],
-      "focus": ["retail", "mobile", "lead generation"],
+      "regions": [
+        "Europe",
+        "Latin America"
+      ],
+      "focus": [
+        "retail",
+        "mobile",
+        "lead generation"
+      ],
       "officialUrl": "https://www.kwanko.com/",
       "publisherSignupUrl": "https://www.kwanko.com/publishers/",
       "dashboardUrl": "https://publisher.kwanko.com/login",
@@ -500,8 +664,15 @@
       "id": "tradetracker",
       "name": "TradeTracker",
       "kind": "affiliate_network",
-      "regions": ["Europe", "selected international markets"],
-      "focus": ["retail", "services", "travel"],
+      "regions": [
+        "Europe",
+        "selected international markets"
+      ],
+      "focus": [
+        "retail",
+        "services",
+        "travel"
+      ],
       "officialUrl": "https://tradetracker.com/",
       "publisherSignupUrl": "https://affiliate.tradetracker.com/signup/step1?loc=en_US",
       "dashboardUrl": "https://affiliate.tradetracker.com/",
@@ -519,8 +690,15 @@
       "id": "belboon",
       "name": "belboon",
       "kind": "affiliate_network",
-      "regions": ["Germany", "DACH", "Europe"],
-      "focus": ["ecommerce", "retail"],
+      "regions": [
+        "Germany",
+        "DACH",
+        "Europe"
+      ],
+      "focus": [
+        "ecommerce",
+        "retail"
+      ],
       "officialUrl": "https://belboon.com/",
       "ownershipNote": "belboon joined Linehub and collaborates with Daisycon while retaining its existing systems and contacts.",
       "ownershipEvidenceUrl": "https://belboon.com/en/belboon-and-daisycon-join-forces-under-the-linehub-umbrella/",
@@ -540,8 +718,15 @@
       "id": "adcell",
       "name": "ADCELL",
       "kind": "affiliate_network",
-      "regions": ["Germany", "Austria", "Switzerland"],
-      "focus": ["ecommerce", "retail"],
+      "regions": [
+        "Germany",
+        "Austria",
+        "Switzerland"
+      ],
+      "focus": [
+        "ecommerce",
+        "retail"
+      ],
       "officialUrl": "https://www.adcell.de/",
       "publisherSignupUrl": "https://www.adcell.de/affiliates",
       "dashboardUrl": "https://www.adcell.de/affiliates/login",
@@ -559,8 +744,19 @@
       "id": "optimise-media",
       "name": "Optimise Media",
       "kind": "affiliate_network",
-      "regions": ["US", "UK", "APAC", "India", "global"],
-      "focus": ["retail", "finance", "travel", "performance campaigns"],
+      "regions": [
+        "US",
+        "UK",
+        "APAC",
+        "India",
+        "global"
+      ],
+      "focus": [
+        "retail",
+        "finance",
+        "travel",
+        "performance campaigns"
+      ],
       "officialUrl": "https://optimisemedia.com/",
       "publisherSignupUrl": "https://optimisemedia.com/apply/",
       "dashboardUrl": "https://dashboard.optimisemedia.com/",
@@ -578,8 +774,14 @@
       "id": "affiliate-future",
       "name": "Affiliate Future",
       "kind": "affiliate_network",
-      "regions": ["UK", "Europe"],
-      "focus": ["retail", "travel"],
+      "regions": [
+        "UK",
+        "Europe"
+      ],
+      "focus": [
+        "retail",
+        "travel"
+      ],
       "officialUrl": "https://adtraction.com/affiliate-future/",
       "publisherSignupUrl": "https://adtraction.com/partner-sign-up/",
       "dashboardUrl": "https://afuk-affiliate.affiliatefuture.com/login.aspx?ReturnUrl=%2F",
@@ -597,8 +799,15 @@
       "id": "involve-asia",
       "name": "Involve Asia",
       "kind": "affiliate_network",
-      "regions": ["Southeast Asia"],
-      "focus": ["ecommerce", "finance", "travel", "marketplaces"],
+      "regions": [
+        "Southeast Asia"
+      ],
+      "focus": [
+        "ecommerce",
+        "finance",
+        "travel",
+        "marketplaces"
+      ],
       "officialUrl": "https://involve.asia/",
       "publisherSignupUrl": "https://app.involve.asia/v2/create-account",
       "dashboardUrl": "https://app.involve.asia/v2/login",
@@ -616,8 +825,15 @@
       "id": "accesstrade",
       "name": "ACCESSTRADE",
       "kind": "affiliate_network",
-      "regions": ["Japan", "Southeast Asia"],
-      "focus": ["ecommerce", "services", "regional marketplaces"],
+      "regions": [
+        "Japan",
+        "Southeast Asia"
+      ],
+      "focus": [
+        "ecommerce",
+        "services",
+        "regional marketplaces"
+      ],
       "officialUrl": "https://accesstrade.global/",
       "publisherSignupUrl": "https://accesstrade.global/publisher",
       "dashboardUrl": null,
@@ -635,8 +851,16 @@
       "id": "vcommission",
       "name": "vCommission",
       "kind": "affiliate_network",
-      "regions": ["US", "India", "APAC"],
-      "focus": ["ecommerce", "finance", "lead generation"],
+      "regions": [
+        "US",
+        "India",
+        "APAC"
+      ],
+      "focus": [
+        "ecommerce",
+        "finance",
+        "lead generation"
+      ],
       "officialUrl": "https://www.vcommission.com/",
       "publisherSignupUrl": "https://www.vcommission.com/affiliate/signup/",
       "dashboardUrl": "https://network.vcommission.com/",
@@ -654,8 +878,13 @@
       "id": "cuelinks",
       "name": "Cuelinks",
       "kind": "commerce_subnetwork",
-      "regions": ["India"],
-      "focus": ["commerce link monetization", "ecommerce"],
+      "regions": [
+        "India"
+      ],
+      "focus": [
+        "commerce link monetization",
+        "ecommerce"
+      ],
       "officialUrl": "https://www.cuelinks.com/",
       "publisherSignupUrl": "https://www.cuelinks.com/signup",
       "dashboardUrl": "https://www.cuelinks.com/login",
@@ -673,8 +902,17 @@
       "id": "levanta",
       "name": "Levanta",
       "kind": "creator_affiliate_marketplace",
-      "regions": ["US", "global Amazon marketplaces"],
-      "focus": ["Amazon", "Shopify", "Walmart", "deal sites", "publishers"],
+      "regions": [
+        "US",
+        "global Amazon marketplaces"
+      ],
+      "focus": [
+        "Amazon",
+        "Shopify",
+        "Walmart",
+        "deal sites",
+        "publishers"
+      ],
       "officialUrl": "https://levanta.io/creators/",
       "publisherSignupUrl": "https://app.levanta.io/auth/sign-up",
       "dashboardUrl": "https://app.levanta.io/auth/sign-in",
@@ -692,8 +930,16 @@
       "id": "archer-affiliates",
       "name": "Archer Affiliates",
       "kind": "merchant_program_marketplace",
-      "regions": ["US", "global"],
-      "focus": ["Amazon sellers", "publishers", "influencers", "Amazon Attribution"],
+      "regions": [
+        "US",
+        "global"
+      ],
+      "focus": [
+        "Amazon sellers",
+        "publishers",
+        "influencers",
+        "Amazon Attribution"
+      ],
       "officialUrl": "https://www.archeraffiliates.com/",
       "publisherSignupUrl": "https://app.archeraffiliates.com/auth/sign-up/create-account",
       "dashboardUrl": "https://app.archeraffiliates.com/",
@@ -711,8 +957,16 @@
       "id": "shopify-collabs",
       "name": "Shopify Collabs",
       "kind": "merchant_program_marketplace",
-      "regions": ["US", "UK", "Canada"],
-      "focus": ["Shopify merchants", "creators", "direct merchant invitations"],
+      "regions": [
+        "US",
+        "UK",
+        "Canada"
+      ],
+      "focus": [
+        "Shopify merchants",
+        "creators",
+        "direct merchant invitations"
+      ],
       "officialUrl": "https://www.shopify.com/collabs/creators",
       "publisherSignupUrl": null,
       "dashboardUrl": "https://collabs.shopify.com/",
@@ -730,8 +984,17 @@
       "id": "collective-voice",
       "name": "Collective Voice",
       "kind": "creator_commerce_network",
-      "regions": ["US", "UK", "Canada", "Australia"],
-      "focus": ["creator affiliate links", "retail product catalog", "legacy ShopStyle Collective"],
+      "regions": [
+        "US",
+        "UK",
+        "Canada",
+        "Australia"
+      ],
+      "focus": [
+        "creator affiliate links",
+        "retail product catalog",
+        "legacy ShopStyle Collective"
+      ],
       "officialUrl": "https://app.collectivevoice.com/",
       "publisherSignupUrl": null,
       "dashboardUrl": null,
@@ -749,8 +1012,14 @@
       "id": "howl",
       "name": "Howl",
       "kind": "creator_commerce_network",
-      "regions": ["US"],
-      "focus": ["editorial commerce", "creators", "retail"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "editorial commerce",
+        "creators",
+        "retail"
+      ],
       "officialUrl": "https://www.howl.link/",
       "publisherSignupUrl": "https://app.howl.link/sign-up",
       "dashboardUrl": "https://app.howl.link/sign-in",
@@ -768,8 +1037,14 @@
       "id": "mavely",
       "name": "Mavely",
       "kind": "creator_commerce_network",
-      "regions": ["US"],
-      "focus": ["creators", "retail", "social commerce"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "creators",
+        "retail",
+        "social commerce"
+      ],
       "officialUrl": "https://www.joinmavely.com/",
       "ownershipNote": "Mavely was acquired by Later and continues to operate as an active creator-commerce platform.",
       "ownershipEvidenceUrl": "https://www.joinmavely.com/news/later-acquires-mavely-in-landmark-deal/",
@@ -789,8 +1064,16 @@
       "id": "shopyourlikes",
       "name": "ShopYourLikes",
       "kind": "creator_commerce_network",
-      "regions": ["US", "UK"],
-      "focus": ["creator affiliate links", "retail", "cost per click", "brand sponsorships"],
+      "regions": [
+        "US",
+        "UK"
+      ],
+      "focus": [
+        "creator affiliate links",
+        "retail",
+        "cost per click",
+        "brand sponsorships"
+      ],
       "officialUrl": "https://www.shopyourlikes.com/",
       "publisherSignupUrl": "https://my.shopyourlikes.com/register",
       "dashboardUrl": "https://my.shopyourlikes.com/login",
@@ -808,8 +1091,15 @@
       "id": "ltk",
       "name": "LTK",
       "kind": "creator_commerce_network",
-      "regions": ["global"],
-      "focus": ["fashion", "beauty", "home", "lifestyle creators"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "fashion",
+        "beauty",
+        "home",
+        "lifestyle creators"
+      ],
       "officialUrl": "https://company.shopltk.com/",
       "publisherSignupUrl": "https://company.shopltk.com/creatorapplication_search",
       "dashboardUrl": "https://creator.shopltk.com/",
@@ -827,8 +1117,15 @@
       "id": "shopmy",
       "name": "ShopMy",
       "kind": "creator_commerce_network",
-      "regions": ["US", "global"],
-      "focus": ["beauty", "fashion", "lifestyle creators"],
+      "regions": [
+        "US",
+        "global"
+      ],
+      "focus": [
+        "beauty",
+        "fashion",
+        "lifestyle creators"
+      ],
       "officialUrl": "https://shopmy.us/",
       "publisherSignupUrl": "https://shopmy.us/home/creators",
       "dashboardUrl": "https://shopmy.us/",
@@ -846,8 +1143,15 @@
       "id": "magiclinks",
       "name": "MagicLinks",
       "kind": "creator_commerce_network",
-      "regions": ["US", "global"],
-      "focus": ["video creators", "consumer electronics", "retail"],
+      "regions": [
+        "US",
+        "global"
+      ],
+      "focus": [
+        "video creators",
+        "consumer electronics",
+        "retail"
+      ],
       "officialUrl": "https://www.magiclinks.com/",
       "publisherSignupUrl": "https://app.magiclinks.com/join",
       "dashboardUrl": "https://app.magiclinks.com/",
@@ -865,8 +1169,14 @@
       "id": "brandcycle",
       "name": "BrandCycle",
       "kind": "creator_commerce_network",
-      "regions": ["US"],
-      "focus": ["retail", "creator subnetwork", "content commerce"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "retail",
+        "creator subnetwork",
+        "content commerce"
+      ],
       "officialUrl": "https://brandcycle.com/",
       "ownershipNote": "BrandCycle is a StackCommerce company.",
       "ownershipEvidenceUrl": "https://brandcycle.com/",
@@ -886,8 +1196,13 @@
       "id": "refersion-marketplace",
       "name": "Refersion Marketplace",
       "kind": "merchant_program_marketplace",
-      "regions": ["global"],
-      "focus": ["direct-to-consumer", "independent merchant programs"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "direct-to-consumer",
+        "independent merchant programs"
+      ],
       "officialUrl": "https://marketplace.refersion.com/",
       "publisherSignupUrl": "https://marketplace.refersion.com/",
       "dashboardUrl": "https://marketplace.refersion.com/",
@@ -905,8 +1220,14 @@
       "id": "maxbounty",
       "name": "MaxBounty",
       "kind": "cpa_network",
-      "regions": ["global"],
-      "focus": ["CPA", "lead generation", "customer acquisition"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "CPA",
+        "lead generation",
+        "customer acquisition"
+      ],
       "officialUrl": "https://www.maxbounty.com/",
       "ownershipNote": "mrge acquired MaxBounty in 2024; MaxBounty stated that account operations continued unaffected.",
       "ownershipEvidenceUrl": "https://plus.maxbounty.com/maxbounty-acquired-by-mrge/",
@@ -926,8 +1247,14 @@
       "id": "performcb",
       "name": "Perform[cb]",
       "kind": "cpa_network",
-      "regions": ["global"],
-      "focus": ["CPA", "mobile", "customer acquisition"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "CPA",
+        "mobile",
+        "customer acquisition"
+      ],
       "officialUrl": "https://www.performcb.com/",
       "publisherSignupUrl": "https://login.performcb.com/auth/register/affiliate",
       "dashboardUrl": "https://login.performcb.com/",
@@ -945,8 +1272,13 @@
       "id": "amazon-associates",
       "name": "Amazon Associates",
       "kind": "direct_program",
-      "regions": ["US", "country-specific programs"],
-      "focus": ["Amazon marketplace"],
+      "regions": [
+        "US",
+        "country-specific programs"
+      ],
+      "focus": [
+        "Amazon marketplace"
+      ],
       "officialUrl": "https://affiliate-program.amazon.com/",
       "publisherSignupUrl": "https://affiliate-program.amazon.com/",
       "dashboardUrl": "https://affiliate-program.amazon.com/",
@@ -964,8 +1296,12 @@
       "id": "ebay-partner-network",
       "name": "eBay Partner Network",
       "kind": "direct_program",
-      "regions": ["global"],
-      "focus": ["eBay marketplace"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "eBay marketplace"
+      ],
       "officialUrl": "https://partnernetwork.ebay.com/",
       "publisherSignupUrl": "https://partnernetwork.ebay.com/",
       "dashboardUrl": "https://partner.ebay.com/secure/mediapartner/home/pview.ihtml#/",
@@ -983,8 +1319,12 @@
       "id": "walmart-affiliates",
       "name": "Walmart Affiliates",
       "kind": "direct_program",
-      "regions": ["US"],
-      "focus": ["Walmart retail marketplace"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "Walmart retail marketplace"
+      ],
       "officialUrl": "https://affiliates.walmart.com/",
       "publisherSignupUrl": "https://affiliates.walmart.com/",
       "dashboardUrl": null,
@@ -1002,8 +1342,13 @@
       "id": "walmart-creator",
       "name": "Walmart Creator",
       "kind": "direct_creator_program",
-      "regions": ["US"],
-      "focus": ["Walmart", "social creators"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "Walmart",
+        "social creators"
+      ],
       "officialUrl": "https://creator.walmart.com/",
       "publisherSignupUrl": "https://creator.walmart.com/",
       "dashboardUrl": "https://creator.walmart.com/",
@@ -1021,8 +1366,15 @@
       "id": "target-partners",
       "name": "Target Partners",
       "kind": "direct_program",
-      "regions": ["US", "publishers with US-directed audiences"],
-      "focus": ["Target retail", "consumer goods", "Impact-served program"],
+      "regions": [
+        "US",
+        "publishers with US-directed audiences"
+      ],
+      "focus": [
+        "Target retail",
+        "consumer goods",
+        "Impact-served program"
+      ],
       "officialUrl": "https://partners.target.com/",
       "publisherSignupUrl": "https://partner.target.com/signup/none/create-new-mediapartner-account-flow.ihtml?execution=e1s1#/?viewkey=signUpStart",
       "dashboardUrl": "https://partner.target.com/login.user",
@@ -1040,8 +1392,16 @@
       "id": "best-buy-affiliate-program",
       "name": "Best Buy Affiliate Program",
       "kind": "direct_program",
-      "regions": ["US"],
-      "focus": ["electronics", "appliances", "creators", "publishers", "Impact-served program"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "electronics",
+        "appliances",
+        "creators",
+        "publishers",
+        "Impact-served program"
+      ],
       "officialUrl": "https://www.bestbuy.com/site/misc/best-buy-affiliate-program/pcmcat198500050002.c?id=pcmcat198500050002",
       "publisherSignupUrl": "https://app.impact.com/campaign-campaign-info-v2/Best-Buy-US.brand",
       "dashboardUrl": "https://app.impact.com/",
@@ -1059,8 +1419,15 @@
       "id": "home-depot-affiliate-program",
       "name": "The Home Depot Affiliate Program",
       "kind": "direct_program",
-      "regions": ["US"],
-      "focus": ["home improvement", "appliances", "tools", "Impact-served program"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "home improvement",
+        "appliances",
+        "tools",
+        "Impact-served program"
+      ],
       "officialUrl": "https://www.homedepot.com/c/SF_MS_The_Home_Depot_Affiliate_Program",
       "publisherSignupUrl": "https://app.impact.com/campaign-promo-signup/The-Home-Depot.brand?execution=e1s1",
       "dashboardUrl": "https://app.impact.com/",
@@ -1078,8 +1445,16 @@
       "id": "lowes-creator-program",
       "name": "Lowe's Creator Program",
       "kind": "direct_creator_program",
-      "regions": ["US"],
-      "focus": ["home improvement", "tools", "appliances", "bloggers", "web publishers"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "home improvement",
+        "tools",
+        "appliances",
+        "bloggers",
+        "web publishers"
+      ],
       "officialUrl": "https://www.lowes.com/l/creator/joinlowescreator",
       "publisherSignupUrl": "https://connectwith.lowes.com/connect#welcome",
       "dashboardUrl": "https://connectwith.lowes.com/connect",
@@ -1097,8 +1472,15 @@
       "id": "booking-com-affiliate-program",
       "name": "Booking.com Affiliate Partner Program",
       "kind": "direct_program",
-      "regions": ["global", "US registration through CJ"],
-      "focus": ["accommodations", "travel", "Booking.com"],
+      "regions": [
+        "global",
+        "US registration through CJ"
+      ],
+      "focus": [
+        "accommodations",
+        "travel",
+        "Booking.com"
+      ],
       "officialUrl": "https://www.booking.com/affiliate-program/v2/index.html",
       "publisherSignupUrl": "https://www.booking.com/affiliate-program/v2/index.html",
       "dashboardUrl": "https://spadmin.booking.com/",
@@ -1116,8 +1498,14 @@
       "id": "expedia-group-travel-creator",
       "name": "Expedia Group Travel Creator Program",
       "kind": "direct_program",
-      "regions": ["global"],
-      "focus": ["hotels", "vacation rentals", "travel"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "hotels",
+        "vacation rentals",
+        "travel"
+      ],
       "officialUrl": "https://creator.expediagroup.com/",
       "publisherSignupUrl": "https://creator.expediagroup.com/",
       "dashboardUrl": "https://creator.expediagroup.com/",
@@ -1135,8 +1523,15 @@
       "id": "bh-affiliate-program",
       "name": "B&H Photo Affiliate Program",
       "kind": "direct_program",
-      "regions": ["US"],
-      "focus": ["electronics", "cameras", "computers", "pro audio"],
+      "regions": [
+        "US"
+      ],
+      "focus": [
+        "electronics",
+        "cameras",
+        "computers",
+        "pro audio"
+      ],
       "officialUrl": "https://www.bhphotovideo.com/c/find/shared/affiliates.jsp",
       "publisherSignupUrl": "https://affiliates.bhphotovideo.com/app/",
       "dashboardUrl": "https://affiliates.bhphotovideo.com/app/",
@@ -1154,8 +1549,13 @@
       "id": "discovercars-affiliate-program",
       "name": "DiscoverCars.com Affiliate Program",
       "kind": "direct_program",
-      "regions": ["global"],
-      "focus": ["rental cars", "travel comparison"],
+      "regions": [
+        "global"
+      ],
+      "focus": [
+        "rental cars",
+        "travel comparison"
+      ],
       "officialUrl": "https://www.discovercars.com/affiliate",
       "publisherSignupUrl": "https://www.discovercars.com/affiliate",
       "dashboardUrl": "https://discover-car-hire.postaffiliatepro.com/affiliates/login.php",

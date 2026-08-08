@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-04T08:14:24.473Z",
+  "updatedAt": "2026-08-07T13:50:02.000Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherAccounts": [
     {
@@ -15,22 +15,42 @@
     {
       "network": "awin",
       "publisherID": "2973087",
-      "status": "active publisher account; BLUETTI US is Joined; payment is blocked until required tax information is complete",
+      "status": "active publisher account; BLUETTI US and TicketNetwork are approved advertiser relationships; payment remains blocked until required Awin tax information is complete",
       "commissionAccess": true,
       "commissionAccrualReady": false,
       "payoutReady": false,
-      "payoutSetupStatus": "incomplete — required tax information is not complete"
+      "payoutSetupStatus": "incomplete — required tax information is not complete",
+      "approvedAdvertisers": [
+        {
+          "network": "awin",
+          "merchantName": "TicketNetwork",
+          "advertiserID": "89223",
+          "relationship": "approved",
+          "approvedAt": "2026-08-06T18:41:05.000Z",
+          "trackingLinkStatus": "unverified"
+        }
+      ]
     },
     {
       "network": "cj",
       "companyID": "8007406",
       "memberRouteID": "7685648",
       "trackingSiteID": "101847838",
-      "status": "active; payout onboarding verified",
+      "status": "active; payout onboarding verified; Malwarebytes is approved in addition to the existing verified advertiser relationships",
       "commissionAccess": true,
       "commissionAccrualReady": true,
       "payoutReady": true,
-      "payoutSetupStatus": "verified"
+      "payoutSetupStatus": "verified",
+      "approvedAdvertisers": [
+        {
+          "network": "cj",
+          "merchantName": "Malwarebytes",
+          "advertiserID": "3743656",
+          "relationship": "active",
+          "approvedAt": "2026-08-07T13:50:02.000Z",
+          "trackingLinkStatus": "unverified"
+        }
+      ]
     },
     {
       "network": "impact",
@@ -521,16 +541,23 @@
       "publisherID": "8007406",
       "merchantURL": "https://www.malwarebytes.com/",
       "profileURL": "https://members.cj.com/member/7685648/publisher/advertisers/findAdvertisers.cj",
-      "category": "Security-software subscription",
-      "commission": "30%-40% per qualifying sale",
-      "attribution": "45 days",
-      "status": "Pending advertiser approval — do not publish tracked links yet",
-      "applicationStatus": "pending",
+      "category": "Cybersecurity software",
+      "commission": "30% per qualifying sale",
+      "attribution": "45-day referral period",
+      "status": "Active advertiser relationship — exact CJ tracking link and live customer offer remain unverified",
+      "applicationStatus": "active",
       "appliedAt": "2026-08-01T07:47:44Z",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
-      "summary": "CJ confirms the Malwarebytes application is pending. The program advertises seasonal promotions and up to 40% commission, but publishing remains locked until approval and payable tracking are verified.",
-      "priority": 22
+      "summary": "CJ advertiser 3743656 welcomed DealDesk to the Malwarebytes affiliate program. The authenticated email states a 30% sale commission, 45-day referral period, seasonal promotions, and advertiser-handled billing and support. No exact DealDesk tracking link was included, so the approval is recorded without exposing a public offer.",
+      "priority": 22,
+      "paymentTiming": "Approval email states commission is received within 30 days",
+      "priceReference": "Approval email advertised a one-year, one-device PC or Mac subscription at $44.99",
+      "approvedAt": "2026-08-07T13:50:02.000Z",
+      "relationshipEvidence": "Authenticated CJ advertiser email: Welcome to the Malwarebytes Affiliate Program",
+      "trackingLinkStatus": "unverified",
+      "restrictions": "Publish only after generating and verifying an exact DealDesk CJ link, current price or promotion, destination, eligibility, customer disclosures, and genuine Malwarebytes creative.",
+      "evidenceRecord": "data/affiliate-evidence/malwarebytes-cj-approval-20260807.json"
     },
     {
       "id": "cj-eset-north-america-2069963",
@@ -840,11 +867,11 @@
       "publisherID": "2973087",
       "merchantURL": "https://www.ticketnetwork.com/",
       "profileURL": "https://ui.awin.com/awin/affiliate/2973087/merchant-profile/89223",
-      "category": "Sports, concert, and theater tickets",
-      "commission": "12% standard; 6% for ticket-comparison, loyalty/rewards, cashback, and coupon publishers",
-      "attribution": "Awin profile lists 30 days; advertiser program copy states 45 days — verify the approved contract before publishing",
-      "status": "Pending advertiser approval — do not publish tracked links yet",
-      "applicationStatus": "pending",
+      "category": "Live event tickets",
+      "commission": "Not stated in the authenticated approval email; verify the current signed-in Awin terms before publication",
+      "attribution": "Not stated in the authenticated approval email; verify in Awin before publication",
+      "status": "Active advertiser relationship — exact payable tracking link, commercial terms, destination, and approved creative remain unverified",
+      "applicationStatus": "active",
       "appliedAt": "2026-08-01T09:49:47Z",
       "averageOrderValue": "Over 350 USD",
       "averagePaymentTime": "36 days",
@@ -854,8 +881,13 @@
       "productFeed": true,
       "commissionEligible": false,
       "publicPublishingAllowed": false,
-      "summary": "DealDesk's TicketNetwork application is pending. The program offers a large event catalog and high order values, making even the reduced deal-publisher rate potentially attractive. Because the two displayed attribution windows differ, DealDesk must verify the approved contract, payable rate, live offer, and tracked link before publication.",
-      "priority": 37
+      "summary": "Awin confirmed that DealDesk was approved for TicketNetwork advertiser 89223. The approval email directs publishers to Awin Linking Methods for banners and tracking links, but it does not state the commission schedule or attribution window. The relationship is recorded as active but remains nonpublic until payout readiness and an exact payable link are verified.",
+      "priority": 37,
+      "approvedAt": "2026-08-06T18:41:05.000Z",
+      "relationshipEvidence": "Authenticated Awin email: Welcome to the TicketNetwork Affiliate Program",
+      "trackingLinkStatus": "unverified",
+      "restrictions": "Do not publish TicketNetwork offers until Awin tax onboarding is complete and the exact DealDesk tracking link, current terms, event availability, pricing disclosures, and approved imagery are verified together.",
+      "evidenceRecord": "data/affiliate-evidence/ticketnetwork-awin-approval-20260806.json"
     },
     {
       "id": "cj-woot-4909784",

@@ -15,22 +15,19 @@ const commissionAccrualReadyByNetwork = new Map((affiliateRegistry.publisherAcco
 const hasCommissionPath = (deal) => commissionAccrualReadyByNetwork.get(deal.network) === true;
 const isLiveDeal = (deal) => {
   const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
-  const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
   return deal.status === "active" &&
     deal.commissionEligible === true &&
     deal.approvalStatus === "approved" &&
     hasCommissionPath(deal) &&
     Boolean(deal.affiliateURL) &&
     Boolean(deal.verifiedAt) &&
-    now <= expiresAt &&
-    now <= recheckAfter;
+    now <= expiresAt;
 };
+// recheckAfter is a freshness-review date, not an offer-expiration date.
+// Only an explicit expiresAt or a non-active status can remove a deal.
 const validUntilFor = (deal) => {
-  const deadlines = [deal.expiresAt, deal.recheckAfter]
-    .filter(Boolean)
-    .map((value) => new Date(value).getTime())
-    .filter(Number.isFinite);
-  return deadlines.length ? new Date(Math.min(...deadlines)).toISOString() : "";
+  const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : NaN;
+  return Number.isFinite(expiresAt) ? new Date(expiresAt).toISOString() : "";
 };
 const hasGenuineMerchantImage = (deal) => {
   try {
@@ -47,11 +44,16 @@ const hasGenuineMerchantImage = (deal) => {
 const allFeedDeals = feeds.flatMap((feed) => feed.deals || []);
 const commissionBlockedDealCount = allFeedDeals.filter((deal) => {
   const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
-  const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
   return deal.status === "active" && deal.commissionEligible === true &&
     deal.approvalStatus === "approved" && !hasCommissionPath(deal) &&
     Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
-    now <= expiresAt && now <= recheckAfter;
+    now <= expiresAt;
+}).length;
+const verificationDueDealCount = allFeedDeals.filter((deal) => {
+  const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : Infinity;
+  const recheckAfter = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : Infinity;
+  return deal.status === "active" && now <= expiresAt &&
+    Number.isFinite(recheckAfter) && now > recheckAfter;
 }).length;
 const liveDeals = allFeedDeals.filter(isLiveDeal);
 const deals = liveDeals.filter(hasGenuineMerchantImage);
@@ -469,11 +471,11 @@ const latestHTML = `<!doctype html>
       }
 
       function dealIsCurrent(deal) {
-        return timestampIsCurrent(deal.expiresAt) && timestampIsCurrent(deal.recheckAfter);
+        return timestampIsCurrent(deal.expiresAt);
       }
 
       function cardIsCurrent(card) {
-        return timestampIsCurrent(card.dataset.expiresAt) && timestampIsCurrent(card.dataset.recheckAfter);
+        return timestampIsCurrent(card.dataset.expiresAt);
       }
 
       function dealMatches(deal, query, selectedCategory) {
@@ -759,4 +761,4 @@ await writeFile(resolve(root, "404.html"), `<!doctype html>
   <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>That page is no longer available</h1><p class="deal-detail-summary">The offer may have been removed because it no longer meets DealDesk's publishing requirements.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse current verified deals</a></p></div></article></main>
 </body>
 </html>\n`);
-console.log(`Built ${deals.length} commission-qualified image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${commissionBlockedDealCount} offers without a verified commission-accrual path.`);
+console.log(`Built ${deals.length} commission-qualified image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${commissionBlockedDealCount} offers without a verified commission-accrual path. ${verificationDueDealCount} active offers are due for a verification refresh but remain listed until hard expiry or an explicit status change.`);

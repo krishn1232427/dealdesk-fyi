@@ -350,11 +350,11 @@
       }
 
       function dealIsCurrent(deal) {
-        return timestampIsCurrent(deal.expiresAt) && timestampIsCurrent(deal.recheckAfter);
+        return timestampIsCurrent(deal.expiresAt);
       }
 
       function cardIsCurrent(card) {
-        return timestampIsCurrent(card.dataset.expiresAt) && timestampIsCurrent(card.dataset.recheckAfter);
+        return timestampIsCurrent(card.dataset.expiresAt);
       }
 
       function dealMatches(deal, query, selectedCategory) {
