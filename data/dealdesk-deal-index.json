@@ -1,0 +1,100 @@
+{
+  "name": "DealDesk Deal Index",
+  "updatedAt": "2026-08-07T13:50:02.000Z",
+  "generatedAt": "2026-08-08T08:18:13.289Z",
+  "publicDeals": 799,
+  "merchants": 8,
+  "categories": 11,
+  "medianDisplayedPrice": 249.99,
+  "medianDisplayedDiscountPercent": 44,
+  "categoryStats": [
+    {
+      "category": "Electronics",
+      "count": 415,
+      "lowestDisplayedPrice": 14.28,
+      "medianDisplayedPrice": 232.49,
+      "maximumDisplayedDiscountPercent": 92,
+      "latestVerification": "2026-08-04"
+    },
+    {
+      "category": "Collectibles",
+      "count": 93,
+      "lowestDisplayedPrice": 4.69,
+      "medianDisplayedPrice": 139.14,
+      "maximumDisplayedDiscountPercent": 73,
+      "latestVerification": "2026-08-04"
+    },
+    {
+      "category": "Toys & hobbies",
+      "count": 91,
+      "lowestDisplayedPrice": 8,
+      "medianDisplayedPrice": 299,
+      "maximumDisplayedDiscountPercent": 62,
+      "latestVerification": "2026-08-04"
+    },
+    {
+      "category": "Home & garden",
+      "count": 89,
+      "lowestDisplayedPrice": 27.99,
+      "medianDisplayedPrice": 199.99,
+      "maximumDisplayedDiscountPercent": 66,
+      "latestVerification": "2026-08-04"
+    },
+    {
+      "category": "Business & industrial",
+      "count": 48,
+      "lowestDisplayedPrice": 131.99,
+      "medianDisplayedPrice": 507.49,
+      "maximumDisplayedDiscountPercent": 0,
+      "latestVerification": "2026-08-04"
+    },
+    {
+      "category": "Sports collectibles",
+      "count": 40,
+      "lowestDisplayedPrice": 249.69,
+      "medianDisplayedPrice": 337.5,
+      "maximumDisplayedDiscountPercent": 0,
+      "latestVerification": "2026-08-04"
+    },
+    {
+      "category": "Home",
+      "count": 9,
+      "lowestDisplayedPrice": 23.98,
+      "medianDisplayedPrice": 84.99,
+      "maximumDisplayedDiscountPercent": 46,
+      "latestVerification": "2026-08-03"
+    },
+    {
+      "category": "Subscriptions",
+      "count": 9,
+      "lowestDisplayedPrice": 0,
+      "medianDisplayedPrice": 1.39,
+      "maximumDisplayedDiscountPercent": 96,
+      "latestVerification": "2026-08-04"
+    },
+    {
+      "category": "Streaming",
+      "count": 3,
+      "lowestDisplayedPrice": 0,
+      "medianDisplayedPrice": 0,
+      "maximumDisplayedDiscountPercent": 0,
+      "latestVerification": "2026-08-02"
+    },
+    {
+      "category": "Fashion",
+      "count": 1,
+      "lowestDisplayedPrice": 89.99,
+      "medianDisplayedPrice": 89.99,
+      "maximumDisplayedDiscountPercent": 25,
+      "latestVerification": "2026-08-01"
+    },
+    {
+      "category": "Grocery",
+      "count": 1,
+      "lowestDisplayedPrice": 27.99,
+      "medianDisplayedPrice": 27.99,
+      "maximumDisplayedDiscountPercent": 12,
+      "latestVerification": "2026-08-01"
+    }
+  ]
+}
