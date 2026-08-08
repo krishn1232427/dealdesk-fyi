@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-06T18:41:05.000Z",
+  "source": "Authenticated Awin approval email delivered to hello.launchdesk@gmail.com",
+  "publisher": {
+    "legalName": "Launchdesk LLC",
+    "publisherID": "2973087",
+    "channel": "DealDesk"
+  },
+  "advertiser": {
+    "name": "TicketNetwork",
+    "advertiserID": "89223",
+    "relationship": "Approved"
+  },
+  "evidence": {
+    "subject": "Welcome to the TicketNetwork Affiliate Program",
+    "statement": "Awin confirmed approval and directed DealDesk to Merchants > Linking Methods for current banners and tracking links.",
+    "followupSubject": "TicketNetwork (89223): This Week's Top Sellers & Upcoming Onsales"
+  },
+  "commercialTerms": {
+    "verified": false,
+    "reason": "The approval and promotional emails did not state the signed-in commission schedule or attribution window."
+  },
+  "tracking": {
+    "status": "unverified",
+    "requirement": "Generate an exact DealDesk Awin tracking link from Linking Methods and verify attribution, destination, current event availability, disclosures, and approved imagery."
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "Awin tax onboarding remains incomplete and no exact payable TicketNetwork link with verified commercial terms is recorded."
+  },
+  "privacy": "No passwords, cookies, tax documents, banking details, or session tokens are stored in this evidence record."
+}

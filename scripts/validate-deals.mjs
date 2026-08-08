@@ -30,17 +30,15 @@ const seenNetworks = new Set();
 const seenDeals = [];
 const errors = [];
 const staleDeals = [];
+const dueForRecheckDeals = [];
 const now = Date.now();
 const validDate = (value) => value && Number.isFinite(new Date(value).getTime());
 const usdNumber = (value) => Number(String(value || "").replace(/[$,]/g, ""));
 const slugFor = (deal) => String(deal.id || "deal").replace(/-\d{8}$/, "").toLowerCase()
   .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const validUntilFor = (deal) => {
-  const deadlines = [deal.expiresAt, deal.recheckAfter]
-    .filter(Boolean)
-    .map((value) => new Date(value).getTime())
-    .filter(Number.isFinite);
-  return deadlines.length ? new Date(Math.min(...deadlines)).toISOString() : "";
+  const expiresAt = deal.expiresAt ? new Date(deal.expiresAt).getTime() : NaN;
+  return Number.isFinite(expiresAt) ? new Date(expiresAt).toISOString() : "";
 };
 const hasGenuineMerchantImage = (deal) => {
   try {
@@ -56,11 +54,10 @@ const hasGenuineMerchantImage = (deal) => {
 };
 const isPublicDeal = (deal) => {
   const expiresAt = validDate(deal.expiresAt) ? new Date(deal.expiresAt).getTime() : Infinity;
-  const recheckAfter = validDate(deal.recheckAfter) ? new Date(deal.recheckAfter).getTime() : Infinity;
   return deal.status === "active" && deal.commissionEligible === true &&
     deal.approvalStatus === "approved" && hasCommissionPath(deal) &&
     Boolean(deal.affiliateURL) && Boolean(deal.verifiedAt) &&
-    now <= expiresAt && now <= recheckAfter && hasGenuineMerchantImage(deal);
+    now <= expiresAt && hasGenuineMerchantImage(deal);
 };
 
 for (const feedPath of feedPaths) {
@@ -103,7 +100,8 @@ for (const feedPath of feedPaths) {
     }
     const expiresAt = validDate(deal.expiresAt) ? new Date(deal.expiresAt).getTime() : Infinity;
     const recheckAfter = validDate(deal.recheckAfter) ? new Date(deal.recheckAfter).getTime() : Infinity;
-    if (expiresAt <= now || recheckAfter <= now) staleDeals.push({ deal, label });
+    if (expiresAt <= now) staleDeals.push({ deal, label });
+    else if (deal.status === "active" && recheckAfter <= now) dueForRecheckDeals.push({ deal, label });
 
     let affiliateURL;
     if (deal.affiliateURL) {
@@ -627,5 +625,8 @@ if (errors.length) {
   process.exit(1);
 }
 
-if (staleDeals.length) console.log(`Withheld ${staleDeals.length} expired or due-for-recheck deals from public output.`);
+if (staleDeals.length) console.log(`Withheld ${staleDeals.length} expired deals from public output.`);
+if (dueForRecheckDeals.length) {
+  console.warn(`${dueForRecheckDeals.length} active deals are due for verification refresh but remain public until hard expiry or an explicit status change.`);
+}
 console.log(`Validated ${seenIDs.size} affiliate deal records; ${publicDeals.length} are currently commission-qualified and public.`);
