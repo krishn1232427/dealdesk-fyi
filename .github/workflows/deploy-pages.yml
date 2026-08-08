@@ -46,6 +46,17 @@ jobs:
             echo "installed=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Install final SEO authority sources when present
+        id: seo-install
+        shell: bash
+        run: |
+          if [[ -f scripts/install-seo-authority.mjs ]]; then
+            node scripts/install-seo-authority.mjs
+            echo "installed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "installed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Check build scripts
         run: |
           node --check scripts/build-indexing-hubs.mjs
@@ -71,16 +82,16 @@ jobs:
       - name: Validate SEO authority engine
         run: node scripts/validate-seo-authority.mjs
 
-      - name: Commit finalized indexing release to master
+      - name: Commit finalized authority release to master
         id: release
         shell: bash
         run: |
-          if [[ "${{ steps.indexing-install.outputs.installed }}" == "true" ]]; then
+          if [[ "${{ steps.indexing-install.outputs.installed }}" == "true" || "${{ steps.seo-install.outputs.installed }}" == "true" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A
             if ! git diff --cached --quiet; then
-              git commit -m "Finalize crawlable DealDesk indexing architecture"
+              git commit -m "Finalize DealDesk SEO authority engine"
               git push origin HEAD:master
             fi
           fi
