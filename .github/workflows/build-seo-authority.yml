@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - agent/seo-authority-engine
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -24,8 +28,12 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install SEO authority sources
-        run: node scripts/install-seo-authority.mjs
+      - name: Install SEO authority sources when present
+        shell: bash
+        run: |
+          if [[ -f scripts/install-seo-authority.mjs ]]; then
+            node scripts/install-seo-authority.mjs
+          fi
 
       - name: Check SEO authority scripts
         run: |
@@ -51,6 +59,7 @@ jobs:
         run: node scripts/validate-seo-authority.mjs
 
       - name: Commit generated authority release
+        if: github.event_name == 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
