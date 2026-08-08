@@ -196,6 +196,7 @@ for (const deal of deals) {
     category: deal.category || "Deals",
     url: canonical,
     mainEntityOfPage: canonical,
+    dateModified: isoDate(updated),
     ...(!isServiceOffer && asin ? { sku: asin } : {}),
     ...(image ? { image: [image] } : {}),
     offers: {
@@ -203,6 +204,7 @@ for (const deal of deals) {
       url: deal.affiliateURL,
       priceCurrency: "USD",
       price: numberFromPrice(prices.current).toFixed(2),
+      ...(deal.expiresAt ? { priceValidUntil: isoDate(deal.expiresAt) } : {}),
       ...(!isServiceOffer ? { availability: "https://schema.org/InStock" } : {}),
       ...(!isServiceOffer && itemCondition ? { itemCondition } : {}),
       seller: { "@type": "Organization", name: deal.merchantName || "Amazon" }
@@ -213,7 +215,17 @@ for (const deal of deals) {
     name: `${title} offer`,
     description,
     url: canonical,
+    dateModified: isoDate(updated),
     ...(image ? { primaryImageOfPage: image } : {})
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "DealDesk", item: `${site}/` },
+      { "@type": "ListItem", position: 2, name: "Latest deals", item: `${site}/latest-deals/` },
+      { "@type": "ListItem", position: 3, name: title, item: canonical }
+    ]
   };
   const html = `<!doctype html>
 <html lang="en">
@@ -231,6 +243,7 @@ for (const deal of deals) {
 ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
   <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll("<", "\\u003c")}</script>
+  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema).replaceAll("<", "\\u003c")}</script>
   <script>(function(){if(Date.now()>Date.parse(${JSON.stringify(validUntilFor(deal))})){document.documentElement.hidden=true;window.location.replace("/latest-deals/");}}());</script>
 </head>
 <body>
@@ -258,44 +271,14 @@ ${prices.current ? `    <section class="deal-proof" aria-labelledby="deal-proof-
   await writeFile(output, html);
 }
 
-const retiredDealHTML = `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Offer not currently listed | DealDesk</title>
-  <meta name="robots" content="noindex,nofollow" />
-  <meta http-equiv="refresh" content="0;url=/latest-deals/" />
-  <link rel="canonical" href="${site}/latest-deals/" />
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>This offer is not currently listed</h1><p class="deal-detail-summary">DealDesk only shows offers with genuine merchant imagery and a verified payable link.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse current verified deals</a></p></div></article></main>
-  <script>window.location.replace("/latest-deals/");</script>
-</body>
-</html>`;
-
-for (const deal of nonPublicDeals) {
-  const slug = slugFor(deal);
-  const output = resolve(root, "deals", slug, "index.html");
-  await mkdir(dirname(output), { recursive: true });
-  await writeFile(output, retiredDealHTML);
-}
-
-const generatedDealSlugs = new Set(allFeedDeals.map(slugFor));
-const knownDealSlugs = [...new Set([...previousDealSlugs, ...generatedDealSlugs])].sort();
-for (const slug of knownDealSlugs) {
-  if (generatedDealSlugs.has(slug)) continue;
-  const output = resolve(root, "deals", slug, "index.html");
-  await mkdir(dirname(output), { recursive: true });
-  await writeFile(output, retiredDealHTML);
-}
+const generatedDealSlugs = new Set(deals.map(slugFor));
+const knownDealSlugs = [...generatedDealSlugs].sort();
 await writeFile(dealSlugManifestPath, `${JSON.stringify({
-  updatedAt: new Date(Math.max(...feeds.map((feed) => new Date(feed.updatedAt || 0).getTime()))).toISOString(),
+  updatedAt: new Date(Math.max(...feeds.map((feed) => new Date(feed.updatedAt || 0).getTime()), new Date(affiliateRegistry.updatedAt || 0).getTime())).toISOString(),
   slugs: knownDealSlugs
 }, null, 2)}\n`);
 
-const latestFeedTime = Math.max(...feeds.map((feed) => new Date(feed.updatedAt || 0).getTime()));
+const latestFeedTime = Math.max(...feeds.map((feed) => new Date(feed.updatedAt || 0).getTime()), new Date(affiliateRegistry.updatedAt || 0).getTime());
 const lastmod = isoDate(latestFeedTime);
 const latestCatalogVersion = Number.isFinite(latestFeedTime) ? latestFeedTime.toString(36) : "current";
 const diversifyDeals = (items, seed = []) => {
@@ -330,10 +313,11 @@ const latestSchema = {
   name: "Latest verified deals",
   description: "Hand-picked deals with current price, original price, savings, merchant, and freshness shown clearly.",
   url: `${site}/latest-deals/`,
+  dateModified: lastmod,
   mainEntity: {
     "@type": "ItemList",
     numberOfItems: pricedDeals.length,
-    itemListElement: pricedDeals.map((deal, index) => ({
+    itemListElement: pricedDeals.slice(0, 18).map((deal, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: cleanTitle(deal.title),
@@ -408,7 +392,9 @@ const latestHTML = `<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Latest verified deals | DealDesk</title>
   <meta name="description" content="Hand-picked deals with current price, original price, savings, merchant, and freshness shown clearly." />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="dealdesk-build" content="2026-08-08-indexing-v1" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="canonical" href="${site}/latest-deals/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Latest verified deals | DealDesk" />
@@ -416,8 +402,8 @@ const latestHTML = `<!doctype html>
   <meta property="og:url" content="${site}/latest-deals/" />
   <meta property="og:image" content="${site}/assets/dealdesk-publisher-logo.png" />
   <link rel="icon" type="image/png" href="/assets/dealdesk-publisher-logo.png" />
-  <link rel="stylesheet" href="/styles.css?v=20260802-genuine-stream-images" />
-  <script src="/assets/site-shell.js?v=20260802-latest-mobile-parity" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=2026-08-08-indexing-v1" />
+  <script src="/assets/site-shell.js?v=2026-08-08-indexing-v1" defer></script>
   <script type="application/ld+json">${JSON.stringify(latestSchema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body class="latest-page">
