@@ -82,7 +82,7 @@ for (const path of ["/feeds/deals.v1.json", "/feeds/merchants.v1.json", "/feed.x
 }
 
 const llms = await read("llms.txt");
-for (const required of [`# DealDesk`, `${site}/feeds/deals.v1.json`, `${site}/sitemap.xml`, "verification date", "merchant checkout"]) {
+for (const required of [`# DealDesk`, `${site}/feeds/deals.v1.json`, `${site}/sitemap.xml`, "verification date", "Merchant checkout"]) {
   if (!llms.includes(required)) errors.push(`llms.txt: missing ${required}`);
 }
 
