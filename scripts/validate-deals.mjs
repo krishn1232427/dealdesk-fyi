@@ -579,6 +579,10 @@ if (!homepageSource.includes('/data/affiliate-programs.json') ||
     !homepageSource.includes('commissionAccrualReadyByNetwork[deal.network] === true')) {
   errors.push("index.html: homepage listings must fail closed against verified network commission-accrual readiness");
 }
+if (homepageSource.includes("now <= recheckAfter") ||
+    homepageSource.includes("!deal.recheckAfter")) {
+  errors.push("index.html: homepage must not treat recheckAfter as a hard expiration");
+}
 if (!lifecycleOutboundPage.includes("/data/outbound-approvals.json") ||
     !lifecycleOutboundPage.includes("deal.validUntil === requestedValidUntil") ||
     !lifecycleOutboundPage.includes("Date.now() > validUntil")) {
