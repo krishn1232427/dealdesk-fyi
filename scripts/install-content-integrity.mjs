@@ -21,7 +21,15 @@ if (!authority.includes("const comparisonRows = position")) {
   const rowsStart = authority.indexOf("  const similarRows = comparable.length ?");
   const rowsEnd = authority.indexOf("\n  const authoritySection =", rowsStart);
   if (rowsStart < 0 || rowsEnd < 0) throw new Error("Could not locate comparison rendering in build-seo-authority.mjs");
-  const rowsReplacement = `  const comparisonRows = position\n    ? comparable.filter((candidate) => priceBasisFor(candidate) === priceBasisFor(deal))\n    : comparable;\n  const comparisonExplanation = position\n    ? \\`This offer ranks \\${position.rank} of \\${position.total} by displayed price among closely related offers using the same price basis.\\`\n    : "These offers share product-family or title signals. Prices may use different billing bases, conditions, sizes, or accessories, so compare terms instead of raw numbers.";\n  const similarRows = comparisonRows.length ? \\`<section class="deal-comparison-panel" aria-labelledby="similar-deals-title"><div><span class="page-kicker"><span></span> Similar offers</span><h2 id="similar-deals-title">Compare related prices before checkout</h2><p>\\${comparisonExplanation}</p></div><div class="deal-comparison-list">\\${comparisonRows.map((candidate) => \\`<a href="\\${dealPath(candidate)}"><span><strong>\\${esc(candidate.title)}</strong><small>\\${esc(conditionFrom(candidate))} · \\${esc(merchantName(candidate))}</small></span><b>\\${esc(candidate.currentPrice || "See terms")}</b></a>\\`).join("")}</div></section>\\` : "";`;
+  const rowsReplacement = [
+    '  const comparisonRows = position',
+    '    ? comparable.filter((candidate) => priceBasisFor(candidate) === priceBasisFor(deal))',
+    '    : comparable;',
+    '  const comparisonExplanation = position',
+    '    ? `This offer ranks ${position.rank} of ${position.total} by displayed price among closely related offers using the same price basis.`',
+    '    : "These offers share product-family or title signals. Prices may use different billing bases, conditions, sizes, or accessories, so compare terms instead of raw numbers.";',
+    '  const similarRows = comparisonRows.length ? `<section class="deal-comparison-panel" aria-labelledby="similar-deals-title"><div><span class="page-kicker"><span></span> Similar offers</span><h2 id="similar-deals-title">Compare related prices before checkout</h2><p>${comparisonExplanation}</p></div><div class="deal-comparison-list">${comparisonRows.map((candidate) => `<a href="${dealPath(candidate)}"><span><strong>${esc(candidate.title)}</strong><small>${esc(conditionFrom(candidate))} · ${esc(merchantName(candidate))}</small></span><b>${esc(candidate.currentPrice || "See terms")}</b></a>`).join("")}</div></section>` : "";',
+  ].join("\n");
   authority = `${authority.slice(0, rowsStart)}${rowsReplacement}${authority.slice(rowsEnd)}`;
   await writeFile(authorityPath, authority);
   changed = true;
