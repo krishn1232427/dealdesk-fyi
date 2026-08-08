@@ -1,0 +1,57 @@
+name: Build DealDesk crawl architecture
+
+on:
+  push:
+    branches:
+      - agent/indexing-crawl-architecture
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-validate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/indexing-crawl-architecture
+          fetch-depth: 0
+
+      - name: Configure Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install indexing scripts
+        run: node scripts/install-indexing-architecture.mjs
+
+      - name: Check scripts
+        run: |
+          node --check scripts/build-indexing-hubs.mjs
+          node --check scripts/validate-indexing.mjs
+
+      - name: Build base site
+        run: node scripts/build-seo.mjs
+
+      - name: Validate affiliate and outbound rules
+        run: node scripts/validate-deals.mjs
+
+      - name: Build crawl architecture
+        run: node scripts/build-indexing-hubs.mjs
+
+      - name: Validate crawl architecture
+        run: node scripts/validate-indexing.mjs
+
+      - name: Commit generated release
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "Build crawlable DealDesk catalog architecture"
+            git push origin HEAD:agent/indexing-crawl-architecture
+          fi

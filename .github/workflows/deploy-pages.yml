@@ -5,6 +5,8 @@ on:
     branches:
       - master
   workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * *'
 
 permissions:
   contents: write
@@ -30,11 +32,22 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Check indexing scripts
+        run: |
+          node --check scripts/build-indexing-hubs.mjs
+          node --check scripts/validate-indexing.mjs
+
       - name: Rebuild current DealDesk release
         run: node scripts/build-seo.mjs
 
-      - name: Validate deal, outbound, and indexing rules
+      - name: Validate deal and outbound rules
         run: node scripts/validate-deals.mjs
+
+      - name: Build static crawl architecture
+        run: node scripts/build-indexing-hubs.mjs
+
+      - name: Validate indexing architecture
+        run: node scripts/validate-indexing.mjs
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -78,5 +91,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add deploy-status.json
-          git commit -m "Record DealDesk Pages deployment result"
+          git commit -m "Record DealDesk Pages deployment result" || true
           git push origin HEAD:deployment-status
