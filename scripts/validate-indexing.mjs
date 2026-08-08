@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const site = "https://dealdesk.fyi";
-const buildID = "2026-08-08-crawl-v2";
+const buildID = "2026-08-08-crawl-v3";
 const archivePageSize = 32;
 const categoryPageSize = 32;
 const priorityDealCount = 100;
@@ -88,6 +88,18 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
 }
 if (archiveLinkedIDs.size !== deals.length) errors.push(`archive: linked ${archiveLinkedIDs.size} of ${deals.length} deals`);
 if (Number(indexingReport.archivePages) !== archivePages.length) errors.push("data/indexing-report.json: archive-page count mismatch");
+const expectedArchivePageNumbers = Array.from({ length: Math.max(0, archivePages.length - 1) }, (_, index) => String(index + 2));
+let actualArchivePageNumbers = [];
+try {
+  actualArchivePageNumbers = (await readdir(resolve(root, "deals", "page"), { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory() && /^\d+$/.test(entry.name))
+    .map((entry) => entry.name)
+    .sort((a, b) => Number(a) - Number(b));
+} catch {}
+if (JSON.stringify(actualArchivePageNumbers) !== JSON.stringify(expectedArchivePageNumbers)) {
+  errors.push(`archive: generated page directories ${actualArchivePageNumbers.join(",")} do not match expected ${expectedArchivePageNumbers.join(",")}`);
+}
+
 
 let categoriesIndex = "";
 try {
@@ -152,6 +164,9 @@ for (let index = 0; index < deals.length; index += 1) {
   if (index < deals.length - 1 && !html.includes(`href="${dealPath(deals[index + 1])}"`)) errors.push(`${label}: missing next-deal link`);
   if (!html.includes('rel="sponsored nofollow noopener"')) errors.push(`${label}: outbound link qualification is missing`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${label}: breadcrumb structured data is missing`);
+  if (!html.includes(`"item":"${site}/deals/"`) || !html.includes(`"item":"${site}/category/${category.key}/"`)) {
+    errors.push(`${label}: breadcrumb structured data must include the static archive and category hub`);
+  }
 }
 
 const homeHTML = await readFile(resolve(root, "index.html"), "utf8");

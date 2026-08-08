@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const site = "https://dealdesk.fyi";
-const buildID = "2026-08-08-crawl-v2";
+const buildID = "2026-08-08-crawl-v3";
 const archivePageSize = 32;
 const categoryPageSize = 32;
 const sitemapDealChunkSize = 200;
@@ -82,7 +82,8 @@ const contextFor = (deal) => {
   const sentences = [];
   const current = moneyNumber(deal.currentPrice);
   const original = moneyNumber(deal.originalPrice);
-  const discount = original > current && current >= 0 ? Math.round((1 - current / original) * 100) : 0;
+  const badgeDiscount = String(deal.badgeText || "").match(/(\d+)%\s*off/i);
+  const discount = badgeDiscount ? Number(badgeDiscount[1]) : original > current && current >= 0 ? Math.round((1 - current / original) * 100) : 0;
   const difference = original > current && current >= 0 ? original - current : 0;
 
   const referenceName = deal.referenceStyle === "renewal"
@@ -153,6 +154,8 @@ const footer = `<footer class="footer"><div class="shell footer-inner"><a class=
 
 const archivePages = chunk(deals, archivePageSize);
 const archiveDirectory = resolve(root, "deals");
+await rm(resolve(archiveDirectory, "page"), { recursive: true, force: true });
+await rm(resolve(archiveDirectory, "index.html"), { force: true });
 for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
   const page = pageIndex + 1;
   const pageDeals = archivePages[pageIndex];
@@ -354,6 +357,19 @@ for (let index = 0; index < deals.length; index += 1) {
 
   const breadcrumb = `<nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><a href="/deals/">All deals</a><span aria-hidden="true">›</span><a href="/category/${category.key}/">${esc(category.label)}</a><span aria-hidden="true">›</span><span>${esc(deal.title)}</span></nav>`;
   html = html.replace(/<nav class="deal-breadcrumb"[^>]*>.*?<\/nav>/s, breadcrumb);
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "DealDesk", item: `${site}/` },
+      { "@type": "ListItem", position: 2, name: "All deals", item: `${site}/deals/` },
+      { "@type": "ListItem", position: 3, name: category.label, item: `${site}/category/${category.key}/` },
+      { "@type": "ListItem", position: 4, name: deal.title, item: absolute(dealPath(deal)) },
+    ],
+  };
+  const breadcrumbScript = `  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema).replaceAll("<", "\\u003c")}</script>`;
+  html = html.replace(/\s*<script type="application\/ld\+json">\{"@context":"https:\/\/schema\.org","@type":"BreadcrumbList"[\s\S]*?<\/script>/, `\n${breadcrumbScript}`);
+
 
   const facts = [
     ["Merchant", deal.merchant || "Merchant"],

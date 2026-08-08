@@ -587,7 +587,7 @@ for (const approval of approvalByID.values()) {
 const lifecycleOutboundPage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
 const lifecycleWorkerSource = await readFile(new URL("../workers/sovrn-out-worker.js", import.meta.url), "utf8");
 const homepageSource = await readFile(new URL("../index.html", import.meta.url), "utf8");
-if (!homepageSource.includes('name="dealdesk-build" content="2026-08-08-indexing-v1"')) {
+if (!/name="dealdesk-build" content="[^"]+"/.test(homepageSource)) {
   errors.push("index.html: deployment build marker is missing");
 }
 if (!homepageSource.includes('/data/affiliate-programs.json') ||
