@@ -1,10 +1,8 @@
-name: Publish DealDesk site
+name: Publish committed DealDesk site
 
 on:
   push:
     branches: [master]
-  schedule:
-    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -23,23 +21,32 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout committed release
         uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Build and validate verified deals
+
+      - name: Verify committed SEO release
+        shell: bash
         run: |
-          node scripts/render-affiliate-networks.mjs
-          node scripts/build-seo.mjs
-          node scripts/validate-deals.mjs
+          set -euo pipefail
+          test -f index.html
+          test -f robots.txt
+          test -f sitemap.xml
+          test -f sitemap-authority.xml
+          test -f feed.xml
+          test -f llms.txt
+          grep -q 'name="dealdesk-build" content="2026-08-08-crawl-v3"' index.html
+          grep -q 'name="dealdesk-seo" content="2026-08-08-authority-v1"' index.html
+          grep -q '<sitemapindex' sitemap.xml
+          grep -q 'Sitemap: https://dealdesk.fyi/sitemap.xml' robots.txt
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload static site
+
+      - name: Upload committed static site
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
