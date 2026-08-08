@@ -1,0 +1,160 @@
+name: Deploy DealDesk to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * *'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out master
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install final indexing sources when present
+        id: indexing-install
+        shell: bash
+        run: |
+          if [[ -f scripts/install-final-indexing-v3.mjs ]]; then
+            node scripts/install-final-indexing-v3.mjs
+            echo "installed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "installed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install final SEO authority sources when present
+        id: seo-install
+        shell: bash
+        run: |
+          if [[ -f scripts/install-seo-authority.mjs ]]; then
+            node scripts/install-seo-authority.mjs
+            echo "installed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "installed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check build scripts
+        run: |
+          node --check scripts/build-indexing-hubs.mjs
+          node --check scripts/validate-indexing.mjs
+          node --check scripts/build-seo-authority.mjs
+          node --check scripts/validate-seo-authority.mjs
+          node --check scripts/build-search-discovery.mjs
+          node --check scripts/validate-search-discovery.mjs
+          node --check scripts/submit-indexnow.mjs
+
+      - name: Rebuild current DealDesk release
+        run: node scripts/build-seo.mjs
+
+      - name: Validate deal and outbound rules
+        run: node scripts/validate-deals.mjs
+
+      - name: Build static crawl architecture
+        run: node scripts/build-indexing-hubs.mjs
+
+      - name: Validate indexing architecture
+        run: node scripts/validate-indexing.mjs
+
+      - name: Build SEO authority engine
+        run: node scripts/build-seo-authority.mjs
+
+      - name: Validate SEO authority engine
+        run: node scripts/validate-seo-authority.mjs
+
+      - name: Build multi-engine discovery assets
+        run: node scripts/build-search-discovery.mjs
+
+      - name: Validate multi-engine discovery assets
+        run: node scripts/validate-search-discovery.mjs
+
+      - name: Commit finalized authority release to master
+        id: release
+        shell: bash
+        run: |
+          if [[ "${{ steps.indexing-install.outputs.installed }}" == "true" || "${{ steps.seo-install.outputs.installed }}" == "true" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            if ! git diff --cached --quiet; then
+              git commit -m "Finalize DealDesk SEO authority engine"
+              git push origin HEAD:master
+            fi
+          fi
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Notify Bing and IndexNow participants
+        id: indexnow
+        continue-on-error: true
+        run: node scripts/submit-indexnow.mjs
+
+      - name: Record deployment result
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          DEPLOYED_COMMIT: ${{ steps.release.outputs.commit }}
+          INDEXNOW_STATUS: ${{ steps.indexnow.outcome }}
+        run: |
+          git fetch origin deployment-status
+          git worktree add /tmp/dealdesk-deployment-status origin/deployment-status
+          cd /tmp/dealdesk-deployment-status
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+
+          payload = {
+              "status": os.environ.get("JOB_STATUS", "unknown"),
+              "deployedCommit": os.environ.get("DEPLOYED_COMMIT") or os.environ.get("GITHUB_SHA", ""),
+              "pageUrl": os.environ.get("PAGE_URL", ""),
+              "indexNowStatus": os.environ.get("INDEXNOW_STATUS", "unknown"),
+              "runId": os.environ.get("GITHUB_RUN_ID", ""),
+              "runAttempt": os.environ.get("GITHUB_RUN_ATTEMPT", ""),
+              "workflow": os.environ.get("GITHUB_WORKFLOW", ""),
+              "recordedAt": datetime.now(timezone.utc).isoformat(),
+          }
+          with open("deploy-status.json", "w", encoding="utf-8") as handle:
+              json.dump(payload, handle, indent=2)
+              handle.write("\n")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deploy-status.json
+          git commit -m "Record DealDesk Pages deployment result" || true
+          git push origin HEAD:deployment-status
