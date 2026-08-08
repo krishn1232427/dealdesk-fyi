@@ -2,9 +2,9 @@
   "status": "success",
   "deployedCommit": "942b68f57f4045fb5f0640f5af44287099857a00",
   "pageUrl": "https://dealdesk.fyi/",
-  "indexNowStatus": "failure",
-  "runId": "31248517440",
+  "indexNowStatus": "success",
+  "runId": "31251628956",
   "runAttempt": "1",
   "workflow": "Deploy DealDesk to GitHub Pages",
-  "recordedAt": "2026-08-08T08:29:59.248578+00:00"
+  "recordedAt": "2026-08-08T09:55:26.121352+00:00"
 }
