@@ -104,8 +104,10 @@ const metricsFor = (record) => {
   const current = record.observations.at(-1) || null;
   const firstNumeric = numeric[0] || null;
   const currentNumeric = [...numeric].reverse()[0] || null;
-  const low = amounts.length ? Math.min(...amounts) : null;
-  const high = amounts.length ? Math.max(...amounts) : null;
+  const lowObservation = numeric.length ? numeric.reduce((best, item) => item.currentPriceAmount < best.currentPriceAmount ? item : best) : null;
+  const highObservation = numeric.length ? numeric.reduce((best, item) => item.currentPriceAmount > best.currentPriceAmount ? item : best) : null;
+  const low = lowObservation?.currentPriceAmount ?? null;
+  const high = highObservation?.currentPriceAmount ?? null;
   const changeAmount = firstNumeric && currentNumeric ? currentNumeric.currentPriceAmount - firstNumeric.currentPriceAmount : null;
   const changePercent = firstNumeric && currentNumeric && firstNumeric.currentPriceAmount > 0
     ? Math.round((changeAmount / firstNumeric.currentPriceAmount) * 100)
@@ -114,7 +116,7 @@ const metricsFor = (record) => {
   for (let index = 1; index < numeric.length; index += 1) {
     if (numeric[index].currentPriceAmount !== numeric[index - 1].currentPriceAmount) priceChanges += 1;
   }
-  return { current, numeric, low, high, changeAmount, changePercent, priceChanges };
+  return { current, numeric, low, high, lowObservation, highObservation, changeAmount, changePercent, priceChanges };
 };
 
 const historySection = (record) => {
@@ -134,7 +136,7 @@ const historySection = (record) => {
   return `<!-- PRICE-HISTORY:START -->
   <section class="deal-price-history" aria-labelledby="deal-price-history-title">
     <div class="price-history-heading"><div><span class="page-kicker"><span></span> First-party tracking</span><h2 id="deal-price-history-title">DealDesk price history</h2><p>${esc(intro)}</p></div><a href="/price-history/">Explore the dataset</a></div>
-    <dl class="price-history-stats"><div><dt>Current</dt><dd>${esc(currentLabel)}</dd></div><div><dt>Lowest observed</dt><dd>${Number.isFinite(metrics.low) ? esc(money(metrics.low)) : "Not available"}</dd></div><div><dt>Highest observed</dt><dd>${Number.isFinite(metrics.high) ? esc(money(metrics.high)) : "Not available"}</dd></div><div><dt>Trend</dt><dd>${esc(trend)}</dd></div><div><dt>Observations</dt><dd>${record.observations.length}</dd></div><div><dt>Price changes</dt><dd>${metrics.priceChanges}</dd></div></dl>
+    <dl class="price-history-stats"><div><dt>Current</dt><dd>${esc(currentLabel)}</dd></div><div><dt>Lowest observed</dt><dd>${metrics.lowObservation ? esc(metrics.lowObservation.currentPrice || money(metrics.low)) : "Not available"}</dd></div><div><dt>Highest observed</dt><dd>${metrics.highObservation ? esc(metrics.highObservation.currentPrice || money(metrics.high)) : "Not available"}</dd></div><div><dt>Trend</dt><dd>${esc(trend)}</dd></div><div><dt>Observations</dt><dd>${record.observations.length}</dd></div><div><dt>Price changes</dt><dd>${metrics.priceChanges}</dd></div></dl>
     <ol class="price-history-timeline">${timeline}</ol>
     <p class="price-history-note">This history follows the exact listing represented by this DealDesk page. It is not a claim about every seller, variant, condition, or market price. Confirm the final price and terms at merchant checkout.</p>
   </section>

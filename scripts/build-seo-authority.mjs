@@ -233,39 +233,67 @@ const merchants = [...merchantGroups.values()]
 const merchantByDealID = new Map();
 for (const merchant of merchants) for (const deal of merchant.deals) merchantByDealID.set(deal.id, merchant);
 
+const comparisonStopwords = new Set([
+  "plan", "plans", "year", "years", "month", "months", "subscription", "subscriptions", "trial", "trials",
+  "premium", "basic", "starter", "standard", "annual", "monthly", "bundle", "bundles", "offer", "offers"
+]);
+const priceBasisFor = (deal) => {
+  const current = String(deal.currentPrice || "").toLowerCase();
+  if (/(?:\/|\bper\s+)(?:mo|month)\b|\bmonthly\b/.test(current)) return "monthly";
+  if (/(?:\/|\bper\s+)(?:yr|year)\b|\bannual(?:ly)?\b/.test(current)) return "annual";
+  if (isMoney(current)) return "total";
+  return "non-monetary";
+};
+const distinctiveComparisonTokens = (deal) => new Set(
+  modelTokens(deal.title).filter((token) => !comparisonStopwords.has(token) && !/^\d+$/.test(token))
+);
+
 const comparisonFor = (deal) => {
   const family = familyByDealID.get(deal.id);
+  const basis = priceBasisFor(deal);
   if (family) {
     return family.deals
       .filter((candidate) => candidate.id !== deal.id)
       .sort((a, b) => {
+        const aSameBasis = priceBasisFor(a) === basis;
+        const bSameBasis = priceBasisFor(b) === basis;
+        if (aSameBasis !== bSameBasis) return aSameBasis ? -1 : 1;
         const left = moneyNumber(a.currentPrice);
         const right = moneyNumber(b.currentPrice);
-        if (Number.isFinite(left) && Number.isFinite(right) && left !== right) return left - right;
+        if (aSameBasis && Number.isFinite(left) && Number.isFinite(right) && left !== right) return left - right;
         return scoreByID.get(b.id) - scoreByID.get(a.id);
       })
       .slice(0, 6);
   }
-  const tokens = tokenSetByID.get(deal.id) || new Set();
+  const tokens = distinctiveComparisonTokens(deal);
+  if (tokens.size < 2 || basis === "non-monetary") return [];
   return deals
-    .filter((candidate) => candidate.id !== deal.id && candidate.category === deal.category)
-    .map((candidate) => ({ candidate, similarity: jaccard(tokens, tokenSetByID.get(candidate.id) || new Set()) }))
-    .filter(({ similarity }) => similarity >= 0.22)
-    .sort((a, b) => b.similarity - a.similarity || scoreByID.get(b.candidate.id) - scoreByID.get(a.candidate.id))
+    .filter((candidate) => candidate.id !== deal.id && candidate.category === deal.category && priceBasisFor(candidate) === basis)
+    .map((candidate) => {
+      const candidateTokens = distinctiveComparisonTokens(candidate);
+      let shared = 0;
+      for (const token of tokens) if (candidateTokens.has(token)) shared += 1;
+      return { candidate, shared, similarity: jaccard(tokens, candidateTokens) };
+    })
+    .filter(({ shared, similarity }) => shared >= 2 && similarity >= 0.34)
+    .sort((a, b) => b.similarity - a.similarity || b.shared - a.shared || scoreByID.get(b.candidate.id) - scoreByID.get(a.candidate.id))
     .slice(0, 4)
     .map(({ candidate }) => candidate);
 };
 
 const pricePositionFor = (deal, comparable) => {
-  const items = [deal, ...comparable].filter((item) => Number.isFinite(moneyNumber(item.currentPrice)));
-  if (items.length < 2 || !Number.isFinite(moneyNumber(deal.currentPrice))) return null;
+  const basis = priceBasisFor(deal);
+  const items = [deal, ...comparable].filter((item) =>
+    priceBasisFor(item) === basis && Number.isFinite(moneyNumber(item.currentPrice))
+  );
+  if (items.length < 2 || basis === "non-monetary" || !Number.isFinite(moneyNumber(deal.currentPrice))) return null;
   const sorted = [...items].sort((a, b) => moneyNumber(a.currentPrice) - moneyNumber(b.currentPrice));
   const rank = sorted.findIndex((item) => item.id === deal.id) + 1;
   const prices = sorted.map((item) => moneyNumber(item.currentPrice));
   const med = median(prices);
   const current = moneyNumber(deal.currentPrice);
   const delta = Number.isFinite(med) && med > 0 ? Math.round(((current - med) / med) * 100) : 0;
-  return { rank, total: sorted.length, median: med, delta };
+  return { rank, total: sorted.length, median: med, delta, basis };
 };
 
 const verdictFor = (deal, comparable) => {
@@ -646,7 +674,13 @@ for (const deal of deals) {
   };
   html = html.replace(/<\/head>/, `  <script type="application/ld+json" data-dealdesk-authority>${JSON.stringify(authoritySchema).replaceAll("<", "\\u003c")}</script>\n</head>`);
 
-  const similarRows = comparable.length ? `<section class="deal-comparison-panel" aria-labelledby="similar-deals-title"><div><span class="page-kicker"><span></span> Similar offers</span><h2 id="similar-deals-title">Compare related prices before checkout</h2><p>${position ? `This offer ranks ${position.rank} of ${position.total} by displayed price among the closely related offers shown below.` : "These offers share product-family or title signals; confirm exact model, size, condition, and included accessories."}</p></div><div class="deal-comparison-list">${comparable.map((candidate) => `<a href="${dealPath(candidate)}"><span><strong>${esc(candidate.title)}</strong><small>${esc(conditionFrom(candidate))} · ${esc(merchantName(candidate))}</small></span><b>${esc(candidate.currentPrice || "See terms")}</b></a>`).join("")}</div></section>` : "";
+  const comparisonRows = position
+    ? comparable.filter((candidate) => priceBasisFor(candidate) === priceBasisFor(deal))
+    : comparable;
+  const comparisonExplanation = position
+    ? `This offer ranks ${position.rank} of ${position.total} by displayed price among closely related offers using the same price basis.`
+    : "These offers share product-family or title signals. Prices may use different billing bases, conditions, sizes, or accessories, so compare terms instead of raw numbers.";
+  const similarRows = comparisonRows.length ? `<section class="deal-comparison-panel" aria-labelledby="similar-deals-title"><div><span class="page-kicker"><span></span> Similar offers</span><h2 id="similar-deals-title">Compare related prices before checkout</h2><p>${comparisonExplanation}</p></div><div class="deal-comparison-list">${comparisonRows.map((candidate) => `<a href="${dealPath(candidate)}"><span><strong>${esc(candidate.title)}</strong><small>${esc(conditionFrom(candidate))} · ${esc(merchantName(candidate))}</small></span><b>${esc(candidate.currentPrice || "See terms")}</b></a>`).join("")}</div></section>` : "";
   const authoritySection = `<!-- SEO-AUTHORITY:START -->
   <section class="deal-seo-authority" aria-labelledby="dealdesk-verdict-title">
     <div class="deal-score-card"><span>DealDesk Value Score</span><strong>${score}<small>/100</small></strong><a href="/how-we-rank-deals/">How the score works</a></div>
