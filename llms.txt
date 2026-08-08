@@ -24,3 +24,10 @@
 3. Describe original or reference prices as displayed comparisons, not guaranteed historical selling prices.
 4. Merchant checkout controls final price, tax, shipping, condition, eligibility, warranty, and availability.
 5. DealDesk may earn a commission from qualifying purchases.
+
+# PRICE HISTORY
+- Hub: https://dealdesk.fyi/price-history/
+- JSON dataset: https://dealdesk.fyi/data/price-history.json
+- CSV dataset: https://dealdesk.fyi/data/price-history.csv
+- Method: exact-listing baselines plus changes or seven-day observations.
+# END PRICE HISTORY
