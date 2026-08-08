@@ -73,11 +73,11 @@ jobs:
       - name: Build static crawl architecture
         run: node scripts/build-indexing-hubs.mjs
 
-      - name: Build SEO authority engine
-        run: node scripts/build-seo-authority.mjs
-
       - name: Validate indexing architecture
         run: node scripts/validate-indexing.mjs
+
+      - name: Build SEO authority engine
+        run: node scripts/build-seo-authority.mjs
 
       - name: Validate SEO authority engine
         run: node scripts/validate-seo-authority.mjs
