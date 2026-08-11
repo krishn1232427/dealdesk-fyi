@@ -4,6 +4,9 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const site = "https://dealdesk.fyi";
+const configuredBuildAt = process.env.DEALDESK_BUILD_AT;
+const buildAt = configuredBuildAt ? new Date(configuredBuildAt) : new Date();
+if (Number.isNaN(buildAt.getTime())) throw new Error("DEALDESK_BUILD_AT must be a valid date-time when provided");
 const [catalog, searchIndexPayload] = await Promise.all([
   readFile(resolve(root, "data", "latest-deals.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data", "search-index.json"), "utf8").then(JSON.parse),
@@ -11,7 +14,7 @@ const [catalog, searchIndexPayload] = await Promise.all([
 const deals = Array.isArray(catalog.deals) ? catalog.deals : [];
 const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
 const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
-if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+if (searchIndexPayload.version !== 2 || searchIndexPayload.policy !== "quality-diversity-v2" ||
     searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
   throw new Error("data/search-index.json must contain exactly one record for every public deal");
 }
@@ -53,7 +56,7 @@ records.sort((left, right) => left.pageURL.localeCompare(right.pageURL));
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${records.map((record) => `  <url><loc>${xml(record.pageURL)}</loc>${record.lastmod ? `<lastmod>${record.lastmod}</lastmod>` : ""}<image:image><image:loc>${xml(record.imageURL)}</image:loc></image:image></url>`).join("\n")}\n</urlset>\n`;
 await writeFile(resolve(root, "sitemap-images.xml"), sitemap);
 
-const latestDate = records.map((record) => record.lastmod).filter(Boolean).sort().at(-1) || new Date().toISOString().slice(0, 10);
+const latestDate = records.map((record) => record.lastmod).filter(Boolean).sort().at(-1) || buildAt.toISOString().slice(0, 10);
 const indexPath = resolve(root, "sitemap.xml");
 let index = await readFile(indexPath, "utf8");
 index = index.replace(/\s*<sitemap><loc>https:\/\/dealdesk\.fyi\/sitemap-images\.xml<\/loc>[\s\S]*?<\/sitemap>/g, "");

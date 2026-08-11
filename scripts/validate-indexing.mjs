@@ -1,6 +1,11 @@
 import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  evaluateSearchIndexPolicy,
+  SEARCH_INDEX_POLICY_NAME,
+  SEARCH_INDEX_POLICY_VERSION
+} from "./lib/search-index-policy.mjs";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const site = "https://dealdesk.fyi";
@@ -13,7 +18,13 @@ const errors = [];
 const latestCatalog = JSON.parse(await readFile(resolve(root, "data/latest-deals.json"), "utf8"));
 const searchIndexPayload = JSON.parse(await readFile(resolve(root, "data/search-index.json"), "utf8"));
 const indexingReport = JSON.parse(await readFile(resolve(root, "data/indexing-report.json"), "utf8"));
+const [bestFeed, streamingFeed] = await Promise.all([
+  readFile(resolve(root, "data/best-deals.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data/streaming-deals.json"), "utf8").then(JSON.parse)
+]);
 const deals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
+const sourceByID = new Map([...bestFeed.deals, ...streamingFeed.deals].map((deal) => [deal.id, deal]));
+const policyDeals = deals.map((deal) => sourceByID.get(deal.id)).filter(Boolean);
 const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
 const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
 const searchIndexEvaluatedAt = new Date(searchIndexPayload.evaluatedAt || "").getTime();
@@ -32,27 +43,40 @@ const chunk = (items, size) => Array.from({ length: Math.ceil(items.length / siz
   items.slice(index * size, (index + 1) * size)
 );
 const count = (text, pattern) => (text.match(pattern) || []).length;
+const assertSamePaths = (actualValue, expectedValue, label) => {
+  const actual = Array.isArray(actualValue) ? actualValue : [];
+  const expected = [...expectedValue];
+  const actualSet = new Set(actual);
+  const expectedSet = new Set(expected);
+  if (!Array.isArray(actualValue)) errors.push(`${label}: path list is missing`);
+  if (actualSet.size !== actual.length) errors.push(`${label}: path list contains duplicates`);
+  const missing = expected.filter((path) => !actualSet.has(path));
+  const unexpected = actual.filter((path) => !expectedSet.has(path));
+  if (missing.length || unexpected.length) {
+    errors.push(`${label}: path list mismatch${missing.length ? `; missing ${missing.join(", ")}` : ""}${unexpected.length ? `; unexpected ${unexpected.join(", ")}` : ""}`);
+  }
+};
 const hasUnqualifiedClientRedirect = (html) =>
   html.includes('window.location.replace("/latest-deals/")') && !html.includes("Date.parse(");
 
 if (!deals.length) errors.push("data/latest-deals.json: public catalog is empty");
 if (Number(latestCatalog.total) !== deals.length) errors.push("data/latest-deals.json: total does not match deals length");
-if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+if (searchIndexPayload.version !== SEARCH_INDEX_POLICY_VERSION || searchIndexPayload.policy !== SEARCH_INDEX_POLICY_NAME ||
     !Number.isFinite(searchIndexEvaluatedAt)) {
   errors.push("data/search-index.json: unexpected policy version");
 }
+if (policyDeals.length !== deals.length) errors.push("Source feeds are missing public deals required by the search-index policy");
 if (searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
   errors.push("data/search-index.json: must contain exactly one record for every public deal");
 }
+const expectedSearchIndexStates = Number.isFinite(searchIndexEvaluatedAt)
+  ? await evaluateSearchIndexPolicy(policyDeals, searchIndexEvaluatedAt)
+  : new Map();
 for (const deal of deals) {
   const entry = searchIndexByID.get(deal.id);
-  const recheckAt = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : NaN;
-  const expectedIndexable = Number.isFinite(recheckAt) && searchIndexEvaluatedAt <= recheckAt;
-  const expectedReason = !Number.isFinite(recheckAt)
-    ? "recheck-missing-or-invalid"
-    : expectedIndexable ? "verification-current" : "verification-overdue";
-  if (!entry || entry.url !== dealPath(deal) || entry.indexable !== expectedIndexable ||
-      entry.reason !== expectedReason || entry.recheckAfter !== (deal.recheckAfter || null)) {
+  const expected = expectedSearchIndexStates.get(deal.id);
+  if (!entry || !expected || entry.url !== dealPath(deal) || entry.indexable !== expected.indexable ||
+      entry.reason !== expected.reason || entry.recheckAfter !== (deal.recheckAfter || null)) {
     errors.push(`data/search-index.json:${deal.id}: missing or inconsistent search-index state`);
   }
 }
@@ -151,16 +175,22 @@ try {
 }
 const categoryLinkedIDs = new Set();
 let categoryPageCount = 0;
+const expectedCategoryPaths = [];
+const expectedCategoryBrowsePaths = [];
 for (const category of categories) {
   if (categoriesIndex && !categoriesIndex.includes(`href="/category/${category.key}/"`)) {
     errors.push(`categories:/categories/: missing ${category.label} link`);
   }
   const pages = chunk(category.deals, categoryPageSize);
+  const selectedChildCount = category.deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === true).length;
   const basePath = `/category/${category.key}/`;
   for (let pageIndex = 0; pageIndex < pages.length; pageIndex += 1) {
     categoryPageCount += 1;
     const page = pageIndex + 1;
     const path = pagePath(basePath, page);
+    const pageIndexable = page === 1 && selectedChildCount >= 2;
+    expectedCategoryBrowsePaths.push(path);
+    if (pageIndexable) expectedCategoryPaths.push(path);
     const label = `category:${path}`;
     let html = "";
     try {
@@ -169,7 +199,7 @@ for (const category of categories) {
       errors.push(`${label}: page is missing`);
       continue;
     }
-    assertPage(html, label, path, { indexable: page === 1 });
+    assertPage(html, label, path, { indexable: pageIndexable });
     if (!html.includes('href="/categories/"')) errors.push(`${label}: missing categories-index link`);
     if (!html.includes('href="/deals/"')) errors.push(`${label}: missing all-deals link`);
     if (page > 1 && !html.includes(`href="${pagePath(basePath, page - 1)}"`)) errors.push(`${label}: missing previous-page link`);
@@ -183,9 +213,11 @@ for (const category of categories) {
 if (categoryLinkedIDs.size !== deals.length) errors.push(`category hubs: linked ${categoryLinkedIDs.size} of ${deals.length} deals`);
 if (Number(indexingReport.categories) !== categories.length) errors.push("data/indexing-report.json: category count mismatch");
 if (Number(indexingReport.categoryPages) !== categoryPageCount) errors.push("data/indexing-report.json: category-page count mismatch");
-if (Number(indexingReport.indexableCategoryPages) !== categories.length) {
+if (Number(indexingReport.indexableCategoryPages) !== expectedCategoryPaths.length) {
   errors.push("data/indexing-report.json: indexable category-page count mismatch");
 }
+assertSamePaths(indexingReport.categoryBrowsePaths, expectedCategoryBrowsePaths, "data/indexing-report.json: category browse paths");
+assertSamePaths(indexingReport.categoryPaths, expectedCategoryPaths, "data/indexing-report.json: indexable category paths");
 
 for (let index = 0; index < deals.length; index += 1) {
   const deal = deals[index];
@@ -274,7 +306,7 @@ const expectedPagePaths = new Set([
   "/privacy/",
   "/support/",
   ...(archivePages.length ? ["/deals/"] : []),
-  ...categories.map((category) => `/category/${category.key}/`),
+  ...expectedCategoryPaths,
 ]);
 for (const path of expectedPagePaths) {
   if (!sitemapURLs.has(absolute(path))) errors.push(`sitemaps: missing page URL ${path}`);
@@ -288,11 +320,10 @@ for (const deal of browseOnlyDeals) {
 for (let page = 2; page <= archivePages.length; page += 1) {
   if (sitemapURLs.has(absolute(pagePath("/deals/", page)))) errors.push(`sitemaps: noindex archive page must be excluded ${page}`);
 }
-for (const category of categories) {
-  const pageCount = chunk(category.deals, categoryPageSize).length;
-  for (let page = 2; page <= pageCount; page += 1) {
-    const path = pagePath(`/category/${category.key}/`, page);
-    if (sitemapURLs.has(absolute(path))) errors.push(`sitemaps: noindex category page must be excluded ${path}`);
+const indexableCategoryPaths = new Set(expectedCategoryPaths);
+for (const path of expectedCategoryBrowsePaths) {
+  if (!indexableCategoryPaths.has(path) && sitemapURLs.has(absolute(path))) {
+    errors.push(`sitemaps: noindex category page must be excluded ${path}`);
   }
 }
 const expectedTotalSitemapURLs = expectedPagePaths.size + indexableDeals.length;

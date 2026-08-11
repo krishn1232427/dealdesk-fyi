@@ -5,6 +5,12 @@ on:
     branches:
       - master
   workflow_dispatch:
+    inputs:
+      refresh_ebay:
+        description: Capture and refresh existing eBay items before the build
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: '17 9 * * *'
 
@@ -36,6 +42,10 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Set one release timestamp
+        shell: bash
+        run: echo "DEALDESK_BUILD_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
+
       - name: Install final indexing sources when present
         shell: bash
         run: |
@@ -60,6 +70,7 @@ jobs:
       - name: Check build scripts
         run: |
           node --check scripts/build-seo.mjs
+          node --check scripts/lib/search-index-policy.mjs
           node --check scripts/validate-deals.mjs
           node --check scripts/build-indexing-hubs.mjs
           node --check scripts/validate-indexing.mjs
@@ -73,6 +84,23 @@ jobs:
           node --check scripts/validate-price-history.mjs
           node --check scripts/validate-content-integrity.mjs
           node --check scripts/submit-indexnow.mjs
+          node --check scripts/import-ebay-events.mjs
+          node --check scripts/import-ebay-products.mjs
+          node --check scripts/capture-ebay-promotion-products.mjs
+          node --check scripts/prune-stale-deals.mjs
+
+      - name: Refresh currently listed eBay products from live promotion grids
+        if: github.event_name == 'workflow_dispatch' && inputs.refresh_ebay
+        shell: bash
+        run: |
+          capture_file="data/ebay-products-$(date -u +%Y-%m-%dT%H%M%SZ).json"
+          if node scripts/capture-ebay-promotion-products.mjs data/ebay-events-2026-08-01.json "$capture_file" \
+            && node scripts/import-ebay-products.mjs "$capture_file" data/ebay-events-2026-08-01.json --existing-only; then
+            echo "Refreshed exact eBay items with immutable evidence: $capture_file"
+          else
+            rm -f "$capture_file"
+            echo "eBay refresh was skipped; the prior catalog and evidence remain unchanged."
+          fi
 
       - name: Rebuild current DealDesk release
         run: node scripts/build-seo.mjs

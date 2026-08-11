@@ -9,6 +9,12 @@ const archivePageSize = 32;
 const categoryPageSize = 32;
 const sitemapDealChunkSize = 200;
 const priorityDealCount = 100;
+const requestedBuildAt = process.env.DEALDESK_BUILD_AT;
+const buildClock = new Date(requestedBuildAt || Date.now());
+if (requestedBuildAt && Number.isNaN(buildClock.getTime())) {
+  throw new Error("DEALDESK_BUILD_AT must be a valid date-time");
+}
+const buildTimestamp = buildClock.toISOString();
 
 const [latestCatalog, searchIndexPayload, categoryGuidePayload, ...sourceFeeds] = await Promise.all([
   readFile(resolve(root, "data/latest-deals.json"), "utf8").then(JSON.parse),
@@ -22,7 +28,7 @@ const deals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
 if (!deals.length) throw new Error("data/latest-deals.json does not contain any public deals");
 const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
 const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
-if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+if (searchIndexPayload.version !== 2 || searchIndexPayload.policy !== "quality-diversity-v2" ||
     searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
   throw new Error("data/search-index.json must contain exactly one record for every public deal");
 }
@@ -36,9 +42,9 @@ const isSearchIndexable = (deal) => searchIndexByID.get(deal.id)?.indexable === 
 const indexableDeals = deals.filter(isSearchIndexable);
 
 const sourceByID = new Map(sourceFeeds.flatMap((feed) => feed.deals || []).map((deal) => [deal.id, deal]));
-const updatedAt = new Date(latestCatalog.updatedAt || Date.now());
+const updatedAt = new Date(latestCatalog.updatedAt || buildTimestamp);
 const buildLastmod = Number.isNaN(updatedAt.getTime())
-  ? new Date().toISOString().slice(0, 10)
+  ? buildTimestamp.slice(0, 10)
   : updatedAt.toISOString().slice(0, 10);
 
 const esc = (value) => String(value ?? "")
@@ -54,7 +60,7 @@ const slugify = (value) => String(value || "other").toLowerCase()
 const moneyNumber = (value) => Number(String(value || "").replace(/[^0-9.]/g, ""));
 const isMoney = (value) => /^\s*(?:US)?\$\s*\d/.test(String(value || ""));
 const isoDate = (value) => {
-  const date = new Date(value || Date.now());
+  const date = new Date(value || buildTimestamp);
   return Number.isNaN(date.getTime()) ? buildLastmod : date.toISOString().slice(0, 10);
 };
 const dealPath = (deal) => String(deal.url || `/deals/${slugify(deal.id)}/`);
@@ -298,6 +304,7 @@ await writeFile(resolve(categoriesRoot, "index.html"), categoryIndexHTML);
 const categoryPageRecords = [];
 for (const category of categories) {
   const pages = chunk(category.deals, categoryPageSize);
+  const indexableChildCount = category.deals.filter(isSearchIndexable).length;
   const basePath = `/category/${category.key}/`;
   const directory = resolve(categoryRoot, category.key);
   for (let pageIndex = 0; pageIndex < pages.length; pageIndex += 1) {
@@ -310,7 +317,7 @@ for (const category of categories) {
     const pageDescription = page === 1
       ? `Compare ${category.deals.length} ${guide.queryLabel} with displayed prices, material terms, and check dates.`
       : `Browse page ${page} of ${pages.length} for ${category.deals.length} ${guide.queryLabel}, with displayed prices and merchant details.`;
-    const pageIndexable = page === 1;
+    const pageIndexable = page === 1 && indexableChildCount >= 2;
     const pageLastmod = newestVerifiedDate(pageDeals);
     const schema = {
       "@context": "https://schema.org",
@@ -532,7 +539,7 @@ const linkedFromArchive = new Set(archivePages.flat().map((deal) => deal.id));
 const linkedFromCategory = new Set(categories.flatMap((category) => category.deals).map((deal) => deal.id));
 const report = {
   build: buildID,
-  generatedAt: new Date().toISOString(),
+  generatedAt: buildTimestamp,
   catalogUpdatedAt: latestCatalog.updatedAt,
   publicDeals: deals.length,
   indexableDeals: indexableDeals.length,
@@ -542,6 +549,8 @@ const report = {
   categories: categories.length,
   categoryPages: categoryPageRecords.length,
   indexableCategoryPages: categoryPageRecords.filter((record) => record.indexable).length,
+  categoryPaths: categoryPageRecords.filter((record) => record.indexable).map((record) => record.path),
+  categoryBrowsePaths: categoryPageRecords.map((record) => record.path),
   prioritySitemapDeals: Math.min(priorityDealCount, indexableDeals.length),
   sitemapFiles,
   orphanDeals: deals.filter((deal) => !linkedFromArchive.has(deal.id) || !linkedFromCategory.has(deal.id)).map((deal) => deal.id),

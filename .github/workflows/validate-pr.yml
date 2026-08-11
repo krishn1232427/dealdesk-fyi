@@ -24,9 +24,14 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Set one validation timestamp
+        shell: bash
+        run: echo "DEALDESK_BUILD_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
+
       - name: Check source scripts
         run: |
           node --check scripts/build-seo.mjs
+          node --check scripts/lib/search-index-policy.mjs
           node --check scripts/build-indexing-hubs.mjs
           node --check scripts/build-seo-authority.mjs
           node --check scripts/build-search-discovery.mjs
@@ -37,6 +42,10 @@ jobs:
           node --check scripts/validate-seo-authority.mjs
           node --check scripts/validate-search-discovery.mjs
           node --check scripts/validate-image-sitemap.mjs
+          node --check scripts/import-ebay-events.mjs
+          node --check scripts/import-ebay-products.mjs
+          node --check scripts/capture-ebay-promotion-products.mjs
+          node --check scripts/prune-stale-deals.mjs
 
       - name: Build complete release
         run: |
@@ -56,3 +65,16 @@ jobs:
           node scripts/validate-image-sitemap.mjs
           node scripts/validate-price-history.mjs
           node scripts/validate-content-integrity.mjs
+
+      - name: Verify deterministic regeneration
+        shell: bash
+        run: |
+          git diff --binary > /tmp/dealdesk-first-build.patch
+          node scripts/build-seo.mjs
+          node scripts/build-indexing-hubs.mjs
+          node scripts/build-seo-authority.mjs
+          node scripts/build-search-discovery.mjs
+          node scripts/build-image-sitemap.mjs
+          node scripts/build-price-history.mjs
+          git diff --binary > /tmp/dealdesk-second-build.patch
+          cmp /tmp/dealdesk-first-build.patch /tmp/dealdesk-second-build.patch

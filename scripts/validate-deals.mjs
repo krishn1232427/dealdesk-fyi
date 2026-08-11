@@ -1,14 +1,21 @@
 import { readFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
+import {
+  evaluateSearchIndexPolicy,
+  SEARCH_INDEX_POLICY_NAME,
+  SEARCH_INDEX_POLICY_VERSION
+} from "./lib/search-index-policy.mjs";
 
 const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
 const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-programs.json", import.meta.url), "utf8"));
 const magzterEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/magzter-cj-20260803.json", import.meta.url), "utf8"));
-const protonEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/proton-cj-20260804.json", import.meta.url), "utf8"));
+const protonEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/proton-cj-20260811.json", import.meta.url), "utf8"));
 const curiosityStreamEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/curiositystream-cj-20260811.json", import.meta.url), "utf8"));
 const malwarebytesEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/malwarebytes-cj-20260811.json", import.meta.url), "utf8"));
 const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
 const hotelsBrokenEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/hotels-expedia-broken-20260804.json", import.meta.url), "utf8"));
+const nonEbayMerchantRefreshEvidenceRecord = "data/affiliate-evidence/non-ebay-merchant-refresh-20260811.json";
+const nonEbayMerchantRefreshEvidence = JSON.parse(await readFile(new URL(`../${nonEbayMerchantRefreshEvidenceRecord}`, import.meta.url), "utf8"));
 const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
 const sensiboExclusionSnapshotHash = createHash("sha256").update(sensiboExclusionSnapshot).digest("hex");
 const sensiboExclusionSnapshotSKUs = sensiboExclusionSnapshot.trim().split(/\r?\n/)
@@ -36,6 +43,19 @@ const dueForRecheckDeals = [];
 const now = Date.now();
 const validDate = (value) => value && Number.isFinite(new Date(value).getTime());
 const usdNumber = (value) => Number(String(value || "").replace(/[$,]/g, ""));
+const capturedEbayCardFields = (record) => {
+  const lines = String(record?.rawText || "").split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  const prices = lines.filter((line) => /^\$[\d,]+(?:\.\d{2})?$/.test(line));
+  const currentPrice = String(record?.currentPrice || prices[0] || "").trim();
+  const currentValue = usdNumber(currentPrice);
+  const originalPrice = String(record?.originalPrice || prices.slice(1)
+    .find((price) => usdNumber(price) > currentValue) || "").trim();
+  return {
+    title: String(record?.title || lines[0] || "").trim(),
+    currentPrice,
+    originalPrice
+  };
+};
 const slugFor = (deal) => String(deal.id || "deal").replace(/-\d{8}$/, "").toLowerCase()
   .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const validUntilFor = (deal) => {
@@ -116,6 +136,37 @@ for (const feedPath of feedPaths) {
     }
 
     if (affiliateURL && affiliateURL.protocol !== "https:") errors.push(`${label}: affiliateURL must use HTTPS`);
+
+    const reviewedFeedClaim = nonEbayMerchantRefreshEvidence?.feedClaims?.[deal.id];
+    if (deal.status === "active" && reviewedFeedClaim) {
+      const merchantSource = nonEbayMerchantRefreshEvidence?.merchantSources?.[reviewedFeedClaim.sourceID];
+      const feedText = [deal.title, deal.cardCopy, deal.summary, deal.priceNote]
+        .filter(Boolean).join(" ").toLowerCase();
+      if (deal.evidenceRecord !== nonEbayMerchantRefreshEvidenceRecord ||
+          !nonEbayMerchantRefreshEvidence?.outcomes?.refreshed?.includes(deal.id) ||
+          merchantSource?.httpStatus !== 200 || merchantSource?.fetchedAt !== deal.verifiedAt) {
+        errors.push(`${label}: refreshed merchant offer must bind to its successful timestamped evidence source`);
+      }
+      if (reviewedFeedClaim.currentPrice !== undefined && deal.currentPrice !== reviewedFeedClaim.currentPrice) {
+        errors.push(`${label}: current price does not match the reviewed merchant feed claim`);
+      }
+      if (reviewedFeedClaim.originalPrice !== undefined && deal.originalPrice !== reviewedFeedClaim.originalPrice) {
+        errors.push(`${label}: reference or renewal price does not match the reviewed merchant feed claim`);
+      }
+      if (reviewedFeedClaim.discountPercent !== undefined &&
+          Number(deal.discountPercent) !== reviewedFeedClaim.discountPercent) {
+        errors.push(`${label}: discount does not match the reviewed merchant feed claim`);
+      }
+      if (reviewedFeedClaim.availabilityStatus !== undefined &&
+          deal.availabilityStatus !== reviewedFeedClaim.availabilityStatus) {
+        errors.push(`${label}: availability does not match the reviewed merchant feed claim`);
+      }
+      for (const term of reviewedFeedClaim.requiredText || []) {
+        if (!feedText.includes(String(term).toLowerCase())) {
+          errors.push(`${label}: published terms omit reviewed merchant claim ${JSON.stringify(term)}`);
+        }
+      }
+    }
 
     if (deal.network === "amazon-associates") {
       if (affiliateURL.hostname !== "www.amazon.com") {
@@ -209,7 +260,7 @@ for (const feedPath of feedPaths) {
         }
       }
       if (String(deal.advertiserID) === "5227916") {
-        const expectedEvidenceRecord = "data/affiliate-evidence/proton-cj-20260804.json";
+        const expectedEvidenceRecord = "data/affiliate-evidence/proton-cj-20260811.json";
         let merchantURL;
         let imageURL;
         let checkoutURL;
@@ -558,9 +609,8 @@ for (const feedPath of feedPaths) {
           errors.push(`${label}: eBay product must have a canonical item URL`);
         }
         if (imageURL?.hostname !== "i.ebayimg.com" ||
-            !imageURL.pathname.startsWith("/images/g/") ||
-            !imageURL.pathname.endsWith("/s-l640.webp")) {
-          errors.push(`${label}: eBay product must have a genuine 640px item image`);
+            !/^\/images\/g\/[^/]+\/s-l(?:225\.jpg|640\.webp)$/.test(imageURL.pathname)) {
+          errors.push(`${label}: eBay product must use a genuine captured item image`);
         }
         if (!/^\$[\d,]+(?:\.\d{2})?$/.test(String(deal.currentPrice || ""))) {
           errors.push(`${label}: eBay product must have an exact USD price`);
@@ -568,8 +618,8 @@ for (const feedPath of feedPaths) {
         if (deal.listingFormat !== "FixedPrice") {
           errors.push(`${label}: eBay product must be a verified fixed-price listing`);
         }
-        if (deal.availabilityStatus !== "InStock") {
-          errors.push(`${label}: eBay product must be verified in stock`);
+        if (deal.verificationScope !== "promotion-card-observation") {
+          errors.push(`${label}: eBay product must identify promotion-card observation as its verification scope`);
         }
         if (!String(deal.verificationSource || "").includes("eBay promotion-page product cards")) {
           errors.push(`${label}: eBay product must include verification provenance`);
@@ -589,6 +639,40 @@ for (const feedPath of feedPaths) {
     } else {
       errors.push(`${label}: network is not approved for the public DealDesk feed`);
     }
+  }
+}
+
+const currentEbayProducts = seenDeals.filter((deal) =>
+  deal.network === "ebay-partner-network" &&
+  deal.sourceType === "ebay-product" &&
+  validDate(deal.recheckAfter) &&
+  new Date(deal.recheckAfter).getTime() > now);
+const ebayEvidenceByPath = new Map();
+for (const deal of currentEbayProducts) {
+  const label = `data/best-deals.json:${deal.id}`;
+  if (!/^data\/ebay-products-[a-zA-Z0-9:-]+\.json$/.test(String(deal.evidenceRecord || ""))) {
+    errors.push(`${label}: current eBay product must reference an immutable product-capture evidence file`);
+    continue;
+  }
+  let evidence = ebayEvidenceByPath.get(deal.evidenceRecord);
+  if (!evidence) {
+    try {
+      evidence = JSON.parse(await readFile(new URL(`../${deal.evidenceRecord}`, import.meta.url), "utf8"));
+      ebayEvidenceByPath.set(deal.evidenceRecord, evidence);
+    } catch {
+      errors.push(`${label}: eBay product evidence file cannot be read`);
+      continue;
+    }
+  }
+  const exactEvidenceRecord = Array.isArray(evidence.records) ? evidence.records.find((record) => {
+    if (record.merchantURL !== deal.merchantURL || record.imageURL !== deal.imageURL ||
+        record.eventURL !== deal.sourcePromotionURL) return false;
+    const captured = capturedEbayCardFields(record);
+    return captured.title === deal.title && captured.currentPrice === deal.currentPrice &&
+      (!deal.originalPrice || captured.originalPrice === deal.originalPrice);
+  }) : null;
+  if (evidence.capturedAt !== deal.verifiedAt || !exactEvidenceRecord) {
+    errors.push(`${label}: current eBay product is not supported by its exact capture snapshot`);
   }
 }
 
@@ -666,20 +750,19 @@ const searchIndexPayload = JSON.parse(await readFile(new URL("../data/search-ind
 const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
 const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
 const searchIndexEvaluatedAt = new Date(searchIndexPayload.evaluatedAt || "").getTime();
-if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+if (searchIndexPayload.version !== SEARCH_INDEX_POLICY_VERSION || searchIndexPayload.policy !== SEARCH_INDEX_POLICY_NAME ||
     !Number.isFinite(searchIndexEvaluatedAt) || searchIndexEntries.length !== publicDeals.length ||
     searchIndexByID.size !== publicDeals.length) {
-  errors.push("data/search-index.json: must contain exactly one policy-v1 record for every public deal");
+  errors.push("data/search-index.json: must contain exactly one quality-diversity-v2 record for every public deal");
 }
+const expectedSearchIndexStates = Number.isFinite(searchIndexEvaluatedAt)
+  ? await evaluateSearchIndexPolicy(publicDeals, searchIndexEvaluatedAt)
+  : new Map();
 for (const deal of publicDeals) {
   const entry = searchIndexByID.get(deal.id);
-  const recheckAt = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : NaN;
-  const expectedIndexable = Number.isFinite(recheckAt) && searchIndexEvaluatedAt <= recheckAt;
-  const expectedReason = !Number.isFinite(recheckAt)
-    ? "recheck-missing-or-invalid"
-    : expectedIndexable ? "verification-current" : "verification-overdue";
-  if (!entry || entry.url !== `/deals/${slugFor(deal)}/` || entry.indexable !== expectedIndexable ||
-      entry.reason !== expectedReason || entry.recheckAfter !== (deal.recheckAfter || null)) {
+  const expected = expectedSearchIndexStates.get(deal.id);
+  if (!entry || !expected || entry.url !== `/deals/${slugFor(deal)}/` || entry.indexable !== expected.indexable ||
+      entry.reason !== expected.reason || entry.recheckAfter !== (deal.recheckAfter || null)) {
     errors.push(`data/search-index.json:${deal.id}: missing or inconsistent search-index state`);
   }
 }

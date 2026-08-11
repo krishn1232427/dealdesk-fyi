@@ -28,9 +28,9 @@ const deals = Array.isArray(latest.deals) ? latest.deals : [];
 if (!deals.length) errors.push("latest-deals.json: public catalog is empty");
 const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
 const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
-if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+if (searchIndexPayload.version !== 2 || searchIndexPayload.policy !== "quality-diversity-v2" ||
     searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
-  errors.push("search-index.json: must contain exactly one policy-v1 record for every public deal");
+  errors.push("search-index.json: must contain exactly one quality-diversity-v2 record for every public deal");
 }
 for (const deal of deals) {
   const entry = searchIndexByID.get(deal.id);

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T07:13:13.000Z",
+  "updatedAt": "2026-08-11T09:30:15.000Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherAccounts": [
     {
@@ -448,7 +448,7 @@
       "profileURL": "https://members.cj.com/member/7685648/publisher/advertisers/findAdvertisers.cj",
       "category": "VPN subscription",
       "commission": "40% per qualifying sale",
-      "status": "Approved — DealDesk tracking link and current payable offer verified",
+      "status": "Approved — tracking link verified; current offer pricing needs refresh",
       "applicationStatus": "active",
       "acceptedAt": "2026-08-01T07:47:44Z",
       "linkID": "13756265",
@@ -459,7 +459,9 @@
       "commissionEligible": true,
       "publicPublishingAllowed": true,
       "summary": "CJ shows the NordVPN relationship as accepted. DealDesk's website-specific CJ click URL was generated and its destination was verified against the live U.S. offer page. Publish only the current landing-page price and terms, never the stale creative description.",
-      "priority": 16
+      "priority": 16,
+      "reviewedAt": "2026-08-11T09:30:15.000Z",
+      "evidenceRecord": "data/affiliate-evidence/non-ebay-merchant-refresh-20260811.json"
     },
     {
       "id": "cj-surfshark-6282055",
@@ -478,11 +480,13 @@
       "trackingURL": "https://www.tkqlhce.com/click-101847838-15438560",
       "trackingLinkStatus": "verified",
       "currentOffer": "Surfshark Starter 24-month plan at 85% off plus 3 extra months; 2.49 USD per month; 67.23 USD for the first 27 months, down from 444.15 USD; 30-day money-back guarantee",
-      "offerVerifiedAt": "2026-08-01T07:57:37Z",
+      "offerVerifiedAt": "2026-08-11T09:25:24.000Z",
       "commissionEligible": true,
       "publicPublishingAllowed": true,
       "summary": "CJ shows the Surfshark relationship as accepted. DealDesk's website-specific CJ click URL was generated and verified end to end against the live U.S. Starter-plan pricing page.",
-      "priority": 17
+      "priority": 17,
+      "reviewedAt": "2026-08-11T09:25:24.000Z",
+      "evidenceRecord": "data/affiliate-evidence/non-ebay-merchant-refresh-20260811.json"
     },
     {
       "id": "cj-nordpass-5324242",
@@ -501,11 +505,13 @@
       "trackingURL": "https://www.kqzyfj.com/click-101847838-15642853",
       "trackingLinkStatus": "verified",
       "currentOffer": "NordPass Premium at 53% off plus 3 extra months; 2.99 USD struck through to 1.39 USD per month; 37.53 USD for the first 27 months, down from 80.73 USD; 30-day money-back guarantee",
-      "offerVerifiedAt": "2026-08-01T07:57:37Z",
+      "offerVerifiedAt": "2026-08-11T09:29:02.000Z",
       "commissionEligible": true,
       "publicPublishingAllowed": true,
       "summary": "CJ shows the NordPass relationship as accepted. DealDesk's website-specific CJ click URL was generated and verified end to end against the live Premium-plan offer page.",
-      "priority": 18
+      "priority": 18,
+      "reviewedAt": "2026-08-11T09:29:02.000Z",
+      "evidenceRecord": "data/affiliate-evidence/non-ebay-merchant-refresh-20260811.json"
     },
     {
       "id": "cj-1password-5140517",
@@ -688,18 +694,18 @@
       "applicationStatus": "active",
       "appliedAt": "2026-08-01T07:47:44Z",
       "acceptedAt": "2026-08-04",
-      "reviewedAt": "2026-08-04T07:51:10.186Z",
+      "reviewedAt": "2026-08-11T09:27:08.000Z",
       "approvalEvidence": "Signed-in CJ advertiser relationship shows Proton Partners Program accepted on August 4, 2026",
       "trackingID": "101847838",
       "linkID": "17297159",
       "trackingURL": "https://www.kqzyfj.com/click-101847838-17297159",
       "trackingLinkStatus": "verified",
       "currentOffer": "Proton VPN Plus for 71.76 USD for the first 24 months, equivalent to 2.99 USD per month and 70% below the 9.99 USD monthly reference price; then 83.88 USD every 12 months",
-      "offerVerifiedAt": "2026-08-04T07:51:10.186Z",
+      "offerVerifiedAt": "2026-08-11T09:27:08.000Z",
       "imageURL": "https://vpncdn.protonweb.com/image-transformation/?s=a&image=proton_vpn_one_vpn_limitless_possibilities_1fbfebb9d7.png&width=1280&height=586",
       "commissionEligible": true,
       "publicPublishingAllowed": true,
-      "evidenceRecord": "data/affiliate-evidence/proton-cj-20260804.json",
+      "evidenceRecord": "data/affiliate-evidence/proton-cj-20260811.json",
       "restrictions": "Publish only an exact DealDesk CJ link for an approved Proton product and an accurate live offer. Do not count future renewals in ranking. Recheck the introductory price, renewal terms, customer eligibility, imagery, and link destination within 24 hours.",
       "summary": "The signed-in CJ account shows an active Proton relationship and exact site-specific link 17297159. DealDesk followed the assigned CJ redirect, verified the live universal two-year VPN Plus checkout in USD, confirmed the 70% introductory discount and renewal terms, and verified genuine Proton-hosted product-interface imagery.",
       "priority": 27

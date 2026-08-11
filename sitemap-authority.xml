@@ -1,56 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dealdesk.fyi/merchants/</loc><lastmod>2026-08-11</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/ebay/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/amazon/</loc><lastmod>2026-08-01</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/curiositystream/</loc><lastmod>2026-08-11</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/magzter/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/malwarebytes/</loc><lastmod>2026-08-11</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/nordpass/</loc><lastmod>2026-08-01</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/nordvpn/</loc><lastmod>2026-08-01</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/proton-vpn/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/sensibo/</loc><lastmod>2026-08-03</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/surfshark/</loc><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://dealdesk.fyi/merchant/ebay/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/merchant/amazon/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/comparisons/</loc><lastmod>2026-08-11</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/2023-topps-chrome-disney/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s23/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/lenovo-thinkpad-t14/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s22/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/apple-iphone-14/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/dyson-v8/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/lenovo-thinkpad-t14s/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/nintendo-switch-oled-64/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s23-ultra/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s24-ultra/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/dyson-v11/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/eufy-220-solocam-solar/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/lenovo-thinkpad-carbon-gen/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/lowe-sq-12-skid/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/lowe-sq-skid-steer/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s24/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s25-ultra/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/apple-iphone-13/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/apple-iphone-13-mini/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/apple-iphone-15/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/dyson-v9/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/lenovo-thinkpad-l14/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/lenovo-thinkpad-t580/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s21/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s25/</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s23/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/compare/nintendo-switch-oled-64/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/collections/</loc><lastmod>2026-08-11</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/refurbished-electronics/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/refurbished-laptops/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/unlocked-smartphones/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/pokemon-cards/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/samsung-galaxy/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/lenovo-thinkpad/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/dji-drones/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/security-cameras/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/equipment-attachments/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/makita-tools/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/soundbars/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/computer-monitors/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/collections/vpn-deals/</loc><lastmod>2026-08-04</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/refurbished-electronics/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/refurbished-laptops/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/unlocked-smartphones/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/pokemon-cards/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/samsung-galaxy/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/lenovo-thinkpad/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/dji-drones/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/security-cameras/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/equipment-attachments/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/makita-tools/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/soundbars/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/computer-monitors/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/collections/vpn-deals/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/deal-index/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/how-we-rank-deals/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/editorial-policy/</loc><lastmod>2026-08-11</lastmod></url>
