@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-11T10:12:13.000Z",
+  "generatedAt": "2026-08-11T10:37:07.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -3801,7 +3801,8 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
-        "/collections/refurbished-electronics/"
+        "/collections/refurbished-electronics/",
+        "/collections/refurbished-laptops/"
       ]
     },
     {
@@ -7887,7 +7888,8 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
-        "/collections/refurbished-electronics/"
+        "/collections/refurbished-electronics/",
+        "/collections/refurbished-laptops/"
       ]
     },
     {
@@ -8721,7 +8723,8 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
-        "/collections/refurbished-electronics/"
+        "/collections/refurbished-electronics/",
+        "/collections/refurbished-laptops/"
       ]
     },
     {

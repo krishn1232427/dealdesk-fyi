@@ -43,6 +43,62 @@ const chunk = (items, size) => Array.from({ length: Math.ceil(items.length / siz
   items.slice(index * size, (index + 1) * size)
 );
 const count = (text, pattern) => (text.match(pattern) || []).length;
+const itemListDealPaths = (html) => {
+  const paths = [];
+  for (const match of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+    try {
+      const schema = JSON.parse(match[1]);
+      const elements = schema?.mainEntity?.["@type"] === "ItemList"
+        ? schema.mainEntity.itemListElement
+        : schema?.["@type"] === "ItemList"
+          ? schema.itemListElement
+          : [];
+      for (const item of elements || []) {
+        const url = String(item?.url || item?.item || "");
+        if (url.startsWith(`${site}/deals/`)) paths.push(url.slice(site.length));
+      }
+    } catch {}
+  }
+  return paths;
+};
+const itemListPaths = (html) => {
+  const paths = [];
+  for (const match of html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
+    try {
+      const schema = JSON.parse(match[1]);
+      const elements = schema?.mainEntity?.["@type"] === "ItemList" ? schema.mainEntity.itemListElement : [];
+      for (const item of elements || []) {
+        const url = new URL(String(item?.url || item?.item || ""), site);
+        if (url.origin === site) paths.push(url.pathname);
+      }
+    } catch {}
+  }
+  return paths;
+};
+const internalAnchorPaths = (html) => [...html.matchAll(/<a\b[^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*>/gi)]
+  .map((match) => {
+    try {
+      const url = new URL(match[1], site);
+      return url.origin === site ? url.pathname : "";
+    } catch { return ""; }
+  })
+  .filter(Boolean);
+const assertNoNoindexAnchors = (html, label, noindexPaths) => {
+  const leaked = [...new Set(internalAnchorPaths(html).filter((path) => noindexPaths.has(path)))];
+  if (leaked.length) errors.push(`${label}: indexable page links to noindex destinations ${leaked.join(", ")}`);
+};
+const assertItemListDeals = (html, expectedDeals, label) => {
+  const actual = itemListDealPaths(html);
+  const expected = expectedDeals.map(dealPath);
+  const actualSet = new Set(actual);
+  const expectedSet = new Set(expected);
+  const missing = expected.filter((path) => !actualSet.has(path));
+  const unexpected = actual.filter((path) => !expectedSet.has(path));
+  if (actualSet.size !== actual.length) errors.push(`${label}: ItemList contains duplicate deal URLs`);
+  if (missing.length || unexpected.length) {
+    errors.push(`${label}: ItemList does not match its quality cohort${missing.length ? `; missing ${missing.join(", ")}` : ""}${unexpected.length ? `; unexpected ${unexpected.join(", ")}` : ""}`);
+  }
+};
 const assertSamePaths = (actualValue, expectedValue, label) => {
   const actual = Array.isArray(actualValue) ? actualValue : [];
   const expected = [...expectedValue];
@@ -110,6 +166,19 @@ const categories = [...categoryMap.values()].sort((a, b) =>
 const categoryByDealID = new Map(categories.flatMap((category) =>
   category.deals.map((deal) => [deal.id, category])
 ));
+const categoryQualityDeals = new Map(categories.map((category) => [
+  category.key,
+  category.deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === true),
+]));
+const indexableCategoryKeys = new Set(categories
+  .filter((category) => categoryQualityDeals.get(category.key).length >= 2)
+  .map((category) => category.key));
+const categoryPagesFor = (category) => {
+  const qualityDeals = categoryQualityDeals.get(category.key);
+  return indexableCategoryKeys.has(category.key)
+    ? [qualityDeals, ...chunk(category.deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === false), categoryPageSize)]
+    : chunk(category.deals, categoryPageSize);
+};
 
 const assertPage = (html, label, canonicalPath, { indexable = true } = {}) => {
   const expectedRobots = indexable ? 'content="index,follow' : 'content="noindex,follow';
@@ -123,7 +192,7 @@ const assertPage = (html, label, canonicalPath, { indexable = true } = {}) => {
   if (!html.includes('/assets/indexing.css')) errors.push(`${label}: missing indexing stylesheet`);
 };
 
-const archivePages = chunk(deals, archivePageSize);
+const archivePages = [indexableDeals, ...chunk(browseOnlyDeals, archivePageSize)];
 const archiveLinkedIDs = new Set();
 for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
   const page = pageIndex + 1;
@@ -139,7 +208,12 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
   }
   assertPage(html, label, path, { indexable: page === 1 });
   if (page > 1 && !html.includes(`href="${pagePath("/deals/", page - 1)}"`)) errors.push(`${label}: missing previous-page link`);
-  if (page < archivePages.length && !html.includes(`href="${pagePath("/deals/", page + 1)}"`)) errors.push(`${label}: missing next-page link`);
+  if (page === 1 && archivePages.length > 1) {
+    if (html.includes('href="/deals/page/2/"')) errors.push(`${label}: indexable archive root links to noindex pagination`);
+    if (!html.includes('data-browse-destination="/deals/page/2/"')) errors.push(`${label}: explicit browse-only control is missing`);
+  } else if (page < archivePages.length && !html.includes(`href="${pagePath("/deals/", page + 1)}"`)) {
+    errors.push(`${label}: missing next-page link`);
+  }
   for (const deal of pageDeals) {
     const expected = `href="${dealPath(deal)}"`;
     if (!html.includes(expected)) errors.push(`${label}: missing deal link ${deal.id}`);
@@ -147,12 +221,15 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
   }
   const archiveDealLinkCount = count(html, /href="\/deals\/(?!page\/)[^"]+\/"/g);
   if (archiveDealLinkCount < pageDeals.length) errors.push(`${label}: fewer crawlable deal links than expected`);
+  assertItemListDeals(html, pageDeals, label);
 }
 if (archiveLinkedIDs.size !== deals.length) errors.push(`archive: linked ${archiveLinkedIDs.size} of ${deals.length} deals`);
 if (Number(indexingReport.archivePages) !== archivePages.length) errors.push("data/indexing-report.json: archive-page count mismatch");
 if (Number(indexingReport.indexableArchivePages) !== Math.min(1, archivePages.length)) {
   errors.push("data/indexing-report.json: indexable archive-page count mismatch");
 }
+assertSamePaths(indexingReport.archiveBrowsePaths, archivePages.map((_, index) => pagePath("/deals/", index + 1)), "data/indexing-report.json: archive browse paths");
+assertSamePaths(indexingReport.archivePaths, archivePages.length ? ["/deals/"] : [], "data/indexing-report.json: indexable archive paths");
 const expectedArchivePageNumbers = Array.from({ length: Math.max(0, archivePages.length - 1) }, (_, index) => String(index + 2));
 let actualArchivePageNumbers = [];
 try {
@@ -178,11 +255,15 @@ let categoryPageCount = 0;
 const expectedCategoryPaths = [];
 const expectedCategoryBrowsePaths = [];
 for (const category of categories) {
-  if (categoriesIndex && !categoriesIndex.includes(`href="/category/${category.key}/"`)) {
-    errors.push(`categories:/categories/: missing ${category.label} link`);
+  const categoryIsIndexable = indexableCategoryKeys.has(category.key);
+  if (categoriesIndex && categoryIsIndexable && !categoriesIndex.includes(`href="/category/${category.key}/"`)) {
+    errors.push(`categories:/categories/: missing indexable ${category.label} link`);
   }
-  const pages = chunk(category.deals, categoryPageSize);
-  const selectedChildCount = category.deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === true).length;
+  if (categoriesIndex && !categoryIsIndexable && categoriesIndex.includes(`href="/category/${category.key}/"`)) {
+    errors.push(`categories:/categories/: links to noindex ${category.label} hub`);
+  }
+  const pages = categoryPagesFor(category);
+  const selectedChildCount = categoryQualityDeals.get(category.key).length;
   const basePath = `/category/${category.key}/`;
   for (let pageIndex = 0; pageIndex < pages.length; pageIndex += 1) {
     categoryPageCount += 1;
@@ -203,11 +284,17 @@ for (const category of categories) {
     if (!html.includes('href="/categories/"')) errors.push(`${label}: missing categories-index link`);
     if (!html.includes('href="/deals/"')) errors.push(`${label}: missing all-deals link`);
     if (page > 1 && !html.includes(`href="${pagePath(basePath, page - 1)}"`)) errors.push(`${label}: missing previous-page link`);
-    if (page < pages.length && !html.includes(`href="${pagePath(basePath, page + 1)}"`)) errors.push(`${label}: missing next-page link`);
+    if (pageIndexable && pages.length > 1) {
+      if (html.includes(`href="${pagePath(basePath, 2)}"`)) errors.push(`${label}: indexable category root links to noindex pagination`);
+      if (!html.includes(`data-browse-destination="${pagePath(basePath, 2)}"`)) errors.push(`${label}: explicit browse-only control is missing`);
+    } else if (page < pages.length && !html.includes(`href="${pagePath(basePath, page + 1)}"`)) {
+      errors.push(`${label}: missing next-page link`);
+    }
     for (const deal of pages[pageIndex]) {
       if (!html.includes(`href="${dealPath(deal)}"`)) errors.push(`${label}: missing deal link ${deal.id}`);
       categoryLinkedIDs.add(deal.id);
     }
+    assertItemListDeals(html, pages[pageIndex], label);
   }
 }
 if (categoryLinkedIDs.size !== deals.length) errors.push(`category hubs: linked ${categoryLinkedIDs.size} of ${deals.length} deals`);
@@ -218,13 +305,27 @@ if (Number(indexingReport.indexableCategoryPages) !== expectedCategoryPaths.leng
 }
 assertSamePaths(indexingReport.categoryBrowsePaths, expectedCategoryBrowsePaths, "data/indexing-report.json: category browse paths");
 assertSamePaths(indexingReport.categoryPaths, expectedCategoryPaths, "data/indexing-report.json: indexable category paths");
+if (categoriesIndex) {
+  assertSamePaths(itemListPaths(categoriesIndex), expectedCategoryPaths, "categories:/categories/: ItemList paths");
+}
 
 for (let index = 0; index < deals.length; index += 1) {
   const deal = deals[index];
   const path = dealPath(deal);
   const label = `deal:${deal.id}`;
   const category = categoryByDealID.get(deal.id);
-  const archivePage = Math.floor(index / archivePageSize) + 1;
+  const searchIndexEntry = searchIndexByID.get(deal.id);
+  const dealIsIndexable = searchIndexEntry?.indexable === true;
+  const categoryIsIndexable = indexableCategoryKeys.has(category.key);
+  const discoveryDeals = dealIsIndexable ? indexableDeals : browseOnlyDeals;
+  const discoveryIndex = discoveryDeals.findIndex((candidate) => candidate.id === deal.id);
+  const browseOnlyIndex = browseOnlyDeals.findIndex((candidate) => candidate.id === deal.id);
+  const archivePage = dealIsIndexable ? 1 : Math.floor(browseOnlyIndex / archivePageSize) + 2;
+  const categoryPages = categoryPagesFor(category);
+  const categoryPageIndex = categoryPages.findIndex((items) => items.some((candidate) => candidate.id === deal.id));
+  const categoryDiscoveryPath = dealIsIndexable && !categoryIsIndexable
+    ? "/categories/"
+    : pagePath(`/category/${category.key}/`, categoryPageIndex + 1);
   let html = "";
   try {
     html = await readFile(resolve(root, path.replace(/^\//, ""), "index.html"), "utf8");
@@ -232,20 +333,35 @@ for (let index = 0; index < deals.length; index += 1) {
     errors.push(`${label}: detail page is missing`);
     continue;
   }
-  const searchIndexEntry = searchIndexByID.get(deal.id);
-  assertPage(html, label, path, { indexable: searchIndexEntry?.indexable === true });
+  assertPage(html, label, path, { indexable: dealIsIndexable });
   if (searchIndexEntry?.reason && !html.includes(`name="dealdesk-index-status" content="${searchIndexEntry.reason}"`)) {
     errors.push(`${label}: search-index status marker does not match the manifest`);
   }
   if (!html.includes('class="deal-indexing-context"')) errors.push(`${label}: missing visible deal context`);
-  if (!html.includes(`href="/category/${category.key}/"`)) errors.push(`${label}: missing category link`);
+  if (count(html, /class="deal-indexing-context"/g) !== 1 || count(html, /class="deal-discovery-links"/g) !== 1) {
+    errors.push(`${label}: deal context and discovery navigation must appear exactly once`);
+  }
+  if (dealIsIndexable && !categoryIsIndexable && html.includes(`href="/category/${category.key}/"`)) errors.push(`${label}: indexable detail links to noindex category hub`);
+  if ((!dealIsIndexable || categoryIsIndexable) && !html.includes(`href="/category/${category.key}/"`)) errors.push(`${label}: missing category breadcrumb link`);
+  if (!html.includes(`href="${categoryDiscoveryPath}"`)) errors.push(`${label}: missing category discovery link`);
   if (!html.includes(`href="${pagePath("/deals/", archivePage)}"`)) errors.push(`${label}: missing archive-page link`);
-  if (index > 0 && !html.includes(`href="${dealPath(deals[index - 1])}"`)) errors.push(`${label}: missing previous-deal link`);
-  if (index < deals.length - 1 && !html.includes(`href="${dealPath(deals[index + 1])}"`)) errors.push(`${label}: missing next-deal link`);
+  if (discoveryIndex > 0 && !html.includes(`href="${dealPath(discoveryDeals[discoveryIndex - 1])}"`)) errors.push(`${label}: missing previous-deal link`);
+  if (discoveryIndex >= 0 && discoveryIndex < discoveryDeals.length - 1 && !html.includes(`href="${dealPath(discoveryDeals[discoveryIndex + 1])}"`)) errors.push(`${label}: missing next-deal link`);
+  if (dealIsIndexable) {
+    const relatedSection = html.match(/<div class="related-deals">([\s\S]*?)<\/div>/)?.[1] || "";
+    for (const match of relatedSection.matchAll(/href="(\/deals\/[^"]+\/)"/g)) {
+      const related = searchIndexEntries.find((entry) => entry.url === match[1]);
+      if (related && !related.indexable) errors.push(`${label}: related-deal link points to browse-only ${related.id}`);
+    }
+  }
   if (!html.includes('rel="sponsored nofollow noopener"')) errors.push(`${label}: outbound link qualification is missing`);
   if (!html.includes('"@type":"BreadcrumbList"')) errors.push(`${label}: breadcrumb structured data is missing`);
-  if (!html.includes(`"item":"${site}/deals/"`) || !html.includes(`"item":"${site}/category/${category.key}/"`)) {
-    errors.push(`${label}: breadcrumb structured data must include the static archive and category hub`);
+  if (!html.includes(`"item":"${site}/deals/"`)) errors.push(`${label}: breadcrumb structured data must include the static archive`);
+  const structuredCategory = html.includes(`"item":"${site}/category/${category.key}/"`);
+  if (dealIsIndexable && !categoryIsIndexable && structuredCategory) {
+    errors.push(`${label}: breadcrumb structured data links to a noindex category hub`);
+  } else if ((!dealIsIndexable || categoryIsIndexable) && !structuredCategory) {
+    errors.push(`${label}: breadcrumb structured data is missing its category hub`);
   }
 }
 
@@ -262,7 +378,68 @@ const latestHTML = await readFile(resolve(root, "latest-deals", "index.html"), "
 assertPage(latestHTML, "latest:/latest-deals/", "/latest-deals/");
 if (!latestHTML.includes('class="indexing-hubs latest-indexing-hubs"')) errors.push("latest: crawlable archive hub is missing");
 if (!latestHTML.includes('href="/deals/"')) errors.push("latest: all-deals link is missing");
-if (!latestHTML.includes('href="/deals/page/2/"')) errors.push("latest: second archive-page link is missing");
+if (latestHTML.includes('href="/deals/page/2/"')) errors.push("latest: indexable page links to noindex archive pagination");
+if (browseOnlyDeals.length && !latestHTML.includes('data-browse-destination="/deals/page/2/"')) errors.push("latest: explicit browse-only control is missing");
+const qualityRuntimeManifest = latestHTML.match(/<script type="application\/json" id="latest-quality-deal-ids">([\s\S]*?)<\/script>/)?.[1];
+let qualityRuntimeIDs = [];
+try {
+  qualityRuntimeIDs = JSON.parse(qualityRuntimeManifest || "[]");
+} catch {
+  errors.push("latest: quality runtime manifest is invalid JSON");
+}
+const expectedQualityRuntimeIDs = indexableDeals.map((deal) => deal.id);
+const expectedQualityRuntimeIDSet = new Set(expectedQualityRuntimeIDs);
+const qualityRuntimeIDSet = new Set(qualityRuntimeIDs);
+if (!qualityRuntimeManifest) errors.push("latest: quality runtime manifest is missing");
+if (!Array.isArray(qualityRuntimeIDs) || qualityRuntimeIDSet.size !== qualityRuntimeIDs.length) {
+  errors.push("latest: quality runtime manifest must contain unique deal IDs");
+}
+if (qualityRuntimeIDSet.size !== expectedQualityRuntimeIDSet.size ||
+    expectedQualityRuntimeIDs.some((id) => !qualityRuntimeIDSet.has(id)) ||
+    qualityRuntimeIDs.some((id) => !expectedQualityRuntimeIDSet.has(id))) {
+  errors.push("latest: hydrated runtime candidates do not exactly match the quality cohort");
+}
+const dealByID = new Map(deals.map((deal) => [deal.id, deal]));
+const qualityRuntimeDeals = qualityRuntimeIDs.map((id) => dealByID.get(id)).filter(Boolean);
+assertItemListDeals(latestHTML, qualityRuntimeDeals.slice(0, 18), "latest:/latest-deals/");
+const initialLatestIDs = [...latestHTML.matchAll(/data-deal-id="([^"]+)"/g)].map((match) => match[1]);
+if (initialLatestIDs.length !== Math.min(18, qualityRuntimeIDs.length) ||
+    initialLatestIDs.some((id, index) => qualityRuntimeIDs[index] !== id)) {
+  errors.push("latest: hydrated runtime order does not preserve the server-rendered quality cohort order");
+}
+if (count(latestHTML, /catalogDeals\s*=\s*payload\.deals/g) !== 1 ||
+    !latestHTML.includes("qualityDealOrder.has(deal.id) && dealIsCurrent(deal)") ||
+    !latestHTML.includes("qualityDealOrder.get(left.id) - qualityDealOrder.get(right.id)")) {
+  errors.push("latest: hydration must filter and sort the fetched catalog by the quality runtime manifest");
+}
+const archiveIndexHTML = await readFile(resolve(root, "deals", "index.html"), "utf8");
+for (const deal of indexableDeals) {
+  const link = `href="${dealPath(deal)}"`;
+  if (!latestHTML.includes(link)) errors.push(`latest: quality-cohort link missing for ${deal.id}`);
+  if (!archiveIndexHTML.includes(link)) errors.push(`archive:/deals/: quality-cohort link missing for ${deal.id}`);
+}
+
+const indexableArchivePaths = new Set(Array.isArray(indexingReport.archivePaths) ? indexingReport.archivePaths : []);
+const indexableCategoryPaths = new Set(expectedCategoryPaths);
+const noindexGraphDestinations = new Set([
+  ...browseOnlyDeals.map(dealPath),
+  ...(indexingReport.archiveBrowsePaths || []).filter((path) => !indexableArchivePaths.has(path)),
+  ...expectedCategoryBrowsePaths.filter((path) => !indexableCategoryPaths.has(path)),
+]);
+const indexableGraphPaths = new Set([
+  "/", "/latest-deals/", "/deals/", "/categories/", "/privacy/", "/support/",
+  ...expectedCategoryPaths,
+  ...indexableDeals.map(dealPath),
+]);
+for (const path of indexableGraphPaths) {
+  const file = path === "/" ? resolve(root, "index.html") : resolve(root, path.replace(/^\//, ""), "index.html");
+  try {
+    const html = await readFile(file, "utf8");
+    assertNoNoindexAnchors(html, `link-graph:${path}`, noindexGraphDestinations);
+  } catch {
+    // Missing pages are reported by their dedicated structural checks.
+  }
+}
 
 const robots = await readFile(resolve(root, "robots.txt"), "utf8");
 if (!robots.includes(`Sitemap: ${site}/sitemap.xml`)) errors.push("robots.txt: sitemap index declaration is missing");
@@ -320,7 +497,6 @@ for (const deal of browseOnlyDeals) {
 for (let page = 2; page <= archivePages.length; page += 1) {
   if (sitemapURLs.has(absolute(pagePath("/deals/", page)))) errors.push(`sitemaps: noindex archive page must be excluded ${page}`);
 }
-const indexableCategoryPaths = new Set(expectedCategoryPaths);
 for (const path of expectedCategoryBrowsePaths) {
   if (!indexableCategoryPaths.has(path) && sitemapURLs.has(absolute(path))) {
     errors.push(`sitemaps: noindex category page must be excluded ${path}`);

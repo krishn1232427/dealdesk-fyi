@@ -11,9 +11,16 @@ if (Number.isNaN(buildAt.getTime())) throw new Error("DEALDESK_BUILD_AT must be 
 const today = buildAt.toISOString().slice(0, 10);
 const maxObservationsPerDeal = 104;
 
-const latestCatalog = JSON.parse(await readFile(resolve(root, "data", "latest-deals.json"), "utf8"));
+const [latestCatalog, searchIndexPayload] = await Promise.all([
+  readFile(resolve(root, "data", "latest-deals.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data", "search-index.json"), "utf8").then(JSON.parse),
+]);
 const currentDeals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
 if (!currentDeals.length) throw new Error("data/latest-deals.json does not contain public deals");
+const indexableDealIDs = new Set((Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [])
+  .filter((entry) => entry.indexable === true)
+  .map((entry) => entry.id));
+if (!indexableDealIDs.size) throw new Error("data/search-index.json does not contain an indexable quality cohort");
 
 const historyPath = resolve(root, "data", "price-history.json");
 let history = { version: 1, generatedAt: null, catalogUpdatedAt: null, deals: {} };
@@ -169,6 +176,7 @@ const recordsWithChanges = activeRecords
   .map((record) => ({ record, metrics: metricsFor(record) }))
   .filter(({ metrics }) => metrics.numeric.length > 1 && metrics.priceChanges > 0)
   .sort((left, right) => (left.metrics.changePercent ?? 0) - (right.metrics.changePercent ?? 0));
+const indexableRecordsWithChanges = recordsWithChanges.filter(({ record }) => indexableDealIDs.has(record.id));
 const merchantCount = new Set(activeRecords.map((record) => record.merchant)).size;
 const earliest = allRecords.map((record) => record.firstSeen).sort()[0] || today;
 
@@ -189,8 +197,8 @@ const datasetSchema = {
     { "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: `${site}/data/price-history.csv` },
   ],
 };
-const changeCards = recordsWithChanges.length
-  ? recordsWithChanges.slice(0, 24).map(({ record, metrics }) => `<a class="price-change-card" href="${esc(record.url)}"><strong>${esc(record.title)}</strong><span>${esc(record.merchant)} · ${esc(record.category)}</span><b>${metrics.changePercent < 0 ? `${Math.abs(metrics.changePercent)}% lower` : `${metrics.changePercent}% higher`}</b><small>${esc(record.firstSeen)} to ${esc(record.lastSeen)}</small></a>`).join("\n")
+const changeCards = indexableRecordsWithChanges.length
+  ? indexableRecordsWithChanges.slice(0, 24).map(({ record, metrics }) => `<a class="price-change-card" href="${esc(record.url)}"><strong>${esc(record.title)}</strong><span>${esc(record.merchant)} · ${esc(record.category)}</span><b>${metrics.changePercent < 0 ? `${Math.abs(metrics.changePercent)}% lower` : `${metrics.changePercent}% higher`}</b><small>${esc(record.firstSeen)} to ${esc(record.lastSeen)}</small></a>`).join("\n")
   : `<div class="price-history-empty"><strong>Baseline established</strong><p>DealDesk began recording this dataset on ${earliest}. Price-change rankings will appear after verified catalog prices move.</p></div>`;
 const historyIndexHTML = `<!doctype html>
 <html lang="en">

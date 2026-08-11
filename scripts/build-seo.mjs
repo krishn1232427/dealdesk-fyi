@@ -188,7 +188,10 @@ for (const deal of deals) {
   const isServiceOffer = deal.offerType === "subscription" ||
     String(deal.category || "").toLowerCase() === "subscriptions";
   const relatedDeals = deals.filter((candidate) =>
-    candidate.id !== deal.id && candidate.category === deal.category && pricesFrom(candidate).current
+    candidate.id !== deal.id &&
+    candidate.category === deal.category &&
+    pricesFrom(candidate).current &&
+    (!searchIndexState.indexable || searchIndexStateFor(candidate).indexable)
   ).slice(0, 3);
   const relatedHTML = relatedDeals.map((candidate) => {
     const candidateTitle = cleanTitle(candidate.title);
@@ -309,7 +312,8 @@ const diversifyDeals = (items, seed = []) => {
 const rankedDeals = [...deals]
   .sort((a, b) => rankingNumber(b) - rankingNumber(a) || discountFrom(pricesFrom(b), b) - discountFrom(pricesFrom(a), a) || new Date(b.verifiedAt || 0) - new Date(a.verifiedAt || 0) || Number(a.priority || 99) - Number(b.priority || 99));
 const pricedDeals = diversifyDeals(rankedDeals);
-const featuredDeal = pricedDeals[0];
+const qualityPricedDeals = pricedDeals.filter((deal) => searchIndexStateFor(deal).indexable);
+const featuredDeal = qualityPricedDeals[0] || pricedDeals[0];
 const featuredPrices = pricesFrom(featuredDeal);
 const featuredDiscount = discountFrom(featuredPrices, featuredDeal);
 const featuredSavings = savingsFrom(featuredPrices);
@@ -324,8 +328,8 @@ const latestSchema = {
   dateModified: lastmod,
   mainEntity: {
     "@type": "ItemList",
-    numberOfItems: pricedDeals.length,
-    itemListElement: pricedDeals.slice(0, 18).map((deal, index) => ({
+    numberOfItems: Math.min(18, qualityPricedDeals.length),
+    itemListElement: qualityPricedDeals.slice(0, 18).map((deal, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: cleanTitle(deal.title),
@@ -333,8 +337,6 @@ const latestSchema = {
     }))
   }
 };
-const categoryOptions = [...new Set(pricedDeals.map((deal) => deal.category || "Other"))].sort()
-  .map((category) => `<option value="${esc(category.toLowerCase())}">${esc(category)}</option>`).join("");
 const latestDealData = pricedDeals.map((deal) => {
   const title = cleanTitle(deal.title);
   const prices = pricesFrom(deal);
@@ -361,6 +363,11 @@ const latestDealData = pricedDeals.map((deal) => {
     recheckAfter: deal.recheckAfter || ""
   };
 });
+const latestDealDataByID = new Map(latestDealData.map((deal) => [deal.id, deal]));
+const qualityLatestDealData = qualityPricedDeals.map((deal) => latestDealDataByID.get(deal.id)).filter(Boolean);
+const qualityRuntimeDealIDs = qualityLatestDealData.map((deal) => deal.id);
+const categoryOptions = [...new Set(qualityLatestDealData.map((deal) => deal.categoryLabel || "Other"))].sort()
+  .map((category) => `<option value="${esc(category.toLowerCase())}">${esc(category)}</option>`).join("");
 const latestCardHTML = (deal) => `<article class="deal-card" data-deal-id="${esc(deal.id)}" data-category="${esc(deal.category)}" data-expires-at="${esc(deal.expiresAt)}" data-recheck-after="${esc(deal.recheckAfter)}">
     <a class="deal-card-link" href="${esc(deal.url)}" aria-label="${esc(deal.title)}, ${esc(deal.currentPrice)}. View deal details">
       <span class="deal-media">
@@ -374,7 +381,7 @@ ${deal.savingsText ? `        <span class="saving-text">${esc(deal.savingsText)}
       </span>
     </a>
   </article>`;
-const latestCards = latestDealData.slice(1, 18).map(latestCardHTML).join("\n");
+const latestCards = qualityLatestDealData.slice(1, 18).map(latestCardHTML).join("\n");
 const featuredHTML = featuredDeal ? `<article class="featured-wrap latest-featured" data-deal-id="${esc(featuredDeal.id)}" data-expires-at="${esc(featuredDeal.expiresAt || "")}" data-recheck-after="${esc(featuredDeal.recheckAfter || "")}">
   <a class="featured-deal" href="${featuredCanonical}" aria-label="${esc(featuredTitle)}, ${esc(featuredPrices.current)}. View top deal">
     <span class="featured-media">
@@ -419,7 +426,7 @@ const latestHTML = `<!doctype html>
   <main class="deal-home shell">
     <header class="page-heading">
       <div><span class="page-kicker"><span aria-hidden="true"></span> Catalog updated ${lastmod}</span><h1>Deal listings with visible check dates</h1></div>
-      <p><strong id="latest-total">${pricedDeals.length}</strong> catalog records, presented in focused batches</p>
+      <p><strong id="latest-total">${qualityLatestDealData.length}</strong> current quality-verified offers, presented in focused batches</p>
     </header>
     ${featuredHTML}
     <aside class="latest-trust-strip" aria-label="How this page is organized">
@@ -432,13 +439,14 @@ const latestHTML = `<!doctype html>
     </section>
     <section class="latest-controls" aria-label="Filter the deal catalog">
       <label for="latest-category">Category<select id="latest-category"><option value="all">All categories</option>${categoryOptions}</select></label>
-      <p id="latest-catalog-status" role="status">Showing ${Math.min(18, pricedDeals.length)} of ${pricedDeals.length} catalog records</p>
+      <p id="latest-catalog-status" role="status">Showing ${Math.min(18, qualityLatestDealData.length)} of ${qualityLatestDealData.length} current quality-verified offers</p>
     </section>
     <div class="deal-grid" id="latest-deal-grid">${latestCards}</div>
     <p class="latest-empty" id="latest-empty" hidden>No matching deal records. Try another search or category.</p>
     <div class="load-more-wrap"><button class="load-more" id="latest-load-more" type="button" hidden>Show 18 more deals</button></div>
   </main>
   <footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. You never pay more because of it. Prices and availability can change at checkout.</div></footer>
+  <script type="application/json" id="latest-quality-deal-ids">${JSON.stringify(qualityRuntimeDealIDs).replaceAll("<", "\\u003c")}</script>
   <script>
     (function () {
       "use strict";
@@ -455,6 +463,8 @@ const latestHTML = `<!doctype html>
       var visibleLimit = 18;
       var catalogDeals = null;
       var catalogPromise = null;
+      var qualityDealIDs = JSON.parse(document.getElementById("latest-quality-deal-ids").textContent);
+      var qualityDealOrder = new Map(qualityDealIDs.map(function (id, index) { return [id, index]; }));
       var rejectedIDs = new Set();
       var searchTimer;
 
@@ -580,7 +590,7 @@ const latestHTML = `<!doctype html>
         grid.replaceChildren(fragment);
         var shown = shownDeals.length + (featuredMatch ? 1 : 0);
         var total = matching.length + (featuredMatch ? 1 : 0);
-        status.textContent = "Showing " + shown + " of " + total + " matching catalog records";
+        status.textContent = "Showing " + shown + " of " + total + " matching quality-verified offers";
         loadMore.hidden = total <= visibleLimit;
         empty.hidden = total !== 0;
       }
@@ -619,7 +629,7 @@ const latestHTML = `<!doctype html>
           selectedCategory === "all" && (!query || featured.textContent.toLowerCase().indexOf(query) !== -1);
         if (featured) featured.hidden = !featuredMatch;
         if (featuredMatch) shown += 1;
-        status.textContent = "Showing " + shown + " catalog records; the full catalog is temporarily unavailable";
+        status.textContent = "Showing " + shown + " quality-verified offers; live filtering is temporarily unavailable";
         loadMore.hidden = true;
         empty.hidden = shown !== 0;
       }
@@ -634,7 +644,13 @@ const latestHTML = `<!doctype html>
           })
           .then(function (payload) {
             if (!payload || !Array.isArray(payload.deals)) throw new Error("Catalog invalid");
-            catalogDeals = payload.deals.filter(dealIsCurrent);
+            catalogDeals = payload.deals
+              .filter(function (deal) {
+                return qualityDealOrder.has(deal.id) && dealIsCurrent(deal);
+              })
+              .sort(function (left, right) {
+                return qualityDealOrder.get(left.id) - qualityDealOrder.get(right.id);
+              });
             totalLabel.textContent = String(catalogDeals.length);
             loadMore.hidden = catalogDeals.length <= visibleLimit;
             return true;
@@ -648,7 +664,7 @@ const latestHTML = `<!doctype html>
 
       function requestRender(resetLimit) {
         if (resetLimit) visibleLimit = 18;
-        status.textContent = "Loading matching catalog records…";
+        status.textContent = "Loading matching quality-verified offers…";
         loadCatalog().then(function (ready) {
           if (ready) renderDeals();
           else filterServerCards();
@@ -697,7 +713,7 @@ const latestHTML = `<!doctype html>
             renderDeals();
             return;
           }
-          status.textContent = "Showing " + Math.min(visibleLimit, catalogDeals.length) + " of " + catalogDeals.length + " matching catalog records";
+          status.textContent = "Showing " + Math.min(visibleLimit, catalogDeals.length) + " of " + catalogDeals.length + " matching quality-verified offers";
           loadMore.hidden = catalogDeals.length <= visibleLimit;
           empty.hidden = catalogDeals.length !== 0;
         });

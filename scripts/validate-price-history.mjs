@@ -6,8 +6,9 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const fail = (message) => { throw new Error(message); };
 const occurrences = (text, pattern) => (text.match(pattern) || []).length;
 
-const [latestCatalog, history, indexHTML, sitemap, csv] = await Promise.all([
+const [latestCatalog, searchIndexPayload, history, indexHTML, sitemap, csv] = await Promise.all([
   readFile(resolve(root, "data", "latest-deals.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data", "search-index.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data", "price-history.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "price-history", "index.html"), "utf8"),
   readFile(resolve(root, "sitemap-authority.xml"), "utf8"),
@@ -15,7 +16,11 @@ const [latestCatalog, history, indexHTML, sitemap, csv] = await Promise.all([
 ]);
 
 const currentDeals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
+const indexableURLs = new Set((Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [])
+  .filter((entry) => entry.indexable === true)
+  .map((entry) => entry.url));
 if (!currentDeals.length) fail("No public deals to validate");
+if (!indexableURLs.size) fail("No indexable quality cohort to validate");
 if (!history || history.version !== 1 || !history.deals || typeof history.deals !== "object") fail("Invalid price-history.json structure");
 
 const activeRecords = Object.values(history.deals).filter((record) => record.active);
@@ -56,6 +61,9 @@ for (const required of [
 }
 if (occurrences(indexHTML, /<meta\b[^>]*\bname=["']description["'][^>]*>/gi) !== 1) fail("Price-history hub description metadata is not unique");
 if (occurrences(sitemap, /<loc>https:\/\/dealdesk\.fyi\/price-history\/<\/loc>/g) !== 1) fail("Price-history sitemap entry is missing or duplicated");
+for (const match of indexHTML.matchAll(/<a class="price-change-card" href="([^"]+)"/g)) {
+  if (!indexableURLs.has(match[1])) fail(`Price-history hub links to browse-only deal ${match[1]}`);
+}
 if (!csv.startsWith('"deal_id","title","url","merchant","category"')) fail("Price-history CSV header is invalid");
 if (csv.trim().split("\n").length < currentDeals.length + 1) fail("Price-history CSV has fewer rows than active deals");
 
