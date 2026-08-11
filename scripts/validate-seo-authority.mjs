@@ -8,19 +8,21 @@ const buildID = "2026-08-08-authority-v1";
 const merchantPageSize = 32;
 const errors = [];
 
-const [latestCatalog, searchIndexPayload, report, targetsPayload, categoryGuidePayload, searchCollectionPayload] = await Promise.all([
+const [latestCatalog, searchIndexPayload, report, targetsPayload, categoryGuidePayload, searchCollectionPayload, indexingReport] = await Promise.all([
   readFile(resolve(root, "data/latest-deals.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/search-index.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/seo-authority-report.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/seo-targets.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/seo-category-guides.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/search-collections.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data/indexing-report.json"), "utf8").then(JSON.parse),
 ]);
 const deals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
 const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
 const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
 const targets = Array.isArray(targetsPayload.targets) ? targetsPayload.targets : [];
 const targetByID = new Map(targets.map((target) => [target.id, target]));
+const dealByID = new Map(deals.map((deal) => [deal.id, deal]));
 const isSearchIndexable = (id) => searchIndexByID.get(id)?.indexable === true;
 
 const slugify = (value) => String(value || "other").toLowerCase()
@@ -40,6 +42,39 @@ const decodeEntities = (value) => String(value || "")
   .replaceAll("&gt;", ">");
 const titleFrom = (html) => decodeEntities(html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim() || "");
 const descriptionFrom = (html) => decodeEntities(html.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1]?.trim() || "");
+const collectionItemListPaths = (html, label) => {
+  const objects = [];
+  for (const match of html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
+    try {
+      const parsed = JSON.parse(match[1]);
+      objects.push(...(Array.isArray(parsed) ? parsed : [parsed]));
+    } catch {
+      errors.push(`${label}: invalid JSON-LD`);
+    }
+  }
+  const page = objects.find((item) => item?.["@type"] === "CollectionPage" && item?.mainEntity?.["@type"] === "ItemList");
+  if (!page) {
+    errors.push(`${label}: CollectionPage ItemList is missing`);
+    return [];
+  }
+  const elements = Array.isArray(page.mainEntity.itemListElement) ? page.mainEntity.itemListElement : [];
+  if (Number(page.mainEntity.numberOfItems) !== elements.length) errors.push(`${label}: ItemList numberOfItems mismatch`);
+  return elements.map((item) => {
+    try { return new URL(item.url, site).pathname; } catch { return ""; }
+  }).filter(Boolean);
+};
+const assertQualityItemList = (html, expectedDeals, label, { limit = null } = {}) => {
+  const actual = collectionItemListPaths(html, label);
+  const expected = expectedDeals.map(dealPath);
+  const actualSet = new Set(actual);
+  const expectedSet = new Set(expected);
+  if (actualSet.size !== actual.length) errors.push(`${label}: ItemList contains duplicate deal URLs`);
+  const unexpected = actual.filter((path) => !expectedSet.has(path));
+  const expectedCount = limit == null ? expected.length : Math.min(limit, expected.length);
+  const missing = limit == null ? expected.filter((path) => !actualSet.has(path)) : [];
+  if (actual.length !== expectedCount || missing.length || unexpected.length) errors.push(`${label}: ItemList does not match current quality cohort`);
+  if (!html.includes(`data-quality-offers="${expected.length}"`)) errors.push(`${label}: visible quality-offer count does not match ${expected.length}`);
+};
 const assertSamePaths = (actualValue, expectedValue, label) => {
   const actual = Array.isArray(actualValue) ? actualValue : [];
   const expected = [...expectedValue];
@@ -52,6 +87,19 @@ const assertSamePaths = (actualValue, expectedValue, label) => {
   if (missing.length || unexpected.length) {
     errors.push(`${label}: path list mismatch${missing.length ? `; missing ${missing.join(", ")}` : ""}${unexpected.length ? `; unexpected ${unexpected.join(", ")}` : ""}`);
   }
+};
+const internalAnchorPaths = (html) => [...html.matchAll(/<a\b[^>]*\bhref\s*=\s*["']([^"']+)["'][^>]*>/gi)]
+  .map((match) => {
+    try {
+      const url = new URL(match[1], site);
+      return url.origin === site ? url.pathname : "";
+    } catch { return ""; }
+  })
+  .filter(Boolean);
+const assertNoNoindexAnchors = (html, label, noindexPaths) => {
+  // External destinations and intentional non-HTML downloads are not members of the noindex HTML path set.
+  const leaked = [...new Set(internalAnchorPaths(html).filter((path) => noindexPaths.has(path)))];
+  if (leaked.length) errors.push(`${label}: indexable page links to noindex destinations ${leaked.join(", ")}`);
 };
 const countTargetsByPath = (pathsForTarget) => {
   const counts = new Map();
@@ -99,6 +147,34 @@ if (new Set(targets.map((target) => target.id)).size !== targets.length) errors.
 if (new Set(targets.map((target) => target.url)).size !== targets.length) errors.push("SEO targets contain duplicate URLs");
 if (new Set(targets.map((target) => target.title)).size !== targets.length) errors.push("SEO targets contain duplicate title tags");
 
+const merchantCounts = countTargetsByPath((target) => /^\/merchant\/[^/]+\/$/.test(target.merchantPath || "") ? [target.merchantPath] : []);
+const expectedMerchantBrowsePaths = [...merchantCounts.entries()].flatMap(([path, counts]) => {
+  const pageCount = counts.selected >= 2
+    ? 1 + Math.ceil((counts.total - counts.selected) / merchantPageSize)
+    : Math.ceil(counts.total / merchantPageSize);
+  return Array.from({ length: pageCount }, (_, index) => index === 0 ? path : `${path}page/${index + 1}/`);
+});
+const expectedMerchantPaths = [...merchantCounts.entries()].filter(([, counts]) => counts.selected >= 2).map(([path]) => path);
+const comparisonCounts = countTargetsByPath((target) => target.comparisonPath ? [target.comparisonPath] : []);
+const expectedComparisonBrowsePaths = [...comparisonCounts.keys()];
+const expectedComparisonPaths = [...comparisonCounts.entries()].filter(([, counts]) => counts.selected >= 2).map(([path]) => path);
+const collectionCounts = countTargetsByPath((target) => Array.isArray(target.collectionPaths) ? target.collectionPaths : []);
+const expectedCollectionBrowsePaths = [...collectionCounts.keys()];
+const expectedCollectionPaths = [...collectionCounts.entries()].filter(([, counts]) => counts.selected >= 2).map(([path]) => path);
+const indexableMerchantPaths = new Set(expectedMerchantPaths);
+const indexableComparisonPaths = new Set(expectedComparisonPaths);
+const indexableCollectionPaths = new Set(expectedCollectionPaths);
+const indexableArchivePaths = new Set(indexingReport.archivePaths || []);
+const indexableCategoryPaths = new Set(indexingReport.categoryPaths || []);
+const noindexGraphDestinations = new Set([
+  ...searchIndexEntries.filter((entry) => !entry.indexable).map((entry) => entry.url),
+  ...expectedMerchantBrowsePaths.filter((path) => !indexableMerchantPaths.has(path)),
+  ...expectedComparisonBrowsePaths.filter((path) => !indexableComparisonPaths.has(path)),
+  ...expectedCollectionBrowsePaths.filter((path) => !indexableCollectionPaths.has(path)),
+  ...(indexingReport.archiveBrowsePaths || []).filter((path) => !indexableArchivePaths.has(path)),
+  ...(indexingReport.categoryBrowsePaths || []).filter((path) => !indexableCategoryPaths.has(path)),
+]);
+
 const dealDescriptions = new Set();
 for (const deal of deals) {
   const target = targetByID.get(deal.id);
@@ -123,11 +199,18 @@ for (const deal of deals) {
   if (!html.includes('class="deal-question-grid"')) errors.push(`deal:${deal.id}: question-answer block missing`);
   if (!html.includes('data-dealdesk-authority')) errors.push(`deal:${deal.id}: authority WebPage schema missing`);
   if (!html.includes('href="/how-we-rank-deals/"')) errors.push(`deal:${deal.id}: methodology link missing`);
-  if (!html.includes(`href="${target.merchantPath}"`)) errors.push(`deal:${deal.id}: merchant hub link missing`);
-  if (target.comparisonPath && !html.includes(`href="${target.comparisonPath}"`)) errors.push(`deal:${deal.id}: comparison link missing`);
+  const merchantLinkExpected = !shouldIndex || target.merchantPath === "/merchants/" || indexableMerchantPaths.has(target.merchantPath);
+  if (merchantLinkExpected && !html.includes(`href="${target.merchantPath}"`)) errors.push(`deal:${deal.id}: merchant hub link missing`);
+  if (shouldIndex && !merchantLinkExpected && html.includes(`href="${target.merchantPath}"`)) errors.push(`deal:${deal.id}: merchant link points to noindex hub`);
+  const comparisonLinkExpected = target.comparisonPath && (!shouldIndex || indexableComparisonPaths.has(target.comparisonPath));
+  if (comparisonLinkExpected && !html.includes(`href="${target.comparisonPath}"`)) errors.push(`deal:${deal.id}: comparison link missing`);
+  if (shouldIndex && target.comparisonPath && !comparisonLinkExpected && html.includes(`href="${target.comparisonPath}"`)) errors.push(`deal:${deal.id}: comparison link points to noindex hub`);
   for (const collectionPath of target.collectionPaths || []) {
-    if (!html.includes(`href="${collectionPath}"`)) errors.push(`deal:${deal.id}: collection link missing ${collectionPath}`);
+    const collectionLinkExpected = !shouldIndex || indexableCollectionPaths.has(collectionPath);
+    if (collectionLinkExpected && !html.includes(`href="${collectionPath}"`)) errors.push(`deal:${deal.id}: collection link missing ${collectionPath}`);
+    if (shouldIndex && !collectionLinkExpected && html.includes(`href="${collectionPath}"`)) errors.push(`deal:${deal.id}: collection link points to noindex hub ${collectionPath}`);
   }
+  if (shouldIndex) assertNoNoindexAnchors(html, `deal:${deal.id}`, noindexGraphDestinations);
   if (html.includes('"@type":"AggregateRating"') || html.includes('"@type":"Review"')) errors.push(`deal:${deal.id}: fabricated review markup is prohibited`);
   if (!target.primaryQuery || !Array.isArray(target.secondaryQueries) || target.secondaryQueries.length < 3) errors.push(`deal:${deal.id}: incomplete search target`);
   if (!Number.isFinite(Number(target.score)) || Number(target.score) < 0 || Number(target.score) > 100) errors.push(`deal:${deal.id}: invalid Value Score`);
@@ -151,19 +234,8 @@ for (const path of staticPaths) {
     continue;
   }
   assertIndexable(html, `static:${path}`, path);
+  assertNoNoindexAnchors(html, `static:${path}`, noindexGraphDestinations);
 }
-
-const merchantCounts = countTargetsByPath((target) => /^\/merchant\/[^/]+\/$/.test(target.merchantPath || "") ? [target.merchantPath] : []);
-const expectedMerchantBrowsePaths = [...merchantCounts.entries()].flatMap(([path, counts]) =>
-  Array.from({ length: Math.ceil(counts.total / merchantPageSize) }, (_, index) => index === 0 ? path : `${path}page/${index + 1}/`)
-);
-const expectedMerchantPaths = [...merchantCounts.entries()].filter(([, counts]) => counts.selected >= 2).map(([path]) => path);
-const comparisonCounts = countTargetsByPath((target) => target.comparisonPath ? [target.comparisonPath] : []);
-const expectedComparisonBrowsePaths = [...comparisonCounts.keys()];
-const expectedComparisonPaths = [...comparisonCounts.entries()].filter(([, counts]) => counts.selected >= 2).map(([path]) => path);
-const collectionCounts = countTargetsByPath((target) => Array.isArray(target.collectionPaths) ? target.collectionPaths : []);
-const expectedCollectionBrowsePaths = [...collectionCounts.keys()];
-const expectedCollectionPaths = [...collectionCounts.entries()].filter(([, counts]) => counts.selected >= 2).map(([path]) => path);
 
 assertSamePaths(report.merchantBrowsePaths, expectedMerchantBrowsePaths, "merchant browse paths");
 assertSamePaths(report.merchantPaths, expectedMerchantPaths, "indexable merchant paths");
@@ -186,11 +258,11 @@ for (const path of report.merchantPaths || []) {
     continue;
   }
   assertIndexable(html, `merchant:${path}`, path);
+  assertNoNoindexAnchors(html, `merchant:${path}`, noindexGraphDestinations);
   if (!html.includes('class="authority-stat-grid"')) errors.push(`merchant:${path}: statistics missing`);
   if (!/href="\/deals\/[^"]+\/"/.test(html)) errors.push(`merchant:${path}: no crawlable deal links`);
 }
 
-const indexableMerchantPaths = new Set(report.merchantPaths || []);
 for (const path of report.merchantBrowsePaths || []) {
   if (indexableMerchantPaths.has(path)) continue;
   let html = "";
@@ -213,15 +285,21 @@ for (const path of report.comparisonPaths || []) {
     continue;
   }
   assertIndexable(html, `comparison:${path}`, path);
+  assertNoNoindexAnchors(html, `comparison:${path}`, noindexGraphDestinations);
   if (!html.includes('class="authority-table"')) errors.push(`comparison:${path}: comparison table missing`);
   const dealLinks = (html.match(/href="\/deals\/[^"]+\/"/g) || []).length;
   if (dealLinks < 2) errors.push(`comparison:${path}: fewer than two deal links`);
   if (titleFrom(html).length > 70) errors.push(`comparison:${path}: title exceeds 70 characters`);
   const descriptionLength = descriptionFrom(html).length;
   if (descriptionLength < 70 || descriptionLength > 160) errors.push(`comparison:${path}: description length ${descriptionLength} is outside 70-160`);
+  const qualityDeals = targets
+    .filter((target) => target.comparisonPath === path && isSearchIndexable(target.id))
+    .map((target) => dealByID.get(target.id))
+    .filter(Boolean);
+  assertQualityItemList(html, qualityDeals, `comparison:${path}`);
+  if (!html.includes('data-quality-cohort="true"')) errors.push(`comparison:${path}: current-cohort table marker missing`);
 }
 
-const indexableComparisonPaths = new Set(report.comparisonPaths || []);
 for (const path of report.comparisonBrowsePaths || []) {
   if (indexableComparisonPaths.has(path)) continue;
   let html = "";
@@ -249,17 +327,23 @@ for (const path of report.collectionPaths || []) {
     continue;
   }
   assertIndexable(html, `collection:${path}`, path);
+  assertNoNoindexAnchors(html, `collection:${path}`, noindexGraphDestinations);
   if (!html.includes('class="collection-considerations"')) errors.push(`collection:${path}: buyer considerations missing`);
   if (!html.includes('class="authority-table"')) errors.push(`collection:${path}: comparison table missing`);
   if (!html.includes('class="collection-related"')) errors.push(`collection:${path}: related-guide links missing`);
   const dealLinks = new Set((html.match(/href="(\/deals\/[^"]+\/)"/g) || []));
-  if (dealLinks.size < 3) errors.push(`collection:${path}: fewer than three crawlable deal links`);
+  if (dealLinks.size < 2) errors.push(`collection:${path}: fewer than two crawlable deal links`);
   if (path === "/collections/vpn-deals/" && (!html.includes("Recorded billing details") || !html.includes("monthly and upfront price formats"))) {
     errors.push(`collection:${path}: mixed-basis VPN billing comparison is incomplete`);
   }
+  const qualityDeals = targets
+    .filter((target) => (target.collectionPaths || []).includes(path) && isSearchIndexable(target.id))
+    .map((target) => dealByID.get(target.id))
+    .filter(Boolean);
+  assertQualityItemList(html, qualityDeals, `collection:${path}`);
+  if (!html.includes('data-quality-cohort="true"')) errors.push(`collection:${path}: current-cohort table marker missing`);
 }
 
-const indexableCollectionPaths = new Set(report.collectionPaths || []);
 for (const path of report.collectionBrowsePaths || []) {
   if (indexableCollectionPaths.has(path)) continue;
   let html = "";
@@ -287,6 +371,7 @@ for (const [path, marker] of [
   let html = "";
   try { html = await readPage(path); } catch { errors.push(`hub:${path}: page missing`); continue; }
   assertIndexable(html, `hub:${path}`, path);
+  assertNoNoindexAnchors(html, `hub:${path}`, noindexGraphDestinations);
   if (!html.includes(marker)) errors.push(`hub:${path}: authority hub missing`);
   for (const required of ["/collections/", "/deal-index/", "/comparisons/", "/merchants/", "/how-we-rank-deals/"]) {
     if (!html.includes(`href="${required}"`)) errors.push(`hub:${path}: missing ${required} link`);
@@ -306,7 +391,10 @@ for (const label of publicCategoryLabels) {
   let html = "";
   try { html = await readPage(path); } catch { errors.push(`category:${path}: page missing`); continue; }
   const selectedChildCount = deals.filter((deal) => (deal.categoryLabel || deal.category || "Other") === label && isSearchIndexable(deal.id)).length;
-  if (selectedChildCount >= 2) assertIndexable(html, `category:${path}`, path);
+  if (selectedChildCount >= 2) {
+    assertIndexable(html, `category:${path}`, path);
+    assertNoNoindexAnchors(html, `category:${path}`, noindexGraphDestinations);
+  }
   else assertBrowseOnly(html, `category:${path}`, path);
   if (!html.includes(`>${profile.heading}</h1>`)) errors.push(`category:${path}: configured search heading missing`);
   if (!html.includes('class="category-search-guide"')) errors.push(`category:${path}: substantive buyer guide missing`);
@@ -319,6 +407,10 @@ for (const label of publicCategoryLabels) {
   categoryDescriptions.add(description);
   if (title.length > 72) errors.push(`category:${path}: title exceeds 72 characters`);
   if (description.length < 70 || description.length > 160) errors.push(`category:${path}: description length ${description.length} is outside 70-160`);
+  if (selectedChildCount >= 2) {
+    const qualityDeals = deals.filter((deal) => (deal.categoryLabel || deal.category || "Other") === label && isSearchIndexable(deal.id));
+    assertQualityItemList(html, qualityDeals, `category:${path}`);
+  }
 }
 
 if ((report.collectionBrowsePaths || []).length !== (searchCollectionPayload.collections || []).length) {

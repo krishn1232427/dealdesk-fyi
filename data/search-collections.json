@@ -32,7 +32,7 @@
       "rules": {
         "categories": ["Electronics"],
         "allText": ["refurbished"],
-        "anyText": ["laptop", "notebook", "thinkpad", "elitebook", "latitude", "macbook"]
+        "anyText": ["laptop", "notebook", "thinkpad", "ideapad", "elitebook", "latitude", "macbook"]
       },
       "considerations": [
         { "title": "Match core specifications", "body": "Compare processor generation, RAM, storage, screen resolution, ports, graphics, and operating-system support." },
@@ -126,7 +126,7 @@
       "id": "dji-drones",
       "title": "DJI Drone Deals: Mini, Mavic, FPV & Camera Drones",
       "heading": "Current DJI Drone Deals",
-      "description": "Compare DJI drone offers by model, bundle, controller, battery count, condition, price, and verification date.",
+      "description": "Compare DJI drone deals by model, controller, bundle, condition, price, and check date.",
       "intro": "DJI drone prices depend on the exact aircraft, controller, battery count, camera, accessories, activation status, and condition. Verify the bundle and current flight rules before ordering.",
       "rules": {
         "allText": ["dji"],
