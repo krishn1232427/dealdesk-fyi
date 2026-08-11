@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-10T22:46:41.076Z",
+  "updatedAt": "2026-08-11T07:13:13.000Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -158,9 +158,9 @@
       "payoutReadiness": "unverified",
       "commissionAccess": true,
       "canPublish": false,
-      "blockingReason": "BLUETTI US and TicketNetwork are approved advertiser relationships, but Awin states it cannot pay DealDesk until required tax information is complete. TicketNetwork's exact payable link and signed-in commercial terms are also unverified.",
-      "nextAction": "Complete Awin tax onboarding; then verify TicketNetwork advertiser 89223 terms and an exact payable link, and reverify every BLUETTI or TicketNetwork offer before publication.",
-      "lastCheckedAt": "2026-08-10T22:46:41.076Z",
+      "blockingReason": "Awin states it cannot pay DealDesk until required tax information is complete. TicketNetwork's exact homepage link, current assigned 12% rate, and 30-day attribution are verified, but the TNTIX promotion has not been independently verified at merchant checkout.",
+      "nextAction": "The account owner must complete Awin tax details and then bank details. Separately decide whether to accept Giftlab advertiser 95201's legal invitation; do not treat the invitation's up-to-20% headline as an assigned rate. After payout readiness is confirmed, independently reverify TicketNetwork's promotion and BLUETTI's live offer before publication.",
+      "lastCheckedAt": "2026-08-11T05:56:55.000Z",
       "evidenceUrl": "https://www.awin.com/us/news-and-events/awin-news/awin-shareasale-new-era"
     },
     {
@@ -185,8 +185,8 @@
       "commissionAccess": true,
       "canPublish": true,
       "blockingReason": null,
-      "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, and Proton links verified. Malwarebytes advertiser 3743656 is now active; generate and verify its first exact CJ link and live offer before publication.",
-      "lastCheckedAt": "2026-08-10T22:46:41.076Z",
+      "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, Proton, CuriosityStream, and Malwarebytes links and live offers verified. Recheck CuriosityStream and Malwarebytes pricing, terms, destinations, and imagery within 24 hours.",
+      "lastCheckedAt": "2026-08-11T07:13:13.000Z",
       "evidenceUrl": "https://www.cj.com/publisher"
     },
     {

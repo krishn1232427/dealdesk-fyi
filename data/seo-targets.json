@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-10T23:05:08.278Z",
+  "generatedAt": "2026-08-11T07:39:48.823Z",
   "targets": [
     {
       "id": "cj-nordvpn-2-year-20260801",
@@ -12,7 +12,7 @@
         "NordVPN Basic 2-year plan discount",
         "NordVPN NordVPN Basic 2-year plan"
       ],
-      "score": 81,
+      "score": 77,
       "merchantPath": "/merchant/nordvpn/",
       "comparisonPath": ""
     },
@@ -40,7 +40,7 @@
         "Prime for Young Adults — 6-month $0 trial discount",
         "Amazon Prime Prime for Young Adults — 6-month $0 trial"
       ],
-      "score": 81,
+      "score": 77,
       "merchantPath": "/merchants/",
       "comparisonPath": ""
     },
@@ -68,7 +68,7 @@
         "Surfshark Starter 24-month plan discount",
         "Surfshark Surfshark Starter 24-month plan"
       ],
-      "score": 81,
+      "score": 77,
       "merchantPath": "/merchant/surfshark/",
       "comparisonPath": ""
     },
@@ -82,8 +82,22 @@
         "Sensibo Air + Room Sensor discount",
         "Sensibo Sensibo Air + Room Sensor"
       ],
-      "score": 83,
+      "score": 79,
       "merchantPath": "/merchant/sensibo/",
+      "comparisonPath": ""
+    },
+    {
+      "id": "cj-malwarebytes-standard-2-year-25off-20260811",
+      "url": "https://dealdesk.fyi/deals/cj-malwarebytes-standard-2-year-25off/",
+      "title": "Malwarebytes Standard 2-year plan deal: $67.48, 25% off | DealDesk",
+      "primaryQuery": "Malwarebytes Standard 2-year plan deal",
+      "secondaryQueries": [
+        "Malwarebytes Standard 2-year plan price",
+        "Malwarebytes Standard 2-year plan discount",
+        "Malwarebytes Malwarebytes Standard 2-year plan"
+      ],
+      "score": 77,
+      "merchantPath": "/merchant/malwarebytes/",
       "comparisonPath": ""
     },
     {
@@ -96,7 +110,7 @@
         "Audible Standard — 30-day free trial discount",
         "Audible Audible Standard — 30-day free trial"
       ],
-      "score": 69,
+      "score": 65,
       "merchantPath": "/merchants/",
       "comparisonPath": ""
     },
@@ -110,8 +124,22 @@
         "NordPass Premium 2-year plan discount",
         "NordPass NordPass Premium 2-year plan"
       ],
-      "score": 81,
+      "score": 77,
       "merchantPath": "/merchant/nordpass/",
+      "comparisonPath": ""
+    },
+    {
+      "id": "cj-curiositystream-standard-monthly-20260811",
+      "url": "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
+      "title": "CuriosityStream Standard — $5.99/month deal: $5.99/mo | DealDesk",
+      "primaryQuery": "CuriosityStream Standard — $5.99/month deal",
+      "secondaryQueries": [
+        "CuriosityStream Standard — $5.99/month price",
+        "CuriosityStream Standard — $5.99/month discount",
+        "CuriosityStream CuriosityStream Standard — $5.99/month"
+      ],
+      "score": 61,
+      "merchantPath": "/merchant/curiositystream/",
       "comparisonPath": ""
     },
     {
@@ -124,7 +152,7 @@
         "Kindle Unlimited — 2 months for $0.99 discount",
         "Kindle Unlimited Kindle Unlimited — 2 months for $0.99"
       ],
-      "score": 81,
+      "score": 77,
       "merchantPath": "/merchants/",
       "comparisonPath": ""
     },
@@ -138,7 +166,7 @@
         "Amazon Kids+ — 1-month free trial discount",
         "Amazon Kids+ Amazon Kids+ — 1-month free trial"
       ],
-      "score": 69,
+      "score": 65,
       "merchantPath": "/merchants/",
       "comparisonPath": ""
     },
@@ -152,7 +180,7 @@
         "Amazon Music Unlimited trial or membership discount",
         "Amazon Music Unlimited Amazon Music Unlimited trial or membership"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchants/",
       "comparisonPath": ""
     },
@@ -166,7 +194,7 @@
         "Prime Video Channels — trials and subscriptions discount",
         "Prime Video Channels Prime Video Channels — trials and subscriptions"
       ],
-      "score": 49,
+      "score": 45,
       "merchantPath": "/merchants/",
       "comparisonPath": ""
     },
@@ -180,7 +208,7 @@
         "Prime trial with Prime Video — eligible customers discount",
         "Amazon Prime Video Prime trial with Prime Video — eligible customers"
       ],
-      "score": 49,
+      "score": 45,
       "merchantPath": "/merchants/",
       "comparisonPath": ""
     },
@@ -208,7 +236,7 @@
         "Niagara queen cooling mattress topper discount",
         "Amazon Niagara queen cooling mattress topper"
       ],
-      "score": 72,
+      "score": 68,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -236,7 +264,7 @@
         "True Classic men's T-shirts, 6-pack discount",
         "Amazon True Classic men's T-shirts, 6-pack"
       ],
-      "score": 72,
+      "score": 68,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -264,7 +292,7 @@
         "Roborock Qrevo S5V robot vacuum and mop discount",
         "Amazon Roborock Qrevo S5V robot vacuum and mop"
       ],
-      "score": 72,
+      "score": 68,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -292,7 +320,7 @@
         "Premier Protein chocolate shakes, 12-pack discount",
         "Amazon Premier Protein chocolate shakes, 12-pack"
       ],
-      "score": 68,
+      "score": 64,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -320,7 +348,7 @@
         "Heavy-duty moving bags, 6-pack discount",
         "Amazon Heavy-duty moving bags, 6-pack"
       ],
-      "score": 72,
+      "score": 68,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -348,7 +376,7 @@
         "Shark Navigator Lift-Away vacuum discount",
         "Amazon Shark Navigator Lift-Away vacuum"
       ],
-      "score": 72,
+      "score": 68,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -376,7 +404,7 @@
         "Dyson V8 cordless vacuum discount",
         "Amazon Dyson V8 cordless vacuum"
       ],
-      "score": 78,
+      "score": 74,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": "/compare/dyson-v8/"
     },
@@ -404,7 +432,7 @@
         "Levoit Core 300 air purifier discount",
         "Amazon Levoit Core 300 air purifier"
       ],
-      "score": 68,
+      "score": 64,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -432,7 +460,7 @@
         "Zinus 5-inch twin memory-foam mattress discount",
         "Amazon Zinus 5-inch twin memory-foam mattress"
       ],
-      "score": 68,
+      "score": 64,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },
@@ -460,7 +488,7 @@
         "Filterbuy 16×25×1 air filters, 4-pack discount",
         "Amazon Filterbuy 16×25×1 air filters, 4-pack"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/amazon/",
       "comparisonPath": ""
     },

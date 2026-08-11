@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "reviewedAt": "2026-08-06T18:41:05.000Z",
-  "source": "Authenticated Awin approval email delivered to hello.launchdesk@gmail.com",
+  "reviewedAt": "2026-08-11T05:56:55.000Z",
+  "source": "Authenticated Awin approval email plus the signed-in advertiser profile, assigned-commission timeline, My Offers page, and Link Builder",
   "publisher": {
     "legalName": "Launchdesk LLC",
     "publisherID": "2973087",
@@ -18,16 +18,54 @@
     "followupSubject": "TicketNetwork (89223): This Week's Top Sellers & Upcoming Onsales"
   },
   "commercialTerms": {
-    "verified": false,
-    "reason": "The approval and promotional emails did not state the signed-in commission schedule or attribution window."
+    "verified": true,
+    "verifiedAt": "2026-08-11T05:56:55.000Z",
+    "assignedPublisherRate": "12% on qualifying sales",
+    "attributionDays": 30,
+    "averagePaymentTimeDays": 29,
+    "autoValidationDays": 50,
+    "averageOrderValue": "Over 350 USD",
+    "source": "Awin's assigned-commission timeline and advertiser profile",
+    "note": "The current profile's 30-day attribution field is used instead of the older 45-day cookie claim in the program narrative. Awin's assigned timeline currently displays 12.00%-12.00%; DealDesk has not inferred any unassigned rate."
   },
   "tracking": {
-    "status": "unverified",
-    "requirement": "Generate an exact DealDesk Awin tracking link from Linking Methods and verify attribution, destination, current event availability, disclosures, and approved imagery."
+    "status": "verified",
+    "verifiedAt": "2026-08-11T05:56:55.000Z",
+    "linkMethod": "Awin Link Builder",
+    "publisherID": "2973087",
+    "advertiserID": "89223",
+    "trackingURL": "https://www.awin1.com/cread.php?awinmid=89223&awinaffid=2973087&ued=https%3A%2F%2Fwww.ticketnetwork.com%2F",
+    "requestedDestinationURL": "https://www.ticketnetwork.com/",
+    "verifiedMerchantLandingURL": "https://www.ticketnetwork.com/",
+    "redirectCount": 1,
+    "httpStatus": 200,
+    "note": "The final merchant response included ephemeral Awin attribution parameters; those click-specific identifiers are intentionally not stored."
+  },
+  "promotion": {
+    "networkStatus": "active",
+    "code": "TNTIX",
+    "title": "Standard Affiliate Discount",
+    "customerTerms": "Save $10 on orders of $200 or more",
+    "minimumOrderUSD": 200,
+    "discountUSD": 10,
+    "region": "USA",
+    "appliesTo": "All commission groups",
+    "commissionChange": "None",
+    "startsAtAsDisplayed": "1/25/2016 9:00 PM",
+    "endsAtAsDisplayed": "12/30/2050 9:00 PM",
+    "merchantCheckoutVerified": false,
+    "publicationReady": false,
+    "note": "Awin lists this promotion as active, but DealDesk has not independently verified the code, eligibility, fees, inventory, or savings at TicketNetwork checkout."
+  },
+  "payout": {
+    "taxDetailsComplete": false,
+    "bankDetailsEntryBlocked": true,
+    "payoutReady": false,
+    "statement": "Awin states that tax details must be completed before bank details can be entered and that it cannot pay the account until tax details are complete."
   },
   "publication": {
     "allowed": false,
-    "reason": "Awin tax onboarding remains incomplete and no exact payable TicketNetwork link with verified commercial terms is recorded."
+    "reason": "The exact Awin link and current assigned terms are verified, but Awin tax onboarding still prevents payment and the TNTIX promotion has not been independently verified at merchant checkout. No event-specific offer, price, availability, fee disclosure, or approved image is publication-ready."
   },
-  "privacy": "No passwords, cookies, tax documents, banking details, or session tokens are stored in this evidence record."
+  "privacy": "No passwords, cookies, tax documents, banking details, session tokens, or ephemeral click identifiers are stored in this evidence record."
 }

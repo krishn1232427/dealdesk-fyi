@@ -1,9 +1,9 @@
 {
   "name": "DealDesk Deal Index",
-  "updatedAt": "2026-08-07T13:50:02.000Z",
-  "generatedAt": "2026-08-10T23:05:06.653Z",
-  "publicDeals": 799,
-  "merchants": 8,
+  "updatedAt": "2026-08-11T07:13:13.000Z",
+  "generatedAt": "2026-08-11T07:39:47.826Z",
+  "publicDeals": 801,
+  "merchants": 10,
   "categories": 11,
   "medianDisplayedPrice": 249.99,
   "medianDisplayedDiscountPercent": 44,
@@ -57,6 +57,14 @@
       "latestVerification": "2026-08-04"
     },
     {
+      "category": "Subscriptions",
+      "count": 10,
+      "lowestDisplayedPrice": 0,
+      "medianDisplayedPrice": 1.94,
+      "maximumDisplayedDiscountPercent": 96,
+      "latestVerification": "2026-08-11"
+    },
+    {
       "category": "Home",
       "count": 9,
       "lowestDisplayedPrice": 23.98,
@@ -65,20 +73,12 @@
       "latestVerification": "2026-08-03"
     },
     {
-      "category": "Subscriptions",
-      "count": 9,
-      "lowestDisplayedPrice": 0,
-      "medianDisplayedPrice": 1.39,
-      "maximumDisplayedDiscountPercent": 96,
-      "latestVerification": "2026-08-04"
-    },
-    {
       "category": "Streaming",
-      "count": 3,
+      "count": 4,
       "lowestDisplayedPrice": 0,
-      "medianDisplayedPrice": 0,
+      "medianDisplayedPrice": 2.995,
       "maximumDisplayedDiscountPercent": 0,
-      "latestVerification": "2026-08-02"
+      "latestVerification": "2026-08-11"
     },
     {
       "category": "Fashion",
