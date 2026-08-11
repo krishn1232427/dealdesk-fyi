@@ -662,6 +662,33 @@ for (const approval of outboundApprovals.deals || []) {
 
 const publicDeals = seenDeals.filter(isPublicDeal);
 const publicDealIDs = new Set(publicDeals.map((deal) => deal.id));
+const searchIndexPayload = JSON.parse(await readFile(new URL("../data/search-index.json", import.meta.url), "utf8"));
+const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
+const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
+const searchIndexEvaluatedAt = new Date(searchIndexPayload.evaluatedAt || "").getTime();
+if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+    !Number.isFinite(searchIndexEvaluatedAt) || searchIndexEntries.length !== publicDeals.length ||
+    searchIndexByID.size !== publicDeals.length) {
+  errors.push("data/search-index.json: must contain exactly one policy-v1 record for every public deal");
+}
+for (const deal of publicDeals) {
+  const entry = searchIndexByID.get(deal.id);
+  const recheckAt = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : NaN;
+  const expectedIndexable = Number.isFinite(recheckAt) && searchIndexEvaluatedAt <= recheckAt;
+  const expectedReason = !Number.isFinite(recheckAt)
+    ? "recheck-missing-or-invalid"
+    : expectedIndexable ? "verification-current" : "verification-overdue";
+  if (!entry || entry.url !== `/deals/${slugFor(deal)}/` || entry.indexable !== expectedIndexable ||
+      entry.reason !== expectedReason || entry.recheckAfter !== (deal.recheckAfter || null)) {
+    errors.push(`data/search-index.json:${deal.id}: missing or inconsistent search-index state`);
+  }
+}
+const indexablePublicDealCount = publicDeals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === true).length;
+if (Number(searchIndexPayload.publicDeals) !== publicDeals.length ||
+    Number(searchIndexPayload.indexableDeals) !== indexablePublicDealCount ||
+    Number(searchIndexPayload.browseOnlyDeals) !== publicDeals.length - indexablePublicDealCount) {
+  errors.push("data/search-index.json: summary counts do not match public deals");
+}
 for (const deal of publicDeals) {
   const approval = approvalByID.get(deal.id);
   if (!approval) {
@@ -679,8 +706,17 @@ for (const deal of publicDeals) {
     errors.push(`deals/${slugFor(deal)}: current public deal detail page is missing`);
     continue;
   }
-  if (detailPage.includes('content="noindex')) {
-    errors.push(`deals/${slugFor(deal)}: public deal page must be indexable`);
+  const searchIndexEntry = searchIndexByID.get(deal.id);
+  if (searchIndexEntry?.indexable === true &&
+      (!detailPage.includes('content="index,follow') || detailPage.includes('content="noindex'))) {
+    errors.push(`deals/${slugFor(deal)}: current verification requires index,follow`);
+  }
+  if (searchIndexEntry?.indexable === false && !detailPage.includes('content="noindex,follow')) {
+    errors.push(`deals/${slugFor(deal)}: overdue verification requires noindex,follow while the page remains browseable`);
+  }
+  if (searchIndexEntry?.reason &&
+      !detailPage.includes(`name="dealdesk-index-status" content="${searchIndexEntry.reason}"`)) {
+    errors.push(`deals/${slugFor(deal)}: search-index status marker does not match the manifest`);
   }
   if (!detailPage.includes('"@type":"BreadcrumbList"')) {
     errors.push(`deals/${slugFor(deal)}: public deal page is missing breadcrumb structured data`);
@@ -758,11 +794,20 @@ if (staleDeals.length) {
 }
 
 const generatedDealDirectories = await readdir(new URL("../deals/", import.meta.url), { withFileTypes: true });
+const searchIndexBySlug = new Map(publicDeals.map((deal) => [slugFor(deal), searchIndexByID.get(deal.id)]));
 for (const entry of generatedDealDirectories) {
   if (!entry.isDirectory() || entry.name === "page") continue;
   const detailPage = await readFile(new URL(`../deals/${entry.name}/index.html`, import.meta.url), "utf8");
-  if (detailPage.includes('content="noindex') || detailPage.includes('http-equiv="refresh"')) {
-    errors.push(`deals/${entry.name}: generated deal directories must not contain retired noindex or redirect shells`);
+  const searchIndexEntry = searchIndexBySlug.get(entry.name);
+  if (!searchIndexEntry) {
+    errors.push(`deals/${entry.name}: generated directory is not a current public deal`);
+  } else if (searchIndexEntry.indexable === true && detailPage.includes('content="noindex')) {
+    errors.push(`deals/${entry.name}: indexable deal directory contains noindex`);
+  } else if (searchIndexEntry.indexable === false && !detailPage.includes('content="noindex,follow')) {
+    errors.push(`deals/${entry.name}: browse-only deal directory must contain noindex,follow`);
+  }
+  if (detailPage.includes('http-equiv="refresh"')) {
+    errors.push(`deals/${entry.name}: generated deal directories must not contain redirect shells`);
   }
 }
 

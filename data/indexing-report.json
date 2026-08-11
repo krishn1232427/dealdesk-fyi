@@ -1,19 +1,19 @@
 {
   "build": "2026-08-08-crawl-v3",
-  "generatedAt": "2026-08-11T07:41:11.582Z",
+  "generatedAt": "2026-08-11T08:43:00.014Z",
   "catalogUpdatedAt": "2026-08-11T07:13:13.000Z",
   "publicDeals": 801,
+  "indexableDeals": 2,
+  "browseOnlyDeals": 799,
   "archivePages": 26,
+  "indexableArchivePages": 1,
   "categories": 11,
   "categoryPages": 31,
-  "prioritySitemapDeals": 100,
+  "indexableCategoryPages": 11,
+  "prioritySitemapDeals": 2,
   "sitemapFiles": [
     "sitemap-pages.xml",
-    "sitemap-deals-priority.xml",
-    "sitemap-deals-1.xml",
-    "sitemap-deals-2.xml",
-    "sitemap-deals-3.xml",
-    "sitemap-deals-4.xml"
+    "sitemap-deals-priority.xml"
   ],
   "orphanDeals": []
 }

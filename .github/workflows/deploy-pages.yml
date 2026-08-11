@@ -28,6 +28,7 @@ jobs:
       - name: Check out master
         uses: actions/checkout@v4
         with:
+          ref: master
           fetch-depth: 0
 
       - name: Configure Node
@@ -58,6 +59,8 @@ jobs:
 
       - name: Check build scripts
         run: |
+          node --check scripts/build-seo.mjs
+          node --check scripts/validate-deals.mjs
           node --check scripts/build-indexing-hubs.mjs
           node --check scripts/validate-indexing.mjs
           node --check scripts/build-seo-authority.mjs
@@ -109,6 +112,16 @@ jobs:
 
       - name: Validate comparison and history integrity
         run: node scripts/validate-content-integrity.mjs
+
+      - name: Validate final generated release
+        run: |
+          node scripts/validate-deals.mjs
+          node scripts/validate-indexing.mjs
+          node scripts/validate-seo-authority.mjs
+          node scripts/validate-search-discovery.mjs
+          node scripts/validate-image-sitemap.mjs
+          node scripts/validate-price-history.mjs
+          node scripts/validate-content-integrity.mjs
 
       - name: Commit finalized DealDesk release to master
         id: release

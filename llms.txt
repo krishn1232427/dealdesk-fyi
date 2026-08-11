@@ -1,11 +1,14 @@
 # DealDesk
 
-> DealDesk is a verified deal-analysis and comparison site. It publishes canonical pages for current offers, merchant directories, comparison pages, transparent deal scores, and machine-readable feeds.
+> DealDesk is a verified deal-analysis and comparison site. It publishes canonical pages for current offers, curated deal guides, merchant directories, comparison pages, transparent deal scores, and machine-readable feeds.
 
 ## Canonical site
 - https://dealdesk.fyi/
 - Latest deals: https://dealdesk.fyi/latest-deals/
 - All deals: https://dealdesk.fyi/deals/
+- Deal guides: https://dealdesk.fyi/collections/
+- Subscription deals: https://dealdesk.fyi/category/subscriptions/
+- Streaming deals: https://dealdesk.fyi/category/streaming/
 - Merchants: https://dealdesk.fyi/merchants/
 - Comparisons: https://dealdesk.fyi/comparisons/
 - Methodology: https://dealdesk.fyi/how-we-rank-deals/
@@ -29,5 +32,5 @@
 - Hub: https://dealdesk.fyi/price-history/
 - JSON dataset: https://dealdesk.fyi/data/price-history.json
 - CSV dataset: https://dealdesk.fyi/data/price-history.csv
-- Method: exact-listing baselines plus changes or seven-day observations.
+- Method: exact-listing baselines plus changes recorded by a newer merchant verification.
 # END PRICE HISTORY

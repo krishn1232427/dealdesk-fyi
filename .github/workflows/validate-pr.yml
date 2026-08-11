@@ -1,0 +1,58 @@
+name: Validate DealDesk pull request
+
+on:
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@v4
+
+      - name: Configure Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check source scripts
+        run: |
+          node --check scripts/build-seo.mjs
+          node --check scripts/build-indexing-hubs.mjs
+          node --check scripts/build-seo-authority.mjs
+          node --check scripts/build-search-discovery.mjs
+          node --check scripts/build-image-sitemap.mjs
+          node --check scripts/build-price-history.mjs
+          node --check scripts/validate-deals.mjs
+          node --check scripts/validate-indexing.mjs
+          node --check scripts/validate-seo-authority.mjs
+          node --check scripts/validate-search-discovery.mjs
+          node --check scripts/validate-image-sitemap.mjs
+
+      - name: Build complete release
+        run: |
+          node scripts/build-seo.mjs
+          node scripts/build-indexing-hubs.mjs
+          node scripts/build-seo-authority.mjs
+          node scripts/build-search-discovery.mjs
+          node scripts/build-image-sitemap.mjs
+          node scripts/build-price-history.mjs
+
+      - name: Validate final release state
+        run: |
+          node scripts/validate-deals.mjs
+          node scripts/validate-indexing.mjs
+          node scripts/validate-seo-authority.mjs
+          node scripts/validate-search-discovery.mjs
+          node scripts/validate-image-sitemap.mjs
+          node scripts/validate-price-history.mjs
+          node scripts/validate-content-integrity.mjs

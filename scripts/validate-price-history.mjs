@@ -31,6 +31,11 @@ for (const deal of currentDeals) {
   const dates = record.observations.map((observation) => observation.date);
   if (new Set(dates).size !== dates.length) fail(`Duplicate observation date for ${deal.id}`);
   if (record.observations.length > 104) fail(`Too many observations for ${deal.id}`);
+  for (const observation of record.observations) {
+    if (observation.date !== observation.verifiedAt) fail(`Price history contains a build-time observation without matching verification for ${deal.id}`);
+  }
+  if (record.lastSeen !== record.observations.at(-1).date) fail(`Price history lastSeen does not match the latest verified observation for ${deal.id}`);
+  if (record.firstSeen !== record.observations[0].date) fail(`Price history firstSeen does not match the first verified observation for ${deal.id}`);
 
   const file = resolve(root, String(deal.url || "").replace(/^\//, ""), "index.html");
   const html = await readFile(file, "utf8");

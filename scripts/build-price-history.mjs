@@ -32,11 +32,6 @@ const dateOnly = (value, fallback = today) => {
   const date = new Date(value || fallback);
   return Number.isNaN(date.getTime()) ? fallback : date.toISOString().slice(0, 10);
 };
-const dayDistance = (left, right) => {
-  const a = new Date(`${left}T00:00:00Z`).getTime();
-  const b = new Date(`${right}T00:00:00Z`).getTime();
-  return Number.isFinite(a) && Number.isFinite(b) ? Math.max(0, Math.round((b - a) / 86400000)) : 0;
-};
 const moneyAmount = (value) => {
   const match = String(value || "").replaceAll(",", "").match(/(?:US)?\$\s*(-?\d+(?:\.\d+)?)/i);
   return match ? Number(match[1]) : null;
@@ -55,9 +50,10 @@ const money = (amount) => Number.isFinite(amount)
 for (const record of Object.values(history.deals)) record.active = false;
 
 for (const deal of currentDeals) {
+  const observedDate = dateOnly(deal.verifiedAt);
   const observation = {
-    date: today,
-    verifiedAt: dateOnly(deal.verifiedAt),
+    date: observedDate,
+    verifiedAt: observedDate,
     currentPrice: String(deal.currentPrice || ""),
     currentPriceAmount: moneyAmount(deal.currentPrice),
     originalPrice: String(deal.originalPrice || ""),
@@ -71,8 +67,8 @@ for (const deal of currentDeals) {
     url: deal.url,
     merchant: deal.merchant,
     category: deal.categoryLabel || deal.category || "Other",
-    firstSeen: today,
-    lastSeen: today,
+    firstSeen: observedDate,
+    lastSeen: observedDate,
     active: true,
     observations: [],
   };
@@ -81,16 +77,17 @@ for (const deal of currentDeals) {
   prior.merchant = deal.merchant;
   prior.category = deal.categoryLabel || deal.category || "Other";
   prior.active = true;
-  prior.firstSeen = prior.firstSeen || today;
-  prior.lastSeen = today;
-  prior.observations = Array.isArray(prior.observations) ? prior.observations : [];
+  prior.observations = (Array.isArray(prior.observations) ? prior.observations : [])
+    .filter((item) => item.date === dateOnly(item.verifiedAt, item.date));
   const last = prior.observations.at(-1);
-  if (last?.date === today) {
+  if (last?.date === observedDate) {
     prior.observations[prior.observations.length - 1] = observation;
-  } else if (!last || observationFingerprint(last) !== observationFingerprint(observation) || dayDistance(last.date, today) >= 7) {
+  } else if (!last || (observedDate > last.date && observationFingerprint(last) !== observationFingerprint(observation))) {
     prior.observations.push(observation);
   }
   prior.observations = prior.observations.slice(-maxObservationsPerDeal);
+  prior.firstSeen = prior.observations[0]?.date || observedDate;
+  prior.lastSeen = prior.observations.at(-1)?.date || observedDate;
   history.deals[deal.id] = prior;
 }
 
@@ -216,7 +213,7 @@ const historyIndexHTML = `<!doctype html>
 </head>
 <body class="authority-page">
 <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/deals/">All deals</a><a href="/merchants/">Merchants</a><a href="/deal-index/">Deal Index</a></div></nav></header>
-<main class="deal-home shell authority-shell"><nav class="deal-breadcrumb"><a href="/">DealDesk</a><span>›</span><span>Price history</span></nav><header class="authority-hero"><span class="page-kicker"><span></span> Original DealDesk data</span><h1>Deal price history</h1><p>${esc(description)}</p><div class="price-history-downloads"><a href="/data/price-history.json" download>Download JSON</a><a href="/data/price-history.csv" download>Download CSV</a></div></header><section class="authority-stat-grid"><article><strong>${activeRecords.length}</strong><span>active offers tracked</span></article><article><strong>${observationCount}</strong><span>stored observations</span></article><article><strong>${merchantCount}</strong><span>merchants represented</span></article><article><strong>${earliest}</strong><span>tracking began</span></article></section><section class="authority-analysis"><h2>How this history works</h2><p>DealDesk records a baseline for each exact listing and stores a new observation when the displayed price or material terms change, or after seven days. This makes the dataset useful without manufacturing daily volatility. The history is listing-specific and does not claim complete market coverage.</p></section><section aria-labelledby="price-movements-title"><div class="price-history-heading"><div><span class="page-kicker"><span></span> Verified movements</span><h2 id="price-movements-title">Observed price changes</h2></div></div><div class="price-change-grid">${changeCards}</div></section></main>
+<main class="deal-home shell authority-shell"><nav class="deal-breadcrumb"><a href="/">DealDesk</a><span>›</span><span>Price history</span></nav><header class="authority-hero"><span class="page-kicker"><span></span> Original DealDesk data</span><h1>Deal price history</h1><p>${esc(description)}</p><div class="price-history-downloads"><a href="/data/price-history.json" download>Download JSON</a><a href="/data/price-history.csv" download>Download CSV</a></div></header><section class="authority-stat-grid"><article><strong>${activeRecords.length}</strong><span>active offers tracked</span></article><article><strong>${observationCount}</strong><span>verified observations</span></article><article><strong>${merchantCount}</strong><span>merchants represented</span></article><article><strong>${earliest}</strong><span>tracking began</span></article></section><section class="authority-analysis"><h2>How this history works</h2><p>DealDesk records a baseline for each exact listing and adds a new observation only when a newer merchant verification records a changed price or material term. Rebuilding the site does not create a new observation. The history is listing-specific and does not claim complete market coverage.</p></section><section aria-labelledby="price-movements-title"><div class="price-history-heading"><div><span class="page-kicker"><span></span> Verified movements</span><h2 id="price-movements-title">Observed price changes</h2></div></div><div class="price-change-grid">${changeCards}</div></section></main>
 <footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Verified prices. Better decisions.</p><div class="footer-links"><a href="/deals/">All deals</a><a href="/merchants/">Merchants</a><a href="/comparisons/">Comparisons</a><a href="/deal-index/">Deal Index</a><a href="/price-history/">Price history</a><a href="/editorial-policy/">Editorial policy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. Prices and availability can change at checkout.</div></footer>
 </body>
 </html>
@@ -252,7 +249,7 @@ await writeFile(homePath, home);
 const llmsPath = resolve(root, "llms.txt");
 let llms = await readFile(llmsPath, "utf8");
 llms = llms.replace(/\n?# PRICE history[\s\S]*?# END PRICE history\n?/gi, "\n");
-llms = `${llms.trimEnd()}\n\n# PRICE HISTORY\n- Hub: ${site}/price-history/\n- JSON dataset: ${site}/data/price-history.json\n- CSV dataset: ${site}/data/price-history.csv\n- Method: exact-listing baselines plus changes or seven-day observations.\n# END PRICE HISTORY\n`;
+llms = `${llms.trimEnd()}\n\n# PRICE HISTORY\n- Hub: ${site}/price-history/\n- JSON dataset: ${site}/data/price-history.json\n- CSV dataset: ${site}/data/price-history.csv\n- Method: exact-listing baselines plus changes recorded by a newer merchant verification.\n# END PRICE HISTORY\n`;
 await writeFile(llmsPath, llms);
 
 console.log(`Tracked ${activeRecords.length} active deals across ${observationCount} observations; generated ${recordsWithChanges.length} price-change records.`);

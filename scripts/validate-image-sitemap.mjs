@@ -13,13 +13,28 @@ const escapeXML = (value) => String(value ?? "")
   .replaceAll("'", "&apos;");
 const occurrences = (text, needle) => text.split(needle).length - 1;
 
-const [catalog, sitemap, sitemapIndex] = await Promise.all([
+const [catalog, searchIndexPayload, sitemap, sitemapIndex] = await Promise.all([
   readFile(resolve(root, "data", "latest-deals.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data", "search-index.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "sitemap-images.xml"), "utf8"),
   readFile(resolve(root, "sitemap.xml"), "utf8"),
 ]);
 const deals = Array.isArray(catalog.deals) ? catalog.deals : [];
-const eligible = deals.filter((deal) => String(deal.url || "").startsWith("/") && /^https?:\/\//i.test(String(deal.imageURL || "").trim()));
+const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
+const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
+if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+    searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
+  fail("Search-index manifest must contain exactly one policy-v1 record for every public deal");
+}
+for (const deal of deals) {
+  const entry = searchIndexByID.get(deal.id);
+  if (!entry || entry.url !== deal.url || typeof entry.indexable !== "boolean") {
+    fail(`Search-index manifest is inconsistent for ${deal.id}`);
+  }
+}
+const browseOnlyDeals = deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === false);
+const eligible = deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === true &&
+  String(deal.url || "").startsWith("/") && /^https?:\/\//i.test(String(deal.imageURL || "").trim()));
 const uniquePages = new Map(eligible.map((deal) => [`${site}${deal.url}`, deal]));
 
 if (!sitemap.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) fail("Image sitemap XML declaration is missing");
@@ -37,11 +52,19 @@ for (const [pageURL, deal] of uniquePages) {
 
   const pageFile = resolve(root, String(deal.url).replace(/^\//, ""), "index.html");
   const pageHTML = await readFile(pageFile, "utf8");
+  if (!pageHTML.includes('content="index,follow') || pageHTML.includes('content="noindex')) {
+    fail(`Image sitemap landing page is not indexable: ${deal.id || pageURL}`);
+  }
   if (!pageHTML.includes(String(deal.imageURL).replaceAll("&", "&amp;")) && !pageHTML.includes(String(deal.imageURL))) {
     fail(`Landing page does not reference its sitemap image: ${deal.id || pageURL}`);
+  }
+}
+for (const deal of browseOnlyDeals) {
+  if (sitemap.includes(`<loc>${escapeXML(`${site}${deal.url}`)}</loc>`)) {
+    fail(`Image sitemap contains browse-only deal ${deal.id}`);
   }
 }
 
 const size = (await stat(resolve(root, "sitemap-images.xml"))).size;
 if (size >= 50 * 1024 * 1024) fail("Image sitemap exceeds the 50 MB uncompressed sitemap limit");
-console.log(`Validated ${uniquePages.size} image sitemap entries (${size} bytes).`);
+console.log(`Validated ${uniquePages.size} image sitemap entries from ${deals.length - browseOnlyDeals.length} indexable of ${deals.length} browseable deals (${size} bytes).`);
