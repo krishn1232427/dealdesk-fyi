@@ -6,6 +6,7 @@ const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-p
 const magzterEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/magzter-cj-20260803.json", import.meta.url), "utf8"));
 const protonEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/proton-cj-20260804.json", import.meta.url), "utf8"));
 const curiosityStreamEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/curiositystream-cj-20260811.json", import.meta.url), "utf8"));
+const malwarebytesEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/malwarebytes-cj-20260811.json", import.meta.url), "utf8"));
 const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
 const hotelsBrokenEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/hotels-expedia-broken-20260804.json", import.meta.url), "utf8"));
 const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
@@ -124,7 +125,7 @@ for (const feedPath of feedPaths) {
         errors.push(`${label}: Amazon tag must match trackingID`);
       }
     } else if (deal.network === "cj") {
-      const allowedCJHosts = new Set(["www.kqzyfj.com", "www.tkqlhce.com"]);
+      const allowedCJHosts = new Set(["www.dpbolvw.net", "www.kqzyfj.com", "www.tkqlhce.com"]);
       const expectedPath = `/click-${deal.trackingID}-${deal.linkID}`;
       const program = cjPrograms.get(String(deal.advertiserID || ""));
 
@@ -324,6 +325,79 @@ for (const feedPath of feedPaths) {
         if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
             recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
           errors.push(`${label}: CuriosityStream verification window must be no more than 24 hours`);
+        }
+      }
+      if (String(deal.advertiserID) === "3743656") {
+        const expectedEvidenceRecord = "data/affiliate-evidence/malwarebytes-cj-20260811.json";
+        let merchantURL;
+        let imageURL;
+        let checkoutURL;
+        try { merchantURL = new URL(deal.merchantURL); } catch {}
+        try { imageURL = new URL(deal.imageURL); } catch {}
+        try { checkoutURL = new URL(malwarebytesEvidence?.merchantOffer?.checkoutURL); } catch {}
+
+        if (program?.evidenceRecord !== expectedEvidenceRecord || deal.evidenceRecord !== expectedEvidenceRecord) {
+          errors.push(`${label}: Malwarebytes program and deal must reference the authenticated evidence record`);
+        }
+        if (malwarebytesEvidence?.advertiser?.relationship !== "Active" ||
+            String(malwarebytesEvidence?.advertiser?.advertiserID) !== String(deal.advertiserID) ||
+            String(malwarebytesEvidence?.publisher?.cjSiteID) !== String(deal.trackingID) ||
+            String(malwarebytesEvidence?.creative?.linkID) !== String(deal.linkID) ||
+            malwarebytesEvidence?.tracking?.trackingURL !== deal.affiliateURL ||
+            malwarebytesEvidence?.tracking?.finalLandingURL !== deal.merchantURL ||
+            malwarebytesEvidence?.image?.url !== deal.imageURL ||
+            malwarebytesEvidence?.reviewedAt !== deal.verifiedAt ||
+            program?.reviewedAt !== deal.verifiedAt) {
+          errors.push(`${label}: Malwarebytes deal does not match its authenticated evidence record`);
+        }
+        if (merchantURL?.origin !== "https://www.malwarebytes.com" ||
+            merchantURL.pathname !== "/landing-page/get-premium-affiliate" ||
+            merchantURL.search || merchantURL.hash) {
+          errors.push(`${label}: Malwarebytes must use the verified affiliate landing page`);
+        }
+        if (checkoutURL?.origin !== "https://store.malwarebytes.com" ||
+            checkoutURL.pathname !== "/342/purl-premium-aff-2" ||
+            checkoutURL.searchParams.get("quantity") !== "1" ||
+            checkoutURL.searchParams.get("coupon") !== "MBPRM-AFF-25P" ||
+            checkoutURL.searchParams.get("x-source") !== "affiliate") {
+          errors.push(`${label}: Malwarebytes evidence must use the verified two-year U.S. checkout`);
+        }
+        if (imageURL?.origin !== "https://www.malwarebytes.com" ||
+            imageURL.pathname !== "/wp-content/uploads/sites/2/2024/11/premium-heroimage.original.png" ||
+            imageURL.searchParams.get("w") !== "600" || imageURL.hash ||
+            malwarebytesEvidence?.image?.width !== 600 || malwarebytesEvidence?.image?.height !== 571) {
+          errors.push(`${label}: Malwarebytes must use the verified official merchant hero image`);
+        }
+        if (deal.sourceType !== "cj-text-link" || deal.offerType !== "subscription") {
+          errors.push(`${label}: Malwarebytes must be a verified CJ subscription link`);
+        }
+        if (usdNumber(deal.currentPrice) !== malwarebytesEvidence?.merchantOffer?.priceUSD ||
+            usdNumber(deal.originalPrice) !== malwarebytesEvidence?.merchantOffer?.compareAtPriceUSD ||
+            Number(deal.discountPercent) !== malwarebytesEvidence?.merchantOffer?.discountPercent ||
+            Number(deal.estimatedCommission) !== malwarebytesEvidence?.commission?.conservativeEstimatedCommissionUSD ||
+            deal.commission !== "30% per qualifying sale" ||
+            malwarebytesEvidence?.commission?.qualifyingSaleRate !== 0.3 ||
+            malwarebytesEvidence?.commission?.referralDays !== 45) {
+          errors.push(`${label}: Malwarebytes price, discount, attribution, or commission estimate does not match evidence`);
+        }
+        if (malwarebytesEvidence?.merchantOffer?.recurringBilling !== true ||
+            malwarebytesEvidence?.merchantOffer?.nextBillingCyclePriceUSD !== 89.98 ||
+            malwarebytesEvidence?.merchantOffer?.renewalPriceMayChange !== true ||
+            malwarebytesEvidence?.merchantOffer?.cancelAnytime !== true ||
+            malwarebytesEvidence?.merchantOffer?.salesTaxMayApply !== true ||
+            malwarebytesEvidence?.merchantOffer?.moneyBackGuaranteeDays !== 60 ||
+            !String(deal.priceNote || "").includes("then $89.98") ||
+            !String(deal.priceNote || "").includes("tax may apply")) {
+          errors.push(`${label}: Malwarebytes recurring-billing, renewal, tax, cancellation, or guarantee disclosure is incomplete`);
+        }
+        if (malwarebytesEvidence?.publication?.allowed !== true || deal.expiresAt) {
+          errors.push(`${label}: Malwarebytes must use the verified evergreen publication decision without an invented expiration`);
+        }
+        const verifiedAt = new Date(deal.verifiedAt).getTime();
+        const recheckAfter = new Date(deal.recheckAfter).getTime();
+        if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
+            recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
+          errors.push(`${label}: Malwarebytes verification window must be no more than 24 hours`);
         }
       }
     } else if (deal.network === "expedia-group-direct") {
@@ -685,7 +759,7 @@ if (staleDeals.length) {
 
 const generatedDealDirectories = await readdir(new URL("../deals/", import.meta.url), { withFileTypes: true });
 for (const entry of generatedDealDirectories) {
-  if (!entry.isDirectory()) continue;
+  if (!entry.isDirectory() || entry.name === "page") continue;
   const detailPage = await readFile(new URL(`../deals/${entry.name}/index.html`, import.meta.url), "utf8");
   if (detailPage.includes('content="noindex') || detailPage.includes('http-equiv="refresh"')) {
     errors.push(`deals/${entry.name}: generated deal directories must not contain retired noindex or redirect shells`);

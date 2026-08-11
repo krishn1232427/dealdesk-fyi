@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-11T06:02:05.663Z",
+  "generatedAt": "2026-08-11T07:21:52.449Z",
   "targets": [
     {
       "id": "cj-nordvpn-2-year-20260801",
@@ -84,6 +84,20 @@
       ],
       "score": 79,
       "merchantPath": "/merchant/sensibo/",
+      "comparisonPath": ""
+    },
+    {
+      "id": "cj-malwarebytes-standard-2-year-25off-20260811",
+      "url": "https://dealdesk.fyi/deals/cj-malwarebytes-standard-2-year-25off/",
+      "title": "Malwarebytes Standard 2-year plan deal: $67.48, 25% off | DealDesk",
+      "primaryQuery": "Malwarebytes Standard 2-year plan deal",
+      "secondaryQueries": [
+        "Malwarebytes Standard 2-year plan price",
+        "Malwarebytes Standard 2-year plan discount",
+        "Malwarebytes Malwarebytes Standard 2-year plan"
+      ],
+      "score": 77,
+      "merchantPath": "/merchant/malwarebytes/",
       "comparisonPath": ""
     },
     {

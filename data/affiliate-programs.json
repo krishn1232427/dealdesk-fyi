@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T05:56:55.000Z",
+  "updatedAt": "2026-08-11T07:13:13.000Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherAccounts": [
     {
@@ -15,7 +15,7 @@
     {
       "network": "awin",
       "publisherID": "2973087",
-      "status": "active publisher account; BLUETTI US and TicketNetwork are approved advertiser relationships; payment remains blocked until required Awin tax information is complete",
+      "status": "active publisher account; BLUETTI US and TicketNetwork are approved advertiser relationships; Giftlab has sent an unaccepted invitation; payment remains blocked until required Awin tax information is complete",
       "commissionAccess": true,
       "commissionAccrualReady": false,
       "payoutReady": false,
@@ -36,7 +36,7 @@
       "companyID": "8007406",
       "memberRouteID": "7685648",
       "trackingSiteID": "101847838",
-      "status": "active; payout onboarding verified; CuriosityStream has an exact verified payable link; Malwarebytes is approved but its first exact link remains unverified",
+      "status": "active; payout onboarding verified; CuriosityStream and Malwarebytes have exact verified payable links and live offers",
       "commissionAccess": true,
       "commissionAccrualReady": true,
       "payoutReady": true,
@@ -48,7 +48,7 @@
           "advertiserID": "3743656",
           "relationship": "active",
           "approvedAt": "2026-08-07T13:50:02.000Z",
-          "trackingLinkStatus": "unverified"
+          "trackingLinkStatus": "verified"
         },
         {
           "network": "cj",
@@ -573,20 +573,29 @@
       "category": "Cybersecurity software",
       "commission": "30% per qualifying sale",
       "attribution": "45-day referral period",
-      "status": "Active advertiser relationship — exact CJ tracking link and live customer offer remain unverified",
+      "status": "Approved — exact DealDesk CJ link, live two-year checkout, renewal terms, and official imagery verified",
       "applicationStatus": "active",
       "appliedAt": "2026-08-01T07:47:44Z",
-      "commissionEligible": false,
-      "publicPublishingAllowed": false,
-      "summary": "CJ advertiser 3743656 welcomed DealDesk to the Malwarebytes affiliate program. The authenticated email states a 30% sale commission, 45-day referral period, seasonal promotions, and advertiser-handled billing and support. No exact DealDesk tracking link was included, so the approval is recorded without exposing a public offer.",
+      "commissionEligible": true,
+      "publicPublishingAllowed": true,
+      "summary": "CJ advertiser 3743656 is Active and exact text link 12217359 was generated for DealDesk site 101847838. It redirects to Malwarebytes' affiliate landing page with attribution intact. The live U.S. checkout verifies the 1-device, 2-year Malwarebytes Standard offer at 67.48 USD instead of 89.98 USD, recurring billing terms, cancellation language, tax disclosure, 60-day guarantee, and official merchant-hosted imagery.",
       "priority": 22,
       "paymentTiming": "Approval email states commission is received within 30 days",
-      "priceReference": "Approval email advertised a one-year, one-device PC or Mac subscription at $44.99",
+      "priceReference": "Live U.S. checkout verifies 67.48 USD for the initial 2-year, 1-device subscription against an 89.98 USD regular-price total",
       "approvedAt": "2026-08-07T13:50:02.000Z",
+      "reviewedAt": "2026-08-11T07:13:13.000Z",
       "relationshipEvidence": "Authenticated CJ advertiser email: Welcome to the Malwarebytes Affiliate Program",
-      "trackingLinkStatus": "unverified",
-      "restrictions": "Publish only after generating and verifying an exact DealDesk CJ link, current price or promotion, destination, eligibility, customer disclosures, and genuine Malwarebytes creative.",
-      "evidenceRecord": "data/affiliate-evidence/malwarebytes-cj-approval-20260807.json"
+      "trackingID": "101847838",
+      "linkID": "12217359",
+      "trackingURL": "https://www.dpbolvw.net/click-101847838-12217359",
+      "trackingLinkStatus": "verified",
+      "offerURL": "https://www.malwarebytes.com/landing-page/get-premium-affiliate",
+      "currentOffer": "Malwarebytes Standard for 1 device: 67.48 USD for the initial 2-year subscription, down from 89.98 USD; checkout states the next billing cycle is 89.98 USD, the renewal price may change, sales tax may apply, cancellation is available at any time, and a 60-day money-back guarantee applies",
+      "offerVerifiedAt": "2026-08-11T07:13:13.000Z",
+      "imageURL": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2024/11/premium-heroimage.original.png?w=600",
+      "imageVerifiedAt": "2026-08-11T07:13:13.000Z",
+      "restrictions": "Publish only the exact DealDesk CJ link and the live two-year offer verified at checkout. Disclose recurring billing, possible tax, and that the renewal price may change. Recheck price, destination, checkout terms, and imagery within 24 hours; do not imply the CJ creative's 25% headline applies to the one-year option, which currently shows 15% off.",
+      "evidenceRecord": "data/affiliate-evidence/malwarebytes-cj-20260811.json"
     },
     {
       "id": "cj-eset-north-america-2069963",
@@ -939,6 +948,30 @@
       "merchantCheckoutVerified": false,
       "restrictions": "Do not publish TicketNetwork offers until Awin tax and bank onboarding is complete. The TNTIX promotion must be independently verified at merchant checkout, and every public listing must verify its exact destination, current event availability, price and fee disclosures, customer eligibility, approved imagery, and affiliate disclosure together.",
       "evidenceRecord": "data/affiliate-evidence/ticketnetwork-awin-approval-20260806.json"
+    },
+    {
+      "id": "awin-giftlab-95201",
+      "network": "awin",
+      "merchantName": "Giftlab",
+      "advertiserID": "95201",
+      "publisherID": "2973087",
+      "merchantURL": "https://www.giftlab.com/",
+      "profileURL": "https://ui.awin.com/awin/affiliate/2973087/merchant-profile/95201",
+      "category": "Personalized gifts, photo gifts, apparel, accessories, jewelry, and home goods",
+      "commission": "Up to 20% CPA stated in the advertiser invitation; Awin's public profile currently displays 10%-15%; no assigned DealDesk rate is verified",
+      "attribution": "30 days on Awin's public advertiser profile; not yet verified as an assigned DealDesk term",
+      "status": "Advertiser invitation received but not accepted — no approved relationship or authorized tracking link; do not publish",
+      "applicationStatus": "invited",
+      "invitedAt": "2026-08-10T07:50:28.000Z",
+      "reviewedAt": "2026-08-11T07:13:13.000Z",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "relationshipEvidence": "Authenticated Awin email: Giftlab has invited you to join their program, plus attached advertiser terms",
+      "trackingLinkStatus": "not-authorized",
+      "restrictions": "The invitation has not been accepted. Program terms restrict brand-keyword activity, unauthorized coupons, and adult content; nonqualifying, returned, cancelled, unpaid, excluded, misattributed, non-new-customer, or below-minimum orders may be reversed. Do not accept, generate links, or publish until the account owner approves the legal relationship and Awin payout readiness, assigned terms, an exact link, a live offer, and approved imagery are verified.",
+      "summary": "Giftlab advertiser 95201 invited DealDesk to join through Awin. The invitation advertises up to 20% CPA, but accepting it would bind Launchdesk LLC to advertiser terms. No acceptance was authorized, no joined relationship exists, and no tracking link or customer offer is publication-ready.",
+      "evidenceRecord": "data/affiliate-evidence/giftlab-awin-invitation-20260810.json",
+      "priority": 38
     },
     {
       "id": "cj-woot-4909784",

@@ -5,7 +5,7 @@
     <link>https://dealdesk.fyi/latest-deals/</link>
     <description>Current DealDesk offers with displayed prices, savings, merchant, and verification date.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Aug 2026 05:56:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 07:13:13 GMT</lastBuildDate>
     <atom:link href="https://dealdesk.fyi/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NordVPN Basic 2-year plan</title>
@@ -54,6 +54,14 @@
       <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
       <category>Home</category>
       <description>$159.00 compared with $229.00. Save $70.00 · 31% off Single kit · New · In stock Merchant: Sensibo. Checked 2026-08-03.</description>
+    </item>
+    <item>
+      <title>Malwarebytes Standard 2-year plan</title>
+      <link>https://dealdesk.fyi/deals/cj-malwarebytes-standard-2-year-25off/</link>
+      <guid isPermaLink="true">https://dealdesk.fyi/deals/cj-malwarebytes-standard-2-year-25off/</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Subscriptions</category>
+      <description>$67.48 compared with $89.98. Save $22.50 · 25% off 1 device · initial 2-year term · then $89.98 per billing cycle · renewal price may change · tax may apply · cancel anytime · 60-day money-back guarantee Merchant: Malwarebytes. Checked 2026-08-11.</description>
     </item>
     <item>
       <title>Audible Standard — 30-day free trial</title>
@@ -798,14 +806,6 @@
       <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
       <category>Electronics</category>
       <description>$149.99 compared with $379.99. Save $230.00 Refurbished · Free shipping Merchant: eBay. Checked 2026-08-04.</description>
-    </item>
-    <item>
-      <title>Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black</title>
-      <link>https://dealdesk.fyi/deals/ebay-item-365800690523/</link>
-      <guid isPermaLink="true">https://dealdesk.fyi/deals/ebay-item-365800690523/</guid>
-      <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-      <category>Electronics</category>
-      <description>$66.99 compared with $169.99. Save $103.00 Refurbished · Free shipping Merchant: eBay. Checked 2026-08-04.</description>
     </item>
   </channel>
 </rss>

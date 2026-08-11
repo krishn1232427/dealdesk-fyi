@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-11T07:13:13.000Z",
+  "source": "Authenticated Awin advertiser invitation email delivered to hello.launchdesk@gmail.com, attached advertiser terms, and Awin's public advertiser profile",
+  "publisher": {
+    "publisherID": "2973087",
+    "channel": "DealDesk"
+  },
+  "advertiser": {
+    "name": "Giftlab",
+    "advertiserID": "95201",
+    "relationship": "Invited — not accepted"
+  },
+  "invitation": {
+    "subject": "Giftlab has invited you to join their program",
+    "receivedAt": "2026-08-10T07:50:28.000Z",
+    "status": "not-accepted",
+    "advertisedCommission": "Up to 20% CPA",
+    "acceptanceRequiresAccountOwnerApproval": true
+  },
+  "commercialTerms": {
+    "invitationRateClaim": "Up to 20% CPA",
+    "publicProfileRate": "10%-15%",
+    "assignedPublisherRateVerified": false,
+    "publicProfileAttributionDays": 30,
+    "note": "The invitation claim and public profile differ. Neither is recorded as an assigned DealDesk rate before acceptance and signed-in verification."
+  },
+  "terms": {
+    "lastUpdated": "2025-10-10",
+    "commissionBaseExcludes": [
+      "VAT or other sales taxes",
+      "delivery charges",
+      "payment-card fees",
+      "gift wrapping",
+      "service charges"
+    ],
+    "reversalReasons": [
+      "return or cancellation",
+      "unpaid transaction",
+      "customer is not new where required",
+      "unauthorized coupon",
+      "excluded or invalid order",
+      "attribution to another partner or channel",
+      "minimum-order requirement not met"
+    ],
+    "brandSearchPolicy": "Brand-keyword activity is restricted; do not run trademark bidding without explicit written authorization.",
+    "allowedPublisherTypes": [
+      "editorial content",
+      "discount-code content",
+      "shopping directories",
+      "newsletters",
+      "content creators",
+      "communities and user-generated content"
+    ],
+    "prohibitedContent": [
+      "adult content"
+    ],
+    "qualification": "New-customer and valid-affiliate-lead requirements may apply.",
+    "payoutRequirements": "Payment method and tax documentation must be completed; outstanding requirements can result in commission forfeiture after six months.",
+    "rateChanges": "Giftlab may change commission amounts through the affiliate platform."
+  },
+  "tracking": {
+    "status": "not-authorized",
+    "requirement": "After explicit owner-approved acceptance, verify Joined status, assigned terms, payout readiness, and an exact DealDesk tracking link."
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "An invitation is not an approved relationship. No authorized tracking link, assigned commission, verified live offer, or approved image exists."
+  },
+  "privacy": "No passwords, cookies, tax documents, banking details, session tokens, or invitation acceptance URLs are stored in this evidence record."
+}

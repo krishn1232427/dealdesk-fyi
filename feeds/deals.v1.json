@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T05:56:55.000Z",
+  "generatedAt": "2026-08-11T07:13:13.000Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
-  "total": 800,
+  "total": 801,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
   "deals": [
     {
@@ -87,6 +87,20 @@
       "savings": "Save $70.00 · 31% off",
       "terms": "Single kit · New · In stock",
       "verified_at": "2026-08-03",
+      "expires_at": null
+    },
+    {
+      "id": "cj-malwarebytes-standard-2-year-25off-20260811",
+      "title": "Malwarebytes Standard 2-year plan",
+      "canonical_url": "https://dealdesk.fyi/deals/cj-malwarebytes-standard-2-year-25off/",
+      "merchant": "Malwarebytes",
+      "category": "Subscriptions",
+      "image_url": "https://www.malwarebytes.com/wp-content/uploads/sites/2/2024/11/premium-heroimage.original.png?w=600",
+      "current_price": "$67.48",
+      "original_price": "$89.98",
+      "savings": "Save $22.50 · 25% off",
+      "terms": "1 device · initial 2-year term · then $89.98 per billing cycle · renewal price may change · tax may apply · cancel anytime · 60-day money-back guarantee",
+      "verified_at": "2026-08-11",
       "expires_at": null
     },
     {
