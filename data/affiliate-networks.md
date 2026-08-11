@@ -1,6 +1,6 @@
 # DealDesk affiliate-network register
 
-Last refreshed: 2026-08-11T05:40:55.000Z
+Last refreshed: 2026-08-11T05:56:55.000Z
 
 This is DealDesk's cumulative working list of 61 credible affiliate networks, commerce platforms, and important merchant-owned programs. It is refreshed daily because the market is open-ended and networks, signup routes, ownership, and DealDesk approvals change.
 
@@ -19,7 +19,7 @@ This is DealDesk's cumulative working list of 61 credible affiliate networks, co
 
 | Network / program | Type | Region | DealDesk status | Payout onboarding | Can publish paid offers? | Publisher route | Evidence | Last checked | Next action |
 |---|---|---|---|---|---|---|---|---|---|
-| [Awin](https://www.awin.com/us/) | affiliate network | global | onboarding | unverified | No | [Apply / enroll](https://ui.awin.com/publisher-signup/en/awin) | [Official source](https://www.awin.com/us/news-and-events/awin-news/awin-shareasale-new-era) | 2026-08-11T05:40:55.000Z | Complete Awin tax onboarding; then verify TicketNetwork advertiser 89223 terms and an exact payable link, and reverify every BLUETTI or TicketNetwork offer before publication. |
+| [Awin](https://www.awin.com/us/) | affiliate network | global | onboarding | unverified | No | [Apply / enroll](https://ui.awin.com/publisher-signup/en/awin) | [Official source](https://www.awin.com/us/news-and-events/awin-news/awin-shareasale-new-era) | 2026-08-11T05:56:55.000Z | The account owner must complete Awin tax details and then bank details. After payout readiness is confirmed, independently reverify TicketNetwork's promotion, checkout eligibility, current event destination, availability, pricing and fees, and approved imagery; also refresh BLUETTI's live offer before publication. |
 | [impact.com](https://impact.com/) | partnership network | global | active limited | unverified | No | [Apply / enroll](https://app.impact.com/signup/none/create-new-mediapartner-account-flow.ihtml) | [Official source](https://impact.com/partners/affiliate-partners/) | 2026-08-10T22:46:41.076Z | Correct or upgrade the account type before applying to brands. |
 | [Sovrn Commerce](https://www.sovrn.com/commerce/) | commerce subnetwork | global | pending review | unverified | No | [Apply / enroll](https://platform.sovrn.com/account/signup?path=commerce) | [Official source](https://knowledge.sovrn.com/kb/connect-your-affiliate-networks-to-commerce) | 2026-08-10T22:46:41.076Z | Monitor site approval, then verify merchant terms and the first exact campaign link. |
 | [PartnerStack](https://partnerstack.com/) | saas partner network | global | onboarding | unverified | No | [Apply / enroll](https://dash.partnerstack.com/handshake) | [Official source](https://partnerstack.com/partners-and-publishers) | 2026-08-10T22:46:41.076Z | Complete the Network profile only with truthful owner-supplied identity and audience information. |

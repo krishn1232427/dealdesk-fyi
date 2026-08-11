@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T05:40:55.000Z",
+  "updatedAt": "2026-08-11T05:56:55.000Z",
   "canonicalDealDeskNetworkRegistry": "data/affiliate-networks.json",
   "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
   "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
@@ -102,7 +102,7 @@
       "access": "active publisher account",
       "publisherReference": "2973087",
       "canPublish": false,
-      "notes": "BLUETTI US and TicketNetwork are approved advertiser relationships, but Awin tax onboarding still blocks payout readiness and TicketNetwork's exact link and commercial terms remain unverified. eGifter, Fiverr, Viator, and INIU declined DealDesk; AliExpress US, Yaber, Trip.com, Clarks, and EcoFlow remain pending. Do not publish any Awin offer until payout readiness, advertiser approval, the exact payable link, and the live offer are all verified."
+      "notes": "BLUETTI US and TicketNetwork are approved advertiser relationships, but Awin tax onboarding still blocks payout readiness. TicketNetwork's exact homepage link, current assigned 12% rate, and 30-day attribution are verified; its TNTIX promotion is recorded from Awin but remains nonpublic until independently verified at merchant checkout with current event availability, pricing, fees, and approved imagery. eGifter, Fiverr, Viator, and INIU declined DealDesk; AliExpress US, Yaber, Trip.com, Clarks, and EcoFlow remain pending."
     },
     {
       "network": "Impact",
