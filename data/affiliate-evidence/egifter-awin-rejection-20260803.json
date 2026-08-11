@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-03T13:59:07.000Z",
+  "source": "Authenticated Awin advertiser decision email delivered to hello.launchdesk@gmail.com",
+  "publisher": {
+    "publisherID": "2973087",
+    "channel": "DealDesk"
+  },
+  "advertiser": {
+    "name": "eGifter",
+    "advertiserID": "89461",
+    "relationship": "Rejected"
+  },
+  "decision": {
+    "subject": "Membership Rejection - advertiser",
+    "decidedAt": "2026-08-03T13:59:07.000Z",
+    "reason": "URL is irrelevant to advertiser brand"
+  },
+  "tracking": {
+    "status": "not-authorized"
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "DealDesk does not have an approved advertiser relationship or an authorized payable eGifter link."
+  },
+  "privacy": "No passwords, cookies, banking details, tax data, or session tokens are stored in this evidence record."
+}

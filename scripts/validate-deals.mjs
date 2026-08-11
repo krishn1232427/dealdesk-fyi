@@ -5,6 +5,7 @@ const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
 const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-programs.json", import.meta.url), "utf8"));
 const magzterEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/magzter-cj-20260803.json", import.meta.url), "utf8"));
 const protonEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/proton-cj-20260804.json", import.meta.url), "utf8"));
+const curiosityStreamEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/curiositystream-cj-20260811.json", import.meta.url), "utf8"));
 const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
 const hotelsBrokenEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/hotels-expedia-broken-20260804.json", import.meta.url), "utf8"));
 const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
@@ -271,6 +272,58 @@ for (const feedPath of feedPaths) {
         if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
             recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
           errors.push(`${label}: Proton verification window must be no more than 24 hours`);
+        }
+      }
+      if (String(deal.advertiserID) === "4727234") {
+        const expectedEvidenceRecord = "data/affiliate-evidence/curiositystream-cj-20260811.json";
+        let merchantURL;
+        let imageURL;
+        try { merchantURL = new URL(deal.merchantURL); } catch {}
+        try { imageURL = new URL(deal.imageURL); } catch {}
+        const standardMonthly = curiosityStreamEvidence?.merchantOffer?.plans?.find((plan) => plan.name === "Standard Monthly");
+
+        if (program?.evidenceRecord !== expectedEvidenceRecord || deal.evidenceRecord !== expectedEvidenceRecord) {
+          errors.push(`${label}: CuriosityStream program and deal must reference the authenticated evidence record`);
+        }
+        if (curiosityStreamEvidence?.advertiser?.relationship !== "Active" ||
+            String(curiosityStreamEvidence?.advertiser?.advertiserID) !== String(deal.advertiserID) ||
+            String(curiosityStreamEvidence?.publisher?.cjSiteID) !== String(deal.trackingID) ||
+            String(curiosityStreamEvidence?.creative?.linkID) !== String(deal.linkID) ||
+            curiosityStreamEvidence?.tracking?.trackingURL !== deal.affiliateURL ||
+            curiosityStreamEvidence?.tracking?.finalLandingURL !== deal.merchantURL ||
+            curiosityStreamEvidence?.image?.url !== deal.imageURL ||
+            curiosityStreamEvidence?.reviewedAt !== deal.verifiedAt ||
+            program?.reviewedAt !== deal.verifiedAt) {
+          errors.push(`${label}: CuriosityStream deal does not match its authenticated evidence record`);
+        }
+        if (merchantURL?.origin !== "https://curiositystream.com" ||
+            merchantURL.pathname !== "/watch/welcome" || merchantURL.search || merchantURL.hash) {
+          errors.push(`${label}: CuriosityStream must use the verified welcome landing page`);
+        }
+        if (imageURL?.origin !== "https://cdn.curiositystream.com" ||
+            imageURL.pathname !== "/social/fb_share.jpg" || imageURL.search || imageURL.hash ||
+            curiosityStreamEvidence?.image?.width !== 1920 || curiosityStreamEvidence?.image?.height !== 1080) {
+          errors.push(`${label}: CuriosityStream must use the verified merchant-declared welcome image`);
+        }
+        if (deal.sourceType !== "cj-text-link" || deal.offerType !== "subscription") {
+          errors.push(`${label}: CuriosityStream must be a verified CJ subscription link`);
+        }
+        if (deal.currentPrice !== "$5.99/mo" || standardMonthly?.priceUSD !== 5.99 ||
+            standardMonthly?.billingPeriod !== "month" || deal.originalPrice != null ||
+            deal.discountPercent != null || curiosityStreamEvidence?.merchantOffer?.discountActive !== false ||
+            curiosityStreamEvidence?.merchantOffer?.trialAvailable !== false ||
+            Number(deal.estimatedCommission) !== curiosityStreamEvidence?.commission?.qualifyingLeadUSD ||
+            deal.commission !== "$10 per qualifying lead") {
+          errors.push(`${label}: CuriosityStream price, no-discount terms, or qualifying-lead commission does not match evidence`);
+        }
+        if (curiosityStreamEvidence?.publication?.allowed !== true || deal.expiresAt) {
+          errors.push(`${label}: CuriosityStream must use the verified evergreen publication decision without an invented expiration`);
+        }
+        const verifiedAt = new Date(deal.verifiedAt).getTime();
+        const recheckAfter = new Date(deal.recheckAfter).getTime();
+        if (!Number.isFinite(verifiedAt) || !Number.isFinite(recheckAfter) ||
+            recheckAfter <= verifiedAt || recheckAfter - verifiedAt > 24 * 60 * 60 * 1000 + 1000) {
+          errors.push(`${label}: CuriosityStream verification window must be no more than 24 hours`);
         }
       }
     } else if (deal.network === "expedia-group-direct") {

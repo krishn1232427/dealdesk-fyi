@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://dealdesk.fyi/merchants/</loc><lastmod>2026-08-07</lastmod></url>
+  <url><loc>https://dealdesk.fyi/merchants/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/ebay/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/ebay/page/2/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/ebay/page/3/</loc><lastmod>2026-08-04</lastmod></url>
@@ -27,13 +27,14 @@
   <url><loc>https://dealdesk.fyi/merchant/ebay/page/24/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/ebay/page/25/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/amazon/</loc><lastmod>2026-08-01</lastmod></url>
+  <url><loc>https://dealdesk.fyi/merchant/curiositystream/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/magzter/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/nordpass/</loc><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/nordvpn/</loc><lastmod>2026-08-01</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/proton-vpn/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/sensibo/</loc><lastmod>2026-08-03</lastmod></url>
   <url><loc>https://dealdesk.fyi/merchant/surfshark/</loc><lastmod>2026-08-01</lastmod></url>
-  <url><loc>https://dealdesk.fyi/comparisons/</loc><lastmod>2026-08-07</lastmod></url>
+  <url><loc>https://dealdesk.fyi/comparisons/</loc><lastmod>2026-08-11</lastmod></url>
   <url><loc>https://dealdesk.fyi/compare/2023-topps-chrome-disney/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s23/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/compare/lenovo-thinkpad-t14/</loc><lastmod>2026-08-04</lastmod></url>
@@ -59,10 +60,10 @@
   <url><loc>https://dealdesk.fyi/compare/lenovo-thinkpad-t580/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s21/</loc><lastmod>2026-08-04</lastmod></url>
   <url><loc>https://dealdesk.fyi/compare/samsung-galaxy-s25/</loc><lastmod>2026-08-04</lastmod></url>
-  <url><loc>https://dealdesk.fyi/deal-index/</loc><lastmod>2026-08-07</lastmod></url>
-  <url><loc>https://dealdesk.fyi/how-we-rank-deals/</loc><lastmod>2026-08-07</lastmod></url>
-  <url><loc>https://dealdesk.fyi/editorial-policy/</loc><lastmod>2026-08-07</lastmod></url>
-  <url><loc>https://dealdesk.fyi/about/</loc><lastmod>2026-08-07</lastmod></url>
-  <url><loc>https://dealdesk.fyi/feeds/</loc><lastmod>2026-08-07</lastmod></url>
-  <url><loc>https://dealdesk.fyi/price-history/</loc><lastmod>2026-08-10</lastmod></url>
+  <url><loc>https://dealdesk.fyi/deal-index/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/how-we-rank-deals/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/editorial-policy/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/about/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/feeds/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://dealdesk.fyi/price-history/</loc><lastmod>2026-08-11</lastmod></url>
 </urlset>

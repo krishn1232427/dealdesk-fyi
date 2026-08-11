@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-discovery-v1",
-  "generatedAt": "2026-08-07T13:50:02.000Z",
+  "generatedAt": "2026-08-11T05:40:55.000Z",
   "host": "dealdesk.fyi",
   "key": "3abe3f91462ad860ed2d45214f0053977e539dd55cccf396dd8bcec9d4a7ab36",
   "keyLocation": "https://dealdesk.fyi/3abe3f91462ad860ed2d45214f0053977e539dd55cccf396dd8bcec9d4a7ab36.txt",
-  "total": 924,
+  "total": 926,
   "urlList": [
     "https://dealdesk.fyi/",
     "https://dealdesk.fyi/about/",
@@ -85,6 +85,7 @@
     "https://dealdesk.fyi/deals/amazon-prime-video-channels-paid/",
     "https://dealdesk.fyi/deals/amazon-prime-video-free-trial/",
     "https://dealdesk.fyi/deals/amazon-prime-young-adults/",
+    "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
     "https://dealdesk.fyi/deals/cj-magzter-gold-annual-50off/",
     "https://dealdesk.fyi/deals/cj-nordpass-premium/",
     "https://dealdesk.fyi/deals/cj-nordvpn-2-year/",
@@ -896,6 +897,7 @@
     "https://dealdesk.fyi/how-we-rank-deals/",
     "https://dealdesk.fyi/latest-deals/",
     "https://dealdesk.fyi/merchant/amazon/",
+    "https://dealdesk.fyi/merchant/curiositystream/",
     "https://dealdesk.fyi/merchant/ebay/",
     "https://dealdesk.fyi/merchant/ebay/page/10/",
     "https://dealdesk.fyi/merchant/ebay/page/11/",

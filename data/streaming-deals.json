@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-02T10:58:40.780Z",
-  "curationNote": "Commission-only streaming feed. Offers are sourced from Amazon's current Associates Program Standard Commission Income Statement and use the approved tracking ID dealdesk-20. Customer eligibility and current terms are confirmed on Amazon.",
+  "updatedAt": "2026-08-11T05:40:55.000Z",
+  "curationNote": "Commission-qualified streaming feed. Every active listing requires an approved advertiser relationship, an exact payable DealDesk link, current customer terms, and genuine merchant imagery. Regular subscription pricing is never presented as a discount without live evidence.",
   "deals": [
     {
       "id": "amazon-prime-video-free-trial-20260731",
@@ -88,6 +88,39 @@
       "status": "active",
       "recheckAfter": "2026-08-09T09:43:38.000Z",
       "publishedAt": "2026-07-31T23:45:00Z"
+    },
+    {
+      "id": "cj-curiositystream-standard-monthly-20260811",
+      "title": "CuriosityStream Standard — $5.99/month",
+      "merchantName": "CuriosityStream",
+      "merchantURL": "https://curiositystream.com/watch/welcome",
+      "imageURL": "https://cdn.curiositystream.com/social/fb_share.jpg",
+      "affiliateURL": "https://www.tkqlhce.com/click-101847838-17171513",
+      "network": "cj",
+      "trackingID": "101847838",
+      "linkID": "17171513",
+      "advertiserID": "4727234",
+      "approvalStatus": "approved",
+      "commissionEligible": true,
+      "commission": "$10 per qualifying lead",
+      "estimatedCommission": 10,
+      "category": "Streaming",
+      "offerType": "subscription",
+      "badgeText": "$5.99/mo · no trial",
+      "currentPrice": "$5.99/mo",
+      "priceNote": "Standard Monthly is $5.99 per month with no trial; cancel anytime. Tax is not included in the pre-checkout price.",
+      "cardCopy": "Documentary streaming in 4K from $5.99/month; no trial and no promotional discount currently shown.",
+      "summary": "CuriosityStream's Standard plan currently starts at $5.99 per month with 4K access, no trial, and cancellation anytime. Standard Annual is $49.99 per year; Smart Bundle options are $11.99 per month or $79.99 per year. No promotional discount is currently shown.",
+      "verifiedAt": "2026-08-11T05:40:55.000Z",
+      "rankingScore": 72,
+      "rankingReason": "A freshly verified $5.99 entry price, exact payable CJ attribution, official merchant imagery, and a fixed $10 qualifying-lead payout without an unsupported discount claim",
+      "priority": 2,
+      "status": "active",
+      "recheckAfter": "2026-08-12T05:38:45.000Z",
+      "publishedAt": "2026-08-11T05:40:55.000Z",
+      "sourceType": "cj-text-link",
+      "verificationSource": "Authenticated approval email; signed-in CJ relationship and exact link; live CuriosityStream plan data and official welcome-page image",
+      "evidenceRecord": "data/affiliate-evidence/curiositystream-cj-20260811.json"
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-05T16:02:38.000Z",
+  "source": "Authenticated Awin advertiser decision email delivered to hello.launchdesk@gmail.com",
+  "publisher": {
+    "publisherID": "2973087",
+    "channel": "DealDesk"
+  },
+  "advertiser": {
+    "name": "Viator - A Tripadvisor Company (US)",
+    "advertiserID": "11018",
+    "relationship": "Rejected"
+  },
+  "decision": {
+    "subject": "Membership Rejection - advertiser",
+    "decidedAt": "2026-08-05T16:02:38.000Z",
+    "reason": "Site does not complement advertiser brand"
+  },
+  "tracking": {
+    "status": "not-authorized"
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "DealDesk does not have an approved advertiser relationship or an authorized payable Viator link."
+  },
+  "privacy": "No passwords, cookies, banking details, tax data, or session tokens are stored in this evidence record."
+}

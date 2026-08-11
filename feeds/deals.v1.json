@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-07T13:50:02.000Z",
+  "generatedAt": "2026-08-11T05:40:55.000Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
-  "total": 799,
+  "total": 800,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
   "deals": [
     {
@@ -115,6 +115,20 @@
       "savings": "53% off · 3 months extra",
       "terms": "$37.53 for 27 months · was $80.73",
       "verified_at": "2026-08-01",
+      "expires_at": null
+    },
+    {
+      "id": "cj-curiositystream-standard-monthly-20260811",
+      "title": "CuriosityStream Standard — $5.99/month",
+      "canonical_url": "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
+      "merchant": "CuriosityStream",
+      "category": "Streaming",
+      "image_url": "https://cdn.curiositystream.com/social/fb_share.jpg",
+      "current_price": "$5.99/mo",
+      "original_price": null,
+      "savings": "$5.99/mo · no trial",
+      "terms": "Standard Monthly is $5.99 per month with no trial; cancel anytime. Tax is not included in the pre-checkout price.",
+      "verified_at": "2026-08-11",
       "expires_at": null
     },
     {

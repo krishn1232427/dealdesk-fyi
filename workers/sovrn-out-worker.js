@@ -14,6 +14,7 @@ const APPROVED_DESTINATIONS = {
   "https://www.kqzyfj.com/click-101847838-15642853": "cj",
   "https://www.tkqlhce.com/click-101847838-17217038": "cj",
   "https://www.kqzyfj.com/click-101847838-17297159": "cj",
+  "https://www.tkqlhce.com/click-101847838-17171513": "cj",
 };
 const APPROVED_RAKUTEN_TRACKING = {
   id: "JyyDRUQnGvw",

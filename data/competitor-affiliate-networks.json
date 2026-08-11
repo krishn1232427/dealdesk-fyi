@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T09:00:17Z",
+  "updatedAt": "2026-08-11T05:40:55.000Z",
   "canonicalDealDeskNetworkRegistry": "data/affiliate-networks.json",
   "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
   "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
@@ -95,14 +95,14 @@
       "access": "active publisher account",
       "publisherReference": "8007406",
       "canPublish": true,
-      "notes": "NordVPN, Surfshark, and NordPass are approved with verified payable links. Woot and multiple streaming, software, news, internet, and subscription programs are pending."
+      "notes": "NordVPN, Surfshark, NordPass, Magzter, Proton, and CuriosityStream have approved exact payable links and verified public offers. Malwarebytes is approved but remains nonpublic until its first exact link and live customer offer are verified. Other advertiser applications remain independently pending or unavailable."
     },
     {
       "network": "Awin",
       "access": "active publisher account",
       "publisherReference": "2973087",
       "canPublish": false,
-      "notes": "Current Awin advertiser applications are pending, including eGifter, Fiverr, Viator, TicketNetwork, AliExpress US, INIU, and Yaber. Do not publish their links until approval."
+      "notes": "BLUETTI US and TicketNetwork are approved advertiser relationships, but Awin tax onboarding still blocks payout readiness and TicketNetwork's exact link and commercial terms remain unverified. eGifter, Fiverr, Viator, and INIU declined DealDesk; AliExpress US, Yaber, Trip.com, Clarks, and EcoFlow remain pending. Do not publish any Awin offer until payout readiness, advertiser approval, the exact payable link, and the live offer are all verified."
     },
     {
       "network": "Impact",
@@ -131,7 +131,7 @@
       "access": "active publisher account; Sensibo Partnered; one exact payable product link verified",
       "publisherReference": "4733148",
       "canPublish": true,
-      "notes": "DealDesk's publisher channel is active, its PayPal payment method is verified, and the profile is 3/4 complete. Sensibo is Partnered, and the Air + Room Sensor SKU, exact Rakuten link, current price, availability, and genuine image are verified. This authorizes only that exact offer; Costway, JD Sports, and PureVPN remain pending. Sam's Club, Dyson, and LEGO currently report that DealDesk does not meet their supplied eligibility terms.",
+      "notes": "DealDesk's publisher channel is active, its PayPal payment method is verified, and the profile is 3/4 complete. Sensibo is Partnered, and the Air + Room Sensor SKU, exact Rakuten link, current price, availability, and genuine image are verified. JD Sports is also Partnered but remains nonpublic because no reviewed markdown met DealDesk's listing standard. Costway and PureVPN remain pending. Sam's Club, Dyson, and LEGO currently report that DealDesk does not meet their supplied eligibility terms.",
       "nextAction": "Recheck the verified Sensibo offer every 24 hours and continue reviewing each pending Rakuten advertiser independently; network access never grants blanket merchant authorization.",
       "priority": 3
     },

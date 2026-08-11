@@ -1,9 +1,9 @@
 {
   "name": "DealDesk Deal Index",
-  "updatedAt": "2026-08-07T13:50:02.000Z",
-  "generatedAt": "2026-08-10T10:37:13.899Z",
-  "publicDeals": 799,
-  "merchants": 8,
+  "updatedAt": "2026-08-11T05:40:55.000Z",
+  "generatedAt": "2026-08-11T05:45:25.365Z",
+  "publicDeals": 800,
+  "merchants": 9,
   "categories": 11,
   "medianDisplayedPrice": 249.99,
   "medianDisplayedDiscountPercent": 44,
@@ -74,11 +74,11 @@
     },
     {
       "category": "Streaming",
-      "count": 3,
+      "count": 4,
       "lowestDisplayedPrice": 0,
-      "medianDisplayedPrice": 0,
+      "medianDisplayedPrice": 2.995,
       "maximumDisplayedDiscountPercent": 0,
-      "latestVerification": "2026-08-02"
+      "latestVerification": "2026-08-11"
     },
     {
       "category": "Fashion",
