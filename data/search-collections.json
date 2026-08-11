@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-11",
+  "defaultMinimumOffers": 10,
+  "collections": [
+    {
+      "id": "refurbished-electronics",
+      "title": "Refurbished Electronics Deals: Laptops, Phones & Tech",
+      "heading": "Refurbished Electronics Deals",
+      "description": "Compare refurbished electronics by exact listing, stated condition, displayed price, merchant, discount, and verification date.",
+      "intro": "Refurbished electronics can cost less than new products, but grading, battery condition, warranty coverage, accessories, and seller testing vary. This collection keeps those decision points next to DealDesk listings and their check dates.",
+      "rules": {
+        "categories": ["Electronics"],
+        "allText": ["refurbished"]
+      },
+      "considerations": [
+        { "title": "Condition is not standardized", "body": "Certified refurbished, seller refurbished, and used listings can follow different testing and cosmetic standards. Read the exact grading language." },
+        { "title": "Compare the complete package", "body": "Check battery expectations, charger, cables, storage, accessories, warranty, and return window before comparing prices." },
+        { "title": "Verify the exact model", "body": "Generation, processor, storage, carrier, screen size, and model number can explain large differences between similar-looking offers." }
+      ],
+      "related": [
+        { "label": "All electronics deals", "path": "/category/electronics/" },
+        { "label": "Compare similar models", "path": "/comparisons/" }
+      ]
+    },
+    {
+      "id": "refurbished-laptops",
+      "title": "Refurbished Laptop Deals: ThinkPad, EliteBook & More",
+      "heading": "Compare Refurbished Laptop Deals",
+      "description": "Compare refurbished laptop prices across ThinkPad, EliteBook, Latitude, MacBook, and other catalog listings.",
+      "intro": "A laptop deal is only comparable when the processor, memory, storage, screen, battery expectations, operating system, and condition are clear. DealDesk groups refurbished listings while preserving those differences and their check dates.",
+      "rules": {
+        "categories": ["Electronics"],
+        "allText": ["refurbished"],
+        "anyText": ["laptop", "notebook", "thinkpad", "elitebook", "latitude", "macbook"]
+      },
+      "considerations": [
+        { "title": "Match core specifications", "body": "Compare processor generation, RAM, storage, screen resolution, ports, graphics, and operating-system support." },
+        { "title": "Ask what refurbished means", "body": "Review cosmetic grade, battery policy, testing process, warranty, charger inclusion, and return terms." },
+        { "title": "Plan for upgrades", "body": "Confirm whether memory and storage are replaceable and whether the machine supports the software you intend to run." }
+      ],
+      "related": [
+        { "label": "Lenovo ThinkPad deals", "path": "/collections/lenovo-thinkpad/" },
+        { "label": "All refurbished electronics", "path": "/collections/refurbished-electronics/" }
+      ]
+    },
+    {
+      "id": "unlocked-smartphones",
+      "title": "Unlocked Phone Deals: iPhone, Galaxy & Android Prices",
+      "heading": "Unlocked Smartphone Deals",
+      "description": "Compare unlocked smartphone listings by model, storage, condition, carrier compatibility, price, and verification date.",
+      "intro": "Unlocked does not guarantee compatibility with every carrier or every network feature. Compare the exact model number, supported bands, storage, battery expectations, cosmetic grade, and return policy before buying.",
+      "rules": {
+        "categories": ["Electronics"],
+        "allText": ["unlocked"],
+        "anyText": ["iphone", "galaxy", "pixel", "smartphone", "phone"]
+      },
+      "considerations": [
+        { "title": "Confirm carrier compatibility", "body": "Check the exact model and supported network bands with your carrier, including 5G, Wi-Fi calling, and eSIM requirements." },
+        { "title": "Compare storage and condition", "body": "Storage capacity, battery health, cosmetic grade, lock status, and included accessories materially affect value." },
+        { "title": "Review activation and returns", "body": "Verify activation requirements, return window, restocking fees, warranty, and whether the device can be returned after activation." }
+      ],
+      "related": [
+        { "label": "Samsung Galaxy deals", "path": "/collections/samsung-galaxy/" },
+        { "label": "All electronics deals", "path": "/category/electronics/" }
+      ]
+    },
+    {
+      "id": "pokemon-cards",
+      "title": "Pokémon Card Deals: Graded Singles & Sealed Products",
+      "heading": "Current Pokémon Card Deals",
+      "description": "Browse Pokémon card listings by set, card number, language, grading, condition, displayed price, and verification date.",
+      "intro": "Pokémon card values depend on the exact set, card number, printing, language, grading, condition, and authenticity. DealDesk presents recorded asking prices without treating them as completed-sale market values.",
+      "rules": {
+        "anyText": ["pokemon", "pokémon"]
+      },
+      "considerations": [
+        { "title": "Identify the exact card", "body": "Confirm set, card number, printing, rarity, language, parallel, promo status, and whether the listing is a single card or sealed product." },
+        { "title": "Verify grade and authenticity", "body": "Check the grading company, certification number, label details, seller images, and any disclosed damage or alterations." },
+        { "title": "Separate asking price from value", "body": "A live listing price is not a completed sale. Compare closely matching cards and recent market evidence before deciding." }
+      ],
+      "related": [
+        { "label": "All collectible deals", "path": "/category/collectibles/" },
+        { "label": "Toys and hobbies deals", "path": "/category/toys-and-hobbies/" }
+      ]
+    },
+    {
+      "id": "samsung-galaxy",
+      "title": "Samsung Galaxy Deals: Prices by Model & Condition",
+      "heading": "Compare Samsung Galaxy Deals",
+      "description": "Compare Samsung Galaxy phone listings by model, storage, lock status, condition, displayed price, and verification date.",
+      "intro": "Galaxy model names can hide important differences in generation, size, processor, storage, carrier lock, and condition. This collection groups matching listings while keeping those specifications and check dates visible.",
+      "rules": {
+        "allText": ["samsung galaxy"]
+      },
+      "considerations": [
+        { "title": "Match the complete model", "body": "Compare the Galaxy generation, base/Plus/Ultra variant, model number, storage, color, and supported carrier bands." },
+        { "title": "Check lock and condition", "body": "Unlocked, carrier-locked, refurbished, and used phones can have different activation, battery, warranty, and return terms." },
+        { "title": "Look beyond the price", "body": "Confirm accessories, screen condition, battery expectations, software support, and seller warranty before checkout." }
+      ],
+      "related": [
+        { "label": "All unlocked phone deals", "path": "/collections/unlocked-smartphones/" },
+        { "label": "Compare similar Galaxy models", "path": "/comparisons/" }
+      ]
+    },
+    {
+      "id": "lenovo-thinkpad",
+      "title": "Lenovo ThinkPad Deals: Prices by Model & Condition",
+      "heading": "Compare Lenovo ThinkPad Deals",
+      "description": "Compare Lenovo ThinkPad listings by series, processor, memory, storage, display, condition, price, and verification date.",
+      "intro": "ThinkPad families span different sizes, generations, processors, screens, and upgrade options. Compare the complete specification and refurbishment terms rather than relying on the ThinkPad name alone.",
+      "rules": {
+        "allText": ["thinkpad"]
+      },
+      "considerations": [
+        { "title": "Decode the model and generation", "body": "T, X, L, P, and Yoga series target different needs. Confirm screen size, processor generation, RAM, storage, and graphics." },
+        { "title": "Review refurbishment terms", "body": "Check battery expectations, cosmetic grade, charger, keyboard layout, operating system, warranty, and return window." },
+        { "title": "Confirm upgrade paths", "body": "Some models use soldered memory or limited storage options. Verify serviceability and port selection before buying." }
+      ],
+      "related": [
+        { "label": "All refurbished laptop deals", "path": "/collections/refurbished-laptops/" },
+        { "label": "Compare ThinkPad models", "path": "/comparisons/" }
+      ]
+    },
+    {
+      "id": "dji-drones",
+      "title": "DJI Drone Deals: Mini, Mavic, FPV & Camera Drones",
+      "heading": "Current DJI Drone Deals",
+      "description": "Compare DJI drone offers by model, bundle, controller, battery count, condition, price, and verification date.",
+      "intro": "DJI drone prices depend on the exact aircraft, controller, battery count, camera, accessories, activation status, and condition. Verify the bundle and current flight rules before ordering.",
+      "rules": {
+        "allText": ["dji"],
+        "anyText": ["drone", "mini", "mavic", "fpv", "avata"]
+      },
+      "considerations": [
+        { "title": "Compare the complete bundle", "body": "Check aircraft, remote, display controller, batteries, charger, propellers, case, and any Fly More accessories." },
+        { "title": "Confirm activation and condition", "body": "Review account binding, flight hours, crash history, refurbishment grade, warranty, and return terms." },
+        { "title": "Check current rules", "body": "Registration, remote identification, location restrictions, and operating rules vary. Confirm current requirements for your intended use." }
+      ],
+      "related": [
+        { "label": "All electronics deals", "path": "/category/electronics/" },
+        { "label": "Compare related models", "path": "/comparisons/" }
+      ]
+    },
+    {
+      "id": "security-cameras",
+      "title": "Security Camera Deals: Eufy, Arlo & Smart Home Kits",
+      "heading": "Compare Home Security Camera Deals",
+      "description": "Compare security camera and smart-home monitoring listings by resolution, storage, power, bundle, price, and condition.",
+      "intro": "Security-camera value depends on the number of cameras, resolution, power source, local or cloud storage, subscription requirements, and smart-home compatibility. Compare the whole system rather than the camera count alone.",
+      "rules": {
+        "anyText": ["security camera", "solocam", "doorbell camera", "surveillance", "outdoor camera", "indoor camera", "arlo", "eufy", "simplisafe"]
+      },
+      "considerations": [
+        { "title": "Count every required component", "body": "Check camera quantity, hub or base station, storage, mounting hardware, batteries, solar panels, and power adapters." },
+        { "title": "Understand recurring costs", "body": "Cloud recording, person detection, emergency monitoring, and extended history may require a separate subscription." },
+        { "title": "Check compatibility and privacy", "body": "Confirm Wi-Fi requirements, smart-home integrations, local-storage options, encryption, update support, and placement rules." }
+      ],
+      "related": [
+        { "label": "All home deals", "path": "/category/home/" },
+        { "label": "All electronics deals", "path": "/category/electronics/" }
+      ]
+    },
+    {
+      "id": "equipment-attachments",
+      "title": "Skid Steer & Equipment Attachment Deals: Price & Fitment",
+      "heading": "Equipment Attachment Deals",
+      "description": "Compare skid-steer, tractor, auger, trencher, loader, and equipment-attachment listings by fitment, specification, condition, and delivered price.",
+      "intro": "Equipment attachments require exact fitment, hydraulic, capacity, dimension, and freight checks. A lower asking price can become expensive when adapters, hoses, delivery, or return freight are not included.",
+      "rules": {
+        "categories": ["Business & industrial"],
+        "anyText": ["skid steer", "auger", "tractor", "trencher", "loader", "attachment", "backhoe", "excavator"]
+      },
+      "considerations": [
+        { "title": "Verify fitment", "body": "Confirm mount pattern, shaft, hydraulic flow and pressure, dimensions, capacity, machine weight, and required adapters." },
+        { "title": "Inspect included components", "body": "Hoses, couplers, teeth, cutting edges, controls, stands, and mounting hardware may be sold separately." },
+        { "title": "Calculate freight and returns", "body": "Check delivery method, lift-gate needs, commercial-address rules, damage inspection, installation, and return freight." }
+      ],
+      "related": [
+        { "label": "All business and industrial deals", "path": "/category/business-and-industrial/" },
+        { "label": "Compare related equipment", "path": "/comparisons/" }
+      ]
+    },
+    {
+      "id": "makita-tools",
+      "title": "Makita Tool Deals: LXT Kits, Saws, Drills & Nailers",
+      "heading": "Current Makita Tool Deals",
+      "description": "Compare Makita tool listings by platform, model, kit contents, battery, condition, price, and verification date.",
+      "intro": "Makita tools may be sold bare, as a kit, or with different battery capacities and chargers. Compare the exact model and included components before choosing the lowest displayed price.",
+      "rules": {
+        "allText": ["makita"]
+      },
+      "considerations": [
+        { "title": "Match the battery platform", "body": "Confirm LXT, XGT, CXT, or corded compatibility, voltage, battery capacity, charger, and whether the listing is tool-only." },
+        { "title": "Compare the exact model", "body": "Small model-number differences can change brushless motors, size, speed, capacity, safety features, and included accessories." },
+        { "title": "Review condition and warranty", "body": "Check refurbishment source, testing, cosmetic grade, warranty, return period, and whether consumables are included." }
+      ],
+      "related": [
+        { "label": "Home and garden deals", "path": "/category/home-and-garden/" },
+        { "label": "Complete deal archive", "path": "/deals/" }
+      ]
+    },
+    {
+      "id": "soundbars",
+      "title": "Soundbar Deals: Samsung, Vizio, Sony & JBL Prices",
+      "heading": "Compare Current Soundbar Deals",
+      "description": "Compare soundbar listings by channel configuration, subwoofer, connectivity, condition, price, and verification date.",
+      "intro": "Soundbar listings can differ by channel count, included subwoofer and rear speakers, HDMI features, wireless formats, dimensions, and refurbishment grade. Compare the complete audio system.",
+      "rules": {
+        "anyText": ["soundbar", "sound bar"]
+      },
+      "considerations": [
+        { "title": "Compare the channel configuration", "body": "Check whether the system includes a separate subwoofer, rear speakers, upward-firing drivers, and the advertised channel count." },
+        { "title": "Match TV connectivity", "body": "Confirm HDMI ARC or eARC, optical input, Bluetooth, Wi-Fi, Dolby and DTS support, and compatibility with your television." },
+        { "title": "Verify the exact package", "body": "Model number, remote, wall hardware, cables, condition, warranty, and return terms can change the value." }
+      ],
+      "related": [
+        { "label": "All electronics deals", "path": "/category/electronics/" },
+        { "label": "Compare related models", "path": "/comparisons/" }
+      ]
+    },
+    {
+      "id": "computer-monitors",
+      "title": "Computer Monitor Deals: Sizes, Resolution & Refresh Rate",
+      "heading": "Compare Current Monitor Deals",
+      "description": "Compare computer monitor listings by size, resolution, panel, refresh rate, ports, condition, displayed price, and verification date.",
+      "intro": "Monitor value depends on size, resolution, panel technology, refresh rate, response behavior, adaptive sync, brightness, ports, and condition. Match the display to the intended work or gaming setup.",
+      "rules": {
+        "categories": ["Electronics"],
+        "allText": ["monitor"]
+      },
+      "considerations": [
+        { "title": "Balance size and resolution", "body": "Compare screen size, pixel density, aspect ratio, panel type, viewing distance, and workspace before buying." },
+        { "title": "Check performance features", "body": "Refresh rate, adaptive sync, response behavior, HDR capability, brightness, and color coverage matter for different uses." },
+        { "title": "Confirm ports and condition", "body": "Verify HDMI, DisplayPort, USB-C power, stand adjustability, VESA support, cables, dead-pixel policy, warranty, and grading." }
+      ],
+      "related": [
+        { "label": "All electronics deals", "path": "/category/electronics/" },
+        { "label": "Compare related models", "path": "/comparisons/" }
+      ]
+    },
+    {
+      "id": "vpn-deals",
+      "minimumOffers": 3,
+      "title": "VPN Deals: Compare Intro Prices and Billing Terms",
+      "heading": "Compare VPN Introductory Offers",
+      "description": "Compare VPN introductory rates, upfront totals, included terms, and stated renewal or refund details when the catalog provides them.",
+      "intro": "VPN promotions often advertise a monthly equivalent while charging for a long term up front. Compare the total initial charge, included months, renewal amount, simultaneous-device policy, and refund window.",
+      "rules": {
+        "merchants": ["NordVPN", "Proton VPN", "Surfshark"]
+      },
+      "considerations": [
+        { "title": "Compare the total initial charge", "body": "A low monthly equivalent can require one or two years paid in advance. Compare the total amount and effective number of months." },
+        { "title": "Read the renewal terms", "body": "The next billing cycle may use a different annual or term price. Check auto-renewal, cancellation timing, and refund conditions." },
+        { "title": "Match features and privacy needs", "body": "Compare device limits, supported platforms, server coverage, independent audits, protocols, and features relevant to your use." }
+      ],
+      "related": [
+        { "label": "All subscription deals", "path": "/category/subscriptions/" },
+        { "label": "How DealDesk ranks offers", "path": "/how-we-rank-deals/" }
+      ]
+    }
+  ]
+}

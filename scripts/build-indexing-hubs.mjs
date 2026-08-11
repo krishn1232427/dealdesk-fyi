@@ -10,14 +10,30 @@ const categoryPageSize = 32;
 const sitemapDealChunkSize = 200;
 const priorityDealCount = 100;
 
-const [latestCatalog, ...sourceFeeds] = await Promise.all([
+const [latestCatalog, searchIndexPayload, categoryGuidePayload, ...sourceFeeds] = await Promise.all([
   readFile(resolve(root, "data/latest-deals.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data/search-index.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data/seo-category-guides.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/best-deals.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/streaming-deals.json"), "utf8").then(JSON.parse),
 ]);
 
 const deals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
 if (!deals.length) throw new Error("data/latest-deals.json does not contain any public deals");
+const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
+const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
+if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+    searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
+  throw new Error("data/search-index.json must contain exactly one record for every public deal");
+}
+for (const deal of deals) {
+  const entry = searchIndexByID.get(deal.id);
+  if (!entry || entry.url !== deal.url || typeof entry.indexable !== "boolean") {
+    throw new Error(`data/search-index.json is inconsistent for ${deal.id}`);
+  }
+}
+const isSearchIndexable = (deal) => searchIndexByID.get(deal.id)?.indexable === true;
+const indexableDeals = deals.filter(isSearchIndexable);
 
 const sourceByID = new Map(sourceFeeds.flatMap((feed) => feed.deals || []).map((deal) => [deal.id, deal]));
 const updatedAt = new Date(latestCatalog.updatedAt || Date.now());
@@ -50,6 +66,11 @@ const pageOutput = (baseDirectory, page) => page === 1
 const chunk = (items, size) => Array.from({ length: Math.ceil(items.length / size) }, (_, index) =>
   items.slice(index * size, (index + 1) * size)
 );
+const newestVerifiedDate = (items) => items
+  .map((deal) => isoDate(deal.verifiedAt))
+  .filter(Boolean)
+  .sort()
+  .at(-1) || buildLastmod;
 
 const categoryMap = new Map();
 for (const deal of deals) {
@@ -61,6 +82,13 @@ for (const deal of deals) {
 const categories = [...categoryMap.values()].sort((a, b) =>
   b.deals.length - a.deals.length || a.label.localeCompare(b.label)
 );
+const categoryGuides = categoryGuidePayload?.categories || {};
+const categoryGuideFor = (category) => categoryGuides[category.label] || {
+  singular: category.label,
+  queryLabel: `${category.label.toLowerCase()} deals`,
+  title: `${category.label} Deals to Compare`,
+  heading: `Compare ${category.label} Deals`,
+};
 const categoryByDealID = new Map();
 for (const category of categories) {
   for (const deal of category.deals) categoryByDealID.set(deal.id, category);
@@ -149,7 +177,7 @@ const pagination = (basePath, currentPage, pageCount) => {
   </nav>`;
 };
 
-const header = (current = "") => `<header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/"${current === "latest" ? ' aria-current="page"' : ""}>Latest deals</a><a href="/deals/"${current === "deals" ? ' aria-current="page"' : ""}>All deals</a><a href="/categories/"${current === "categories" ? ' aria-current="page"' : ""}>Categories</a></div></nav></header>`;
+const header = (current = "") => `<header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/"${current === "latest" ? ' aria-current="page"' : ""}>Latest deals</a><a href="/category/subscriptions/">Subscription deals</a><a href="/category/streaming/">Streaming deals</a><a href="/deals/"${current === "deals" ? ' aria-current="page"' : ""}>All deals</a><a href="/categories/"${current === "categories" ? ' aria-current="page"' : ""}>Categories</a></div></nav></header>`;
 const footer = `<footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/deals/">All deals</a><a href="/categories/">Categories</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. Prices and availability can change at checkout.</div></footer>`;
 
 const archivePages = chunk(deals, archivePageSize);
@@ -160,11 +188,9 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
   const page = pageIndex + 1;
   const pageDeals = archivePages[pageIndex];
   const canonicalPath = pagePath("/deals/", page);
-  const pageTitle = page === 1 ? "All verified deals" : `All verified deals – Page ${page}`;
-  const pageLastmod = pageDeals.reduce((latest, deal) => {
-    const value = new Date(deal.verifiedAt || latest).getTime();
-    return Number.isFinite(value) && value > new Date(latest).getTime() ? isoDate(value) : latest;
-  }, buildLastmod);
+  const pageTitle = page === 1 ? "All deal listings" : `All deal listings – Page ${page}`;
+  const pageLastmod = newestVerifiedDate(pageDeals);
+  const pageIndexable = page === 1;
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -188,8 +214,8 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(pageTitle)} | DealDesk</title>
-  <meta name="description" content="Browse page ${page} of DealDesk's verified, commission-qualified offers with clear pricing and merchant details." />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="description" content="Browse page ${page} of the DealDesk catalog with displayed prices, merchant details, and visible check dates." />
+  <meta name="robots" content="${pageIndexable ? "index,follow" : "noindex,follow"},max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="dealdesk-build" content="${buildID}" />
   <link rel="canonical" href="${absolute(canonicalPath)}" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -202,7 +228,7 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
   ${header("deals")}
   <main class="deal-home shell crawl-archive">
     <nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><span>All deals</span>${page > 1 ? `<span aria-hidden="true">›</span><span>Page ${page}</span>` : ""}</nav>
-    <header class="page-heading crawl-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Crawlable catalog</span><h1>${esc(pageTitle)}</h1></div><p><strong>${deals.length}</strong> current offers · Page ${page} of ${archivePages.length}</p></header>
+    <header class="page-heading crawl-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Crawlable catalog</span><h1>${esc(pageTitle)}</h1></div><p><strong>${deals.length}</strong> catalog records · Page ${page} of ${archivePages.length}</p></header>
     <p class="crawl-intro">Every card below is a normal crawlable link. Use the category pages for a narrower comparison, or move through the numbered archive pages.</p>
     <div class="crawl-hub-actions"><a href="/categories/">Browse categories</a><a href="/latest-deals/">Interactive latest-deals view</a></div>
     ${pagination("/deals/", page, archivePages.length)}
@@ -246,7 +272,7 @@ const categoryIndexHTML = `<!doctype html>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deal categories | DealDesk</title>
-  <meta name="description" content="Browse every current DealDesk offer through crawlable category pages." />
+  <meta name="description" content="Browse the DealDesk offer catalog through crawlable category pages with visible prices, merchants, and check dates." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
   <meta name="dealdesk-build" content="${buildID}" />
   <link rel="canonical" href="${site}/categories/" />
@@ -260,9 +286,9 @@ const categoryIndexHTML = `<!doctype html>
   ${header("categories")}
   <main class="deal-home shell crawl-archive">
     <nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><span>Categories</span></nav>
-    <header class="page-heading crawl-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Browse by need</span><h1>Deal categories</h1></div><p><strong>${categories.length}</strong> categories · ${deals.length} current offers</p></header>
+    <header class="page-heading crawl-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Browse by need</span><h1>Deal categories</h1></div><p><strong>${categories.length}</strong> categories · ${deals.length} catalog records</p></header>
     <p class="crawl-intro">Category hubs provide stable internal links to every active DealDesk offer without relying on search, filters, or a load-more button.</p>
-    <div class="crawl-category-grid">${categories.map((category) => `<a class="crawl-category-card" href="/category/${category.key}/"><strong>${esc(category.label)}</strong><span>${category.deals.length} verified ${category.deals.length === 1 ? "offer" : "offers"}</span><small>Browse category →</small></a>`).join("\n")}</div>
+    <div class="crawl-category-grid">${categories.map((category) => `<a class="crawl-category-card" href="/category/${category.key}/"><strong>${esc(categoryGuideFor(category).singular)} deals</strong><span>${category.deals.length} catalog ${category.deals.length === 1 ? "record" : "records"}</span><small>Browse ${esc(category.label.toLowerCase())} →</small></a>`).join("\n")}</div>
   </main>
   ${footer}
 </body>
@@ -278,13 +304,20 @@ for (const category of categories) {
     const page = pageIndex + 1;
     const pageDeals = pages[pageIndex];
     const canonicalPath = pagePath(basePath, page);
-    const pageTitle = page === 1 ? `${category.label} deals` : `${category.label} deals – Page ${page}`;
+    const guide = categoryGuideFor(category);
+    const pageTitle = page === 1 ? guide.title : `${guide.singular} Deals – Page ${page}`;
+    const pageHeading = page === 1 ? guide.heading : `${guide.singular} Deals – Page ${page}`;
+    const pageDescription = page === 1
+      ? `Compare ${category.deals.length} ${guide.queryLabel} with displayed prices, material terms, and check dates.`
+      : `Browse page ${page} of ${pages.length} for ${category.deals.length} ${guide.queryLabel}, with displayed prices and merchant details.`;
+    const pageIndexable = page === 1;
+    const pageLastmod = newestVerifiedDate(pageDeals);
     const schema = {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: pageTitle,
+      name: pageHeading,
       url: absolute(canonicalPath),
-      dateModified: buildLastmod,
+      dateModified: pageLastmod,
       mainEntity: {
         "@type": "ItemList",
         numberOfItems: pageDeals.length,
@@ -296,14 +329,23 @@ for (const category of categories) {
         })),
       },
     };
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "DealDesk", item: `${site}/` },
+        { "@type": "ListItem", position: 2, name: "Deal categories", item: `${site}/categories/` },
+        { "@type": "ListItem", position: 3, name: pageHeading, item: absolute(canonicalPath) },
+      ],
+    };
     const html = `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(pageTitle)} | DealDesk</title>
-  <meta name="description" content="Compare ${esc(category.label.toLowerCase())} offers with current prices, merchant details, and direct links to DealDesk's verified deal pages." />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <meta name="description" content="${esc(pageDescription)}" />
+  <meta name="robots" content="${pageIndexable ? "index,follow" : "noindex,follow"},max-image-preview:large,max-snippet:-1" />
   <meta name="dealdesk-build" content="${buildID}" />
   <link rel="canonical" href="${absolute(canonicalPath)}" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -311,14 +353,15 @@ for (const category of categories) {
   <link rel="stylesheet" href="/styles.css?v=${buildID}" />
   <link rel="stylesheet" href="/assets/indexing.css?v=${buildID}" />
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll("<", "\\u003c")}</script>
+  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body class="crawl-category-page">
   ${header("categories")}
   <main class="deal-home shell crawl-archive">
     <nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><a href="/categories/">Categories</a><span aria-hidden="true">›</span><span>${esc(category.label)}</span>${page > 1 ? `<span aria-hidden="true">›</span><span>Page ${page}</span>` : ""}</nav>
-    <header class="page-heading crawl-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> ${esc(category.label)}</span><h1>${esc(pageTitle)}</h1></div><p><strong>${category.deals.length}</strong> current offers · Page ${page} of ${pages.length}</p></header>
-    <p class="crawl-intro">Compare the current price, condition or subscription terms, and merchant before opening the individual deal page.</p>
-    <div class="crawl-hub-actions"><a href="/categories/">All categories</a><a href="/deals/">All verified deals</a></div>
+    <header class="page-heading crawl-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> ${esc(category.label)}</span><h1>${esc(pageHeading)}</h1></div><p><strong>${category.deals.length}</strong> catalog records · Page ${page} of ${pages.length}</p></header>
+    <p class="crawl-intro">Compare the displayed price, condition or subscription terms, check date, and merchant before opening the individual deal page.</p>
+    <div class="crawl-hub-actions"><a href="/categories/">All categories</a><a href="/deals/">Complete deal archive</a></div>
     ${pagination(basePath, page, pages.length)}
     <div class="deal-grid crawl-grid">${pageDeals.map((deal, index) => staticCard(deal, { eager: page === 1 && index === 0 })).join("\n")}</div>
     ${pagination(basePath, page, pages.length)}
@@ -329,7 +372,7 @@ for (const category of categories) {
     const output = pageOutput(directory, page);
     await mkdir(dirname(output), { recursive: true });
     await writeFile(output, html);
-    categoryPageRecords.push({ path: canonicalPath, lastmod: buildLastmod });
+    categoryPageRecords.push({ path: canonicalPath, lastmod: pageLastmod, indexable: pageIndexable });
   }
 }
 
@@ -342,7 +385,6 @@ for (let index = 0; index < deals.length; index += 1) {
   const file = resolve(root, dealPath(deal).replace(/^\//, ""), "index.html");
   let html = await readFile(file, "utf8");
 
-  html = html.replace(/\s*<script>\(function\(\)\{if\(Date\.now\(\)>Date\.parse\("[^"]*"\)\)\{document\.documentElement\.hidden=true;window\.location\.replace\("\/latest-deals\/"\);\}\}\(\)\);<\/script>/, "");
   if (!html.includes('name="dealdesk-build"')) {
     html = html.replace('<meta name="robots"', `<meta name="dealdesk-build" content="${buildID}" />\n  <meta name="robots"`);
   } else {
@@ -396,11 +438,18 @@ for (let index = 0; index < deals.length; index += 1) {
   await writeFile(file, html);
 }
 
-const categoryHubCards = categories.slice(0, 8).map((category) => `<a class="crawl-category-card" href="/category/${category.key}/"><strong>${esc(category.label)}</strong><span>${category.deals.length} offers</span><small>Browse category →</small></a>`).join("\n");
-const priorityDealLinks = deals.slice(0, 12).map((deal) => `<a href="${dealPath(deal)}">${esc(deal.title)} <span>${esc(deal.currentPrice || "See terms")}</span></a>`).join("\n");
+const priorityCategories = [...categories].sort((a, b) => {
+  const preferred = ["subscriptions", "streaming", "electronics", "home", "home-and-garden", "collectibles", "toys-and-hobbies", "business-and-industrial"];
+  const left = preferred.indexOf(a.key);
+  const right = preferred.indexOf(b.key);
+  if (left !== -1 || right !== -1) return (left === -1 ? preferred.length : left) - (right === -1 ? preferred.length : right);
+  return b.deals.length - a.deals.length;
+});
+const categoryHubCards = priorityCategories.slice(0, 8).map((category) => `<a class="crawl-category-card" href="/category/${category.key}/"><strong>${esc(categoryGuideFor(category).singular)} deals</strong><span>${category.deals.length} catalog records</span><small>Compare deals →</small></a>`).join("\n");
+const priorityDealLinks = indexableDeals.slice(0, 12).map((deal) => `<a href="${dealPath(deal)}">${esc(deal.title)} <span>${esc(deal.currentPrice || "See terms")}</span></a>`).join("\n");
 const homeHubSection = `<!-- INDEXING-HUBS:START -->
         <section class="indexing-hubs" id="browse-all-deals" aria-labelledby="indexing-hubs-title">
-          <div class="indexing-hubs-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Complete catalog</span><h2 id="indexing-hubs-title">Browse every current DealDesk offer</h2></div><p>Static archive and category links make the complete catalog available without search, filters, or a load-more action.</p></div>
+          <div class="indexing-hubs-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Complete catalog</span><h2 id="indexing-hubs-title">Browse the complete DealDesk catalog</h2></div><p>Static archive and category links make every listed record available without search, filters, or a load-more action.</p></div>
           <div class="crawl-hub-actions"><a href="/deals/">All ${deals.length} deals</a><a href="/categories/">All ${categories.length} categories</a></div>
           <div class="crawl-category-grid crawl-category-grid-home">${categoryHubCards}</div>
           <div class="priority-deal-links" aria-label="Priority deals">${priorityDealLinks}</div>
@@ -421,7 +470,7 @@ if (/<!-- INDEXING-HUBS:START -->[\s\S]*?<!-- INDEXING-HUBS:END -->/.test(homeHT
 }
 await writeFile(resolve(root, "index.html"), homeHTML);
 
-const latestHubSection = `<section class="indexing-hubs latest-indexing-hubs" aria-labelledby="latest-indexing-hubs-title"><div class="indexing-hubs-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Crawlable paths</span><h2 id="latest-indexing-hubs-title">Continue through the complete catalog</h2></div><p>The interactive view stays fast, while static archive pages expose every current offer through ordinary links.</p></div><div class="crawl-hub-actions"><a href="/deals/">Browse all ${deals.length} deals</a><a href="/deals/page/2/">Continue to archive page 2</a><a href="/categories/">Browse categories</a></div></section>`;
+const latestHubSection = `<section class="indexing-hubs latest-indexing-hubs" aria-labelledby="latest-indexing-hubs-title"><div class="indexing-hubs-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Crawlable paths</span><h2 id="latest-indexing-hubs-title">Continue through the complete catalog</h2></div><p>The interactive view stays fast, while static archive pages expose every listed record through ordinary links.</p></div><div class="crawl-hub-actions"><a href="/deals/">Browse all ${deals.length} deals</a><a href="/deals/page/2/">Continue to archive page 2</a><a href="/categories/">Browse categories</a></div></section>`;
 let latestHTML = await readFile(resolve(root, "latest-deals", "index.html"), "utf8");
 if (!latestHTML.includes('/assets/indexing.css')) {
   latestHTML = latestHTML.replace(/(<link rel="stylesheet" href="\/styles\.css\?v=[^"]+" \/>)/, `$1\n  <link rel="stylesheet" href="/assets/indexing.css?v=${buildID}" />`);
@@ -441,10 +490,8 @@ const writeUrlset = async (filename, records) => {
 
 const archivePageRecords = archivePages.map((pageDeals, index) => ({
   path: pagePath("/deals/", index + 1),
-  lastmod: pageDeals.reduce((latest, deal) => {
-    const candidate = isoDate(deal.verifiedAt);
-    return candidate > latest ? candidate : latest;
-  }, buildLastmod),
+  lastmod: newestVerifiedDate(pageDeals),
+  indexable: index === 0,
 }));
 const pageRecords = [
   { path: "/", lastmod: buildLastmod },
@@ -452,16 +499,16 @@ const pageRecords = [
   { path: "/categories/", lastmod: buildLastmod },
   { path: "/privacy/", lastmod: buildLastmod },
   { path: "/support/", lastmod: buildLastmod },
-  ...archivePageRecords,
-  ...categoryPageRecords,
+  ...archivePageRecords.filter((record) => record.indexable),
+  ...categoryPageRecords.filter((record) => record.indexable),
 ];
 await writeUrlset("sitemap-pages.xml", pageRecords);
-await writeUrlset("sitemap-deals-priority.xml", deals.slice(0, priorityDealCount).map((deal) => ({
+await writeUrlset("sitemap-deals-priority.xml", indexableDeals.slice(0, priorityDealCount).map((deal) => ({
   path: dealPath(deal),
   lastmod: isoDate(deal.verifiedAt),
 })));
 
-const remainingChunks = chunk(deals.slice(priorityDealCount), sitemapDealChunkSize);
+const remainingChunks = chunk(indexableDeals.slice(priorityDealCount), sitemapDealChunkSize);
 const rootFiles = await readdir(root);
 for (const filename of rootFiles) {
   if (/^sitemap-deals-\d+\.xml$/.test(filename)) await rm(resolve(root, filename), { force: true });
@@ -488,10 +535,14 @@ const report = {
   generatedAt: new Date().toISOString(),
   catalogUpdatedAt: latestCatalog.updatedAt,
   publicDeals: deals.length,
+  indexableDeals: indexableDeals.length,
+  browseOnlyDeals: deals.length - indexableDeals.length,
   archivePages: archivePages.length,
+  indexableArchivePages: archivePageRecords.filter((record) => record.indexable).length,
   categories: categories.length,
   categoryPages: categoryPageRecords.length,
-  prioritySitemapDeals: Math.min(priorityDealCount, deals.length),
+  indexableCategoryPages: categoryPageRecords.filter((record) => record.indexable).length,
+  prioritySitemapDeals: Math.min(priorityDealCount, indexableDeals.length),
   sitemapFiles,
   orphanDeals: deals.filter((deal) => !linkedFromArchive.has(deal.id) || !linkedFromCategory.has(deal.id)).map((deal) => deal.id),
 };
@@ -499,10 +550,11 @@ await writeFile(resolve(root, "data", "indexing-report.json"), `${JSON.stringify
 await writeFile(resolve(root, "deploy-version.json"), `${JSON.stringify({
   build: buildID,
   catalogOffers: deals.length,
+  indexableOffers: indexableDeals.length,
   archivePages: archivePages.length,
   categoryPages: categoryPageRecords.length,
   sitemapFiles,
   generatedAt: report.generatedAt,
 }, null, 2)}\n`);
 
-console.log(`Built crawl architecture for ${deals.length} deals: ${archivePages.length} archive pages, ${categoryPageRecords.length} category pages, ${sitemapFiles.length} child sitemaps, and ${report.orphanDeals.length} orphan deals.`);
+console.log(`Built crawl architecture for ${deals.length} browseable deals (${indexableDeals.length} indexable): ${archivePages.length} archive pages, ${categoryPageRecords.length} category pages, ${sitemapFiles.length} child sitemaps, and ${report.orphanDeals.length} orphan deals.`);

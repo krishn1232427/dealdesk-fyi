@@ -11,8 +11,12 @@ const priorityDealCount = 100;
 const errors = [];
 
 const latestCatalog = JSON.parse(await readFile(resolve(root, "data/latest-deals.json"), "utf8"));
+const searchIndexPayload = JSON.parse(await readFile(resolve(root, "data/search-index.json"), "utf8"));
 const indexingReport = JSON.parse(await readFile(resolve(root, "data/indexing-report.json"), "utf8"));
 const deals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
+const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
+const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
+const searchIndexEvaluatedAt = new Date(searchIndexPayload.evaluatedAt || "").getTime();
 
 const slugify = (value) => String(value || "other").toLowerCase()
   .replace(/&/g, " and ")
@@ -28,11 +32,43 @@ const chunk = (items, size) => Array.from({ length: Math.ceil(items.length / siz
   items.slice(index * size, (index + 1) * size)
 );
 const count = (text, pattern) => (text.match(pattern) || []).length;
+const hasUnqualifiedClientRedirect = (html) =>
+  html.includes('window.location.replace("/latest-deals/")') && !html.includes("Date.parse(");
 
 if (!deals.length) errors.push("data/latest-deals.json: public catalog is empty");
 if (Number(latestCatalog.total) !== deals.length) errors.push("data/latest-deals.json: total does not match deals length");
+if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+    !Number.isFinite(searchIndexEvaluatedAt)) {
+  errors.push("data/search-index.json: unexpected policy version");
+}
+if (searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
+  errors.push("data/search-index.json: must contain exactly one record for every public deal");
+}
+for (const deal of deals) {
+  const entry = searchIndexByID.get(deal.id);
+  const recheckAt = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : NaN;
+  const expectedIndexable = Number.isFinite(recheckAt) && searchIndexEvaluatedAt <= recheckAt;
+  const expectedReason = !Number.isFinite(recheckAt)
+    ? "recheck-missing-or-invalid"
+    : expectedIndexable ? "verification-current" : "verification-overdue";
+  if (!entry || entry.url !== dealPath(deal) || entry.indexable !== expectedIndexable ||
+      entry.reason !== expectedReason || entry.recheckAfter !== (deal.recheckAfter || null)) {
+    errors.push(`data/search-index.json:${deal.id}: missing or inconsistent search-index state`);
+  }
+}
+const indexableDeals = deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === true);
+const browseOnlyDeals = deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === false);
+if (Number(searchIndexPayload.publicDeals) !== deals.length ||
+    Number(searchIndexPayload.indexableDeals) !== indexableDeals.length ||
+    Number(searchIndexPayload.browseOnlyDeals) !== browseOnlyDeals.length) {
+  errors.push("data/search-index.json: summary counts do not match the catalog");
+}
 if (indexingReport.build !== buildID) errors.push("data/indexing-report.json: unexpected build identifier");
 if (Number(indexingReport.publicDeals) !== deals.length) errors.push("data/indexing-report.json: public deal count mismatch");
+if (Number(indexingReport.indexableDeals) !== indexableDeals.length ||
+    Number(indexingReport.browseOnlyDeals) !== browseOnlyDeals.length) {
+  errors.push("data/indexing-report.json: search-index split mismatch");
+}
 if (!Array.isArray(indexingReport.orphanDeals) || indexingReport.orphanDeals.length) {
   errors.push(`data/indexing-report.json: orphan deals must be empty (${(indexingReport.orphanDeals || []).join(", ")})`);
 }
@@ -51,11 +87,13 @@ const categoryByDealID = new Map(categories.flatMap((category) =>
   category.deals.map((deal) => [deal.id, category])
 ));
 
-const assertIndexablePage = (html, label, canonicalPath) => {
-  if (!html.includes('content="index,follow')) errors.push(`${label}: missing index,follow robots directive`);
-  if (html.includes('content="noindex')) errors.push(`${label}: contains noindex`);
+const assertPage = (html, label, canonicalPath, { indexable = true } = {}) => {
+  const expectedRobots = indexable ? 'content="index,follow' : 'content="noindex,follow';
+  const forbiddenRobots = indexable ? 'content="noindex' : 'content="index,follow';
+  if (!html.includes(expectedRobots)) errors.push(`${label}: missing ${indexable ? "index,follow" : "noindex,follow"} robots directive`);
+  if (html.includes(forbiddenRobots)) errors.push(`${label}: contains contradictory robots directive`);
   if (html.includes('http-equiv="refresh"')) errors.push(`${label}: contains meta refresh`);
-  if (html.includes('window.location.replace("/latest-deals/")')) errors.push(`${label}: contains client-side redirect`);
+  if (hasUnqualifiedClientRedirect(html)) errors.push(`${label}: contains an unqualified client-side redirect`);
   if (!html.includes(`name="dealdesk-build" content="${buildID}"`)) errors.push(`${label}: missing current build marker`);
   if (!html.includes(`rel="canonical" href="${absolute(canonicalPath)}"`)) errors.push(`${label}: canonical does not match ${canonicalPath}`);
   if (!html.includes('/assets/indexing.css')) errors.push(`${label}: missing indexing stylesheet`);
@@ -75,7 +113,7 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
     errors.push(`${label}: page is missing`);
     continue;
   }
-  assertIndexablePage(html, label, path);
+  assertPage(html, label, path, { indexable: page === 1 });
   if (page > 1 && !html.includes(`href="${pagePath("/deals/", page - 1)}"`)) errors.push(`${label}: missing previous-page link`);
   if (page < archivePages.length && !html.includes(`href="${pagePath("/deals/", page + 1)}"`)) errors.push(`${label}: missing next-page link`);
   for (const deal of pageDeals) {
@@ -88,6 +126,9 @@ for (let pageIndex = 0; pageIndex < archivePages.length; pageIndex += 1) {
 }
 if (archiveLinkedIDs.size !== deals.length) errors.push(`archive: linked ${archiveLinkedIDs.size} of ${deals.length} deals`);
 if (Number(indexingReport.archivePages) !== archivePages.length) errors.push("data/indexing-report.json: archive-page count mismatch");
+if (Number(indexingReport.indexableArchivePages) !== Math.min(1, archivePages.length)) {
+  errors.push("data/indexing-report.json: indexable archive-page count mismatch");
+}
 const expectedArchivePageNumbers = Array.from({ length: Math.max(0, archivePages.length - 1) }, (_, index) => String(index + 2));
 let actualArchivePageNumbers = [];
 try {
@@ -104,7 +145,7 @@ if (JSON.stringify(actualArchivePageNumbers) !== JSON.stringify(expectedArchiveP
 let categoriesIndex = "";
 try {
   categoriesIndex = await readFile(resolve(root, "categories", "index.html"), "utf8");
-  assertIndexablePage(categoriesIndex, "categories:/categories/", "/categories/");
+  assertPage(categoriesIndex, "categories:/categories/", "/categories/");
 } catch {
   errors.push("categories:/categories/: page is missing");
 }
@@ -128,7 +169,7 @@ for (const category of categories) {
       errors.push(`${label}: page is missing`);
       continue;
     }
-    assertIndexablePage(html, label, path);
+    assertPage(html, label, path, { indexable: page === 1 });
     if (!html.includes('href="/categories/"')) errors.push(`${label}: missing categories-index link`);
     if (!html.includes('href="/deals/"')) errors.push(`${label}: missing all-deals link`);
     if (page > 1 && !html.includes(`href="${pagePath(basePath, page - 1)}"`)) errors.push(`${label}: missing previous-page link`);
@@ -142,6 +183,9 @@ for (const category of categories) {
 if (categoryLinkedIDs.size !== deals.length) errors.push(`category hubs: linked ${categoryLinkedIDs.size} of ${deals.length} deals`);
 if (Number(indexingReport.categories) !== categories.length) errors.push("data/indexing-report.json: category count mismatch");
 if (Number(indexingReport.categoryPages) !== categoryPageCount) errors.push("data/indexing-report.json: category-page count mismatch");
+if (Number(indexingReport.indexableCategoryPages) !== categories.length) {
+  errors.push("data/indexing-report.json: indexable category-page count mismatch");
+}
 
 for (let index = 0; index < deals.length; index += 1) {
   const deal = deals[index];
@@ -156,7 +200,11 @@ for (let index = 0; index < deals.length; index += 1) {
     errors.push(`${label}: detail page is missing`);
     continue;
   }
-  assertIndexablePage(html, label, path);
+  const searchIndexEntry = searchIndexByID.get(deal.id);
+  assertPage(html, label, path, { indexable: searchIndexEntry?.indexable === true });
+  if (searchIndexEntry?.reason && !html.includes(`name="dealdesk-index-status" content="${searchIndexEntry.reason}"`)) {
+    errors.push(`${label}: search-index status marker does not match the manifest`);
+  }
   if (!html.includes('class="deal-indexing-context"')) errors.push(`${label}: missing visible deal context`);
   if (!html.includes(`href="/category/${category.key}/"`)) errors.push(`${label}: missing category link`);
   if (!html.includes(`href="${pagePath("/deals/", archivePage)}"`)) errors.push(`${label}: missing archive-page link`);
@@ -170,16 +218,16 @@ for (let index = 0; index < deals.length; index += 1) {
 }
 
 const homeHTML = await readFile(resolve(root, "index.html"), "utf8");
-assertIndexablePage(homeHTML, "home:/", "/");
+assertPage(homeHTML, "home:/", "/");
 if (!homeHTML.includes('id="browse-all-deals"')) errors.push("home: crawlable hub section is missing");
 if (!homeHTML.includes('href="/deals/"')) errors.push("home: all-deals link is missing");
 if (!homeHTML.includes('href="/categories/"')) errors.push("home: categories link is missing");
-for (const deal of deals.slice(0, 12)) {
+for (const deal of indexableDeals.slice(0, 12)) {
   if (!homeHTML.includes(`href="${dealPath(deal)}"`)) errors.push(`home: priority deal link missing for ${deal.id}`);
 }
 
 const latestHTML = await readFile(resolve(root, "latest-deals", "index.html"), "utf8");
-assertIndexablePage(latestHTML, "latest:/latest-deals/", "/latest-deals/");
+assertPage(latestHTML, "latest:/latest-deals/", "/latest-deals/");
 if (!latestHTML.includes('class="indexing-hubs latest-indexing-hubs"')) errors.push("latest: crawlable archive hub is missing");
 if (!latestHTML.includes('href="/deals/"')) errors.push("latest: all-deals link is missing");
 if (!latestHTML.includes('href="/deals/page/2/"')) errors.push("latest: second archive-page link is missing");
@@ -196,7 +244,12 @@ const expectedSitemapFiles = indexingReport.sitemapFiles || [];
 for (const filename of expectedSitemapFiles) {
   if (!sitemapLocs.includes(filename)) errors.push(`sitemap.xml: missing child sitemap ${filename}`);
 }
-if (sitemapLocs.length !== expectedSitemapFiles.length) errors.push("sitemap.xml: child sitemap count does not match report");
+const allowedDownstreamSitemaps = new Set(["sitemap-authority.xml", "sitemap-images.xml"]);
+for (const filename of sitemapLocs) {
+  if (!expectedSitemapFiles.includes(filename) && !allowedDownstreamSitemaps.has(filename)) {
+    errors.push(`sitemap.xml: unexpected child sitemap ${filename}`);
+  }
+}
 
 const sitemapURLs = new Set();
 for (const filename of expectedSitemapFiles) {
@@ -220,22 +273,35 @@ const expectedPagePaths = new Set([
   "/categories/",
   "/privacy/",
   "/support/",
-  ...archivePages.map((_, index) => pagePath("/deals/", index + 1)),
-  ...categories.flatMap((category) => chunk(category.deals, categoryPageSize).map((_, index) => pagePath(`/category/${category.key}/`, index + 1))),
+  ...(archivePages.length ? ["/deals/"] : []),
+  ...categories.map((category) => `/category/${category.key}/`),
 ]);
 for (const path of expectedPagePaths) {
   if (!sitemapURLs.has(absolute(path))) errors.push(`sitemaps: missing page URL ${path}`);
 }
-for (const deal of deals) {
+for (const deal of indexableDeals) {
   if (!sitemapURLs.has(absolute(dealPath(deal)))) errors.push(`sitemaps: missing deal URL ${deal.id}`);
 }
-const expectedTotalSitemapURLs = expectedPagePaths.size + deals.length;
+for (const deal of browseOnlyDeals) {
+  if (sitemapURLs.has(absolute(dealPath(deal)))) errors.push(`sitemaps: browse-only deal must be excluded ${deal.id}`);
+}
+for (let page = 2; page <= archivePages.length; page += 1) {
+  if (sitemapURLs.has(absolute(pagePath("/deals/", page)))) errors.push(`sitemaps: noindex archive page must be excluded ${page}`);
+}
+for (const category of categories) {
+  const pageCount = chunk(category.deals, categoryPageSize).length;
+  for (let page = 2; page <= pageCount; page += 1) {
+    const path = pagePath(`/category/${category.key}/`, page);
+    if (sitemapURLs.has(absolute(path))) errors.push(`sitemaps: noindex category page must be excluded ${path}`);
+  }
+}
+const expectedTotalSitemapURLs = expectedPagePaths.size + indexableDeals.length;
 if (sitemapURLs.size !== expectedTotalSitemapURLs) {
   errors.push(`sitemaps: expected ${expectedTotalSitemapURLs} unique URLs, found ${sitemapURLs.size}`);
 }
 
 const prioritySitemap = await readFile(resolve(root, "sitemap-deals-priority.xml"), "utf8");
-for (const deal of deals.slice(0, Math.min(priorityDealCount, deals.length))) {
+for (const deal of indexableDeals.slice(0, Math.min(priorityDealCount, indexableDeals.length))) {
   if (!prioritySitemap.includes(`<loc>${absolute(dealPath(deal))}</loc>`)) errors.push(`priority sitemap: missing ${deal.id}`);
 }
 
@@ -243,8 +309,8 @@ const dealRootEntries = await readdir(resolve(root, "deals"), { withFileTypes: t
 for (const entry of dealRootEntries) {
   if (!entry.isDirectory() || entry.name === "page") continue;
   const page = await readFile(resolve(root, "deals", entry.name, "index.html"), "utf8");
-  if (page.includes('content="noindex') || page.includes('http-equiv="refresh"') || page.includes('window.location.replace("/latest-deals/")')) {
-    errors.push(`deals/${entry.name}: retired or redirect shell remains in the active deal tree`);
+  if (page.includes('http-equiv="refresh"') || hasUnqualifiedClientRedirect(page)) {
+    errors.push(`deals/${entry.name}: redirect shell remains in the active deal tree`);
   }
 }
 
@@ -253,4 +319,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validated crawl architecture: ${deals.length} deal pages, ${archivePages.length} archive pages, ${categoryPageCount} category pages, ${sitemapURLs.size} unique sitemap URLs, and zero orphan deals.`);
+console.log(`Validated crawl architecture: ${deals.length} browseable deal pages (${indexableDeals.length} indexable, ${browseOnlyDeals.length} browse-only), ${archivePages.length} archive pages, ${categoryPageCount} category pages, ${sitemapURLs.size} unique sitemap URLs, and zero orphan deals.`);

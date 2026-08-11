@@ -4,8 +4,24 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const site = "https://dealdesk.fyi";
-const catalog = JSON.parse(await readFile(resolve(root, "data", "latest-deals.json"), "utf8"));
+const [catalog, searchIndexPayload] = await Promise.all([
+  readFile(resolve(root, "data", "latest-deals.json"), "utf8").then(JSON.parse),
+  readFile(resolve(root, "data", "search-index.json"), "utf8").then(JSON.parse),
+]);
 const deals = Array.isArray(catalog.deals) ? catalog.deals : [];
+const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
+const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
+if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+    searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
+  throw new Error("data/search-index.json must contain exactly one record for every public deal");
+}
+for (const deal of deals) {
+  const entry = searchIndexByID.get(deal.id);
+  if (!entry || entry.url !== deal.url || typeof entry.indexable !== "boolean") {
+    throw new Error(`data/search-index.json is inconsistent for ${deal.id}`);
+  }
+}
+const indexableDeals = deals.filter((deal) => searchIndexByID.get(deal.id)?.indexable === true);
 
 const xml = (value) => String(value ?? "")
   .replaceAll("&", "&amp;")
@@ -20,7 +36,7 @@ const dateOnly = (value) => {
 
 const records = [];
 const seenPages = new Set();
-for (const deal of deals) {
+for (const deal of indexableDeals) {
   const path = String(deal.url || "");
   const imageURL = String(deal.imageURL || "").trim();
   if (!path.startsWith("/") || !/^https?:\/\//i.test(imageURL)) continue;
@@ -33,8 +49,6 @@ for (const deal of deals) {
     lastmod: dateOnly(deal.verifiedAt),
   });
 }
-if (!records.length) throw new Error("No deal images were eligible for the image sitemap");
-
 records.sort((left, right) => left.pageURL.localeCompare(right.pageURL));
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${records.map((record) => `  <url><loc>${xml(record.pageURL)}</loc>${record.lastmod ? `<lastmod>${record.lastmod}</lastmod>` : ""}<image:image><image:loc>${xml(record.imageURL)}</image:loc></image:image></url>`).join("\n")}\n</urlset>\n`;
 await writeFile(resolve(root, "sitemap-images.xml"), sitemap);
@@ -46,4 +60,4 @@ index = index.replace(/\s*<sitemap><loc>https:\/\/dealdesk\.fyi\/sitemap-images\
 index = index.replace(/\s*<\/sitemapindex>/, `\n  <sitemap><loc>${site}/sitemap-images.xml</loc><lastmod>${latestDate}</lastmod></sitemap>\n</sitemapindex>`);
 await writeFile(indexPath, index);
 
-console.log(`Generated an image sitemap for ${records.length} deal landing pages.`);
+console.log(`Generated an image sitemap for ${records.length} indexable of ${deals.length} browseable deal landing pages.`);

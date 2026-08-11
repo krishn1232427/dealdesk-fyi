@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-11",
+  "categories": {
+    "Subscriptions": {
+      "singular": "Subscription",
+      "queryLabel": "subscription deals",
+      "title": "Subscription Deals and Free Trials: VPNs & More",
+      "heading": "Compare Subscription Deals and Free Trials",
+      "intro": "Compare introductory prices, free trials, annual plans, and renewal costs across security, reading, membership, and digital subscription offers. The headline price is only one part of the cost, so DealDesk keeps the billing term and the next known price visible.",
+      "checks": [
+        {
+          "title": "Compare the full term",
+          "body": "A low monthly rate can require a multi-year payment. Compare the total charged today, the number of included months, and any bonus period before choosing a plan."
+        },
+        {
+          "title": "Check the renewal price",
+          "body": "Trials and introductory plans usually renew automatically. Confirm the post-promotion rate, billing frequency, eligibility rules, and cancellation deadline."
+        },
+        {
+          "title": "Match the service to the need",
+          "body": "Security tools, reading memberships, and entertainment subscriptions solve different problems. Compare features and limits before treating the largest percentage discount as the best value."
+        }
+      ],
+      "related": [
+        { "label": "Streaming subscription deals", "path": "/category/streaming/" },
+        { "label": "Complete deal archive", "path": "/deals/" }
+      ]
+    },
+    "Streaming": {
+      "singular": "Streaming",
+      "queryLabel": "streaming deals",
+      "title": "Streaming Deals and Free Trials: Channels & Music",
+      "heading": "Compare Streaming Deals and Free Trials",
+      "intro": "Compare listed video, channel, documentary, and music-streaming offers with the trial length, monthly price, eligibility, and renewal terms shown together. Catalogs and plan features can change, so the merchant page remains the source of truth.",
+      "checks": [
+        {
+          "title": "Price after the trial",
+          "body": "A free trial is temporary. Check the regular monthly or annual rate and set a reminder before the automatic renewal date if you are still deciding."
+        },
+        {
+          "title": "Plan and device limits",
+          "body": "Compare ads, simultaneous streams, offline viewing, resolution, supported devices, and whether the offer requires another membership."
+        },
+        {
+          "title": "Content availability",
+          "body": "A low price is useful only when the service carries what you want to watch or hear. Confirm the current catalog and regional availability before subscribing."
+        }
+      ],
+      "related": [
+        { "label": "All subscription deals", "path": "/category/subscriptions/" },
+        { "label": "Recently listed deals", "path": "/latest-deals/" }
+      ]
+    },
+    "Electronics": {
+      "singular": "Electronics",
+      "queryLabel": "electronics deals",
+      "title": "Electronics Deals: Phones, PCs, Audio & More",
+      "heading": "Compare Electronics Deals by Model and Condition",
+      "intro": "Browse cataloged electronics offers by exact model, storage, condition, included accessories, and displayed price. Many listings are refurbished or pre-owned, so DealDesk keeps condition and verification dates visible instead of comparing price alone.",
+      "checks": [
+        {
+          "title": "Match the exact model",
+          "body": "Confirm the model number, generation, storage, carrier or connectivity, screen size, and included accessories before comparing two prices."
+        },
+        {
+          "title": "Understand condition",
+          "body": "New, open-box, refurbished, and used devices are not equivalent. Review cosmetic grading, battery expectations, warranty, and return terms."
+        },
+        {
+          "title": "Count the delivered cost",
+          "body": "Shipping, taxes, activation, missing chargers, and optional protection plans can change the final value at checkout."
+        }
+      ],
+      "related": [
+        { "label": "Compare similar electronics", "path": "/comparisons/" },
+        { "label": "Browse deals by merchant", "path": "/merchants/" }
+      ]
+    },
+    "Home": {
+      "singular": "Home",
+      "queryLabel": "home deals",
+      "title": "Home Deals: Appliances, Comfort & Smart Devices",
+      "heading": "Compare Home Deals by Model, Bundle and Price",
+      "intro": "Compare listed home-product offers with model details, displayed savings, shipping terms, and verification dates. For appliances and smart-home equipment, warranty coverage and the exact bundle can matter as much as the headline discount.",
+      "checks": [
+        {
+          "title": "Confirm size and compatibility",
+          "body": "Check dimensions, voltage, room coverage, replacement-part compatibility, and any installation requirements before ordering."
+        },
+        {
+          "title": "Compare the exact bundle",
+          "body": "Accessories, filters, sensors, batteries, and warranty coverage can make two similar-looking offers materially different."
+        },
+        {
+          "title": "Review delivery and returns",
+          "body": "Large or heavy items can carry delivery restrictions or return costs. Verify the final shipping and return terms at checkout."
+        }
+      ],
+      "related": [
+        { "label": "Home and garden deals", "path": "/category/home-and-garden/" },
+        { "label": "Compare similar products", "path": "/comparisons/" }
+      ]
+    },
+    "Home & garden": {
+      "singular": "Home and Garden",
+      "queryLabel": "home and garden deals",
+      "title": "Home and Garden Deals: Tools, Equipment & Decor",
+      "heading": "Compare Home and Garden Deals",
+      "intro": "Browse home-and-garden listings by product type, dimensions, material, condition, and delivered price. Exact specifications and freight terms matter for furniture, tools, outdoor equipment, and replacement parts.",
+      "checks": [
+        {
+          "title": "Measure before ordering",
+          "body": "Confirm dimensions, fit, capacity, material, and compatibility with the space or equipment you already own."
+        },
+        {
+          "title": "Compare condition and completeness",
+          "body": "Used or refurbished items may omit hardware, manuals, or accessories. Read the listing details and inspect every merchant image."
+        },
+        {
+          "title": "Check freight costs",
+          "body": "Shipping can dominate the final price for bulky items. Confirm delivery area, handling time, return freight, and pickup requirements."
+        }
+      ],
+      "related": [
+        { "label": "More home deals", "path": "/category/home/" },
+        { "label": "Complete deal archive", "path": "/deals/" }
+      ]
+    },
+    "Collectibles": {
+      "singular": "Collectible",
+      "queryLabel": "collectible deals",
+      "title": "Collectible Deals: Cards, Figures & Memorabilia",
+      "heading": "Compare Collectible Listings and Asking Prices",
+      "intro": "Compare collectible listings by exact edition, year, set, condition, grading, completeness, and seller-provided images. Scarcity and reference prices can be difficult to verify, so DealDesk emphasizes the listing facts and current asking price.",
+      "checks": [
+        {
+          "title": "Identify the exact edition",
+          "body": "Year, set, printing, variant, serial number, language, and packaging can separate a common item from a valuable version."
+        },
+        {
+          "title": "Treat condition as material",
+          "body": "Review grading details, authentication, surface wear, seals, missing pieces, and image quality before comparing prices."
+        },
+        {
+          "title": "Verify the market context",
+          "body": "An asking price is not a completed-sale value. Compare similar items and avoid assuming a large reference-price discount proves rarity."
+        }
+      ],
+      "related": [
+        { "label": "Sports collectible deals", "path": "/category/sports-collectibles/" },
+        { "label": "Toys and hobbies deals", "path": "/category/toys-and-hobbies/" }
+      ]
+    },
+    "Sports collectibles": {
+      "singular": "Sports Collectible",
+      "queryLabel": "sports collectible deals",
+      "title": "Sports Collectible Deals: Cards and Memorabilia",
+      "heading": "Compare Sports Collectible Listings",
+      "intro": "Browse sports cards and memorabilia by athlete, team, year, set, parallel, autograph status, grading, and condition. DealDesk records the current listing price and check date without treating an asking price as a confirmed market value.",
+      "checks": [
+        {
+          "title": "Confirm player, year, and set",
+          "body": "Small title differences can identify a different card, parallel, insert, reprint, or memorabilia edition."
+        },
+        {
+          "title": "Review grading and authenticity",
+          "body": "Check the grading company, certification number, autograph authentication, condition notes, and clear images of the exact item."
+        },
+        {
+          "title": "Compare completed-market evidence",
+          "body": "A seller's reference price may not represent recent sales. Use the DealDesk listing as a starting point and verify broader market context."
+        }
+      ],
+      "related": [
+        { "label": "All collectible deals", "path": "/category/collectibles/" },
+        { "label": "Compare related listings", "path": "/comparisons/" }
+      ]
+    },
+    "Toys & hobbies": {
+      "singular": "Toy and Hobby",
+      "queryLabel": "toy and hobby deals",
+      "title": "Toy and Hobby Deals: Models, Games & Collectibles",
+      "heading": "Compare Toy and Hobby Deals",
+      "intro": "Compare toys, models, games, and hobby listings by brand, scale, edition, completeness, condition, and current price. Collectible packaging and included pieces can materially affect value.",
+      "checks": [
+        {
+          "title": "Match scale and edition",
+          "body": "Confirm model scale, product line, release year, language, region, and edition before treating two listings as comparable."
+        },
+        {
+          "title": "Check completeness",
+          "body": "Missing pieces, instructions, inserts, packaging, controllers, or accessories can explain a lower price."
+        },
+        {
+          "title": "Review age and safety details",
+          "body": "Check manufacturer age guidance, materials, batteries, condition, and current safety information when the item is intended for children."
+        }
+      ],
+      "related": [
+        { "label": "Collectible deals", "path": "/category/collectibles/" },
+        { "label": "Complete deal archive", "path": "/deals/" }
+      ]
+    },
+    "Business & industrial": {
+      "singular": "Business and Industrial",
+      "queryLabel": "business and industrial deals",
+      "title": "Business and Industrial Deals: Parts & Equipment",
+      "heading": "Compare Business and Industrial Listings",
+      "intro": "Browse equipment, components, storage, and industrial listings by part number, specification, condition, and delivered price. Compatibility and freight terms often matter more than a broad category discount.",
+      "checks": [
+        {
+          "title": "Verify the part number",
+          "body": "Confirm manufacturer, model, revision, voltage, interface, capacity, dimensions, and compatibility with the intended system."
+        },
+        {
+          "title": "Understand operating condition",
+          "body": "Used, refurbished, surplus, and untested equipment carry different risks. Review testing notes, warranty, hours, and included components."
+        },
+        {
+          "title": "Calculate delivered cost",
+          "body": "Freight, lift-gate service, duties, installation, calibration, and return shipping can change the final economics."
+        }
+      ],
+      "related": [
+        { "label": "Electronics deals", "path": "/category/electronics/" },
+        { "label": "Browse deals by merchant", "path": "/merchants/" }
+      ]
+    },
+    "Fashion": {
+      "singular": "Fashion",
+      "queryLabel": "fashion deals",
+      "title": "Fashion Deals: Clothing, Shoes & Accessories",
+      "heading": "Compare Fashion Deals by Variant and Price",
+      "intro": "Compare clothing and accessory offers by exact size, color, material, pack quantity, condition, and return policy. A discount is useful only when the item and fit match what you need.",
+      "checks": [
+        {
+          "title": "Use the merchant size chart",
+          "body": "Sizing varies by brand and product line. Compare measurements rather than relying only on a familiar letter size."
+        },
+        {
+          "title": "Check the exact variant",
+          "body": "Price can change by color, size, material, or pack quantity. Confirm the selected variant before checkout."
+        },
+        {
+          "title": "Review return terms",
+          "body": "Final-sale rules, return shipping, restocking fees, and condition requirements can outweigh a modest discount."
+        }
+      ],
+      "related": [
+        { "label": "All deal categories", "path": "/categories/" },
+        { "label": "Recently listed deals", "path": "/latest-deals/" }
+      ]
+    },
+    "Grocery": {
+      "singular": "Grocery",
+      "queryLabel": "grocery deals",
+      "title": "Grocery Deals: Food, Drinks & Essentials",
+      "heading": "Compare Grocery Deals by Unit Price",
+      "intro": "Compare grocery offers by package count, weight or volume, unit price, dietary details, and subscription requirements. The lowest package price is not always the lowest cost per serving or item.",
+      "checks": [
+        {
+          "title": "Compare the unit price",
+          "body": "Divide the displayed price by count, weight, volume, or serving so different pack sizes can be compared fairly."
+        },
+        {
+          "title": "Confirm variant and ingredients",
+          "body": "Flavor, formula, allergens, dietary certifications, and package size may differ between otherwise similar listings."
+        },
+        {
+          "title": "Check delivery and recurring terms",
+          "body": "Verify delivery dates, temperature-sensitive shipping, expiration guidance, and whether the price requires recurring delivery."
+        }
+      ],
+      "related": [
+        { "label": "All deal categories", "path": "/categories/" },
+        { "label": "Recently listed deals", "path": "/latest-deals/" }
+      ]
+    }
+  }
+}

@@ -23,6 +23,16 @@ const isLiveDeal = (deal) => {
     Boolean(deal.verifiedAt) &&
     now <= expiresAt;
 };
+const searchIndexStateFor = (deal) => {
+  const recheckAt = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : NaN;
+  if (!Number.isFinite(recheckAt)) {
+    return { indexable: false, reason: "recheck-missing-or-invalid" };
+  }
+  if (now > recheckAt) {
+    return { indexable: false, reason: "verification-overdue" };
+  }
+  return { indexable: true, reason: "verification-current" };
+};
 // recheckAfter is a freshness-review date, not an offer-expiration date.
 // Only an explicit expiresAt or a non-active status can remove a deal.
 const validUntilFor = (deal) => {
@@ -174,6 +184,7 @@ for (const deal of deals) {
   const discount = discountFrom(prices, deal);
   const savings = savingsFrom(prices);
   const itemCondition = itemConditionFor(deal);
+  const searchIndexState = searchIndexStateFor(deal);
   const isServiceOffer = deal.offerType === "subscription" ||
     String(deal.category || "").toLowerCase() === "subscriptions";
   const relatedDeals = deals.filter((candidate) =>
@@ -205,7 +216,7 @@ for (const deal of deals) {
       priceCurrency: "USD",
       price: numberFromPrice(prices.current).toFixed(2),
       ...(deal.expiresAt ? { priceValidUntil: isoDate(deal.expiresAt) } : {}),
-      ...(!isServiceOffer ? { availability: "https://schema.org/InStock" } : {}),
+      ...(!isServiceOffer && deal.availabilityStatus === "InStock" ? { availability: "https://schema.org/InStock" } : {}),
       ...(!isServiceOffer && itemCondition ? { itemCondition } : {}),
       seller: { "@type": "Organization", name: deal.merchantName || "Amazon" }
     }
@@ -234,7 +245,8 @@ for (const deal of deals) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(title)} deal | DealDesk</title>
   <meta name="description" content="${esc(description)}" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="dealdesk-index-status" content="${searchIndexState.reason}" />
+  <meta name="robots" content="${searchIndexState.indexable ? "index,follow" : "noindex,follow"},max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <link rel="canonical" href="${canonical}" />
   <meta property="og:type" content="${hasMonetaryPrice(prices.current) && !isServiceOffer ? "product" : "website"}" />
   <meta property="og:title" content="${esc(title)} deal" />
@@ -247,7 +259,7 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
   <script>(function(){if(Date.now()>Date.parse(${JSON.stringify(validUntilFor(deal))})){document.documentElement.hidden=true;window.location.replace("/latest-deals/");}}());</script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#deal-categories">Categories</a></div></nav></header>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/category/subscriptions/">Subscription deals</a><a href="/category/streaming/">Streaming deals</a><a href="/collections/">Deal guides</a><a href="/categories/">Categories</a></div></nav></header>
   <main class="deal-detail shell">
     <nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span aria-hidden="true">›</span><a href="/latest-deals/">Latest deals</a><span aria-hidden="true">›</span><span>${esc(title)}</span></nav>
     <article class="deal-detail-card">
@@ -295,12 +307,8 @@ const diversifyDeals = (items, seed = []) => {
   return ordered.slice(seed.length);
 };
 const rankedDeals = [...deals]
-  .sort((a, b) => earningPotential(b) - earningPotential(a) || rankingNumber(b) - rankingNumber(a));
-const earningLeaders = rankedDeals.filter((deal) => earningPotential(deal) > 0);
-const pricedDeals = [
-  ...earningLeaders,
-  ...diversifyDeals(rankedDeals.filter((deal) => earningPotential(deal) === 0), earningLeaders)
-];
+  .sort((a, b) => rankingNumber(b) - rankingNumber(a) || discountFrom(pricesFrom(b), b) - discountFrom(pricesFrom(a), a) || new Date(b.verifiedAt || 0) - new Date(a.verifiedAt || 0) || Number(a.priority || 99) - Number(b.priority || 99));
+const pricedDeals = diversifyDeals(rankedDeals);
 const featuredDeal = pricedDeals[0];
 const featuredPrices = pricesFrom(featuredDeal);
 const featuredDiscount = discountFrom(featuredPrices, featuredDeal);
@@ -310,8 +318,8 @@ const featuredCanonical = featuredDeal ? `/deals/${slugFor(featuredDeal)}/` : "/
 const latestSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Latest verified deals",
-  description: "Hand-picked deals with current price, original price, savings, merchant, and freshness shown clearly.",
+  name: "Deal listings with visible check dates",
+  description: "DealDesk catalog records with displayed price, reference price, savings, merchant, and check dates shown clearly.",
   url: `${site}/latest-deals/`,
   dateModified: lastmod,
   mainEntity: {
@@ -374,7 +382,7 @@ const featuredHTML = featuredDeal ? `<article class="featured-wrap latest-featur
       <img src="${esc(imageFor(featuredDeal))}" data-merchant-image alt="${esc(featuredTitle)}" width="800" height="520" fetchpriority="high" decoding="async" />
     </span>
     <span class="featured-content">
-      <span class="featured-label">Highest earning potential · Checked ${esc(isoDate(featuredDeal.verifiedAt || featuredDeal.publishedAt || lastmod))}</span>
+      <span class="featured-label">DealDesk featured pick · Checked ${esc(isoDate(featuredDeal.verifiedAt || featuredDeal.publishedAt || lastmod))}</span>
       <span class="featured-price-line"><strong>${esc(featuredPrices.current)}</strong>${featuredPrices.original ? featuredDeal.referenceStyle === "renewal" ? `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Then")} ${esc(featuredPrices.original)}</span>` : `<span class="featured-original">${esc(featuredDeal.referenceLabel || "Was")} <del>${esc(featuredPrices.original)}</del></span>` : ""}</span>
       ${featuredDeal.savingsText ? `<span class="featured-saving">${esc(featuredDeal.savingsText)}</span>` : featuredSavings ? `<span class="featured-saving">Save ${money(featuredSavings)} · ${featuredDiscount}% off</span>` : ""}
       ${featuredDeal.priceNote ? `<span class="price-note">${esc(featuredDeal.priceNote)}</span>` : ""}
@@ -390,14 +398,14 @@ const latestHTML = `<!doctype html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Latest verified deals | DealDesk</title>
-  <meta name="description" content="Hand-picked deals with current price, original price, savings, merchant, and freshness shown clearly." />
+  <title>Deal listings with prices and check dates | DealDesk</title>
+  <meta name="description" content="Compare DealDesk catalog records with displayed prices, savings, merchants, categories, and visible check dates." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="dealdesk-build" content="2026-08-08-indexing-v1" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <link rel="canonical" href="${site}/latest-deals/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Latest verified deals | DealDesk" />
+  <meta property="og:title" content="Deal listings with prices and check dates | DealDesk" />
   <meta property="og:description" content="Current price, original price, savings, merchant, and freshness—without the clutter." />
   <meta property="og:url" content="${site}/latest-deals/" />
   <meta property="og:image" content="${site}/assets/dealdesk-publisher-logo.png" />
@@ -407,27 +415,27 @@ const latestHTML = `<!doctype html>
   <script type="application/ld+json">${JSON.stringify(latestSchema).replaceAll("<", "\\u003c")}</script>
 </head>
 <body class="latest-page">
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/#deal-categories">Categories</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><form class="site-search" id="latest-deal-search-form" role="search"><label class="sr-only" for="latest-deal-search">Search deals</label><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg><input id="latest-deal-search" type="search" placeholder="Search products or merchants" autocomplete="off" /></form><div class="nav-links"><a href="/latest-deals/" aria-current="page">Latest deals</a><a href="/category/subscriptions/">Subscription deals</a><a href="/category/streaming/">Streaming deals</a><a href="/collections/">Deal guides</a><a href="/categories/">Categories</a><a class="nav-app" href="https://apps.apple.com/us/app/dealdesk/id6782424624">Get the app</a></div></nav></header>
   <main class="deal-home shell">
     <header class="page-heading">
-      <div><span class="page-kicker"><span aria-hidden="true"></span> Checked ${lastmod}</span><h1>Latest verified deals</h1></div>
-      <p><strong id="latest-total">${pricedDeals.length}</strong> verified offers, presented in focused batches</p>
+      <div><span class="page-kicker"><span aria-hidden="true"></span> Catalog updated ${lastmod}</span><h1>Deal listings with visible check dates</h1></div>
+      <p><strong id="latest-total">${pricedDeals.length}</strong> catalog records, presented in focused batches</p>
     </header>
     ${featuredHTML}
     <aside class="latest-trust-strip" aria-label="How this page is organized">
       <span><strong>Focused first view</strong><small>Start with 18 recommendations, then reveal more when you choose.</small></span>
       <span><strong>Genuine imagery only</strong><small>Offers without real merchant-provided imagery stay out of this visual catalog.</small></span>
-      <span><strong>Transparent ordering</strong><small>Known payouts and conservative earnings bands come first; customer value and freshness break close calls.</small></span>
+      <span><strong>User-first ordering</strong><small>Price clarity, displayed savings, material terms, and freshness shape the order. Commission eligibility is only a publishing requirement.</small></span>
     </aside>
     <section class="deals-heading-row" aria-labelledby="latest-deals-heading">
       <div><h2 id="latest-deals-heading">More deals worth seeing</h2><p>Filter first, compare a manageable set, and expand only when useful.</p></div>
     </section>
     <section class="latest-controls" aria-label="Filter the deal catalog">
       <label for="latest-category">Category<select id="latest-category"><option value="all">All categories</option>${categoryOptions}</select></label>
-      <p id="latest-catalog-status" role="status">Showing ${Math.min(18, pricedDeals.length)} of ${pricedDeals.length} verified offers</p>
+      <p id="latest-catalog-status" role="status">Showing ${Math.min(18, pricedDeals.length)} of ${pricedDeals.length} catalog records</p>
     </section>
     <div class="deal-grid" id="latest-deal-grid">${latestCards}</div>
-    <p class="latest-empty" id="latest-empty" hidden>No matching verified deals. Try another search or category.</p>
+    <p class="latest-empty" id="latest-empty" hidden>No matching deal records. Try another search or category.</p>
     <div class="load-more-wrap"><button class="load-more" id="latest-load-more" type="button" hidden>Show 18 more deals</button></div>
   </main>
   <footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. You never pay more because of it. Prices and availability can change at checkout.</div></footer>
@@ -572,7 +580,7 @@ const latestHTML = `<!doctype html>
         grid.replaceChildren(fragment);
         var shown = shownDeals.length + (featuredMatch ? 1 : 0);
         var total = matching.length + (featuredMatch ? 1 : 0);
-        status.textContent = "Showing " + shown + " of " + total + " matching verified offers";
+        status.textContent = "Showing " + shown + " of " + total + " matching catalog records";
         loadMore.hidden = total <= visibleLimit;
         empty.hidden = total !== 0;
       }
@@ -611,7 +619,7 @@ const latestHTML = `<!doctype html>
           selectedCategory === "all" && (!query || featured.textContent.toLowerCase().indexOf(query) !== -1);
         if (featured) featured.hidden = !featuredMatch;
         if (featuredMatch) shown += 1;
-        status.textContent = "Showing " + shown + " verified offers; the full catalog is temporarily unavailable";
+        status.textContent = "Showing " + shown + " catalog records; the full catalog is temporarily unavailable";
         loadMore.hidden = true;
         empty.hidden = shown !== 0;
       }
@@ -640,7 +648,7 @@ const latestHTML = `<!doctype html>
 
       function requestRender(resetLimit) {
         if (resetLimit) visibleLimit = 18;
-        status.textContent = "Loading matching verified offers…";
+        status.textContent = "Loading matching catalog records…";
         loadCatalog().then(function (ready) {
           if (ready) renderDeals();
           else filterServerCards();
@@ -689,7 +697,7 @@ const latestHTML = `<!doctype html>
             renderDeals();
             return;
           }
-          status.textContent = "Showing " + Math.min(visibleLimit, catalogDeals.length) + " of " + catalogDeals.length + " matching verified offers";
+          status.textContent = "Showing " + Math.min(visibleLimit, catalogDeals.length) + " of " + catalogDeals.length + " matching catalog records";
           loadMore.hidden = catalogDeals.length <= visibleLimit;
           empty.hidden = catalogDeals.length !== 0;
         });
@@ -699,11 +707,35 @@ const latestHTML = `<!doctype html>
 </body>
 </html>`;
 await mkdir(resolve(root, "latest-deals"), { recursive: true });
+const searchIndexDeals = latestDealData.map((deal) => {
+  const sourceDeal = deals.find((candidate) => candidate.id === deal.id);
+  const state = searchIndexStateFor(sourceDeal || deal);
+  return {
+    id: deal.id,
+    url: deal.url,
+    indexable: state.indexable,
+    reason: state.reason,
+    verifiedAt: deal.verifiedAt || null,
+    recheckAfter: deal.recheckAfter || null,
+    lastmod: deal.verifiedAt || null,
+  };
+});
+const indexableDealCount = searchIndexDeals.filter((deal) => deal.indexable).length;
 await writeFile(resolve(root, "data", "latest-deals.json"), `${JSON.stringify({
   updatedAt: new Date(latestFeedTime).toISOString(),
   total: latestDealData.length,
   deals: latestDealData
 })}\n`);
+await writeFile(resolve(root, "data", "search-index.json"), `${JSON.stringify({
+  version: 1,
+  policy: "recheck-after-v1",
+  evaluatedAt: new Date(now).toISOString(),
+  catalogUpdatedAt: new Date(latestFeedTime).toISOString(),
+  publicDeals: searchIndexDeals.length,
+  indexableDeals: indexableDealCount,
+  browseOnlyDeals: searchIndexDeals.length - indexableDealCount,
+  deals: searchIndexDeals,
+}, null, 2)}\n`);
 await writeFile(resolve(root, "data", "outbound-approvals.json"), `${JSON.stringify({
   generatedAt: new Date(latestFeedTime).toISOString(),
   deals: deals.map((deal) => ({
@@ -720,7 +752,7 @@ const urls = [
   { path: "/latest-deals/", lastmod, changefreq: "daily", priority: "0.9" },
   { path: "/privacy/", lastmod, changefreq: "monthly", priority: "0.3" },
   { path: "/support/", lastmod, changefreq: "monthly", priority: "0.3" },
-  ...deals.map((deal) => ({
+  ...deals.filter((deal) => searchIndexStateFor(deal).indexable).map((deal) => ({
     path: `/deals/${slugFor(deal)}/`,
     lastmod: isoDate(deal.verifiedAt || deal.publishedAt || lastmod),
     changefreq: "daily",
@@ -743,8 +775,8 @@ await writeFile(resolve(root, "404.html"), `<!doctype html>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/#deal-categories">Categories</a></div></nav></header>
-  <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>That page is no longer available</h1><p class="deal-detail-summary">The offer may have been removed because it no longer meets DealDesk's publishing requirements.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse current verified deals</a></p></div></article></main>
+  <header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/">Latest deals</a><a href="/category/subscriptions/">Subscription deals</a><a href="/category/streaming/">Streaming deals</a><a href="/collections/">Deal guides</a><a href="/categories/">Categories</a></div></nav></header>
+  <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>That page is no longer available</h1><p class="deal-detail-summary">The offer may have been removed because it no longer meets DealDesk's publishing requirements.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse the deal catalog</a></p></div></article></main>
 </body>
 </html>\n`);
-console.log(`Built ${deals.length} commission-qualified image-qualified deal pages and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${commissionBlockedDealCount} offers without a verified commission-accrual path. ${verificationDueDealCount} active offers are due for a verification refresh but remain listed until hard expiry or an explicit status change.`);
+console.log(`Built ${deals.length} browseable deal pages (${indexableDealCount} indexable, ${deals.length - indexableDealCount} noindex pending verification) and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${commissionBlockedDealCount} offers without a verified commission-accrual path. ${verificationDueDealCount} active offers are due for a verification refresh but remain browseable until hard expiry or an explicit status change.`);
