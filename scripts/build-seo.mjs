@@ -1,10 +1,17 @@
 import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  evaluateSearchIndexPolicy,
+  SEARCH_INDEX_POLICY_NAME,
+  SEARCH_INDEX_POLICY_VERSION
+} from "./lib/search-index-policy.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const site = "https://dealdesk.fyi";
-const now = Date.now();
+const configuredBuildAt = process.env.DEALDESK_BUILD_AT;
+const now = configuredBuildAt ? new Date(configuredBuildAt).getTime() : Date.now();
+if (!Number.isFinite(now)) throw new Error("DEALDESK_BUILD_AT must be a valid date-time when provided");
 const feeds = await Promise.all([
   readFile(resolve(root, "data/best-deals.json"), "utf8").then(JSON.parse),
   readFile(resolve(root, "data/streaming-deals.json"), "utf8").then(JSON.parse)
@@ -22,16 +29,6 @@ const isLiveDeal = (deal) => {
     Boolean(deal.affiliateURL) &&
     Boolean(deal.verifiedAt) &&
     now <= expiresAt;
-};
-const searchIndexStateFor = (deal) => {
-  const recheckAt = deal.recheckAfter ? new Date(deal.recheckAfter).getTime() : NaN;
-  if (!Number.isFinite(recheckAt)) {
-    return { indexable: false, reason: "recheck-missing-or-invalid" };
-  }
-  if (now > recheckAt) {
-    return { indexable: false, reason: "verification-overdue" };
-  }
-  return { indexable: true, reason: "verification-current" };
 };
 // recheckAfter is a freshness-review date, not an offer-expiration date.
 // Only an explicit expiresAt or a non-active status can remove a deal.
@@ -70,6 +67,9 @@ const deals = liveDeals.filter(hasGenuineMerchantImage);
 const publicDealIDs = new Set(deals.map((deal) => deal.id));
 const nonPublicDeals = allFeedDeals.filter((deal) => !publicDealIDs.has(deal.id));
 const withheldDealCount = liveDeals.length - deals.length;
+const searchIndexStateByID = await evaluateSearchIndexPolicy(deals, now);
+const searchIndexStateFor = (deal) => searchIndexStateByID.get(deal.id) ||
+  { indexable: false, reason: "quality-tier-not-selected" };
 
 const esc = (value) => String(value ?? "")
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
@@ -97,8 +97,8 @@ const pricesFrom = (deal) => {
 const numberFromPrice = (price) => Number(String(price).replace(/[^0-9.]/g, ""));
 const hasMonetaryPrice = (price) => /^\s*(?:US)?\$\s*\d/.test(String(price || ""));
 const isoDate = (value) => {
-  const date = new Date(value || Date.now());
-  return Number.isNaN(date.getTime()) ? new Date().toISOString().slice(0, 10) : date.toISOString().slice(0, 10);
+  const date = new Date(value || now);
+  return Number.isNaN(date.getTime()) ? new Date(now).toISOString().slice(0, 10) : date.toISOString().slice(0, 10);
 };
 const lifecycleText = (deal) => deal.expiresAt
   ? `Offer scheduled through ${isoDate(deal.expiresAt)}`
@@ -218,7 +218,7 @@ for (const deal of deals) {
       ...(deal.expiresAt ? { priceValidUntil: isoDate(deal.expiresAt) } : {}),
       ...(!isServiceOffer && deal.availabilityStatus === "InStock" ? { availability: "https://schema.org/InStock" } : {}),
       ...(!isServiceOffer && itemCondition ? { itemCondition } : {}),
-      seller: { "@type": "Organization", name: deal.merchantName || "Amazon" }
+      ...(deal.sellerName ? { seller: { "@type": "Organization", name: deal.sellerName } } : {})
     }
   } : {
     "@context": "https://schema.org",
@@ -268,7 +268,7 @@ ${image ? `  <meta property="og:image" content="${esc(image)}" />\n` : ""}  <lin
         <span class="page-kicker"><span aria-hidden="true"></span> ${esc(deal.category || "Featured deal")}</span>
         <h1>${esc(title)}</h1>
 ${prices.current ? `        <p class="deal-detail-price"><strong>${esc(prices.current)}</strong>${prices.original ? deal.referenceStyle === "renewal" ? ` <span>${esc(deal.referenceLabel || "Then")} ${esc(prices.original)}</span>` : ` <span>${esc(deal.referenceLabel || "Reference price")} <del>${esc(prices.original)}</del></span>` : ""}</p>\n` : ""}${deal.priceNote ? `        <p class="deal-detail-price-note">${esc(deal.priceNote)}</p>\n` : ""}        <p class="deal-detail-summary">${esc(description)}</p>
-        <p class="deal-detail-meta">Listed by ${esc(deal.merchantName || "Amazon")} · Checked ${esc(isoDate(deal.verifiedAt))} · ${esc(lifecycleText(deal))}</p>
+        <p class="deal-detail-meta">Found on ${esc(deal.merchantName || "the merchant site")} · Checked ${esc(isoDate(deal.verifiedAt))} · ${esc(lifecycleText(deal))}</p>
         <a class="deal-detail-cta" href="${esc(outboundURL(deal))}" rel="sponsored nofollow noopener" target="_blank">View live deal on ${esc(deal.merchantName || "Amazon")} <span aria-hidden="true">→</span></a>
         <p class="deal-detail-fineprint">Affiliate link: DealDesk may earn a commission. Price, eligibility, and availability can change; confirm final terms with the merchant.</p>
       </div>
@@ -727,8 +727,8 @@ await writeFile(resolve(root, "data", "latest-deals.json"), `${JSON.stringify({
   deals: latestDealData
 })}\n`);
 await writeFile(resolve(root, "data", "search-index.json"), `${JSON.stringify({
-  version: 1,
-  policy: "recheck-after-v1",
+  version: SEARCH_INDEX_POLICY_VERSION,
+  policy: SEARCH_INDEX_POLICY_NAME,
   evaluatedAt: new Date(now).toISOString(),
   catalogUpdatedAt: new Date(latestFeedTime).toISOString(),
   publicDeals: searchIndexDeals.length,
@@ -779,4 +779,4 @@ await writeFile(resolve(root, "404.html"), `<!doctype html>
   <main class="deal-detail shell"><article class="deal-detail-card"><div class="deal-detail-content"><span class="page-kicker"><span aria-hidden="true"></span> DealDesk</span><h1>That page is no longer available</h1><p class="deal-detail-summary">The offer may have been removed because it no longer meets DealDesk's publishing requirements.</p><p><a class="deal-detail-cta" href="/latest-deals/">Browse the deal catalog</a></p></div></article></main>
 </body>
 </html>\n`);
-console.log(`Built ${deals.length} browseable deal pages (${indexableDealCount} indexable, ${deals.length - indexableDealCount} noindex pending verification) and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${commissionBlockedDealCount} offers without a verified commission-accrual path. ${verificationDueDealCount} active offers are due for a verification refresh but remain browseable until hard expiry or an explicit status change.`);
+console.log(`Built ${deals.length} browseable deal pages (${indexableDealCount} quality-tier indexable, ${deals.length - indexableDealCount} browse-only) and sitemap.xml; withheld ${withheldDealCount} live offers without genuine merchant imagery and ${commissionBlockedDealCount} offers without a verified commission-accrual path. ${verificationDueDealCount} active offers are due for a verification refresh but remain browseable until hard expiry or an explicit status change.`);

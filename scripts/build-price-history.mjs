@@ -5,7 +5,10 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const site = "https://dealdesk.fyi";
 const buildID = "price-history-v1";
-const today = new Date().toISOString().slice(0, 10);
+const configuredBuildAt = process.env.DEALDESK_BUILD_AT;
+const buildAt = configuredBuildAt ? new Date(configuredBuildAt) : new Date();
+if (Number.isNaN(buildAt.getTime())) throw new Error("DEALDESK_BUILD_AT must be a valid date-time when provided");
+const today = buildAt.toISOString().slice(0, 10);
 const maxObservationsPerDeal = 104;
 
 const latestCatalog = JSON.parse(await readFile(resolve(root, "data", "latest-deals.json"), "utf8"));
@@ -92,7 +95,7 @@ for (const deal of currentDeals) {
 }
 
 history.version = 1;
-history.generatedAt = new Date().toISOString();
+history.generatedAt = buildAt.toISOString();
 history.catalogUpdatedAt = latestCatalog.updatedAt || null;
 
 const metricsFor = (record) => {

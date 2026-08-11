@@ -1,0 +1,365 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-11T09:30:15.000Z",
+  "source": "Official merchant product, membership, subscription, pricing, and plan pages rechecked for DealDesk; existing approved affiliate relationships and exact tracking links were retained",
+  "locale": {
+    "country": "US",
+    "currency": "USD",
+    "amazonDeliveryLocale": "United States",
+    "note": "Amazon product prices and stock can vary by delivery location and account; the precise test ZIP is intentionally not retained"
+  },
+  "merchantSources": {
+    "amazon-B00JH98GR4-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B00JH98GR4?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:22.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "69dd6a6d74ebab0cf03e8504de07d9ed9cda8e0942fcc210eb8d9ce9c201561e"
+    },
+    "amazon-B01MSP50CY-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B01MSP50CY?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:25.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "07c41106beb365859b97e5f2e661f727dac63e8e4437e5d69865363067baa9fd"
+    },
+    "amazon-B0DSP8J476-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B0DSP8J476?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:27.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "48063ea87317b9d09a1eb86283d92c1f3571463a2e88585198fd37391a73acd0"
+    },
+    "amazon-B07VVK39F7-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B07VVK39F7?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:29.000Z",
+      "httpStatus": 404,
+      "bodySha256Decompressed": "34c92fb4c6351b94e5cc16f68bb483b0fcda57ee7c43887214005b87d1888d3a"
+    },
+    "amazon-B07D5DN269-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B07D5DN269?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:30.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "86fe725820c5a926526d6e72f8e258175f9057f5745a8bb69260fc17b320b128"
+    },
+    "amazon-B0BJZ9GT1J-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B0BJZ9GT1J?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:32.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "06b55f64bd7ad184a3607f7cfe1b3f7d53a776e06c8de85e01a249964c746132"
+    },
+    "amazon-B0GT2DG9SK-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B0GT2DG9SK?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:35.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "523d5bd6a3f3d38b05ffdc97b614be85be2fece61308eb9b2fb411482bfb2eea"
+    },
+    "amazon-B0DGF616XN-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B0DGF616XN?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:38.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "886473843ce9d840ca576a2369ef36e0d56d4bd37516f4c94ebc4db2751f1366"
+    },
+    "amazon-B0CP1LR1PW-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B0CP1LR1PW?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:40.000Z",
+      "httpStatus": 404,
+      "bodySha256Decompressed": "34c92fb4c6351b94e5cc16f68bb483b0fcda57ee7c43887214005b87d1888d3a"
+    },
+    "amazon-B07MJL8NXR-20260801": {
+      "sourceURL": "https://www.amazon.com/gp/product/B07MJL8NXR?th=1&psc=1",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:41.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "78c5ea895f0eb7df07d38201351e29c04d011ee919ccb6e0063131bc8c4b043c"
+    },
+    "amazon-prime-young-adults-20260801": {
+      "sourceURL": "https://www.amazon.com/joinyoungadult",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:57.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "7531536e1ceb29dd71c584ebc2fa010716d2d277bbffe4b1a14fbaa4a118bb03"
+    },
+    "amazon-audible-standard-trial-20260801": {
+      "sourceURL": "https://www.audible.com/",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:24:59.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "3a55bfd863c613cd453f39882b7b0aef6a68a4b9481078470829159338f08455"
+    },
+    "amazon-kindle-unlimited-two-months-20260801": {
+      "sourceURL": "https://www.amazon.com/kindleunlimited",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:00.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "a6a6153cdd2471834279ed081fc8d5fdd07e76c44777265cabf73ac5644ed83f"
+    },
+    "amazon-kids-plus-trial-20260801": {
+      "sourceURL": "https://www.amazon.com/tryamazonkids",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:01.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "f649ac5213fa85b89db07fd4008897ed6994dc33b60fdbc8dace833fc7bc67f3"
+    },
+    "amazon-prime-video-free-trial-20260731": {
+      "sourceURL": "https://www.amazon.com/gp/video/primesignup",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:03.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "6af66f0a4d30c2caf716f15ec9cbe68a80f8351074d54ab5ade200db76e5202e"
+    },
+    "amazon-prime-video-channels-paid-20260731": {
+      "sourceURL": "https://www.amazon.com/gp/video/storefront/subscription/default",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:04.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "511b9d93227ea65c095d904ba6046a5946c86a464fadfdf9e761ba15c5d6f494"
+    },
+    "amazon-music-unlimited-20260731": {
+      "sourceURL": "https://www.amazon.com/music/unlimited",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:05.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "722cb07bd402da197157f753b24e73a44bde7a1a2590774a3cad911a65905a26"
+    },
+    "cj-magzter-gold-annual-50off-20260803": {
+      "sourceURL": "https://www.magzter.com/magztergold/1year-subscription-offer",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:23.000Z",
+      "httpStatus": 403,
+      "bodySha256Decompressed": "7d13c7b4b6231ade9c94a01837b29155d6b84bad2361e0a32de337b91b1fe79c"
+    },
+    "cj-surfshark-starter-20260801": {
+      "sourceURL": "https://surfshark.com/pricing",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:24.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "090c617c89ffdf1fa271bfb298dee5d903e712109938a3ca0ff5a33b1cd3ee30"
+    },
+    "cj-nordpass-premium-20260801": {
+      "sourceURL": "https://pricing.nordsec.com/graphql",
+      "method": "POST",
+      "fetchedAt": "2026-08-11T09:29:02.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "65e1f947e2b6e24c9dd88008f201fbafcd5419376cbc142056198e9fdce49bf8"
+    },
+    "cj-nordvpn-2-year-20260801": {
+      "sourceURL": "https://pricing.nordsec.com/graphql",
+      "method": "POST",
+      "fetchedAt": "2026-08-11T09:29:14.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "8d7f621f9ec1e5d6828e73a2cc58cd7591964fc747ae7f562914adb84e7bb1ee",
+      "verificationLimitation": "The current default U.S. API package conflicts with the older official indexed offer and the exact CJ destination was blocked by Cloudflare; no fresh offer verification was recorded."
+    },
+    "rakuten-sensibo-air-room-sensor-20260803": {
+      "sourceURL": "https://sensibo.com/products/sensibo-air-bundle?variant=33051046838324",
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:27.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "540bbe4d0116931447285fe093e4500092266d0a6e92bdd303b04df122077cf5",
+      "verificationLimitation": "Merchant terms were current, but Rakuten commission eligibility was not advanced without a fresh excluded-SKU check."
+    }
+  },
+  "outcomes": {
+    "refreshed": [
+      "amazon-prime-young-adults-20260801",
+      "amazon-audible-standard-trial-20260801",
+      "amazon-kids-plus-trial-20260801",
+      "amazon-B00JH98GR4-20260801",
+      "amazon-B07D5DN269-20260801",
+      "amazon-B0DSP8J476-20260801",
+      "amazon-B07MJL8NXR-20260801",
+      "amazon-prime-video-free-trial-20260731",
+      "amazon-prime-video-channels-paid-20260731",
+      "amazon-music-unlimited-20260731",
+      "cj-surfshark-starter-20260801",
+      "cj-nordpass-premium-20260801"
+    ],
+    "unavailable": [
+      "amazon-B01MSP50CY-20260801",
+      "amazon-B07VVK39F7-20260801",
+      "amazon-B0BJZ9GT1J-20260801",
+      "amazon-B0GT2DG9SK-20260801",
+      "amazon-B0DGF616XN-20260801",
+      "amazon-B0CP1LR1PW-20260801",
+      "amazon-kindle-unlimited-two-months-20260801"
+    ],
+    "provisional": [
+      "cj-nordvpn-2-year-20260801"
+    ]
+  },
+  "observations": {
+    "amazon-B0DSP8J476-20260801": {
+      "priceUSD": 499.99,
+      "referencePriceUSD": 899.99,
+      "discountPercent": 44,
+      "availability": "InStock"
+    },
+    "amazon-B07MJL8NXR-20260801": {
+      "priceUSD": 26.7,
+      "referencePriceUSD": 31.98,
+      "discountPercent": 17,
+      "availability": "InStock"
+    },
+    "amazon-music-unlimited-20260731": {
+      "introductoryPriceUSD": 0,
+      "introductoryMonths": 2,
+      "renewalPriceUSD": 12.99,
+      "primeRenewalPriceUSD": 11.99,
+      "statedEnd": "August 17 at 8:00 AM PT",
+      "expirationYearInference": 2026
+    },
+    "cj-nordvpn-2-year-20260801": {
+      "conflictingOfficialSources": true,
+      "indexedSnapshotObservedAt": "2026-08-11T09:30:15.000Z",
+      "indexedSnapshotTerms": {
+        "pricePerMonthUSD": 3.49,
+        "upfrontTotalUSD": 94.23,
+        "firstTermMonths": 27,
+        "renewalPerYearUSD": 139.08,
+        "guaranteeDays": 30
+      },
+      "livePricingApiObservedAt": "2026-08-11T09:29:14.000Z",
+      "livePricingApiTerms": {
+        "pricePerMonthUSD": 3.09,
+        "upfrontTotalUSD": 74.16,
+        "discountPercent": 73,
+        "extraMonths": 0
+      },
+      "publicationStatus": "not-refreshed"
+    },
+    "cj-surfshark-starter-20260801": {
+      "pricePerMonthUSD": 2.49,
+      "upfrontTotalUSD": 67.23,
+      "referenceTotalUSD": 444.15,
+      "firstTermMonths": 27,
+      "guaranteeDays": 30
+    },
+    "cj-nordpass-premium-20260801": {
+      "pricePerMonthUSD": 1.39,
+      "upfrontTotalUSD": 37.53,
+      "referenceTotalUSD": 80.73,
+      "firstTermMonths": 27,
+      "guaranteeDays": 30
+    }
+  },
+  "feedClaims": {
+    "amazon-B00JH98GR4-20260801": {
+      "sourceID": "amazon-B00JH98GR4-20260801",
+      "offerType": "product",
+      "currentPrice": "$149.00",
+      "originalPrice": "$199.99",
+      "discountPercent": 25,
+      "availabilityStatus": "InStock",
+      "observedClaim": "The Shark NV360 Lift-Away vacuum was offered for $149.00 against a $199.99 reference price, a 25% discount, and was shown in stock."
+    },
+    "amazon-B07D5DN269-20260801": {
+      "sourceID": "amazon-B07D5DN269-20260801",
+      "offerType": "product",
+      "currentPrice": "$37.89",
+      "originalPrice": "$69.99",
+      "discountPercent": 46,
+      "availabilityStatus": "InStock",
+      "observedClaim": "The Niagara queen cooling mattress topper was offered for $37.89 against a $69.99 reference price, a 46% discount, and was shown in stock."
+    },
+    "amazon-prime-young-adults-20260801": {
+      "sourceID": "amazon-prime-young-adults-20260801",
+      "offerType": "membership-trial",
+      "currentPrice": "$0",
+      "originalPrice": "$7.49/mo",
+      "trialPriceUSD": 0,
+      "trialMonths": 6,
+      "renewalPriceMonthlyUSD": 7.49,
+      "renewalPriceAnnualUSD": 69,
+      "eligibility": "Higher-education students and young adults ages 18–24",
+      "requiredText": [
+        "six months",
+        "eligible higher-education students and young adults ages 18–24",
+        "$7.49/month",
+        "$69/year"
+      ]
+    },
+    "amazon-audible-standard-trial-20260801": {
+      "sourceID": "amazon-audible-standard-trial-20260801",
+      "offerType": "subscription-trial",
+      "currentPrice": "$0",
+      "originalPrice": "$8.99/mo",
+      "trialPriceUSD": 0,
+      "trialDays": 30,
+      "renewalPriceMonthlyUSD": 8.99,
+      "requiredText": [
+        "first 30 days",
+        "$8.99/month"
+      ]
+    },
+    "amazon-kids-plus-trial-20260801": {
+      "sourceID": "amazon-kids-plus-trial-20260801",
+      "offerType": "subscription-trial",
+      "currentPrice": "$0",
+      "originalPrice": "$7.99/mo",
+      "trialPriceUSD": 0,
+      "trialMonths": 1,
+      "primeRenewalPriceMonthlyUSD": 7.99,
+      "nonPrimeRenewalPriceMonthlyUSD": 8.99,
+      "taxMayApply": true,
+      "excludedJurisdiction": "District of Columbia",
+      "requiredText": [
+        "first month",
+        "$7.99/month",
+        "$8.99/month",
+        "tax",
+        "D.C. residents"
+      ]
+    },
+    "amazon-prime-video-free-trial-20260731": {
+      "sourceID": "amazon-prime-video-free-trial-20260731",
+      "offerType": "membership-trial",
+      "currentPrice": "$0",
+      "trialPriceUSD": 0,
+      "trialDays": 30,
+      "eligibleCustomersOnly": true,
+      "renewalPriceShownBeforeSignup": true,
+      "requiredText": [
+        "30-day",
+        "eligible customers",
+        "renewal price",
+        "before signup"
+      ]
+    },
+    "amazon-prime-video-channels-paid-20260731": {
+      "sourceID": "amazon-prime-video-channels-paid-20260731",
+      "offerType": "subscription-directory",
+      "directoryStatus": "active",
+      "variableTerms": "Trials, prices, renewal terms, eligibility, and availability vary by channel, account, and location.",
+      "requiredText": [
+        "browse available Prime Video add-on channels",
+        "trials",
+        "prices",
+        "vary"
+      ]
+    }
+  },
+  "dealDisposition": {
+    "amazon-B01MSP50CY-20260801": "withheld_no_featured_offer",
+    "amazon-B07VVK39F7-20260801": "withheld_product_url_404",
+    "amazon-B0BJZ9GT1J-20260801": "withheld_previous_sale_ended",
+    "amazon-B0GT2DG9SK-20260801": "withheld_previous_new_item_sale_ended",
+    "amazon-B0DGF616XN-20260801": "withheld_previous_sale_ended",
+    "amazon-B0CP1LR1PW-20260801": "withheld_product_url_404",
+    "amazon-kindle-unlimited-two-months-20260801": "withheld_previous_promotion_ended"
+  },
+  "publication": {
+    "allowedOnlyForRefreshedActiveRecords": true,
+    "unavailableRecordsRetainLastGoodTermsForAuditOnly": true,
+    "nordvpnNotRefreshedBecauseOfficialSourcesConflict": true,
+    "magzterNotRefreshedBecauseMerchantCheckoutWasNotFreshlyVerifiable": true,
+    "sensiboNotRefreshedBecauseCurrentRakutenSKUExclusionEvidenceWasNotAvailable": true
+  },
+  "privacy": "No passwords, cookies, session tokens, payment data, banking data, tax data, or private account details are stored in this evidence record."
+}

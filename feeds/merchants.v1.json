@@ -1,27 +1,32 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T07:13:13.000Z",
+  "generatedAt": "2026-08-11T09:43:14.703Z",
   "canonical": "https://dealdesk.fyi/feeds/merchants.v1.json",
   "total": 2,
   "merchants": [
     {
-      "name": "CuriosityStream",
-      "canonical_url": "https://dealdesk.fyi/merchant/curiositystream/",
-      "offer_count": 1,
+      "name": "eBay",
+      "canonical_url": "https://dealdesk.fyi/merchant/ebay/",
+      "offer_count": 59,
       "categories": [
-        "Streaming"
+        "Business & industrial",
+        "Collectibles",
+        "Electronics",
+        "Home & garden",
+        "Toys & hobbies"
       ],
-      "lowest_displayed_price": 5.99,
+      "lowest_displayed_price": 16,
       "newest_check": "2026-08-11"
     },
     {
-      "name": "Malwarebytes",
-      "canonical_url": "https://dealdesk.fyi/merchant/malwarebytes/",
-      "offer_count": 1,
+      "name": "Amazon",
+      "canonical_url": "https://dealdesk.fyi/merchant/amazon/",
+      "offer_count": 4,
       "categories": [
-        "Subscriptions"
+        "Grocery",
+        "Home"
       ],
-      "lowest_displayed_price": 67.48,
+      "lowest_displayed_price": 26.7,
       "newest_check": "2026-08-11"
     }
   ]

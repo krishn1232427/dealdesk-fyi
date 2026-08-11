@@ -7,6 +7,12 @@ const site = "https://dealdesk.fyi";
 const buildID = "2026-08-08-authority-v1";
 const merchantPageSize = 32;
 const maxComparisonPages = 80;
+const requestedBuildAt = process.env.DEALDESK_BUILD_AT;
+const buildClock = new Date(requestedBuildAt || Date.now());
+if (requestedBuildAt && Number.isNaN(buildClock.getTime())) {
+  throw new Error("DEALDESK_BUILD_AT must be a valid date-time");
+}
+const buildTimestamp = buildClock.toISOString();
 
 const [latestCatalog, searchIndexPayload, categoryGuidePayload, searchCollectionPayload, ...sourceFeeds] = await Promise.all([
   readFile(resolve(root, "data/latest-deals.json"), "utf8").then(JSON.parse),
@@ -33,9 +39,9 @@ for (const deal of deals) {
 const isSearchIndexable = (deal) => searchIndexByID.get(deal.id)?.indexable === true;
 
 const sourceByID = new Map(sourceFeeds.flatMap((feed) => feed.deals || []).map((deal) => [deal.id, deal]));
-const catalogUpdatedAt = new Date(latestCatalog.updatedAt || Date.now());
+const catalogUpdatedAt = new Date(latestCatalog.updatedAt || buildTimestamp);
 const buildDate = Number.isNaN(catalogUpdatedAt.getTime())
-  ? new Date().toISOString().slice(0, 10)
+  ? buildTimestamp.slice(0, 10)
   : catalogUpdatedAt.toISOString().slice(0, 10);
 const categoryGuides = categoryGuidePayload?.categories || {};
 
@@ -70,7 +76,7 @@ const moneyNumber = (value) => {
 };
 const isMoney = (value) => /^\s*(?:US)?\$\s*\d/.test(String(value || ""));
 const isoDate = (value) => {
-  const date = new Date(value || Date.now());
+  const date = new Date(value || buildTimestamp);
   return Number.isNaN(date.getTime()) ? buildDate : date.toISOString().slice(0, 10);
 };
 const dealPath = (deal) => String(deal.url || `/deals/${slugify(deal.id)}/`);
@@ -116,7 +122,7 @@ const discountFrom = (deal) => {
 };
 const freshnessDays = (deal) => {
   const checked = new Date(deal.verifiedAt || 0).getTime();
-  const reference = Number.isNaN(catalogUpdatedAt.getTime()) ? Date.now() : catalogUpdatedAt.getTime();
+  const reference = Number.isNaN(catalogUpdatedAt.getTime()) ? buildClock.getTime() : catalogUpdatedAt.getTime();
   return Number.isFinite(checked) ? Math.max(0, Math.floor((reference - checked) / 86400000)) : 9999;
 };
 
@@ -464,7 +470,7 @@ for (const merchant of merchants) {
     const page = pageIndex + 1;
     const pageDeals = pages[pageIndex];
     const canonicalPath = pagePath(basePath, page);
-    const pageIndexable = page === 1;
+    const pageIndexable = page === 1 && merchant.deals.filter(isSearchIndexable).length >= 2;
     const title = page === 1
       ? `${merchant.name} deals by price and check date | DealDesk`
       : `${merchant.name} deals – Page ${page} | DealDesk`;
@@ -537,6 +543,7 @@ for (const family of families) {
   });
   const stats = statsFor(sortedDeals);
   const canonicalPath = `/compare/${family.key}/`;
+  const pageIndexable = family.deals.filter(isSearchIndexable).length >= 2;
   const comparisonTitleSuffix = " deals compared: prices and savings | DealDesk";
   const title = `${truncate(family.label, 70 - comparisonTitleSuffix.length)}${comparisonTitleSuffix}`;
   const description = `Compare ${family.deals.length} ${family.label} offers by displayed price, condition, savings, merchant, and verification date. ${Number.isFinite(stats.lowestPrice) ? `Prices start at ${money(stats.lowestPrice)}.` : ""}`;
@@ -558,7 +565,7 @@ for (const family of families) {
     },
   };
   const rows = sortedDeals.map((deal, index) => `<tr><td><a href="${dealPath(deal)}">${esc(deal.title)}</a></td><td>${esc(deal.currentPrice || "See terms")}</td><td>${esc(conditionFrom(deal))}</td><td>${discountFrom(deal) ? `${discountFrom(deal)}%` : "—"}</td><td>${esc(merchantName(deal))}</td><td>${esc(isoDate(deal.verifiedAt))}</td><td>${scoreByID.get(deal.id)}/100</td></tr>`).join("\n");
-  const html = `${head({ title, description, canonicalPath, schema: [schema], bodyClass: "authority-page" })}
+  const html = `${head({ title, description, canonicalPath, schema: [schema], bodyClass: "authority-page", indexable: pageIndexable })}
 ${header("comparisons")}
 <main class="deal-home shell authority-shell"><nav class="deal-breadcrumb"><a href="/">DealDesk</a><span>›</span><a href="/comparisons/">Comparisons</a><span>›</span><span>${esc(family.label)}</span></nav><header class="authority-hero"><span class="page-kicker"><span></span> Product-family comparison</span><h1>Compare ${esc(family.label)} deals</h1><p>${esc(description)}</p></header><section class="authority-stat-grid"><article><strong>${family.deals.length}</strong><span>related offers</span></article><article><strong>${Number.isFinite(stats.lowestPrice) ? money(stats.lowestPrice) : "Varies"}</strong><span>lowest displayed price</span></article><article><strong>${Number.isFinite(stats.medianPrice) ? money(stats.medianPrice) : "Varies"}</strong><span>median displayed price</span></article><article><strong>${stats.maxDiscount ? `${stats.maxDiscount}%` : "—"}</strong><span>largest displayed discount</span></article></section><section class="authority-analysis"><h2>What the comparison shows</h2><p>${Number.isFinite(stats.lowestPrice) ? `The displayed price range runs from ${money(stats.lowestPrice)} to ${money(stats.highestPrice)}, with a median of ${money(stats.medianPrice)}.` : "Some offers use non-standard or subscription pricing, so compare the full billing terms."} ${stats.conditions.length > 1 ? `Condition varies across ${stats.conditions.map(([condition, count]) => `${count} ${condition.toLowerCase()}`).join(", ")}.` : "Condition is broadly consistent across these listings."} DealDesk does not treat a high reference-price discount as proof of product quality.</p></section><div class="authority-table-wrap"><table class="authority-table"><thead><tr><th>Offer</th><th>Price</th><th>Condition</th><th>Discount</th><th>Merchant</th><th>Checked</th><th>Score</th></tr></thead><tbody>${rows}</tbody></table></div><div class="deal-grid authority-grid">${sortedDeals.map((deal, index) => card(deal, index === 0)).join("\n")}</div><p class="authority-explainer">Compare exact model, storage, size, accessories, warranty, shipping, renewal terms, and return policy before buying. <a href="/how-we-rank-deals/">How DealDesk scores offers.</a></p></main>
 ${footer}
@@ -566,9 +573,9 @@ ${pageEnd}`;
   const output = resolve(comparisonRoot, family.key, "index.html");
   await mkdir(dirname(output), { recursive: true });
   await writeFile(output, html);
-  const record = { path: canonicalPath, lastmod: stats.newestCheck };
+  const record = { path: canonicalPath, lastmod: stats.newestCheck, indexable: pageIndexable };
   comparisonPageRecords.push(record);
-  authorityPageRecords.push(record);
+  if (pageIndexable) authorityPageRecords.push(record);
 }
 
 await mkdir(collectionRoot, { recursive: true });
@@ -605,6 +612,7 @@ for (const collection of collections) {
   const tableDeals = visibleDeals.slice(0, 12);
   const stats = statsFor(collection.deals);
   const canonicalPath = `/collections/${collection.key}/`;
+  const pageIndexable = collection.deals.filter(isSearchIndexable).length >= 2;
   const title = `${truncate(collection.title, 58)} | DealDesk`;
   const description = truncate(`${collection.description} ${collection.deals.length} matching offers; newest verification ${stats.newestCheck}.`, 158);
   const collectionSchema = {
@@ -647,7 +655,7 @@ for (const collection of collections) {
     : `<article><strong>${Number.isFinite(stats.lowestPrice) ? money(stats.lowestPrice) : "Varies"}</strong><span>lowest displayed price</span></article>`;
   const considerations = (collection.considerations || []).map((item) => `<article><h2>${esc(item.title)}</h2><p>${esc(item.body)}</p></article>`).join("\n");
   const related = (collection.related || []).map((item) => `<a href="${esc(item.path)}">${esc(item.label)}</a>`).join("");
-  const html = `${head({ title, description, canonicalPath, schema: [collectionSchema, breadcrumbSchema], bodyClass: "authority-page" })}
+  const html = `${head({ title, description, canonicalPath, schema: [collectionSchema, breadcrumbSchema], bodyClass: "authority-page", indexable: pageIndexable })}
 ${header("collections")}
 <main class="deal-home shell authority-shell"><nav class="deal-breadcrumb" aria-label="Breadcrumb"><a href="/">DealDesk</a><span>›</span><a href="/collections/">Deal guides</a><span>›</span><span>${esc(collection.heading)}</span></nav><header class="authority-hero collection-hero"><span class="page-kicker"><span></span> Curated deal guide</span><h1>${esc(collection.heading)}</h1><p>${esc(collection.intro)}</p><p class="collection-updated">Newest verification in this collection: <time datetime="${stats.newestCheck}">${stats.newestCheck}</time>. Merchant checkout controls final price and availability.</p></header><section class="authority-stat-grid"><article><strong>${collection.deals.length}</strong><span>matching catalog records</span></article>${priceStat}<article><strong>${stats.maxDiscount ? `${stats.maxDiscount}%` : "—"}</strong><span>largest displayed discount</span></article><article><strong>${stats.newestCheck}</strong><span>newest verification</span></article></section><section class="collection-considerations" aria-label="What to compare">${considerations}</section><section class="authority-analysis"><h2>Offer snapshot</h2><p>The table compares up to 12 of the strongest matching DealDesk records. Prices can use different units, conditions, bundles, or billing periods; open the individual page before treating two rows as equivalent.</p></section><div class="authority-table-wrap"><table class="authority-table"><caption>${esc(collection.heading)} — DealDesk snapshot</caption><thead>${tableHead}</thead><tbody>${rows}</tbody></table></div><div class="deal-grid authority-grid">${visibleDeals.map((deal, index) => card(deal, index === 0)).join("\n")}</div><nav class="collection-related" aria-label="Related DealDesk guides">${related}<a href="/collections/">All deal guides</a></nav><p class="authority-explainer">This guide includes ${collection.deals.length} active catalog records and displays the highest-context ${visibleDeals.length}. Verification dates are shown so shoppers can judge freshness before visiting the merchant. Browse the related category or complete deal archive for the remaining offers. DealDesk does not create unsupported review scores or claim that an asking price is a completed-sale market value.</p></main>
 ${footer}
@@ -655,9 +663,9 @@ ${pageEnd}`;
   const output = resolve(collectionRoot, collection.key, "index.html");
   await mkdir(dirname(output), { recursive: true });
   await writeFile(output, html);
-  const record = { path: canonicalPath, lastmod: stats.newestCheck };
+  const record = { path: canonicalPath, lastmod: stats.newestCheck, indexable: pageIndexable };
   collectionPageRecords.push(record);
-  authorityPageRecords.push(record);
+  if (pageIndexable) authorityPageRecords.push(record);
 }
 
 const overallStats = statsFor(deals);
@@ -673,7 +681,7 @@ const merchantStats = merchants.map((merchant) => ({ name: merchant.name, key: m
 const dealIndexJSON = {
   name: "DealDesk Deal Index",
   updatedAt: latestCatalog.updatedAt,
-  generatedAt: new Date().toISOString(),
+  generatedAt: buildTimestamp,
   publicDeals: deals.length,
   merchants: merchants.length,
   categories: categoryStats.length,
@@ -966,7 +974,7 @@ sitemapIndex = sitemapIndex.replace(/\s*<sitemap><loc>https:\/\/dealdesk\.fyi\/s
 sitemapIndex = sitemapIndex.replace(/\s*<\/sitemapindex>/, `\n  <sitemap><loc>${site}/sitemap-authority.xml</loc><lastmod>${buildDate}</lastmod></sitemap>\n</sitemapindex>`);
 await writeFile(resolve(root, "sitemap.xml"), sitemapIndex);
 
-const targetsJSON = { build: buildID, generatedAt: new Date().toISOString(), targets: seoTargets };
+const targetsJSON = { build: buildID, generatedAt: buildTimestamp, targets: seoTargets };
 await writeFile(resolve(root, "data", "seo-targets.json"), `${JSON.stringify(targetsJSON, null, 2)}\n`);
 const targetsCSV = [
   ["deal_id", "url", "indexable", "title_tag", "primary_query", "secondary_queries", "value_score", "merchant_path", "comparison_path", "collection_paths"].map(csv).join(","),
@@ -976,7 +984,7 @@ await writeFile(resolve(root, "data", "seo-targets.csv"), `${targetsCSV}\n`);
 
 const report = {
   build: buildID,
-  generatedAt: new Date().toISOString(),
+  generatedAt: buildTimestamp,
   catalogUpdatedAt: latestCatalog.updatedAt,
   publicDeals: deals.length,
   indexableDeals: deals.filter(isSearchIndexable).length,
@@ -1001,8 +1009,12 @@ const report = {
   merchantPaths: merchantPageRecords.filter((record) => record.indexable).map((record) => record.path),
   merchantBrowsePaths: merchantPageRecords.map((record) => record.path),
   indexableMerchantPages: merchantPageRecords.filter((record) => record.indexable).length,
-  comparisonPaths: comparisonPageRecords.map((record) => record.path),
-  collectionPaths: collectionPageRecords.map((record) => record.path),
+  comparisonPaths: comparisonPageRecords.filter((record) => record.indexable).map((record) => record.path),
+  comparisonBrowsePaths: comparisonPageRecords.map((record) => record.path),
+  indexableComparisonPages: comparisonPageRecords.filter((record) => record.indexable).length,
+  collectionPaths: collectionPageRecords.filter((record) => record.indexable).map((record) => record.path),
+  collectionBrowsePaths: collectionPageRecords.map((record) => record.path),
+  indexableCollectionPages: collectionPageRecords.filter((record) => record.indexable).length,
   staticPaths: ["/merchants/", "/comparisons/", "/collections/", "/deal-index/", ...staticPages.map((page) => page.path)],
 };
 await writeFile(resolve(root, "data", "seo-authority-report.json"), `${JSON.stringify(report, null, 2)}\n`);

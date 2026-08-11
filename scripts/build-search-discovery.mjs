@@ -18,7 +18,7 @@ const deals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
 if (!deals.length) throw new Error("data/latest-deals.json does not contain public deals");
 const searchIndexEntries = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
 const searchIndexByID = new Map(searchIndexEntries.map((entry) => [entry.id, entry]));
-if (searchIndexPayload.version !== 1 || searchIndexPayload.policy !== "recheck-after-v1" ||
+if (searchIndexPayload.version !== 2 || searchIndexPayload.policy !== "quality-diversity-v2" ||
     searchIndexEntries.length !== deals.length || searchIndexByID.size !== deals.length) {
   throw new Error("data/search-index.json must contain exactly one record for every public deal");
 }

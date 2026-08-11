@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-11T09:27:08.000Z",
+  "source": "Signed-in CJ publisher relationship and exact DealDesk tracking link retained; live Proton partner landing page and official Proton payments API rechecked",
+  "publisher": {
+    "cjCompanyID": "8007406",
+    "cjMemberID": "7685648",
+    "cjSiteID": "101847838",
+    "payoutReadiness": "verified"
+  },
+  "advertiser": {
+    "name": "Proton Partners Program",
+    "advertiserID": "5227916",
+    "relationship": "Active",
+    "acceptedOn": "2026-08-04"
+  },
+  "promotion": {
+    "linkID": "17297159",
+    "title": "Proton VPN 70% off",
+    "trackingURL": "https://www.kqzyfj.com/click-101847838-17297159",
+    "redirectDestinationURL": "https://protonvpn.com/l/special-partner-offer?utm_campaign=ww-all-2c-vpn-gro_aff-g_acq-partners_program&utm_source=aid-cj-8007406&utm_medium=link&utm_term=special_partner_offer_vpn_landing&utm_content=32",
+    "checkoutURL": "https://account.protonvpn.com/signup?v=b&plan=vpn2024&billing=24&currency=USD&coupon=VPNINTROPRICE2025"
+  },
+  "merchantOffer": {
+    "availability": "Available",
+    "landingURL": "https://protonvpn.com/l/special-partner-offer",
+    "plan": "Proton VPN Plus",
+    "billingPeriodMonths": 24,
+    "priceUSD": 71.76,
+    "pricePerMonthUSD": 2.99,
+    "compareAtMonthlyPriceUSD": 9.99,
+    "compareAtTotalUSD": 239.76,
+    "discountPercent": 70,
+    "savingsUSD": 168,
+    "renewalPriceUSD": 83.88,
+    "renewalPeriodMonths": 12,
+    "moneyBackGuaranteeDays": 30,
+    "imageURL": "https://vpncdn.protonweb.com/image-transformation/?s=a&image=proton_vpn_one_vpn_limitless_possibilities_1fbfebb9d7.png&width=1280&height=586",
+    "imageWidth": 1280,
+    "imageHeight": 586,
+    "imageContent": "Proton VPN mobile application interface, protected status, NetShield, and server route",
+    "apiRecheckedAt": "2026-08-11T09:27:08.000Z",
+    "landingPageFetch": {
+      "method": "GET",
+      "fetchedAt": "2026-08-11T09:25:21.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "3d50c9565e00161b745abbebac40d94c767467b3bdc60965e7ddf68558256e32"
+    },
+    "plansApiFetch": {
+      "method": "GET",
+      "sourceURL": "https://account.protonvpn.com/api/payments/v4/plans?currency=USD&fallback=true",
+      "fetchedAt": "2026-08-11T09:26:57.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "7b17339cf582958f87a48c98a00740f38326d8823e00776cde71fa3692dd49c1"
+    },
+    "quoteApiFetch": {
+      "method": "PUT",
+      "sourceURL": "https://account.protonvpn.com/api/payments/v4/subscription/check",
+      "fetchedAt": "2026-08-11T09:27:08.000Z",
+      "httpStatus": 200,
+      "bodySha256Decompressed": "9898e05bc1741b2d1621eb20ad03d35f76df301935eb94055e8f732e80acae3"
+    }
+  },
+  "commission": {
+    "vpnInitialOneMonthRate": 1,
+    "vpnInitialOneAndTwoYearRate": 0.4,
+    "vpnRenewalRate": 0.3,
+    "mailPackageAndRenewalRate": 0.18,
+    "selectedInitialRate": 0.4,
+    "conservativeEstimatedInitialCommissionUSD": 28.7,
+    "estimateMethod": "Floor the initial 71.76 USD charge multiplied by 40% to the nearest cent; exclude future renewal revenue from ranking"
+  },
+  "privacy": "No passwords, cookies, session tokens, banking data, tax data, or confidential account details are stored in this evidence record.",
+  "publication": {
+    "allowed": true,
+    "recheckWithinHours": 24
+  }
+}
