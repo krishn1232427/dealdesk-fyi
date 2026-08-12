@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-08-11T09:43:14.703Z",
+  "generatedAt": "2026-08-12T20:57:06.000Z",
   "deals": [
+    {
+      "id": "amazon-B0FWK41WF2-20260812",
+      "network": "amazon-associates",
+      "affiliateURL": "https://www.amazon.com/dp/B0FWK41WF2?tag=dealdesk-20",
+      "validUntil": ""
+    },
+    {
+      "id": "amazon-B0C5C89QKZ-20260812",
+      "network": "amazon-associates",
+      "affiliateURL": "https://www.amazon.com/dp/B0C5C89QKZ?tag=dealdesk-20",
+      "validUntil": ""
+    },
+    {
+      "id": "amazon-B0CXZTT4MT-20260812",
+      "network": "amazon-associates",
+      "affiliateURL": "https://www.amazon.com/dp/B0CXZTT4MT?tag=dealdesk-20",
+      "validUntil": ""
+    },
+    {
+      "id": "amazon-B0FMTSRKYL-20260812",
+      "network": "amazon-associates",
+      "affiliateURL": "https://www.amazon.com/dp/B0FMTSRKYL?tag=dealdesk-20",
+      "validUntil": ""
+    },
     {
       "id": "cj-proton-vpn-plus-2-year-70off-20260804",
       "network": "cj",

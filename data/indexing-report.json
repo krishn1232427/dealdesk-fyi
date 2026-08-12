@@ -1,9 +1,9 @@
 {
   "build": "2026-08-08-crawl-v3",
-  "generatedAt": "2026-08-12T10:27:14.000Z",
-  "catalogUpdatedAt": "2026-08-11T09:43:14.703Z",
-  "publicDeals": 1181,
-  "indexableDeals": 11,
+  "generatedAt": "2026-08-12T20:57:06.000Z",
+  "catalogUpdatedAt": "2026-08-12T20:57:06.000Z",
+  "publicDeals": 1185,
+  "indexableDeals": 15,
   "browseOnlyDeals": 1170,
   "archivePages": 38,
   "indexableArchivePages": 1,
@@ -51,9 +51,10 @@
     "/deals/page/38/"
   ],
   "categories": 10,
-  "categoryPages": 46,
-  "indexableCategoryPages": 3,
+  "categoryPages": 47,
+  "indexableCategoryPages": 4,
   "categoryPaths": [
+    "/category/electronics/",
     "/category/subscriptions/",
     "/category/home/",
     "/category/streaming/"
@@ -78,6 +79,7 @@
     "/category/electronics/page/17/",
     "/category/electronics/page/18/",
     "/category/electronics/page/19/",
+    "/category/electronics/page/20/",
     "/category/collectibles/",
     "/category/collectibles/page/2/",
     "/category/collectibles/page/3/",
@@ -106,7 +108,7 @@
     "/category/streaming/page/2/",
     "/category/grocery/"
   ],
-  "prioritySitemapDeals": 11,
+  "prioritySitemapDeals": 15,
   "sitemapFiles": [
     "sitemap-pages.xml",
     "sitemap-deals-priority.xml"

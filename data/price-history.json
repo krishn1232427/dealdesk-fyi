@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T10:27:14.000Z",
-  "catalogUpdatedAt": "2026-08-11T09:43:14.703Z",
+  "generatedAt": "2026-08-12T20:57:06.000Z",
+  "catalogUpdatedAt": "2026-08-12T20:57:06.000Z",
   "deals": {
     "cj-nordvpn-2-year-20260801": {
       "id": "cj-nordvpn-2-year-20260801",
@@ -30726,6 +30726,94 @@
           "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        }
+      ]
+    },
+    "amazon-B0FWK41WF2-20260812": {
+      "id": "amazon-B0FWK41WF2-20260812",
+      "title": "eufy C28 robot vacuum and mop",
+      "url": "/deals/amazon-b0fwk41wf2/",
+      "merchant": "Amazon",
+      "category": "Home",
+      "firstSeen": "2026-08-12",
+      "lastSeen": "2026-08-12",
+      "active": true,
+      "observations": [
+        {
+          "date": "2026-08-12",
+          "verifiedAt": "2026-08-12",
+          "currentPrice": "$499.99",
+          "currentPriceAmount": 499.99,
+          "originalPrice": "$799.99",
+          "originalPriceAmount": 799.99,
+          "expiresAt": "",
+          "priceNote": "Limited-time deal · In stock"
+        }
+      ]
+    },
+    "amazon-B0C5C89QKZ-20260812": {
+      "id": "amazon-B0C5C89QKZ-20260812",
+      "title": "Anker SOLIX C1000 portable power station",
+      "url": "/deals/amazon-b0c5c89qkz/",
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "firstSeen": "2026-08-12",
+      "lastSeen": "2026-08-12",
+      "active": true,
+      "observations": [
+        {
+          "date": "2026-08-12",
+          "verifiedAt": "2026-08-12",
+          "currentPrice": "$429.98",
+          "currentPriceAmount": 429.98,
+          "originalPrice": "$599.99",
+          "originalPriceAmount": 599.99,
+          "expiresAt": "",
+          "priceNote": "Limited-time deal · In stock"
+        }
+      ]
+    },
+    "amazon-B0CXZTT4MT-20260812": {
+      "id": "amazon-B0CXZTT4MT-20260812",
+      "title": "Amazon Fire TV Soundbar Plus",
+      "url": "/deals/amazon-b0cxztt4mt/",
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "firstSeen": "2026-08-12",
+      "lastSeen": "2026-08-12",
+      "active": true,
+      "observations": [
+        {
+          "date": "2026-08-12",
+          "verifiedAt": "2026-08-12",
+          "currentPrice": "$149.99",
+          "currentPriceAmount": 149.99,
+          "originalPrice": "$249.99",
+          "originalPriceAmount": 249.99,
+          "expiresAt": "",
+          "priceNote": "Limited-time deal · In stock"
+        }
+      ]
+    },
+    "amazon-B0FMTSRKYL-20260812": {
+      "id": "amazon-B0FMTSRKYL-20260812",
+      "title": "Keurig K-Mini Mate coffee maker",
+      "url": "/deals/amazon-b0fmtsrkyl/",
+      "merchant": "Amazon",
+      "category": "Home",
+      "firstSeen": "2026-08-12",
+      "lastSeen": "2026-08-12",
+      "active": true,
+      "observations": [
+        {
+          "date": "2026-08-12",
+          "verifiedAt": "2026-08-12",
+          "currentPrice": "$49.99",
+          "currentPriceAmount": 49.99,
+          "originalPrice": "$59.99",
+          "originalPriceAmount": 59.99,
+          "expiresAt": "",
+          "priceNote": "Limited-time deal · In stock"
         }
       ]
     }

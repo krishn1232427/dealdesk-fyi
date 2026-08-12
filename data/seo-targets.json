@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-12T10:27:14.000Z",
+  "generatedAt": "2026-08-12T20:57:06.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -29,7 +29,7 @@
         "Dell Latitude 7490 Touch – i7‑8650U, 16GB, 512GB SSD, Win11 Pro discount",
         "eBay Dell Latitude 7490 Touch – i7‑8650U, 16GB, 512GB SSD, Win11 Pro"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -38,20 +38,22 @@
       ]
     },
     {
-      "id": "rakuten-sensibo-air-room-sensor-20260803",
-      "url": "https://dealdesk.fyi/deals/rakuten-sensibo-air-room-sensor/",
-      "title": "Sensibo Air + Room Sensor deal: $159.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Sensibo Air + Room Sensor deal",
+      "id": "amazon-B0FWK41WF2-20260812",
+      "url": "https://dealdesk.fyi/deals/amazon-b0fwk41wf2/",
+      "title": "eufy C28 robot vacuum and mop deal: $499.99 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "eufy C28 robot vacuum and mop deal",
       "secondaryQueries": [
-        "Sensibo Air + Room Sensor price",
-        "Sensibo Air + Room Sensor discount",
-        "Sensibo deals"
+        "eufy C28 robot vacuum and mop price",
+        "eufy C28 robot vacuum and mop discount",
+        "Amazon eufy C28 robot vacuum and mop"
       ],
-      "score": 79,
-      "merchantPath": "/merchant/sensibo/",
+      "score": 77,
+      "merchantPath": "/merchant/amazon/",
       "comparisonPath": "",
-      "collectionPaths": []
+      "collectionPaths": [
+        "/collections/security-cameras/"
+      ]
     },
     {
       "id": "ebay-item-206474700849",
@@ -107,18 +109,18 @@
       ]
     },
     {
-      "id": "cj-curiositystream-standard-monthly-20260811",
-      "url": "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
-      "title": "CuriosityStream Standard — $5.99/month deal: $5.99/mo | DealDesk",
+      "id": "rakuten-sensibo-air-room-sensor-20260803",
+      "url": "https://dealdesk.fyi/deals/rakuten-sensibo-air-room-sensor/",
+      "title": "Sensibo Air + Room Sensor deal: $159.00 | DealDesk",
       "indexable": false,
-      "primaryQuery": "CuriosityStream Standard — $5.99/month deal",
+      "primaryQuery": "Sensibo Air + Room Sensor deal",
       "secondaryQueries": [
-        "CuriosityStream Standard — $5.99/month price",
-        "CuriosityStream Standard — $5.99/month current offer",
-        "CuriosityStream deals"
+        "Sensibo Air + Room Sensor price",
+        "Sensibo Air + Room Sensor discount",
+        "Sensibo deals"
       ],
-      "score": 61,
-      "merchantPath": "/merchant/curiositystream/",
+      "score": 79,
+      "merchantPath": "/merchant/sensibo/",
       "comparisonPath": "",
       "collectionPaths": []
     },
@@ -141,6 +143,22 @@
       ]
     },
     {
+      "id": "amazon-B0C5C89QKZ-20260812",
+      "url": "https://dealdesk.fyi/deals/amazon-b0c5c89qkz/",
+      "title": "Anker SOLIX C1000 portable power station deal: $429.98 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Anker SOLIX C1000 portable power station deal",
+      "secondaryQueries": [
+        "Anker SOLIX C1000 portable power station price",
+        "Anker SOLIX C1000 portable power station discount",
+        "Amazon Anker SOLIX C1000 portable power station"
+      ],
+      "score": 77,
+      "merchantPath": "/merchant/amazon/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
       "id": "cj-surfshark-starter-20260801",
       "url": "https://dealdesk.fyi/deals/cj-surfshark-starter/",
       "title": "Surfshark Starter 24-month plan deal: $2.49/mo | DealDesk",
@@ -159,41 +177,6 @@
       ]
     },
     {
-      "id": "ebay-item-136085045308",
-      "url": "https://dealdesk.fyi/deals/ebay-item-136085045308/",
-      "title": "Arlo VMC3060-100NAR Essential 2ndGen 2K… deal: $14.28 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished deal",
-      "secondaryQueries": [
-        "Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished price",
-        "Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished discount",
-        "eBay Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/security-cameras/"
-      ]
-    },
-    {
-      "id": "amazon-B07D5DN269-20260801",
-      "url": "https://dealdesk.fyi/deals/amazon-b07d5dn269/",
-      "title": "Niagara queen cooling mattress topper deal: $37.89 | DealDesk",
-      "indexable": true,
-      "primaryQuery": "Niagara queen cooling mattress topper deal",
-      "secondaryQueries": [
-        "Niagara queen cooling mattress topper price",
-        "Niagara queen cooling mattress topper discount",
-        "Amazon Niagara queen cooling mattress topper"
-      ],
-      "score": 72,
-      "merchantPath": "/merchant/amazon/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-137021591561",
       "url": "https://dealdesk.fyi/deals/ebay-item-137021591561/",
       "title": "Star Wars Micro Galaxy Squadron Ghost with… deal: $16.00 | DealDesk",
@@ -208,6 +191,24 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
+    },
+    {
+      "id": "amazon-B0CXZTT4MT-20260812",
+      "url": "https://dealdesk.fyi/deals/amazon-b0cxztt4mt/",
+      "title": "Amazon Fire TV Soundbar Plus deal: $149.99 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Amazon Fire TV Soundbar Plus deal",
+      "secondaryQueries": [
+        "Amazon Fire TV Soundbar Plus price",
+        "Amazon Fire TV Soundbar Plus discount",
+        "Amazon deals"
+      ],
+      "score": 77,
+      "merchantPath": "/merchant/amazon/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/soundbars/"
+      ]
     },
     {
       "id": "cj-proton-vpn-plus-2-year-70off-20260804",
@@ -228,6 +229,107 @@
       ]
     },
     {
+      "id": "ebay-item-127765710395",
+      "url": "https://dealdesk.fyi/deals/ebay-item-127765710395/",
+      "title": "Voyage Aeronautics VL-6503 VA-2500 Premium… deal: $16.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow deal",
+      "secondaryQueries": [
+        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow price",
+        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow discount",
+        "eBay Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow"
+      ],
+      "score": 84,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "amazon-B0FMTSRKYL-20260812",
+      "url": "https://dealdesk.fyi/deals/amazon-b0fmtsrkyl/",
+      "title": "Keurig K-Mini Mate coffee maker deal: $49.99 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Keurig K-Mini Mate coffee maker deal",
+      "secondaryQueries": [
+        "Keurig K-Mini Mate coffee maker price",
+        "Keurig K-Mini Mate coffee maker discount",
+        "Amazon Keurig K-Mini Mate coffee maker"
+      ],
+      "score": 73,
+      "merchantPath": "/merchant/amazon/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-136085045308",
+      "url": "https://dealdesk.fyi/deals/ebay-item-136085045308/",
+      "title": "Arlo VMC3060-100NAR Essential 2ndGen 2K… deal: $14.28 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished deal",
+      "secondaryQueries": [
+        "Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished price",
+        "Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished discount",
+        "eBay Arlo VMC3060-100NAR Essential 2ndGen 2K Indoor Single Cam-Certified Refurbished"
+      ],
+      "score": 86,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/security-cameras/"
+      ]
+    },
+    {
+      "id": "cj-malwarebytes-standard-2-year-25off-20260811",
+      "url": "https://dealdesk.fyi/deals/cj-malwarebytes-standard-2-year-25off/",
+      "title": "Malwarebytes Standard 2-year plan deal: $67.48 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Malwarebytes Standard 2-year plan deal",
+      "secondaryQueries": [
+        "Malwarebytes Standard 2-year plan price",
+        "Malwarebytes Standard 2-year plan discount",
+        "Malwarebytes deals"
+      ],
+      "score": 77,
+      "merchantPath": "/merchant/malwarebytes/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-331693050907",
+      "url": "https://dealdesk.fyi/deals/ebay-item-331693050907/",
+      "title": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer… deal: $88.19 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished deal",
+      "secondaryQueries": [
+        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished price",
+        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished discount",
+        "eBay Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished"
+      ],
+      "score": 90,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/makita-tools/"
+      ]
+    },
+    {
+      "id": "cj-curiositystream-standard-monthly-20260811",
+      "url": "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
+      "title": "CuriosityStream Standard — $5.99/month deal: $5.99/mo | DealDesk",
+      "indexable": false,
+      "primaryQuery": "CuriosityStream Standard — $5.99/month deal",
+      "secondaryQueries": [
+        "CuriosityStream Standard — $5.99/month price",
+        "CuriosityStream Standard — $5.99/month current offer",
+        "CuriosityStream deals"
+      ],
+      "score": 61,
+      "merchantPath": "/merchant/curiositystream/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
       "id": "ebay-item-286014554031",
       "url": "https://dealdesk.fyi/deals/ebay-item-286014554031/",
       "title": "Snakebyte GamePad Pro X Controller for Xbox… deal: $19.09 | DealDesk",
@@ -246,50 +348,52 @@
       ]
     },
     {
-      "id": "amazon-B0DSP8J476-20260801",
-      "url": "https://dealdesk.fyi/deals/amazon-b0dsp8j476/",
-      "title": "Roborock Qrevo S5V robot vacuum and mop deal: $499.99 | DealDesk",
+      "id": "amazon-audible-standard-trial-20260801",
+      "url": "https://dealdesk.fyi/deals/amazon-audible-standard-trial/",
+      "title": "Audible Standard — 30-day free trial deal: $0 | DealDesk",
       "indexable": true,
-      "primaryQuery": "Roborock Qrevo S5V robot vacuum and mop deal",
+      "primaryQuery": "Audible Standard — 30-day free trial deal",
       "secondaryQueries": [
-        "Roborock Qrevo S5V robot vacuum and mop price",
-        "Roborock Qrevo S5V robot vacuum and mop discount",
-        "Amazon Roborock Qrevo S5V robot vacuum and mop"
+        "Audible Standard — 30-day free trial price",
+        "Audible Standard — 30-day free trial current offer",
+        "Audible deals"
+      ],
+      "score": 69,
+      "merchantPath": "/merchants/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-294169926707",
+      "url": "https://dealdesk.fyi/deals/ebay-item-294169926707/",
+      "title": "Makita XT268T 18V LXT Li-Ion Brushless… deal: $340.44 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) deal",
+      "secondaryQueries": [
+        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) price",
+        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) discount",
+        "eBay Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished)"
+      ],
+      "score": 90,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/makita-tools/"
+      ]
+    },
+    {
+      "id": "amazon-B07D5DN269-20260801",
+      "url": "https://dealdesk.fyi/deals/amazon-b07d5dn269/",
+      "title": "Niagara queen cooling mattress topper deal: $37.89 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Niagara queen cooling mattress topper deal",
+      "secondaryQueries": [
+        "Niagara queen cooling mattress topper price",
+        "Niagara queen cooling mattress topper discount",
+        "Amazon Niagara queen cooling mattress topper"
       ],
       "score": 72,
       "merchantPath": "/merchant/amazon/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-127765710395",
-      "url": "https://dealdesk.fyi/deals/ebay-item-127765710395/",
-      "title": "Voyage Aeronautics VL-6503 VA-2500 Premium… deal: $16.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow deal",
-      "secondaryQueries": [
-        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow price",
-        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow discount",
-        "eBay Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow"
-      ],
-      "score": 84,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
-      "id": "cj-malwarebytes-standard-2-year-25off-20260811",
-      "url": "https://dealdesk.fyi/deals/cj-malwarebytes-standard-2-year-25off/",
-      "title": "Malwarebytes Standard 2-year plan deal: $67.48 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Malwarebytes Standard 2-year plan deal",
-      "secondaryQueries": [
-        "Malwarebytes Standard 2-year plan price",
-        "Malwarebytes Standard 2-year plan discount",
-        "Malwarebytes deals"
-      ],
-      "score": 77,
-      "merchantPath": "/merchant/malwarebytes/",
       "comparisonPath": "",
       "collectionPaths": []
     },
@@ -313,52 +417,50 @@
       ]
     },
     {
-      "id": "amazon-B00JH98GR4-20260801",
-      "url": "https://dealdesk.fyi/deals/amazon-b00jh98gr4/",
-      "title": "Shark Navigator Lift-Away vacuum deal: $149.00 | DealDesk",
-      "indexable": true,
-      "primaryQuery": "Shark Navigator Lift-Away vacuum deal",
+      "id": "cj-magzter-gold-annual-50off-20260803",
+      "url": "https://dealdesk.fyi/deals/cj-magzter-gold-annual-50off/",
+      "title": "Magzter GOLD annual subscription deal: $74.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Magzter GOLD annual subscription deal",
       "secondaryQueries": [
-        "Shark Navigator Lift-Away vacuum price",
-        "Shark Navigator Lift-Away vacuum discount",
-        "Amazon Shark Navigator Lift-Away vacuum"
+        "Magzter GOLD annual subscription price",
+        "Magzter GOLD annual subscription discount",
+        "Magzter deals"
       ],
-      "score": 72,
-      "merchantPath": "/merchant/amazon/",
+      "score": 77,
+      "merchantPath": "/merchant/magzter/",
       "comparisonPath": "",
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-331693050907",
-      "url": "https://dealdesk.fyi/deals/ebay-item-331693050907/",
-      "title": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer… deal: $88.19 | DealDesk",
+      "id": "ebay-item-276646642466",
+      "url": "https://dealdesk.fyi/deals/ebay-item-276646642466/",
+      "title": "Dyson TP4A Pure Cool™ tower purifier fan |… deal: $199.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished deal",
+      "primaryQuery": "Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished deal",
       "secondaryQueries": [
-        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished price",
-        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished discount",
-        "eBay Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished"
+        "Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished price",
+        "Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished discount",
+        "eBay Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished"
       ],
       "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/makita-tools/"
-      ]
+      "collectionPaths": []
     },
     {
-      "id": "amazon-audible-standard-trial-20260801",
-      "url": "https://dealdesk.fyi/deals/amazon-audible-standard-trial/",
-      "title": "Audible Standard — 30-day free trial deal: $0 | DealDesk",
+      "id": "amazon-B0DSP8J476-20260801",
+      "url": "https://dealdesk.fyi/deals/amazon-b0dsp8j476/",
+      "title": "Roborock Qrevo S5V robot vacuum and mop deal: $499.99 | DealDesk",
       "indexable": true,
-      "primaryQuery": "Audible Standard — 30-day free trial deal",
+      "primaryQuery": "Roborock Qrevo S5V robot vacuum and mop deal",
       "secondaryQueries": [
-        "Audible Standard — 30-day free trial price",
-        "Audible Standard — 30-day free trial current offer",
-        "Audible deals"
+        "Roborock Qrevo S5V robot vacuum and mop price",
+        "Roborock Qrevo S5V robot vacuum and mop discount",
+        "Amazon Roborock Qrevo S5V robot vacuum and mop"
       ],
-      "score": 69,
-      "merchantPath": "/merchants/",
+      "score": 72,
+      "merchantPath": "/merchant/amazon/",
       "comparisonPath": "",
       "collectionPaths": []
     },
@@ -383,52 +485,50 @@
       ]
     },
     {
-      "id": "amazon-B07MJL8NXR-20260801",
-      "url": "https://dealdesk.fyi/deals/amazon-b07mjl8nxr/",
-      "title": "Premier Protein chocolate shakes, 12-pack deal: $26.70 | DealDesk",
+      "id": "cj-nordpass-premium-20260801",
+      "url": "https://dealdesk.fyi/deals/cj-nordpass-premium/",
+      "title": "NordPass Premium 2-year plan deal: $1.39/mo | DealDesk",
       "indexable": true,
-      "primaryQuery": "Premier Protein chocolate shakes, 12-pack deal",
+      "primaryQuery": "NordPass Premium 2-year plan deal",
       "secondaryQueries": [
-        "Premier Protein chocolate shakes, 12-pack price",
-        "Premier Protein chocolate shakes, 12-pack discount",
-        "Amazon Premier Protein chocolate shakes, 12-pack"
+        "NordPass Premium 2-year plan price",
+        "NordPass Premium 2-year plan discount",
+        "NordPass deals"
       ],
-      "score": 68,
-      "merchantPath": "/merchant/amazon/",
+      "score": 81,
+      "merchantPath": "/merchant/nordpass/",
       "comparisonPath": "",
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-294169926707",
-      "url": "https://dealdesk.fyi/deals/ebay-item-294169926707/",
-      "title": "Makita XT268T 18V LXT Li-Ion Brushless… deal: $340.44 | DealDesk",
+      "id": "ebay-item-284356610245",
+      "url": "https://dealdesk.fyi/deals/ebay-item-284356610245/",
+      "title": "WX744L.9 Worx 20V MAKERX Wood & Metal… deal: $29.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) deal",
+      "primaryQuery": "WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR deal",
       "secondaryQueries": [
-        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) price",
-        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) discount",
-        "eBay Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished)"
+        "WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR price",
+        "WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR discount",
+        "eBay WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR"
       ],
       "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/makita-tools/"
-      ]
+      "collectionPaths": []
     },
     {
-      "id": "cj-magzter-gold-annual-50off-20260803",
-      "url": "https://dealdesk.fyi/deals/cj-magzter-gold-annual-50off/",
-      "title": "Magzter GOLD annual subscription deal: $74.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Magzter GOLD annual subscription deal",
+      "id": "amazon-B00JH98GR4-20260801",
+      "url": "https://dealdesk.fyi/deals/amazon-b00jh98gr4/",
+      "title": "Shark Navigator Lift-Away vacuum deal: $149.00 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Shark Navigator Lift-Away vacuum deal",
       "secondaryQueries": [
-        "Magzter GOLD annual subscription price",
-        "Magzter GOLD annual subscription discount",
-        "Magzter deals"
+        "Shark Navigator Lift-Away vacuum price",
+        "Shark Navigator Lift-Away vacuum discount",
+        "Amazon Shark Navigator Lift-Away vacuum"
       ],
-      "score": 81,
-      "merchantPath": "/merchant/magzter/",
+      "score": 72,
+      "merchantPath": "/merchant/amazon/",
       "comparisonPath": "",
       "collectionPaths": []
     },
@@ -453,50 +553,52 @@
       ]
     },
     {
-      "id": "amazon-music-unlimited-20260731",
-      "url": "https://dealdesk.fyi/deals/amazon-music-unlimited/",
-      "title": "Amazon Music Unlimited — 2 months free for new… deal: $0 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Amazon Music Unlimited — 2 months free for new subscribers deal",
+      "id": "amazon-kids-plus-trial-20260801",
+      "url": "https://dealdesk.fyi/deals/amazon-kids-plus-trial/",
+      "title": "Amazon Kids+ — 1-month free trial deal: $0 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Amazon Kids+ — 1-month free trial deal",
       "secondaryQueries": [
-        "Amazon Music Unlimited — 2 months free for new subscribers price",
-        "Amazon Music Unlimited — 2 months free for new subscribers current offer",
-        "Amazon Music Unlimited deals"
+        "Amazon Kids+ — 1-month free trial price",
+        "Amazon Kids+ — 1-month free trial current offer",
+        "Amazon Kids+ deals"
       ],
-      "score": 75,
+      "score": 69,
       "merchantPath": "/merchants/",
       "comparisonPath": "",
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-276646642466",
-      "url": "https://dealdesk.fyi/deals/ebay-item-276646642466/",
-      "title": "Dyson TP4A Pure Cool™ tower purifier fan |… deal: $199.99 | DealDesk",
+      "id": "ebay-item-286094942833",
+      "url": "https://dealdesk.fyi/deals/ebay-item-286094942833/",
+      "title": "Makita AF506-R 18-Gauge 2\" Pneumatic Brad… deal: $74.47 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished deal",
+      "primaryQuery": "Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished deal",
       "secondaryQueries": [
-        "Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished price",
-        "Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished discount",
-        "eBay Dyson TP4A Pure Cool™ tower purifier fan | White/Silver | Refurbished"
+        "Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished price",
+        "Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished discount",
+        "eBay Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished"
       ],
       "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": []
+      "collectionPaths": [
+        "/collections/makita-tools/"
+      ]
     },
     {
-      "id": "cj-nordpass-premium-20260801",
-      "url": "https://dealdesk.fyi/deals/cj-nordpass-premium/",
-      "title": "NordPass Premium 2-year plan deal: $1.39/mo | DealDesk",
+      "id": "amazon-B07MJL8NXR-20260801",
+      "url": "https://dealdesk.fyi/deals/amazon-b07mjl8nxr/",
+      "title": "Premier Protein chocolate shakes, 12-pack deal: $26.70 | DealDesk",
       "indexable": true,
-      "primaryQuery": "NordPass Premium 2-year plan deal",
+      "primaryQuery": "Premier Protein chocolate shakes, 12-pack deal",
       "secondaryQueries": [
-        "NordPass Premium 2-year plan price",
-        "NordPass Premium 2-year plan discount",
-        "NordPass deals"
+        "Premier Protein chocolate shakes, 12-pack price",
+        "Premier Protein chocolate shakes, 12-pack discount",
+        "Amazon Premier Protein chocolate shakes, 12-pack"
       ],
-      "score": 81,
-      "merchantPath": "/merchant/nordpass/",
+      "score": 68,
+      "merchantPath": "/merchant/amazon/",
       "comparisonPath": "",
       "collectionPaths": []
     },
@@ -521,6 +623,38 @@
       ]
     },
     {
+      "id": "amazon-music-unlimited-20260731",
+      "url": "https://dealdesk.fyi/deals/amazon-music-unlimited/",
+      "title": "Amazon Music Unlimited — 2 months free for new… deal: $0 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Amazon Music Unlimited — 2 months free for new subscribers deal",
+      "secondaryQueries": [
+        "Amazon Music Unlimited — 2 months free for new subscribers price",
+        "Amazon Music Unlimited — 2 months free for new subscribers current offer",
+        "Amazon Music Unlimited deals"
+      ],
+      "score": 75,
+      "merchantPath": "/merchants/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-325433972802",
+      "url": "https://dealdesk.fyi/deals/ebay-item-325433972802/",
+      "title": "Yugioh Power of the Elements Factory Sealed… deal: $37.95 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Yugioh Power of the Elements Factory Sealed Booster Box Unlimited deal",
+      "secondaryQueries": [
+        "Yugioh Power of the Elements Factory Sealed Booster Box Unlimited price",
+        "Yugioh Power of the Elements Factory Sealed Booster Box Unlimited discount",
+        "eBay Yugioh Power of the Elements Factory Sealed Booster Box Unlimited"
+      ],
+      "score": 84,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
       "id": "amazon-prime-video-channels-paid-20260731",
       "url": "https://dealdesk.fyi/deals/amazon-prime-video-channels-paid/",
       "title": "Prime Video Channels — trials and… deal: See terms | DealDesk",
@@ -537,38 +671,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-284356610245",
-      "url": "https://dealdesk.fyi/deals/ebay-item-284356610245/",
-      "title": "WX744L.9 Worx 20V MAKERX Wood & Metal… deal: $29.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR deal",
-      "secondaryQueries": [
-        "WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR price",
-        "WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR discount",
-        "eBay WX744L.9 Worx 20V MAKERX Wood & Metal Crafter - Battery / Hub Not Included-CR"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
-      "id": "amazon-kids-plus-trial-20260801",
-      "url": "https://dealdesk.fyi/deals/amazon-kids-plus-trial/",
-      "title": "Amazon Kids+ — 1-month free trial deal: $0 | DealDesk",
-      "indexable": true,
-      "primaryQuery": "Amazon Kids+ — 1-month free trial deal",
-      "secondaryQueries": [
-        "Amazon Kids+ — 1-month free trial price",
-        "Amazon Kids+ — 1-month free trial current offer",
-        "Amazon Kids+ deals"
-      ],
-      "score": 69,
-      "merchantPath": "/merchants/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-127199857496",
       "url": "https://dealdesk.fyi/deals/ebay-item-127199857496/",
       "title": "Samsung Galaxy S22+ Green 128 Good -… deal: $161.14 | DealDesk",
@@ -579,7 +681,7 @@
         "Samsung Galaxy S22+ Green 128 Good - Refurbished - Unlocked discount",
         "eBay Samsung Galaxy S22+ Green 128 Good - Refurbished - Unlocked"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s22/",
       "collectionPaths": [
@@ -605,22 +707,20 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-286094942833",
-      "url": "https://dealdesk.fyi/deals/ebay-item-286094942833/",
-      "title": "Makita AF506-R 18-Gauge 2\" Pneumatic Brad… deal: $74.47 | DealDesk",
+      "id": "ebay-item-277922293329-2560860938882",
+      "url": "https://dealdesk.fyi/deals/ebay-item-277922293329-2560860938882/",
+      "title": "Dyson Corrale™ Origin Styler Straightener |… deal: $189.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished deal",
+      "primaryQuery": "Dyson Corrale™ Origin Styler Straightener | Refurbished deal",
       "secondaryQueries": [
-        "Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished price",
-        "Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished discount",
-        "eBay Makita AF506-R 18-Gauge 2\" Pneumatic Brad Nailer Certified Refurbished"
+        "Dyson Corrale™ Origin Styler Straightener | Refurbished price",
+        "Dyson Corrale™ Origin Styler Straightener | Refurbished discount",
+        "eBay Dyson Corrale™ Origin Styler Straightener | Refurbished"
       ],
       "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/makita-tools/"
-      ]
+      "collectionPaths": []
     },
     {
       "id": "ebay-item-374922753524",
@@ -652,7 +752,7 @@
         "HP EliteBook 840 G8 i5-1145G7 16GB RAM 256GB SSD Windows 11 Pro discount",
         "eBay HP EliteBook 840 G8 i5-1145G7 16GB RAM 256GB SSD Windows 11 Pro"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -671,7 +771,7 @@
         "Lenovo ThinkPad T14s G2 i5‑1135G7 8GB RAM 512GB SSD Windows 11 Pro discount",
         "eBay Lenovo ThinkPad T14s G2 i5‑1135G7 8GB RAM 512GB SSD Windows 11 Pro"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-t14s/",
       "collectionPaths": [
@@ -848,7 +948,7 @@
         "Mission LX-6 MKII 6.5\" 3-Way Floor Standing Home Audio Tower Speaker in Black discount",
         "eBay Mission LX-6 MKII 6.5\" 3-Way Floor Standing Home Audio Tower Speaker in Black"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -866,7 +966,7 @@
         "Samsung Galaxy S21 5G 128GB G991U Unlocked - Very Good discount",
         "eBay Samsung Galaxy S21 5G 128GB G991U Unlocked - Very Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s21/",
       "collectionPaths": [
@@ -966,7 +1066,7 @@
         "Lenovo ThinkPad 14\" 16GB 512GB, Black discount",
         "eBay Lenovo ThinkPad 14\" 16GB 512GB, Black"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -1044,7 +1144,7 @@
         "Samsung Galaxy S22 128GB Phantom Black Unlocked Very Good discount",
         "eBay Samsung Galaxy S22 128GB Phantom Black Unlocked Very Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s22/",
       "collectionPaths": [
@@ -1240,7 +1340,7 @@
         "Acer Vero B7 23.8\" Widescreen Monitor 1920x1080 100Hz 4ms Refurbished discount",
         "eBay Acer Vero B7 23.8\" Widescreen Monitor 1920x1080 100Hz 4ms Refurbished"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -1356,7 +1456,7 @@
         "Samsung Galaxy S23 128GB S911U Unlocked - Good discount",
         "eBay Samsung Galaxy S23 128GB S911U Unlocked - Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s23/",
       "collectionPaths": [
@@ -1647,7 +1747,7 @@
         "Samsung Galaxy S23 128GB S911U Unlocked - Very Good discount",
         "eBay Samsung Galaxy S23 128GB S911U Unlocked - Very Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s23/",
       "collectionPaths": [
@@ -1785,7 +1885,7 @@
         "Apple iPhone 13 6.1\" A2482 Unlocked w/128GB (Blue) - Good discount",
         "eBay Apple iPhone 13 6.1\" A2482 Unlocked w/128GB (Blue) - Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-13/",
       "collectionPaths": [
@@ -1843,7 +1943,7 @@
         "eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish discount",
         "eBay eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/eufy-220-solocam-solar/",
       "collectionPaths": [
@@ -1862,7 +1962,7 @@
         "eufy 2K Solar Security Cameras Wireless Outdoor Spotlight SoloCam S230 (2Pack) discount",
         "eBay eufy 2K Solar Security Cameras Wireless Outdoor Spotlight SoloCam S230 (2Pack)"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -1881,7 +1981,7 @@
         "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Excellent discount",
         "eBay Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Excellent"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s23-ultra/",
       "collectionPaths": [
@@ -1901,7 +2001,7 @@
         "Samsung Galaxy S23 FE 128GB S711U Unlocked - Very Good discount",
         "eBay Samsung Galaxy S23 FE 128GB S711U Unlocked - Very Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s23/",
       "collectionPaths": [
@@ -2055,7 +2155,7 @@
         "JLab Epic Party 100W Portable Bluetooth Speaker RGB LED IP56 Black Excellent discount",
         "eBay JLab Epic Party 100W Portable Bluetooth Speaker RGB LED IP56 Black Excellent"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2073,7 +2173,7 @@
         "Apple M1 MacBook Air 13\" 8GB 128GB (Space Gray) 2020 A2337 - w/1 Year Warranty discount",
         "eBay Apple M1 MacBook Air 13\" 8GB 128GB (Space Gray) 2020 A2337 - w/1 Year Warranty"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/macbook-air-13/",
       "collectionPaths": [
@@ -2092,7 +2192,7 @@
         "Samsung Galaxy S24+ 512GB S926U Unlocked - Good discount",
         "eBay Samsung Galaxy S24+ 512GB S926U Unlocked - Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s24/",
       "collectionPaths": [
@@ -2169,7 +2269,7 @@
         "Samsung Galaxy S24 Ultra 512GB S928U Unlocked - Good discount",
         "eBay Samsung Galaxy S24 Ultra 512GB S928U Unlocked - Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s24-ultra/",
       "collectionPaths": [
@@ -2197,38 +2297,6 @@
         "/collections/refurbished-laptops/",
         "/collections/lenovo-thinkpad/"
       ]
-    },
-    {
-      "id": "ebay-item-325433972802",
-      "url": "https://dealdesk.fyi/deals/ebay-item-325433972802/",
-      "title": "Yugioh Power of the Elements Factory Sealed… deal: $37.95 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Yugioh Power of the Elements Factory Sealed Booster Box Unlimited deal",
-      "secondaryQueries": [
-        "Yugioh Power of the Elements Factory Sealed Booster Box Unlimited price",
-        "Yugioh Power of the Elements Factory Sealed Booster Box Unlimited discount",
-        "eBay Yugioh Power of the Elements Factory Sealed Booster Box Unlimited"
-      ],
-      "score": 84,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-277922293329-2560860938882",
-      "url": "https://dealdesk.fyi/deals/ebay-item-277922293329-2560860938882/",
-      "title": "Dyson Corrale™ Origin Styler Straightener |… deal: $189.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Dyson Corrale™ Origin Styler Straightener | Refurbished deal",
-      "secondaryQueries": [
-        "Dyson Corrale™ Origin Styler Straightener | Refurbished price",
-        "Dyson Corrale™ Origin Styler Straightener | Refurbished discount",
-        "eBay Dyson Corrale™ Origin Styler Straightener | Refurbished"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
     },
     {
       "id": "ebay-item-145950168282",
@@ -2260,7 +2328,7 @@
         "eufy SoloCam S220 Solar Security Camera 2K Wireless Outdoor Cam Human Detection discount",
         "eBay eufy SoloCam S220 Solar Security Camera 2K Wireless Outdoor Cam Human Detection"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2279,7 +2347,7 @@
         "eufy Security 10000 mAh Rechargeable Battery for S330 3-in-1 Video Smart Lock discount",
         "eBay eufy Security 10000 mAh Rechargeable Battery for S330 3-in-1 Video Smart Lock"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2298,7 +2366,7 @@
         "Arlo VMC3250-100NAR Essential 2nd Gen 2K, 2-cam, White - Certified Refurbished discount",
         "eBay Arlo VMC3250-100NAR Essential 2nd Gen 2K, 2-cam, White - Certified Refurbished"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2317,7 +2385,7 @@
         "Lenovo Thinkpad T14 Gen 2 14\" 16GB 512GB, Black discount",
         "eBay Lenovo Thinkpad T14 Gen 2 14\" 16GB 512GB, Black"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-t14/",
       "collectionPaths": [
@@ -2337,7 +2405,7 @@
         "Lenovo ThinkPad X9-14 Gen 1 Aura 14\" 2.8K OLED Touch Ultra 7 268V 32GB 1TB FPR discount",
         "eBay Lenovo ThinkPad X9-14 Gen 1 Aura 14\" 2.8K OLED Touch Ultra 7 268V 32GB 1TB FPR"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2357,7 +2425,7 @@
         "Samsung Galaxy S24 Ultra 256GB S928U Unlocked - Good discount",
         "eBay Samsung Galaxy S24 Ultra 256GB S928U Unlocked - Good"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s24-ultra/",
       "collectionPaths": [
@@ -2489,7 +2557,7 @@
         "VIZIO All-in-One 2.1 ch Soundbar w/ Dolby Atmos in Black, HDMI eARC - SV210D-080 discount",
         "eBay VIZIO All-in-One 2.1 ch Soundbar w/ Dolby Atmos in Black, HDMI eARC - SV210D-080"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2508,7 +2576,7 @@
         "Apple iPhone 14 256GB Factory Unlocked AT&T T-Mobile Verizon Excellent Condition discount",
         "eBay Apple iPhone 14 256GB Factory Unlocked AT&T T-Mobile Verizon Excellent Condition"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-14/",
       "collectionPaths": [
@@ -2527,7 +2595,7 @@
         "Games Workshop Warhammer 40k Codex: Space Marines 9th Edition Hardcover Book discount",
         "eBay Games Workshop Warhammer 40k Codex: Space Marines 9th Edition Hardcover Book"
       ],
-      "score": 84,
+      "score": 80,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -2684,7 +2752,7 @@
         "eufy S220 SoloCam 2K Solar Security Camera Wireless Outdoor Camera Wi-Fi 4-Cam discount",
         "eBay eufy S220 SoloCam 2K Solar Security Camera Wireless Outdoor Camera Wi-Fi 4-Cam"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/eufy-220-solocam-solar/",
       "collectionPaths": [
@@ -2703,7 +2771,7 @@
         "Apple iPhone 13 Mini A2628 128GB Unlocked Good Condition All Colors discount",
         "eBay Apple iPhone 13 Mini A2628 128GB Unlocked Good Condition All Colors"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-13-mini/",
       "collectionPaths": [
@@ -2722,7 +2790,7 @@
         "Funko Bitty POP! Display: Pixar Ball Figure discount",
         "eBay Funko Bitty POP! Display: Pixar Ball Figure"
       ],
-      "score": 84,
+      "score": 80,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -2738,7 +2806,7 @@
         "Funko Bitty POP! Display: Pixar Ball Figure discount",
         "eBay Funko Bitty POP! Display: Pixar Ball Figure"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -2818,7 +2886,7 @@
         "eufy Add-on Camera 4K Outdoor Solar Panel Security Camera for eufyCam 3 |Refurb discount",
         "eBay eufy Add-on Camera 4K Outdoor Solar Panel Security Camera for eufyCam 3 |Refurb"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2936,7 +3004,7 @@
         "2022 Apple M2 MacBook Air 13.6\" 8GB/256GB SSD - (Space Gray) A2681 w/Warranty discount",
         "eBay 2022 Apple M2 MacBook Air 13.6\" 8GB/256GB SSD - (Space Gray) A2681 w/Warranty"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -2955,7 +3023,7 @@
         "Acer CXI5-C432 Chromebox Intel Celeron 7305 1.10GHz 4GB RAM 32GB FLASH ChromeOS discount",
         "eBay Acer CXI5-C432 Chromebox Intel Celeron 7305 1.10GHz 4GB RAM 32GB FLASH ChromeOS"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -3097,7 +3165,7 @@
         "Samsung Galaxy S24 Ultra 512GB S928U Unlocked - Excellent discount",
         "eBay Samsung Galaxy S24 Ultra 512GB S928U Unlocked - Excellent"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s24-ultra/",
       "collectionPaths": [
@@ -3117,7 +3185,7 @@
         "Samsung Galaxy S24 Ultra 256GB Unlocked ATT T-Mobile Verizon Very Good Condition discount",
         "eBay Samsung Galaxy S24 Ultra 256GB Unlocked ATT T-Mobile Verizon Very Good Condition"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s24-ultra/",
       "collectionPaths": [
@@ -3137,7 +3205,7 @@
         "Apple iPhone 14 128GB Network Unlocked Very Good Condition discount",
         "eBay Apple iPhone 14 128GB Network Unlocked Very Good Condition"
       ],
-      "score": 100,
+      "score": 96,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-14/",
       "collectionPaths": [
@@ -3156,7 +3224,7 @@
         "Acer Vero - 21.5\" Monitor FullHD 1920x1080 100Hz 4ms 250Nit HDMI VGA DisplayPort discount",
         "eBay Acer Vero - 21.5\" Monitor FullHD 1920x1080 100Hz 4ms 250Nit HDMI VGA DisplayPort"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -3245,7 +3313,7 @@
         "Dyson AM09 Hot + Cool Heater & Fan | Refurbished discount",
         "eBay Dyson AM09 Hot + Cool Heater & Fan | Refurbished"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -3261,7 +3329,7 @@
         "Acer Nitro VG1 27\" WQHD IPS Gaming Monitor 180Hz 2560x1440 Refurbished discount",
         "eBay Acer Nitro VG1 27\" WQHD IPS Gaming Monitor 180Hz 2560x1440 Refurbished"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -3439,7 +3507,7 @@
         "Huffy 6V Vespa 801 Ride-On Scooter - White discount",
         "eBay Huffy 6V Vespa 801 Ride-On Scooter - White"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -3595,7 +3663,7 @@
         "Acer Spin 714 14\" Touch Core Ultra 5 115U 1st Gen 8GB 256GB AI PC Refurbished discount",
         "eBay Acer Spin 714 14\" Touch Core Ultra 5 115U 1st Gen 8GB 256GB AI PC Refurbished"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -3670,7 +3738,7 @@
         "Dyson HD07 Supersonic Origin - Refurbished discount",
         "eBay Dyson HD07 Supersonic Origin - Refurbished"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -3686,7 +3754,7 @@
         "Acer Vero V7 - 22\" Monitor FullHD 1920x1080 100Hz 4ms 250Nit HDMI VGA DP discount",
         "eBay Acer Vero V7 - 22\" Monitor FullHD 1920x1080 100Hz 4ms 250Nit HDMI VGA DP"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -3705,7 +3773,7 @@
         "Acer Chromebook 314 14\" Intel Celeron N4500 4GB 128GB SSD Refurbished discount",
         "eBay Acer Chromebook 314 14\" Intel Celeron N4500 4GB 128GB SSD Refurbished"
       ],
-      "score": 90,
+      "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -4097,7 +4165,7 @@
         "Yoto Player (3rd Generation) Audio Player discount",
         "eBay Yoto Player (3rd Generation) Audio Player"
       ],
-      "score": 84,
+      "score": 80,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -4216,7 +4284,7 @@
         "Samsung Galaxy A54 5G SM-A546U 128GB Black GSM UNLOCKED - Very Good discount",
         "eBay Samsung Galaxy A54 5G SM-A546U 128GB Black GSM UNLOCKED - Very Good"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -4236,7 +4304,7 @@
         "Acer TravelMate P4-14in Laptop Intel i5 2.4GHz 16GB 512GB Refurbished discount",
         "eBay Acer TravelMate P4-14in Laptop Intel i5 2.4GHz 16GB 512GB Refurbished"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -4255,7 +4323,7 @@
         "Apple iPhone 15 128GB Unlocked - Excellent discount",
         "eBay Apple iPhone 15 128GB Unlocked - Excellent"
       ],
-      "score": 96,
+      "score": 92,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-15/",
       "collectionPaths": [
@@ -4412,7 +4480,7 @@
         "Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent discount",
         "eBay Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent"
       ],
-      "score": 96,
+      "score": 92,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s25-ultra/",
       "collectionPaths": [
@@ -4432,7 +4500,7 @@
         "Apple iPhone 15 Pro Max A2849 256GB Unlocked Very Good discount",
         "eBay Apple iPhone 15 Pro Max A2849 256GB Unlocked Very Good"
       ],
-      "score": 96,
+      "score": 92,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-15-pro-max/",
       "collectionPaths": [
@@ -4521,7 +4589,7 @@
         "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action discount",
         "eBay Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -4789,7 +4857,7 @@
         "Bose QuietComfort Noise Cancelling Headphones, Certified Refurbished discount",
         "eBay Bose QuietComfort Noise Cancelling Headphones, Certified Refurbished"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -5024,7 +5092,7 @@
         "Soundcore Boom 2 Plus Outdoor Speaker BassUp 2.0 USB-C Power Bank 140W|Refurbish discount",
         "eBay Soundcore Boom 2 Plus Outdoor Speaker BassUp 2.0 USB-C Power Bank 140W|Refurbish"
       ],
-      "score": 83,
+      "score": 79,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -5042,7 +5110,7 @@
         "Dyson Supersonic Nural™ hair dryer | Refurbished discount",
         "eBay Dyson Supersonic Nural™ hair dryer | Refurbished"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -5122,7 +5190,7 @@
         "Acer Aspire 3 15.6\" Laptop AMD Ryzen3 7320U 2.4GHz 8GB RAM 128GB SSD Refurbished discount",
         "eBay Acer Aspire 3 15.6\" Laptop AMD Ryzen3 7320U 2.4GHz 8GB RAM 128GB SSD Refurbished"
       ],
-      "score": 83,
+      "score": 79,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -5141,7 +5209,7 @@
         "Samsung Galaxy S25+ 256GB S936U Unlocked - Excellent discount",
         "eBay Samsung Galaxy S25+ 256GB S936U Unlocked - Excellent"
       ],
-      "score": 96,
+      "score": 92,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s25/",
       "collectionPaths": [
@@ -5161,7 +5229,7 @@
         "The Simpsons Moe Prank Phone discount",
         "eBay The Simpsons Moe Prank Phone"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -5177,7 +5245,7 @@
         "Acer Predator XB3 28\" Gaming Monitor 144Hz 3840x2160 1ms Refurbished discount",
         "eBay Acer Predator XB3 28\" Gaming Monitor 144Hz 3840x2160 1ms Refurbished"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -5394,7 +5462,7 @@
         "Super Impulse World's Smallest Radio Flyer Tricycle [SIU5007] discount",
         "eBay Super Impulse World's Smallest Radio Flyer Tricycle [SIU5007]"
       ],
-      "score": 77,
+      "score": 73,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -5584,7 +5652,7 @@
         "Dell Vostro 13 5301 13.3\" FHD i7-1165G7 8GB 1TB PCIe SSD MX350 Webcam FPR W10Pro discount",
         "eBay Dell Vostro 13 5301 13.3\" FHD i7-1165G7 8GB 1TB PCIe SSD MX350 Webcam FPR W10Pro"
       ],
-      "score": 83,
+      "score": 79,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -5723,7 +5791,7 @@
         "Lenovo ThinkPad X1 Yoga Touch Laptop 14\" FHD i7 16GB RAM 512GB SSD Win 11 Pro discount",
         "eBay Lenovo ThinkPad X1 Yoga Touch Laptop 14\" FHD i7 16GB RAM 512GB SSD Win 11 Pro"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -5869,7 +5937,7 @@
         "Yoto Pixar Audio Collection (6 Card Pack): Learning System for Grades 1-6 discount",
         "eBay Yoto Pixar Audio Collection (6 Card Pack): Learning System for Grades 1-6"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -5959,7 +6027,7 @@
         "Samsung Galaxy S25 256GB S931U Unlocked - Excellent discount",
         "eBay Samsung Galaxy S25 256GB S931U Unlocked - Excellent"
       ],
-      "score": 96,
+      "score": 92,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s25/",
       "collectionPaths": [
@@ -5979,7 +6047,7 @@
         "Hot Wheels 50 Car Pack discount",
         "eBay Hot Wheels 50 Car Pack"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -5995,7 +6063,7 @@
         "Makita XRW01Z-R 18V LXT 3/8\" / 1/4\" Square Drive Ratchet Certified Refurbished discount",
         "eBay Makita XRW01Z-R 18V LXT 3/8\" / 1/4\" Square Drive Ratchet Certified Refurbished"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -6270,7 +6338,7 @@
         "Atlas HO Scale Code 100 36\" Super-Flex Bulk Model Train Track (10 Pieces) discount",
         "eBay Atlas HO Scale Code 100 36\" Super-Flex Bulk Model Train Track (10 Pieces)"
       ],
-      "score": 77,
+      "score": 73,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -6387,7 +6455,7 @@
         "Reolink Duo 3 PoE 16MP Dual-Lens Security Camera 180° Panoramic Smart Detection discount",
         "eBay Reolink Duo 3 PoE 16MP Dual-Lens Security Camera 180° Panoramic Smart Detection"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -6406,7 +6474,7 @@
         "Warhammer AoS Orruk Warclans Mugruk Da Watcha Swampcalla Shaman Miniature discount",
         "eBay Warhammer AoS Orruk Warclans Mugruk Da Watcha Swampcalla Shaman Miniature"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -6546,7 +6614,7 @@
         "Kanto YU6 2-Way Powered Bookshelf Speakers with Bluetooth - Matte Black - Pair discount",
         "eBay Kanto YU6 2-Way Powered Bookshelf Speakers with Bluetooth - Matte Black - Pair"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -6564,7 +6632,7 @@
         "Our Generation Kinsley & Kenzi 18\" Doll & Pet Puppy Set discount",
         "eBay Our Generation Kinsley & Kenzi 18\" Doll & Pet Puppy Set"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -6806,7 +6874,7 @@
         "Vizio SV510X-0806B-RB 5.1 Ch Dolby Atmos 33\" Soundbar - Certified Refurbished discount",
         "eBay Vizio SV510X-0806B-RB 5.1 Ch Dolby Atmos 33\" Soundbar - Certified Refurbished"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -6892,7 +6960,7 @@
         "Samsung Q Series Soundbar 11.1.4 ch Subwoofer + Rear Speaker 2025 discount",
         "eBay Samsung Q Series Soundbar 11.1.4 ch Subwoofer + Rear Speaker 2025"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -6911,7 +6979,7 @@
         "Teenage Mutant Ninja Turtles x G.I. Joe - Stormshadow x Slash Action Figure (TMN discount",
         "eBay Teenage Mutant Ninja Turtles x G.I. Joe - Stormshadow x Slash Action Figure (TMN"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -7155,7 +7223,7 @@
         "onn. 100135498 5.1 Ultra-Slim Surround Soundbar Only w/ power cable discount",
         "eBay onn. 100135498 5.1 Ultra-Slim Surround Soundbar Only w/ power cable"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -7310,7 +7378,7 @@
         "Dell Precision 15.6 Laptop: i5 Quad Core! 16GB RAM - 256GB SSD! Windows 11 Pro discount",
         "eBay Dell Precision 15.6 Laptop: i5 Quad Core! 16GB RAM - 256GB SSD! Windows 11 Pro"
       ],
-      "score": 86,
+      "score": 82,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -7329,7 +7397,7 @@
         "Binho Board Classic Inter Miami CF (3rd Edition) 2-Player Pinball Soccer Game discount",
         "eBay Binho Board Classic Inter Miami CF (3rd Edition) 2-Player Pinball Soccer Game"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -7345,7 +7413,7 @@
         "Binho Board OG Board Game 2-Player Finger Flicker Soccer Pinball Board Games discount",
         "eBay Binho Board OG Board Game 2-Player Finger Flicker Soccer Pinball Board Games"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -7492,7 +7560,7 @@
         "FAO Schwarz Bluey Toy Vending Machine Throwback Play Market Stand - 13pk discount",
         "eBay FAO Schwarz Bluey Toy Vending Machine Throwback Play Market Stand - 13pk"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -7688,7 +7756,7 @@
         "Samsung Galaxy S24 Ultra SM-S928U 512GB Unlocked Very Good Condition discount",
         "eBay Samsung Galaxy S24 Ultra SM-S928U 512GB Unlocked Very Good Condition"
       ],
-      "score": 96,
+      "score": 92,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s24-ultra/",
       "collectionPaths": [
@@ -7758,7 +7826,7 @@
         "Banpresto - My Hero Academia - Glitter & Glamours - Ochaco Uraraka Statue (MHA) discount",
         "eBay Banpresto - My Hero Academia - Glitter & Glamours - Ochaco Uraraka Statue (MHA)"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -7953,7 +8021,7 @@
         "LEGO 76925 Speed Champions Aston Martin Safety Car & AMR23 Racing Car Toy, 2 discount",
         "eBay LEGO 76925 Speed Champions Aston Martin Safety Car & AMR23 Racing Car Toy, 2"
       ],
-      "score": 76,
+      "score": 72,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -7969,7 +8037,7 @@
         "X-Men - Marvel Legends - Psylocke Action Figure with Box BAF Part [New Toy] Ac discount",
         "eBay X-Men - Marvel Legends - Psylocke Action Figure with Box BAF Part [New Toy] Ac"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -7985,7 +8053,7 @@
         "Mattel Collectible - Monster High Self-Scare Secrets Spectra Vondergeist Fashion discount",
         "eBay Mattel Collectible - Monster High Self-Scare Secrets Spectra Vondergeist Fashion"
       ],
-      "score": 76,
+      "score": 72,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8119,7 +8187,7 @@
         "DJI FPV Combo and FPV Backpack -Certified Refurbished discount",
         "eBay DJI FPV Combo and FPV Backpack -Certified Refurbished"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -8138,7 +8206,7 @@
         "DJI FPV Combo - Certified Refurbished discount",
         "eBay DJI FPV Combo - Certified Refurbished"
       ],
-      "score": 79,
+      "score": 75,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -8157,7 +8225,7 @@
         "Monster High Moonspell Magic Willow Thorne Doll [New Toy] Paper Doll, Collecti discount",
         "eBay Monster High Moonspell Magic Willow Thorne Doll [New Toy] Paper Doll, Collecti"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8278,7 +8346,7 @@
         "Arcade Classics WWE Counter Series Game with 8\" Liquid Crystal Screen & 4 Games discount",
         "eBay Arcade Classics WWE Counter Series Game with 8\" Liquid Crystal Screen & 4 Games"
       ],
-      "score": 76,
+      "score": 72,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8294,7 +8362,7 @@
         "Matchbox: The Movie Desert Chase Escape 1:64 Scale Die-Cast Vehicles 4-Pack [New discount",
         "eBay Matchbox: The Movie Desert Chase Escape 1:64 Scale Die-Cast Vehicles 4-Pack [New"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8310,7 +8378,7 @@
         "Makita XDT14Z-R 18V LXT Quick-Shift 3-Speed Impact Driver Certified Refurbished discount",
         "eBay Makita XDT14Z-R 18V LXT Quick-Shift 3-Speed Impact Driver Certified Refurbished"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -8378,7 +8446,7 @@
         "Dyson Pure Humidify+Cool™ Purifying Fan PH01 | White/Silver | Refurbished discount",
         "eBay Dyson Pure Humidify+Cool™ Purifying Fan PH01 | White/Silver | Refurbished"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8631,7 +8699,7 @@
         "Dell Latitude 5520 15.6\" FHD Touchscreen i5 11th Gen Laptop | NVMe SSD | Win 11 discount",
         "eBay Dell Latitude 5520 15.6\" FHD Touchscreen i5 11th Gen Laptop | NVMe SSD | Win 11"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -8650,7 +8718,7 @@
         "Transformers - Takara Tomy: Masterpiece - MPG-17 Optimus Prime Style Generation discount",
         "eBay Transformers - Takara Tomy: Masterpiece - MPG-17 Optimus Prime Style Generation"
       ],
-      "score": 76,
+      "score": 72,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8666,7 +8734,7 @@
         "Hobbywing Quicrun 1060 1/10 Brushed ESC [HWA30120203] discount",
         "eBay Hobbywing Quicrun 1060 1/10 Brushed ESC [HWA30120203]"
       ],
-      "score": 73,
+      "score": 69,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8738,7 +8806,7 @@
         "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished discount",
         "eBay Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -8919,7 +8987,7 @@
         "Sony Alpha a6700 4K UHD 26MP w 16-50mm Lens Mirrorless Camera - Black - OPEN BOX discount",
         "eBay Sony Alpha a6700 4K UHD 26MP w 16-50mm Lens Mirrorless Camera - Black - OPEN BOX"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -8988,7 +9056,7 @@
         "DJI Mavic 2 Pro Drone -Fly More Combo- Certified Refurbished discount",
         "eBay DJI Mavic 2 Pro Drone -Fly More Combo- Certified Refurbished"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9007,7 +9075,7 @@
         "Acer Aspire Go 15 15.6\" Laptop Intel Core 3 N355 1.90 GHz 8GB RAM 128GB SSD discount",
         "eBay Acer Aspire Go 15 15.6\" Laptop Intel Core 3 N355 1.90 GHz 8GB RAM 128GB SSD"
       ],
-      "score": 92,
+      "score": 88,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/acer-aspire-go/",
       "collectionPaths": [
@@ -9185,7 +9253,7 @@
         "Seagate Exos 28TB 7.2K RPM SATA 6Gb/s 512e CMR 3.5in Recertified Hard Drive ST28 discount",
         "eBay Seagate Exos 28TB 7.2K RPM SATA 6Gb/s 512e CMR 3.5in Recertified Hard Drive ST28"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9203,7 +9271,7 @@
         "Lenovo Slim 7i 14\" WUXGA OLED Touch Aura Edition Ultra 7 258V 32GB RAM 1TB SSD discount",
         "eBay Lenovo Slim 7i 14\" WUXGA OLED Touch Aura Edition Ultra 7 258V 32GB RAM 1TB SSD"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9221,7 +9289,7 @@
         "McFarlane Elite Edition #12 - God of War - Kratos (God of War Ragnarok) 7\" Delux discount",
         "eBay McFarlane Elite Edition #12 - God of War - Kratos (God of War Ragnarok) 7\" Delux"
       ],
-      "score": 76,
+      "score": 72,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -9377,7 +9445,7 @@
         "Sonos Ray White Certified Refurbished - Soundbar - WiFi - AirPlay2 discount",
         "eBay Sonos Ray White Certified Refurbished - Soundbar - WiFi - AirPlay2"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9415,7 +9483,7 @@
         "Dell Precision 5570 Intel i7 12th Gen NVIDIA RTX A1000 32GB RAM 512GB Win11 Pro discount",
         "eBay Dell Precision 5570 Intel i7 12th Gen NVIDIA RTX A1000 32GB RAM 512GB Win11 Pro"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9630,7 +9698,7 @@
         "Rolleiflex 3.5A TLR Camera w/75mm f3.5 Tessar #988 discount",
         "eBay Rolleiflex 3.5A TLR Camera w/75mm f3.5 Tessar #988"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9648,7 +9716,7 @@
         "Nikon Z 5 Mirrorless Digital Camera 24.3MP Z5 w/Battery & Charger #Q discount",
         "eBay Nikon Z 5 Mirrorless Digital Camera 24.3MP Z5 w/Battery & Charger #Q"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9666,7 +9734,7 @@
         "Sigma AF 16mm f1.4 Contemporary DC DN 017 Lens Olympus MFT Micro 4/3 #555 discount",
         "eBay Sigma AF 16mm f1.4 Contemporary DC DN 017 Lens Olympus MFT Micro 4/3 #555"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9684,7 +9752,7 @@
         "Nikon Nikkor AF-S 17-55mm f2.8 G ED SWM DX IF Lens AFS #995 discount",
         "eBay Nikon Nikkor AF-S 17-55mm f2.8 G ED SWM DX IF Lens AFS #995"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9702,7 +9770,7 @@
         "Sony E 18-105mm f4 G OSS PZ Lens E-Mount SELP18105G #813 discount",
         "eBay Sony E 18-105mm f4 G OSS PZ Lens E-Mount SELP18105G #813"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9720,7 +9788,7 @@
         "Panasonic Lumix G 45-150mm f4-5.6 Mega OIS Lens MFT Micro 4/3 H-FS45150 #630 discount",
         "eBay Panasonic Lumix G 45-150mm f4-5.6 Mega OIS Lens MFT Micro 4/3 H-FS45150 #630"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9738,7 +9806,7 @@
         "Nikon D2X 12.4MP Digital SLR Camera Body #572 discount",
         "eBay Nikon D2X 12.4MP Digital SLR Camera Body #572"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9756,7 +9824,7 @@
         "Schneider 150mm F5.6 Xenar Copal 0 Lens #994 discount",
         "eBay Schneider 150mm F5.6 Xenar Copal 0 Lens #994"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9774,7 +9842,7 @@
         "Tamron A041 SP 15-30mm f2.8 Di VC USD G2 Lens Nikon F #655 discount",
         "eBay Tamron A041 SP 15-30mm f2.8 Di VC USD G2 Lens Nikon F #655"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9792,7 +9860,7 @@
         "Sony Alpha A3000 20.1MP Digital Camera Body A-3000 #984 discount",
         "eBay Sony Alpha A3000 20.1MP Digital Camera Body A-3000 #984"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -9810,7 +9878,7 @@
         "Bolex H8 Reflex REX-4 8mm Movie Camera H-8 #572 discount",
         "eBay Bolex H8 Reflex REX-4 8mm Movie Camera H-8 #572"
       ],
-      "score": 82,
+      "score": 78,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17256,7 +17324,7 @@
         "✅ Marantz CC4003 5-Disc CD Changer, Remote, USA Seller, Warranty, Minty current offer",
         "eBay ✅ Marantz CC4003 5-Disc CD Changer, Remote, USA Seller, Warranty, Minty"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17274,7 +17342,7 @@
         "Pioneer SX-1080 Vintage Stereo Receiver-Restored–1 Year warranty current offer",
         "eBay Pioneer SX-1080 Vintage Stereo Receiver-Restored–1 Year warranty"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17292,7 +17360,7 @@
         "JBL 4412 Vintage Speakers (Pair) – Professionally Restored – 1-Year Warranty current offer",
         "eBay JBL 4412 Vintage Speakers (Pair) – Professionally Restored – 1-Year Warranty"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17310,7 +17378,7 @@
         "Hisense AX700 5.1.4 CH Dolby Atmos Soundbar w/ Wireless Subwoofer + 1yr Warranty current offer",
         "eBay Hisense AX700 5.1.4 CH Dolby Atmos Soundbar w/ Wireless Subwoofer + 1yr Warranty"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17329,7 +17397,7 @@
         "Hisense AX3120Q 3.1.2Ch Sound Bar with Wireless Subwoofer Bluetooth for Roku TV current offer",
         "eBay Hisense AX3120Q 3.1.2Ch Sound Bar with Wireless Subwoofer Bluetooth for Roku TV"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17348,7 +17416,7 @@
         "ESS AMT 1AM Pair Of Vintage Speakers - Professionally Restored - 1-Year Warranty current offer",
         "eBay ESS AMT 1AM Pair Of Vintage Speakers - Professionally Restored - 1-Year Warranty"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17366,7 +17434,7 @@
         "DJI Avata 2 Fly More Combo (1 Battery) current offer",
         "eBay DJI Avata 2 Fly More Combo (1 Battery)"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17384,7 +17452,7 @@
         "DJI Mini 4K Drone Fly More Ready To Fly Vlogger Combo - Certified Refurbished current offer",
         "eBay DJI Mini 4K Drone Fly More Ready To Fly Vlogger Combo - Certified Refurbished"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17403,7 +17471,7 @@
         "DJI Avata 2 Two-Way Charging Hub current offer",
         "eBay DJI Avata 2 Two-Way Charging Hub"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17421,7 +17489,7 @@
         "DJI Neo 2 Motion Fly More Combo current offer",
         "eBay DJI Neo 2 Motion Fly More Combo"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -17437,7 +17505,7 @@
         "DJI Mavic 2 Zoom (Certified Refurbished) current offer",
         "eBay DJI Mavic 2 Zoom (Certified Refurbished)"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17456,7 +17524,7 @@
         "DJI Mini 5 Pro Fly More Combo Plus with DJI RC 2 (NYC Care Plan 1 Year Included) current offer",
         "eBay DJI Mini 5 Pro Fly More Combo Plus with DJI RC 2 (NYC Care Plan 1 Year Included)"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17474,7 +17542,7 @@
         "DJI Mavic 2 Pro (Certified Refurbished) current offer",
         "eBay DJI Mavic 2 Pro (Certified Refurbished)"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17493,7 +17561,7 @@
         "DJI Flip Fly More Combo With RC 2 current offer",
         "eBay DJI Flip Fly More Combo With RC 2"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -17509,7 +17577,7 @@
         "DJI RS 5 Handheld Camera Stabilizer current offer",
         "eBay DJI RS 5 Handheld Camera Stabilizer"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -17525,7 +17593,7 @@
         "GoPro - HERO12 Black Action Camera - Black current offer",
         "eBay GoPro - HERO12 Black Action Camera - Black"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -17541,7 +17609,7 @@
         "Irix 15mm f2.4 Firefly Lens for Nikon (man.focus) #024 current offer",
         "eBay Irix 15mm f2.4 Firefly Lens for Nikon (man.focus) #024"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17559,7 +17627,7 @@
         "Nikon Nikkor AF-S 35mm f1.8 G DX ASPH Lens AFS #289 current offer",
         "eBay Nikon Nikkor AF-S 35mm f1.8 G DX ASPH Lens AFS #289"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17577,7 +17645,7 @@
         "Sony FX3A Full-Frame Cinema Camera USA New Open Box Fast Shipping! current offer",
         "eBay Sony FX3A Full-Frame Cinema Camera USA New Open Box Fast Shipping!"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -17593,7 +17661,7 @@
         "Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box current offer",
         "eBay Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -17609,7 +17677,7 @@
         "Pentax Q 12.4MP Mirrorless Digital Camera Kit w/ 5-15mm Zoom Lens #885 current offer",
         "eBay Pentax Q 12.4MP Mirrorless Digital Camera Kit w/ 5-15mm Zoom Lens #885"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17627,7 +17695,7 @@
         "Samyang 12mm f2 AF Compact Ultra-Wide Angle Lens Sony E-Mount #514 current offer",
         "eBay Samyang 12mm f2 AF Compact Ultra-Wide Angle Lens Sony E-Mount #514"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17645,7 +17713,7 @@
         "Nikon F3/T HP Camera Body F3THP Champagne w/DE-4 HP Prism (Titanium) #152 current offer",
         "eBay Nikon F3/T HP Camera Body F3THP Champagne w/DE-4 HP Prism (Titanium) #152"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17663,7 +17731,7 @@
         "Dell laptop Latitude 7480 14\" i7 2.60GHz 16GB NEW 512GB SSD Win 10 Pro WIFI Cam current offer",
         "eBay Dell laptop Latitude 7480 14\" i7 2.60GHz 16GB NEW 512GB SSD Win 10 Pro WIFI Cam"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17682,7 +17750,7 @@
         "Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished current offer",
         "eBay Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17701,7 +17769,7 @@
         "Lenovo Chromebook 500e Gen 3 Touchscreen Laptop 11.6\" Intel 4GB 32GB SSD Chrome current offer",
         "eBay Lenovo Chromebook 500e Gen 3 Touchscreen Laptop 11.6\" Intel 4GB 32GB SSD Chrome"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17720,7 +17788,7 @@
         "Apple MacBook Pro 16\" | M3 Pro | 36GB RAM 512GB | Silver A2991 | 100% Battery VG current offer",
         "eBay Apple MacBook Pro 16\" | M3 Pro | 36GB RAM 512GB | Silver A2991 | 100% Battery VG"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17739,7 +17807,7 @@
         "2020 MacBook Pro A2338 13\" M1 8-Core CPU 3.2GHz 8-Core GPU 16GB RAM 256GB SSD current offer",
         "eBay 2020 MacBook Pro A2338 13\" M1 8-Core CPU 3.2GHz 8-Core GPU 16GB RAM 256GB SSD"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17758,7 +17826,7 @@
         "Dell Latitude 5490 14” Business Laptop Intel Core i7 16GB RAM 256GB SSD Win 11 current offer",
         "eBay Dell Latitude 5490 14” Business Laptop Intel Core i7 16GB RAM 256GB SSD Win 11"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/dell-latitude-5490/",
       "collectionPaths": [
@@ -17777,7 +17845,7 @@
         "HP Elitebook 845 G7 14\" 16GB 512GB, Natural Silver current offer",
         "eBay HP Elitebook 845 G7 14\" 16GB 512GB, Natural Silver"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17796,7 +17864,7 @@
         "Lenovo 300w Gen 3 2-in-1 Touchscreen 11.6\" HD Laptop AMD 4GB RAM 64GB SSD Win 11 current offer",
         "eBay Lenovo 300w Gen 3 2-in-1 Touchscreen 11.6\" HD Laptop AMD 4GB RAM 64GB SSD Win 11"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17815,7 +17883,7 @@
         "HP ProBook 445 G8 14\" AMD Ryzen 5 5600U 2.3GHz 16GB RAM 512GB SSD Silver, Good current offer",
         "eBay HP ProBook 445 G8 14\" AMD Ryzen 5 5600U 2.3GHz 16GB RAM 512GB SSD Silver, Good"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17834,7 +17902,7 @@
         "Dell Latitude 5420 14\" Laptop i5-10310U 1.70GHz 16GB RAM 256GB NVMe Windows 11 current offer",
         "eBay Dell Latitude 5420 14\" Laptop i5-10310U 1.70GHz 16GB RAM 256GB NVMe Windows 11"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17853,7 +17921,7 @@
         "Apple MacBook Pro 14\" M1 Pro (2021) 16GB 512GB | Refurbished - Very Good current offer",
         "eBay Apple MacBook Pro 14\" M1 Pro (2021) 16GB 512GB | Refurbished - Very Good"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17872,7 +17940,7 @@
         "Lenovo ThinkPad T14s Gen 1 Laptop -Core i5 10310u 16GB 256GB-Excellent! Win 11 current offer",
         "eBay Lenovo ThinkPad T14s Gen 1 Laptop -Core i5 10310u 16GB 256GB-Excellent! Win 11"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-t14s/",
       "collectionPaths": [
@@ -17892,7 +17960,7 @@
         "Lenovo ThinkPad X13 Gen 2 FHD+ i5-1135G7 2.40GHz 16GB 512GB SSD Very Good current offer",
         "eBay Lenovo ThinkPad X13 Gen 2 FHD+ i5-1135G7 2.40GHz 16GB 512GB SSD Very Good"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-x13/",
       "collectionPaths": [
@@ -17912,7 +17980,7 @@
         "Lenovo ThinkPad T14 Gen 6 14\" Intel Ultra 5 235U vPro 16GB 512GB Touch WUXGA current offer",
         "eBay Lenovo ThinkPad T14 Gen 6 14\" Intel Ultra 5 235U vPro 16GB 512GB Touch WUXGA"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-t14/",
       "collectionPaths": [
@@ -17932,7 +18000,7 @@
         "Lenovo ThinkPad X1 Carbon Gen 9 14\" FHD+ Touch I7-1185G7 512GB SSD 16GB W11P current offer",
         "eBay Lenovo ThinkPad X1 Carbon Gen 9 14\" FHD+ Touch I7-1185G7 512GB SSD 16GB W11P"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17952,7 +18020,7 @@
         "Lenovo Thinkpad L14 G2 14\" AMD Ryzen 5 Pro 5650U 2.3Ghz 16GB RAM 256GB SSD Black current offer",
         "eBay Lenovo Thinkpad L14 G2 14\" AMD Ryzen 5 Pro 5650U 2.3Ghz 16GB RAM 256GB SSD Black"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-l14/",
       "collectionPaths": [
@@ -17972,7 +18040,7 @@
         "Lenovo ThinkPad Touchscreen Laptop 11.6\" Intel Pentium 4GB RAM 256GB SSD Win 11 current offer",
         "eBay Lenovo ThinkPad Touchscreen Laptop 11.6\" Intel Pentium 4GB RAM 256GB SSD Win 11"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -17992,7 +18060,7 @@
         "Lenovo ThinkPad L15 RYZEN 5 PRO 5650U gen 2 15.6\" 16GB 512GB Business Laptop current offer",
         "eBay Lenovo ThinkPad L15 RYZEN 5 PRO 5650U gen 2 15.6\" 16GB 512GB Business Laptop"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-l15/",
       "collectionPaths": [
@@ -18012,7 +18080,7 @@
         "Lenovo ThinkPad T490s 14\" Laptop i5 8th Gen 256GB NVMe 8GB RAM Win 11 Pro Cam B current offer",
         "eBay Lenovo ThinkPad T490s 14\" Laptop i5 8th Gen 256GB NVMe 8GB RAM Win 11 Pro Cam B"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18032,7 +18100,7 @@
         "Lenovo ThinkPad T480 14\" FHD i5 8250u 32GB 512gb NVME WIFI CAM WIN 11 PRO laptop current offer",
         "eBay Lenovo ThinkPad T480 14\" FHD i5 8250u 32GB 512gb NVME WIFI CAM WIN 11 PRO laptop"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-t480/",
       "collectionPaths": [
@@ -18052,7 +18120,7 @@
         "Lenovo ThinkPad T580 15.6” i5 8350u 16GB RAM 512GB SSD Win 11 Pro Touchscreen current offer",
         "eBay Lenovo ThinkPad T580 15.6” i5 8350u 16GB RAM 512GB SSD Win 11 Pro Touchscreen"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/lenovo-thinkpad-t580/",
       "collectionPaths": [
@@ -18072,7 +18140,7 @@
         "Lenovo ThinkBook 14 Gen 2 FHD TOUCH i7-1165G7 2.80GHz 16GB 512GB SSD Very Good current offer",
         "eBay Lenovo ThinkBook 14 Gen 2 FHD TOUCH i7-1165G7 2.80GHz 16GB 512GB SSD Very Good"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18090,7 +18158,7 @@
         "Lenovo ThinkBook 15-IIL 15.6\" Laptop i5-1035G1 1.00GHz 8GB RAM 256GB NVMe Win11 current offer",
         "eBay Lenovo ThinkBook 15-IIL 15.6\" Laptop i5-1035G1 1.00GHz 8GB RAM 256GB NVMe Win11"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18109,7 +18177,7 @@
         "Nintendo Game Boy Advance SP System GBA SP IPS LCD Backlight 10 Level Black current offer",
         "eBay Nintendo Game Boy Advance SP System GBA SP IPS LCD Backlight 10 Level Black"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18127,7 +18195,7 @@
         "Samsung Galaxy S23 128GB 256GB S911U T-Mobile Only Smartphone - Very Good current offer",
         "eBay Samsung Galaxy S23 128GB 256GB S911U T-Mobile Only Smartphone - Very Good"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s23/",
       "collectionPaths": [
@@ -18146,7 +18214,7 @@
         "Samsung Galaxy S25 Ultra 512GB AI Smartphone Unlocked - Excellent current offer",
         "eBay Samsung Galaxy S25 Ultra 512GB AI Smartphone Unlocked - Excellent"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s25-ultra/",
       "collectionPaths": [
@@ -18166,7 +18234,7 @@
         "Samsung Galaxy S23+ Plus 5G, US Version, 256GB - Unlocked - Very Good current offer",
         "eBay Samsung Galaxy S23+ Plus 5G, US Version, 256GB - Unlocked - Very Good"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s23/",
       "collectionPaths": [
@@ -18186,7 +18254,7 @@
         "Samsung Galaxy A35 5G 128GB A356U AT&T/Unlocked Smartphone - Good current offer",
         "eBay Samsung Galaxy A35 5G 128GB A356U AT&T/Unlocked Smartphone - Good"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18206,7 +18274,7 @@
         "Samsung Galaxy S20 S20FE S20 FE S20+ Unlocked T-Mobile TRADE IN PROMO ONLY current offer",
         "eBay Samsung Galaxy S20 S20FE S20 FE S20+ Unlocked T-Mobile TRADE IN PROMO ONLY"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18226,7 +18294,7 @@
         "Apple iPhone 14 128GB Midnight A2649 MPUA3LL/A Unlocked Clean ESN Good (AMX) current offer",
         "eBay Apple iPhone 14 128GB Midnight A2649 MPUA3LL/A Unlocked Clean ESN Good (AMX)"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-14/",
       "collectionPaths": [
@@ -18245,7 +18313,7 @@
         "Apple iPhone 17 Pro Max A3257 256GB Unlocked Excellent Condition current offer",
         "eBay Apple iPhone 17 Pro Max A3257 256GB Unlocked Excellent Condition"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18264,7 +18332,7 @@
         "Apple iPhone 13 Mini 128GB - Fully Unlocked - VERY GOOD Condition current offer",
         "eBay Apple iPhone 13 Mini 128GB - Fully Unlocked - VERY GOOD Condition"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-13-mini/",
       "collectionPaths": [
@@ -18283,7 +18351,7 @@
         "Apple iPhone 14 Plus 128GB Fully Unlocked - VERY GOOD Condition current offer",
         "eBay Apple iPhone 14 Plus 128GB Fully Unlocked - VERY GOOD Condition"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-14-plus/",
       "collectionPaths": [
@@ -18302,7 +18370,7 @@
         "Apple iPhone 15 Plus 128GB - Fully Unlocked - VERY GOOD Condition current offer",
         "eBay Apple iPhone 15 Plus 128GB - Fully Unlocked - VERY GOOD Condition"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18321,7 +18389,7 @@
         "Apple iPhone 14 128GB - 5G Fully Unlocked - VERY GOOD Condition current offer",
         "eBay Apple iPhone 14 128GB - 5G Fully Unlocked - VERY GOOD Condition"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-14/",
       "collectionPaths": [
@@ -18340,7 +18408,7 @@
         "Motorola Moto G 5G [XT2213] 64GB - Fully GSM Unlocked - Moonlight Gray - Fair current offer",
         "eBay Motorola Moto G 5G [XT2213] 64GB - Fully GSM Unlocked - Moonlight Gray - Fair"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18359,7 +18427,7 @@
         "Apple iPhone 14 128GB 6.1\" Fully Unlocked - 100% Functional - Excellent current offer",
         "eBay Apple iPhone 14 128GB 6.1\" Fully Unlocked - 100% Functional - Excellent"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-14/",
       "collectionPaths": [
@@ -18378,7 +18446,7 @@
         "Apple iPhone 12 Mini 64GB -Fully Unlocked 5G - VERY GOOD Condition current offer",
         "eBay Apple iPhone 12 Mini 64GB -Fully Unlocked 5G - VERY GOOD Condition"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18397,7 +18465,7 @@
         "Apple iPhone 13 128GB Fully Unlocked - Very Good Condition current offer",
         "eBay Apple iPhone 13 128GB Fully Unlocked - Very Good Condition"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/apple-iphone-13/",
       "collectionPaths": [
@@ -18416,7 +18484,7 @@
         "Google Pixel 8 Pro G1MNW Unlocked 128GB Obsidian Good current offer",
         "eBay Google Pixel 8 Pro G1MNW Unlocked 128GB Obsidian Good"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18435,7 +18503,7 @@
         "Google Pixel 8 128GB US Version Unlocked - Excellent Refurbished current offer",
         "eBay Google Pixel 8 128GB US Version Unlocked - Excellent Refurbished"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/google-pixel-128-gb/",
       "collectionPaths": [
@@ -18454,7 +18522,7 @@
         "Derek Jeter 2026 Topps Chrome Chrome Rivals Black /10 #RVH-1 current offer",
         "eBay Derek Jeter 2026 Topps Chrome Chrome Rivals Black /10 #RVH-1"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18470,7 +18538,7 @@
         "2025 Bowman Chrome 1st George Lombard Jr Blue Mojo Refractor /150 RC SP PSA 10 current offer",
         "eBay 2025 Bowman Chrome 1st George Lombard Jr Blue Mojo Refractor /150 RC SP PSA 10"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18486,7 +18554,7 @@
         "2026 Topps All Kings Roberto Clemente #AK-30 Pittsburgh Pirates Insert current offer",
         "eBay 2026 Topps All Kings Roberto Clemente #AK-30 Pittsburgh Pirates Insert"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18502,7 +18570,7 @@
         "Upper Deck 2004 Sweet Spot Frank Robinson Logo Patch SSP-FR /300 current offer",
         "eBay Upper Deck 2004 Sweet Spot Frank Robinson Logo Patch SSP-FR /300"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18518,7 +18586,7 @@
         "Panini 2025 Prospect Edition Jacob Wilson Kaboom! Insert #9 Oakland A's current offer",
         "eBay Panini 2025 Prospect Edition Jacob Wilson Kaboom! Insert #9 Oakland A's"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18534,7 +18602,7 @@
         "2010 Topps Chrome - Tom Brady #C80 Refractor current offer",
         "eBay 2010 Topps Chrome - Tom Brady #C80 Refractor"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18550,7 +18618,7 @@
         "2026 Panini National NSCC VIP Private Signings PAUL SKENES On Card AUTO current offer",
         "eBay 2026 Panini National NSCC VIP Private Signings PAUL SKENES On Card AUTO"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18566,7 +18634,7 @@
         "2024 Select TJ Watt Zebra Shock Prizm PSA 10 #294 SSP Case Hit current offer",
         "eBay 2024 Select TJ Watt Zebra Shock Prizm PSA 10 #294 SSP Case Hit"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18582,7 +18650,7 @@
         "2024 Topps Now Olympics #27 Steph Curry Night Night PSA 10 current offer",
         "eBay 2024 Topps Now Olympics #27 Steph Curry Night Night PSA 10"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18598,7 +18666,7 @@
         "2026 Topps Chrome Ben Rice #295 White Refractor /30 Yankees current offer",
         "eBay 2026 Topps Chrome Ben Rice #295 White Refractor /30 Yankees"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18614,7 +18682,7 @@
         "Parkside 2025 NWSL Vol. 2 Gabrielle Carle Gold 1/1 #339 Washington Spirit current offer",
         "eBay Parkside 2025 NWSL Vol. 2 Gabrielle Carle Gold 1/1 #339 Washington Spirit"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18630,7 +18698,7 @@
         "Max Clark Gold /50 PSA 10 It Came To The League 2025 Bowman Chrome IT-12 current offer",
         "eBay Max Clark Gold /50 PSA 10 It Came To The League 2025 Bowman Chrome IT-12"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18646,7 +18714,7 @@
         "2025 Futera Unique TRIO Forwards #1/1 Neymar Jr #GTF33 current offer",
         "eBay 2025 Futera Unique TRIO Forwards #1/1 Neymar Jr #GTF33"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18662,7 +18730,7 @@
         "Andre Iguodala 2014-15 Panini Donruss Elite Silver Auto /125 RARE Warriors SSP current offer",
         "eBay Andre Iguodala 2014-15 Panini Donruss Elite Silver Auto /125 RARE Warriors SSP"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18678,7 +18746,7 @@
         "2024 Panini Donruss Downtown! #11 Jj Mccarthy PSA 8 current offer",
         "eBay 2024 Panini Donruss Downtown! #11 Jj Mccarthy PSA 8"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18694,7 +18762,7 @@
         "Topps 2024 Bowman Sterling Roman Anthony Auto /100 PA-RA Red Sox Prospect Auto current offer",
         "eBay Topps 2024 Bowman Sterling Roman Anthony Auto /100 PA-RA Red Sox Prospect Auto"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18710,7 +18778,7 @@
         "2016 Topps Chrome Giancarlo Stanton Red Refractor /5 current offer",
         "eBay 2016 Topps Chrome Giancarlo Stanton Red Refractor /5"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -18728,7 +18796,7 @@
         "Panini Donruss Optic 2023 UFC Alex Pereira #9 Downtown! Insert RC Prizm current offer",
         "eBay Panini Donruss Optic 2023 UFC Alex Pereira #9 Downtown! Insert RC Prizm"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18744,7 +18812,7 @@
         "2206 Topps Finest Kevin McGonigle Common Oil Spill SSP #74 Detroit Tigers RC current offer",
         "eBay 2206 Topps Finest Kevin McGonigle Common Oil Spill SSP #74 Detroit Tigers RC"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18760,7 +18828,7 @@
         "2026 Topps Chrome Shohei Ohtani Los Angeles Dodgers Wild Style Refractor 🤯 🔥 current offer",
         "eBay 2026 Topps Chrome Shohei Ohtani Los Angeles Dodgers Wild Style Refractor 🤯 🔥"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18776,7 +18844,7 @@
         "Nick Kurtz Rookie 2025 Topps Chrome Update Gold RayWave Refractor #'d 1/50 current offer",
         "eBay Nick Kurtz Rookie 2025 Topps Chrome Update Gold RayWave Refractor #'d 1/50"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18792,7 +18860,7 @@
         "2010 Topps Chrome - Tim Tebow #C100 Pointing Rookie Auto SGC 10/10 current offer",
         "eBay 2010 Topps Chrome - Tim Tebow #C100 Pointing Rookie Auto SGC 10/10"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18808,7 +18876,7 @@
         "Joe Burrow -- PSA 10 -- Meta /25 -- 2021 Spectra #19 -- Gem Beauty current offer",
         "eBay Joe Burrow -- PSA 10 -- Meta /25 -- 2021 Spectra #19 -- Gem Beauty"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18824,7 +18892,7 @@
         "Lamine Yamal 2023-24 Topps FC Barcelona #/399 AQUA REFRACTOR GOLDEN FUTURE (RC) current offer",
         "eBay Lamine Yamal 2023-24 Topps FC Barcelona #/399 AQUA REFRACTOR GOLDEN FUTURE (RC)"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18840,7 +18908,7 @@
         "2012 Prizm - Tamba Hali TRUE Gold /10 - Kansas City Chiefs HOF - 1st Year Prizm current offer",
         "eBay 2012 Prizm - Tamba Hali TRUE Gold /10 - Kansas City Chiefs HOF - 1st Year Prizm"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18856,7 +18924,7 @@
         "Topps 2024 Series One Ryne Nelson Arizona Diamondbacks foil tractor 1/1 #114 current offer",
         "eBay Topps 2024 Series One Ryne Nelson Arizona Diamondbacks foil tractor 1/1 #114"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18872,7 +18940,7 @@
         "Topps 2024 Bowman Chrome Prospects Sunflower Seeds George Lombard Jr. Yankees current offer",
         "eBay Topps 2024 Bowman Chrome Prospects Sunflower Seeds George Lombard Jr. Yankees"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18888,7 +18956,7 @@
         "2021 Panini Prizm Caleb Farley Rookie Black Finite Auto 1/1 #375 Tennessee Titan current offer",
         "eBay 2021 Panini Prizm Caleb Farley Rookie Black Finite Auto 1/1 #375 Tennessee Titan"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18904,7 +18972,7 @@
         "2020-21 Topps Chrome UCL Pedri #61 Neon Green Refractor /99 (RC) AUTO current offer",
         "eBay 2020-21 Topps Chrome UCL Pedri #61 Neon Green Refractor /99 (RC) AUTO"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18920,7 +18988,7 @@
         "Robert Lewandowski — 2025–26 Panini Select STAINED GLASS CASE HIT current offer",
         "eBay Robert Lewandowski — 2025–26 Panini Select STAINED GLASS CASE HIT"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18936,7 +19004,7 @@
         "2024 Bowman George Lombard Jr. Auto #CPA-GLO Yankees current offer",
         "eBay 2024 Bowman George Lombard Jr. Auto #CPA-GLO Yankees"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18952,7 +19020,7 @@
         "Panini Donruss 2025 Tyler Shough Rookie Downtown! Insert #19 New Orleans Saints current offer",
         "eBay Panini Donruss 2025 Tyler Shough Rookie Downtown! Insert #19 New Orleans Saints"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18968,7 +19036,7 @@
         "2023 PANINI FLAWLESS BRETT FAVRE SUPER BOWL AUTO AUTOGRAPH 1/20! current offer",
         "eBay 2023 PANINI FLAWLESS BRETT FAVRE SUPER BOWL AUTO AUTOGRAPH 1/20!"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -18984,7 +19052,7 @@
         "Topps Bowman Draft Chandler Simpson 1st Bowman Auto /50 #CDA-CSN current offer",
         "eBay Topps Bowman Draft Chandler Simpson 1st Bowman Auto /50 #CDA-CSN"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19000,7 +19068,7 @@
         "2026 Topps Tier One 1 #T1R-JRA Jose Ramirez Game Used Button Patch Relic /5 RARE current offer",
         "eBay 2026 Topps Tier One 1 #T1R-JRA Jose Ramirez Game Used Button Patch Relic /5 RARE"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19016,7 +19084,7 @@
         "SkyBox 1997-98 Metal Universe Planet Metal Michael Jordan Bulls #23 Embossed current offer",
         "eBay SkyBox 1997-98 Metal Universe Planet Metal Michael Jordan Bulls #23 Embossed"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19032,7 +19100,7 @@
         "2024-25 Flawless ZACH LAVINE Championship Tags /10 CHICAGO BULLS current offer",
         "eBay 2024-25 Flawless ZACH LAVINE Championship Tags /10 CHICAGO BULLS"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19048,7 +19116,7 @@
         "🔥 2024 Topps Chrome L/E Blue Rookie Auto /150 Jackson Chourio 🔥 current offer",
         "eBay 🔥 2024 Topps Chrome L/E Blue Rookie Auto /150 Jackson Chourio 🔥"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19064,7 +19132,7 @@
         "Topps UFC Freedom 250 2026 Sean O'Malley UFC Dollar Insert Black 4/10 UD-20 current offer",
         "eBay Topps UFC Freedom 250 2026 Sean O'Malley UFC Dollar Insert Black 4/10 UD-20"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19080,7 +19148,7 @@
         "2007 Absolute Brett Favre AP-9 Jumbo Prime Game Worn Patch /25 Packers current offer",
         "eBay 2007 Absolute Brett Favre AP-9 Jumbo Prime Game Worn Patch /25 Packers"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19096,7 +19164,7 @@
         "PSA 10 Celebi & Venusaur GX SM167 Full Art Promo - Tag Team Tins Pokémon current offer",
         "eBay PSA 10 Celebi & Venusaur GX SM167 Full Art Promo - Tag Team Tins Pokémon"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19114,7 +19182,7 @@
         "MEGA GENGAR EX Mega Dream ex Special Art Rare #240 PSA 10 Pokemon current offer",
         "eBay MEGA GENGAR EX Mega Dream ex Special Art Rare #240 PSA 10 Pokemon"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19132,7 +19200,7 @@
         "Pokemon Cleffa CoroCoro Comics Japanese Glossy Promo #173 PSA 10 Gem Mint current offer",
         "eBay Pokemon Cleffa CoroCoro Comics Japanese Glossy Promo #173 PSA 10 Gem Mint"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19150,7 +19218,7 @@
         "CGC 7 NEAR MINT Team Aqua's Kyogre EX 6/34 Double Crisis Holo Pokemon Card current offer",
         "eBay CGC 7 NEAR MINT Team Aqua's Kyogre EX 6/34 Double Crisis Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19168,7 +19236,7 @@
         "Pokemon Mew Reverse Holo XY Evolutions 53/108 PSA 10 Gem Mint current offer",
         "eBay Pokemon Mew Reverse Holo XY Evolutions 53/108 PSA 10 Gem Mint"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19186,7 +19254,7 @@
         "Mega Charizard X ex 125/094 ES SPANISH Phantasmal Flames Holo POKEMON current offer",
         "eBay Mega Charizard X ex 125/094 ES SPANISH Phantasmal Flames Holo POKEMON"
       ],
-      "score": 80,
+      "score": 76,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/mega-charizard-ex-125/",
       "collectionPaths": [
@@ -19204,7 +19272,7 @@
         "CGC 7.5 NEAR MINT+ Shining Charizard 107/105 Neo Destiny Holo Pokemon Card current offer",
         "eBay CGC 7.5 NEAR MINT+ Shining Charizard 107/105 Neo Destiny Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19222,7 +19290,7 @@
         "2019 Pokemon Sun Moon Team Up Celebi Venusaur GX #1/181 PSA 10 current offer",
         "eBay 2019 Pokemon Sun Moon Team Up Celebi Venusaur GX #1/181 PSA 10"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2019-pokemon-sun-moon/",
       "collectionPaths": [
@@ -19240,7 +19308,7 @@
         "CGC 9 MINT Lugia Gold, Silver, To A New World Holo Japanese Neo Pokemon Card current offer",
         "eBay CGC 9 MINT Lugia Gold, Silver, To A New World Holo Japanese Neo Pokemon Card"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19258,7 +19326,7 @@
         "CGC 9 MINT Tyranitar 40/147 Aquapolis Reverse Holo Pokemon Card current offer",
         "eBay CGC 9 MINT Tyranitar 40/147 Aquapolis Reverse Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19276,7 +19344,7 @@
         "Pokemon Galarian Moltres V Chilling Reign Full Alt Art 177/198 PSA 10 Gem Mint current offer",
         "eBay Pokemon Galarian Moltres V Chilling Reign Full Alt Art 177/198 PSA 10 Gem Mint"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19294,7 +19362,7 @@
         "CGC 10 GEM MINT Raichu 12/108 EX Power Keepers Holo Pokemon Card current offer",
         "eBay CGC 10 GEM MINT Raichu 12/108 EX Power Keepers Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19312,7 +19380,7 @@
         "PIKACHU WOTC Black Star Promo #27 PSA 10 Vintage Pokemon current offer",
         "eBay PIKACHU WOTC Black Star Promo #27 PSA 10 Vintage Pokemon"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19330,7 +19398,7 @@
         "CGC 8 NM/MINT Squirtle 83/112 EX Fire Red & Leaf Green Reverse Holo Pokemon Card current offer",
         "eBay CGC 8 NM/MINT Squirtle 83/112 EX Fire Red & Leaf Green Reverse Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19348,7 +19416,7 @@
         "CGC 7 Hitmonchan 7/102 Base Set 1st Edition Shadowless Holo Pokemon Card current offer",
         "eBay CGC 7 Hitmonchan 7/102 Base Set 1st Edition Shadowless Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19366,7 +19434,7 @@
         "Pokemon Kingdra ex Holo EX Dragon 92/97 PSA 10 Gem Mint current offer",
         "eBay Pokemon Kingdra ex Holo EX Dragon 92/97 PSA 10 Gem Mint"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19384,7 +19452,7 @@
         "CGC 9 MINT Mewtwo 9/100 Majestic Dawn Holo Pokemon Card current offer",
         "eBay CGC 9 MINT Mewtwo 9/100 Majestic Dawn Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19402,7 +19470,7 @@
         "CGC 8.5 Pikachu 78/110 EX Holon Phantoms Reverse Holo Stamped Pokemon Card current offer",
         "eBay CGC 8.5 Pikachu 78/110 EX Holon Phantoms Reverse Holo Stamped Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19420,7 +19488,7 @@
         "CGC 8 NM/MINT Dark Raichu 83/82 Team Rocket 1st Edition Holo Swirl Pokemon Card current offer",
         "eBay CGC 8 NM/MINT Dark Raichu 83/82 Team Rocket 1st Edition Holo Swirl Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19438,7 +19506,7 @@
         "Son Goku Super Dragon Ball Heroes Meteor Mission 3 014 Dramatic Art PSA 9 current offer",
         "eBay Son Goku Super Dragon Ball Heroes Meteor Mission 3 014 Dramatic Art PSA 9"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19454,7 +19522,7 @@
         "2019 POKEMON SUN & MOON UNIFIED MINDS #35 SLOWPOKE & PSYDUCK GX PSA 10 current offer",
         "eBay 2019 POKEMON SUN & MOON UNIFIED MINDS #35 SLOWPOKE & PSYDUCK GX PSA 10"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2019-pokemon-sun-moon/",
       "collectionPaths": [
@@ -19472,7 +19540,7 @@
         "CGC 8 NM/MINT Charizard 146/144 Skyridge Holo Pokemon Card current offer",
         "eBay CGC 8 NM/MINT Charizard 146/144 Skyridge Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19490,7 +19558,7 @@
         "CGC 9.5 MINT+ Tyranitar 12/75 Neo Discovery Holo Swirl Pokemon Card current offer",
         "eBay CGC 9.5 MINT+ Tyranitar 12/75 Neo Discovery Holo Swirl Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19508,7 +19576,7 @@
         "Pokemon M Charizard EX XY Evolutions 101/108 Ultra Rare CGC 10 Gem Mint current offer",
         "eBay Pokemon M Charizard EX XY Evolutions 101/108 Ultra Rare CGC 10 Gem Mint"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19526,7 +19594,7 @@
         "2026 POKEMON CHAOS RISING ILLUSTRATION RARE #116 MEGA GRENINJA EX PSA 10 current offer",
         "eBay 2026 POKEMON CHAOS RISING ILLUSTRATION RARE #116 MEGA GRENINJA EX PSA 10"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19544,7 +19612,7 @@
         "Yugioh Blue-Eyes White Dragon GFP2-EN175 Ghost Rare 1st Ed NM current offer",
         "eBay Yugioh Blue-Eyes White Dragon GFP2-EN175 Ghost Rare 1st Ed NM"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19560,7 +19628,7 @@
         "Pokemon Celebi Reverse Holo Shining Fates 003/072 PSA 10 Gem Mint current offer",
         "eBay Pokemon Celebi Reverse Holo Shining Fates 003/072 PSA 10 Gem Mint"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19578,7 +19646,7 @@
         "CGC 9 MINT Espeon 1/75 Neo Discovery Holo Pokemon Card current offer",
         "eBay CGC 9 MINT Espeon 1/75 Neo Discovery Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19596,7 +19664,7 @@
         "CGC 7 NEAR MINT Umbreon Prime 86/90 Undaunted Holo Pokemon Card current offer",
         "eBay CGC 7 NEAR MINT Umbreon Prime 86/90 Undaunted Holo Pokemon Card"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19614,7 +19682,7 @@
         "2025 POKEMON PFL EN-PHANTASMAL FLAMES #125 MEGA CHARIZARD X EX PSA 9 current offer",
         "eBay 2025 POKEMON PFL EN-PHANTASMAL FLAMES #125 MEGA CHARIZARD X EX PSA 9"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19632,7 +19700,7 @@
         "PROWORKS 60\" 5 FT 3 Point Land Leveler Plane Grader Implement Cat 1 Tractors USA current offer",
         "eBay PROWORKS 60\" 5 FT 3 Point Land Leveler Plane Grader Implement Cat 1 Tractors USA"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19650,7 +19718,7 @@
         "48\" Root Rake Grapple Attachment Fits John Deere Compact Tractor Loader current offer",
         "eBay 48\" Root Rake Grapple Attachment Fits John Deere Compact Tractor Loader"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19668,7 +19736,7 @@
         "PROWORKS 48″ 4 ft Rotary Cutter Bush Hog Cat 1 Hitch Tractor Mower 40 HP USA current offer",
         "eBay PROWORKS 48″ 4 ft Rotary Cutter Bush Hog Cat 1 Hitch Tractor Mower 40 HP USA"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19686,7 +19754,7 @@
         "Danuser 9\" x 48\" Fab Auger Bit 2\" Hex Collar Skid Steer Attachment Part 10609 current offer",
         "eBay Danuser 9\" x 48\" Fab Auger Bit 2\" Hex Collar Skid Steer Attachment Part 10609"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19704,7 +19772,7 @@
         "Danuser 4\" Wobble Auger 2\" Hex 48\" Dirtless Digging Post Hole Auger Bit 20600 current offer",
         "eBay Danuser 4\" Wobble Auger 2\" Hex 48\" Dirtless Digging Post Hole Auger Bit 20600"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19722,7 +19790,7 @@
         "48\" Replacement Pallet Fork Blade 4,000 LB Capacity Attachment Class II ITA current offer",
         "eBay 48\" Replacement Pallet Fork Blade 4,000 LB Capacity Attachment Class II ITA"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19740,7 +19808,7 @@
         "Quad Large Square Bale Hay Spear with Guard Attachment Fits Skid Steer Loader current offer",
         "eBay Quad Large Square Bale Hay Spear with Guard Attachment Fits Skid Steer Loader"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19758,7 +19826,7 @@
         "60\" Dual Tine Root Rake Clam Grapple Attachment Fits Universal Quick Attach current offer",
         "eBay 60\" Dual Tine Root Rake Clam Grapple Attachment Fits Universal Quick Attach"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19776,7 +19844,7 @@
         "Danuser 2\" Round to 2 9/16'' Round Shaft Auger Bit Adapter Conversion Part 10926 current offer",
         "eBay Danuser 2\" Round to 2 9/16'' Round Shaft Auger Bit Adapter Conversion Part 10926"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19794,7 +19862,7 @@
         "Lowe 24\" Auger Bit for Skid Steer, 2\" Hex Collar, 48\" Long, Heavy Duty USA current offer",
         "eBay Lowe 24\" Auger Bit for Skid Steer, 2\" Hex Collar, 48\" Long, Heavy Duty USA"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19812,7 +19880,7 @@
         "PROWORKS 60\" Box Blade 3 Point Hitch Tractor Scraper Grader 5ft USA 4 Ripper current offer",
         "eBay PROWORKS 60\" Box Blade 3 Point Hitch Tractor Scraper Grader 5ft USA 4 Ripper"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19830,7 +19898,7 @@
         "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ current offer",
         "eBay Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -19848,7 +19916,7 @@
         "2025 Adidas SpongeBob SquarePants Drivers License Rejected Freizeit Promo Card current offer",
         "eBay 2025 Adidas SpongeBob SquarePants Drivers License Rejected Freizeit Promo Card"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19864,7 +19932,7 @@
         "HINTERLAND MUISC FESTIVAL MULTIPLE ARTISTS CAN BE SOLD SEPARATELY current offer",
         "eBay HINTERLAND MUISC FESTIVAL MULTIPLE ARTISTS CAN BE SOLD SEPARATELY"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19880,7 +19948,7 @@
         "KAYOU CR Kpop Demon Hunters Rumi London KPDH01-CR-001 Auto Serial #1401/2026 current offer",
         "eBay KAYOU CR Kpop Demon Hunters Rumi London KPDH01-CR-001 Auto Serial #1401/2026"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19896,7 +19964,7 @@
         "Hobbyist Rock 'N Baseball Autographed Kyle Kravitz Card #00 NYC July 2026 current offer",
         "eBay Hobbyist Rock 'N Baseball Autographed Kyle Kravitz Card #00 NYC July 2026"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19912,7 +19980,7 @@
         "Walt Disney and Mickey Mouse 1931 W.D. & H.O. Wills #24 Cinema Stars RC SGC 3 current offer",
         "eBay Walt Disney and Mickey Mouse 1931 W.D. & H.O. Wills #24 Cinema Stars RC SGC 3"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19928,7 +19996,7 @@
         "2026 Topps Disney Neon Chrome Etch Autos SULLEY Black Speckle Refractors /10 current offer",
         "eBay 2026 Topps Disney Neon Chrome Etch Autos SULLEY Black Speckle Refractors /10"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19944,7 +20012,7 @@
         "Doraemon CCG 2024 SSP N01.05 Serialized card 103/750 current offer",
         "eBay Doraemon CCG 2024 SSP N01.05 Serialized card 103/750"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19960,7 +20028,7 @@
         "VEEFRIENDS #2 THE ORIGIN OF FEARLESS FAIRY COMIC CUT Cc-2 current offer",
         "eBay VEEFRIENDS #2 THE ORIGIN OF FEARLESS FAIRY COMIC CUT Cc-2"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19976,7 +20044,7 @@
         "2023 Topps Chrome Star Wars Galaxy the Dark Side /10. Please Read Description current offer",
         "eBay 2023 Topps Chrome Star Wars Galaxy the Dark Side /10. Please Read Description"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -19992,7 +20060,7 @@
         "2024 KKW Phantom Harry Potter Hogwarts Acceptance Letter Harry Potter /625 J21 current offer",
         "eBay 2024 KKW Phantom Harry Potter Hogwarts Acceptance Letter Harry Potter /625 J21"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20008,7 +20076,7 @@
         "PAUL TIBBIT DOODLE BOB 2025 TOPPS CHROME SPONGEBOB AUTO #SA-DO PSA 9 Q4244 current offer",
         "eBay PAUL TIBBIT DOODLE BOB 2025 TOPPS CHROME SPONGEBOB AUTO #SA-DO PSA 9 Q4244"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20024,7 +20092,7 @@
         "DeForest Kelley Autographs current offer",
         "eBay DeForest Kelley Autographs"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20040,7 +20108,7 @@
         "2025 Topps Chrome Disney MICKEY MOUSE 190 Sorcerer’s Apprentice Refractor PSA 10 current offer",
         "eBay 2025 Topps Chrome Disney MICKEY MOUSE 190 Sorcerer’s Apprentice Refractor PSA 10"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20056,7 +20124,7 @@
         "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #96 LUCA PAGURO /399 PSA 10 current offer",
         "eBay 2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #96 LUCA PAGURO /399 PSA 10"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20072,7 +20140,7 @@
         "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #50 BRUNO MADRIGAL /399 PSA 10 ENCAN current offer",
         "eBay 2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #50 BRUNO MADRIGAL /399 PSA 10 ENCAN"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20088,7 +20156,7 @@
         "Wizards Pokémon Base Set Charizard Holo 4/102 1999 English Mitsuhiro Arita current offer",
         "eBay Wizards Pokémon Base Set Charizard Holo 4/102 1999 English Mitsuhiro Arita"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -20106,7 +20174,7 @@
         "2025 Topps Sapphire Marvel Studios Vincent D'Onofrio/Mayor Wilson Fisk Auto /25 current offer",
         "eBay 2025 Topps Sapphire Marvel Studios Vincent D'Onofrio/Mayor Wilson Fisk Auto /25"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20122,7 +20190,7 @@
         "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #80 EDNA MODE /399 PSA 10 INCREDIBLE current offer",
         "eBay 2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #80 EDNA MODE /399 PSA 10 INCREDIBLE"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20138,7 +20206,7 @@
         "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #24 BARLEY LIGHTFOOT /399 PSA 10 ONW current offer",
         "eBay 2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #24 BARLEY LIGHTFOOT /399 PSA 10 ONW"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20154,7 +20222,7 @@
         "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #73 HEIMLICH /399 PSA 10 BUGS LIFE current offer",
         "eBay 2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #73 HEIMLICH /399 PSA 10 BUGS LIFE"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20170,7 +20238,7 @@
         "Original Mars Attacks 1962 Card #21 Prize Captive Topps Bubbles Inc. current offer",
         "eBay Original Mars Attacks 1962 Card #21 Prize Captive Topps Bubbles Inc."
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20186,7 +20254,7 @@
         "[IN HAND] Lord of the Eagles (Book Cover) (Surge Foil) (MTG) (HOC) (The Hobbit) current offer",
         "eBay [IN HAND] Lord of the Eagles (Book Cover) (Surge Foil) (MTG) (HOC) (The Hobbit)"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20202,7 +20270,7 @@
         "SERIALIZED KAYOU KPop Demon Hunters Huntrix CR Mira KPDH01 CR-002 #’d /2026 current offer",
         "eBay SERIALIZED KAYOU KPop Demon Hunters Huntrix CR Mira KPDH01 CR-002 #’d /2026"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20218,7 +20286,7 @@
         "Last March of the Ents Borderless SURGE Foil MTG The Hobbit Sleeved Immediately current offer",
         "eBay Last March of the Ents Borderless SURGE Foil MTG The Hobbit Sleeved Immediately"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20234,7 +20302,7 @@
         "2023 Topps Chrome Disney Minnie Mouse 23 Silver Refractor current offer",
         "eBay 2023 Topps Chrome Disney Minnie Mouse 23 Silver Refractor"
       ],
-      "score": 77,
+      "score": 73,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20250,7 +20318,7 @@
         "2024 TOPPS CHROME DISNEY | REFRACTOR #63 WOODY PSA 10 current offer",
         "eBay 2024 TOPPS CHROME DISNEY | REFRACTOR #63 WOODY PSA 10"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2024-topps-chrome-disney/",
       "collectionPaths": []
@@ -20266,7 +20334,7 @@
         "2024 Upper Deck Marvel Masterpieces Nahuel Grego #89 Magneto Tier 4 Base /99 current offer",
         "eBay 2024 Upper Deck Marvel Masterpieces Nahuel Grego #89 Magneto Tier 4 Base /99"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20282,7 +20350,7 @@
         "Anti Venom /25 Orange Marvel Chrome 2026 current offer",
         "eBay Anti Venom /25 Orange Marvel Chrome 2026"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20298,7 +20366,7 @@
         "Lorcana TCG Rapunzel Escaping The Tower Top 8 Promo 16/P4 Pack Fresh- NM current offer",
         "eBay Lorcana TCG Rapunzel Escaping The Tower Top 8 Promo 16/P4 Pack Fresh- NM"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20314,7 +20382,7 @@
         "Topps 2020 Topps Chrome Marvel Carnage #022 Serial Numbered 15/20 current offer",
         "eBay Topps 2020 Topps Chrome Marvel Carnage #022 Serial Numbered 15/20"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20330,7 +20398,7 @@
         "2023 Topps Chrome Disney 100 Caption Hook Pink Refractor/399 #11 PSA 9 current offer",
         "eBay 2023 Topps Chrome Disney 100 Caption Hook Pink Refractor/399 #11 PSA 9"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20346,7 +20414,7 @@
         "1995 Marvel Pepsi Mexico Prismatic 💎 SPIDER-MAN 💎 BGS 9.5 💎 POP 1 (NONE ^) 💎 current offer",
         "eBay 1995 Marvel Pepsi Mexico Prismatic 💎 SPIDER-MAN 💎 BGS 9.5 💎 POP 1 (NONE ^) 💎"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20362,7 +20430,7 @@
         "[IN HAND] The Gaffer (Surge Foil) (MTG) (HOC) (The Hobbit) current offer",
         "eBay [IN HAND] The Gaffer (Surge Foil) (MTG) (HOC) (The Hobbit)"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20378,7 +20446,7 @@
         "2025 Topps Chrome Disney Hercules Auto /28 #10 Mickey PSA 10 current offer",
         "eBay 2025 Topps Chrome Disney Hercules Auto /28 #10 Mickey PSA 10"
       ],
-      "score": 61,
+      "score": 57,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20394,7 +20462,7 @@
         "Topps Chrome Disney 2026 Elsa Orange Refractor 12/25 Iconic moments current offer",
         "eBay Topps Chrome Disney 2026 Elsa Orange Refractor 12/25 Iconic moments"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20410,7 +20478,7 @@
         "SDCC 2026 X-MEN ‘97 Death Gambit Tarot Trading Card PANEL Exclusive! current offer",
         "eBay SDCC 2026 X-MEN ‘97 Death Gambit Tarot Trading Card PANEL Exclusive!"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20426,7 +20494,7 @@
         "Monkey D. Luffy Round 1 English Promo Op16-095 One Piece Card Game ENGLISH current offer",
         "eBay Monkey D. Luffy Round 1 English Promo Op16-095 One Piece Card Game ENGLISH"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20442,7 +20510,7 @@
         "2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #91 MIGUEL /399 PSA 10 COCO current offer",
         "eBay 2023 TOPPS CHROME DISNEY 100 PINK REFRACTOR #91 MIGUEL /399 PSA 10 COCO"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20458,7 +20526,7 @@
         "2026 Dodgers x One Piece Night Promo Card Monkey D Luffy current offer",
         "eBay 2026 Dodgers x One Piece Night Promo Card Monkey D Luffy"
       ],
-      "score": 67,
+      "score": 63,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20474,7 +20542,7 @@
         "Omega Red Clawed Chrome/20 Topps Marvel Chrome 2026 current offer",
         "eBay Omega Red Clawed Chrome/20 Topps Marvel Chrome 2026"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20490,7 +20558,7 @@
         "2023 TOPPS CHROME DISNEY100 REFRACTOR #19 ARIEL PSA 10 current offer",
         "eBay 2023 TOPPS CHROME DISNEY100 REFRACTOR #19 ARIEL PSA 10"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2023-topps-chrome-disney/",
       "collectionPaths": []
@@ -20506,7 +20574,7 @@
         "2026 Kim Kardashian Complex x GAS Limited CRACKED ICE FOIL PSA 10 GEM /500 current offer",
         "eBay 2026 Kim Kardashian Complex x GAS Limited CRACKED ICE FOIL PSA 10 GEM /500"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20522,7 +20590,7 @@
         "2024 TOPPS CHROME DISNEY SAPPHIRE EDITION #93 STITCH PSA 10 current offer",
         "eBay 2024 TOPPS CHROME DISNEY SAPPHIRE EDITION #93 STITCH PSA 10"
       ],
-      "score": 71,
+      "score": 67,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/2024-topps-chrome-disney/",
       "collectionPaths": []
@@ -20538,7 +20606,7 @@
         "Yugioh The Chronicles Deck: The Fallen & The Virtuous All-Foil 3-Deck Set current offer",
         "eBay Yugioh The Chronicles Deck: The Fallen & The Virtuous All-Foil 3-Deck Set"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20554,7 +20622,7 @@
         "Hololive Official TCG: Summer hologram (EB01) (ENG) Extra Booster Box 9/25 current offer",
         "eBay Hololive Official TCG: Summer hologram (EB01) (ENG) Extra Booster Box 9/25"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20570,7 +20638,7 @@
         "Yu-Gi-Oh! Legendary ARC-V Decks PRESALE 8/7 current offer",
         "eBay Yu-Gi-Oh! Legendary ARC-V Decks PRESALE 8/7"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20586,7 +20654,7 @@
         "Riftbound - League of Legends TCG: Vendetta Showdown Decks - Zed Vs Shen current offer",
         "eBay Riftbound - League of Legends TCG: Vendetta Showdown Decks - Zed Vs Shen"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20602,7 +20670,7 @@
         "Classic Clear 100ct Dragon Shield Sleeves Standard Size current offer",
         "eBay Classic Clear 100ct Dragon Shield Sleeves Standard Size"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20618,7 +20686,7 @@
         "Yu-Gi-Oh! Chaos Origins Booster Box current offer",
         "eBay Yu-Gi-Oh! Chaos Origins Booster Box"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20634,7 +20702,7 @@
         "SEALED CASE! 6x Collector Booster Box Teenage Mutant Ninja Turtles TMT MTG current offer",
         "eBay SEALED CASE! 6x Collector Booster Box Teenage Mutant Ninja Turtles TMT MTG"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20650,7 +20718,7 @@
         "Weiss Schwarz: Re:ZERO Starting Life in Another World Vol.3 English Booster 8/28 current offer",
         "eBay Weiss Schwarz: Re:ZERO Starting Life in Another World Vol.3 English Booster 8/28"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20666,7 +20734,7 @@
         "Weiss Schwarz: Girls Band Cry (English) Premium Booster current offer",
         "eBay Weiss Schwarz: Girls Band Cry (English) Premium Booster"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20682,7 +20750,7 @@
         "Pokemon TCG: Gemstone Gem Pack Volume.5 Booster Box (Chinese) US SELLER current offer",
         "eBay Pokemon TCG: Gemstone Gem Pack Volume.5 Booster Box (Chinese) US SELLER"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -20700,7 +20768,7 @@
         "Play Booster Box Marvel Super Heroes MSH MTG current offer",
         "eBay Play Booster Box Marvel Super Heroes MSH MTG"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20716,7 +20784,7 @@
         "Draft Night Box The Hobbit HOB MTG PRESALE 8/7 current offer",
         "eBay Draft Night Box The Hobbit HOB MTG PRESALE 8/7"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20732,7 +20800,7 @@
         "Matte Clear 100 ct Dragon Shield Sleeves Standard Size current offer",
         "eBay Matte Clear 100 ct Dragon Shield Sleeves Standard Size"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20748,7 +20816,7 @@
         "Set of 2 - 1 of Each - Starter Decks Rise of the Floodborn Disney Lorcana TCG current offer",
         "eBay Set of 2 - 1 of Each - Starter Decks Rise of the Floodborn Disney Lorcana TCG"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20764,7 +20832,7 @@
         "SEALED CASE! 6x Play Booster Box Aetherdrift DFT MTG current offer",
         "eBay SEALED CASE! 6x Play Booster Box Aetherdrift DFT MTG"
       ],
-      "score": 64,
+      "score": 60,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -20780,7 +20848,7 @@
         "Apple iPhone 16e 128GB Unlocked Excellent Condition current offer",
         "eBay Apple iPhone 16e 128GB Unlocked Excellent Condition"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -20799,7 +20867,7 @@
         "Apple Watch SE 3 40MM [GPS + Cellular ] Aluminu Case - Smartwatch - Excellent current offer",
         "eBay Apple Watch SE 3 40MM [GPS + Cellular ] Aluminu Case - Smartwatch - Excellent"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -20817,7 +20885,7 @@
         "Apple iPad Pro 11-inch M4 Chip 256GB Wi-Fi Black MVV83LL/A Excellent Condition current offer",
         "eBay Apple iPad Pro 11-inch M4 Chip 256GB Wi-Fi Black MVV83LL/A Excellent Condition"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -20835,7 +20903,7 @@
         "Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty current offer",
         "eBay Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -20853,7 +20921,7 @@
         "HUS726060ALA640 HGST Ultrastar 6TB SATA 6Gbps 7.2K 3.5\" Hard Drive OF21860 current offer",
         "eBay HUS726060ALA640 HGST Ultrastar 6TB SATA 6Gbps 7.2K 3.5\" Hard Drive OF21860"
       ],
-      "score": 70,
+      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [

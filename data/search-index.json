@@ -1,10 +1,10 @@
 {
   "version": 2,
   "policy": "quality-diversity-v2",
-  "evaluatedAt": "2026-08-12T10:27:14.000Z",
-  "catalogUpdatedAt": "2026-08-11T09:43:14.703Z",
-  "publicDeals": 1181,
-  "indexableDeals": 11,
+  "evaluatedAt": "2026-08-12T20:57:06.000Z",
+  "catalogUpdatedAt": "2026-08-12T20:57:06.000Z",
+  "publicDeals": 1185,
+  "indexableDeals": 15,
   "browseOnlyDeals": 1170,
   "deals": [
     {
@@ -26,13 +26,13 @@
       "lastmod": "2026-08-04"
     },
     {
-      "id": "rakuten-sensibo-air-room-sensor-20260803",
-      "url": "/deals/rakuten-sensibo-air-room-sensor/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-03",
-      "recheckAfter": "2026-08-04T09:00:17Z",
-      "lastmod": "2026-08-03"
+      "id": "amazon-B0FWK41WF2-20260812",
+      "url": "/deals/amazon-b0fwk41wf2/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-12",
+      "recheckAfter": "2026-08-13T20:57:06.000Z",
+      "lastmod": "2026-08-12"
     },
     {
       "id": "ebay-item-206474700849",
@@ -62,13 +62,13 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "cj-curiositystream-standard-monthly-20260811",
-      "url": "/deals/cj-curiositystream-standard-monthly/",
+      "id": "rakuten-sensibo-air-room-sensor-20260803",
+      "url": "/deals/rakuten-sensibo-air-room-sensor/",
       "indexable": false,
       "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T05:38:45.000Z",
-      "lastmod": "2026-08-11"
+      "verifiedAt": "2026-08-03",
+      "recheckAfter": "2026-08-04T09:00:17Z",
+      "lastmod": "2026-08-03"
     },
     {
       "id": "ebay-item-127987648416",
@@ -80,30 +80,21 @@
       "lastmod": "2026-08-11"
     },
     {
+      "id": "amazon-B0C5C89QKZ-20260812",
+      "url": "/deals/amazon-b0c5c89qkz/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-12",
+      "recheckAfter": "2026-08-13T20:57:06.000Z",
+      "lastmod": "2026-08-12"
+    },
+    {
       "id": "cj-surfshark-starter-20260801",
       "url": "/deals/cj-surfshark-starter/",
       "indexable": true,
       "reason": "verification-current-curated",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-18T09:25:24.000Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "ebay-item-136085045308",
-      "url": "/deals/ebay-item-136085045308/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-04",
-      "recheckAfter": "2026-08-05T07:44:13.279Z",
-      "lastmod": "2026-08-04"
-    },
-    {
-      "id": "amazon-B07D5DN269-20260801",
-      "url": "/deals/amazon-b07d5dn269/",
-      "indexable": true,
-      "reason": "verification-current-curated",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-14T09:24:30.000Z",
       "lastmod": "2026-08-11"
     },
     {
@@ -116,30 +107,21 @@
       "lastmod": "2026-08-11"
     },
     {
+      "id": "amazon-B0CXZTT4MT-20260812",
+      "url": "/deals/amazon-b0cxztt4mt/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-12",
+      "recheckAfter": "2026-08-13T20:57:06.000Z",
+      "lastmod": "2026-08-12"
+    },
+    {
       "id": "cj-proton-vpn-plus-2-year-70off-20260804",
       "url": "/deals/cj-proton-vpn-plus-2-year-70off/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-12T09:27:08.000Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "ebay-item-286014554031",
-      "url": "/deals/ebay-item-286014554031/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:43:14.703Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "amazon-B0DSP8J476-20260801",
-      "url": "/deals/amazon-b0dsp8j476/",
-      "indexable": true,
-      "reason": "verification-current-curated",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-14T09:24:27.000Z",
       "lastmod": "2026-08-11"
     },
     {
@@ -152,6 +134,24 @@
       "lastmod": "2026-08-11"
     },
     {
+      "id": "amazon-B0FMTSRKYL-20260812",
+      "url": "/deals/amazon-b0fmtsrkyl/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-12",
+      "recheckAfter": "2026-08-13T20:57:06.000Z",
+      "lastmod": "2026-08-12"
+    },
+    {
+      "id": "ebay-item-136085045308",
+      "url": "/deals/ebay-item-136085045308/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-04",
+      "recheckAfter": "2026-08-05T07:44:13.279Z",
+      "lastmod": "2026-08-04"
+    },
+    {
       "id": "cj-malwarebytes-standard-2-year-25off-20260811",
       "url": "/deals/cj-malwarebytes-standard-2-year-25off/",
       "indexable": false,
@@ -161,8 +161,8 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "ebay-item-366347496626",
-      "url": "/deals/ebay-item-366347496626/",
+      "id": "ebay-item-331693050907",
+      "url": "/deals/ebay-item-331693050907/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
@@ -170,17 +170,17 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "amazon-B00JH98GR4-20260801",
-      "url": "/deals/amazon-b00jh98gr4/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "id": "cj-curiositystream-standard-monthly-20260811",
+      "url": "/deals/cj-curiositystream-standard-monthly/",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-14T09:24:22.000Z",
+      "recheckAfter": "2026-08-12T05:38:45.000Z",
       "lastmod": "2026-08-11"
     },
     {
-      "id": "ebay-item-331693050907",
-      "url": "/deals/ebay-item-331693050907/",
+      "id": "ebay-item-286014554031",
+      "url": "/deals/ebay-item-286014554031/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
@@ -197,8 +197,8 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "ebay-item-254987231741-554895524528",
-      "url": "/deals/ebay-item-254987231741-554895524528/",
+      "id": "ebay-item-294169926707",
+      "url": "/deals/ebay-item-294169926707/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
@@ -206,17 +206,17 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "amazon-B07MJL8NXR-20260801",
-      "url": "/deals/amazon-b07mjl8nxr/",
+      "id": "amazon-B07D5DN269-20260801",
+      "url": "/deals/amazon-b07d5dn269/",
       "indexable": true,
       "reason": "verification-current-curated",
       "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-14T09:24:41.000Z",
+      "recheckAfter": "2026-08-14T09:24:30.000Z",
       "lastmod": "2026-08-11"
     },
     {
-      "id": "ebay-item-294169926707",
-      "url": "/deals/ebay-item-294169926707/",
+      "id": "ebay-item-366347496626",
+      "url": "/deals/ebay-item-366347496626/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
@@ -233,26 +233,26 @@
       "lastmod": "2026-08-04"
     },
     {
-      "id": "ebay-item-254987231741-554895524532",
-      "url": "/deals/ebay-item-254987231741-554895524532/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:22:51.638Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "amazon-music-unlimited-20260731",
-      "url": "/deals/amazon-music-unlimited/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:25:05.000Z",
-      "lastmod": "2026-08-11"
-    },
-    {
       "id": "ebay-item-276646642466",
       "url": "/deals/ebay-item-276646642466/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-12T09:43:14.703Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "amazon-B0DSP8J476-20260801",
+      "url": "/deals/amazon-b0dsp8j476/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-14T09:24:27.000Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "ebay-item-254987231741-554895524528",
+      "url": "/deals/ebay-item-254987231741-554895524528/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
@@ -269,24 +269,6 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "ebay-item-255803826545-555925514141",
-      "url": "/deals/ebay-item-255803826545-555925514141/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:22:51.638Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "amazon-prime-video-channels-paid-20260731",
-      "url": "/deals/amazon-prime-video-channels-paid/",
-      "indexable": true,
-      "reason": "verification-current-curated",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-18T09:25:04.000Z",
-      "lastmod": "2026-08-11"
-    },
-    {
       "id": "ebay-item-284356610245",
       "url": "/deals/ebay-item-284356610245/",
       "indexable": false,
@@ -296,12 +278,84 @@
       "lastmod": "2026-08-11"
     },
     {
+      "id": "amazon-B00JH98GR4-20260801",
+      "url": "/deals/amazon-b00jh98gr4/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-14T09:24:22.000Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "ebay-item-254987231741-554895524532",
+      "url": "/deals/ebay-item-254987231741-554895524532/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-12T09:22:51.638Z",
+      "lastmod": "2026-08-11"
+    },
+    {
       "id": "amazon-kids-plus-trial-20260801",
       "url": "/deals/amazon-kids-plus-trial/",
       "indexable": true,
       "reason": "verification-current-curated",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-18T09:25:01.000Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "ebay-item-286094942833",
+      "url": "/deals/ebay-item-286094942833/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-12T09:43:14.703Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "amazon-B07MJL8NXR-20260801",
+      "url": "/deals/amazon-b07mjl8nxr/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-14T09:24:41.000Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "ebay-item-255803826545-555925514141",
+      "url": "/deals/ebay-item-255803826545-555925514141/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-12T09:22:51.638Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "amazon-music-unlimited-20260731",
+      "url": "/deals/amazon-music-unlimited/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-12T09:25:05.000Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "ebay-item-325433972802",
+      "url": "/deals/ebay-item-325433972802/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-12T09:43:14.703Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "amazon-prime-video-channels-paid-20260731",
+      "url": "/deals/amazon-prime-video-channels-paid/",
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-18T09:25:04.000Z",
       "lastmod": "2026-08-11"
     },
     {
@@ -323,8 +377,8 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "ebay-item-286094942833",
-      "url": "/deals/ebay-item-286094942833/",
+      "id": "ebay-item-277922293329-2560860938882",
+      "url": "/deals/ebay-item-277922293329-2560860938882/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
@@ -1054,24 +1108,6 @@
     {
       "id": "ebay-item-366590911488",
       "url": "/deals/ebay-item-366590911488/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:43:14.703Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "ebay-item-325433972802",
-      "url": "/deals/ebay-item-325433972802/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:43:14.703Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "ebay-item-277922293329-2560860938882",
-      "url": "/deals/ebay-item-277922293329-2560860938882/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",

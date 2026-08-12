@@ -1,19 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T09:43:14.703Z",
+  "generatedAt": "2026-08-12T20:57:06.000Z",
   "canonical": "https://dealdesk.fyi/feeds/merchants.v1.json",
   "total": 1,
   "merchants": [
     {
       "name": "Amazon",
       "canonical_url": "https://dealdesk.fyi/merchant/amazon/",
-      "offer_count": 4,
+      "offer_count": 8,
       "categories": [
+        "Electronics",
         "Grocery",
         "Home"
       ],
       "lowest_displayed_price": 26.7,
-      "newest_check": "2026-08-11"
+      "newest_check": "2026-08-12"
     }
   ]
 }

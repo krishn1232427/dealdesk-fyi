@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T09:43:14.703Z",
+  "generatedAt": "2026-08-12T20:57:06.000Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
-  "total": 11,
+  "total": 15,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
   "deals": [
     {
@@ -20,6 +20,34 @@
       "expires_at": null
     },
     {
+      "id": "amazon-B0FWK41WF2-20260812",
+      "title": "eufy C28 robot vacuum and mop",
+      "canonical_url": "https://dealdesk.fyi/deals/amazon-b0fwk41wf2/",
+      "merchant": "Amazon",
+      "category": "Home",
+      "image_url": "https://m.media-amazon.com/images/I/61Pl3yAtv0L._AC_SL1500_.jpg",
+      "current_price": "$499.99",
+      "original_price": "$799.99",
+      "savings": "Save $300.00 · 38% off",
+      "terms": "Limited-time deal · In stock",
+      "verified_at": "2026-08-12",
+      "expires_at": null
+    },
+    {
+      "id": "amazon-B0C5C89QKZ-20260812",
+      "title": "Anker SOLIX C1000 portable power station",
+      "canonical_url": "https://dealdesk.fyi/deals/amazon-b0c5c89qkz/",
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "image_url": "https://m.media-amazon.com/images/I/61T6KIZq8nL._AC_SL1500_.jpg",
+      "current_price": "$429.98",
+      "original_price": "$599.99",
+      "savings": "Save $170.01 · 28% off",
+      "terms": "Limited-time deal · In stock",
+      "verified_at": "2026-08-12",
+      "expires_at": null
+    },
+    {
       "id": "cj-surfshark-starter-20260801",
       "title": "Surfshark Starter 24-month plan",
       "canonical_url": "https://dealdesk.fyi/deals/cj-surfshark-starter/",
@@ -30,6 +58,48 @@
       "original_price": "$16.45/mo",
       "savings": "85% off · 3 months extra",
       "terms": "$67.23 for the first 27 months · was $444.15 · VAT may apply · 30-day money-back guarantee",
+      "verified_at": "2026-08-11",
+      "expires_at": null
+    },
+    {
+      "id": "amazon-B0CXZTT4MT-20260812",
+      "title": "Amazon Fire TV Soundbar Plus",
+      "canonical_url": "https://dealdesk.fyi/deals/amazon-b0cxztt4mt/",
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "image_url": "https://m.media-amazon.com/images/I/71HLHHuv0aL._AC_SL1500_.jpg",
+      "current_price": "$149.99",
+      "original_price": "$249.99",
+      "savings": "Save $100.00 · 40% off",
+      "terms": "Limited-time deal · In stock",
+      "verified_at": "2026-08-12",
+      "expires_at": null
+    },
+    {
+      "id": "amazon-B0FMTSRKYL-20260812",
+      "title": "Keurig K-Mini Mate coffee maker",
+      "canonical_url": "https://dealdesk.fyi/deals/amazon-b0fmtsrkyl/",
+      "merchant": "Amazon",
+      "category": "Home",
+      "image_url": "https://m.media-amazon.com/images/I/618D34n8gLL._AC_SL1500_.jpg",
+      "current_price": "$49.99",
+      "original_price": "$59.99",
+      "savings": "Save $10.00 · 17% off",
+      "terms": "Limited-time deal · In stock",
+      "verified_at": "2026-08-12",
+      "expires_at": null
+    },
+    {
+      "id": "amazon-audible-standard-trial-20260801",
+      "title": "Audible Standard — 30-day free trial",
+      "canonical_url": "https://dealdesk.fyi/deals/amazon-audible-standard-trial/",
+      "merchant": "Audible",
+      "category": "Subscriptions",
+      "image_url": "https://m.media-amazon.com/images/G/01/Audible/en_US/Rewards/Rewards_Banner_Web_Program_Enroll_DT._SX1600_FMpng_.png",
+      "current_price": "$0",
+      "original_price": "$8.99/mo",
+      "savings": "30 days free · Cancel anytime",
+      "terms": "Auto-renews at $8.99/mo after the trial",
       "verified_at": "2026-08-11",
       "expires_at": null
     },
@@ -62,6 +132,20 @@
       "expires_at": null
     },
     {
+      "id": "cj-nordpass-premium-20260801",
+      "title": "NordPass Premium 2-year plan",
+      "canonical_url": "https://dealdesk.fyi/deals/cj-nordpass-premium/",
+      "merchant": "NordPass",
+      "category": "Subscriptions",
+      "image_url": "https://sb.nordcdn.com/transform/3d7f8d78-75bf-422b-9481-bc4a26643afe/nordpass-meta-trademark",
+      "current_price": "$1.39/mo",
+      "original_price": "$2.99/mo",
+      "savings": "53% off · 3 months extra",
+      "terms": "$37.53 for the first 27 months · was $80.73 · VAT excluded · 30-day money-back guarantee",
+      "verified_at": "2026-08-11",
+      "expires_at": null
+    },
+    {
       "id": "amazon-B00JH98GR4-20260801",
       "title": "Shark Navigator Lift-Away vacuum",
       "canonical_url": "https://dealdesk.fyi/deals/amazon-b00jh98gr4/",
@@ -76,16 +160,16 @@
       "expires_at": null
     },
     {
-      "id": "amazon-audible-standard-trial-20260801",
-      "title": "Audible Standard — 30-day free trial",
-      "canonical_url": "https://dealdesk.fyi/deals/amazon-audible-standard-trial/",
-      "merchant": "Audible",
+      "id": "amazon-kids-plus-trial-20260801",
+      "title": "Amazon Kids+ — 1-month free trial",
+      "canonical_url": "https://dealdesk.fyi/deals/amazon-kids-plus-trial/",
+      "merchant": "Amazon Kids+",
       "category": "Subscriptions",
-      "image_url": "https://m.media-amazon.com/images/G/01/Audible/en_US/Rewards/Rewards_Banner_Web_Program_Enroll_DT._SX1600_FMpng_.png",
+      "image_url": "https://m.media-amazon.com/images/G/01/kindle/tahoe/APK_DPUPDATE_OCT25/AKP_ACQ_DP_Header_Update2025_US_EN-desktop-Purple-1.png",
       "current_price": "$0",
-      "original_price": "$8.99/mo",
-      "savings": "30 days free · Cancel anytime",
-      "terms": "Auto-renews at $8.99/mo after the trial",
+      "original_price": "$7.99/mo",
+      "savings": "1 month free · Cancel anytime",
+      "terms": "$7.99/mo with Prime · $8.99/mo without Prime · tax may apply · D.C. residents excluded · cancel anytime",
       "verified_at": "2026-08-11",
       "expires_at": null
     },
@@ -104,20 +188,6 @@
       "expires_at": null
     },
     {
-      "id": "cj-nordpass-premium-20260801",
-      "title": "NordPass Premium 2-year plan",
-      "canonical_url": "https://dealdesk.fyi/deals/cj-nordpass-premium/",
-      "merchant": "NordPass",
-      "category": "Subscriptions",
-      "image_url": "https://sb.nordcdn.com/transform/3d7f8d78-75bf-422b-9481-bc4a26643afe/nordpass-meta-trademark",
-      "current_price": "$1.39/mo",
-      "original_price": "$2.99/mo",
-      "savings": "53% off · 3 months extra",
-      "terms": "$37.53 for the first 27 months · was $80.73 · VAT excluded · 30-day money-back guarantee",
-      "verified_at": "2026-08-11",
-      "expires_at": null
-    },
-    {
       "id": "amazon-prime-video-channels-paid-20260731",
       "title": "Prime Video Channels — trials and subscriptions",
       "canonical_url": "https://dealdesk.fyi/deals/amazon-prime-video-channels-paid/",
@@ -128,20 +198,6 @@
       "original_price": null,
       "savings": "Trials & subscriptions",
       "terms": "Browse channel trials and subscriptions; prices and availability vary.",
-      "verified_at": "2026-08-11",
-      "expires_at": null
-    },
-    {
-      "id": "amazon-kids-plus-trial-20260801",
-      "title": "Amazon Kids+ — 1-month free trial",
-      "canonical_url": "https://dealdesk.fyi/deals/amazon-kids-plus-trial/",
-      "merchant": "Amazon Kids+",
-      "category": "Subscriptions",
-      "image_url": "https://m.media-amazon.com/images/G/01/kindle/tahoe/APK_DPUPDATE_OCT25/AKP_ACQ_DP_Header_Update2025_US_EN-desktop-Purple-1.png",
-      "current_price": "$0",
-      "original_price": "$7.99/mo",
-      "savings": "1 month free · Cancel anytime",
-      "terms": "$7.99/mo with Prime · $8.99/mo without Prime · tax may apply · D.C. residents excluded · cancel anytime",
       "verified_at": "2026-08-11",
       "expires_at": null
     },

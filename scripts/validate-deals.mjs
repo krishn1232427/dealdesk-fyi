@@ -16,6 +16,10 @@ const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evi
 const hotelsBrokenEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/hotels-expedia-broken-20260804.json", import.meta.url), "utf8"));
 const nonEbayMerchantRefreshEvidenceRecord = "data/affiliate-evidence/non-ebay-merchant-refresh-20260811.json";
 const nonEbayMerchantRefreshEvidence = JSON.parse(await readFile(new URL(`../${nonEbayMerchantRefreshEvidenceRecord}`, import.meta.url), "utf8"));
+const amazonDealEvidenceRecord = "data/affiliate-evidence/amazon-deals-20260812.json";
+const amazonDealEvidence = JSON.parse(await readFile(new URL(`../${amazonDealEvidenceRecord}`, import.meta.url), "utf8"));
+const amazonDealEvidenceByID = new Map(Object.values(amazonDealEvidence.products || {})
+  .map((product) => [product.dealID, product]));
 const sensiboExclusionSnapshot = await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803-exclusions.csv", import.meta.url), "utf8");
 const sensiboExclusionSnapshotHash = createHash("sha256").update(sensiboExclusionSnapshot).digest("hex");
 const sensiboExclusionSnapshotSKUs = sensiboExclusionSnapshot.trim().split(/\r?\n/)
@@ -174,6 +178,42 @@ for (const feedPath of feedPaths) {
       }
       if (affiliateURL.searchParams.get("tag") !== deal.trackingID) {
         errors.push(`${label}: Amazon tag must match trackingID`);
+      }
+      const amazonEvidence = amazonDealEvidenceByID.get(deal.id);
+      if (amazonEvidence) {
+        const asinMatch = affiliateURL.pathname.match(/^\/dp\/([A-Z0-9]{10})$/);
+        const expectedCurrentPrice = `$${Number(amazonEvidence.priceUSD).toFixed(2)}`;
+        const expectedReferencePrice = `$${Number(amazonEvidence.referencePriceUSD).toFixed(2)}`;
+        const expectedSavings = `Save $${(Number(amazonEvidence.referencePriceUSD) - Number(amazonEvidence.priceUSD)).toFixed(2)} · ${amazonEvidence.discountPercent}% off`;
+        let imageURL;
+        try { imageURL = new URL(deal.imageURL); } catch {}
+
+        if (deal.evidenceRecord !== amazonDealEvidenceRecord ||
+            amazonDealEvidence.reviewedAt !== deal.verifiedAt ||
+            amazonEvidence.verifiedAt !== deal.verifiedAt ||
+            amazonEvidence.recheckAfter !== deal.recheckAfter ||
+            amazonEvidence.dealID !== deal.id ||
+            amazonDealEvidence.publication?.allowed !== true) {
+          errors.push(`${label}: Amazon deal must bind to the immutable August 12 evidence record and review window`);
+        }
+        if (!asinMatch || asinMatch[1] !== deal.asin || asinMatch[1] !== deal.id.split("-")[1] ||
+            amazonEvidence.affiliateURL !== deal.affiliateURL || deal.merchantURL !== deal.affiliateURL ||
+            affiliateURL.searchParams.size !== 1 || affiliateURL.hash) {
+          errors.push(`${label}: Amazon ASIN, tagged URL, and evidence do not match exactly`);
+        }
+        if (deal.currentPrice !== expectedCurrentPrice || deal.originalPrice !== expectedReferencePrice ||
+            Number(deal.discountPercent) !== Number(amazonEvidence.discountPercent) ||
+            deal.savingsText !== expectedSavings) {
+          errors.push(`${label}: Amazon price, reference price, discount, or savings do not match evidence`);
+        }
+        if (deal.availabilityStatus !== amazonEvidence.availability ||
+            deal.availabilityStatus !== "InStock" || deal.sourceType !== "amazon-product" ||
+            deal.offerType !== "product") {
+          errors.push(`${label}: Amazon product must be an in-stock verified product offer`);
+        }
+        if (deal.imageURL !== amazonEvidence.imageURL || imageURL?.hostname !== "m.media-amazon.com") {
+          errors.push(`${label}: Amazon image must match the verified merchant-hosted product image`);
+        }
       }
     } else if (deal.network === "cj") {
       const allowedCJHosts = new Set(["www.dpbolvw.net", "www.kqzyfj.com", "www.tkqlhce.com"]);

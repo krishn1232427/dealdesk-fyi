@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-12T20:57:06.000Z",
+  "source": "Official Amazon U.S. Today's Deals page and official product pages opened with DealDesk's Associates tracking tag",
+  "locale": {
+    "country": "US",
+    "currency": "USD",
+    "note": "Amazon prices and stock can vary by delivery location and account. No customer name, account identifier, address, or precise test location is retained."
+  },
+  "publisher": {
+    "network": "amazon-associates",
+    "trackingID": "dealdesk-20",
+    "commissionAccrualReady": true,
+    "payoutSetupStatus": "incomplete — no payout method is configured"
+  },
+  "products": {
+    "B0FMTSRKYL": {
+      "dealID": "amazon-B0FMTSRKYL-20260812",
+      "affiliateURL": "https://www.amazon.com/dp/B0FMTSRKYL?tag=dealdesk-20",
+      "title": "Keurig K-Mini Mate Single Serve K-Cup Pod Coffee Maker, Black",
+      "dealLabel": "Limited time deal",
+      "priceUSD": 49.99,
+      "referencePriceUSD": 59.99,
+      "referencePriceType": "Typical price",
+      "discountPercent": 17,
+      "availability": "InStock",
+      "imageURL": "https://m.media-amazon.com/images/I/618D34n8gLL._AC_SL1500_.jpg",
+      "verifiedAt": "2026-08-12T20:57:06.000Z",
+      "recheckAfter": "2026-08-13T20:57:06.000Z"
+    },
+    "B0FWK41WF2": {
+      "dealID": "amazon-B0FWK41WF2-20260812",
+      "affiliateURL": "https://www.amazon.com/dp/B0FWK41WF2?tag=dealdesk-20",
+      "title": "eufy C28 Robot Vacuum and Mop Combo",
+      "dealLabel": "Limited time deal",
+      "priceUSD": 499.99,
+      "referencePriceUSD": 799.99,
+      "referencePriceType": "List price",
+      "discountPercent": 38,
+      "availability": "InStock",
+      "imageURL": "https://m.media-amazon.com/images/I/61Pl3yAtv0L._AC_SL1500_.jpg",
+      "verifiedAt": "2026-08-12T20:57:06.000Z",
+      "recheckAfter": "2026-08-13T20:57:06.000Z"
+    },
+    "B0C5C89QKZ": {
+      "dealID": "amazon-B0C5C89QKZ-20260812",
+      "affiliateURL": "https://www.amazon.com/dp/B0C5C89QKZ?tag=dealdesk-20",
+      "title": "Anker SOLIX C1000 Portable Power Station",
+      "dealLabel": "Limited time deal",
+      "priceUSD": 429.98,
+      "referencePriceUSD": 599.99,
+      "referencePriceType": "List price",
+      "discountPercent": 28,
+      "availability": "InStock",
+      "imageURL": "https://m.media-amazon.com/images/I/61T6KIZq8nL._AC_SL1500_.jpg",
+      "verifiedAt": "2026-08-12T20:57:06.000Z",
+      "recheckAfter": "2026-08-13T20:57:06.000Z"
+    },
+    "B0CXZTT4MT": {
+      "dealID": "amazon-B0CXZTT4MT-20260812",
+      "affiliateURL": "https://www.amazon.com/dp/B0CXZTT4MT?tag=dealdesk-20",
+      "title": "Amazon Fire TV Soundbar Plus",
+      "dealLabel": "Limited time deal",
+      "priceUSD": 149.99,
+      "referencePriceUSD": 249.99,
+      "referencePriceType": "List price",
+      "discountPercent": 40,
+      "availability": "InStock",
+      "imageURL": "https://m.media-amazon.com/images/I/71HLHHuv0aL._AC_SL1500_.jpg",
+      "verifiedAt": "2026-08-12T20:57:06.000Z",
+      "recheckAfter": "2026-08-13T20:57:06.000Z"
+    }
+  },
+  "publication": {
+    "allowed": true,
+    "rule": "Publish only the exact tagged product links and the price, reference price, stock state, and merchant image verified above. Recheck within 24 hours."
+  },
+  "privacy": "No passwords, cookies, session tokens, customer identifiers, addresses, payment details, or tax details are stored in this evidence record."
+}

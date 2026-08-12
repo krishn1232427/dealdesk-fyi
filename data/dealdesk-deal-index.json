@@ -1,20 +1,20 @@
 {
   "name": "DealDesk Deal Index",
-  "updatedAt": "2026-08-11T09:43:14.703Z",
-  "generatedAt": "2026-08-12T10:27:14.000Z",
-  "publicDeals": 1181,
+  "updatedAt": "2026-08-12T20:57:06.000Z",
+  "generatedAt": "2026-08-12T20:57:06.000Z",
+  "publicDeals": 1185,
   "merchants": 10,
   "categories": 10,
   "medianDisplayedPrice": 295,
-  "medianDisplayedDiscountPercent": 42,
+  "medianDisplayedDiscountPercent": 41,
   "categoryStats": [
     {
       "category": "Electronics",
-      "count": 603,
+      "count": 605,
       "lowestDisplayedPrice": 14.28,
       "medianDisplayedPrice": 256.48,
       "maximumDisplayedDiscountPercent": 92,
-      "latestVerification": "2026-08-11"
+      "latestVerification": "2026-08-12"
     },
     {
       "category": "Collectibles",
@@ -66,11 +66,11 @@
     },
     {
       "category": "Home",
-      "count": 4,
+      "count": 6,
       "lowestDisplayedPrice": 37.89,
       "medianDisplayedPrice": 154,
       "maximumDisplayedDiscountPercent": 46,
-      "latestVerification": "2026-08-11"
+      "latestVerification": "2026-08-12"
     },
     {
       "category": "Streaming",
