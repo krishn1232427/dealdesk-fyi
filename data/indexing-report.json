@@ -1,11 +1,11 @@
 {
   "build": "2026-08-08-crawl-v3",
-  "generatedAt": "2026-08-11T11:14:28.000Z",
+  "generatedAt": "2026-08-12T10:27:14.000Z",
   "catalogUpdatedAt": "2026-08-11T09:43:14.703Z",
   "publicDeals": 1181,
-  "indexableDeals": 74,
-  "browseOnlyDeals": 1107,
-  "archivePages": 36,
+  "indexableDeals": 11,
+  "browseOnlyDeals": 1170,
+  "archivePages": 38,
   "indexableArchivePages": 1,
   "archivePaths": [
     "/deals/"
@@ -46,17 +46,14 @@
     "/deals/page/33/",
     "/deals/page/34/",
     "/deals/page/35/",
-    "/deals/page/36/"
+    "/deals/page/36/",
+    "/deals/page/37/",
+    "/deals/page/38/"
   ],
   "categories": 10,
-  "categoryPages": 48,
-  "indexableCategoryPages": 8,
+  "categoryPages": 46,
+  "indexableCategoryPages": 3,
   "categoryPaths": [
-    "/category/electronics/",
-    "/category/collectibles/",
-    "/category/toys-and-hobbies/",
-    "/category/home-and-garden/",
-    "/category/business-and-industrial/",
     "/category/subscriptions/",
     "/category/home/",
     "/category/streaming/"
@@ -87,13 +84,11 @@
     "/category/collectibles/page/4/",
     "/category/collectibles/page/5/",
     "/category/collectibles/page/6/",
-    "/category/collectibles/page/7/",
     "/category/toys-and-hobbies/",
     "/category/toys-and-hobbies/page/2/",
     "/category/toys-and-hobbies/page/3/",
     "/category/toys-and-hobbies/page/4/",
     "/category/toys-and-hobbies/page/5/",
-    "/category/toys-and-hobbies/page/6/",
     "/category/home-and-garden/",
     "/category/home-and-garden/page/2/",
     "/category/home-and-garden/page/3/",
@@ -103,15 +98,15 @@
     "/category/sports-collectibles/page/3/",
     "/category/business-and-industrial/",
     "/category/business-and-industrial/page/2/",
-    "/category/business-and-industrial/page/3/",
     "/category/subscriptions/",
     "/category/subscriptions/page/2/",
     "/category/home/",
     "/category/home/page/2/",
     "/category/streaming/",
+    "/category/streaming/page/2/",
     "/category/grocery/"
   ],
-  "prioritySitemapDeals": 74,
+  "prioritySitemapDeals": 11,
   "sitemapFiles": [
     "sitemap-pages.xml",
     "sitemap-deals-priority.xml"
