@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-13T10:29:13.000Z",
+  "generatedAt": "2026-08-14T10:18:02.000Z",
   "catalogUpdatedAt": "2026-08-12T20:57:06.000Z",
   "publicDeals": 1185,
-  "indexableDeals": 15,
-  "browseOnlyDeals": 1170,
+  "indexableDeals": 7,
+  "browseOnlyDeals": 1178,
   "dealsEnriched": 1185,
   "merchants": 10,
   "merchantPages": 46,
@@ -14,7 +14,7 @@
   "collectionGroups": 13,
   "collectionPages": 13,
   "dealsWithCollectionPage": 737,
-  "authorityPages": 8,
+  "authorityPages": 7,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1185,
   "scores": {
@@ -22,9 +22,7 @@
     "median": 76,
     "maximum": 100
   },
-  "merchantPaths": [
-    "/merchant/amazon/"
-  ],
+  "merchantPaths": [],
   "merchantBrowsePaths": [
     "/merchant/ebay/",
     "/merchant/ebay/page/2/",
@@ -73,7 +71,7 @@
     "/merchant/sensibo/",
     "/merchant/surfshark/"
   ],
-  "indexableMerchantPages": 1,
+  "indexableMerchantPages": 0,
   "comparisonPaths": [],
   "comparisonBrowsePaths": [
     "/compare/lenovo-thinkpad-t14/",

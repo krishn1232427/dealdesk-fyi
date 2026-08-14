@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://dealdesk.fyi/merchants/</loc><lastmod>2026-08-12</lastmod></url>
-  <url><loc>https://dealdesk.fyi/merchant/amazon/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://dealdesk.fyi/comparisons/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://dealdesk.fyi/collections/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://dealdesk.fyi/deal-index/</loc><lastmod>2026-08-12</lastmod></url>
@@ -9,5 +8,5 @@
   <url><loc>https://dealdesk.fyi/editorial-policy/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://dealdesk.fyi/about/</loc><lastmod>2026-08-12</lastmod></url>
   <url><loc>https://dealdesk.fyi/feeds/</loc><lastmod>2026-08-12</lastmod></url>
-  <url><loc>https://dealdesk.fyi/price-history/</loc><lastmod>2026-08-13</lastmod></url>
+  <url><loc>https://dealdesk.fyi/price-history/</loc><lastmod>2026-08-14</lastmod></url>
 </urlset>

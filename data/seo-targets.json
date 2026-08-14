@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-13T10:29:13.000Z",
+  "generatedAt": "2026-08-14T10:18:02.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -41,7 +41,7 @@
       "id": "amazon-B0FWK41WF2-20260812",
       "url": "https://dealdesk.fyi/deals/amazon-b0fwk41wf2/",
       "title": "eufy C28 robot vacuum and mop deal: $499.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "eufy C28 robot vacuum and mop deal",
       "secondaryQueries": [
         "eufy C28 robot vacuum and mop price",
@@ -146,7 +146,7 @@
       "id": "amazon-B0C5C89QKZ-20260812",
       "url": "https://dealdesk.fyi/deals/amazon-b0c5c89qkz/",
       "title": "Anker SOLIX C1000 portable power station deal: $429.98 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Anker SOLIX C1000 portable power station deal",
       "secondaryQueries": [
         "Anker SOLIX C1000 portable power station price",
@@ -196,7 +196,7 @@
       "id": "amazon-B0CXZTT4MT-20260812",
       "url": "https://dealdesk.fyi/deals/amazon-b0cxztt4mt/",
       "title": "Amazon Fire TV Soundbar Plus deal: $149.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Amazon Fire TV Soundbar Plus deal",
       "secondaryQueries": [
         "Amazon Fire TV Soundbar Plus price",
@@ -248,7 +248,7 @@
       "id": "amazon-B0FMTSRKYL-20260812",
       "url": "https://dealdesk.fyi/deals/amazon-b0fmtsrkyl/",
       "title": "Keurig K-Mini Mate coffee maker deal: $49.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Keurig K-Mini Mate coffee maker deal",
       "secondaryQueries": [
         "Keurig K-Mini Mate coffee maker price",
@@ -385,7 +385,7 @@
       "id": "amazon-B07D5DN269-20260801",
       "url": "https://dealdesk.fyi/deals/amazon-b07d5dn269/",
       "title": "Niagara queen cooling mattress topper deal: $37.89 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Niagara queen cooling mattress topper deal",
       "secondaryQueries": [
         "Niagara queen cooling mattress topper price",
@@ -452,7 +452,7 @@
       "id": "amazon-B0DSP8J476-20260801",
       "url": "https://dealdesk.fyi/deals/amazon-b0dsp8j476/",
       "title": "Roborock Qrevo S5V robot vacuum and mop deal: $499.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Roborock Qrevo S5V robot vacuum and mop deal",
       "secondaryQueries": [
         "Roborock Qrevo S5V robot vacuum and mop price",
@@ -520,7 +520,7 @@
       "id": "amazon-B00JH98GR4-20260801",
       "url": "https://dealdesk.fyi/deals/amazon-b00jh98gr4/",
       "title": "Shark Navigator Lift-Away vacuum deal: $149.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Shark Navigator Lift-Away vacuum deal",
       "secondaryQueries": [
         "Shark Navigator Lift-Away vacuum price",
@@ -590,7 +590,7 @@
       "id": "amazon-B07MJL8NXR-20260801",
       "url": "https://dealdesk.fyi/deals/amazon-b07mjl8nxr/",
       "title": "Premier Protein chocolate shakes, 12-pack deal: $26.70 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Premier Protein chocolate shakes, 12-pack deal",
       "secondaryQueries": [
         "Premier Protein chocolate shakes, 12-pack price",

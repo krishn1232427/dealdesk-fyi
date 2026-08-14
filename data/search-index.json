@@ -1,11 +1,11 @@
 {
   "version": 2,
   "policy": "quality-diversity-v2",
-  "evaluatedAt": "2026-08-13T10:29:13.000Z",
+  "evaluatedAt": "2026-08-14T10:18:02.000Z",
   "catalogUpdatedAt": "2026-08-12T20:57:06.000Z",
   "publicDeals": 1185,
-  "indexableDeals": 15,
-  "browseOnlyDeals": 1170,
+  "indexableDeals": 7,
+  "browseOnlyDeals": 1178,
   "deals": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -28,8 +28,8 @@
     {
       "id": "amazon-B0FWK41WF2-20260812",
       "url": "/deals/amazon-b0fwk41wf2/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-12",
       "recheckAfter": "2026-08-13T20:57:06.000Z",
       "lastmod": "2026-08-12"
@@ -82,8 +82,8 @@
     {
       "id": "amazon-B0C5C89QKZ-20260812",
       "url": "/deals/amazon-b0c5c89qkz/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-12",
       "recheckAfter": "2026-08-13T20:57:06.000Z",
       "lastmod": "2026-08-12"
@@ -109,8 +109,8 @@
     {
       "id": "amazon-B0CXZTT4MT-20260812",
       "url": "/deals/amazon-b0cxztt4mt/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-12",
       "recheckAfter": "2026-08-13T20:57:06.000Z",
       "lastmod": "2026-08-12"
@@ -136,8 +136,8 @@
     {
       "id": "amazon-B0FMTSRKYL-20260812",
       "url": "/deals/amazon-b0fmtsrkyl/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-12",
       "recheckAfter": "2026-08-13T20:57:06.000Z",
       "lastmod": "2026-08-12"
@@ -208,8 +208,8 @@
     {
       "id": "amazon-B07D5DN269-20260801",
       "url": "/deals/amazon-b07d5dn269/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-14T09:24:30.000Z",
       "lastmod": "2026-08-11"
@@ -244,8 +244,8 @@
     {
       "id": "amazon-B0DSP8J476-20260801",
       "url": "/deals/amazon-b0dsp8j476/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-14T09:24:27.000Z",
       "lastmod": "2026-08-11"
@@ -280,8 +280,8 @@
     {
       "id": "amazon-B00JH98GR4-20260801",
       "url": "/deals/amazon-b00jh98gr4/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-14T09:24:22.000Z",
       "lastmod": "2026-08-11"
@@ -316,8 +316,8 @@
     {
       "id": "amazon-B07MJL8NXR-20260801",
       "url": "/deals/amazon-b07mjl8nxr/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-14T09:24:41.000Z",
       "lastmod": "2026-08-11"
