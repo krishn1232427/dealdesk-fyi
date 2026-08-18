@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18T05:17:20.000Z",
+  "source": "Signed-in Rakuten Advertising publisher dashboard",
+  "publisher": {
+    "publisherID": "4733148"
+  },
+  "advertiser": {
+    "name": "Giftcards.com",
+    "advertiserID": "44432"
+  },
+  "dashboardVerification": {
+    "relationshipStatusAsDisplayed": "Not partnered",
+    "applicationStatus": "ineligible",
+    "eligibilityFinding": "Advertiser-supplied terms are not met and this account cannot partner.",
+    "privateOfferVisible": true,
+    "acceptanceActionTaken": false,
+    "finding": "The current signed-in dashboard confirms that DealDesk is not partnered and cannot partner under the advertiser's present eligibility terms. The visible private offer remains untouched and does not authorize payable links."
+  },
+  "priorEvidence": {
+    "record": "data/affiliate-evidence/giftcards-rakuten-private-offer-20260813.json",
+    "finding": "The earlier notification established only that a private offer was visible. This dashboard verification supplies the controlling relationship and eligibility status."
+  },
+  "tracking": {
+    "status": "not-authorized",
+    "requirement": "Do not accept the private offer or generate links while the account cannot partner. If eligibility later changes, confirm Partnered status and an assigned offer, then verify an exact DealDesk link, destination, attribution, product eligibility, and confidential program restrictions before publication."
+  },
+  "publicOfferResearch": {
+    "status": "preserved-from-prior-evidence",
+    "priorEvidenceRecord": "data/affiliate-evidence/giftcards-rakuten-private-offer-20260813.json",
+    "verifiedAt": "2026-08-18T04:48:33.000Z",
+    "candidatesPreserved": 2,
+    "publicationAllowed": false
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "The signed-in dashboard shows Not partnered and says this account cannot partner because advertiser-supplied terms are not met. The private offer was not accepted, and no payable Rakuten link is authorized."
+  },
+  "privacy": "No confidential private-offer terms, offer name, offer dates, commission data, raw email body, passwords, cookies, payment data, tax data, session tokens, or acceptance URL is stored in this evidence record."
+}

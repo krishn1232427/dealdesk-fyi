@@ -260,7 +260,7 @@
       function loadCatalog() {
         if (catalogDeals) return Promise.resolve(true);
         if (catalogPromise) return catalogPromise;
-        catalogPromise = fetch("/data/latest-deals.json?v=msy73ioo", { cache: "no-store" })
+        catalogPromise = fetch("/data/latest-deals.json?v=msy7ny0w", { cache: "no-store" })
           .then(function (response) {
             if (!response.ok) throw new Error("Catalog unavailable");
             return response.json();

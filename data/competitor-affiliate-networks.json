@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T04:48:33.000Z",
+  "updatedAt": "2026-08-18T05:17:20.000Z",
   "canonicalDealDeskNetworkRegistry": "data/affiliate-networks.json",
   "scope": "Observed attribution paths from a current sample of DealNews and DealSea listings. This is competitive affiliate intelligence, not a claim that every link on either site uses the same network.",
   "publicationRule": "DealDesk may publish a deal only when the advertiser relationship is approved, the exact DealDesk tracking link is payable, and the live price, original price, discount, availability, and material restrictions are verified.",
@@ -95,7 +95,7 @@
       "access": "active publisher account",
       "publisherReference": "8007406",
       "canPublish": true,
-      "notes": "NordVPN, Surfshark, NordPass, Magzter, Proton, CuriosityStream, and Malwarebytes have approved exact payable links and verified public offers. McAfee NA is a joined advertiser reactivated on 2026-08-13, but it remains nonpublic until its current assigned CJ actions and exact DealDesk link are verified. Other advertiser applications remain independently pending or unavailable."
+      "notes": "NordVPN, Surfshark, NordPass, Magzter, Proton, CuriosityStream, and Malwarebytes have approved exact payable links and verified public offers. McAfee NA advertiser 5306132 is pending: the signed-in CJ dashboard shows Applied 1-Aug-2026, zero results under My Advertisers Active, and zero advertiser-filtered links. Its researched public offer remains unpublished. Other advertiser applications remain independently pending or unavailable."
     },
     {
       "network": "Awin",
@@ -128,11 +128,11 @@
     },
     {
       "network": "Rakuten Advertising",
-      "access": "active publisher account; Sensibo and JD Sports Partnered; one exact payable Sensibo product link verified; Giftcards.com private-offer status unverified",
+      "access": "active publisher account; Sensibo and JD Sports Partnered; one exact payable Sensibo product link verified; Giftcards.com Not partnered and currently ineligible",
       "publisherReference": "4733148",
       "canPublish": true,
-      "notes": "DealDesk's publisher channel is active, its PayPal payment method is verified, and the profile is 3/4 complete. Sensibo is Partnered, and the Air + Room Sensor SKU, exact Rakuten link, current price, availability, and genuine image are verified. JD Sports is also Partnered but remains nonpublic because no reviewed markdown met DealDesk's listing standard. Giftcards.com sent DealDesk a confidential private-offer notification, but official Rakuten documentation says this can be either an existing-partner offer or a new partnership opportunity; the dashboard must confirm which applies. Costway and PureVPN remain pending. Sam's Club, Dyson, and LEGO currently report that DealDesk does not meet their supplied eligibility terms.",
-      "nextAction": "Recheck the verified Sensibo offer every 24 hours. Verify Giftcards.com Partnered and offer-assignment status in the signed-in dashboard without disclosing private terms or accepting a new legal relationship without account-owner approval. Continue reviewing each Rakuten advertiser independently; network access never grants blanket merchant authorization.",
+      "notes": "DealDesk's publisher channel is active, its PayPal payment method is verified, and the profile is 3/4 complete. Sensibo is Partnered, and the Air + Room Sensor SKU, exact Rakuten link, current price, availability, and genuine image are verified. JD Sports is also Partnered but remains nonpublic because no reviewed markdown met DealDesk's listing standard. Giftcards.com is Not partnered; the signed-in dashboard says advertiser-supplied terms are not met and this account cannot partner. Its private offer remains visible but untouched, and no confidential terms are recorded. Costway and PureVPN remain pending. Sam's Club, Dyson, and LEGO currently report that DealDesk does not meet their supplied eligibility terms.",
+      "nextAction": "Recheck the verified Sensibo offer every 24 hours. Leave Giftcards.com's private offer untouched and do not generate or publish links unless advertiser eligibility changes and Partnered status plus an exact payable offer are verified. Continue reviewing each Rakuten advertiser independently; network access never grants blanket merchant authorization.",
       "priority": 3
     },
     {
