@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T20:57:06.000Z",
+  "generatedAt": "2026-08-18T05:01:27.000Z",
   "deals": [
     {
       "id": "amazon-B0FWK41WF2-20260812",
@@ -7098,12 +7098,6 @@
       "network": "amazon-associates",
       "affiliateURL": "https://www.amazon.com/gp/video/storefront/subscription/default?tag=dealdesk-20",
       "validUntil": ""
-    },
-    {
-      "id": "amazon-music-unlimited-20260731",
-      "network": "amazon-associates",
-      "affiliateURL": "https://www.amazon.com/music/unlimited?tag=dealdesk-20",
-      "validUntil": "2026-08-17T15:00:00.000Z"
     },
     {
       "id": "cj-curiositystream-standard-monthly-20260811",

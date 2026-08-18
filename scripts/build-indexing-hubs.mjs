@@ -199,6 +199,12 @@ const pagination = (basePath, currentPage, pageCount) => {
 };
 
 const headerCategoryLink = (key, label) => indexableCategoryKeys.has(key) ? `<a href="/category/${key}/">${label}</a>` : "";
+const filterCategoryNavigation = (html) => [
+  ["subscriptions", "Subscription deals"],
+  ["streaming", "Streaming deals"],
+].reduce((current, [key, label]) => indexableCategoryKeys.has(key)
+  ? current
+  : current.replaceAll(`<a href="/category/${key}/">${label}</a>`, ""), html);
 const header = (current = "") => `<header class="site-header"><nav class="nav shell" aria-label="Primary navigation"><a class="brand" href="/" aria-label="DealDesk home"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><div class="nav-links"><a href="/latest-deals/"${current === "latest" ? ' aria-current="page"' : ""}>Latest deals</a>${headerCategoryLink("subscriptions", "Subscription deals")}${headerCategoryLink("streaming", "Streaming deals")}<a href="/deals/"${current === "deals" ? ' aria-current="page"' : ""}>All deals</a><a href="/categories/"${current === "categories" ? ' aria-current="page"' : ""}>Categories</a></div></nav></header>`;
 const footer = `<footer class="footer"><div class="shell footer-inner"><a class="brand footer-brand" href="/"><span class="brand-mark" aria-hidden="true">D</span><span>DealDesk</span></a><p>Clear prices. Better clicks.</p><div class="footer-links"><a href="/deals/">All deals</a><a href="/categories/">Categories</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a></div></div><div class="shell disclosure">DealDesk may earn a commission when you buy through our links. Prices and availability can change at checkout.</div></footer>`;
 
@@ -440,6 +446,7 @@ for (let index = 0; index < deals.length; index += 1) {
   const next = discoveryIndex >= 0 && discoveryIndex < discoveryDeals.length - 1 ? discoveryDeals[discoveryIndex + 1] : null;
   const file = resolve(root, dealPath(deal).replace(/^\//, ""), "index.html");
   let html = await readFile(file, "utf8");
+  html = filterCategoryNavigation(html);
 
   if (!html.includes('name="dealdesk-build"')) {
     html = html.replace('<meta name="robots"', `<meta name="dealdesk-build" content="${buildID}" />\n  <meta name="robots"`);
@@ -524,6 +531,7 @@ const homeHubSection = `<!-- INDEXING-HUBS:START -->
         </section>
         <!-- INDEXING-HUBS:END -->`;
 let homeHTML = await readFile(resolve(root, "index.html"), "utf8");
+homeHTML = filterCategoryNavigation(homeHTML);
 if (!homeHTML.includes('/assets/indexing.css')) {
   homeHTML = homeHTML.replace(/(<link rel="stylesheet" href="\/styles\.css\?v=[^"]+" \/>)/, `$1\n    <link rel="stylesheet" href="/assets/indexing.css?v=${buildID}" />`);
 }
@@ -541,6 +549,7 @@ await writeFile(resolve(root, "index.html"), homeHTML);
 const latestBrowseControl = browseOptIn(pagePath("/deals/", 2), browseOnlyDeals.length);
 const latestHubSection = `<!-- INDEXING-LATEST-HUB:START --><section class="indexing-hubs latest-indexing-hubs" aria-labelledby="latest-indexing-hubs-title"><div class="indexing-hubs-heading"><div><span class="page-kicker"><span aria-hidden="true"></span> Crawlable paths</span><h2 id="latest-indexing-hubs-title">Continue through current offers</h2></div><p>The interactive view and static directory below use the same search-selected offer cohort.</p></div><div class="crawl-hub-actions"><a href="/deals/">Browse all ${indexableDeals.length} current deals</a><a href="/categories/">Browse current categories</a></div>${qualityDealDirectory(indexableDeals, "latest-current-quality-deals")}${latestBrowseControl}</section><!-- INDEXING-LATEST-HUB:END -->`;
 let latestHTML = await readFile(resolve(root, "latest-deals", "index.html"), "utf8");
+latestHTML = filterCategoryNavigation(latestHTML);
 if (!latestHTML.includes('/assets/indexing.css')) {
   latestHTML = latestHTML.replace(/(<link rel="stylesheet" href="\/styles\.css\?v=[^"]+" \/>)/, `$1\n  <link rel="stylesheet" href="/assets/indexing.css?v=${buildID}" />`);
 }
