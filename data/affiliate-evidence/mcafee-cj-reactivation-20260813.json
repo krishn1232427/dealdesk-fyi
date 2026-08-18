@@ -64,5 +64,7 @@
     "allowed": false,
     "reason": "The advertiser relationship and public consumer offer are verified, but the current CJ payable terms and exact DealDesk tracking link are not. DealDesk's commission-only feed must remain fail-closed."
   },
+  "supersededBy": "data/affiliate-evidence/mcafee-cj-application-status-20260818.json",
+  "supersededAt": "2026-08-18T05:17:20.000Z",
   "privacy": "No raw email body, passwords, cookies, payment data, tax data, session tokens, or transient email redirect URLs are stored in this evidence record."
 }

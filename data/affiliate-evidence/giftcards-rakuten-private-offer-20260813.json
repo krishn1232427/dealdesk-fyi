@@ -51,5 +51,7 @@
     "allowed": false,
     "reason": "The private-offer email does not establish an accepted or currently assigned relationship, no exact payable Rakuten link is verified, and the strongest public promotion has a product-page conflict."
   },
+  "supersededBy": "data/affiliate-evidence/giftcards-rakuten-ineligible-20260818.json",
+  "supersededAt": "2026-08-18T05:17:20.000Z",
   "privacy": "No confidential commission tiers, private offer name, private offer dates, raw email body, passwords, cookies, payment data, tax data, session tokens, or acceptance URL is stored in this evidence record."
 }

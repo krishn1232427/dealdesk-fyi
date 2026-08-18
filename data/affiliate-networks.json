@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18T04:48:33.000Z",
+  "updatedAt": "2026-08-18T05:17:20.000Z",
   "scope": "A comprehensive working register of credible affiliate networks, subnetworks, creator-commerce platforms, CPA networks, and merchant-owned programs relevant to a US consumer-deals publisher. The market is open-ended, so the daily refresh adds credible networks as they are discovered rather than claiming this is every regional or private network worldwide.",
   "publicationRule": "A network-level status never authorizes an offer. DealDesk may publish only an approved merchant relationship with an exact payable DealDesk tracking link, a verified live offer, and genuine merchant or product imagery. Unpaid, pending, untracked, unavailable, broken, or visually unverified offers stay hidden.",
   "refreshPolicy": {
@@ -185,8 +185,8 @@
       "commissionAccess": true,
       "canPublish": true,
       "blockingReason": null,
-      "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, Proton, CuriosityStream, and Malwarebytes links and live offers verified. McAfee NA is a joined advertiser reactivated on 2026-08-13; use the signed-in CJ dashboard to confirm its current assigned payable actions and generate an exact DealDesk link before publishing the researched public offer.",
-      "lastCheckedAt": "2026-08-18T04:48:33.000Z",
+      "nextAction": "Keep NordVPN, Surfshark, NordPass, Magzter, Proton, CuriosityStream, and Malwarebytes links and live offers verified. McAfee NA remains pending: CJ shows Applied 1-Aug-2026, no My Advertisers Active result, and no advertiser-filtered links. Keep the researched public offer unpublished unless the relationship becomes Active and an exact payable DealDesk link is verified.",
+      "lastCheckedAt": "2026-08-18T05:17:20.000Z",
       "evidenceUrl": "https://www.cj.com/publisher"
     },
     {
@@ -236,8 +236,8 @@
       "commissionAccess": true,
       "canPublish": true,
       "blockingReason": null,
-      "nextAction": "Recheck Sensibo every 24 hours. JD Sports is Partnered, but publish only a real markdown whose exact tracking link, non-excluded SKU, availability, and genuine product image are verified together. Giftcards.com sent a confidential private-offer notification; verify whether DealDesk is already Partnered or being recruited, and do not accept or publish until the account owner authorizes the relationship and exact link and shopper offer are verified.",
-      "lastCheckedAt": "2026-08-18T04:48:33.000Z",
+      "nextAction": "Recheck Sensibo every 24 hours. JD Sports is Partnered, but publish only a real markdown whose exact tracking link, non-excluded SKU, availability, and genuine product image are verified together. Giftcards.com is Not partnered, and Rakuten says advertiser-supplied terms are not met and this account cannot partner; leave the visible private offer untouched and do not generate or publish links unless eligibility changes and a payable relationship is verified.",
+      "lastCheckedAt": "2026-08-18T05:17:20.000Z",
       "evidenceUrl": "https://rakutenadvertising.com/affiliate/"
     },
     {
