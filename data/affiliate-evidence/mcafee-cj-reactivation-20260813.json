@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18T04:48:33.000Z",
+  "source": "Authenticated CJ deactivation and reactivation notifications delivered to the verified DealDesk operations mailbox, plus McAfee's live U.S. antivirus offer and legal terms pages",
+  "publisher": {
+    "companyID": "8007406",
+    "memberRouteID": "7685648",
+    "trackingSiteID": "101847838"
+  },
+  "advertiser": {
+    "name": "McAfee North America",
+    "advertiserID": "5306132",
+    "relationship": "Active joined advertiser",
+    "relationshipConfirmedAt": "2026-08-13T17:11:08.000Z"
+  },
+  "relationshipEvidence": {
+    "transientDeactivationAt": "2026-08-13T17:05:09.000Z",
+    "reactivatedAt": "2026-08-13T17:11:08.000Z",
+    "finding": "CJ stated that the publisher partnership would remain active during the advertiser's brief account deactivation, then confirmed six minutes later that McAfee NA had reactivated and was one of DealDesk's joined advertisers."
+  },
+  "assignedTerms": {
+    "status": "not-currently-verified",
+    "finding": "The emails confirm the relationship but do not state the currently assigned payable actions, commission amounts, attribution window, approved creative rights, or an exact DealDesk tracking link. Older values retained in the working register are labeled as not freshly reverified."
+  },
+  "tracking": {
+    "status": "unverified",
+    "requirement": "Use the signed-in CJ dashboard to confirm the current assigned terms and generate an exact link for DealDesk site 101847838. Verify the link ID, destination, attribution, eligible products, and advertiser restrictions before publication."
+  },
+  "publicOfferResearch": {
+    "offerURL": "https://www.mcafee.com/en-us/antivirus.html",
+    "legalTermsURL": "https://www.mcafee.com/en-us/consumer-support/policy/legal.html",
+    "verifiedAt": "2026-08-18T04:48:33.000Z",
+    "plans": [
+      {
+        "name": "McAfee Total Protection Basic",
+        "coverage": "1 device",
+        "firstYearUSD": 29.99,
+        "renewalReferenceUSD": 89.99
+      },
+      {
+        "name": "McAfee Total Protection Essential",
+        "coverage": "1 user and 5 devices",
+        "firstYearUSD": 39.99,
+        "renewalReferenceUSD": 119.99,
+        "candidate": true
+      },
+      {
+        "name": "McAfee+ Premium Individual",
+        "coverage": "1 user and supported household devices, subject to fair use",
+        "firstYearUSD": 49.99,
+        "renewalReferenceUSD": 149.99
+      },
+      {
+        "name": "McAfee+ Advanced Individual",
+        "coverage": "1 user and supported household devices, subject to fair use",
+        "firstYearUSD": 89.99,
+        "renewalReferenceUSD": 199.99
+      }
+    ],
+    "materialTerms": "The introductory first-year prices are presented for qualifying new customers without an existing McAfee subscription. Plans auto-renew annually; the charge occurs within 30 days before expiry at the renewal price then in effect, which may change with advance notice. Vermont residents must opt in. Tax may apply. McAfee states a 30-day initial-purchase refund window and a 60-day refund window after an auto-renewal charge. Unlimited-device language is limited to supported household devices owned for personal, noncommercial use and is subject to fair use.",
+    "imageURL": "https://media.mcafeeassets.com/en-us/antivirus/_jcr_content/root/section_781047314_co/main_section_content/flexcard_copy_copy_c/flexcard_img.coreimg.jpeg/1746113247141/rtb-summary-image.jpeg"
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "The advertiser relationship and public consumer offer are verified, but the current CJ payable terms and exact DealDesk tracking link are not. DealDesk's commission-only feed must remain fail-closed."
+  },
+  "privacy": "No raw email body, passwords, cookies, payment data, tax data, session tokens, or transient email redirect URLs are stored in this evidence record."
+}

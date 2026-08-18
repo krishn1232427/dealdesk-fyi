@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T09:25:05.000Z",
+  "updatedAt": "2026-08-18T05:01:27.000Z",
   "curationNote": "Commission-qualified streaming feed. Every active listing requires an approved advertiser relationship, an exact payable DealDesk link, current customer terms, and genuine merchant imagery. Regular subscription pricing is never presented as a discount without live evidence.",
   "deals": [
     {
@@ -126,16 +126,16 @@
       "priceNote": "Standard Monthly is $5.99 per month with no trial; cancel anytime. Tax is not included in the pre-checkout price.",
       "cardCopy": "Documentary streaming in 4K from $5.99/month; no trial and no promotional discount currently shown.",
       "summary": "CuriosityStream's Standard plan currently starts at $5.99 per month with 4K access, no trial, and cancellation anytime. Standard Annual is $49.99 per year; Smart Bundle options are $11.99 per month or $79.99 per year. No promotional discount is currently shown.",
-      "verifiedAt": "2026-08-11T05:40:55.000Z",
+      "verifiedAt": "2026-08-18T04:59:27.000Z",
       "rankingScore": 72,
       "rankingReason": "A freshly verified $5.99 entry price, exact payable CJ attribution, official merchant imagery, and a fixed $10 qualifying-lead payout without an unsupported discount claim",
       "priority": 2,
       "status": "active",
-      "recheckAfter": "2026-08-12T05:38:45.000Z",
+      "recheckAfter": "2026-08-19T04:59:27.000Z",
       "publishedAt": "2026-08-11T05:40:55.000Z",
       "sourceType": "cj-text-link",
-      "verificationSource": "Authenticated approval email; signed-in CJ relationship and exact link; live CuriosityStream plan data and official welcome-page image",
-      "evidenceRecord": "data/affiliate-evidence/curiositystream-cj-20260811.json"
+      "verificationSource": "Authenticated approval and relationship evidence; exact CJ link rechecked end to end; live CuriosityStream plan data and merchant-declared welcome-page image rechecked",
+      "evidenceRecord": "data/affiliate-evidence/curiositystream-cj-20260818.json"
     }
   ]
 }

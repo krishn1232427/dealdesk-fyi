@@ -16,11 +16,12 @@ const [latestCatalog, searchIndexPayload, history, indexHTML, sitemap, csv] = aw
 ]);
 
 const currentDeals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
-const indexableURLs = new Set((Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [])
+const searchIndexDeals = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
+const indexableURLs = new Set(searchIndexDeals
   .filter((entry) => entry.indexable === true)
   .map((entry) => entry.url));
 if (!currentDeals.length) fail("No public deals to validate");
-if (!indexableURLs.size) fail("No indexable quality cohort to validate");
+if (searchIndexDeals.length !== currentDeals.length) fail("Search index does not cover the current public catalog");
 if (!history || history.version !== 1 || !history.deals || typeof history.deals !== "object") fail("Invalid price-history.json structure");
 
 const activeRecords = Object.values(history.deals).filter((record) => record.active);

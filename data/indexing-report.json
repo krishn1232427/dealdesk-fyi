@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-crawl-v3",
-  "generatedAt": "2026-08-17T09:58:45.000Z",
-  "catalogUpdatedAt": "2026-08-12T20:57:06.000Z",
-  "publicDeals": 1185,
-  "indexableDeals": 7,
-  "browseOnlyDeals": 1178,
+  "generatedAt": "2026-08-18T05:01:27.000Z",
+  "catalogUpdatedAt": "2026-08-18T05:01:27.000Z",
+  "publicDeals": 1184,
+  "indexableDeals": 1,
+  "browseOnlyDeals": 1183,
   "archivePages": 38,
   "indexableArchivePages": 1,
   "archivePaths": [
@@ -51,12 +51,9 @@
     "/deals/page/38/"
   ],
   "categories": 10,
-  "categoryPages": 45,
-  "indexableCategoryPages": 2,
-  "categoryPaths": [
-    "/category/subscriptions/",
-    "/category/streaming/"
-  ],
+  "categoryPages": 43,
+  "indexableCategoryPages": 0,
+  "categoryPaths": [],
   "categoryBrowsePaths": [
     "/category/electronics/",
     "/category/electronics/page/2/",
@@ -98,13 +95,11 @@
     "/category/business-and-industrial/",
     "/category/business-and-industrial/page/2/",
     "/category/subscriptions/",
-    "/category/subscriptions/page/2/",
     "/category/home/",
     "/category/streaming/",
-    "/category/streaming/page/2/",
     "/category/grocery/"
   ],
-  "prioritySitemapDeals": 7,
+  "prioritySitemapDeals": 1,
   "sitemapFiles": [
     "sitemap-pages.xml",
     "sitemap-deals-priority.xml"

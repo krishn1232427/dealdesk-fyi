@@ -1,17 +1,17 @@
 {
   "version": 2,
   "policy": "quality-diversity-v2",
-  "evaluatedAt": "2026-08-17T09:58:45.000Z",
-  "catalogUpdatedAt": "2026-08-12T20:57:06.000Z",
-  "publicDeals": 1185,
-  "indexableDeals": 7,
-  "browseOnlyDeals": 1178,
+  "evaluatedAt": "2026-08-18T05:01:27.000Z",
+  "catalogUpdatedAt": "2026-08-18T05:01:27.000Z",
+  "publicDeals": 1184,
+  "indexableDeals": 1,
+  "browseOnlyDeals": 1183,
   "deals": [
     {
       "id": "amazon-prime-young-adults-20260801",
       "url": "/deals/amazon-prime-young-adults/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-18T09:24:57.000Z",
       "lastmod": "2026-08-11"
@@ -91,8 +91,8 @@
     {
       "id": "cj-surfshark-starter-20260801",
       "url": "/deals/cj-surfshark-starter/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-18T09:25:24.000Z",
       "lastmod": "2026-08-11"
@@ -172,11 +172,11 @@
     {
       "id": "cj-curiositystream-standard-monthly-20260811",
       "url": "/deals/cj-curiositystream-standard-monthly/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T05:38:45.000Z",
-      "lastmod": "2026-08-11"
+      "indexable": true,
+      "reason": "verification-current-curated",
+      "verifiedAt": "2026-08-18",
+      "recheckAfter": "2026-08-19T04:59:27.000Z",
+      "lastmod": "2026-08-18"
     },
     {
       "id": "ebay-item-286014554031",
@@ -190,8 +190,8 @@
     {
       "id": "amazon-audible-standard-trial-20260801",
       "url": "/deals/amazon-audible-standard-trial/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-18T09:24:59.000Z",
       "lastmod": "2026-08-11"
@@ -262,8 +262,8 @@
     {
       "id": "cj-nordpass-premium-20260801",
       "url": "/deals/cj-nordpass-premium/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-18T09:29:02.000Z",
       "lastmod": "2026-08-11"
@@ -298,8 +298,8 @@
     {
       "id": "amazon-kids-plus-trial-20260801",
       "url": "/deals/amazon-kids-plus-trial/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-11",
       "recheckAfter": "2026-08-18T09:25:01.000Z",
       "lastmod": "2026-08-11"
@@ -332,12 +332,12 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "amazon-music-unlimited-20260731",
-      "url": "/deals/amazon-music-unlimited/",
+      "id": "amazon-prime-video-channels-paid-20260731",
+      "url": "/deals/amazon-prime-video-channels-paid/",
       "indexable": false,
-      "reason": "verification-overdue",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:25:05.000Z",
+      "recheckAfter": "2026-08-18T09:25:04.000Z",
       "lastmod": "2026-08-11"
     },
     {
@@ -350,12 +350,12 @@
       "lastmod": "2026-08-11"
     },
     {
-      "id": "amazon-prime-video-channels-paid-20260731",
-      "url": "/deals/amazon-prime-video-channels-paid/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "id": "amazon-prime-video-free-trial-20260731",
+      "url": "/deals/amazon-prime-video-free-trial/",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-18T09:25:04.000Z",
+      "recheckAfter": "2026-08-18T09:25:03.000Z",
       "lastmod": "2026-08-11"
     },
     {
@@ -366,24 +366,6 @@
       "verifiedAt": "2026-08-04",
       "recheckAfter": "2026-08-05T07:44:13.279Z",
       "lastmod": "2026-08-04"
-    },
-    {
-      "id": "amazon-prime-video-free-trial-20260731",
-      "url": "/deals/amazon-prime-video-free-trial/",
-      "indexable": true,
-      "reason": "verification-current-curated",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-18T09:25:03.000Z",
-      "lastmod": "2026-08-11"
-    },
-    {
-      "id": "ebay-item-277922293329-2560860938882",
-      "url": "/deals/ebay-item-277922293329-2560860938882/",
-      "indexable": false,
-      "reason": "verification-overdue",
-      "verifiedAt": "2026-08-11",
-      "recheckAfter": "2026-08-12T09:43:14.703Z",
-      "lastmod": "2026-08-11"
     },
     {
       "id": "ebay-item-374922753524",
@@ -1108,6 +1090,15 @@
     {
       "id": "ebay-item-366590911488",
       "url": "/deals/ebay-item-366590911488/",
+      "indexable": false,
+      "reason": "verification-overdue",
+      "verifiedAt": "2026-08-11",
+      "recheckAfter": "2026-08-12T09:43:14.703Z",
+      "lastmod": "2026-08-11"
+    },
+    {
+      "id": "ebay-item-277922293329-2560860938882",
+      "url": "/deals/ebay-item-277922293329-2560860938882/",
       "indexable": false,
       "reason": "verification-overdue",
       "verifiedAt": "2026-08-11",

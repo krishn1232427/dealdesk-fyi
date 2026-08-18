@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-11T09:30:15.000Z",
+  "updatedAt": "2026-08-18T05:01:27.000Z",
   "source": "Signed-in affiliate-network publisher accounts, advertiser program profiles, and verified competitor-link attribution",
   "publisherAccounts": [
     {
@@ -36,7 +36,7 @@
       "companyID": "8007406",
       "memberRouteID": "7685648",
       "trackingSiteID": "101847838",
-      "status": "active; payout onboarding verified; CuriosityStream and Malwarebytes have exact verified payable links and live offers",
+      "status": "active; payout onboarding verified; CuriosityStream and Malwarebytes have exact verified payable links and live offers; McAfee NA is a joined advertiser reactivated on 2026-08-13 but remains nonpublic until an exact link and current payable terms are verified",
       "commissionAccess": true,
       "commissionAccrualReady": true,
       "payoutReady": true,
@@ -57,6 +57,14 @@
           "relationship": "active",
           "approvedAt": "2026-08-10T14:35:05.000Z",
           "trackingLinkStatus": "verified"
+        },
+        {
+          "network": "cj",
+          "merchantName": "McAfee North America",
+          "advertiserID": "5306132",
+          "relationship": "active",
+          "relationshipConfirmedAt": "2026-08-13T17:11:08.000Z",
+          "trackingLinkStatus": "unverified"
         }
       ]
     },
@@ -71,7 +79,7 @@
     {
       "network": "rakuten-advertising",
       "publisherID": "4733148",
-      "status": "active publisher account; Sensibo and JD Sports are Partnered; Sensibo has one verified payable product link; profile 3/4 complete; PayPal payment method verified",
+      "status": "active publisher account; Sensibo and JD Sports are Partnered; Sensibo has one verified payable product link; Giftcards.com sent a private-offer notification whose partnership and assignment status still require dashboard verification; profile 3/4 complete; PayPal payment method verified",
       "profileCompletion": "3/4",
       "payoutSetupStatus": "PayPal selected and verified",
       "payoutReady": true,
@@ -226,7 +234,7 @@
       "applicationStatus": "active",
       "appliedAt": "2026-08-01T07:16:07Z",
       "approvedAt": "2026-08-10T14:35:05.000Z",
-      "reviewedAt": "2026-08-11T05:40:55.000Z",
+      "reviewedAt": "2026-08-18T04:59:27.000Z",
       "manualReview": true,
       "relationshipEvidence": "Authenticated CJ advertiser email: Thanks for choosing CuriosityStream's Affiliate Program!; signed-in CJ dashboard relationship is Active",
       "trackingID": "101847838",
@@ -235,14 +243,14 @@
       "trackingLinkStatus": "verified",
       "offerURL": "https://curiositystream.com/watch/welcome",
       "currentOffer": "Standard Monthly 5.99 USD; Standard Annual 49.99 USD; Smart Bundle Monthly 11.99 USD; Smart Bundle Annual 79.99 USD; all plans show no trial, 4K, and cancel anytime",
-      "offerVerifiedAt": "2026-08-11T05:38:45.000Z",
+      "offerVerifiedAt": "2026-08-18T04:59:27.000Z",
       "imageURL": "https://cdn.curiositystream.com/social/fb_share.jpg",
-      "imageVerifiedAt": "2026-08-11T05:39:28.000Z",
+      "imageVerifiedAt": "2026-08-18T04:59:27.000Z",
       "commissionEligible": true,
       "publicPublishingAllowed": true,
       "restrictions": "Do not bid on the CuriosityStream trademark, domain, misspellings, or variations in paid search. Publish only the exact DealDesk CJ link and prices verified on the live merchant page. Do not present the stale America250 weekend creative as a current discount; recheck price, availability, destination, terms, and imagery within 24 hours.",
       "summary": "CuriosityStream approved DealDesk, and the signed-in CJ account shows advertiser 4727234 as Active with exact text link 17171513. The canonical DealDesk link redirects to the live CuriosityStream welcome page with CJ attribution intact. Current plans, no-trial terms, cancel-anytime language, and the official 1920×1080 welcome-page image were verified; no discount is claimed because the live plans report none.",
-      "evidenceRecord": "data/affiliate-evidence/curiositystream-cj-20260811.json",
+      "evidenceRecord": "data/affiliate-evidence/curiositystream-cj-20260818.json",
       "priority": 5
     },
     {
@@ -558,14 +566,26 @@
       "merchantURL": "https://www.mcafee.com/",
       "profileURL": "https://members.cj.com/member/7685648/publisher/advertisers/findAdvertisers.cj",
       "category": "Security-software subscription",
-      "commission": "10.00 USD minimum per eligible purchase",
-      "attribution": "30 days",
-      "status": "Pending advertiser approval — do not publish tracked links yet",
-      "applicationStatus": "pending",
+      "commission": "Previously listed as a 10.00 USD minimum per eligible purchase; current assigned payable actions have not been reverified in the signed-in CJ dashboard",
+      "attribution": "Previously listed as 30 days; current assigned terms have not been reverified in the signed-in CJ dashboard",
+      "status": "Active joined-advertiser relationship confirmed by CJ reactivation email; exact DealDesk link and current assigned payable terms are unverified — do not publish",
+      "applicationStatus": "active",
       "appliedAt": "2026-08-01T07:47:44Z",
+      "relationshipConfirmedAt": "2026-08-13T17:11:08.000Z",
+      "reactivatedAt": "2026-08-13T17:11:08.000Z",
+      "transientDeactivationAt": "2026-08-13T17:05:09.000Z",
+      "reviewedAt": "2026-08-18T04:48:33.000Z",
+      "relationshipEvidence": "Authenticated CJ transactional emails confirm that McAfee NA is one of DealDesk's joined advertisers, remained partnered during a brief deactivation, and reactivated six minutes later",
+      "trackingLinkStatus": "unverified",
       "commissionEligible": false,
       "publicPublishingAllowed": false,
-      "summary": "CJ confirms the McAfee North America application is pending. Only listed qualifying products may earn the $10 minimum payout, and trademark paid-search bidding is prohibited without approval.",
+      "offerURL": "https://www.mcafee.com/en-us/antivirus.html",
+      "currentOfferCandidate": "McAfee Total Protection Essential for 1 user and 5 supported devices is publicly shown at 39.99 USD for the first year for qualifying new customers, compared with a 119.99 USD renewal/reference price",
+      "offerVerifiedAt": "2026-08-18T04:48:33.000Z",
+      "imageURL": "https://media.mcafeeassets.com/en-us/antivirus/_jcr_content/root/section_781047314_co/main_section_content/flexcard_copy_copy_c/flexcard_img.coreimg.jpeg/1746113247141/rtb-summary-image.jpeg",
+      "restrictions": "Keep the public offer hidden until the signed-in CJ dashboard confirms current payable actions and an exact DealDesk link. If later published, state that the introductory price is for qualifying new customers, the subscription auto-renews annually, the renewal price then in effect may change with notice, tax may apply, Vermont residents must opt in, and the refund window is 30 days after initial purchase or 60 days after an auto-renewal charge. Follow McAfee and CJ trademark, paid-search, creative, household-device, fair-use, and product-eligibility rules.",
+      "summary": "Authenticated CJ email confirms that McAfee NA advertiser 5306132 is a joined DealDesk advertiser and reactivated on 2026-08-13 after a six-minute account interruption. McAfee's live U.S. page currently shows Total Protection Essential for 5 devices at 39.99 USD for the first year versus a 119.99 USD renewal/reference price, with auto-renewal and refund disclosures. The researched offer remains nonpublic because the exact DealDesk tracking link and current assigned CJ payable terms have not been verified.",
+      "evidenceRecord": "data/affiliate-evidence/mcafee-cj-reactivation-20260813.json",
       "priority": 21
     },
     {
@@ -1400,6 +1420,37 @@
       "restrictions": "No trademark bidding, illegal-content placement, hacking or file-sharing promotion, or unapproved claims. Promote PureVPN only for internet security and online privacy. Direct and deep linking are allowed after approval; recurring sales are not commissioned.",
       "summary": "Rakuten's live baseline offer lists a 25% first-sale commission and a 90-day cookie. DealDesk accepted the advertiser agreement and submitted the partnership request. No PureVPN offer may appear on DealDesk until approval, an authorized live customer offer, and a payable DealDesk link are verified.",
       "priority": 53
+    },
+    {
+      "id": "rakuten-giftcards-com-44432",
+      "network": "rakuten-advertising",
+      "merchantName": "Giftcards.com",
+      "advertiserID": "44432",
+      "publisherID": "4733148",
+      "merchantURL": "https://www.giftcards.com/",
+      "profileURL": "https://publisher.rakutenadvertising.com/advertisers/44432/profile",
+      "category": "Physical and digital gift cards, prepaid cards, and multi-brand gift cards",
+      "commission": "Confidential private-offer terms are retained only in the authenticated Rakuten account and source email; no assigned DealDesk rate is stored publicly",
+      "attribution": "Not verified for an accepted or currently assigned DealDesk offer",
+      "status": "Private-offer notification received; partnership and offer-assignment status require signed-in Rakuten verification — do not publish",
+      "applicationStatus": "invited",
+      "invitedAt": "2026-08-13T19:26:15.000Z",
+      "reviewedAt": "2026-08-18T04:48:33.000Z",
+      "relationshipEvidence": "Authenticated Rakuten Advertising email: Giftcards.com has extended a Private Offer; official Rakuten help confirms that private offers may be sent to existing partners or as new partnership opportunities",
+      "privateOfferTermsStoredPublicly": false,
+      "trackingLinkStatus": "not-authorized",
+      "commissionEligible": false,
+      "publicPublishingAllowed": false,
+      "promotionsURL": "https://www.giftcards.com/us/en/promotions",
+      "offerCandidates": [
+        "ECO5 publicly advertises 5% off a 100 USD physical Visa Thank You Gift Card through 2026-09-09, with a one-time code, a three-card limit, no stacking, product and shipping fees, and while-supplies-last language; the product page conflicts by reporting no promotions, so signed-in cart acceptance must be verified before publication",
+        "Giftcards.com publicly advertises free USPS Standard shipping on up to three eligible physical One4all gift cards, with no end date stated; the exact eligible card, availability, fees, terms, and Rakuten link still require verification"
+      ],
+      "offerResearchVerifiedAt": "2026-08-18T04:48:33.000Z",
+      "restrictions": "Do not disclose private offer terms, accept an offer, claim an approved partnership, generate or publish tracked links, or publish a customer deal until the signed-in Rakuten dashboard confirms the relationship and assigned offer. A future public listing also requires an exact payable DealDesk link, eligible card or SKU, successful code or shipping-benefit verification, all activation, purchase, shipping, tax, use, inactivity, replacement, cancellation, and final-sale disclosures, and approved imagery.",
+      "summary": "Giftcards.com advertiser 44432 sent DealDesk a confidential private-offer notification. Rakuten's public documentation says this notification alone does not establish whether DealDesk is already Partnered or is being recruited into a new relationship, so the record remains invited and nonpublic. Two current shopper-value candidates were researched on Giftcards.com's public promotions page, but neither can publish until dashboard status, exact Rakuten attribution, product eligibility, and checkout behavior are verified.",
+      "evidenceRecord": "data/affiliate-evidence/giftcards-rakuten-private-offer-20260813.json",
+      "priority": 54
     },
     {
       "id": "bh-direct-affiliate",

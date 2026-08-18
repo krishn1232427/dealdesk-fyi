@@ -1,12 +1,12 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-17T09:58:45.000Z",
+  "generatedAt": "2026-08-18T05:01:27.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
       "url": "https://dealdesk.fyi/deals/amazon-prime-young-adults/",
       "title": "Prime for Young Adults — 6-month $0 trial deal: $0 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Prime for Young Adults — 6-month $0 trial deal",
       "secondaryQueries": [
         "Prime for Young Adults — 6-month $0 trial price",
@@ -162,7 +162,7 @@
       "id": "cj-surfshark-starter-20260801",
       "url": "https://dealdesk.fyi/deals/cj-surfshark-starter/",
       "title": "Surfshark Starter 24-month plan deal: $2.49/mo | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Surfshark Starter 24-month plan deal",
       "secondaryQueries": [
         "Surfshark Starter 24-month plan price",
@@ -317,7 +317,7 @@
       "id": "cj-curiositystream-standard-monthly-20260811",
       "url": "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
       "title": "CuriosityStream Standard — $5.99/month deal: $5.99/mo | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "CuriosityStream Standard — $5.99/month deal",
       "secondaryQueries": [
         "CuriosityStream Standard — $5.99/month price",
@@ -351,7 +351,7 @@
       "id": "amazon-audible-standard-trial-20260801",
       "url": "https://dealdesk.fyi/deals/amazon-audible-standard-trial/",
       "title": "Audible Standard — 30-day free trial deal: $0 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Audible Standard — 30-day free trial deal",
       "secondaryQueries": [
         "Audible Standard — 30-day free trial price",
@@ -488,7 +488,7 @@
       "id": "cj-nordpass-premium-20260801",
       "url": "https://dealdesk.fyi/deals/cj-nordpass-premium/",
       "title": "NordPass Premium 2-year plan deal: $1.39/mo | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "NordPass Premium 2-year plan deal",
       "secondaryQueries": [
         "NordPass Premium 2-year plan price",
@@ -556,7 +556,7 @@
       "id": "amazon-kids-plus-trial-20260801",
       "url": "https://dealdesk.fyi/deals/amazon-kids-plus-trial/",
       "title": "Amazon Kids+ — 1-month free trial deal: $0 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Amazon Kids+ — 1-month free trial deal",
       "secondaryQueries": [
         "Amazon Kids+ — 1-month free trial price",
@@ -623,17 +623,17 @@
       ]
     },
     {
-      "id": "amazon-music-unlimited-20260731",
-      "url": "https://dealdesk.fyi/deals/amazon-music-unlimited/",
-      "title": "Amazon Music Unlimited — 2 months free for new… deal: $0 | DealDesk",
+      "id": "amazon-prime-video-channels-paid-20260731",
+      "url": "https://dealdesk.fyi/deals/amazon-prime-video-channels-paid/",
+      "title": "Prime Video Channels — trials and… deal: See terms | DealDesk",
       "indexable": false,
-      "primaryQuery": "Amazon Music Unlimited — 2 months free for new subscribers deal",
+      "primaryQuery": "Prime Video Channels — trials and subscriptions deal",
       "secondaryQueries": [
-        "Amazon Music Unlimited — 2 months free for new subscribers price",
-        "Amazon Music Unlimited — 2 months free for new subscribers current offer",
-        "Amazon Music Unlimited deals"
+        "Prime Video Channels — trials and subscriptions price",
+        "Prime Video Channels — trials and subscriptions current offer",
+        "Prime Video Channels deals"
       ],
-      "score": 75,
+      "score": 49,
       "merchantPath": "/merchants/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -655,17 +655,17 @@
       "collectionPaths": []
     },
     {
-      "id": "amazon-prime-video-channels-paid-20260731",
-      "url": "https://dealdesk.fyi/deals/amazon-prime-video-channels-paid/",
-      "title": "Prime Video Channels — trials and… deal: See terms | DealDesk",
-      "indexable": true,
-      "primaryQuery": "Prime Video Channels — trials and subscriptions deal",
+      "id": "amazon-prime-video-free-trial-20260731",
+      "url": "https://dealdesk.fyi/deals/amazon-prime-video-free-trial/",
+      "title": "Prime with Prime Video — 30-day free trial for… deal: $0 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Prime with Prime Video — 30-day free trial for eligible customers deal",
       "secondaryQueries": [
-        "Prime Video Channels — trials and subscriptions price",
-        "Prime Video Channels — trials and subscriptions current offer",
-        "Prime Video Channels deals"
+        "Prime with Prime Video — 30-day free trial for eligible customers price",
+        "Prime with Prime Video — 30-day free trial for eligible customers current offer",
+        "Amazon Prime Video Prime with Prime Video — 30-day free trial for eligible customers"
       ],
-      "score": 49,
+      "score": 61,
       "merchantPath": "/merchants/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -689,38 +689,6 @@
         "/collections/unlocked-smartphones/",
         "/collections/samsung-galaxy/"
       ]
-    },
-    {
-      "id": "amazon-prime-video-free-trial-20260731",
-      "url": "https://dealdesk.fyi/deals/amazon-prime-video-free-trial/",
-      "title": "Prime with Prime Video — 30-day free trial for… deal: $0 | DealDesk",
-      "indexable": true,
-      "primaryQuery": "Prime with Prime Video — 30-day free trial for eligible customers deal",
-      "secondaryQueries": [
-        "Prime with Prime Video — 30-day free trial for eligible customers price",
-        "Prime with Prime Video — 30-day free trial for eligible customers current offer",
-        "Amazon Prime Video Prime with Prime Video — 30-day free trial for eligible customers"
-      ],
-      "score": 61,
-      "merchantPath": "/merchants/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-277922293329-2560860938882",
-      "url": "https://dealdesk.fyi/deals/ebay-item-277922293329-2560860938882/",
-      "title": "Dyson Corrale™ Origin Styler Straightener |… deal: $189.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Dyson Corrale™ Origin Styler Straightener | Refurbished deal",
-      "secondaryQueries": [
-        "Dyson Corrale™ Origin Styler Straightener | Refurbished price",
-        "Dyson Corrale™ Origin Styler Straightener | Refurbished discount",
-        "eBay Dyson Corrale™ Origin Styler Straightener | Refurbished"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
     },
     {
       "id": "ebay-item-374922753524",
@@ -2297,6 +2265,22 @@
         "/collections/refurbished-laptops/",
         "/collections/lenovo-thinkpad/"
       ]
+    },
+    {
+      "id": "ebay-item-277922293329-2560860938882",
+      "url": "https://dealdesk.fyi/deals/ebay-item-277922293329-2560860938882/",
+      "title": "Dyson Corrale™ Origin Styler Straightener |… deal: $189.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Dyson Corrale™ Origin Styler Straightener | Refurbished deal",
+      "secondaryQueries": [
+        "Dyson Corrale™ Origin Styler Straightener | Refurbished price",
+        "Dyson Corrale™ Origin Styler Straightener | Refurbished discount",
+        "eBay Dyson Corrale™ Origin Styler Straightener | Refurbished"
+      ],
+      "score": 90,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
     },
     {
       "id": "ebay-item-145950168282",

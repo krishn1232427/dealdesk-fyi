@@ -10,7 +10,7 @@ const feedPaths = ["data/best-deals.json", "data/streaming-deals.json"];
 const affiliateRegistry = JSON.parse(await readFile(new URL("../data/affiliate-programs.json", import.meta.url), "utf8"));
 const magzterEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/magzter-cj-20260803.json", import.meta.url), "utf8"));
 const protonEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/proton-cj-20260811.json", import.meta.url), "utf8"));
-const curiosityStreamEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/curiositystream-cj-20260811.json", import.meta.url), "utf8"));
+const curiosityStreamEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/curiositystream-cj-20260818.json", import.meta.url), "utf8"));
 const malwarebytesEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/malwarebytes-cj-20260811.json", import.meta.url), "utf8"));
 const sensiboEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/sensibo-rakuten-20260803.json", import.meta.url), "utf8"));
 const hotelsBrokenEvidence = JSON.parse(await readFile(new URL("../data/affiliate-evidence/hotels-expedia-broken-20260804.json", import.meta.url), "utf8"));
@@ -367,7 +367,7 @@ for (const feedPath of feedPaths) {
         }
       }
       if (String(deal.advertiserID) === "4727234") {
-        const expectedEvidenceRecord = "data/affiliate-evidence/curiositystream-cj-20260811.json";
+        const expectedEvidenceRecord = "data/affiliate-evidence/curiositystream-cj-20260818.json";
         let merchantURL;
         let imageURL;
         try { merchantURL = new URL(deal.merchantURL); } catch {}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18T04:48:33.000Z",
+  "source": "Authenticated Rakuten Advertising private-offer notification delivered to the verified DealDesk operations mailbox, official Rakuten private-offer help documentation, and Giftcards.com's live U.S. promotions, product, FAQ, and legal pages",
+  "publisher": {
+    "publisherID": "4733148"
+  },
+  "advertiser": {
+    "name": "Giftcards.com",
+    "advertiserID": "44432"
+  },
+  "notification": {
+    "receivedAt": "2026-08-13T19:26:15.000Z",
+    "duplicateReceivedAt": "2026-08-13T19:32:06.000Z",
+    "type": "private-offer-notification",
+    "confidentialTermsStoredPublicly": false,
+    "acceptanceActionTaken": false
+  },
+  "relationship": {
+    "status": "requires-signed-in-dashboard-verification",
+    "finding": "Rakuten's official help documentation says advertisers may extend private offers to existing partners or use them to recruit a new partnership. The email alone therefore does not prove that DealDesk is Partnered, that the offer is assigned, or that a payable link is authorized.",
+    "helpURL": "https://pubhelp.rakutenadvertising.com/hc/en-us/articles/360060747831-Private-Offers",
+    "offersOverviewURL": "https://pubhelp.rakutenadvertising.com/hc/en-us/articles/360060325392-Offers-Overview"
+  },
+  "tracking": {
+    "status": "not-authorized",
+    "requirement": "Confirm Partnered status and the currently assigned offer in the signed-in Rakuten dashboard, then generate and verify an exact DealDesk link, advertiser ID, offer ID, link ID, destination, attribution, product eligibility, and confidential program restrictions before publication."
+  },
+  "publicOfferResearch": {
+    "promotionsURL": "https://www.giftcards.com/us/en/promotions",
+    "verifiedAt": "2026-08-18T04:48:33.000Z",
+    "candidates": [
+      {
+        "name": "ECO5 Visa Thank You Gift Card promotion",
+        "customerValue": "5% off a 100 USD physical Visa Thank You Gift Card",
+        "publicEndDate": "2026-09-09",
+        "publicConditions": "One-time code; up to three qualifying cards per purchase and customer; no stacking; while supplies last; Giftcards.com may end the promotion early. The 100 USD tier publicly lists a 4.95 USD product fee and 1.99 USD USPS Standard shipping per card before any applicable tax.",
+        "productURL": "https://www.giftcards.com/us/en/catalog/product-details/visa-gift-card-thank-you?experience_type=physical",
+        "verificationConflict": "The promotions page advertises ECO5 while the product page reports that no promotions are available for the card. Code acceptance and the resulting cart total are not verified."
+      },
+      {
+        "name": "Physical One4all free USPS Standard shipping",
+        "customerValue": "The public promotion waives the normal USPS Standard shipping charge on up to three eligible physical One4all gift cards",
+        "publicEndDate": null,
+        "publicConditions": "No code is stated. Paid expedited shipping remains separate. Eligibility is limited to qualifying physical One4all cards and must be checked card by card."
+      }
+    ],
+    "materialTerms": "Gift-card value, activation or product fees, shipping charges, taxes, redemption restrictions, inactivity and replacement fees, cancellation timing, final-sale terms, availability, eligible card brands, and exact checkout behavior must be verified for each future listing."
+  },
+  "publication": {
+    "allowed": false,
+    "reason": "The private-offer email does not establish an accepted or currently assigned relationship, no exact payable Rakuten link is verified, and the strongest public promotion has a product-page conflict."
+  },
+  "privacy": "No confidential commission tiers, private offer name, private offer dates, raw email body, passwords, cookies, payment data, tax data, session tokens, or acceptance URL is stored in this evidence record."
+}

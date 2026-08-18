@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18T04:59:27.000Z",
+  "source": "Authenticated CuriosityStream approval email and prior signed-in CJ relationship verification, exact DealDesk CJ link rechecked end to end, live CuriosityStream U.S. plan data, and merchant-declared imagery rechecked on 2026-08-18",
+  "previousEvidenceRecord": "data/affiliate-evidence/curiositystream-cj-20260811.json",
+  "publisher": {
+    "cjCompanyID": "8007406",
+    "cjMemberRouteID": "7685648",
+    "cjSiteID": "101847838",
+    "payoutReadiness": "verified"
+  },
+  "advertiser": {
+    "name": "CuriosityStream",
+    "advertiserID": "4727234",
+    "relationship": "Active",
+    "approvedAt": "2026-08-10T14:35:05.000Z"
+  },
+  "approvalEmail": {
+    "subject": "Thanks for choosing CuriosityStream's Affiliate Program!",
+    "statement": "CuriosityStream welcomed DealDesk to the affiliate program and advertised service starting at 5.99 USD per month.",
+    "searchPolicy": "Affiliates may use program keywords for SEO but may not use the CuriosityStream trademark, domain, misspellings, or variations in paid search."
+  },
+  "commission": {
+    "qualifyingLeadUSD": 10,
+    "source": "Authenticated signed-in CJ program terms retained from the immutable approval evidence"
+  },
+  "creative": {
+    "linkID": "17171513",
+    "type": "CJ text link",
+    "title": "Feed your curiosity — stream award-winning documentaries anytime on Curiosity Stream.",
+    "relationship": "active",
+    "destinationURL": "https://curiositystream.com/welcome",
+    "lastModifiedAt": "2025-10-03T16:18:00.000Z"
+  },
+  "tracking": {
+    "status": "verified",
+    "trackingURL": "https://www.tkqlhce.com/click-101847838-17171513",
+    "verifiedAt": "2026-08-18T04:59:27.000Z",
+    "redirectCount": 4,
+    "finalLandingURL": "https://curiositystream.com/watch/welcome",
+    "finalResponseStatus": 200,
+    "attributionVerified": {
+      "linkID": "17171513",
+      "publisherID": "101847838"
+    }
+  },
+  "merchantOffer": {
+    "verifiedAt": "2026-08-18T04:59:27.000Z",
+    "currency": "USD",
+    "plans": [
+      {
+        "name": "Standard Monthly",
+        "priceUSD": 5.99,
+        "billingPeriod": "month"
+      },
+      {
+        "name": "Standard Annual",
+        "priceUSD": 49.99,
+        "billingPeriod": "year"
+      },
+      {
+        "name": "Smart Bundle Monthly",
+        "priceUSD": 11.99,
+        "billingPeriod": "month"
+      },
+      {
+        "name": "Smart Bundle Annual",
+        "priceUSD": 79.99,
+        "billingPeriod": "year"
+      }
+    ],
+    "videoQuality": "4K",
+    "trialAvailable": false,
+    "cancelAnytime": true,
+    "discountActive": false,
+    "taxNote": "Tax is not included in the pre-checkout price; applicable tax may be added.",
+    "priceProvenance": "The current public sales page and its live purchase-plan payload agree on 5.99, 49.99, 11.99, and 79.99 USD. Two older help articles still display lower stale prices and are not used as current evidence."
+  },
+  "consumerTerms": {
+    "billing": "Monthly and annual plans renew automatically for the same period until canceled. CuriosityStream states that future price changes may apply to the next period after advance notice.",
+    "cancellation": "Cancellation is available through the account or support without a cancellation fee or penalty, takes effect at the end of the paid period, and access continues through that period.",
+    "refunds": "No money-back guarantee is advertised; refunds generally are not provided unless otherwise stated.",
+    "sources": [
+      "https://curiositystream.com/terms",
+      "https://help.curiositystream.com/en/article/66f2f1",
+      "https://help.curiositystream.com/en/article/8b4f94",
+      "https://help.curiositystream.com/en/article/e038ac"
+    ]
+  },
+  "image": {
+    "url": "https://cdn.curiositystream.com/social/fb_share.jpg",
+    "merchantDeclaration": "The live welcome page declares this URL as both og:image and twitter:image.",
+    "verifiedAt": "2026-08-18T04:59:27.000Z",
+    "contentType": "image/jpeg",
+    "width": 1920,
+    "height": 1080,
+    "sizeBytes": 240275
+  },
+  "excludedCreative": {
+    "linkID": "17309798",
+    "title": "America250 - FlashSale - 486x60",
+    "claim": "50% off this weekend only",
+    "lastModifiedAt": "2026-06-22T18:47:00.000Z",
+    "reason": "The time-limited wording is stale, CJ supplies no usable end date, and the live merchant plans report no active discount. A later 25% promotion also ended on 2026-08-16 and is not claimed."
+  },
+  "publication": {
+    "allowed": true,
+    "claim": "Publish the verified standard subscription price without a sale, coupon, struck-through price, or percentage-off claim.",
+    "recheckAfter": "2026-08-19T04:59:27.000Z"
+  },
+  "privacy": "No passwords, cookies, session tokens, per-click identifiers, payment data, tax data, or confidential account details are stored in this evidence record."
+}

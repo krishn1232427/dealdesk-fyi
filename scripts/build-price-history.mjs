@@ -17,10 +17,13 @@ const [latestCatalog, searchIndexPayload] = await Promise.all([
 ]);
 const currentDeals = Array.isArray(latestCatalog.deals) ? latestCatalog.deals : [];
 if (!currentDeals.length) throw new Error("data/latest-deals.json does not contain public deals");
-const indexableDealIDs = new Set((Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [])
+const searchIndexDeals = Array.isArray(searchIndexPayload.deals) ? searchIndexPayload.deals : [];
+if (searchIndexDeals.length !== currentDeals.length) {
+  throw new Error("data/search-index.json does not cover the current public catalog");
+}
+const indexableDealIDs = new Set(searchIndexDeals
   .filter((entry) => entry.indexable === true)
   .map((entry) => entry.id));
-if (!indexableDealIDs.size) throw new Error("data/search-index.json does not contain an indexable quality cohort");
 
 const historyPath = resolve(root, "data", "price-history.json");
 let history = { version: 1, generatedAt: null, catalogUpdatedAt: null, deals: {} };
