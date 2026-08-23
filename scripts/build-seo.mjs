@@ -313,7 +313,7 @@ const rankedDeals = [...deals]
   .sort((a, b) => rankingNumber(b) - rankingNumber(a) || discountFrom(pricesFrom(b), b) - discountFrom(pricesFrom(a), a) || new Date(b.verifiedAt || 0) - new Date(a.verifiedAt || 0) || Number(a.priority || 99) - Number(b.priority || 99));
 const pricedDeals = diversifyDeals(rankedDeals);
 const qualityPricedDeals = pricedDeals.filter((deal) => searchIndexStateFor(deal).indexable);
-const featuredDeal = qualityPricedDeals[0] || pricedDeals[0];
+const featuredDeal = qualityPricedDeals[0];
 const featuredPrices = pricesFrom(featuredDeal);
 const featuredDiscount = discountFrom(featuredPrices, featuredDeal);
 const featuredSavings = savingsFrom(featuredPrices);
