@@ -1,11 +1,11 @@
 {
   "name": "DealDesk Deal Index",
-  "updatedAt": "2026-08-23T19:37:02.212Z",
-  "generatedAt": "2026-08-23T19:44:40.000Z",
+  "updatedAt": "2026-08-23T21:35:24.991Z",
+  "generatedAt": "2026-08-23T21:35:25.000Z",
   "publicDeals": 1184,
   "merchants": 10,
   "categories": 10,
-  "medianDisplayedPrice": 289.97,
+  "medianDisplayedPrice": 289.475,
   "medianDisplayedDiscountPercent": 44,
   "categoryStats": [
     {
