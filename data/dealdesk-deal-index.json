@@ -1,28 +1,28 @@
 {
   "name": "DealDesk Deal Index",
-  "updatedAt": "2026-08-18T05:17:20.000Z",
-  "generatedAt": "2026-08-23T19:13:39.000Z",
+  "updatedAt": "2026-08-23T19:37:02.212Z",
+  "generatedAt": "2026-08-23T19:36:55.000Z",
   "publicDeals": 1184,
   "merchants": 10,
   "categories": 10,
-  "medianDisplayedPrice": 295,
-  "medianDisplayedDiscountPercent": 41,
+  "medianDisplayedPrice": 289.97,
+  "medianDisplayedDiscountPercent": 44,
   "categoryStats": [
     {
       "category": "Electronics",
       "count": 605,
       "lowestDisplayedPrice": 14.28,
-      "medianDisplayedPrice": 256.48,
+      "medianDisplayedPrice": 255.99,
       "maximumDisplayedDiscountPercent": 92,
-      "latestVerification": "2026-08-12"
+      "latestVerification": "2026-08-23"
     },
     {
       "category": "Collectibles",
       "count": 166,
-      "lowestDisplayedPrice": 4.69,
+      "lowestDisplayedPrice": 3.82,
       "medianDisplayedPrice": 272.49,
       "maximumDisplayedDiscountPercent": 79,
-      "latestVerification": "2026-08-11"
+      "latestVerification": "2026-08-23"
     },
     {
       "category": "Toys & hobbies",
@@ -30,15 +30,15 @@
       "lowestDisplayedPrice": 8,
       "medianDisplayedPrice": 350,
       "maximumDisplayedDiscountPercent": 62,
-      "latestVerification": "2026-08-11"
+      "latestVerification": "2026-08-23"
     },
     {
       "category": "Home & garden",
       "count": 97,
       "lowestDisplayedPrice": 27.99,
-      "medianDisplayedPrice": 239.99,
-      "maximumDisplayedDiscountPercent": 66,
-      "latestVerification": "2026-08-11"
+      "medianDisplayedPrice": 199.99,
+      "maximumDisplayedDiscountPercent": 71,
+      "latestVerification": "2026-08-23"
     },
     {
       "category": "Sports collectibles",
@@ -54,7 +54,7 @@
       "lowestDisplayedPrice": 131.99,
       "medianDisplayedPrice": 538.49,
       "maximumDisplayedDiscountPercent": 0,
-      "latestVerification": "2026-08-11"
+      "latestVerification": "2026-08-23"
     },
     {
       "category": "Subscriptions",

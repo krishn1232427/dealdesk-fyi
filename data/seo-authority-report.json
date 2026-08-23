@@ -1,28 +1,30 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-23T19:13:39.000Z",
-  "catalogUpdatedAt": "2026-08-18T05:17:20.000Z",
+  "generatedAt": "2026-08-23T19:36:55.000Z",
+  "catalogUpdatedAt": "2026-08-23T19:37:02.212Z",
   "publicDeals": 1184,
-  "indexableDeals": 0,
-  "browseOnlyDeals": 1184,
+  "indexableDeals": 54,
+  "browseOnlyDeals": 1130,
   "dealsEnriched": 1184,
   "merchants": 10,
-  "merchantPages": 46,
+  "merchantPages": 45,
   "comparisonGroups": 43,
   "comparisonPages": 43,
   "dealsWithComparisonPage": 178,
   "collectionGroups": 13,
   "collectionPages": 13,
   "dealsWithCollectionPage": 737,
-  "authorityPages": 7,
+  "authorityPages": 20,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1184,
   "scores": {
-    "minimum": 49,
+    "minimum": 45,
     "median": 76,
     "maximum": 100
   },
-  "merchantPaths": [],
+  "merchantPaths": [
+    "/merchant/ebay/"
+  ],
   "merchantBrowsePaths": [
     "/merchant/ebay/",
     "/merchant/ebay/page/2/",
@@ -60,7 +62,6 @@
     "/merchant/ebay/page/34/",
     "/merchant/ebay/page/35/",
     "/merchant/ebay/page/36/",
-    "/merchant/ebay/page/37/",
     "/merchant/amazon/",
     "/merchant/curiositystream/",
     "/merchant/magzter/",
@@ -71,8 +72,10 @@
     "/merchant/sensibo/",
     "/merchant/surfshark/"
   ],
-  "indexableMerchantPages": 0,
-  "comparisonPaths": [],
+  "indexableMerchantPages": 1,
+  "comparisonPaths": [
+    "/compare/nintendo-switch-oled-64/"
+  ],
   "comparisonBrowsePaths": [
     "/compare/lenovo-thinkpad-t14/",
     "/compare/samsung-galaxy-s22/",
@@ -118,8 +121,20 @@
     "/compare/macbook-air-13/",
     "/compare/samsung-galaxy-s22-ultra/"
   ],
-  "indexableComparisonPages": 0,
-  "collectionPaths": [],
+  "indexableComparisonPages": 1,
+  "collectionPaths": [
+    "/collections/refurbished-electronics/",
+    "/collections/refurbished-laptops/",
+    "/collections/unlocked-smartphones/",
+    "/collections/samsung-galaxy/",
+    "/collections/lenovo-thinkpad/",
+    "/collections/dji-drones/",
+    "/collections/security-cameras/",
+    "/collections/equipment-attachments/",
+    "/collections/makita-tools/",
+    "/collections/soundbars/",
+    "/collections/computer-monitors/"
+  ],
   "collectionBrowsePaths": [
     "/collections/refurbished-electronics/",
     "/collections/refurbished-laptops/",
@@ -135,7 +150,7 @@
     "/collections/computer-monitors/",
     "/collections/vpn-deals/"
   ],
-  "indexableCollectionPages": 0,
+  "indexableCollectionPages": 11,
   "staticPaths": [
     "/merchants/",
     "/comparisons/",
