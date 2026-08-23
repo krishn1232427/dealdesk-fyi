@@ -12,7 +12,7 @@ on:
         default: false
         type: boolean
   schedule:
-    - cron: '17 9 * * *'
+    - cron: '17 9,21 * * *'
 
 permissions:
   contents: write
@@ -41,10 +41,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      - name: Set one release timestamp
-        shell: bash
-        run: echo "DEALDESK_BUILD_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
 
       - name: Install final indexing sources when present
         shell: bash
@@ -90,7 +86,7 @@ jobs:
           node --check scripts/prune-stale-deals.mjs
 
       - name: Refresh currently listed eBay products from live promotion grids
-        if: github.event_name == 'workflow_dispatch' && inputs.refresh_ebay
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_ebay)
         shell: bash
         run: |
           capture_file="data/ebay-products-$(date -u +%Y-%m-%dT%H%M%SZ).json"
@@ -101,6 +97,10 @@ jobs:
             rm -f "$capture_file"
             echo "eBay refresh was skipped; the prior catalog and evidence remain unchanged."
           fi
+
+      - name: Set one release timestamp
+        shell: bash
+        run: echo "DEALDESK_BUILD_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"
 
       - name: Rebuild current DealDesk release
         run: node scripts/build-seo.mjs
