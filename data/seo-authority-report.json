@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-18T09:50:09.000Z",
+  "generatedAt": "2026-08-23T19:13:39.000Z",
   "catalogUpdatedAt": "2026-08-18T05:17:20.000Z",
   "publicDeals": 1184,
-  "indexableDeals": 1,
-  "browseOnlyDeals": 1183,
+  "indexableDeals": 0,
+  "browseOnlyDeals": 1184,
   "dealsEnriched": 1184,
   "merchants": 10,
   "merchantPages": 46,

@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-18T09:50:09.000Z",
+  "generatedAt": "2026-08-23T19:13:39.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -317,7 +317,7 @@
       "id": "cj-curiositystream-standard-monthly-20260811",
       "url": "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
       "title": "CuriosityStream Standard — $5.99/month deal: $5.99/mo | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "CuriosityStream Standard — $5.99/month deal",
       "secondaryQueries": [
         "CuriosityStream Standard — $5.99/month price",

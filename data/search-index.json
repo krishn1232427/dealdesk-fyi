@@ -1,11 +1,11 @@
 {
   "version": 2,
   "policy": "quality-diversity-v2",
-  "evaluatedAt": "2026-08-18T09:50:09.000Z",
+  "evaluatedAt": "2026-08-23T19:13:39.000Z",
   "catalogUpdatedAt": "2026-08-18T05:17:20.000Z",
   "publicDeals": 1184,
-  "indexableDeals": 1,
-  "browseOnlyDeals": 1183,
+  "indexableDeals": 0,
+  "browseOnlyDeals": 1184,
   "deals": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -172,8 +172,8 @@
     {
       "id": "cj-curiositystream-standard-monthly-20260811",
       "url": "/deals/cj-curiositystream-standard-monthly/",
-      "indexable": true,
-      "reason": "verification-current-curated",
+      "indexable": false,
+      "reason": "verification-overdue",
       "verifiedAt": "2026-08-18",
       "recheckAfter": "2026-08-19T04:59:27.000Z",
       "lastmod": "2026-08-18"

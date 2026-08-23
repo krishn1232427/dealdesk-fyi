@@ -4,8 +4,8 @@
   "host": "dealdesk.fyi",
   "key": "3abe3f91462ad860ed2d45214f0053977e539dd55cccf396dd8bcec9d4a7ab36",
   "keyLocation": "https://dealdesk.fyi/3abe3f91462ad860ed2d45214f0053977e539dd55cccf396dd8bcec9d4a7ab36.txt",
-  "indexableDeals": 1,
-  "total": 15,
+  "indexableDeals": 0,
+  "total": 14,
   "urlList": [
     "https://dealdesk.fyi/",
     "https://dealdesk.fyi/about/",
@@ -14,7 +14,6 @@
     "https://dealdesk.fyi/comparisons/",
     "https://dealdesk.fyi/deal-index/",
     "https://dealdesk.fyi/deals/",
-    "https://dealdesk.fyi/deals/cj-curiositystream-standard-monthly/",
     "https://dealdesk.fyi/editorial-policy/",
     "https://dealdesk.fyi/feeds/",
     "https://dealdesk.fyi/how-we-rank-deals/",
