@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T10:03:34.000Z",
-  "catalogUpdatedAt": "2026-08-23T21:35:24.991Z",
+  "generatedAt": "2026-08-24T21:43:34.000Z",
+  "catalogUpdatedAt": "2026-08-24T21:43:34.777Z",
   "deals": {
     "cj-nordvpn-2-year-20260801": {
       "id": "cj-nordvpn-2-year-20260801",
@@ -1152,7 +1152,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -1170,6 +1170,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$144.99",
           "currentPriceAmount": 144.99,
+          "originalPrice": "$799.99",
+          "originalPriceAmount": 799.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$157.29",
+          "currentPriceAmount": 157.29,
           "originalPrice": "$799.99",
           "originalPriceAmount": 799.99,
           "expiresAt": "",
@@ -2438,7 +2448,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -2466,6 +2476,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$159.99",
           "currentPriceAmount": 159.99,
+          "originalPrice": "$549.99",
+          "originalPriceAmount": 549.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$199.99",
+          "currentPriceAmount": 199.99,
           "originalPrice": "$549.99",
           "originalPriceAmount": 549.99,
           "expiresAt": "",
@@ -3294,7 +3314,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -3326,6 +3346,16 @@
           "originalPriceAmount": 999.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$399.99",
+          "currentPriceAmount": 399.99,
+          "originalPrice": "$999.99",
+          "originalPriceAmount": 999.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -3336,7 +3366,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -3368,6 +3398,16 @@
           "originalPriceAmount": 499.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$199.99",
+          "currentPriceAmount": 199.99,
+          "originalPrice": "$499.99",
+          "originalPriceAmount": 499.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -3378,7 +3418,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -3410,6 +3450,16 @@
           "originalPriceAmount": 899.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$359.99",
+          "currentPriceAmount": 359.99,
+          "originalPrice": "$899.99",
+          "originalPriceAmount": 899.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -3420,7 +3470,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -3448,6 +3498,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$289.99",
           "currentPriceAmount": 289.99,
+          "originalPrice": "$849.99",
+          "originalPriceAmount": 849.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$339.99",
+          "currentPriceAmount": 339.99,
           "originalPrice": "$849.99",
           "originalPriceAmount": 849.99,
           "expiresAt": "",
@@ -3462,7 +3522,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -3490,6 +3550,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$289.99",
           "currentPriceAmount": 289.99,
+          "originalPrice": "$849.99",
+          "originalPriceAmount": 849.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$339.99",
+          "currentPriceAmount": 339.99,
           "originalPrice": "$849.99",
           "originalPriceAmount": 849.99,
           "expiresAt": "",
@@ -3922,7 +3992,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -3950,6 +4020,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$169.99",
           "currentPriceAmount": 169.99,
+          "originalPrice": "$419.99",
+          "originalPriceAmount": 419.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$179.99",
+          "currentPriceAmount": 179.99,
           "originalPrice": "$419.99",
           "originalPriceAmount": 419.99,
           "expiresAt": "",
@@ -3964,7 +4044,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -3992,6 +4072,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$169.99",
           "currentPriceAmount": 169.99,
+          "originalPrice": "$419.99",
+          "originalPriceAmount": 419.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$179.99",
+          "currentPriceAmount": 179.99,
           "originalPrice": "$419.99",
           "originalPriceAmount": 419.99,
           "expiresAt": "",
@@ -4178,7 +4268,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4206,6 +4296,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$319.99",
           "currentPriceAmount": 319.99,
+          "originalPrice": "$799.99",
+          "originalPriceAmount": 799.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$349.99",
+          "currentPriceAmount": 349.99,
           "originalPrice": "$799.99",
           "originalPriceAmount": 799.99,
           "expiresAt": "",
@@ -4518,7 +4618,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4546,6 +4646,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$249.99",
           "currentPriceAmount": 249.99,
+          "originalPrice": "$649.99",
+          "originalPriceAmount": 649.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$299.99",
+          "currentPriceAmount": 299.99,
           "originalPrice": "$649.99",
           "originalPriceAmount": 649.99,
           "expiresAt": "",
@@ -4560,7 +4670,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4592,6 +4702,16 @@
           "originalPriceAmount": 699.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$319.99",
+          "currentPriceAmount": 319.99,
+          "originalPrice": "$699.99",
+          "originalPriceAmount": 699.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -4602,7 +4722,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4634,6 +4754,16 @@
           "originalPriceAmount": 649.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$299.99",
+          "currentPriceAmount": 299.99,
+          "originalPrice": "$649.99",
+          "originalPriceAmount": 649.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -4644,7 +4774,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4672,6 +4802,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$289.99",
           "currentPriceAmount": 289.99,
+          "originalPrice": "$699.99",
+          "originalPriceAmount": 699.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$319.99",
+          "currentPriceAmount": 319.99,
           "originalPrice": "$699.99",
           "originalPriceAmount": 699.99,
           "expiresAt": "",
@@ -4750,7 +4890,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4778,6 +4918,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$239.99",
           "currentPriceAmount": 239.99,
+          "originalPrice": "$599.99",
+          "originalPriceAmount": 599.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$279.99",
+          "currentPriceAmount": 279.99,
           "originalPrice": "$599.99",
           "originalPriceAmount": 599.99,
           "expiresAt": "",
@@ -4792,7 +4942,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4820,6 +4970,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$239.99",
           "currentPriceAmount": 239.99,
+          "originalPrice": "$599.99",
+          "originalPriceAmount": 599.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$279.99",
+          "currentPriceAmount": 279.99,
           "originalPrice": "$599.99",
           "originalPriceAmount": 599.99,
           "expiresAt": "",
@@ -4876,7 +5036,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4908,6 +5068,16 @@
           "originalPriceAmount": 599.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$279.99",
+          "currentPriceAmount": 279.99,
+          "originalPrice": "$599.99",
+          "originalPriceAmount": 599.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -4918,7 +5088,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-04",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -4926,6 +5096,16 @@
           "verifiedAt": "2026-08-04",
           "currentPrice": "$332.93",
           "currentPriceAmount": 332.93,
+          "originalPrice": "$699.99",
+          "originalPriceAmount": 699.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$332.00",
+          "currentPriceAmount": 332,
           "originalPrice": "$699.99",
           "originalPriceAmount": 699.99,
           "expiresAt": "",
@@ -5224,7 +5404,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -5242,6 +5422,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$199.99",
           "currentPriceAmount": 199.99,
+          "originalPrice": "$429.99",
+          "originalPriceAmount": 429.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$209.99",
+          "currentPriceAmount": 209.99,
           "originalPrice": "$429.99",
           "originalPriceAmount": 429.99,
           "expiresAt": "",
@@ -5640,7 +5830,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -5668,6 +5858,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$199.99",
           "currentPriceAmount": 199.99,
+          "originalPrice": "$499.99",
+          "originalPriceAmount": 499.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$249.99",
+          "currentPriceAmount": 249.99,
           "originalPrice": "$499.99",
           "originalPriceAmount": 499.99,
           "expiresAt": "",
@@ -5820,7 +6020,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -5852,6 +6052,16 @@
           "originalPriceAmount": 429.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$219.99",
+          "currentPriceAmount": 219.99,
+          "originalPrice": "$429.99",
+          "originalPriceAmount": 429.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -5862,7 +6072,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -5890,6 +6100,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$209.99",
           "currentPriceAmount": 209.99,
+          "originalPrice": "$449.99",
+          "originalPriceAmount": 449.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$229.99",
+          "currentPriceAmount": 229.99,
           "originalPrice": "$449.99",
           "originalPriceAmount": 449.99,
           "expiresAt": "",
@@ -6130,7 +6350,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -6162,6 +6382,16 @@
           "originalPriceAmount": 479.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$249.99",
+          "currentPriceAmount": 249.99,
+          "originalPrice": "$479.99",
+          "originalPriceAmount": 479.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -6172,7 +6402,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -6200,6 +6430,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$549.99",
           "currentPriceAmount": 549.99,
+          "originalPrice": "$1149.99",
+          "originalPriceAmount": 1149.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$599.99",
+          "currentPriceAmount": 599.99,
           "originalPrice": "$1149.99",
           "originalPriceAmount": 1149.99,
           "expiresAt": "",
@@ -6352,7 +6592,7 @@
       "merchant": "eBay",
       "category": "Collectibles",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -6380,6 +6620,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$20.00",
           "currentPriceAmount": 20,
+          "originalPrice": "$47.29",
+          "originalPriceAmount": 47.29,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$18.00",
+          "currentPriceAmount": 18,
           "originalPrice": "$47.29",
           "originalPriceAmount": 47.29,
           "expiresAt": "",
@@ -6458,7 +6708,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -6486,6 +6736,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$229.99",
           "currentPriceAmount": 229.99,
+          "originalPrice": "$529.99",
+          "originalPriceAmount": 529.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$279.99",
+          "currentPriceAmount": 279.99,
           "originalPrice": "$529.99",
           "originalPriceAmount": 529.99,
           "expiresAt": "",
@@ -6542,7 +6802,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -6570,6 +6830,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$289.99",
           "currentPriceAmount": 289.99,
+          "originalPrice": "$599.99",
+          "originalPriceAmount": 599.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$319.99",
+          "currentPriceAmount": 319.99,
           "originalPrice": "$599.99",
           "originalPriceAmount": 599.99,
           "expiresAt": "",
@@ -6988,7 +7258,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -7016,6 +7286,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$309.99",
           "currentPriceAmount": 309.99,
+          "originalPrice": "$649.99",
+          "originalPriceAmount": 649.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$359.99",
+          "currentPriceAmount": 359.99,
           "originalPrice": "$649.99",
           "originalPriceAmount": 649.99,
           "expiresAt": "",
@@ -7618,7 +7898,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -7636,6 +7916,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$119.99",
           "currentPriceAmount": 119.99,
+          "originalPrice": "$199.99",
+          "originalPriceAmount": 199.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$107.99",
+          "currentPriceAmount": 107.99,
           "originalPrice": "$199.99",
           "originalPriceAmount": 199.99,
           "expiresAt": "",
@@ -7682,7 +7972,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -7700,6 +7990,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$125.99",
           "currentPriceAmount": 125.99,
+          "originalPrice": "$209.99",
+          "originalPriceAmount": 209.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$136.49",
+          "currentPriceAmount": 136.49,
           "originalPrice": "$209.99",
           "originalPriceAmount": 209.99,
           "expiresAt": "",
@@ -8314,7 +8614,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -8342,6 +8642,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$329.99",
           "currentPriceAmount": 329.99,
+          "originalPrice": "$599.99",
+          "originalPriceAmount": 599.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$379.99",
+          "currentPriceAmount": 379.99,
           "originalPrice": "$599.99",
           "originalPriceAmount": 599.99,
           "expiresAt": "",
@@ -8356,7 +8666,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -8384,6 +8694,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$329.99",
           "currentPriceAmount": 329.99,
+          "originalPrice": "$599.99",
+          "originalPriceAmount": 599.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$379.99",
+          "currentPriceAmount": 379.99,
           "originalPrice": "$599.99",
           "originalPriceAmount": 599.99,
           "expiresAt": "",
@@ -8420,7 +8740,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -8442,6 +8762,16 @@
           "originalPriceAmount": 209.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$136.49",
+          "currentPriceAmount": 136.49,
+          "originalPrice": "$209.99",
+          "originalPriceAmount": 209.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -8452,7 +8782,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -8484,6 +8814,16 @@
           "originalPriceAmount": 349.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$349.99",
+          "currentPriceAmount": 349.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -8494,7 +8834,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -8524,6 +8864,16 @@
           "currentPriceAmount": 285.19,
           "originalPrice": "$459.99",
           "originalPriceAmount": 459.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$459.99",
+          "currentPriceAmount": 459.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -9242,7 +9592,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -9264,6 +9614,16 @@
           "originalPriceAmount": 69.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$69.99",
+          "currentPriceAmount": 69.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -9274,7 +9634,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -9304,6 +9664,16 @@
           "currentPriceAmount": 66.99,
           "originalPrice": "$99.99",
           "originalPriceAmount": 99.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$99.99",
+          "currentPriceAmount": 99.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -10414,7 +10784,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -10442,6 +10812,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$23.99",
           "currentPriceAmount": 23.99,
+          "originalPrice": "$34.99",
+          "originalPriceAmount": 34.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$25.99",
+          "currentPriceAmount": 25.99,
           "originalPrice": "$34.99",
           "originalPriceAmount": 34.99,
           "expiresAt": "",
@@ -11154,7 +11534,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -11182,6 +11562,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$289.99",
           "currentPriceAmount": 289.99,
+          "originalPrice": "$379.99",
+          "originalPriceAmount": 379.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$299.99",
+          "currentPriceAmount": 299.99,
           "originalPrice": "$379.99",
           "originalPriceAmount": 379.99,
           "expiresAt": "",
@@ -11314,7 +11704,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -11332,6 +11722,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$55.99",
           "currentPriceAmount": 55.99,
+          "originalPrice": "$69.99",
+          "originalPriceAmount": 69.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$50.39",
+          "currentPriceAmount": 50.39,
           "originalPrice": "$69.99",
           "originalPriceAmount": 69.99,
           "expiresAt": "",
@@ -11946,7 +12346,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -11976,6 +12376,16 @@
           "currentPriceAmount": 44.99,
           "originalPrice": "$59.99",
           "originalPriceAmount": 59.99,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$59.99",
+          "currentPriceAmount": 59.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Free shipping"
         }
@@ -16038,7 +16448,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -16056,6 +16466,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$524.99",
           "currentPriceAmount": 524.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$549.99",
+          "currentPriceAmount": 549.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -16291,7 +16711,7 @@
     },
     "ebay-item-227343086700": {
       "id": "ebay-item-227343086700",
-      "title": "Lenovo ThinkPad T490s 14\" Laptop i5 8th Gen 256GB NVMe 8GB RAM Win 11 Pro Cam B",
+      "title": "Lenovo ThinkPad T490s 14\"  Laptop i5 8th Gen 256GB NVMe 8GB RAM Win 11 Pro Cam B",
       "url": "/deals/ebay-item-227343086700/",
       "merchant": "eBay",
       "category": "Electronics",
@@ -18604,7 +19024,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -18622,6 +19042,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$849.00",
           "currentPriceAmount": 849,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Confirm condition, shipping, seller, and availability on eBay"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$809.00",
+          "currentPriceAmount": 809,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -23046,7 +23476,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -23074,6 +23504,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$207.89",
           "currentPriceAmount": 207.89,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$215.59",
+          "currentPriceAmount": 215.59,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -23319,7 +23759,7 @@
     },
     "ebay-item-227124277310": {
       "id": "ebay-item-227124277310",
-      "title": "HUS726060ALA640 HGST Ultrastar 6TB SATA 6Gbps 7.2K 3.5\" Hard Drive OF21860",
+      "title": "HUS726060ALA640 HGST Ultrastar  6TB SATA 6Gbps 7.2K 3.5\" Hard Drive OF21860",
       "url": "/deals/ebay-item-227124277310/",
       "merchant": "eBay",
       "category": "Electronics",
@@ -23674,7 +24114,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -23682,6 +24122,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$151.99",
           "currentPriceAmount": 151.99,
+          "originalPrice": "$799.99",
+          "originalPriceAmount": 799.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$151.98",
+          "currentPriceAmount": 151.98,
           "originalPrice": "$799.99",
           "originalPriceAmount": 799.99,
           "expiresAt": "",
@@ -24584,7 +25034,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -24602,6 +25052,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$169.99",
           "currentPriceAmount": 169.99,
+          "originalPrice": "$499.99",
+          "originalPriceAmount": 499.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$199.99",
+          "currentPriceAmount": 199.99,
           "originalPrice": "$499.99",
           "originalPriceAmount": 499.99,
           "expiresAt": "",
@@ -25482,7 +25942,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -25500,6 +25960,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$329.99",
           "currentPriceAmount": 329.99,
+          "originalPrice": "$649.99",
+          "originalPriceAmount": 649.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$379.99",
+          "currentPriceAmount": 379.99,
           "originalPrice": "$649.99",
           "originalPriceAmount": 649.99,
           "expiresAt": "",
@@ -25514,7 +25984,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -25532,6 +26002,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$329.99",
           "currentPriceAmount": 329.99,
+          "originalPrice": "$649.99",
+          "originalPriceAmount": 649.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$379.99",
+          "currentPriceAmount": 379.99,
           "originalPrice": "$649.99",
           "originalPriceAmount": 649.99,
           "expiresAt": "",
@@ -25612,7 +26092,7 @@
       "merchant": "eBay",
       "category": "Home & garden",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -25630,6 +26110,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$329.99",
           "currentPriceAmount": 329.99,
+          "originalPrice": "$649.99",
+          "originalPriceAmount": 649.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$379.99",
+          "currentPriceAmount": 379.99,
           "originalPrice": "$649.99",
           "originalPriceAmount": 649.99,
           "expiresAt": "",
@@ -26268,7 +26758,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -26276,6 +26766,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$349.99",
           "currentPriceAmount": 349.99,
+          "originalPrice": "$449.99",
+          "originalPriceAmount": 449.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$328.99",
+          "currentPriceAmount": 328.99,
           "originalPrice": "$449.99",
           "originalPriceAmount": 449.99,
           "expiresAt": "",
@@ -26312,7 +26812,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -26320,6 +26820,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$279.99",
           "currentPriceAmount": 279.99,
+          "originalPrice": "$349.99",
+          "originalPriceAmount": 349.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$251.99",
+          "currentPriceAmount": 251.99,
           "originalPrice": "$349.99",
           "originalPriceAmount": 349.99,
           "expiresAt": "",
@@ -26510,7 +27020,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -26520,6 +27030,16 @@
           "currentPriceAmount": 199,
           "originalPrice": "$229.00",
           "originalPriceAmount": 229,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$229.00",
+          "currentPriceAmount": 229,
+          "originalPrice": "$299.00",
+          "originalPriceAmount": 299,
           "expiresAt": "",
           "priceNote": "Free shipping"
         }
@@ -27608,7 +28128,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -27616,6 +28136,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$153.00",
           "currentPriceAmount": 153,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$148.42",
+          "currentPriceAmount": 148.42,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -29486,7 +30016,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -29494,6 +30024,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$500.00",
           "currentPriceAmount": 500,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$450.00",
+          "currentPriceAmount": 450,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -30102,7 +30642,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -30110,6 +30650,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$1549.00",
           "currentPriceAmount": 1549,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Confirm condition, shipping, seller, and availability on eBay"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$1399.00",
+          "currentPriceAmount": 1399,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -30168,7 +30718,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -30176,6 +30726,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$599.00",
           "currentPriceAmount": 599,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Confirm condition, shipping, seller, and availability on eBay"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$539.00",
+          "currentPriceAmount": 539,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -31554,7 +32114,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -31576,6 +32136,16 @@
           "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$164.99",
+          "currentPriceAmount": 164.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
         }
       ]
     },
@@ -31586,7 +32156,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-24",
       "active": true,
       "observations": [
         {
@@ -31604,6 +32174,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$39.99",
           "currentPriceAmount": 39.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-24",
+          "verifiedAt": "2026-08-24",
+          "currentPrice": "$37.99",
+          "currentPriceAmount": 37.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",

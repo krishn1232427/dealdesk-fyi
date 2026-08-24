@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-24T10:03:34.000Z",
-  "catalogUpdatedAt": "2026-08-23T21:35:24.991Z",
+  "generatedAt": "2026-08-24T21:43:34.000Z",
+  "catalogUpdatedAt": "2026-08-24T21:43:34.777Z",
   "publicDeals": 1184,
-  "indexableDeals": 54,
-  "browseOnlyDeals": 1130,
+  "indexableDeals": 55,
+  "browseOnlyDeals": 1129,
   "dealsEnriched": 1184,
   "merchants": 10,
   "merchantPages": 45,
@@ -14,12 +14,12 @@
   "collectionGroups": 13,
   "collectionPages": 13,
   "dealsWithCollectionPage": 738,
-  "authorityPages": 18,
+  "authorityPages": 22,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1184,
   "scores": {
     "minimum": 45,
-    "median": 76,
+    "median": 73,
     "maximum": 100
   },
   "merchantPaths": [
@@ -74,6 +74,7 @@
   ],
   "indexableMerchantPages": 1,
   "comparisonPaths": [
+    "/compare/samsung-galaxy-s23-ultra/",
     "/compare/nintendo-switch-oled-64/"
   ],
   "comparisonBrowsePaths": [
@@ -121,16 +122,19 @@
     "/compare/macbook-air-13/",
     "/compare/samsung-galaxy-s22-ultra/"
   ],
-  "indexableComparisonPages": 1,
+  "indexableComparisonPages": 2,
   "collectionPaths": [
     "/collections/refurbished-electronics/",
     "/collections/refurbished-laptops/",
     "/collections/unlocked-smartphones/",
+    "/collections/pokemon-cards/",
     "/collections/samsung-galaxy/",
+    "/collections/lenovo-thinkpad/",
     "/collections/dji-drones/",
     "/collections/security-cameras/",
     "/collections/equipment-attachments/",
     "/collections/makita-tools/",
+    "/collections/soundbars/",
     "/collections/computer-monitors/"
   ],
   "collectionBrowsePaths": [
@@ -148,7 +152,7 @@
     "/collections/computer-monitors/",
     "/collections/vpn-deals/"
   ],
-  "indexableCollectionPages": 9,
+  "indexableCollectionPages": 12,
   "staticPaths": [
     "/merchants/",
     "/comparisons/",
