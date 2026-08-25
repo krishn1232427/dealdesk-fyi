@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-24T21:43:34.000Z",
-  "catalogUpdatedAt": "2026-08-24T21:43:34.777Z",
+  "generatedAt": "2026-08-25T09:51:12.000Z",
+  "catalogUpdatedAt": "2026-08-25T09:51:12.089Z",
   "publicDeals": 1184,
-  "indexableDeals": 55,
-  "browseOnlyDeals": 1129,
+  "indexableDeals": 57,
+  "browseOnlyDeals": 1127,
   "dealsEnriched": 1184,
   "merchants": 10,
   "merchantPages": 45,
@@ -13,13 +13,13 @@
   "dealsWithComparisonPage": 178,
   "collectionGroups": 13,
   "collectionPages": 13,
-  "dealsWithCollectionPage": 738,
-  "authorityPages": 22,
+  "dealsWithCollectionPage": 740,
+  "authorityPages": 21,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1184,
   "scores": {
     "minimum": 45,
-    "median": 73,
+    "median": 76,
     "maximum": 100
   },
   "merchantPaths": [
@@ -134,8 +134,7 @@
     "/collections/security-cameras/",
     "/collections/equipment-attachments/",
     "/collections/makita-tools/",
-    "/collections/soundbars/",
-    "/collections/computer-monitors/"
+    "/collections/soundbars/"
   ],
   "collectionBrowsePaths": [
     "/collections/refurbished-electronics/",
@@ -152,7 +151,7 @@
     "/collections/computer-monitors/",
     "/collections/vpn-deals/"
   ],
-  "indexableCollectionPages": 12,
+  "indexableCollectionPages": 11,
   "staticPaths": [
     "/merchants/",
     "/comparisons/",

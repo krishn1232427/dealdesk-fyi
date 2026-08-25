@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T21:43:34.000Z",
-  "catalogUpdatedAt": "2026-08-24T21:43:34.777Z",
+  "generatedAt": "2026-08-25T09:51:12.000Z",
+  "catalogUpdatedAt": "2026-08-25T09:51:12.089Z",
   "deals": {
     "cj-nordvpn-2-year-20260801": {
       "id": "cj-nordvpn-2-year-20260801",
@@ -1804,7 +1804,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -1822,6 +1822,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$249.99",
           "currentPriceAmount": 249.99,
+          "originalPrice": "$679.99",
+          "originalPriceAmount": 679.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$299.99",
+          "currentPriceAmount": 299.99,
           "originalPrice": "$679.99",
           "originalPriceAmount": 679.99,
           "expiresAt": "",
@@ -8782,7 +8792,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -8824,6 +8834,16 @@
           "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$227.49",
+          "currentPriceAmount": 227.49,
+          "originalPrice": "$349.99",
+          "originalPriceAmount": 349.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -8834,7 +8854,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -8874,6 +8894,16 @@
           "currentPriceAmount": 459.99,
           "originalPrice": "",
           "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$298.99",
+          "currentPriceAmount": 298.99,
+          "originalPrice": "$459.99",
+          "originalPriceAmount": 459.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -9090,7 +9120,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -9108,6 +9138,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$137.99",
           "currentPriceAmount": 137.99,
+          "originalPrice": "$208.60",
+          "originalPriceAmount": 208.6,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$136.99",
+          "currentPriceAmount": 136.99,
           "originalPrice": "$208.60",
           "originalPriceAmount": 208.6,
           "expiresAt": "",
@@ -9484,7 +9524,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-04",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -9493,6 +9533,16 @@
           "currentPrice": "$1,095.00",
           "currentPriceAmount": 1095,
           "originalPrice": "$1,597.99",
+          "originalPriceAmount": 1597.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$1089.00",
+          "currentPriceAmount": 1089,
+          "originalPrice": "$1597.99",
           "originalPriceAmount": 1597.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
@@ -9592,7 +9642,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -9624,6 +9674,16 @@
           "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$45.49",
+          "currentPriceAmount": 45.49,
+          "originalPrice": "$69.99",
+          "originalPriceAmount": 69.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
         }
       ]
     },
@@ -9634,7 +9694,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -9674,6 +9734,16 @@
           "currentPriceAmount": 99.99,
           "originalPrice": "",
           "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$64.99",
+          "currentPriceAmount": 64.99,
+          "originalPrice": "$99.99",
+          "originalPriceAmount": 99.99,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -13952,7 +14022,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -13982,6 +14052,16 @@
           "currentPriceAmount": 80.99,
           "originalPrice": "$89.99",
           "originalPriceAmount": 89.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$89.99",
+          "currentPriceAmount": 89.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -16694,7 +16774,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-04",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -16702,6 +16782,16 @@
           "verifiedAt": "2026-08-04",
           "currentPrice": "$349.00",
           "currentPriceAmount": 349,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$375.00",
+          "currentPriceAmount": 375,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -22894,7 +22984,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -22922,6 +23012,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$154.99",
           "currentPriceAmount": 154.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$149.99",
+          "currentPriceAmount": 149.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -24386,7 +24486,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -24394,6 +24494,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$365.00",
           "currentPriceAmount": 365,
+          "originalPrice": "$1367.99",
+          "originalPriceAmount": 1367.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$375.00",
+          "currentPriceAmount": 375,
           "originalPrice": "$1367.99",
           "originalPriceAmount": 1367.99,
           "expiresAt": "",
@@ -25098,7 +25208,7 @@
       "merchant": "eBay",
       "category": "Collectibles",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -25106,6 +25216,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$13.32",
           "currentPriceAmount": 13.32,
+          "originalPrice": "$29.99",
+          "originalPriceAmount": 29.99,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$13.99",
+          "currentPriceAmount": 13.99,
           "originalPrice": "$29.99",
           "originalPriceAmount": 29.99,
           "expiresAt": "",
@@ -27162,7 +27282,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -27182,6 +27302,16 @@
           "currentPriceAmount": 117.99,
           "originalPrice": "$149.99",
           "originalPriceAmount": 149.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$112.49",
+          "currentPriceAmount": 112.49,
+          "originalPrice": "$152.49",
+          "originalPriceAmount": 152.49,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -32156,7 +32286,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -32184,6 +32314,16 @@
           "verifiedAt": "2026-08-24",
           "currentPrice": "$37.99",
           "currentPriceAmount": 37.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$36.99",
+          "currentPriceAmount": 36.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -32330,7 +32470,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-25",
       "active": true,
       "observations": [
         {
@@ -32348,6 +32488,16 @@
           "verifiedAt": "2026-08-23",
           "currentPrice": "$1449.95",
           "currentPriceAmount": 1449.95,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-25",
+          "verifiedAt": "2026-08-25",
+          "currentPrice": "$1399.95",
+          "currentPriceAmount": 1399.95,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
