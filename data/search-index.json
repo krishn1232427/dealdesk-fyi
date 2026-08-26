@@ -1,7 +1,7 @@
 {
   "version": 2,
   "policy": "quality-diversity-v2",
-  "evaluatedAt": "2026-08-26T09:57:20.000Z",
+  "evaluatedAt": "2026-08-26T18:47:32.000Z",
   "catalogUpdatedAt": "2026-08-26T09:57:20.700Z",
   "publicDeals": 1184,
   "indexableDeals": 55,
@@ -253,8 +253,8 @@
     {
       "id": "ebay-item-255803826545-555925514141",
       "url": "/deals/ebay-item-255803826545-555925514141/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -524,7 +524,7 @@
       "id": "ebay-item-127239280933",
       "url": "/deals/ebay-item-127239280933/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -676,8 +676,8 @@
     {
       "id": "ebay-item-287461162665",
       "url": "/deals/ebay-item-287461162665/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -739,8 +739,8 @@
     {
       "id": "ebay-item-145829369846-444910334069",
       "url": "/deals/ebay-item-145829369846-444910334069/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -820,8 +820,8 @@
     {
       "id": "ebay-item-256484189096-556659162343",
       "url": "/deals/ebay-item-256484189096-556659162343/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -856,8 +856,8 @@
     {
       "id": "ebay-item-256613651818-556880821709",
       "url": "/deals/ebay-item-256613651818-556880821709/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -875,7 +875,7 @@
       "id": "ebay-item-256372271129-556453888063",
       "url": "/deals/ebay-item-256372271129-556453888063/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -937,8 +937,8 @@
     {
       "id": "ebay-item-256671767980-556999752104",
       "url": "/deals/ebay-item-256671767980-556999752104/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -992,7 +992,7 @@
       "id": "ebay-item-256379350806-556605231630",
       "url": "/deals/ebay-item-256379350806-556605231630/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -1288,8 +1288,8 @@
     {
       "id": "ebay-item-168492244195",
       "url": "/deals/ebay-item-168492244195/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -1856,7 +1856,7 @@
       "id": "ebay-item-365343072531",
       "url": "/deals/ebay-item-365343072531/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -1936,8 +1936,8 @@
     {
       "id": "ebay-item-257285303938-557956552112",
       "url": "/deals/ebay-item-257285303938-557956552112/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -1991,7 +1991,7 @@
       "id": "ebay-item-277755845674",
       "url": "/deals/ebay-item-277755845674/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2206,8 +2206,8 @@
     {
       "id": "ebay-item-257213743386",
       "url": "/deals/ebay-item-257213743386/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -2234,7 +2234,7 @@
       "id": "ebay-item-278212001041-2560930276349",
       "url": "/deals/ebay-item-278212001041-2560930276349/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2377,8 +2377,8 @@
     {
       "id": "ebay-item-168224689294",
       "url": "/deals/ebay-item-168224689294/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2387,7 +2387,7 @@
       "id": "ebay-item-278210914436-2560930014349",
       "url": "/deals/ebay-item-278210914436-2560930014349/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2503,8 +2503,8 @@
     {
       "id": "ebay-item-166708867898-466352533485",
       "url": "/deals/ebay-item-166708867898-466352533485/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2548,8 +2548,8 @@
     {
       "id": "ebay-item-187656775430",
       "url": "/deals/ebay-item-187656775430/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -2602,8 +2602,8 @@
     {
       "id": "ebay-item-317850461363",
       "url": "/deals/ebay-item-317850461363/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2801,7 +2801,7 @@
       "id": "ebay-item-278254382583-2560947335187",
       "url": "/deals/ebay-item-278254382583-2560947335187/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2873,7 +2873,7 @@
       "id": "ebay-item-384770863938",
       "url": "/deals/ebay-item-384770863938/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2881,8 +2881,8 @@
     {
       "id": "ebay-item-305957914668",
       "url": "/deals/ebay-item-305957914668/",
-      "indexable": true,
-      "reason": "verification-current-repeat-observed-curated",
+      "indexable": false,
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -2954,7 +2954,7 @@
       "id": "ebay-item-127875327929",
       "url": "/deals/ebay-item-127875327929/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -3026,7 +3026,7 @@
       "id": "ebay-item-385745478793",
       "url": "/deals/ebay-item-385745478793/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -3269,7 +3269,7 @@
       "id": "ebay-item-407101159635",
       "url": "/deals/ebay-item-407101159635/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -3278,7 +3278,7 @@
       "id": "ebay-item-800182414000",
       "url": "/deals/ebay-item-800182414000/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -3782,7 +3782,7 @@
       "id": "ebay-item-398240539747",
       "url": "/deals/ebay-item-398240539747/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -3791,7 +3791,7 @@
       "id": "ebay-item-307092920632",
       "url": "/deals/ebay-item-307092920632/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -3844,8 +3844,8 @@
     {
       "id": "ebay-item-304925251592",
       "url": "/deals/ebay-item-304925251592/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -4070,7 +4070,7 @@
       "id": "ebay-item-126617721818",
       "url": "/deals/ebay-item-126617721818/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -4124,7 +4124,7 @@
       "id": "ebay-item-198469271977",
       "url": "/deals/ebay-item-198469271977/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -4133,7 +4133,7 @@
       "id": "ebay-item-198457107772",
       "url": "/deals/ebay-item-198457107772/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -4196,7 +4196,7 @@
       "id": "ebay-item-336664518726",
       "url": "/deals/ebay-item-336664518726/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -4474,8 +4474,8 @@
     {
       "id": "ebay-item-184706040293",
       "url": "/deals/ebay-item-184706040293/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -4538,7 +4538,7 @@
       "id": "ebay-item-186465664855-694515751648",
       "url": "/deals/ebay-item-186465664855-694515751648/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -5842,8 +5842,8 @@
     {
       "id": "ebay-item-407078012061",
       "url": "/deals/ebay-item-407078012061/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -5851,8 +5851,8 @@
     {
       "id": "ebay-item-326282933769-515409174801",
       "url": "/deals/ebay-item-326282933769-515409174801/",
-      "indexable": false,
-      "reason": "source-diversity-cap",
+      "indexable": true,
+      "reason": "verification-current-repeat-observed-curated",
       "verifiedAt": "2026-08-26",
       "recheckAfter": "2026-08-27T09:57:20.700Z",
       "lastmod": "2026-08-26"
@@ -6374,7 +6374,7 @@
       "id": "ebay-item-800471985222",
       "url": "/deals/ebay-item-800471985222/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6383,7 +6383,7 @@
       "id": "ebay-item-305019777651",
       "url": "/deals/ebay-item-305019777651/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6392,7 +6392,7 @@
       "id": "ebay-item-306801329750",
       "url": "/deals/ebay-item-306801329750/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6401,7 +6401,7 @@
       "id": "ebay-item-304925264958",
       "url": "/deals/ebay-item-304925264958/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6410,7 +6410,7 @@
       "id": "ebay-item-306790517213",
       "url": "/deals/ebay-item-306790517213/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6419,7 +6419,7 @@
       "id": "ebay-item-147412305515",
       "url": "/deals/ebay-item-147412305515/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6428,7 +6428,7 @@
       "id": "ebay-item-227325569415",
       "url": "/deals/ebay-item-227325569415/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6437,7 +6437,7 @@
       "id": "ebay-item-286280034824-588418375445",
       "url": "/deals/ebay-item-286280034824-588418375445/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6446,7 +6446,7 @@
       "id": "ebay-item-323150824781",
       "url": "/deals/ebay-item-323150824781/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6455,7 +6455,7 @@
       "id": "ebay-item-194427559918",
       "url": "/deals/ebay-item-194427559918/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6464,7 +6464,7 @@
       "id": "ebay-item-178252138852",
       "url": "/deals/ebay-item-178252138852/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6473,7 +6473,7 @@
       "id": "ebay-item-177515566668",
       "url": "/deals/ebay-item-177515566668/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6482,7 +6482,7 @@
       "id": "ebay-item-174313988318",
       "url": "/deals/ebay-item-174313988318/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6491,7 +6491,7 @@
       "id": "ebay-item-178086954117",
       "url": "/deals/ebay-item-178086954117/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"
@@ -6500,7 +6500,7 @@
       "id": "ebay-item-188431847139",
       "url": "/deals/ebay-item-188431847139/",
       "indexable": false,
-      "reason": "source-diversity-cap",
+      "reason": "verification-window-too-short",
       "verifiedAt": "2026-08-25",
       "recheckAfter": "2026-08-26T21:43:59.904Z",
       "lastmod": "2026-08-25"

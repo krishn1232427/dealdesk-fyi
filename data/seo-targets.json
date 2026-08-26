@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-26T09:57:20.000Z",
+  "generatedAt": "2026-08-26T18:47:32.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -465,7 +465,7 @@
       "id": "ebay-item-255803826545-555925514141",
       "url": "https://dealdesk.fyi/deals/ebay-item-255803826545-555925514141/",
       "title": "Samsung Galaxy S22+ 128GB S906U Unlocked -… deal: $161.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Samsung Galaxy S22+ 128GB S906U Unlocked - Good deal",
       "secondaryQueries": [
         "Samsung Galaxy S22+ 128GB S906U Unlocked - Good price",
@@ -1357,7 +1357,7 @@
       "id": "ebay-item-287461162665",
       "url": "https://dealdesk.fyi/deals/ebay-item-287461162665/",
       "title": "Lenovo ThinkPad P14s Gen 2 14 FHD Touch… deal: $316.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Lenovo ThinkPad P14s Gen 2 14 FHD Touch i5-1145G7 16GB 256GB NVIDIA 4GB W11 Pro deal",
       "secondaryQueries": [
         "Lenovo ThinkPad P14s Gen 2 14 FHD Touch i5-1145G7 16GB 256GB NVIDIA 4GB W11 Pro price",
@@ -1492,7 +1492,7 @@
       "id": "ebay-item-145829369846-444910334069",
       "url": "https://dealdesk.fyi/deals/ebay-item-145829369846-444910334069/",
       "title": "Apple iPhone 15 Fully Unlocked 6.1in -… deal: $375.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Apple iPhone 15 Fully Unlocked 6.1in - 128GB - eSIM -Good deal",
       "secondaryQueries": [
         "Apple iPhone 15 Fully Unlocked 6.1in - 128GB - eSIM -Good price",
@@ -1668,7 +1668,7 @@
       "id": "ebay-item-256484189096-556659162343",
       "url": "https://dealdesk.fyi/deals/ebay-item-256484189096-556659162343/",
       "title": "Samsung Galaxy S23 FE 128GB S711U Unlocked… deal: $190.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Samsung Galaxy S23 FE 128GB S711U Unlocked - Good deal",
       "secondaryQueries": [
         "Samsung Galaxy S23 FE 128GB S711U Unlocked - Good price",
@@ -1746,7 +1746,7 @@
       "id": "ebay-item-256613651818-556880821709",
       "url": "https://dealdesk.fyi/deals/ebay-item-256613651818-556880821709/",
       "title": "Samsung Galaxy S23 Ultra 512GB S918U… deal: $427.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Very Good deal",
       "secondaryQueries": [
         "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Very Good price",
@@ -1921,7 +1921,7 @@
       "id": "ebay-item-256671767980-556999752104",
       "url": "https://dealdesk.fyi/deals/ebay-item-256671767980-556999752104/",
       "title": "IRIS Flip 8GB Unlocked - Very Good deal: $19.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "IRIS Flip 8GB Unlocked - Very Good deal",
       "secondaryQueries": [
         "IRIS Flip 8GB Unlocked - Very Good price",
@@ -2653,7 +2653,7 @@
       "id": "ebay-item-168492244195",
       "url": "https://dealdesk.fyi/deals/ebay-item-168492244195/",
       "title": "Lenovo - Tab P12 RAM 8GB Storage 256GB 3K… deal: $219.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Lenovo - Tab P12 RAM 8GB Storage 256GB 3K Android Tablet ZACH0165U 12.7\" WRTY deal",
       "secondaryQueries": [
         "Lenovo - Tab P12 RAM 8GB Storage 256GB 3K Android Tablet ZACH0165U 12.7\" WRTY price",
@@ -3908,7 +3908,7 @@
       "id": "ebay-item-257285303938-557956552112",
       "url": "https://dealdesk.fyi/deals/ebay-item-257285303938-557956552112/",
       "title": "Apple iPhone 15 128GB Unlocked - Good deal: $371.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Apple iPhone 15 128GB Unlocked - Good deal",
       "secondaryQueries": [
         "Apple iPhone 15 128GB Unlocked - Good price",
@@ -4447,7 +4447,7 @@
       "id": "ebay-item-257213743386",
       "url": "https://dealdesk.fyi/deals/ebay-item-257213743386/",
       "title": "Acer Aspire 14\" AI Copilot+PC Laptop Core… deal: $410.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Acer Aspire 14\" AI Copilot+PC Laptop Core Ultra 5 226V Gen 4 ARC 16GB 1TB Refurb deal",
       "secondaryQueries": [
         "Acer Aspire 14\" AI Copilot+PC Laptop Core Ultra 5 226V Gen 4 ARC 16GB 1TB Refurb price",
@@ -4787,7 +4787,7 @@
       "id": "ebay-item-168224689294",
       "url": "https://dealdesk.fyi/deals/ebay-item-168224689294/",
       "title": "ASUS Zenbook A14 14\" WUXGA Snapdragon X… deal: $580.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "ASUS Zenbook A14 14\" WUXGA Snapdragon X X1-26-100 16GB RAM 512GB SSD W11H Laptop deal",
       "secondaryQueries": [
         "ASUS Zenbook A14 14\" WUXGA Snapdragon X X1-26-100 16GB RAM 512GB SSD W11H Laptop price",
@@ -5037,7 +5037,7 @@
       "id": "ebay-item-166708867898-466352533485",
       "url": "https://dealdesk.fyi/deals/ebay-item-166708867898-466352533485/",
       "title": "Bose QuietComfort Ultra Noise Cancelling… deal: $249.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Bose QuietComfort Ultra Noise Cancelling Headphones, Certified Refurbished deal",
       "secondaryQueries": [
         "Bose QuietComfort Ultra Noise Cancelling Headphones, Certified Refurbished price",
@@ -5129,7 +5129,7 @@
       "id": "ebay-item-187656775430",
       "url": "https://dealdesk.fyi/deals/ebay-item-187656775430/",
       "title": "JBL Bar 500MK2 750W Peak 5.1-Ch Dolby Atmos… deal: $367.00 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "JBL Bar 500MK2 750W Peak 5.1-Ch Dolby Atmos Soundbar w/ Wireless Subwoofer deal",
       "secondaryQueries": [
         "JBL Bar 500MK2 750W Peak 5.1-Ch Dolby Atmos Soundbar w/ Wireless Subwoofer price",
@@ -5241,7 +5241,7 @@
       "id": "ebay-item-317850461363",
       "url": "https://dealdesk.fyi/deals/ebay-item-317850461363/",
       "title": "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar… deal: $839.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar for TV Home Theater with Dolby Atmos deal",
       "secondaryQueries": [
         "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar for TV Home Theater with Dolby Atmos price",
@@ -5793,7 +5793,7 @@
       "id": "ebay-item-305957914668",
       "url": "https://dealdesk.fyi/deals/ebay-item-305957914668/",
       "title": "DJI Mini 4K Drone 3 Battery Ready To Fly… deal: $449.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "DJI Mini 4K Drone 3 Battery Ready To Fly Vlogger Combo - Certified Refurbished deal",
       "secondaryQueries": [
         "DJI Mini 4K Drone 3 Battery Ready To Fly Vlogger Combo - Certified Refurbished price",
@@ -7657,7 +7657,7 @@
       "id": "ebay-item-304925251592",
       "url": "https://dealdesk.fyi/deals/ebay-item-304925251592/",
       "title": "DJI Intelligent Battery for Mavic Air 2 /… deal: $65.00 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "DJI Intelligent Battery for Mavic Air 2 / Air 2S DJI Certified Refurbished deal",
       "secondaryQueries": [
         "DJI Intelligent Battery for Mavic Air 2 / Air 2S DJI Certified Refurbished price",
@@ -8875,7 +8875,7 @@
       "id": "ebay-item-184706040293",
       "url": "https://dealdesk.fyi/deals/ebay-item-184706040293/",
       "title": "Bose TV Speaker Home Theater Soundbar,… deal: $229.00 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Bose TV Speaker Home Theater Soundbar, Certified Refurbished deal",
       "secondaryQueries": [
         "Bose TV Speaker Home Theater Soundbar, Certified Refurbished price",
@@ -11612,7 +11612,7 @@
       "id": "ebay-item-407078012061",
       "url": "https://dealdesk.fyi/deals/ebay-item-407078012061/",
       "title": "TCL A3X A600DL 32GB 3GB Black Unlocked -… deal: $40.67 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition deal",
       "secondaryQueries": [
         "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition price",
@@ -11631,7 +11631,7 @@
       "id": "ebay-item-326282933769-515409174801",
       "url": "https://dealdesk.fyi/deals/ebay-item-326282933769-515409174801/",
       "title": "Apple iPhone SE 3RD GEN 64GB Fully Unlocked… deal: $124.79 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Apple iPhone SE 3RD GEN 64GB Fully Unlocked 5G - VERY GOOD Condition deal",
       "secondaryQueries": [
         "Apple iPhone SE 3RD GEN 64GB Fully Unlocked 5G - VERY GOOD Condition price",
