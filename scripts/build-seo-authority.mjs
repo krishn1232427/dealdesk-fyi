@@ -823,10 +823,10 @@ const staticPages = [
   {
     path: "/about/",
     title: "About DealDesk and Launchdesk LLC",
-    description: "DealDesk is a Launchdesk LLC product focused on transparent prices, verified affiliate destinations, comparison context, and useful deal data.",
+    description: "DealDesk is an independent shopping-deals and price-comparison service operated by Launchdesk LLC, with verified prices and transparent scoring.",
     kicker: "About DealDesk",
-    heading: "Clear prices. Better decisions.",
-    body: `<p>DealDesk is operated by Launchdesk LLC. The product exists to make deal pages more useful than a bare affiliate redirect by showing the merchant, current price, comparison basis, savings, condition or billing terms, verification date, related offers, and the limits of the available evidence.</p><section class="authority-analysis"><h2>What makes DealDesk different</h2><p>The catalog combines crawlable archives, merchant hubs, product-family comparisons, a downloadable Deal Index, explicit affiliate disclosure, and a public scoring methodology. DealDesk does not promise that every offer is the best choice for every shopper.</p></section><p>Contact: <a href="mailto:hello.launchdesk@gmail.com">hello.launchdesk@gmail.com</a>.</p>`,
+    heading: "About DealDesk",
+    body: `<p>DealDesk is operated by Launchdesk LLC. It is an independent shopping-deals and price-comparison service, not a business-to-business sales approval desk. The product exists to make deal pages more useful than a bare affiliate redirect by showing the merchant, current price, comparison basis, savings, condition or billing terms, verification date, related offers, and the limits of the available evidence.</p><section class="authority-analysis"><h2>What makes DealDesk different</h2><p>The catalog combines crawlable archives, merchant hubs, product-family comparisons, a downloadable Deal Index, explicit affiliate disclosure, and a public scoring methodology. DealDesk does not promise that every offer is the best choice for every shopper.</p></section><p>DealDesk is also available on the <a href="https://apps.apple.com/us/app/dealdesk/id6782424624">Apple App Store</a>. Contact: <a href="mailto:hello.launchdesk@gmail.com">hello.launchdesk@gmail.com</a>.</p>`,
   },
 ];
 for (const page of staticPages) {
@@ -972,7 +972,7 @@ for (const deal of deals) {
 
 const authorityHub = `<!-- SEO-AUTHORITY-HUB:START --><section class="seo-authority-hub" aria-labelledby="seo-authority-hub-title"><div><span class="page-kicker"><span></span> Deal intelligence</span><h2 id="seo-authority-hub-title">Research the deal, not just the discount</h2><p>DealDesk adds curated shopping guides, merchant hubs, product-family comparisons, objective scoring, and a downloadable price index to every crawlable catalog path.</p></div><div class="seo-authority-hub-links"><a href="/collections/"><strong>Browse deal guides</strong><span>Curated product, condition, and plan comparisons</span></a><a href="/deal-index/"><strong>DealDesk Deal Index</strong><span>Live catalog statistics and downloads</span></a><a href="/comparisons/"><strong>Compare similar offers</strong><span>Price, condition, and savings side by side</span></a><a href="/merchants/"><strong>Browse merchants</strong><span>Verified offers organized by store</span></a><a href="/how-we-rank-deals/"><strong>Scoring methodology</strong><span>Exactly how the Value Score works</span></a></div></section><!-- SEO-AUTHORITY-HUB:END -->`;
 for (const [relativePath, titleTag, description] of [
-  ["index.html", "Deals by category, merchant and price | DealDesk", `Browse ${deals.length} DealDesk catalog records with clear prices, comparison context, merchant pages, product-family analysis, and visible check dates.`],
+  ["index.html", "DealDesk | Verified Shopping Deals & Price Comparisons", "DealDesk finds verified shopping deals, price comparisons, merchant context, and visible check dates so you can compare offers before checkout."],
   ["latest-deals/index.html", `Deal listings: compare ${deals.length} offers | DealDesk`, `Compare ${deals.length} DealDesk catalog records by displayed price, savings, merchant, category, condition, and check date.`],
 ]) {
   const file = resolve(root, relativePath);
