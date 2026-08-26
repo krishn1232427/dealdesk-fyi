@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-25T21:44:00.000Z",
-  "catalogUpdatedAt": "2026-08-25T21:43:59.904Z",
+  "generatedAt": "2026-08-26T09:57:20.000Z",
+  "catalogUpdatedAt": "2026-08-26T09:57:20.700Z",
   "deals": {
     "cj-nordvpn-2-year-20260801": {
       "id": "cj-nordvpn-2-year-20260801",
@@ -4350,7 +4350,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-04",
+      "lastSeen": "2026-08-26",
       "active": true,
       "observations": [
         {
@@ -4358,6 +4358,16 @@
           "verifiedAt": "2026-08-04",
           "currentPrice": "$121.82",
           "currentPriceAmount": 121.82,
+          "originalPrice": "$279.99",
+          "originalPriceAmount": 279.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-26",
+          "verifiedAt": "2026-08-26",
+          "currentPrice": "$123.33",
+          "currentPriceAmount": 123.33,
           "originalPrice": "$279.99",
           "originalPriceAmount": 279.99,
           "expiresAt": "",
@@ -6230,7 +6240,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-26",
       "active": true,
       "observations": [
         {
@@ -6248,6 +6258,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$93.99",
           "currentPriceAmount": 93.99,
+          "originalPrice": "$179.95",
+          "originalPriceAmount": 179.95,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-26",
+          "verifiedAt": "2026-08-26",
+          "currentPrice": "$99.99",
+          "currentPriceAmount": 99.99,
           "originalPrice": "$179.95",
           "originalPriceAmount": 179.95,
           "expiresAt": "",
@@ -6622,7 +6642,7 @@
       "merchant": "eBay",
       "category": "Collectibles",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-26",
       "active": true,
       "observations": [
         {
@@ -6660,6 +6680,16 @@
           "verifiedAt": "2026-08-24",
           "currentPrice": "$18.00",
           "currentPriceAmount": 18,
+          "originalPrice": "$47.29",
+          "originalPriceAmount": 47.29,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-26",
+          "verifiedAt": "2026-08-26",
+          "currentPrice": "$16.00",
+          "currentPriceAmount": 16,
           "originalPrice": "$47.29",
           "originalPriceAmount": 47.29,
           "expiresAt": "",
@@ -12564,7 +12594,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-26",
       "active": true,
       "observations": [
         {
@@ -12584,6 +12614,16 @@
           "currentPriceAmount": 109.99,
           "originalPrice": "$129.99",
           "originalPriceAmount": 129.99,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-26",
+          "verifiedAt": "2026-08-26",
+          "currentPrice": "$129.99",
+          "currentPriceAmount": 129.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -16573,7 +16613,7 @@
     },
     "ebay-item-306815817586": {
       "id": "ebay-item-306815817586",
-      "title": "Lenovo ThinkPad X1 Yoga Gen 7 i7-1265u 16GB 512GB - Very Good",
+      "title": "Lenovo ThinkPad X1 Yoga Gen 7 14\" i7-1265u 16GB 512GB - Very Good",
       "url": "/deals/ebay-item-306815817586/",
       "merchant": "eBay",
       "category": "Electronics",
@@ -24056,7 +24096,7 @@
       "merchant": "eBay",
       "category": "Collectibles",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-26",
       "active": true,
       "observations": [
         {
@@ -24064,6 +24104,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$140.00",
           "currentPriceAmount": 140,
+          "originalPrice": "$599.95",
+          "originalPriceAmount": 599.95,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-26",
+          "verifiedAt": "2026-08-26",
+          "currentPrice": "$126.00",
+          "currentPriceAmount": 126,
           "originalPrice": "$599.95",
           "originalPriceAmount": 599.95,
           "expiresAt": "",
@@ -30216,7 +30266,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-24",
+      "lastSeen": "2026-08-26",
       "active": true,
       "observations": [
         {
@@ -30234,6 +30284,16 @@
           "verifiedAt": "2026-08-24",
           "currentPrice": "$450.00",
           "currentPriceAmount": 450,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-26",
+          "verifiedAt": "2026-08-26",
+          "currentPrice": "$400.00",
+          "currentPriceAmount": 400,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -32714,7 +32774,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-26",
       "active": true,
       "observations": [
         {
@@ -32722,6 +32782,16 @@
           "verifiedAt": "2026-08-11",
           "currentPrice": "$103.99",
           "currentPriceAmount": 103.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-26",
+          "verifiedAt": "2026-08-26",
+          "currentPrice": "$99.99",
+          "currentPriceAmount": 99.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
