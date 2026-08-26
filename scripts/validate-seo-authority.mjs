@@ -42,6 +42,22 @@ const decodeEntities = (value) => String(value || "")
   .replaceAll("&gt;", ">");
 const titleFrom = (html) => decodeEntities(html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim() || "");
 const descriptionFrom = (html) => decodeEntities(html.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1]?.trim() || "");
+const jsonLDNodes = (html, label) => {
+  const nodes = [];
+  const add = (value) => {
+    if (Array.isArray(value)) {
+      for (const item of value) add(item);
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    nodes.push(value);
+    if (Array.isArray(value["@graph"])) add(value["@graph"]);
+  };
+  for (const match of html.matchAll(/<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)) {
+    try { add(JSON.parse(match[1])); } catch { errors.push(`${label}: invalid JSON-LD`); }
+  }
+  return nodes;
+};
 const collectionItemListPaths = (html, label) => {
   const objects = [];
   for (const match of html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
@@ -376,6 +392,25 @@ for (const [path, marker] of [
   for (const required of ["/collections/", "/deal-index/", "/comparisons/", "/merchants/", "/how-we-rank-deals/"]) {
     if (!html.includes(`href="${required}"`)) errors.push(`hub:${path}: missing ${required} link`);
   }
+  if (path === "/") {
+    if (!titleFrom(html).startsWith("DealDesk | Verified Shopping Deals")) errors.push("home: title is not brand-first");
+    if (!/<h1>DealDesk: verified shopping deals<\/h1>/i.test(html)) errors.push("home: branded shopping H1 missing");
+    if (!/<meta\s+property="og:site_name"\s+content="DealDesk"\s*\/>/i.test(html)) errors.push("home: og:site_name missing");
+    for (const required of ["/about/", "/editorial-policy/"]) {
+      if (!html.includes(`href="${required}"`)) errors.push(`home: missing ${required} publisher link`);
+    }
+    const nodes = jsonLDNodes(html, "home");
+    const website = nodes.find((node) => node?.["@type"] === "WebSite" && node?.url === `${site}/`);
+    const organization = nodes.find((node) => node?.["@type"] === "Organization" && node?.url === `${site}/`);
+    const alternateNames = new Set(Array.isArray(website?.alternateName) ? website.alternateName : [website?.alternateName].filter(Boolean));
+    if (website?.name !== "DealDesk" || !alternateNames.has("Deal Desk") || !alternateNames.has("dealdesk.fyi")) {
+      errors.push("home: WebSite brand names are incomplete");
+    }
+    const sameAs = Array.isArray(organization?.sameAs) ? organization.sameAs : [organization?.sameAs].filter(Boolean);
+    if (organization?.name !== "DealDesk" || organization?.legalName !== "Launchdesk LLC" || !sameAs.includes("https://apps.apple.com/us/app/dealdesk/id6782424624")) {
+      errors.push("home: Organization identity is incomplete");
+    }
+  }
 }
 
 const categoryTitles = new Set();
@@ -426,6 +461,11 @@ let editorial = "";
 try { editorial = await readPage("/editorial-policy/"); } catch { errors.push("editorial-policy page missing"); }
 if (editorial && (!editorial.includes("No fabricated reviews") || !editorial.includes("Affiliate disclosure"))) {
   errors.push("editorial policy is incomplete");
+}
+let about = "";
+try { about = await readPage("/about/"); } catch { errors.push("about page missing"); }
+if (about && (!about.includes("<h1>About DealDesk</h1>") || !about.includes("Apple App Store") || !about.includes("shopping-deals and price-comparison service"))) {
+  errors.push("about page does not clearly identify the DealDesk shopping publisher");
 }
 let dealIndex = "";
 try { dealIndex = await readPage("/deal-index/"); } catch { errors.push("deal-index page missing"); }
