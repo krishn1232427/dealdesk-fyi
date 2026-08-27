@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-27T00:47:19.000Z",
+  "generatedAt": "2026-08-27T19:50:27.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -59,7 +59,7 @@
       "id": "ebay-item-127987648416",
       "url": "https://dealdesk.fyi/deals/ebay-item-127987648416/",
       "title": "Pokemon ITM0020383 Trading Card Games… deal: $126.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Pokemon ITM0020383 Trading Card Games Scarlet & Violet Destined Rivals Elite deal",
       "secondaryQueries": [
         "Pokemon ITM0020383 Trading Card Games Scarlet & Violet Destined Rivals Elite price",
@@ -229,19 +229,19 @@
       ]
     },
     {
-      "id": "ebay-item-276668818214",
-      "url": "https://dealdesk.fyi/deals/ebay-item-276668818214/",
-      "title": "Dyson V8 Absolute Cordless Vacuum |… deal: $189.99 | DealDesk",
+      "id": "ebay-item-127765710395",
+      "url": "https://dealdesk.fyi/deals/ebay-item-127765710395/",
+      "title": "Voyage Aeronautics VL-6503 VA-2500 Premium… deal: $16.00 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished deal",
+      "primaryQuery": "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow deal",
       "secondaryQueries": [
-        "Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished price",
-        "Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished discount",
-        "eBay Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished"
+        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow price",
+        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow discount",
+        "eBay Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow"
       ],
-      "score": 100,
+      "score": 80,
       "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/dyson-v8/",
+      "comparisonPath": "",
       "collectionPaths": []
     },
     {
@@ -296,17 +296,17 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-127765710395",
-      "url": "https://dealdesk.fyi/deals/ebay-item-127765710395/",
-      "title": "Voyage Aeronautics VL-6503 VA-2500 Premium… deal: $16.00 | DealDesk",
+      "id": "ebay-item-277131242978",
+      "url": "https://dealdesk.fyi/deals/ebay-item-277131242978/",
+      "title": "Dyson SV25 V8 Extra Cordless Vacuum |… deal: $179.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow deal",
+      "primaryQuery": "Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished deal",
       "secondaryQueries": [
-        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow price",
-        "Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow discount",
-        "eBay Voyage Aeronautics VL-6503 VA-2500 Premium HD Video Drone with Optical Flow"
+        "Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished price",
+        "Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished discount",
+        "eBay Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished"
       ],
-      "score": 80,
+      "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -362,20 +362,22 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-277131242978",
-      "url": "https://dealdesk.fyi/deals/ebay-item-277131242978/",
-      "title": "Dyson SV25 V8 Extra Cordless Vacuum |… deal: $179.99 | DealDesk",
+      "id": "ebay-item-331693050907",
+      "url": "https://dealdesk.fyi/deals/ebay-item-331693050907/",
+      "title": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer… deal: $88.19 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished deal",
+      "primaryQuery": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished deal",
       "secondaryQueries": [
-        "Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished price",
-        "Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished discount",
-        "eBay Dyson SV25 V8 Extra Cordless Vacuum | Purple | Refurbished"
+        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished price",
+        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished discount",
+        "eBay Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished"
       ],
       "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": []
+      "collectionPaths": [
+        "/collections/makita-tools/"
+      ]
     },
     {
       "id": "amazon-B07D5DN269-20260801",
@@ -430,15 +432,15 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-278212908333",
-      "url": "https://dealdesk.fyi/deals/ebay-item-278212908333/",
-      "title": "Dyson V8 Cordless Vacuum | Silver |… deal: $179.99 | DealDesk",
+      "id": "ebay-item-276668818214",
+      "url": "https://dealdesk.fyi/deals/ebay-item-276668818214/",
+      "title": "Dyson V8 Absolute Cordless Vacuum |… deal: $199.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Dyson V8 Cordless Vacuum | Silver | Refurbished deal",
+      "primaryQuery": "Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished deal",
       "secondaryQueries": [
-        "Dyson V8 Cordless Vacuum | Silver | Refurbished price",
-        "Dyson V8 Cordless Vacuum | Silver | Refurbished discount",
-        "eBay Dyson V8 Cordless Vacuum | Silver | Refurbished"
+        "Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished price",
+        "Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished discount",
+        "eBay Dyson V8 Absolute Cordless Vacuum | Silver/Nickel | Refurbished"
       ],
       "score": 100,
       "merchantPath": "/merchant/ebay/",
@@ -498,22 +500,20 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-331693050907",
-      "url": "https://dealdesk.fyi/deals/ebay-item-331693050907/",
-      "title": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer… deal: $88.19 | DealDesk",
+      "id": "ebay-item-116396531355",
+      "url": "https://dealdesk.fyi/deals/ebay-item-116396531355/",
+      "title": "Melissa & Doug 9286 Wooden Scoop & Serve Ice… deal: $16.00 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished deal",
+      "primaryQuery": "Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter deal",
       "secondaryQueries": [
-        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished price",
-        "Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished discount",
-        "eBay Makita HP2050-R 6.6 Amp 3/4\" Corded Hammer Drill Certified Refurbished"
+        "Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter price",
+        "Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter discount",
+        "eBay Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter"
       ],
-      "score": 90,
+      "score": 84,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/makita-tools/"
-      ]
+      "collectionPaths": []
     },
     {
       "id": "amazon-B00JH98GR4-20260801",
@@ -568,20 +568,22 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-116396531355",
-      "url": "https://dealdesk.fyi/deals/ebay-item-116396531355/",
-      "title": "Melissa & Doug 9286 Wooden Scoop & Serve Ice… deal: $16.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter deal",
+      "id": "ebay-item-294169926707",
+      "url": "https://dealdesk.fyi/deals/ebay-item-294169926707/",
+      "title": "Makita XT268T 18V LXT Li-Ion Brushless… deal: $340.44 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) deal",
       "secondaryQueries": [
-        "Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter price",
-        "Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter discount",
-        "eBay Melissa & Doug 9286 Wooden Scoop & Serve Ice Cream Counter"
+        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) price",
+        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) discount",
+        "eBay Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished)"
       ],
-      "score": 84,
+      "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": []
+      "collectionPaths": [
+        "/collections/makita-tools/"
+      ]
     },
     {
       "id": "amazon-B07MJL8NXR-20260801",
@@ -635,22 +637,20 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-294169926707",
-      "url": "https://dealdesk.fyi/deals/ebay-item-294169926707/",
-      "title": "Makita XT268T 18V LXT Li-Ion Brushless… deal: $340.44 | DealDesk",
-      "indexable": true,
-      "primaryQuery": "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) deal",
+      "id": "ebay-item-278212908333",
+      "url": "https://dealdesk.fyi/deals/ebay-item-278212908333/",
+      "title": "Dyson V8 Cordless Vacuum | Silver |… deal: $189.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Dyson V8 Cordless Vacuum | Silver | Refurbished deal",
       "secondaryQueries": [
-        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) price",
-        "Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished) discount",
-        "eBay Makita XT268T 18V LXT Li-Ion Brushless 2-Piece Combo Kit (Certified Refurbished)"
+        "Dyson V8 Cordless Vacuum | Silver | Refurbished price",
+        "Dyson V8 Cordless Vacuum | Silver | Refurbished discount",
+        "eBay Dyson V8 Cordless Vacuum | Silver | Refurbished"
       ],
-      "score": 90,
+      "score": 100,
       "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/makita-tools/"
-      ]
+      "comparisonPath": "/compare/dyson-v8/",
+      "collectionPaths": []
     },
     {
       "id": "amazon-prime-video-free-trial-20260731",
@@ -1021,46 +1021,6 @@
       ]
     },
     {
-      "id": "ebay-item-127257209493",
-      "url": "https://dealdesk.fyi/deals/ebay-item-127257209493/",
-      "title": "Samsung Galaxy S22 Purple 128GB Very Good -… deal: $161.91 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked deal",
-      "secondaryQueries": [
-        "Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked price",
-        "Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked discount",
-        "eBay Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked"
-      ],
-      "score": 100,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/samsung-galaxy-s22/",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/",
-        "/collections/samsung-galaxy/"
-      ]
-    },
-    {
-      "id": "ebay-item-127239280933",
-      "url": "https://dealdesk.fyi/deals/ebay-item-127239280933/",
-      "title": "Samsung Galaxy S22 Purple 128GB Good -… deal: $156.41 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked deal",
-      "secondaryQueries": [
-        "Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked price",
-        "Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked discount",
-        "eBay Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked"
-      ],
-      "score": 100,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/samsung-galaxy-s22/",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/",
-        "/collections/samsung-galaxy/"
-      ]
-    },
-    {
       "id": "ebay-item-376847356927",
       "url": "https://dealdesk.fyi/deals/ebay-item-376847356927/",
       "title": "2020 Apple MacBook Pro 13\" i7… deal: $394.66 | DealDesk",
@@ -1111,6 +1071,26 @@
         "eBay Samsung Galaxy S22 128GB Phantom Black Unlocked Very Good"
       ],
       "score": 96,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/samsung-galaxy-s22/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/unlocked-smartphones/",
+        "/collections/samsung-galaxy/"
+      ]
+    },
+    {
+      "id": "ebay-item-127239280933",
+      "url": "https://dealdesk.fyi/deals/ebay-item-127239280933/",
+      "title": "Samsung Galaxy S22 Purple 128GB Good -… deal: $165.86 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked deal",
+      "secondaryQueries": [
+        "Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked price",
+        "Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked discount",
+        "eBay Samsung Galaxy S22 Purple 128GB Good - Refurbished - Unlocked"
+      ],
+      "score": 100,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "/compare/samsung-galaxy-s22/",
       "collectionPaths": [
@@ -1175,6 +1155,26 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/unlocked-smartphones/"
+      ]
+    },
+    {
+      "id": "ebay-item-127257209493",
+      "url": "https://dealdesk.fyi/deals/ebay-item-127257209493/",
+      "title": "Samsung Galaxy S22 Purple 128GB Very Good -… deal: $174.87 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked deal",
+      "secondaryQueries": [
+        "Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked price",
+        "Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked discount",
+        "eBay Samsung Galaxy S22 Purple 128GB Very Good - Refurbished - Unlocked"
+      ],
+      "score": 100,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/samsung-galaxy-s22/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/unlocked-smartphones/",
+        "/collections/samsung-galaxy/"
       ]
     },
     {
@@ -1646,25 +1646,6 @@
       ]
     },
     {
-      "id": "ebay-item-266621700826",
-      "url": "https://dealdesk.fyi/deals/ebay-item-266621700826/",
-      "title": "Acer Vero - 21.5in Monitor FHD 1920x1080… deal: $83.69 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished deal",
-      "secondaryQueries": [
-        "Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished price",
-        "Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished discount",
-        "eBay Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/computer-monitors/"
-      ]
-    },
-    {
       "id": "ebay-item-256372558345-556609935299",
       "url": "https://dealdesk.fyi/deals/ebay-item-256372558345-556609935299/",
       "title": "Samsung Galaxy S23+ 256GB S916U Unlocked -… deal: $303.99 | DealDesk",
@@ -1682,6 +1663,25 @@
         "/collections/refurbished-electronics/",
         "/collections/unlocked-smartphones/",
         "/collections/samsung-galaxy/"
+      ]
+    },
+    {
+      "id": "ebay-item-266621700826",
+      "url": "https://dealdesk.fyi/deals/ebay-item-266621700826/",
+      "title": "Acer Vero - 21.5in Monitor FHD 1920x1080… deal: $83.69 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished deal",
+      "secondaryQueries": [
+        "Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished price",
+        "Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished discount",
+        "eBay Acer Vero - 21.5in Monitor FHD 1920x1080 100Hz 4ms 250Nit Refurbished"
+      ],
+      "score": 90,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/computer-monitors/"
       ]
     },
     {
@@ -1726,7 +1726,7 @@
       "id": "ebay-item-256460585805-556609999488",
       "url": "https://dealdesk.fyi/deals/ebay-item-256460585805-556609999488/",
       "title": "Samsung Galaxy S23 Ultra 256GB S918U… deal: $371.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Good deal",
       "secondaryQueries": [
         "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Good price",
@@ -1746,7 +1746,7 @@
       "id": "ebay-item-256613651818-556880821709",
       "url": "https://dealdesk.fyi/deals/ebay-item-256613651818-556880821709/",
       "title": "Samsung Galaxy S23 Ultra 512GB S918U… deal: $427.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Very Good deal",
       "secondaryQueries": [
         "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Very Good price",
@@ -1786,7 +1786,7 @@
       "id": "ebay-item-298525924864",
       "url": "https://dealdesk.fyi/deals/ebay-item-298525924864/",
       "title": "Lenovo ThinkPad T14s Gen 3 14-In WUXGA… deal: $607.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Lenovo ThinkPad T14s Gen 3 14-In WUXGA Intel Core i7-1265U 32GB 512GB Win 11 Pro deal",
       "secondaryQueries": [
         "Lenovo ThinkPad T14s Gen 3 14-In WUXGA Intel Core i7-1265U 32GB 512GB Win 11 Pro price",
@@ -1899,25 +1899,6 @@
       ]
     },
     {
-      "id": "ebay-item-386708690658",
-      "url": "https://dealdesk.fyi/deals/ebay-item-386708690658/",
-      "title": "eufy S220 SoloCam Solar Security Camera 2K… deal: $76.49 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish deal",
-      "secondaryQueries": [
-        "eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish price",
-        "eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish discount",
-        "eBay eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish"
-      ],
-      "score": 100,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/eufy-220-solocam-solar/",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/security-cameras/"
-      ]
-    },
-    {
       "id": "ebay-item-256671767980-556999752104",
       "url": "https://dealdesk.fyi/deals/ebay-item-256671767980-556999752104/",
       "title": "IRIS Flip 8GB Unlocked - Very Good deal: $19.99 | DealDesk",
@@ -1934,6 +1915,25 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/unlocked-smartphones/"
+      ]
+    },
+    {
+      "id": "ebay-item-386708690658",
+      "url": "https://dealdesk.fyi/deals/ebay-item-386708690658/",
+      "title": "eufy S220 SoloCam Solar Security Camera 2K… deal: $76.49 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish deal",
+      "secondaryQueries": [
+        "eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish price",
+        "eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish discount",
+        "eBay eufy S220 SoloCam Solar Security Camera 2K Wireless Outdoor Cam 2-Cam |Refurbish"
+      ],
+      "score": 100,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/eufy-220-solocam-solar/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/security-cameras/"
       ]
     },
     {
@@ -2015,23 +2015,22 @@
       ]
     },
     {
-      "id": "ebay-item-256379350806-556605231630",
-      "url": "https://dealdesk.fyi/deals/ebay-item-256379350806-556605231630/",
-      "title": "Samsung Galaxy S23 Ultra 256GB S918U… deal: $416.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent deal",
+      "id": "ebay-item-145655227460",
+      "url": "https://dealdesk.fyi/deals/ebay-item-145655227460/",
+      "title": "2020 Apple M1 MacBook Air 13 8GB/256GB SSD… deal: $353.06 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty deal",
       "secondaryQueries": [
-        "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent price",
-        "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent discount",
-        "eBay Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent"
+        "2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty price",
+        "2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty discount",
+        "eBay 2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty"
       ],
       "score": 100,
       "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/samsung-galaxy-s23-ultra/",
+      "comparisonPath": "/compare/macbook-air-13/",
       "collectionPaths": [
         "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/",
-        "/collections/samsung-galaxy/"
+        "/collections/refurbished-laptops/"
       ]
     },
     {
@@ -2053,22 +2052,23 @@
       ]
     },
     {
-      "id": "ebay-item-145655227460",
-      "url": "https://dealdesk.fyi/deals/ebay-item-145655227460/",
-      "title": "2020 Apple M1 MacBook Air 13 8GB/256GB SSD… deal: $348.94 | DealDesk",
+      "id": "ebay-item-256379350806-556605231630",
+      "url": "https://dealdesk.fyi/deals/ebay-item-256379350806-556605231630/",
+      "title": "Samsung Galaxy S23 Ultra 256GB S918U… deal: $416.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty deal",
+      "primaryQuery": "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent deal",
       "secondaryQueries": [
-        "2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty price",
-        "2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty discount",
-        "eBay 2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty"
+        "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent price",
+        "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent discount",
+        "eBay Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent"
       ],
-      "score": 96,
+      "score": 100,
       "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/macbook-air-13/",
+      "comparisonPath": "/compare/samsung-galaxy-s23-ultra/",
       "collectionPaths": [
         "/collections/refurbished-electronics/",
-        "/collections/refurbished-laptops/"
+        "/collections/unlocked-smartphones/",
+        "/collections/samsung-galaxy/"
       ]
     },
     {
@@ -2129,6 +2129,26 @@
       ]
     },
     {
+      "id": "ebay-item-257169528820-557807697277",
+      "url": "https://dealdesk.fyi/deals/ebay-item-257169528820-557807697277/",
+      "title": "Samsung Galaxy S24+ 512GB S926U Unlocked -… deal: $399.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Samsung Galaxy S24+ 512GB S926U Unlocked - Good deal",
+      "secondaryQueries": [
+        "Samsung Galaxy S24+ 512GB S926U Unlocked - Good price",
+        "Samsung Galaxy S24+ 512GB S926U Unlocked - Good discount",
+        "eBay Samsung Galaxy S24+ 512GB S926U Unlocked - Good"
+      ],
+      "score": 100,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/samsung-galaxy-s24/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/unlocked-smartphones/",
+        "/collections/samsung-galaxy/"
+      ]
+    },
+    {
       "id": "ebay-item-276646642466",
       "url": "https://dealdesk.fyi/deals/ebay-item-276646642466/",
       "title": "Dyson TP4A Pure Cool™ tower purifier fan |… deal: $199.99 | DealDesk",
@@ -2147,7 +2167,7 @@
     {
       "id": "ebay-item-257169528820-557807697274",
       "url": "https://dealdesk.fyi/deals/ebay-item-257169528820-557807697274/",
-      "title": "Samsung Galaxy S24+ 512GB S926U Unlocked -… deal: $399.99 | DealDesk",
+      "title": "Samsung Galaxy S24+ 512GB S926U Unlocked - Good deal 697274 | DealDesk",
       "indexable": false,
       "primaryQuery": "Samsung Galaxy S24+ 512GB S926U Unlocked - Good deal",
       "secondaryQueries": [
@@ -2199,26 +2219,6 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/refurbished-laptops/"
-      ]
-    },
-    {
-      "id": "ebay-item-257169528820-557807697277",
-      "url": "https://dealdesk.fyi/deals/ebay-item-257169528820-557807697277/",
-      "title": "Samsung Galaxy S24+ 512GB S926U Unlocked - Good deal 697277 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung Galaxy S24+ 512GB S926U Unlocked - Good deal",
-      "secondaryQueries": [
-        "Samsung Galaxy S24+ 512GB S926U Unlocked - Good price",
-        "Samsung Galaxy S24+ 512GB S926U Unlocked - Good discount",
-        "eBay Samsung Galaxy S24+ 512GB S926U Unlocked - Good"
-      ],
-      "score": 96,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/samsung-galaxy-s24/",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/",
-        "/collections/samsung-galaxy/"
       ]
     },
     {
@@ -2768,22 +2768,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-277946898910",
-      "url": "https://dealdesk.fyi/deals/ebay-item-277946898910/",
-      "title": "V11 Outsize Cordless Vacuum Cleaner | Red |… deal: $339.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished deal",
-      "secondaryQueries": [
-        "V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished price",
-        "V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished discount",
-        "eBay V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-256339859745",
       "url": "https://dealdesk.fyi/deals/ebay-item-256339859745/",
       "title": "Acer V6820i Projector UHD DLP 3840x2160… deal: $599.84 | DealDesk",
@@ -2800,6 +2784,22 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/"
       ]
+    },
+    {
+      "id": "ebay-item-277946898910",
+      "url": "https://dealdesk.fyi/deals/ebay-item-277946898910/",
+      "title": "V11 Outsize Cordless Vacuum Cleaner | Red |… deal: $339.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished deal",
+      "secondaryQueries": [
+        "V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished price",
+        "V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished discount",
+        "eBay V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished"
+      ],
+      "score": 90,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
     },
     {
       "id": "ebay-item-366592517473",
@@ -3148,22 +3148,6 @@
         "/collections/refurbished-electronics/",
         "/collections/computer-monitors/"
       ]
-    },
-    {
-      "id": "ebay-item-178385758480",
-      "url": "https://dealdesk.fyi/deals/ebay-item-178385758480/",
-      "title": "Jurassic World Chaos Theory: Darius &… deal: $15.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action deal",
-      "secondaryQueries": [
-        "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action price",
-        "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action discount",
-        "eBay Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action"
-      ],
-      "score": 80,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
     },
     {
       "id": "ebay-item-188102407016",
@@ -3613,26 +3597,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-388958080504",
-      "url": "https://dealdesk.fyi/deals/ebay-item-388958080504/",
-      "title": "eufy Security Baby Monitor E21 with 4K UHD… deal: $119.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7 deal",
-      "secondaryQueries": [
-        "eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7 price",
-        "eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7 discount",
-        "eBay eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/security-cameras/",
-        "/collections/computer-monitors/"
-      ]
-    },
-    {
       "id": "ebay-item-327261025347",
       "url": "https://dealdesk.fyi/deals/ebay-item-327261025347/",
       "title": "Sonos Move Battery-powered smart speaker,… deal: $243.00 | DealDesk",
@@ -3751,6 +3715,26 @@
       "collectionPaths": []
     },
     {
+      "id": "ebay-item-388958080504",
+      "url": "https://dealdesk.fyi/deals/ebay-item-388958080504/",
+      "title": "eufy Security Baby Monitor E21 with 4K UHD… deal: $119.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7 deal",
+      "secondaryQueries": [
+        "eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7 price",
+        "eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7 discount",
+        "eBay eufy Security Baby Monitor E21 with 4K UHD Camera, 5'' 720p Display 8X Zoom 24/7"
+      ],
+      "score": 90,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/security-cameras/",
+        "/collections/computer-monitors/"
+      ]
+    },
+    {
       "id": "ebay-item-365343072531",
       "url": "https://dealdesk.fyi/deals/ebay-item-365343072531/",
       "title": "VIZIO 2.0 Soundbar w/ Dolby Atmos & DTS:X.,… deal: $59.99 | DealDesk",
@@ -3825,6 +3809,25 @@
       ]
     },
     {
+      "id": "ebay-item-257285303938-557956552112",
+      "url": "https://dealdesk.fyi/deals/ebay-item-257285303938-557956552112/",
+      "title": "Apple iPhone 15 128GB Unlocked - Good deal: $371.99 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Apple iPhone 15 128GB Unlocked - Good deal",
+      "secondaryQueries": [
+        "Apple iPhone 15 128GB Unlocked - Good price",
+        "Apple iPhone 15 128GB Unlocked - Good discount",
+        "eBay Apple iPhone 15 128GB Unlocked - Good"
+      ],
+      "score": 100,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/apple-iphone-15/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/unlocked-smartphones/"
+      ]
+    },
+    {
       "id": "ebay-item-284516783882",
       "url": "https://dealdesk.fyi/deals/ebay-item-284516783882/",
       "title": "WX746L.9 WORX 20V MAKERX Hot Glue Gun - Tool… deal: $27.99 | DealDesk",
@@ -3873,22 +3876,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-276983924700",
-      "url": "https://dealdesk.fyi/deals/ebay-item-276983924700/",
-      "title": "Dyson SV29 Outsize Extra Cordless Vacuum… deal: $279.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished deal",
-      "secondaryQueries": [
-        "Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished price",
-        "Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished discount",
-        "eBay Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished"
-      ],
-      "score": 90,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-276635206123",
       "url": "https://dealdesk.fyi/deals/ebay-item-276635206123/",
       "title": "SV29 Outsize Cordless Vacuum Cleaner |… deal: $279.99 | DealDesk",
@@ -3905,25 +3892,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-257285303938-557956552112",
-      "url": "https://dealdesk.fyi/deals/ebay-item-257285303938-557956552112/",
-      "title": "Apple iPhone 15 128GB Unlocked - Good deal: $371.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Apple iPhone 15 128GB Unlocked - Good deal",
-      "secondaryQueries": [
-        "Apple iPhone 15 128GB Unlocked - Good price",
-        "Apple iPhone 15 128GB Unlocked - Good discount",
-        "eBay Apple iPhone 15 128GB Unlocked - Good"
-      ],
-      "score": 100,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/apple-iphone-15/",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/"
-      ]
-    },
-    {
       "id": "ebay-item-188497949069",
       "url": "https://dealdesk.fyi/deals/ebay-item-188497949069/",
       "title": "Stratego Classic Board Game deal: $13.99 | DealDesk",
@@ -3935,6 +3903,22 @@
         "eBay Stratego Classic Board Game"
       ],
       "score": 84,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-276983924700",
+      "url": "https://dealdesk.fyi/deals/ebay-item-276983924700/",
+      "title": "Dyson SV29 Outsize Extra Cordless Vacuum… deal: $279.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished deal",
+      "secondaryQueries": [
+        "Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished price",
+        "Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished discount",
+        "eBay Dyson SV29 Outsize Extra Cordless Vacuum Cleaner | Nickel/Iron | Refurbished"
+      ],
+      "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -4229,39 +4213,22 @@
       ]
     },
     {
-      "id": "ebay-item-365800690523",
-      "url": "https://dealdesk.fyi/deals/ebay-item-365800690523/",
-      "title": "Samsung B-series HW-B400F 2.0 Channel… deal: $84.98 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black deal",
+      "id": "ebay-item-318212347963",
+      "url": "https://dealdesk.fyi/deals/ebay-item-318212347963/",
+      "title": "DJI DJI Mini 4K Camera Drone Combo (62-min)… deal: $350.00 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B deal",
       "secondaryQueries": [
-        "Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black price",
-        "Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black discount",
-        "eBay Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black"
+        "DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B price",
+        "DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B discount",
+        "eBay DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B"
       ],
       "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/soundbars/"
+        "/collections/dji-drones/"
       ]
-    },
-    {
-      "id": "ebay-item-296629850970",
-      "url": "https://dealdesk.fyi/deals/ebay-item-296629850970/",
-      "title": "Movmax Blade Arm with N2 Arm Technology… deal: $99.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Movmax Blade Arm with N2 Arm Technology Universal Locking Screw deal",
-      "secondaryQueries": [
-        "Movmax Blade Arm with N2 Arm Technology Universal Locking Screw price",
-        "Movmax Blade Arm with N2 Arm Technology Universal Locking Screw discount",
-        "eBay Movmax Blade Arm with N2 Arm Technology Universal Locking Screw"
-      ],
-      "score": 84,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
     },
     {
       "id": "ebay-item-284273213577",
@@ -4296,22 +4263,39 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-318212347963",
-      "url": "https://dealdesk.fyi/deals/ebay-item-318212347963/",
-      "title": "DJI DJI Mini 4K Camera Drone Combo (62-min)… deal: $350.00 | DealDesk",
+      "id": "ebay-item-365800690523",
+      "url": "https://dealdesk.fyi/deals/ebay-item-365800690523/",
+      "title": "Samsung B-series HW-B400F 2.0 Channel… deal: $84.98 | DealDesk",
       "indexable": false,
-      "primaryQuery": "DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B deal",
+      "primaryQuery": "Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black deal",
       "secondaryQueries": [
-        "DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B price",
-        "DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B discount",
-        "eBay DJI DJI Mini 4K Camera Drone Combo (62-min) With Case and Extra Battery - Open B"
+        "Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black price",
+        "Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black discount",
+        "eBay Samsung B-series HW-B400F 2.0 Channel Soundbar with Built in Subwoofer Black"
       ],
       "score": 90,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
-        "/collections/dji-drones/"
+        "/collections/refurbished-electronics/",
+        "/collections/soundbars/"
       ]
+    },
+    {
+      "id": "ebay-item-296629850970",
+      "url": "https://dealdesk.fyi/deals/ebay-item-296629850970/",
+      "title": "Movmax Blade Arm with N2 Arm Technology… deal: $99.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Movmax Blade Arm with N2 Arm Technology Universal Locking Screw deal",
+      "secondaryQueries": [
+        "Movmax Blade Arm with N2 Arm Technology Universal Locking Screw price",
+        "Movmax Blade Arm with N2 Arm Technology Universal Locking Screw discount",
+        "eBay Movmax Blade Arm with N2 Arm Technology Universal Locking Screw"
+      ],
+      "score": 84,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
     },
     {
       "id": "ebay-item-366012017440",
@@ -4608,26 +4592,6 @@
       ]
     },
     {
-      "id": "ebay-item-257189836660-557828252096",
-      "url": "https://dealdesk.fyi/deals/ebay-item-257189836660-557828252096/",
-      "title": "Samsung Galaxy S25 Ultra 512GB S938U… deal: $734.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent deal",
-      "secondaryQueries": [
-        "Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent price",
-        "Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent discount",
-        "eBay Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent"
-      ],
-      "score": 96,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/samsung-galaxy-s25-ultra/",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/",
-        "/collections/samsung-galaxy/"
-      ]
-    },
-    {
       "id": "ebay-item-277755845714",
       "url": "https://dealdesk.fyi/deals/ebay-item-277755845714/",
       "title": "Dyson Purifier Cool Gen1 TP10 purifying fan… deal: $249.99 | DealDesk",
@@ -4658,6 +4622,26 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-257189836660-557828252096",
+      "url": "https://dealdesk.fyi/deals/ebay-item-257189836660-557828252096/",
+      "title": "Samsung Galaxy S25 Ultra 512GB S938U… deal: $734.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent deal",
+      "secondaryQueries": [
+        "Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent price",
+        "Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent discount",
+        "eBay Samsung Galaxy S25 Ultra 512GB S938U Unlocked - Excellent"
+      ],
+      "score": 96,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/samsung-galaxy-s25-ultra/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/unlocked-smartphones/",
+        "/collections/samsung-galaxy/"
+      ]
     },
     {
       "id": "ebay-item-206374582875",
@@ -4745,6 +4729,22 @@
         "eBay Worx 20V MAKERX ZipSnip Mini Rotary Cutter-Tool Only (WX745L.9)-CR"
       ],
       "score": 86,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-178385758480",
+      "url": "https://dealdesk.fyi/deals/ebay-item-178385758480/",
+      "title": "Jurassic World Chaos Theory: Darius &… deal: $19.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action deal",
+      "secondaryQueries": [
+        "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action price",
+        "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action discount",
+        "eBay Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action"
+      ],
+      "score": 80,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
@@ -4857,7 +4857,7 @@
     {
       "id": "ebay-item-178213248322",
       "url": "https://dealdesk.fyi/deals/ebay-item-178213248322/",
-      "title": "Jurassic World Chaos Theory: Darius &… deal: $19.99 | DealDesk",
+      "title": "Jurassic World Chaos Theory: Darius &… deal 248322 | DealDesk",
       "indexable": false,
       "primaryQuery": "Jurassic World Chaos Theory: Darius & Baryonyx & Monolophosaurus Action deal",
       "secondaryQueries": [
@@ -4962,6 +4962,26 @@
       ]
     },
     {
+      "id": "ebay-item-306949458765",
+      "url": "https://dealdesk.fyi/deals/ebay-item-306949458765/",
+      "title": "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA… deal: $549.99 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO deal",
+      "secondaryQueries": [
+        "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO price",
+        "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO discount",
+        "eBay Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO"
+      ],
+      "score": 86,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/refurbished-laptops/",
+        "/collections/lenovo-thinkpad/"
+      ]
+    },
+    {
       "id": "ebay-item-286108904231",
       "url": "https://dealdesk.fyi/deals/ebay-item-286108904231/",
       "title": "Makita WT02Z-R 12V max CXT 3/8\" Impact… deal: $64.99 | DealDesk",
@@ -5012,26 +5032,6 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-306949458765",
-      "url": "https://dealdesk.fyi/deals/ebay-item-306949458765/",
-      "title": "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA… deal: $549.99 | DealDesk",
-      "indexable": true,
-      "primaryQuery": "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO deal",
-      "secondaryQueries": [
-        "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO price",
-        "Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO discount",
-        "eBay Lenovo ThinkPad X1 Carbon Gen 10 14 WUXGA TOUCH i7-1270P 16GB 512GB WIN 11 PRO"
-      ],
-      "score": 86,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/refurbished-laptops/",
-        "/collections/lenovo-thinkpad/"
-      ]
     },
     {
       "id": "ebay-item-166708867898-466352533485",
@@ -5148,7 +5148,7 @@
       "id": "ebay-item-278003083150",
       "url": "https://dealdesk.fyi/deals/ebay-item-278003083150/",
       "title": "Lenovo ThinkPad X1 Yoga Gen 6 14.0\" FHD IPS… deal: $499.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Lenovo ThinkPad X1 Yoga Gen 6 14.0\" FHD IPS Touch i7-1185g7 32GB RAM 512GB LTE deal",
       "secondaryQueries": [
         "Lenovo ThinkPad X1 Yoga Gen 6 14.0\" FHD IPS Touch i7-1185g7 32GB RAM 512GB LTE price",
@@ -5158,26 +5158,6 @@
       "score": 86,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/refurbished-laptops/",
-        "/collections/lenovo-thinkpad/"
-      ]
-    },
-    {
-      "id": "ebay-item-306965835989",
-      "url": "https://dealdesk.fyi/deals/ebay-item-306965835989/",
-      "title": "Lenovo ThinkPad T480 14\" FHD Core i5-8350U… deal: $310.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro deal",
-      "secondaryQueries": [
-        "Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro price",
-        "Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro discount",
-        "eBay Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro"
-      ],
-      "score": 96,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/lenovo-thinkpad-t480/",
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/refurbished-laptops/",
@@ -5216,6 +5196,26 @@
       "comparisonPath": "",
       "collectionPaths": [
         "/collections/makita-tools/"
+      ]
+    },
+    {
+      "id": "ebay-item-306965835989",
+      "url": "https://dealdesk.fyi/deals/ebay-item-306965835989/",
+      "title": "Lenovo ThinkPad T480 14\" FHD Core i5-8350U… deal: $310.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro deal",
+      "secondaryQueries": [
+        "Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro price",
+        "Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro discount",
+        "eBay Lenovo ThinkPad T480 14\" FHD Core i5-8350U 16GB 512GB PCIe SSD Cam Win11Pro"
+      ],
+      "score": 96,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/lenovo-thinkpad-t480/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/refurbished-laptops/",
+        "/collections/lenovo-thinkpad/"
       ]
     },
     {
@@ -5736,25 +5736,6 @@
       ]
     },
     {
-      "id": "ebay-item-384770863938",
-      "url": "https://dealdesk.fyi/deals/ebay-item-384770863938/",
-      "title": "Eufy SoloCam E30 2K Security Camera Wireless… deal: $89.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking deal",
-      "secondaryQueries": [
-        "Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking price",
-        "Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking discount",
-        "eBay Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking"
-      ],
-      "score": 86,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/security-cameras/"
-      ]
-    },
-    {
       "id": "ebay-item-305957914668",
       "url": "https://dealdesk.fyi/deals/ebay-item-305957914668/",
       "title": "DJI Mini 4K Drone 3 Battery Ready To Fly… deal: $449.00 | DealDesk",
@@ -5788,6 +5769,25 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-384770863938",
+      "url": "https://dealdesk.fyi/deals/ebay-item-384770863938/",
+      "title": "Eufy SoloCam E30 2K Security Camera Wireless… deal: $89.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking deal",
+      "secondaryQueries": [
+        "Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking price",
+        "Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking discount",
+        "eBay Eufy SoloCam E30 2K Security Camera Wireless Solar Cam 360° Pan AI Tracking"
+      ],
+      "score": 86,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/security-cameras/"
+      ]
     },
     {
       "id": "ebay-item-306690790137",
@@ -5918,7 +5918,7 @@
       "id": "ebay-item-127875327929",
       "url": "https://dealdesk.fyi/deals/ebay-item-127875327929/",
       "title": "Melissa & Doug Jet Pilot Interactive… deal: $66.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Melissa & Doug Jet Pilot Interactive Dashboard Play Set [LCI32300] deal",
       "secondaryQueries": [
         "Melissa & Doug Jet Pilot Interactive Dashboard Play Set [LCI32300] price",
@@ -6023,24 +6023,6 @@
       ]
     },
     {
-      "id": "ebay-item-266071055949",
-      "url": "https://dealdesk.fyi/deals/ebay-item-266071055949/",
-      "title": "Acer 45W Adapter with Power Cord deal: $18.59 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Acer 45W Adapter with Power Cord deal",
-      "secondaryQueries": [
-        "Acer 45W Adapter with Power Cord price",
-        "Acer 45W Adapter with Power Cord discount",
-        "eBay Acer 45W Adapter with Power Cord"
-      ],
-      "score": 86,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
-      ]
-    },
-    {
       "id": "ebay-item-276019558646",
       "url": "https://dealdesk.fyi/deals/ebay-item-276019558646/",
       "title": "Acer NMW200 Nitro Gaming Mouse III 125MHz deal: $18.59 | DealDesk",
@@ -6068,6 +6050,24 @@
         "Acer 65W Adapter with Power Cord price",
         "Acer 65W Adapter with Power Cord discount",
         "eBay Acer 65W Adapter with Power Cord"
+      ],
+      "score": 86,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
+      ]
+    },
+    {
+      "id": "ebay-item-266071055949",
+      "url": "https://dealdesk.fyi/deals/ebay-item-266071055949/",
+      "title": "Acer 45W Adapter with Power Cord deal: $18.59 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Acer 45W Adapter with Power Cord deal",
+      "secondaryQueries": [
+        "Acer 45W Adapter with Power Cord price",
+        "Acer 45W Adapter with Power Cord discount",
+        "eBay Acer 45W Adapter with Power Cord"
       ],
       "score": 86,
       "merchantPath": "/merchant/ebay/",
@@ -6269,6 +6269,40 @@
       ]
     },
     {
+      "id": "ebay-item-197870585334",
+      "url": "https://dealdesk.fyi/deals/ebay-item-197870585334/",
+      "title": "GoPro HERO13 Waterproof Action Camera 64GB… deal: $534.95 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit deal",
+      "secondaryQueries": [
+        "GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit price",
+        "GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit discount",
+        "eBay GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit"
+      ],
+      "score": 80,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-326869597790",
+      "url": "https://dealdesk.fyi/deals/ebay-item-326869597790/",
+      "title": "DJI Mini 3 w/ RC Remote (Fly More Combo)… deal: $804.95 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More deal",
+      "secondaryQueries": [
+        "DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More price",
+        "DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More discount",
+        "eBay DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More"
+      ],
+      "score": 80,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/dji-drones/"
+      ]
+    },
+    {
       "id": "ebay-item-197493655809",
       "url": "https://dealdesk.fyi/deals/ebay-item-197493655809/",
       "title": "Kodak PIXPRO FZ45 Digital Camera, Red Bundle deal: $174.95 | DealDesk",
@@ -6339,22 +6373,6 @@
       ]
     },
     {
-      "id": "ebay-item-197870585334",
-      "url": "https://dealdesk.fyi/deals/ebay-item-197870585334/",
-      "title": "GoPro HERO13 Waterproof Action Camera 64GB… deal: $534.95 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit deal",
-      "secondaryQueries": [
-        "GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit price",
-        "GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit discount",
-        "eBay GoPro HERO13 Waterproof Action Camera 64GB Card 50 Piece Kit"
-      ],
-      "score": 76,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-326890010394",
       "url": "https://dealdesk.fyi/deals/ebay-item-326890010394/",
       "title": "DJI Osmo Pocket 3 4K Gimbal Camera w/… deal: $594.95 | DealDesk",
@@ -6387,24 +6405,6 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-326869597790",
-      "url": "https://dealdesk.fyi/deals/ebay-item-326869597790/",
-      "title": "DJI Mini 3 w/ RC Remote (Fly More Combo)… deal: $804.95 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More deal",
-      "secondaryQueries": [
-        "DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More price",
-        "DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More discount",
-        "eBay DJI Mini 3 w/ RC Remote (Fly More Combo) (CP.MA.00000613.01) + 64GB Card + More"
-      ],
-      "score": 76,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/dji-drones/"
-      ]
     },
     {
       "id": "ebay-item-198231279099",
@@ -7320,22 +7320,6 @@
       ]
     },
     {
-      "id": "ebay-item-204784953230",
-      "url": "https://dealdesk.fyi/deals/ebay-item-204784953230/",
-      "title": "Sony FE 70-200mm f/2.8 GM OSS II Lens -… deal: $2239.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW deal",
-      "secondaryQueries": [
-        "Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW price",
-        "Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW discount",
-        "eBay Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW"
-      ],
-      "score": 86,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-186335228371",
       "url": "https://dealdesk.fyi/deals/ebay-item-186335228371/",
       "title": "Sony Alpha a7C II 4K 33MP Full-Frame… deal: $1779.00 | DealDesk",
@@ -7400,6 +7384,22 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/"
       ]
+    },
+    {
+      "id": "ebay-item-204784953230",
+      "url": "https://dealdesk.fyi/deals/ebay-item-204784953230/",
+      "title": "Sony FE 70-200mm f/2.8 GM OSS II Lens -… deal: $2239.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW deal",
+      "secondaryQueries": [
+        "Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW price",
+        "Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW discount",
+        "eBay Sony FE 70-200mm f/2.8 GM OSS II Lens - SEL70200GM2 - G Master - Full-Frame NEW"
+      ],
+      "score": 86,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
     },
     {
       "id": "ebay-item-307094917265",
@@ -7555,22 +7555,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-307092920632",
-      "url": "https://dealdesk.fyi/deals/ebay-item-307092920632/",
-      "title": "McFarlane SportsPicks - NFL - Saquon Barkley… deal: $23.87 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig deal",
-      "secondaryQueries": [
-        "McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig price",
-        "McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig discount",
-        "eBay McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig"
-      ],
-      "score": 80,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-398240539747",
       "url": "https://dealdesk.fyi/deals/ebay-item-398240539747/",
       "title": "Larry Bird - McFarlane's SportsPicks -… deal: $23.86 | DealDesk",
@@ -7580,6 +7564,22 @@
         "Larry Bird - McFarlane's SportsPicks - Legends Series: NBA - Larry Bird (Boston price",
         "Larry Bird - McFarlane's SportsPicks - Legends Series: NBA - Larry Bird (Boston discount",
         "eBay Larry Bird - McFarlane's SportsPicks - Legends Series: NBA - Larry Bird (Boston"
+      ],
+      "score": 80,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-307092920632",
+      "url": "https://dealdesk.fyi/deals/ebay-item-307092920632/",
+      "title": "McFarlane SportsPicks - NFL - Saquon Barkley… deal: $23.87 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig deal",
+      "secondaryQueries": [
+        "McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig price",
+        "McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig discount",
+        "eBay McFarlane SportsPicks - NFL - Saquon Barkley (Philadelphia Eagles) 6\" Action Fig"
       ],
       "score": 80,
       "merchantPath": "/merchant/ebay/",
@@ -8055,22 +8055,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-398170861510",
-      "url": "https://dealdesk.fyi/deals/ebay-item-398170861510/",
-      "title": "Dark Avengers - Marvel Legends - Hawkeye… deal: $27.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece deal",
-      "secondaryQueries": [
-        "Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece price",
-        "Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece discount",
-        "eBay Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece"
-      ],
-      "score": 76,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-307088674365",
       "url": "https://dealdesk.fyi/deals/ebay-item-307088674365/",
       "title": "Avengers - Marvel Legends - Ghost Rider… deal: $27.99 | DealDesk",
@@ -8122,6 +8106,22 @@
         "/collections/refurbished-electronics/",
         "/collections/computer-monitors/"
       ]
+    },
+    {
+      "id": "ebay-item-398170861510",
+      "url": "https://dealdesk.fyi/deals/ebay-item-398170861510/",
+      "title": "Dark Avengers - Marvel Legends - Hawkeye… deal: $27.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece deal",
+      "secondaryQueries": [
+        "Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece price",
+        "Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece discount",
+        "eBay Dark Avengers - Marvel Legends - Hawkeye Action Figure with Build-A-Figure Piece"
+      ],
+      "score": 76,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
     },
     {
       "id": "ebay-item-126617721818",
@@ -8225,7 +8225,7 @@
       "id": "ebay-item-304925257317",
       "url": "https://dealdesk.fyi/deals/ebay-item-304925257317/",
       "title": "DJI FPV Combo and FPV Backpack -Certified… deal: $999.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "DJI FPV Combo and FPV Backpack -Certified Refurbished deal",
       "secondaryQueries": [
         "DJI FPV Combo and FPV Backpack -Certified Refurbished price",
@@ -8795,6 +8795,24 @@
       "collectionPaths": []
     },
     {
+      "id": "ebay-item-158069778974-459331847507",
+      "url": "https://dealdesk.fyi/deals/ebay-item-158069778974-459331847507/",
+      "title": "Bose SoundLink Flex Portable Speaker (2nd… deal: $129.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished deal",
+      "secondaryQueries": [
+        "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished price",
+        "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished discount",
+        "eBay Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished"
+      ],
+      "score": 82,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
+      ]
+    },
+    {
       "id": "ebay-item-256271376594",
       "url": "https://dealdesk.fyi/deals/ebay-item-256271376594/",
       "title": "AOPEN E0 20E0QBI 20\" 1600x900 75Hz Computer… deal: $56.91 | DealDesk",
@@ -8816,7 +8834,7 @@
     {
       "id": "ebay-item-158069778974-459331847504",
       "url": "https://dealdesk.fyi/deals/ebay-item-158069778974-459331847504/",
-      "title": "Bose SoundLink Flex Portable Speaker (2nd… deal: $129.00 | DealDesk",
+      "title": "Bose SoundLink Flex Portable Speaker (2nd… deal 847504 | DealDesk",
       "indexable": false,
       "primaryQuery": "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished deal",
       "secondaryQueries": [
@@ -8867,24 +8885,6 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/refurbished-laptops/"
-      ]
-    },
-    {
-      "id": "ebay-item-158069778974-459331847507",
-      "url": "https://dealdesk.fyi/deals/ebay-item-158069778974-459331847507/",
-      "title": "Bose SoundLink Flex Portable Speaker (2nd… deal 847507 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished deal",
-      "secondaryQueries": [
-        "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished price",
-        "Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished discount",
-        "eBay Bose SoundLink Flex Portable Speaker (2nd Gen), Certified Refurbished"
-      ],
-      "score": 78,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
       ]
     },
     {
@@ -9139,24 +9139,6 @@
       ]
     },
     {
-      "id": "ebay-item-196223759238-496071304185",
-      "url": "https://dealdesk.fyi/deals/ebay-item-196223759238-496071304185/",
-      "title": "Nintendo Switch Lite CHOOSE YOUR COLOR +… deal: $169.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty! deal",
-      "secondaryQueries": [
-        "Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty! price",
-        "Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty! discount",
-        "eBay Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty!"
-      ],
-      "score": 82,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
-      ]
-    },
-    {
       "id": "ebay-item-188431279934",
       "url": "https://dealdesk.fyi/deals/ebay-item-188431279934/",
       "title": "Audio Technica Sound Burger Portable… deal: $169.00 | DealDesk",
@@ -9166,6 +9148,24 @@
         "Audio Technica Sound Burger Portable Bluetooth Turntable (Yellow) price",
         "Audio Technica Sound Burger Portable Bluetooth Turntable (Yellow) discount",
         "eBay Audio Technica Sound Burger Portable Bluetooth Turntable (Yellow)"
+      ],
+      "score": 82,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
+      ]
+    },
+    {
+      "id": "ebay-item-196223759238-496071304185",
+      "url": "https://dealdesk.fyi/deals/ebay-item-196223759238-496071304185/",
+      "title": "Nintendo Switch Lite CHOOSE YOUR COLOR +… deal: $169.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty! deal",
+      "secondaryQueries": [
+        "Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty! price",
+        "Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty! discount",
+        "eBay Nintendo Switch Lite CHOOSE YOUR COLOR + Free 1 Year Warranty!"
       ],
       "score": 82,
       "merchantPath": "/merchant/ebay/",
@@ -9266,7 +9266,7 @@
       "id": "ebay-item-158160999510",
       "url": "https://dealdesk.fyi/deals/ebay-item-158160999510/",
       "title": "Lenovo IdeaPad 5x 2-in-1 14 OLED Snapdragon… deal: $548.96 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Lenovo IdeaPad 5x 2-in-1 14 OLED Snapdragon X Plus 16GB 1TB Copilot+ PC deal",
       "secondaryQueries": [
         "Lenovo IdeaPad 5x 2-in-1 14 OLED Snapdragon X Plus 16GB 1TB Copilot+ PC price",
@@ -9316,22 +9316,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-186477890541",
-      "url": "https://dealdesk.fyi/deals/ebay-item-186477890541/",
-      "title": "Sigma 24-70mm f/2.8 DG DN II Art Lens -… deal: $1179.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW deal",
-      "secondaryQueries": [
-        "Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW price",
-        "Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW discount",
-        "eBay Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW"
-      ],
-      "score": 82,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-256879670961",
       "url": "https://dealdesk.fyi/deals/ebay-item-256879670961/",
       "title": "WX959L WORX Drill/Driver-Circular Saw- Flex… deal: $178.99 | DealDesk",
@@ -9341,6 +9325,22 @@
         "WX959L WORX Drill/Driver-Circular Saw- Flex Light Combo Kit price",
         "WX959L WORX Drill/Driver-Circular Saw- Flex Light Combo Kit discount",
         "eBay WX959L WORX Drill/Driver-Circular Saw- Flex Light Combo Kit"
+      ],
+      "score": 82,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-186477890541",
+      "url": "https://dealdesk.fyi/deals/ebay-item-186477890541/",
+      "title": "Sigma 24-70mm f/2.8 DG DN II Art Lens -… deal: $1179.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW deal",
+      "secondaryQueries": [
+        "Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW price",
+        "Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW discount",
+        "eBay Sigma 24-70mm f/2.8 DG DN II Art Lens - Sony E - 57A965 - BRAND NEW"
       ],
       "score": 82,
       "merchantPath": "/merchant/ebay/",
@@ -9365,6 +9365,22 @@
         "/collections/refurbished-electronics/",
         "/collections/soundbars/"
       ]
+    },
+    {
+      "id": "ebay-item-175712145939-475095878389",
+      "url": "https://dealdesk.fyi/deals/ebay-item-175712145939-475095878389/",
+      "title": "NEW Wireless Guitar Controller for PS3 & PC… deal: $89.10 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero deal",
+      "secondaryQueries": [
+        "NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero price",
+        "NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero discount",
+        "eBay NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero"
+      ],
+      "score": 82,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
     },
     {
       "id": "ebay-item-278163840365",
@@ -10156,6 +10172,24 @@
       ]
     },
     {
+      "id": "ebay-item-388345107937-655509017542",
+      "url": "https://dealdesk.fyi/deals/ebay-item-388345107937-655509017542/",
+      "title": "Amazon Echo Show 8 with Alexa 1st Gen 8 inch… deal: $79.79 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black deal",
+      "secondaryQueries": [
+        "Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black price",
+        "Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black current offer",
+        "eBay Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
+      ]
+    },
+    {
       "id": "ebay-item-307064775838",
       "url": "https://dealdesk.fyi/deals/ebay-item-307064775838/",
       "title": "WYZE Bulb Cam - 2K HD Smart Light Bulb… deal: $34.99 | DealDesk",
@@ -10230,25 +10264,6 @@
       ]
     },
     {
-      "id": "ebay-item-306984439067",
-      "url": "https://dealdesk.fyi/deals/ebay-item-306984439067/",
-      "title": "Hisense R652 5.1 Ch Soundbar with Subwoofer… deal: $129.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby deal",
-      "secondaryQueries": [
-        "Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby price",
-        "Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby current offer",
-        "eBay Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/soundbars/"
-      ]
-    },
-    {
       "id": "ebay-item-386838176956",
       "url": "https://dealdesk.fyi/deals/ebay-item-386838176956/",
       "title": "Sonos Era300 Black Certified Refurbished -… deal: $389.00 | DealDesk",
@@ -10302,6 +10317,42 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/soundbars/"
+      ]
+    },
+    {
+      "id": "ebay-item-800471985222",
+      "url": "https://dealdesk.fyi/deals/ebay-item-800471985222/",
+      "title": "Sonos Sub 4 Black Certified Refurbished -… deal: $719.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi deal",
+      "secondaryQueries": [
+        "Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi price",
+        "Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi current offer",
+        "eBay Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
+      ]
+    },
+    {
+      "id": "ebay-item-386838198102",
+      "url": "https://dealdesk.fyi/deals/ebay-item-386838198102/",
+      "title": "Sonos Sub Gen3 Black Certified Refurbished… deal: $639.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer deal",
+      "secondaryQueries": [
+        "Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer price",
+        "Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer current offer",
+        "eBay Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
       ]
     },
     {
@@ -10703,24 +10754,6 @@
       ]
     },
     {
-      "id": "ebay-item-306779955927",
-      "url": "https://dealdesk.fyi/deals/ebay-item-306779955927/",
-      "title": "DJI Mini 3 (RC-N1) deal: $419.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "DJI Mini 3 (RC-N1) deal",
-      "secondaryQueries": [
-        "DJI Mini 3 (RC-N1) price",
-        "DJI Mini 3 (RC-N1) current offer",
-        "eBay DJI Mini 3 (RC-N1)"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/dji-drones/"
-      ]
-    },
-    {
       "id": "ebay-item-306774651012",
       "url": "https://dealdesk.fyi/deals/ebay-item-306774651012/",
       "title": "DJI Mini 5 Pro Fly More Combo Plus with… deal: $1189.00 | DealDesk",
@@ -10827,25 +10860,6 @@
       ]
     },
     {
-      "id": "ebay-item-305595432446",
-      "url": "https://dealdesk.fyi/deals/ebay-item-305595432446/",
-      "title": "DJI Mini 3 Pro Intelligent Flight… deal: $55.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished deal",
-      "secondaryQueries": [
-        "DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished price",
-        "DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished current offer",
-        "eBay DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/dji-drones/"
-      ]
-    },
-    {
       "id": "ebay-item-306780038114",
       "url": "https://dealdesk.fyi/deals/ebay-item-306780038114/",
       "title": "DJI Air 3S Fly More Combo (RC 2 Screen… deal: $1599.00 | DealDesk",
@@ -10914,22 +10928,6 @@
       ]
     },
     {
-      "id": "ebay-item-147412305515",
-      "url": "https://dealdesk.fyi/deals/ebay-item-147412305515/",
-      "title": "Sony FX6 Full-Frame Cinema Video Camera… deal: $5899.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box deal",
-      "secondaryQueries": [
-        "Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box price",
-        "Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box current offer",
-        "eBay Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-377166430788",
       "url": "https://dealdesk.fyi/deals/ebay-item-377166430788/",
       "title": "Lenovo ThinkPad T14 Gen 3 14\" WUXGA Ryzen 5… deal: $449.00 | DealDesk",
@@ -10947,6 +10945,25 @@
         "/collections/refurbished-electronics/",
         "/collections/refurbished-laptops/",
         "/collections/lenovo-thinkpad/"
+      ]
+    },
+    {
+      "id": "ebay-item-226756847304",
+      "url": "https://dealdesk.fyi/deals/ebay-item-226756847304/",
+      "title": "Apple MacBook Air A2681 2022 13\" - M2 -… deal: $669.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished deal",
+      "secondaryQueries": [
+        "Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished price",
+        "Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished current offer",
+        "eBay Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/refurbished-laptops/"
       ]
     },
     {
@@ -11089,25 +11106,6 @@
       ]
     },
     {
-      "id": "ebay-item-267477744552",
-      "url": "https://dealdesk.fyi/deals/ebay-item-267477744552/",
-      "title": "Dell Latitude 14” HD Laptop Intel Core i5… deal: $199.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi deal",
-      "secondaryQueries": [
-        "Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi price",
-        "Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi current offer",
-        "eBay Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/refurbished-laptops/"
-      ]
-    },
-    {
       "id": "ebay-item-226052371811",
       "url": "https://dealdesk.fyi/deals/ebay-item-226052371811/",
       "title": "Lenovo ThinkPad T480 14\" HD i5 8250u 16GB… deal: $299.99 | DealDesk",
@@ -11146,22 +11144,6 @@
         "/collections/refurbished-laptops/",
         "/collections/lenovo-thinkpad/"
       ]
-    },
-    {
-      "id": "ebay-item-175712145939-475095878389",
-      "url": "https://dealdesk.fyi/deals/ebay-item-175712145939-475095878389/",
-      "title": "NEW Wireless Guitar Controller for PS3 & PC… deal: $99.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero deal",
-      "secondaryQueries": [
-        "NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero price",
-        "NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero current offer",
-        "eBay NEW Wireless Guitar Controller for PS3 & PC Mac Guitar Hero Clone Hero"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
     },
     {
       "id": "ebay-item-155488314814",
@@ -11442,25 +11424,6 @@
       ]
     },
     {
-      "id": "ebay-item-158071012075",
-      "url": "https://dealdesk.fyi/deals/ebay-item-158071012075/",
-      "title": "Samsung Galaxy S25 - 128GB (T-Mobile) -… deal: $344.98 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock) deal",
-      "secondaryQueries": [
-        "Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock) price",
-        "Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock) current offer",
-        "eBay Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock)"
-      ],
-      "score": 80,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/samsung-galaxy-s25/",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/samsung-galaxy/"
-      ]
-    },
-    {
       "id": "ebay-item-195489338765",
       "url": "https://dealdesk.fyi/deals/ebay-item-195489338765/",
       "title": "Nintendo Game Boy Advance SP System GBA SP… deal: $219.95 | DealDesk",
@@ -11499,23 +11462,21 @@
       ]
     },
     {
-      "id": "ebay-item-136325419316-435332196403",
-      "url": "https://dealdesk.fyi/deals/ebay-item-136325419316-435332196403/",
-      "title": "Samsung Galaxy S23 256GB SM-S911U1 - 5G -… deal: $299.48 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT deal",
+      "id": "ebay-item-287479728690",
+      "url": "https://dealdesk.fyi/deals/ebay-item-287479728690/",
+      "title": "Pokemon Tyranitar Holo Expedition 29/165… deal: $800.00 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "Pokemon Tyranitar Holo Expedition 29/165 PSA 7 deal",
       "secondaryQueries": [
-        "Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT price",
-        "Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT current offer",
-        "eBay Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT"
+        "Pokemon Tyranitar Holo Expedition 29/165 PSA 7 price",
+        "Pokemon Tyranitar Holo Expedition 29/165 PSA 7 current offer",
+        "eBay Pokemon Tyranitar Holo Expedition 29/165 PSA 7"
       ],
-      "score": 80,
+      "score": 61,
       "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/samsung-galaxy-s23/",
+      "comparisonPath": "",
       "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/",
-        "/collections/samsung-galaxy/"
+        "/collections/pokemon-cards/"
       ]
     },
     {
@@ -11528,6 +11489,61 @@
         "3 Tine Ripper Soil Conditioner Attachment Fits Toro Dingo Mini Skid Steer Loader price",
         "3 Tine Ripper Soil Conditioner Attachment Fits Toro Dingo Mini Skid Steer Loader current offer",
         "eBay 3 Tine Ripper Soil Conditioner Attachment Fits Toro Dingo Mini Skid Steer Loader"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-407078012061",
+      "url": "https://dealdesk.fyi/deals/ebay-item-407078012061/",
+      "title": "TCL A3X A600DL 32GB 3GB Black Unlocked -… deal: $40.67 | DealDesk",
+      "indexable": true,
+      "primaryQuery": "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition deal",
+      "secondaryQueries": [
+        "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition price",
+        "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition current offer",
+        "eBay TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/unlocked-smartphones/"
+      ]
+    },
+    {
+      "id": "ebay-item-276785201004",
+      "url": "https://dealdesk.fyi/deals/ebay-item-276785201004/",
+      "title": "9\" Compact Industrial Duty Earth Auger 2… deal: $299.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges deal",
+      "secondaryQueries": [
+        "9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges price",
+        "9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges current offer",
+        "eBay 9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-298409332039",
+      "url": "https://dealdesk.fyi/deals/ebay-item-298409332039/",
+      "title": "Tool-Tuff Post Hole Digger Gearbox deal: $279.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Tool-Tuff Post Hole Digger Gearbox deal",
+      "secondaryQueries": [
+        "Tool-Tuff Post Hole Digger Gearbox price",
+        "Tool-Tuff Post Hole Digger Gearbox current offer",
+        "eBay Tool-Tuff Post Hole Digger Gearbox"
       ],
       "score": 64,
       "merchantPath": "/merchant/ebay/",
@@ -11699,6 +11715,42 @@
       ]
     },
     {
+      "id": "ebay-item-193451224712",
+      "url": "https://dealdesk.fyi/deals/ebay-item-193451224712/",
+      "title": "Lowe SQ-9-3H Skid Steer Auger Bit 9\"… deal: $395.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall deal",
+      "secondaryQueries": [
+        "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall price",
+        "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall current offer",
+        "eBay Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall"
+      ],
+      "score": 71,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/lowe-sq-skid-steer/",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-196819042906",
+      "url": "https://dealdesk.fyi/deals/ebay-item-196819042906/",
+      "title": "Heavy Duty Stump Bucket with Teeth… deal: $599.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer deal",
+      "secondaryQueries": [
+        "Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer price",
+        "Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer current offer",
+        "eBay Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
       "id": "ebay-item-325204609137",
       "url": "https://dealdesk.fyi/deals/ebay-item-325204609137/",
       "title": "42\" Long 2200 Pound Pallet Forks Fits… deal: $539.99 | DealDesk",
@@ -11710,6 +11762,24 @@
         "eBay 42\" Long 2200 Pound Pallet Forks Fits Kubota Kioti Tractor Loader Quick Attach"
       ],
       "score": 61,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-196250172215",
+      "url": "https://dealdesk.fyi/deals/ebay-item-196250172215/",
+      "title": "5 Tine Ripper Soil Tiller Fits Skid Steer… deal: $624.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping deal",
+      "secondaryQueries": [
+        "5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping price",
+        "5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping current offer",
+        "eBay 5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping"
+      ],
+      "score": 64,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -11789,33 +11859,15 @@
       ]
     },
     {
-      "id": "ebay-item-203643760982",
-      "url": "https://dealdesk.fyi/deals/ebay-item-203643760982/",
-      "title": "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger… deal: $199.99 | DealDesk",
+      "id": "ebay-item-202960882640",
+      "url": "https://dealdesk.fyi/deals/ebay-item-202960882640/",
+      "title": "42\" 2,200 Pound Pallet Forks For Toro Dingo… deal: $849.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923 deal",
+      "primaryQuery": "42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer deal",
       "secondaryQueries": [
-        "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923 price",
-        "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923 current offer",
-        "eBay Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-202389180211",
-      "url": "https://dealdesk.fyi/deals/ebay-item-202389180211/",
-      "title": "Lowe 2\" Female Hex to 2\" Male Round Auger… deal: $230.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty deal",
-      "secondaryQueries": [
-        "Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty price",
-        "Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty current offer",
-        "eBay Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty"
+        "42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer price",
+        "42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer current offer",
+        "eBay 42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer"
       ],
       "score": 64,
       "merchantPath": "/merchant/ebay/",
@@ -11879,17 +11931,17 @@
       ]
     },
     {
-      "id": "ebay-item-203476906146",
-      "url": "https://dealdesk.fyi/deals/ebay-item-203476906146/",
-      "title": "48\" Single Cylinder Root Grapple Bucket… deal: $1524.99 | DealDesk",
+      "id": "ebay-item-194427559918",
+      "url": "https://dealdesk.fyi/deals/ebay-item-194427559918/",
+      "title": "Danuser 24\" Length 2\" Hex Shaft Auger Bit… deal: $224.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach deal",
+      "primaryQuery": "Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911 deal",
       "secondaryQueries": [
-        "48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach price",
-        "48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach current offer",
-        "eBay 48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach"
+        "Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911 price",
+        "Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911 current offer",
+        "eBay Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911"
       ],
-      "score": 64,
+      "score": 61,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [
@@ -11933,15 +11985,15 @@
       ]
     },
     {
-      "id": "ebay-item-324234098769",
-      "url": "https://dealdesk.fyi/deals/ebay-item-324234098769/",
-      "title": "60\" Dual Cylinder Root Grapple Bucket… deal: $1699.99 | DealDesk",
+      "id": "ebay-item-323832713279",
+      "url": "https://dealdesk.fyi/deals/ebay-item-323832713279/",
+      "title": "Lowe 14\" Length Extension for 2\" Hex Male… deal: $175.99 | DealDesk",
       "indexable": false,
-      "primaryQuery": "60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach deal",
+      "primaryQuery": "Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment deal",
       "secondaryQueries": [
-        "60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach price",
-        "60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach current offer",
-        "eBay 60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach"
+        "Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment price",
+        "Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment current offer",
+        "eBay Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment"
       ],
       "score": 61,
       "merchantPath": "/merchant/ebay/",
@@ -11951,9 +12003,27 @@
       ]
     },
     {
+      "id": "ebay-item-195983154078",
+      "url": "https://dealdesk.fyi/deals/ebay-item-195983154078/",
+      "title": "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide,… deal: $259.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall deal",
+      "secondaryQueries": [
+        "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall price",
+        "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall current offer",
+        "eBay Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall"
+      ],
+      "score": 71,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/lowe-sq-skid-steer/",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
       "id": "ebay-item-307048071635",
       "url": "https://dealdesk.fyi/deals/ebay-item-307048071635/",
-      "title": "Storm Emeralda Booster Box Japanese Pokemon… deal: $149.99 | DealDesk",
+      "title": "Storm Emeralda Booster Box Japanese Pokemon… deal: $144.99 | DealDesk",
       "indexable": false,
       "primaryQuery": "Storm Emeralda Booster Box Japanese Pokemon Mega Evolution US Seller SHIPS NOW! deal",
       "secondaryQueries": [
@@ -12014,22 +12084,6 @@
         "Bundle The Hobbit HOB MTG price",
         "Bundle The Hobbit HOB MTG current offer",
         "eBay Bundle The Hobbit HOB MTG"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-177998816960",
-      "url": "https://dealdesk.fyi/deals/ebay-item-177998816960/",
-      "title": "-Set of 4- Commander Decks Marvel Super… deal: $199.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "-Set of 4- Commander Decks Marvel Super Heroes MSH MTG deal",
-      "secondaryQueries": [
-        "-Set of 4- Commander Decks Marvel Super Heroes MSH MTG price",
-        "-Set of 4- Commander Decks Marvel Super Heroes MSH MTG current offer",
-        "eBay -Set of 4- Commander Decks Marvel Super Heroes MSH MTG"
       ],
       "score": 64,
       "merchantPath": "/merchant/ebay/",
@@ -12107,6 +12161,24 @@
       ]
     },
     {
+      "id": "ebay-item-306799988348",
+      "url": "https://dealdesk.fyi/deals/ebay-item-306799988348/",
+      "title": "Pokemon Mega Evolution Ascended Heroes… deal: $183.97 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New deal",
+      "secondaryQueries": [
+        "Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New price",
+        "Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New current offer",
+        "eBay Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/pokemon-cards/"
+      ]
+    },
+    {
       "id": "ebay-item-188226796219",
       "url": "https://dealdesk.fyi/deals/ebay-item-188226796219/",
       "title": "Star Wars: Unlimited – 2026 Twin Suns Deck… deal: $99.99 | DealDesk",
@@ -12141,7 +12213,7 @@
     {
       "id": "ebay-item-307048075445",
       "url": "https://dealdesk.fyi/deals/ebay-item-307048075445/",
-      "title": "Storm Emeralda Booster Box 10X Wholesale… deal: $1399.95 | DealDesk",
+      "title": "Storm Emeralda Booster Box 10X Wholesale… deal: $1349.95 | DealDesk",
       "indexable": false,
       "primaryQuery": "Storm Emeralda Booster Box 10X Wholesale Bundle Japanese Pokémon US Seller deal",
       "secondaryQueries": [
@@ -12209,22 +12281,6 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-177813705674",
-      "url": "https://dealdesk.fyi/deals/ebay-item-177813705674/",
-      "title": "Bundle Secrets of Strixhaven SOS MTG deal: $46.95 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Bundle Secrets of Strixhaven SOS MTG deal",
-      "secondaryQueries": [
-        "Bundle Secrets of Strixhaven SOS MTG price",
-        "Bundle Secrets of Strixhaven SOS MTG current offer",
-        "eBay Bundle Secrets of Strixhaven SOS MTG"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
       "id": "ebay-item-177515566668",
       "url": "https://dealdesk.fyi/deals/ebay-item-177515566668/",
       "title": "Yu-Gi-Oh! The Chronicles Deck: Spirit… deal: $9.99 | DealDesk",
@@ -12273,6 +12329,22 @@
       "collectionPaths": []
     },
     {
+      "id": "ebay-item-186852040063",
+      "url": "https://dealdesk.fyi/deals/ebay-item-186852040063/",
+      "title": "Play Booster Box Aetherdrift DFT MTG deal: $109.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Play Booster Box Aetherdrift DFT MTG deal",
+      "secondaryQueries": [
+        "Play Booster Box Aetherdrift DFT MTG price",
+        "Play Booster Box Aetherdrift DFT MTG current offer",
+        "eBay Play Booster Box Aetherdrift DFT MTG"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
       "id": "ebay-item-187367803877",
       "url": "https://dealdesk.fyi/deals/ebay-item-187367803877/",
       "title": "Play Booster Box Marvel's Spider-Man SPM MTG deal: $124.99 | DealDesk",
@@ -12282,6 +12354,22 @@
         "Play Booster Box Marvel's Spider-Man SPM MTG price",
         "Play Booster Box Marvel's Spider-Man SPM MTG current offer",
         "eBay Play Booster Box Marvel's Spider-Man SPM MTG"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-186793888039",
+      "url": "https://dealdesk.fyi/deals/ebay-item-186793888039/",
+      "title": "Outer Sleeves: Matte Clear Dragon Shield 100… deal: $12.68 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Outer Sleeves: Matte Clear Dragon Shield 100 ct. deal",
+      "secondaryQueries": [
+        "Outer Sleeves: Matte Clear Dragon Shield 100 ct. price",
+        "Outer Sleeves: Matte Clear Dragon Shield 100 ct. current offer",
+        "eBay Outer Sleeves: Matte Clear Dragon Shield 100 ct."
       ],
       "score": 64,
       "merchantPath": "/merchant/ebay/",
@@ -12377,6 +12465,24 @@
       ]
     },
     {
+      "id": "ebay-item-325328436501",
+      "url": "https://dealdesk.fyi/deals/ebay-item-325328436501/",
+      "title": "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid… deal: $329.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ deal",
+      "secondaryQueries": [
+        "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ price",
+        "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ current offer",
+        "eBay Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ"
+      ],
+      "score": 61,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
       "id": "ebay-item-398124643338",
       "url": "https://dealdesk.fyi/deals/ebay-item-398124643338/",
       "title": "Makita XUX02SM1X1-R 18V LXT Couple Shaft… deal: $215.59 | DealDesk",
@@ -12429,6 +12535,24 @@
       "collectionPaths": []
     },
     {
+      "id": "ebay-item-127914950186",
+      "url": "https://dealdesk.fyi/deals/ebay-item-127914950186/",
+      "title": "Pokémon TCG Terastal Grand Gathering CSV9.5C… deal: $99.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese deal",
+      "secondaryQueries": [
+        "Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese price",
+        "Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese current offer",
+        "eBay Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/pokemon-cards/"
+      ]
+    },
+    {
       "id": "ebay-item-178252138855",
       "url": "https://dealdesk.fyi/deals/ebay-item-178252138855/",
       "title": "Weiss Schwarz: Goddess of Victory: NIKKE vol.… deal 138855 | DealDesk",
@@ -12461,6 +12585,276 @@
       "collectionPaths": []
     },
     {
+      "id": "ebay-item-223392431851",
+      "url": "https://dealdesk.fyi/deals/ebay-item-223392431851/",
+      "title": "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits… deal: $24.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD deal",
+      "secondaryQueries": [
+        "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD price",
+        "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD current offer",
+        "eBay 1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
+      ]
+    },
+    {
+      "id": "ebay-item-145471295759",
+      "url": "https://dealdesk.fyi/deals/ebay-item-145471295759/",
+      "title": "Excellent Callaway 300 Pro Slope Enhanced… deal: $111.57 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty deal",
+      "secondaryQueries": [
+        "Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty price",
+        "Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty current offer",
+        "eBay Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/"
+      ]
+    },
+    {
+      "id": "ebay-item-306984439067",
+      "url": "https://dealdesk.fyi/deals/ebay-item-306984439067/",
+      "title": "Hisense R652 5.1 Ch Soundbar with Subwoofer… deal: $129.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby deal",
+      "secondaryQueries": [
+        "Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby price",
+        "Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby current offer",
+        "eBay Hisense R652 5.1 Ch Soundbar with Subwoofer & Rear Surround Speakers 440W Dolby"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/soundbars/"
+      ]
+    },
+    {
+      "id": "ebay-item-306779955927",
+      "url": "https://dealdesk.fyi/deals/ebay-item-306779955927/",
+      "title": "DJI Mini 3 (RC-N1) deal: $419.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "DJI Mini 3 (RC-N1) deal",
+      "secondaryQueries": [
+        "DJI Mini 3 (RC-N1) price",
+        "DJI Mini 3 (RC-N1) current offer",
+        "eBay DJI Mini 3 (RC-N1)"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/dji-drones/"
+      ]
+    },
+    {
+      "id": "ebay-item-305595432446",
+      "url": "https://dealdesk.fyi/deals/ebay-item-305595432446/",
+      "title": "DJI Mini 3 Pro Intelligent Flight… deal: $55.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished deal",
+      "secondaryQueries": [
+        "DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished price",
+        "DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished current offer",
+        "eBay DJI Mini 3 Pro Intelligent Flight Battery-Certified Refurbished"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/dji-drones/"
+      ]
+    },
+    {
+      "id": "ebay-item-147412305515",
+      "url": "https://dealdesk.fyi/deals/ebay-item-147412305515/",
+      "title": "Sony FX6 Full-Frame Cinema Video Camera… deal: $5899.00 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box deal",
+      "secondaryQueries": [
+        "Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box price",
+        "Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box current offer",
+        "eBay Sony FX6 Full-Frame Cinema Video Camera Body New USA Open Box"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-267477744552",
+      "url": "https://dealdesk.fyi/deals/ebay-item-267477744552/",
+      "title": "Dell Latitude 14” HD Laptop Intel Core i5… deal: $199.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi deal",
+      "secondaryQueries": [
+        "Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi price",
+        "Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi current offer",
+        "eBay Dell Latitude 14” HD Laptop Intel Core i5 8GB RAM 256GB SSD Windows 11 HDMI WiFi"
+      ],
+      "score": 70,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/refurbished-laptops/"
+      ]
+    },
+    {
+      "id": "ebay-item-158071012075",
+      "url": "https://dealdesk.fyi/deals/ebay-item-158071012075/",
+      "title": "Samsung Galaxy S25 - 128GB (T-Mobile) -… deal: $344.98 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock) deal",
+      "secondaryQueries": [
+        "Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock) price",
+        "Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock) current offer",
+        "eBay Samsung Galaxy S25 - 128GB (T-Mobile) - Silver (B-Stock)"
+      ],
+      "score": 80,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/samsung-galaxy-s25/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/samsung-galaxy/"
+      ]
+    },
+    {
+      "id": "ebay-item-136325419316-435332196403",
+      "url": "https://dealdesk.fyi/deals/ebay-item-136325419316-435332196403/",
+      "title": "Samsung Galaxy S23 256GB SM-S911U1 - 5G -… deal: $299.48 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT deal",
+      "secondaryQueries": [
+        "Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT price",
+        "Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT current offer",
+        "eBay Samsung Galaxy S23 256GB SM-S911U1 - 5G - FACTORY UNLOCKED - EXCELLENT"
+      ],
+      "score": 80,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "/compare/samsung-galaxy-s23/",
+      "collectionPaths": [
+        "/collections/refurbished-electronics/",
+        "/collections/unlocked-smartphones/",
+        "/collections/samsung-galaxy/"
+      ]
+    },
+    {
+      "id": "ebay-item-203643760982",
+      "url": "https://dealdesk.fyi/deals/ebay-item-203643760982/",
+      "title": "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger… deal: $199.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923 deal",
+      "secondaryQueries": [
+        "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923 price",
+        "Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923 current offer",
+        "eBay Danuser 2 9/16\" Round to 2\" Hex Shaft Auger Bit Adapter Conversion Part 10923"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-202389180211",
+      "url": "https://dealdesk.fyi/deals/ebay-item-202389180211/",
+      "title": "Lowe 2\" Female Hex to 2\" Male Round Auger… deal: $230.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty deal",
+      "secondaryQueries": [
+        "Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty price",
+        "Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty current offer",
+        "eBay Lowe 2\" Female Hex to 2\" Male Round Auger Bit Adapter Conversion Heavy Duty"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-203476906146",
+      "url": "https://dealdesk.fyi/deals/ebay-item-203476906146/",
+      "title": "48\" Single Cylinder Root Grapple Bucket… deal: $1524.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach deal",
+      "secondaryQueries": [
+        "48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach price",
+        "48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach current offer",
+        "eBay 48\" Single Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-324234098769",
+      "url": "https://dealdesk.fyi/deals/ebay-item-324234098769/",
+      "title": "60\" Dual Cylinder Root Grapple Bucket… deal: $1699.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach deal",
+      "secondaryQueries": [
+        "60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach price",
+        "60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach current offer",
+        "eBay 60\" Dual Cylinder Root Grapple Bucket Attachment Fits Skid Steer Quick Attach"
+      ],
+      "score": 61,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": [
+        "/collections/equipment-attachments/"
+      ]
+    },
+    {
+      "id": "ebay-item-177998816960",
+      "url": "https://dealdesk.fyi/deals/ebay-item-177998816960/",
+      "title": "-Set of 4- Commander Decks Marvel Super… deal: $199.99 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "-Set of 4- Commander Decks Marvel Super Heroes MSH MTG deal",
+      "secondaryQueries": [
+        "-Set of 4- Commander Decks Marvel Super Heroes MSH MTG price",
+        "-Set of 4- Commander Decks Marvel Super Heroes MSH MTG current offer",
+        "eBay -Set of 4- Commander Decks Marvel Super Heroes MSH MTG"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
+      "id": "ebay-item-177813705674",
+      "url": "https://dealdesk.fyi/deals/ebay-item-177813705674/",
+      "title": "Bundle Secrets of Strixhaven SOS MTG deal: $46.95 | DealDesk",
+      "indexable": false,
+      "primaryQuery": "Bundle Secrets of Strixhaven SOS MTG deal",
+      "secondaryQueries": [
+        "Bundle Secrets of Strixhaven SOS MTG price",
+        "Bundle Secrets of Strixhaven SOS MTG current offer",
+        "eBay Bundle Secrets of Strixhaven SOS MTG"
+      ],
+      "score": 64,
+      "merchantPath": "/merchant/ebay/",
+      "comparisonPath": "",
+      "collectionPaths": []
+    },
+    {
       "id": "ebay-item-168471287902",
       "url": "https://dealdesk.fyi/deals/ebay-item-168471287902/",
       "title": "ASUS - ROG Rapture GT-BE98 Pro BE30000… deal: $409.99 | DealDesk",
@@ -12488,24 +12882,6 @@
         "Seagate Exos ST10000NM0226 10TB 3.5 12Gb/s SAS Enterprise HDD 4KN hard drive price",
         "Seagate Exos ST10000NM0226 10TB 3.5 12Gb/s SAS Enterprise HDD 4KN hard drive current offer",
         "eBay Seagate Exos ST10000NM0226 10TB 3.5 12Gb/s SAS Enterprise HDD 4KN hard drive"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
-      ]
-    },
-    {
-      "id": "ebay-item-145471295759",
-      "url": "https://dealdesk.fyi/deals/ebay-item-145471295759/",
-      "title": "Excellent Callaway 300 Pro Slope Enhanced… deal: $107.18 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty deal",
-      "secondaryQueries": [
-        "Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty price",
-        "Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty current offer",
-        "eBay Excellent Callaway 300 Pro Slope Enhanced Model Golf Rangefinder 1 Year Warranty"
       ],
       "score": 70,
       "merchantPath": "/merchant/ebay/",
@@ -12687,7 +13063,7 @@
       "id": "ebay-item-278246901009",
       "url": "https://dealdesk.fyi/deals/ebay-item-278246901009/",
       "title": "PSA 10 One Piece Card Roronoa Zoro Flagship… deal: $400.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "PSA 10 One Piece Card Roronoa Zoro Flagship Battle Top 8 Promo ST21-015 Japan deal",
       "secondaryQueries": [
         "PSA 10 One Piece Card Roronoa Zoro Flagship Battle Top 8 Promo ST21-015 Japan price",
@@ -12700,29 +13076,10 @@
       "collectionPaths": []
     },
     {
-      "id": "ebay-item-407078012061",
-      "url": "https://dealdesk.fyi/deals/ebay-item-407078012061/",
-      "title": "TCL A3X A600DL 32GB 3GB Black Unlocked -… deal: $40.67 | DealDesk",
-      "indexable": true,
-      "primaryQuery": "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition deal",
-      "secondaryQueries": [
-        "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition price",
-        "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition current offer",
-        "eBay TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/unlocked-smartphones/"
-      ]
-    },
-    {
       "id": "ebay-item-326282933769-515409174801",
       "url": "https://dealdesk.fyi/deals/ebay-item-326282933769-515409174801/",
       "title": "Apple iPhone SE 3RD GEN 64GB Fully Unlocked… deal: $124.79 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Apple iPhone SE 3RD GEN 64GB Fully Unlocked 5G - VERY GOOD Condition deal",
       "secondaryQueries": [
         "Apple iPhone SE 3RD GEN 64GB Fully Unlocked 5G - VERY GOOD Condition price",
@@ -12735,60 +13092,6 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/unlocked-smartphones/"
-      ]
-    },
-    {
-      "id": "ebay-item-298409332039",
-      "url": "https://dealdesk.fyi/deals/ebay-item-298409332039/",
-      "title": "Tool-Tuff Post Hole Digger Gearbox deal: $279.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Tool-Tuff Post Hole Digger Gearbox deal",
-      "secondaryQueries": [
-        "Tool-Tuff Post Hole Digger Gearbox price",
-        "Tool-Tuff Post Hole Digger Gearbox current offer",
-        "eBay Tool-Tuff Post Hole Digger Gearbox"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-196250172215",
-      "url": "https://dealdesk.fyi/deals/ebay-item-196250172215/",
-      "title": "5 Tine Ripper Soil Tiller Fits Skid Steer… deal: $624.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping deal",
-      "secondaryQueries": [
-        "5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping price",
-        "5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping current offer",
-        "eBay 5 Tine Ripper Soil Tiller Fits Skid Steer Quick Attach - Free Shipping"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-202960882640",
-      "url": "https://dealdesk.fyi/deals/ebay-item-202960882640/",
-      "title": "42\" 2,200 Pound Pallet Forks For Toro Dingo… deal: $849.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer deal",
-      "secondaryQueries": [
-        "42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer price",
-        "42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer current offer",
-        "eBay 42\" 2,200 Pound Pallet Forks For Toro Dingo Ditch Witch Vermeer Mini Skid Steer"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
       ]
     },
     {
@@ -12857,60 +13160,6 @@
       "comparisonPath": "",
       "collectionPaths": [
         "/collections/pokemon-cards/"
-      ]
-    },
-    {
-      "id": "ebay-item-325328436501",
-      "url": "https://dealdesk.fyi/deals/ebay-item-325328436501/",
-      "title": "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid… deal: $329.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ deal",
-      "secondaryQueries": [
-        "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ price",
-        "Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ current offer",
-        "eBay Lowe 4\" x 48\" Auger Bit 2\" Hex Collar Skid Steer Post Hole Digger Attachment SQ"
-      ],
-      "score": 61,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-127914950186",
-      "url": "https://dealdesk.fyi/deals/ebay-item-127914950186/",
-      "title": "Pokémon TCG Terastal Grand Gathering CSV9.5C… deal: $99.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese deal",
-      "secondaryQueries": [
-        "Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese price",
-        "Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese current offer",
-        "eBay Pokémon TCG Terastal Grand Gathering CSV9.5C Booster Box Simplified Chinese"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/pokemon-cards/"
-      ]
-    },
-    {
-      "id": "ebay-item-800471985222",
-      "url": "https://dealdesk.fyi/deals/ebay-item-800471985222/",
-      "title": "Sonos Sub 4 Black Certified Refurbished -… deal: $719.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi deal",
-      "secondaryQueries": [
-        "Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi price",
-        "Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi current offer",
-        "eBay Sonos Sub 4 Black Certified Refurbished - Premium Wireless Subwoofer - WiFi"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
       ]
     },
     {
@@ -13006,24 +13255,6 @@
       ]
     },
     {
-      "id": "ebay-item-194427559918",
-      "url": "https://dealdesk.fyi/deals/ebay-item-194427559918/",
-      "title": "Danuser 24\" Length 2\" Hex Shaft Auger Bit… deal: $224.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911 deal",
-      "secondaryQueries": [
-        "Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911 price",
-        "Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911 current offer",
-        "eBay Danuser 24\" Length 2\" Hex Shaft Auger Bit Extension Attachment Heavy Duty 10911"
-      ],
-      "score": 61,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
       "id": "ebay-item-178086954117",
       "url": "https://dealdesk.fyi/deals/ebay-item-178086954117/",
       "title": "Yu-Gi-Oh! Chaos Origins Booster Box deal: $74.95 | DealDesk",
@@ -13111,78 +13342,6 @@
       ]
     },
     {
-      "id": "ebay-item-276785201004",
-      "url": "https://dealdesk.fyi/deals/ebay-item-276785201004/",
-      "title": "9\" Compact Industrial Duty Earth Auger 2… deal: $299.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges deal",
-      "secondaryQueries": [
-        "9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges price",
-        "9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges current offer",
-        "eBay 9\" Compact Industrial Duty Earth Auger 2 9/16\" Round Drive Interchangeable Edges"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-193451224712",
-      "url": "https://dealdesk.fyi/deals/ebay-item-193451224712/",
-      "title": "Lowe SQ-9-3H Skid Steer Auger Bit 9\"… deal: $395.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall deal",
-      "secondaryQueries": [
-        "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall price",
-        "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall current offer",
-        "eBay Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall"
-      ],
-      "score": 71,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/lowe-sq-skid-steer/",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-323832713279",
-      "url": "https://dealdesk.fyi/deals/ebay-item-323832713279/",
-      "title": "Lowe 14\" Length Extension for 2\" Hex Male… deal: $175.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment deal",
-      "secondaryQueries": [
-        "Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment price",
-        "Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment current offer",
-        "eBay Lowe 14\" Length Extension for 2\" Hex Male Female Auger Drive Bit Attachment"
-      ],
-      "score": 61,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-195983154078",
-      "url": "https://dealdesk.fyi/deals/ebay-item-195983154078/",
-      "title": "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide,… deal: $259.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall deal",
-      "secondaryQueries": [
-        "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall price",
-        "Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall current offer",
-        "eBay Lowe SQ-4-3 Skid Steer Auger Bit 4\" Wide, 2\" Hex Collar Shaft, 36\" Tall"
-      ],
-      "score": 71,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "/compare/lowe-sq-skid-steer/",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
       "id": "ebay-item-336138243581",
       "url": "https://dealdesk.fyi/deals/ebay-item-336138243581/",
       "title": "Yugioh YUGI'S LEGENDARY DECKS 1 Box (YGLD) -… deal: $94.99 | DealDesk",
@@ -13197,40 +13356,6 @@
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-186852040063",
-      "url": "https://dealdesk.fyi/deals/ebay-item-186852040063/",
-      "title": "Play Booster Box Aetherdrift DFT MTG deal: $109.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Play Booster Box Aetherdrift DFT MTG deal",
-      "secondaryQueries": [
-        "Play Booster Box Aetherdrift DFT MTG price",
-        "Play Booster Box Aetherdrift DFT MTG current offer",
-        "eBay Play Booster Box Aetherdrift DFT MTG"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
-    },
-    {
-      "id": "ebay-item-223392431851",
-      "url": "https://dealdesk.fyi/deals/ebay-item-223392431851/",
-      "title": "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits… deal: $24.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD deal",
-      "secondaryQueries": [
-        "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD price",
-        "1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD current offer",
-        "eBay 1.2TB 10K SAS 2.5\" SAS 6G HARD DRIVE Fits DELL SERVER R630 R710 R720 Server HDD"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
-      ]
     },
     {
       "id": "ebay-item-800471993602",
@@ -13249,24 +13374,6 @@
       "collectionPaths": [
         "/collections/refurbished-electronics/",
         "/collections/soundbars/"
-      ]
-    },
-    {
-      "id": "ebay-item-386838198102",
-      "url": "https://dealdesk.fyi/deals/ebay-item-386838198102/",
-      "title": "Sonos Sub Gen3 Black Certified Refurbished… deal: $639.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer deal",
-      "secondaryQueries": [
-        "Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer price",
-        "Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer current offer",
-        "eBay Sonos Sub Gen3 Black Certified Refurbished - Premium Wireless Subwoofer"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
       ]
     },
     {
@@ -13401,42 +13508,6 @@
       ]
     },
     {
-      "id": "ebay-item-196819042906",
-      "url": "https://dealdesk.fyi/deals/ebay-item-196819042906/",
-      "title": "Heavy Duty Stump Bucket with Teeth… deal: $599.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer deal",
-      "secondaryQueries": [
-        "Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer price",
-        "Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer current offer",
-        "eBay Heavy Duty Stump Bucket with Teeth Attachment Fits Toro Dingo Mini Skid Steer"
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/equipment-attachments/"
-      ]
-    },
-    {
-      "id": "ebay-item-306799988348",
-      "url": "https://dealdesk.fyi/deals/ebay-item-306799988348/",
-      "title": "Pokemon Mega Evolution Ascended Heroes… deal: $183.97 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New deal",
-      "secondaryQueries": [
-        "Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New price",
-        "Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New current offer",
-        "eBay Pokemon Mega Evolution Ascended Heroes Elite Trainer Box ETB Sealed New"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/pokemon-cards/"
-      ]
-    },
-    {
       "id": "ebay-item-227464010027",
       "url": "https://dealdesk.fyi/deals/ebay-item-227464010027/",
       "title": "2026 POKEMON ASC EN-ASCENDED HEROES #290… deal: $1399.00 | DealDesk",
@@ -13498,24 +13569,6 @@
         "HUS726060ALA640 HGST Ultrastar 6TB SATA 6Gbps 7.2K 3.5\" Hard Drive OF21860 price",
         "HUS726060ALA640 HGST Ultrastar 6TB SATA 6Gbps 7.2K 3.5\" Hard Drive OF21860 current offer",
         "eBay HUS726060ALA640 HGST Ultrastar 6TB SATA 6Gbps 7.2K 3.5\" Hard Drive OF21860"
-      ],
-      "score": 70,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/"
-      ]
-    },
-    {
-      "id": "ebay-item-388345107937-655509017542",
-      "url": "https://dealdesk.fyi/deals/ebay-item-388345107937-655509017542/",
-      "title": "Amazon Echo Show 8 with Alexa 1st Gen 8 inch… deal: $72.72 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black deal",
-      "secondaryQueries": [
-        "Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black price",
-        "Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black current offer",
-        "eBay Amazon Echo Show 8 with Alexa 1st Gen 8 inch HD Smart Display White or Black"
       ],
       "score": 70,
       "merchantPath": "/merchant/ebay/",
@@ -13656,22 +13709,6 @@
         "/collections/refurbished-electronics/",
         "/collections/refurbished-laptops/"
       ]
-    },
-    {
-      "id": "ebay-item-186793888039",
-      "url": "https://dealdesk.fyi/deals/ebay-item-186793888039/",
-      "title": "Outer Sleeves: Matte Clear Dragon Shield 100… deal: $12.68 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Outer Sleeves: Matte Clear Dragon Shield 100 ct. deal",
-      "secondaryQueries": [
-        "Outer Sleeves: Matte Clear Dragon Shield 100 ct. price",
-        "Outer Sleeves: Matte Clear Dragon Shield 100 ct. current offer",
-        "eBay Outer Sleeves: Matte Clear Dragon Shield 100 ct."
-      ],
-      "score": 64,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": []
     },
     {
       "id": "ebay-item-336325157397",
@@ -15082,24 +15119,6 @@
         "Pokemon Pikachu Holo Black Star Promo 012 PSA 9 Mint price",
         "Pokemon Pikachu Holo Black Star Promo 012 PSA 9 Mint current offer",
         "eBay Pokemon Pikachu Holo Black Star Promo 012 PSA 9 Mint"
-      ],
-      "score": 57,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/pokemon-cards/"
-      ]
-    },
-    {
-      "id": "ebay-item-287479728690",
-      "url": "https://dealdesk.fyi/deals/ebay-item-287479728690/",
-      "title": "Pokemon Tyranitar Holo Expedition 29/165… deal: $800.00 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Pokemon Tyranitar Holo Expedition 29/165 PSA 7 deal",
-      "secondaryQueries": [
-        "Pokemon Tyranitar Holo Expedition 29/165 PSA 7 price",
-        "Pokemon Tyranitar Holo Expedition 29/165 PSA 7 current offer",
-        "eBay Pokemon Tyranitar Holo Expedition 29/165 PSA 7"
       ],
       "score": 57,
       "merchantPath": "/merchant/ebay/",
@@ -18114,25 +18133,6 @@
         "eBay Dell laptop Latitude 7480 14\" i7 2.60GHz 16GB NEW 512GB SSD Win 10 Pro WIFI Cam"
       ],
       "score": 63,
-      "merchantPath": "/merchant/ebay/",
-      "comparisonPath": "",
-      "collectionPaths": [
-        "/collections/refurbished-electronics/",
-        "/collections/refurbished-laptops/"
-      ]
-    },
-    {
-      "id": "ebay-item-226756847304",
-      "url": "https://dealdesk.fyi/deals/ebay-item-226756847304/",
-      "title": "Apple MacBook Air A2681 2022 13\" - M2 -… deal: $669.99 | DealDesk",
-      "indexable": false,
-      "primaryQuery": "Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished deal",
-      "secondaryQueries": [
-        "Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished price",
-        "Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished current offer",
-        "eBay Apple MacBook Air A2681 2022 13\" - M2 - 16GB RAM - 512GB SSD - Good Refurbished"
-      ],
-      "score": 66,
       "merchantPath": "/merchant/ebay/",
       "comparisonPath": "",
       "collectionPaths": [

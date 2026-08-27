@@ -1,7 +1,7 @@
 {
   "name": "DealDesk Deal Index",
-  "updatedAt": "2026-08-27T00:47:19.583Z",
-  "generatedAt": "2026-08-27T00:47:19.000Z",
+  "updatedAt": "2026-08-27T19:50:27.105Z",
+  "generatedAt": "2026-08-27T19:50:27.000Z",
   "publicDeals": 1184,
   "merchants": 10,
   "categories": 10,
@@ -37,7 +37,7 @@
       "count": 97,
       "lowestDisplayedPrice": 27.99,
       "medianDisplayedPrice": 219.99,
-      "maximumDisplayedDiscountPercent": 68,
+      "maximumDisplayedDiscountPercent": 67,
       "latestVerification": "2026-08-27"
     },
     {

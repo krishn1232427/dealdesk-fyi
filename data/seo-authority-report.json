@@ -1,7 +1,7 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-27T00:47:19.000Z",
-  "catalogUpdatedAt": "2026-08-27T00:47:19.583Z",
+  "generatedAt": "2026-08-27T19:50:27.000Z",
+  "catalogUpdatedAt": "2026-08-27T19:50:27.105Z",
   "publicDeals": 1184,
   "indexableDeals": 55,
   "browseOnlyDeals": 1129,
@@ -14,7 +14,7 @@
   "collectionGroups": 13,
   "collectionPages": 13,
   "dealsWithCollectionPage": 739,
-  "authorityPages": 21,
+  "authorityPages": 20,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1184,
   "scores": {
@@ -129,7 +129,6 @@
     "/collections/unlocked-smartphones/",
     "/collections/pokemon-cards/",
     "/collections/samsung-galaxy/",
-    "/collections/lenovo-thinkpad/",
     "/collections/dji-drones/",
     "/collections/security-cameras/",
     "/collections/equipment-attachments/",
@@ -151,7 +150,7 @@
     "/collections/computer-monitors/",
     "/collections/vpn-deals/"
   ],
-  "indexableCollectionPages": 11,
+  "indexableCollectionPages": 10,
   "staticPaths": [
     "/merchants/",
     "/comparisons/",
