@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-26T09:57:20.700Z",
+  "generatedAt": "2026-08-27T00:47:19.583Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
   "total": 55,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
@@ -25,12 +25,12 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-137021591561/",
       "merchant": "eBay",
       "category": "Collectibles",
-      "image_url": "https://i.ebayimg.com/images/g/NX0AAeSwvaVqTdUF/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/pBYAAeSw0Hxqjzpf/s-l225.jpg",
       "current_price": "$16.00",
       "original_price": "$59.97",
       "savings": "Save $43.97",
       "terms": "Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -44,21 +44,7 @@
       "original_price": "$129.99",
       "savings": "Save $111.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-255803826545-555925514141",
-      "title": "Samsung Galaxy S22+ 128GB S906U Unlocked - Good",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-255803826545-555925514141/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/nkwAAeSwL55oL2Rf/s-l225.jpg",
-      "current_price": "$161.99",
-      "original_price": "$999.99",
-      "savings": "Save $838.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -72,7 +58,21 @@
       "original_price": "$970.00",
       "savings": "Save $629.56",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-145286441414",
+      "title": "2020 Apple MacBook Pro 16GB 512GB 13\" i5 (Space Gray) A2251 w/1 Year Warranty",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-145286441414/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/PgkAAOSw5WZk-g2Y/s-l225.jpg",
+      "current_price": "$363.44",
+      "original_price": "$1799.00",
+      "savings": "Save $1435.56",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -86,7 +86,7 @@
       "original_price": "$3094.99",
       "savings": "Save $2444.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -100,7 +100,7 @@
       "original_price": "$1379.99",
       "savings": "Save $989.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -114,7 +114,21 @@
       "original_price": "$1299.00",
       "savings": "Save $916.20",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-256613651818-556880821709",
+      "title": "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Very Good",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256613651818-556880821709/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/gksAAeSwbetoNKMA/s-l225.jpg",
+      "current_price": "$427.99",
+      "original_price": "$1379.99",
+      "savings": "Save $952.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -142,7 +156,7 @@
       "original_price": "$1379.99",
       "savings": "Save $925.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -170,7 +184,7 @@
       "original_price": "$1349.99",
       "savings": "Save $845.01",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -184,7 +198,7 @@
       "original_price": "$100.56",
       "savings": "Save $62.61",
       "terms": "Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -198,7 +212,7 @@
       "original_price": "$419.99",
       "savings": "Save $259.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -212,7 +226,7 @@
       "original_price": "$129.00",
       "savings": "Save $79.12",
       "terms": "Open Box · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -226,7 +240,7 @@
       "original_price": "$549.99",
       "savings": "Save $330.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -240,7 +254,7 @@
       "original_price": "$999.99",
       "savings": "Save $600.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -254,7 +268,7 @@
       "original_price": "$899.99",
       "savings": "Save $540.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -268,7 +282,7 @@
       "original_price": "$1499.99",
       "savings": "Save $900.15",
       "terms": "Pre-Owned · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -282,7 +296,7 @@
       "original_price": "$107.76",
       "savings": "Save $62.77",
       "terms": "Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -296,7 +310,7 @@
       "original_price": "$859.99",
       "savings": "Save $490.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -310,7 +324,7 @@
       "original_price": "$679.99",
       "savings": "Save $380.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -324,7 +338,7 @@
       "original_price": "$269.99",
       "savings": "Save $150.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -333,12 +347,12 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-396763872685/",
       "merchant": "eBay",
       "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/inYAAeSwyTVqjIyJ/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/myoAAeSw-dlqjv7s/s-l225.jpg",
       "current_price": "$227.99",
       "original_price": "$519.00",
       "savings": "Save $291.01",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -347,12 +361,12 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-327261025347/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/81oAAeSw7BNqjpnG/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/Z2MAAeSw3vtqj3RN/s-l225.jpg",
       "current_price": "$243.00",
       "original_price": "$529.99",
       "savings": "Save $286.99",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -366,21 +380,7 @@
       "original_price": "$219.99",
       "savings": "Save $110.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-257213743386",
-      "title": "Acer Aspire 14\" AI Copilot+PC Laptop Core Ultra 5 226V Gen 4 ARC 16GB 1TB Refurb",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-257213743386/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/lF8AAeSwF9hpZ9iF/s-l225.jpg",
-      "current_price": "$410.99",
-      "original_price": "$799.99",
-      "savings": "Save $389.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -394,7 +394,7 @@
       "original_price": "$899.95",
       "savings": "Save $427.95",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -408,7 +408,7 @@
       "original_price": "$1149.99",
       "savings": "Save $550.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -422,7 +422,7 @@
       "original_price": "$1499.99",
       "savings": "Save $700.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -450,7 +450,7 @@
       "original_price": "$649.95",
       "savings": "Save $282.95",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -464,7 +464,7 @@
       "original_price": "$899.99",
       "savings": "Save $400.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -478,7 +478,7 @@
       "original_price": "$219.99",
       "savings": "Save $96.54",
       "terms": "Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -492,7 +492,21 @@
       "original_price": "$1299.99",
       "savings": "Save $550.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-305957914668",
+      "title": "DJI Mini 4K Drone 3 Battery Ready To Fly Vlogger Combo - Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-305957914668/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/vw0AAOSwMutnU0fz/s-l225.jpg",
+      "current_price": "$449.00",
+      "original_price": "$748.00",
+      "savings": "Save $299.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -506,7 +520,7 @@
       "original_price": "$269.00",
       "savings": "Save $100.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -534,7 +548,7 @@
       "original_price": "$210.99",
       "savings": "Save $67.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -548,7 +562,7 @@
       "original_price": "$399.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -562,21 +576,7 @@
       "original_price": "$107.76",
       "savings": "Save $30.81",
       "terms": "Free shipping",
-      "verified_at": "2026-08-26",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-304925251592",
-      "title": "DJI Intelligent Battery for Mavic Air 2 / Air 2S  DJI Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-304925251592/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/hPYAAOSwS8he6lar/s-l225.jpg",
-      "current_price": "$65.00",
-      "original_price": "$89.00",
-      "savings": "Save $24.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -590,7 +590,7 @@
       "original_price": "$449.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -604,7 +604,7 @@
       "original_price": "$449.99",
       "savings": "Save $121.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -618,7 +618,7 @@
       "original_price": "$439.99",
       "savings": "Save $110.00",
       "terms": "Open Box · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -632,7 +632,7 @@
       "original_price": "$449.99",
       "savings": "Save $111.11",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -660,21 +660,7 @@
       "original_price": "$399.00",
       "savings": "Save $80.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-184706040293",
-      "title": "Bose TV Speaker Home Theater Soundbar, Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-184706040293/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/H6gAAOSwYKZfNtBI/s-l225.jpg",
-      "current_price": "$229.00",
-      "original_price": "$279.00",
-      "savings": "Save $50.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -688,7 +674,63 @@
       "original_price": "$549.00",
       "savings": "Save $100.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
+      "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-186465664855-694515751648",
+      "title": "Bose QuietComfort Ultra Noise Cancelling Earbuds, Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-186465664855-694515751648/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/UZMAAOSwRdpmV4LQ/s-l225.jpg",
+      "current_price": "$249.00",
+      "original_price": "$299.00",
+      "savings": "Save $50.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-193093032253",
+      "title": "42\" 2,200 Pound Pallet Forks Attachment Fits Kubota Kioti Tractor Quick Attach",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193093032253/",
+      "merchant": "eBay",
+      "category": "Business & industrial",
+      "image_url": "https://i.ebayimg.com/images/g/IewAAOSwXWhj89~3/s-l225.jpg",
+      "current_price": "$875.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-192622379291",
+      "title": "Lowe 2 9/16\" Female Round to 2\" Male Hex Auger Bit Adapter Conversion Heavy Duty",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-192622379291/",
+      "merchant": "eBay",
+      "category": "Business & industrial",
+      "image_url": "https://i.ebayimg.com/images/g/JKcAAeSwl5xqEI~X/s-l225.jpg",
+      "current_price": "$179.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-193187622442",
+      "title": "Lowe 24\" Auger Bit for Skid Steer, 2\" Hex Collar, 48\" Long, Heavy Duty USA",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193187622442/",
+      "merchant": "eBay",
+      "category": "Business & industrial",
+      "image_url": "https://i.ebayimg.com/images/g/cCwAAOSwPe1T4opA/s-l225.jpg",
+      "current_price": "$879.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Confirm condition, shipping, seller, and availability on eBay",
+      "verified_at": "2026-08-27",
       "expires_at": null
     },
     {
@@ -730,48 +772,6 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-26",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-193093032253",
-      "title": "42\" 2,200 Pound Pallet Forks Attachment Fits Kubota Kioti Tractor Quick Attach",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193093032253/",
-      "merchant": "eBay",
-      "category": "Business & industrial",
-      "image_url": "https://i.ebayimg.com/images/g/IewAAOSwXWhj89~3/s-l225.jpg",
-      "current_price": "$875.99",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Free shipping",
-      "verified_at": "2026-08-26",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-192622379291",
-      "title": "Lowe 2 9/16\" Female Round to 2\" Male Hex Auger Bit Adapter Conversion Heavy Duty",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-192622379291/",
-      "merchant": "eBay",
-      "category": "Business & industrial",
-      "image_url": "https://i.ebayimg.com/images/g/JKcAAeSwl5xqEI~X/s-l225.jpg",
-      "current_price": "$179.99",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Free shipping",
-      "verified_at": "2026-08-26",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-193187622442",
-      "title": "Lowe 24\" Auger Bit for Skid Steer, 2\" Hex Collar, 48\" Long, Heavy Duty USA",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193187622442/",
-      "merchant": "eBay",
-      "category": "Business & industrial",
-      "image_url": "https://i.ebayimg.com/images/g/cCwAAOSwPe1T4opA/s-l225.jpg",
-      "current_price": "$879.99",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Confirm condition, shipping, seller, and availability on eBay",
       "verified_at": "2026-08-26",
       "expires_at": null
     }
