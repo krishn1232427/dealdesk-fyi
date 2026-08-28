@@ -1,10 +1,24 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-27T19:50:27.105Z",
+  "generatedAt": "2026-08-28T05:23:23.113Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
-  "total": 55,
+  "total": 58,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
   "deals": [
+    {
+      "id": "ebay-item-127987648416",
+      "title": "Pokemon ITM0020383 Trading Card Games Scarlet & Violet Destined Rivals Elite",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-127987648416/",
+      "merchant": "eBay",
+      "category": "Collectibles",
+      "image_url": "https://i.ebayimg.com/images/g/-RcAAeSwSytqhzd7/s-l225.jpg",
+      "current_price": "$126.00",
+      "original_price": "$599.95",
+      "savings": "Save $473.95",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
     {
       "id": "ebay-item-137021591561",
       "title": "Star Wars Micro Galaxy Squadron Ghost with Mini Figures",
@@ -16,7 +30,7 @@
       "original_price": "$59.97",
       "savings": "Save $43.97",
       "terms": "Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -30,7 +44,21 @@
       "original_price": "$129.99",
       "savings": "Save $111.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-255803826545-555925514141",
+      "title": "Samsung Galaxy S22+ 128GB S906U Unlocked - Good",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-255803826545-555925514141/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/ztMAAeSwZuRqj9Wg/s-l225.jpg",
+      "current_price": "$161.99",
+      "original_price": "$999.99",
+      "savings": "Save $838.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -44,7 +72,7 @@
       "original_price": "$970.00",
       "savings": "Save $629.56",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -72,7 +100,7 @@
       "original_price": "$3094.99",
       "savings": "Save $2444.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -86,7 +114,7 @@
       "original_price": "$1379.99",
       "savings": "Save $989.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -100,21 +128,7 @@
       "original_price": "$1299.00",
       "savings": "Save $916.20",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-256460585805-556609999488",
-      "title": "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Good",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256460585805-556609999488/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/iIIAAeSwp05qkBXO/s-l225.jpg",
-      "current_price": "$371.99",
-      "original_price": "$1199.99",
-      "savings": "Save $828.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -128,7 +142,7 @@
       "original_price": "$1379.99",
       "savings": "Save $925.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -143,6 +157,20 @@
       "savings": "Save $40.00",
       "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-27",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-256379350806-556605231630",
+      "title": "Samsung Galaxy S23 Ultra 256GB S918U Unlocked - Excellent",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256379350806-556605231630/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/3zUAAeSwx09oL5cI/s-l225.jpg",
+      "current_price": "$416.99",
+      "original_price": "$1199.99",
+      "savings": "Save $783.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -170,7 +198,7 @@
       "original_price": "$1349.99",
       "savings": "Save $845.01",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -184,7 +212,7 @@
       "original_price": "$100.56",
       "savings": "Save $62.61",
       "terms": "Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -198,7 +226,7 @@
       "original_price": "$419.99",
       "savings": "Save $259.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -226,7 +254,7 @@
       "original_price": "$549.99",
       "savings": "Save $330.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -240,7 +268,7 @@
       "original_price": "$999.99",
       "savings": "Save $600.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -254,7 +282,7 @@
       "original_price": "$899.99",
       "savings": "Save $540.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -268,7 +296,7 @@
       "original_price": "$1499.99",
       "savings": "Save $900.15",
       "terms": "Pre-Owned · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -282,7 +310,7 @@
       "original_price": "$107.76",
       "savings": "Save $62.77",
       "terms": "Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -296,7 +324,7 @@
       "original_price": "$859.99",
       "savings": "Save $490.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -310,7 +338,7 @@
       "original_price": "$679.99",
       "savings": "Save $380.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -324,7 +352,7 @@
       "original_price": "$269.99",
       "savings": "Save $150.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -338,7 +366,7 @@
       "original_price": "$519.00",
       "savings": "Save $291.01",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -347,12 +375,12 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-327261025347/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/5oAAAeSwpEtqkI4a/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/y8cAAeSwRqBqkO9s/s-l225.jpg",
       "current_price": "$243.00",
       "original_price": "$529.99",
       "savings": "Save $286.99",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -366,7 +394,21 @@
       "original_price": "$799.00",
       "savings": "Save $427.01",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-284273213577",
+      "title": "Worx 20V (2) PC MAKERX Combo: Rotary Tool + Wood/Metal Crafter (WX988L)-CR",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-284273213577/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/kFgAAeSwmMtpHIAa/s-l225.jpg",
+      "current_price": "$109.99",
+      "original_price": "$219.99",
+      "savings": "Save $110.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -384,20 +426,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-284273213577",
-      "title": "Worx 20V (2) PC MAKERX Combo: Rotary Tool + Wood/Metal Crafter (WX988L)-CR",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-284273213577/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/kFgAAeSwmMtpHIAa/s-l225.jpg",
-      "current_price": "$109.99",
-      "original_price": "$219.99",
-      "savings": "Save $110.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-168200194616",
       "title": "JBL Bar 700 5.1-channel Soundbar with Detachable Surround Speakers",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-168200194616/",
@@ -408,7 +436,7 @@
       "original_price": "$899.95",
       "savings": "Save $427.95",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -422,7 +450,7 @@
       "original_price": "$1149.99",
       "savings": "Save $550.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -436,7 +464,21 @@
       "original_price": "$1499.99",
       "savings": "Save $700.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-166708867898-466352533485",
+      "title": "Bose QuietComfort Ultra Noise Cancelling Headphones, Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-166708867898-466352533485/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/WssAAOSwlkZn~6zp/s-l225.jpg",
+      "current_price": "$249.00",
+      "original_price": "$449.00",
+      "savings": "Save $200.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -450,7 +492,35 @@
       "original_price": "$999.99",
       "savings": "Save $450.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-278003083150",
+      "title": "Lenovo ThinkPad X1 Yoga Gen 6 14.0\" FHD IPS Touch i7-1185g7 32GB RAM 512GB LTE",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-278003083150/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/ajkAAOSwaqdl8O6E/s-l225.jpg",
+      "current_price": "$499.99",
+      "original_price": "$899.99",
+      "savings": "Save $400.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-365702253276",
+      "title": "The Texas Chainsaw Massacre (1974) - Dinner Scene Playset with all Characters",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-365702253276/",
+      "merchant": "eBay",
+      "category": "Collectibles",
+      "image_url": "https://i.ebayimg.com/images/g/UgoAAeSwBJRqdgHS/s-l225.jpg",
+      "current_price": "$123.45",
+      "original_price": "$219.99",
+      "savings": "Save $96.54",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -468,20 +538,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-365702253276",
-      "title": "The Texas Chainsaw Massacre (1974) - Dinner Scene Playset with all Characters",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-365702253276/",
-      "merchant": "eBay",
-      "category": "Collectibles",
-      "image_url": "https://i.ebayimg.com/images/g/UgoAAeSwBJRqdgHS/s-l225.jpg",
-      "current_price": "$123.45",
-      "original_price": "$219.99",
-      "savings": "Save $96.54",
-      "terms": "Free shipping",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-287070431973",
       "title": "Lenovo IdeaPad 5i 16\" Touch Ultra 7 255U 32GB 1TB SSD W11H 2in1",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287070431973/",
@@ -492,35 +548,7 @@
       "original_price": "$1299.99",
       "savings": "Save $550.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-305957914668",
-      "title": "DJI Mini 4K Drone 3 Battery Ready To Fly Vlogger Combo - Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-305957914668/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/vw0AAOSwMutnU0fz/s-l225.jpg",
-      "current_price": "$449.00",
-      "original_price": "$748.00",
-      "savings": "Save $299.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-127875327929",
-      "title": "Melissa & Doug Jet Pilot Interactive Dashboard Play Set [LCI32300]",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-127875327929/",
-      "merchant": "eBay",
-      "category": "Collectibles",
-      "image_url": "https://i.ebayimg.com/images/g/qmQAAeSwhANqDcpK/s-l225.jpg",
-      "current_price": "$66.99",
-      "original_price": "$109.99",
-      "savings": "Save $43.00",
-      "terms": "Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -534,7 +562,7 @@
       "original_price": "$269.00",
       "savings": "Save $100.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -548,7 +576,7 @@
       "original_price": "$208.60",
       "savings": "Save $71.61",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -562,7 +590,7 @@
       "original_price": "$210.99",
       "savings": "Save $67.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -576,7 +604,7 @@
       "original_price": "$399.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -590,7 +618,7 @@
       "original_price": "$107.76",
       "savings": "Save $30.81",
       "terms": "Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -604,7 +632,7 @@
       "original_price": "$449.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -618,7 +646,7 @@
       "original_price": "$449.99",
       "savings": "Save $121.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -632,7 +660,7 @@
       "original_price": "$439.99",
       "savings": "Save $110.00",
       "terms": "Open Box · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -646,7 +674,21 @@
       "original_price": "$449.99",
       "savings": "Save $111.11",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-304925257286",
+      "title": "DJI FPV Combo - Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-304925257286/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/XuIAAOSwALxgPlko/s-l225.jpg",
+      "current_price": "$999.00",
+      "original_price": "$1299.00",
+      "savings": "Save $300.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -660,7 +702,7 @@
       "original_price": "$399.00",
       "savings": "Save $80.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -674,63 +716,21 @@
       "original_price": "$549.00",
       "savings": "Save $100.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
-      "id": "ebay-item-186465664855-694515751648",
-      "title": "Bose QuietComfort Ultra Noise Cancelling Earbuds, Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-186465664855-694515751648/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/UZMAAOSwRdpmV4LQ/s-l225.jpg",
-      "current_price": "$249.00",
-      "original_price": "$299.00",
-      "savings": "Save $50.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-158160999510",
-      "title": "Lenovo IdeaPad 5x 2-in-1 14 OLED Snapdragon X Plus 16GB 1TB Copilot+ PC",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-158160999510/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/3F4AAeSwYUhqahZG/s-l225.jpg",
-      "current_price": "$548.96",
-      "original_price": "$624.95",
-      "savings": "Save $75.99",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-287479728690",
-      "title": "Pokemon Tyranitar Holo Expedition 29/165 PSA 7",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287479728690/",
+      "id": "ebay-item-287472365991",
+      "title": "Blue Eyes White Dragon GFP2-EN175 Ghost Rare 1st Edition Yugioh PSA 7 *506",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287472365991/",
       "merchant": "eBay",
       "category": "Toys & hobbies",
-      "image_url": "https://i.ebayimg.com/images/g/VHsAAeSwgblqYh3p/s-l225.jpg",
-      "current_price": "$800.00",
+      "image_url": "https://i.ebayimg.com/images/g/bfgAAeSw3CxqXSrH/s-l225.jpg",
+      "current_price": "$299.99",
       "original_price": null,
       "savings": "Live eBay price",
-      "terms": "Confirm condition, shipping, seller, and availability on eBay",
-      "verified_at": "2026-08-27",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-407078012061",
-      "title": "TCL A3X A600DL 32GB 3GB Black Unlocked - Very Good Condition",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-407078012061/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/8hYAAeSwSshqHn68/s-l225.jpg",
-      "current_price": "$40.67",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-27",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -744,7 +744,7 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Free shipping",
-      "verified_at": "2026-08-27",
+      "verified_at": "2026-08-28",
       "expires_at": null
     },
     {
@@ -758,6 +758,48 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Free shipping",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-298570722291",
+      "title": "1978 MIS FAVORITOS BRUCE SPRINGSTEEN #211 PSA 2, POP 3, NONE HIGHER",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-298570722291/",
+      "merchant": "eBay",
+      "category": "Collectibles",
+      "image_url": "https://i.ebayimg.com/images/g/qpoAAeSwIDZqRtdS/s-l225.jpg",
+      "current_price": "$350.00",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Confirm condition, shipping, seller, and availability on eBay",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-146737016336",
+      "title": "Megan Fox 2007 Transformers Mega Hot Grease Monkey Rookie Autograph #36 PSA BAS",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-146737016336/",
+      "merchant": "eBay",
+      "category": "Collectibles",
+      "image_url": "https://i.ebayimg.com/images/g/t10AAeSwSOpqfLTJ/s-l225.jpg",
+      "current_price": "$494.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Confirm condition, shipping, seller, and availability on eBay",
+      "verified_at": "2026-08-28",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-287479728690",
+      "title": "Pokemon Tyranitar Holo Expedition 29/165 PSA 7",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287479728690/",
+      "merchant": "eBay",
+      "category": "Toys & hobbies",
+      "image_url": "https://i.ebayimg.com/images/g/VHsAAeSwgblqYh3p/s-l225.jpg",
+      "current_price": "$800.00",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Confirm condition, shipping, seller, and availability on eBay",
       "verified_at": "2026-08-27",
       "expires_at": null
     },

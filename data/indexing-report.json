@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-crawl-v3",
-  "generatedAt": "2026-08-27T19:50:27.000Z",
-  "catalogUpdatedAt": "2026-08-27T19:50:27.105Z",
+  "generatedAt": "2026-08-28T05:23:23.000Z",
+  "catalogUpdatedAt": "2026-08-28T05:23:23.113Z",
   "publicDeals": 1184,
-  "indexableDeals": 55,
-  "browseOnlyDeals": 1129,
+  "indexableDeals": 58,
+  "browseOnlyDeals": 1126,
   "archivePages": 37,
   "indexableArchivePages": 1,
   "archivePaths": [
@@ -107,7 +107,7 @@
     "/category/streaming/",
     "/category/grocery/"
   ],
-  "prioritySitemapDeals": 55,
+  "prioritySitemapDeals": 58,
   "sitemapFiles": [
     "sitemap-pages.xml",
     "sitemap-deals-priority.xml"
