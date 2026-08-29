@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T14:28:02.000Z",
-  "catalogUpdatedAt": "2026-08-29T14:28:02.304Z",
+  "generatedAt": "2026-08-29T23:18:48.000Z",
+  "catalogUpdatedAt": "2026-08-29T23:18:48.225Z",
   "deals": {
     "cj-nordvpn-2-year-20260801": {
       "id": "cj-nordvpn-2-year-20260801",
@@ -23434,7 +23434,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-28",
+      "lastSeen": "2026-08-29",
       "active": true,
       "observations": [
         {
@@ -23492,6 +23492,16 @@
           "verifiedAt": "2026-08-28",
           "currentPrice": "$142.99",
           "currentPriceAmount": 142.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-29",
+          "verifiedAt": "2026-08-29",
+          "currentPrice": "$139.99",
+          "currentPriceAmount": 139.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",

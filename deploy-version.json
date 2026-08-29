@@ -1,12 +1,12 @@
 {
   "build": "2026-08-08-crawl-v3",
   "catalogOffers": 1184,
-  "indexableOffers": 57,
+  "indexableOffers": 58,
   "archivePages": 37,
   "categoryPages": 46,
   "sitemapFiles": [
     "sitemap-pages.xml",
     "sitemap-deals-priority.xml"
   ],
-  "generatedAt": "2026-08-29T14:28:02.000Z"
+  "generatedAt": "2026-08-29T23:18:48.000Z"
 }

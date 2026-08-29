@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T14:28:02.304Z",
+  "generatedAt": "2026-08-29T23:18:48.225Z",
   "canonical": "https://dealdesk.fyi/feeds/merchants.v1.json",
   "total": 1,
   "merchants": [
     {
       "name": "eBay",
       "canonical_url": "https://dealdesk.fyi/merchant/ebay/",
-      "offer_count": 57,
+      "offer_count": 58,
       "categories": [
         "Business & industrial",
         "Collectibles",
@@ -15,7 +15,7 @@
         "Home & garden",
         "Toys & hobbies"
       ],
-      "lowest_displayed_price": 16,
+      "lowest_displayed_price": 11.24,
       "newest_check": "2026-08-29"
     }
   ]
