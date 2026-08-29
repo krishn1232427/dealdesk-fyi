@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T03:10:09.563Z",
+  "generatedAt": "2026-08-29T14:28:02.304Z",
   "canonical": "https://dealdesk.fyi/feeds/merchants.v1.json",
   "total": 1,
   "merchants": [
     {
       "name": "eBay",
       "canonical_url": "https://dealdesk.fyi/merchant/ebay/",
-      "offer_count": 55,
+      "offer_count": 57,
       "categories": [
         "Business & industrial",
         "Collectibles",

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T03:10:09.563Z",
+  "generatedAt": "2026-08-29T14:28:02.304Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
-  "total": 55,
+  "total": 57,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
   "deals": [
     {
@@ -30,6 +30,20 @@
       "original_price": "$59.97",
       "savings": "Save $43.97",
       "terms": "Free shipping",
+      "verified_at": "2026-08-29",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-286014554031",
+      "title": "Snakebyte GamePad Pro X Controller for Xbox Series X and PC (White)",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-286014554031/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/1XYAAeSwgUdqYqEi/s-l225.jpg",
+      "current_price": "$18.99",
+      "original_price": "$129.99",
+      "savings": "Save $111.00",
+      "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
     },
@@ -62,20 +76,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-255788146936-555925536746",
-      "title": "Samsung Galaxy S22+ 128GB S906U Unlocked - Excellent",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-255788146936-555925536746/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/l7MAAeSwd11oL22F/s-l225.jpg",
-      "current_price": "$198.99",
-      "original_price": "$999.99",
-      "savings": "Save $801.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-255352036778",
       "title": "Acer ENDURO N7 - 14\" Laptop Intel Core i5-8250U 1.6GHz 8GB RAM 256GB SSD W10P",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-255352036778/",
@@ -96,11 +96,11 @@
       "merchant": "eBay",
       "category": "Electronics",
       "image_url": "https://i.ebayimg.com/images/g/8bAAAeSw1KlqXnL6/s-l225.jpg",
-      "current_price": "$174.86",
+      "current_price": "$174.88",
       "original_price": "$799.99",
-      "savings": "Save $625.13",
+      "savings": "Save $625.11",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-28",
+      "verified_at": "2026-08-29",
       "expires_at": null
     },
     {
@@ -113,6 +113,20 @@
       "current_price": "$304.99",
       "original_price": "$1299.00",
       "savings": "Save $994.01",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-29",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-256497629590-556689084754",
+      "title": "Samsung Galaxy S22 Ultra 512GB S908U Unlocked - Good",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256497629590-556689084754/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/0woAAeSwEFRoL1Ke/s-l225.jpg",
+      "current_price": "$314.99",
+      "original_price": "$1299.00",
+      "savings": "Save $984.01",
       "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
@@ -188,20 +202,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-256482045980-557473856184",
-      "title": "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Excellent",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256482045980-557473856184/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/S10AAeSwJz5oL11N/s-l225.jpg",
-      "current_price": "$454.99",
-      "original_price": "$1379.99",
-      "savings": "Save $925.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-145655227460",
       "title": "2020 Apple M1 MacBook Air 13 8GB/256GB SSD - (Silver) A2337 w/1 Year Warranty",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-145655227460/",
@@ -268,6 +268,20 @@
       "original_price": "$1499.99",
       "savings": "Save $924.13",
       "terms": "Pre-Owned · Free shipping",
+      "verified_at": "2026-08-29",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-168492244195",
+      "title": "Lenovo - Tab P12 RAM 8GB Storage 256GB  3K Android Tablet ZACH0165U 12.7\" WRTY",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-168492244195/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/A70AAeSwdi1qPVEs/s-l225.jpg",
+      "current_price": "$219.99",
+      "original_price": "$549.99",
+      "savings": "Save $330.00",
+      "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
     },
@@ -370,20 +384,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-327261025347",
-      "title": "Sonos Move Battery-powered smart speaker, Wi-Fi and Bluetooth - Black",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-327261025347/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/KUIAAeSwptdqkkHF/s-l225.jpg",
-      "current_price": "$243.00",
-      "original_price": "$529.99",
-      "savings": "Save $286.99",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-257285303938-557956552112",
       "title": "Apple iPhone 15 128GB Unlocked - Good",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-257285303938-557956552112/",
@@ -407,20 +407,6 @@
       "current_price": "$109.99",
       "original_price": "$219.99",
       "savings": "Save $110.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-168200194616",
-      "title": "JBL Bar 700 5.1-channel Soundbar with Detachable Surround Speakers",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-168200194616/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/sPcAAOSwcH1kIz2N/s-l225.jpg",
-      "current_price": "$472.00",
-      "original_price": "$899.95",
-      "savings": "Save $427.95",
       "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
@@ -468,6 +454,20 @@
       "expires_at": null
     },
     {
+      "id": "ebay-item-167475116955",
+      "title": "JBL BAR 1300XMK2 11.1.4 Channel 1570W Dolby Atmos Soundbar System",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-167475116955/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/oB8AAeSwbCppxX~g/s-l225.jpg",
+      "current_price": "$938.00",
+      "original_price": "$1699.95",
+      "savings": "Save $761.95",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-29",
+      "expires_at": null
+    },
+    {
       "id": "ebay-item-166708867898-466352533485",
       "title": "Bose QuietComfort Ultra Noise Cancelling Headphones, Certified Refurbished",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-166708867898-466352533485/",
@@ -477,6 +477,20 @@
       "current_price": "$249.00",
       "original_price": "$449.00",
       "savings": "Save $200.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-29",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-317850461363",
+      "title": "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar for TV Home Theater with Dolby Atmos",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-317850461363/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/2h0AAeSw-4NqYfnk/s-l225.jpg",
+      "current_price": "$839.99",
+      "original_price": "$1499.99",
+      "savings": "Save $660.00",
       "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
@@ -692,30 +706,44 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-157308855395",
-      "title": "Bose Smart Soundbar, Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-157308855395/",
+      "id": "ebay-item-186465664855-694515751648",
+      "title": "Bose QuietComfort Ultra Noise Cancelling Earbuds, Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-186465664855-694515751648/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/PMsAAeSwZkVowHIB/s-l225.jpg",
-      "current_price": "$449.00",
-      "original_price": "$549.00",
-      "savings": "Save $100.00",
+      "image_url": "https://i.ebayimg.com/images/g/UZMAAOSwRdpmV4LQ/s-l225.jpg",
+      "current_price": "$249.00",
+      "original_price": "$299.00",
+      "savings": "Save $50.00",
       "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
     },
     {
-      "id": "ebay-item-158160999510",
-      "title": "Lenovo IdeaPad 5x 2-in-1 14 OLED Snapdragon X Plus 16GB 1TB Copilot+ PC",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-158160999510/",
+      "id": "ebay-item-287472365991",
+      "title": "Blue Eyes White Dragon GFP2-EN175 Ghost Rare 1st Edition Yugioh PSA 7 *506",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287472365991/",
       "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/3F4AAeSwYUhqahZG/s-l225.jpg",
-      "current_price": "$548.96",
-      "original_price": "$624.95",
-      "savings": "Save $75.99",
-      "terms": "Refurbished · Free shipping",
+      "category": "Toys & hobbies",
+      "image_url": "https://i.ebayimg.com/images/g/bfgAAeSw3CxqXSrH/s-l225.jpg",
+      "current_price": "$299.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-29",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-287450030119",
+      "title": "Pokemon Giratina EX XY Ancient Origins Full Art 93/98 PSA 10 Gem Mint",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287450030119/",
+      "merchant": "eBay",
+      "category": "Toys & hobbies",
+      "image_url": "https://i.ebayimg.com/images/g/TB8AAeSw-1dqT8HV/s-l225.jpg",
+      "current_price": "$2500.00",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Confirm condition, shipping, seller, and availability on eBay",
       "verified_at": "2026-08-29",
       "expires_at": null
     },
