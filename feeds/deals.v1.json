@@ -1,10 +1,24 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T23:18:48.225Z",
+  "generatedAt": "2026-08-30T14:25:10.816Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
-  "total": 58,
+  "total": 57,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
   "deals": [
+    {
+      "id": "ebay-item-137021591561",
+      "title": "Star Wars Micro Galaxy Squadron Ghost with Mini Figures",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-137021591561/",
+      "merchant": "eBay",
+      "category": "Collectibles",
+      "image_url": "https://i.ebayimg.com/images/g/pBYAAeSw0Hxqjzpf/s-l225.jpg",
+      "current_price": "$16.00",
+      "original_price": "$59.97",
+      "savings": "Save $43.97",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
     {
       "id": "ebay-item-286014554031",
       "title": "Snakebyte GamePad Pro X Controller for Xbox Series X and PC (White)",
@@ -16,7 +30,21 @@
       "original_price": "$129.99",
       "savings": "Save $111.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-255803826545-555925514141",
+      "title": "Samsung Galaxy S22+ 128GB S906U Unlocked - Good",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-255803826545-555925514141/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/ztMAAeSwZuRqj9Wg/s-l225.jpg",
+      "current_price": "$161.99",
+      "original_price": "$999.99",
+      "savings": "Save $838.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -30,7 +58,21 @@
       "original_price": "$970.00",
       "savings": "Save $629.56",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-255883394766-556399764072",
+      "title": "Samsung Galaxy S21 Ultra 5G 128GB G998U Unlocked - Good",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-255883394766-556399764072/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/ToIAAeSw~7pqkAU2/s-l225.jpg",
+      "current_price": "$219.99",
+      "original_price": "$1199.99",
+      "savings": "Save $980.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -44,7 +86,7 @@
       "original_price": "$1799.00",
       "savings": "Save $1435.17",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -58,7 +100,7 @@
       "original_price": "$3094.99",
       "savings": "Save $2430.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -76,20 +118,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-256497629590-556689084754",
-      "title": "Samsung Galaxy S22 Ultra 512GB S908U Unlocked - Good",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256497629590-556689084754/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/0woAAeSwEFRoL1Ke/s-l225.jpg",
-      "current_price": "$314.99",
-      "original_price": "$1299.00",
-      "savings": "Save $984.01",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-256413667885-556528799834",
       "title": "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Good",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256413667885-556528799834/",
@@ -100,7 +128,7 @@
       "original_price": "$1379.99",
       "savings": "Save $989.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -114,7 +142,7 @@
       "original_price": "$1299.00",
       "savings": "Save $916.20",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -128,21 +156,7 @@
       "original_price": "$1379.99",
       "savings": "Save $925.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-256671767980-556999752104",
-      "title": "IRIS Flip 8GB Unlocked - Very Good",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256671767980-556999752104/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/3GwAAeSwSPRoOaeu/s-l225.jpg",
-      "current_price": "$19.99",
-      "original_price": "$59.99",
-      "savings": "Save $40.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -156,7 +170,7 @@
       "original_price": "$100.56",
       "savings": "Save $62.61",
       "terms": "Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -170,7 +184,7 @@
       "original_price": "$419.99",
       "savings": "Save $259.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -184,7 +198,7 @@
       "original_price": "$1349.99",
       "savings": "Save $834.15",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -198,35 +212,7 @@
       "original_price": "$1499.99",
       "savings": "Save $924.13",
       "terms": "Pre-Owned · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-277426426361",
-      "title": "Dyson Purifier Humidify+Cool Formaldehyde™ PH04 | White/Gold | Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277426426361/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/fBsAAeSw2HNqj~hh/s-l225.jpg",
-      "current_price": "$399.99",
-      "original_price": "$999.99",
-      "savings": "Save $600.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-277667740756",
-      "title": "Dyson PH02 Pure Humidify + Cool Cryptomic™ | Gunmetal/Bronze | Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277667740756/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/PJUAAeSwuTdqjnJj/s-l225.jpg",
-      "current_price": "$359.99",
-      "original_price": "$899.99",
-      "savings": "Save $540.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -240,7 +226,35 @@
       "original_price": "$549.99",
       "savings": "Save $330.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-277426426361",
+      "title": "Dyson Purifier Humidify+Cool Formaldehyde™ PH04 | White/Gold | Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277426426361/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/fBsAAeSw2HNqj~hh/s-l225.jpg",
+      "current_price": "$399.99",
+      "original_price": "$999.99",
+      "savings": "Save $600.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-277667740756",
+      "title": "Dyson PH02 Pure Humidify + Cool Cryptomic™ | Gunmetal/Bronze | Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277667740756/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/PJUAAeSwuTdqjnJj/s-l225.jpg",
+      "current_price": "$359.99",
+      "original_price": "$899.99",
+      "savings": "Save $540.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -254,7 +268,7 @@
       "original_price": "$107.76",
       "savings": "Save $62.77",
       "terms": "Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -268,7 +282,7 @@
       "original_price": "$859.99",
       "savings": "Save $490.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -282,7 +296,7 @@
       "original_price": "$679.99",
       "savings": "Save $380.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -296,7 +310,7 @@
       "original_price": "$269.99",
       "savings": "Save $150.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -310,21 +324,7 @@
       "original_price": "$519.00",
       "savings": "Save $291.01",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-395704383345",
-      "title": "Games Workshop Warhammer 40k Codex: Space Marines 9th Edition Hardcover Book",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-395704383345/",
-      "merchant": "eBay",
-      "category": "Collectibles",
-      "image_url": "https://i.ebayimg.com/images/g/xVoAAeSw0FZqkqcr/s-l225.jpg",
-      "current_price": "$11.24",
-      "original_price": "$24.99",
-      "savings": "Save $13.75",
-      "terms": "Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -338,7 +338,7 @@
       "original_price": "$799.00",
       "savings": "Save $427.01",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -352,7 +352,7 @@
       "original_price": "$799.99",
       "savings": "Save $409.58",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -366,7 +366,21 @@
       "original_price": "$219.99",
       "savings": "Save $110.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-168200194616",
+      "title": "JBL Bar 700 5.1-channel Soundbar with Detachable Surround Speakers",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-168200194616/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/sPcAAOSwcH1kIz2N/s-l225.jpg",
+      "current_price": "$472.00",
+      "original_price": "$899.95",
+      "savings": "Save $427.95",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -375,12 +389,12 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277944344269/",
       "merchant": "eBay",
       "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/FLgAAeSwo7NqkkH5/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/YY0AAeSwhFRqk4W0/s-l225.jpg",
       "current_price": "$599.99",
       "original_price": "$1149.99",
       "savings": "Save $550.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -394,7 +408,35 @@
       "original_price": "$1499.99",
       "savings": "Save $700.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-168224689294",
+      "title": "ASUS Zenbook A14 14\" WUXGA Snapdragon X X1-26-100 16GB RAM 512GB SSD W11H Laptop",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-168224689294/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/GtUAAeSw92lqk~xD/s-l225.jpg",
+      "current_price": "$580.00",
+      "original_price": "$1099.99",
+      "savings": "Save $519.99",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-166819315978-467896873173",
+      "title": "Bose QuietComfort Noise Cancelling Headphones, Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-166819315978-467896873173/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/V4YAAeSwLlVpcTeU/s-l225.jpg",
+      "current_price": "$199.00",
+      "original_price": "$359.00",
+      "savings": "Save $160.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -412,20 +454,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-167475116955",
-      "title": "JBL BAR 1300XMK2 11.1.4 Channel 1570W Dolby Atmos Soundbar System",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-167475116955/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/oB8AAeSwbCppxX~g/s-l225.jpg",
-      "current_price": "$938.00",
-      "original_price": "$1699.95",
-      "savings": "Save $761.95",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-317850461363",
       "title": "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar for TV Home Theater with Dolby Atmos",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-317850461363/",
@@ -436,21 +464,7 @@
       "original_price": "$1499.99",
       "savings": "Save $660.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-278003083150",
-      "title": "Lenovo ThinkPad X1 Yoga Gen 6 14.0\" FHD IPS Touch i7-1185g7 32GB RAM 512GB LTE",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-278003083150/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/ajkAAOSwaqdl8O6E/s-l225.jpg",
-      "current_price": "$499.99",
-      "original_price": "$899.99",
-      "savings": "Save $400.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -464,7 +478,7 @@
       "original_price": "$219.99",
       "savings": "Save $96.54",
       "terms": "Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -482,20 +496,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-204977434465",
-      "title": "Nikon FTZ II Mount Adapter - F-Mount to Z-Mount - Model 4264 - OPEN BOX",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-204977434465/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/BpkAAOSw3DRj6825/s-l225.jpg",
-      "current_price": "$209.00",
-      "original_price": "$349.99",
-      "savings": "Save $140.99",
-      "terms": "Open Box · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-305957914668",
       "title": "DJI Mini 4K Drone 3 Battery Ready To Fly Vlogger Combo - Certified Refurbished",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-305957914668/",
@@ -506,6 +506,20 @@
       "original_price": "$748.00",
       "savings": "Save $299.00",
       "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-204977434465",
+      "title": "Nikon FTZ II Mount Adapter - F-Mount to Z-Mount - Model 4264 - OPEN BOX",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-204977434465/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/BpkAAOSw3DRj6825/s-l225.jpg",
+      "current_price": "$209.00",
+      "original_price": "$349.99",
+      "savings": "Save $140.99",
+      "terms": "Open Box · Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
     },
@@ -534,7 +548,21 @@
       "original_price": "$269.00",
       "savings": "Save $100.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-286736824423",
+      "title": "WORX WX990L 20V (2) PC MAKERX Combo: Rotary Tool, Angle Grinder + Accessories-CR",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-286736824423/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/RE0AAeSwcjppFc1d/s-l225.jpg",
+      "current_price": "$143.99",
+      "original_price": "$210.99",
+      "savings": "Save $67.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -552,20 +580,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-286736824423",
-      "title": "WORX WX990L 20V (2) PC MAKERX Combo: Rotary Tool, Angle Grinder + Accessories-CR",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-286736824423/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/RE0AAeSwcjppFc1d/s-l225.jpg",
-      "current_price": "$143.99",
-      "original_price": "$210.99",
-      "savings": "Save $67.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-285772594436",
       "title": "Nintendo Switch OLED 64GB White Console + 🛡️ Screen Protector & SD Card Bundle",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-285772594436/",
@@ -576,7 +590,7 @@
       "original_price": "$399.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -590,7 +604,7 @@
       "original_price": "$107.76",
       "savings": "Save $30.81",
       "terms": "Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -604,7 +618,7 @@
       "original_price": "$159.99",
       "savings": "Save $46.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -618,7 +632,7 @@
       "original_price": "$449.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -632,7 +646,7 @@
       "original_price": "$449.99",
       "savings": "Save $121.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -646,7 +660,7 @@
       "original_price": "$439.99",
       "savings": "Save $110.00",
       "terms": "Open Box · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -660,7 +674,7 @@
       "original_price": "$449.99",
       "savings": "Save $111.11",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -674,7 +688,7 @@
       "original_price": "$1299.00",
       "savings": "Save $300.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -688,21 +702,7 @@
       "original_price": "$399.00",
       "savings": "Save $80.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-157308855395",
-      "title": "Bose Smart Soundbar, Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-157308855395/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/PMsAAeSwZkVowHIB/s-l225.jpg",
-      "current_price": "$449.00",
-      "original_price": "$549.00",
-      "savings": "Save $100.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-29",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -717,6 +717,48 @@
       "savings": "Save $75.99",
       "terms": "Refurbished · Free shipping",
       "verified_at": "2026-08-29",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-193451224712",
+      "title": "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193451224712/",
+      "merchant": "eBay",
+      "category": "Business & industrial",
+      "image_url": "https://i.ebayimg.com/images/g/4J0AAOSwARZXm6Bj/s-l225.jpg",
+      "current_price": "$395.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Confirm condition, shipping, seller, and availability on eBay",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-193093032253",
+      "title": "42\" 2,200 Pound Pallet Forks Attachment Fits Kubota Kioti Tractor Quick Attach",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193093032253/",
+      "merchant": "eBay",
+      "category": "Business & industrial",
+      "image_url": "https://i.ebayimg.com/images/g/IewAAOSwXWhj89~3/s-l225.jpg",
+      "current_price": "$875.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-30",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-192622379291",
+      "title": "Lowe 2 9/16\" Female Round to 2\" Male Hex Auger Bit Adapter Conversion Heavy Duty",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-192622379291/",
+      "merchant": "eBay",
+      "category": "Business & industrial",
+      "image_url": "https://i.ebayimg.com/images/g/JKcAAeSwl5xqEI~X/s-l225.jpg",
+      "current_price": "$179.99",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Free shipping",
+      "verified_at": "2026-08-30",
       "expires_at": null
     },
     {
@@ -748,48 +790,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-193451224712",
-      "title": "Lowe SQ-9-3H Skid Steer Auger Bit 9\" Diameter, 2\" Hex Collar Shaft, 36\" Tall",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193451224712/",
-      "merchant": "eBay",
-      "category": "Business & industrial",
-      "image_url": "https://i.ebayimg.com/images/g/4J0AAOSwARZXm6Bj/s-l225.jpg",
-      "current_price": "$395.99",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Confirm condition, shipping, seller, and availability on eBay",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-193093032253",
-      "title": "42\" 2,200 Pound Pallet Forks Attachment Fits Kubota Kioti Tractor Quick Attach",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-193093032253/",
-      "merchant": "eBay",
-      "category": "Business & industrial",
-      "image_url": "https://i.ebayimg.com/images/g/IewAAOSwXWhj89~3/s-l225.jpg",
-      "current_price": "$875.99",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-192622379291",
-      "title": "Lowe 2 9/16\" Female Round to 2\" Male Hex Auger Bit Adapter Conversion Heavy Duty",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-192622379291/",
-      "merchant": "eBay",
-      "category": "Business & industrial",
-      "image_url": "https://i.ebayimg.com/images/g/JKcAAeSwl5xqEI~X/s-l225.jpg",
-      "current_price": "$179.99",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Free shipping",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-298570722291",
       "title": "1978 MIS FAVORITOS BRUCE SPRINGSTEEN #211 PSA 2, POP 3, NONE HIGHER",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-298570722291/",
@@ -800,20 +800,6 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Confirm condition, shipping, seller, and availability on eBay",
-      "verified_at": "2026-08-29",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-287472365991",
-      "title": "Blue Eyes White Dragon GFP2-EN175 Ghost Rare 1st Edition Yugioh PSA 7 *506",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287472365991/",
-      "merchant": "eBay",
-      "category": "Toys & hobbies",
-      "image_url": "https://i.ebayimg.com/images/g/bfgAAeSw3CxqXSrH/s-l225.jpg",
-      "current_price": "$299.99",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Free shipping",
       "verified_at": "2026-08-29",
       "expires_at": null
     }

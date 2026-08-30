@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-29T23:18:48.000Z",
-  "catalogUpdatedAt": "2026-08-29T23:18:48.225Z",
+  "generatedAt": "2026-08-30T14:25:10.000Z",
+  "catalogUpdatedAt": "2026-08-30T14:25:10.816Z",
   "deals": {
     "cj-nordvpn-2-year-20260801": {
       "id": "cj-nordvpn-2-year-20260801",
@@ -8032,7 +8032,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-11",
+      "lastSeen": "2026-08-30",
       "active": true,
       "observations": [
         {
@@ -8052,6 +8052,16 @@
           "currentPriceAmount": 706,
           "originalPrice": "$1199.95",
           "originalPriceAmount": 1199.95,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-30",
+          "verifiedAt": "2026-08-30",
+          "currentPrice": "$706.00",
+          "currentPriceAmount": 706,
+          "originalPrice": "$749.95",
+          "originalPriceAmount": 749.95,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -10898,7 +10908,7 @@
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-23",
+      "lastSeen": "2026-08-30",
       "active": true,
       "observations": [
         {
@@ -10928,6 +10938,16 @@
           "currentPriceAmount": 367,
           "originalPrice": "$649.95",
           "originalPriceAmount": 649.95,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-30",
+          "verifiedAt": "2026-08-30",
+          "currentPrice": "$367.00",
+          "currentPriceAmount": 367,
+          "originalPrice": "$399.95",
+          "originalPriceAmount": 399.95,
           "expiresAt": "",
           "priceNote": "Refurbished · Free shipping"
         }
@@ -16393,12 +16413,12 @@
     },
     "ebay-item-286288847506": {
       "id": "ebay-item-286288847506",
-      "title": "Dell Latitude 5490 14” Business Laptop Intel Core i7 16GB RAM 256GB SSD Win 11",
+      "title": "Lenovo ThinkPad X13 Gen 2 13” Business Laptop Core i5 16GB RAM 256GB SSD Win 11",
       "url": "/deals/ebay-item-286288847506/",
       "merchant": "eBay",
       "category": "Electronics",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-04",
+      "lastSeen": "2026-08-30",
       "active": true,
       "observations": [
         {
@@ -16406,6 +16426,16 @@
           "verifiedAt": "2026-08-04",
           "currentPrice": "$269.99",
           "currentPriceAmount": 269.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Refurbished · Free shipping"
+        },
+        {
+          "date": "2026-08-30",
+          "verifiedAt": "2026-08-30",
+          "currentPrice": "$259.99",
+          "currentPriceAmount": 259.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -23434,7 +23464,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-29",
+      "lastSeen": "2026-08-30",
       "active": true,
       "observations": [
         {
@@ -23502,6 +23532,16 @@
           "verifiedAt": "2026-08-29",
           "currentPrice": "$139.99",
           "currentPriceAmount": 139.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-30",
+          "verifiedAt": "2026-08-30",
+          "currentPrice": "$129.99",
+          "currentPriceAmount": 129.99,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
@@ -33200,7 +33240,7 @@
       "merchant": "eBay",
       "category": "Toys & hobbies",
       "firstSeen": "2026-08-11",
-      "lastSeen": "2026-08-28",
+      "lastSeen": "2026-08-30",
       "active": true,
       "observations": [
         {
@@ -33248,6 +33288,16 @@
           "verifiedAt": "2026-08-28",
           "currentPrice": "$1299.99",
           "currentPriceAmount": 1299.99,
+          "originalPrice": "",
+          "originalPriceAmount": null,
+          "expiresAt": "",
+          "priceNote": "Free shipping"
+        },
+        {
+          "date": "2026-08-30",
+          "verifiedAt": "2026-08-30",
+          "currentPrice": "$1199.95",
+          "currentPriceAmount": 1199.95,
           "originalPrice": "",
           "originalPriceAmount": null,
           "expiresAt": "",
