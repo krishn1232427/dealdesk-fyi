@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-30T14:25:10.000Z",
-  "catalogUpdatedAt": "2026-08-30T14:25:10.816Z",
+  "generatedAt": "2026-08-30T23:29:14.000Z",
+  "catalogUpdatedAt": "2026-08-30T23:29:14.204Z",
   "publicDeals": 1184,
-  "indexableDeals": 57,
-  "browseOnlyDeals": 1127,
+  "indexableDeals": 54,
+  "browseOnlyDeals": 1130,
   "dealsEnriched": 1184,
   "merchants": 10,
   "merchantPages": 45,
@@ -14,7 +14,7 @@
   "collectionGroups": 13,
   "collectionPages": 13,
   "dealsWithCollectionPage": 739,
-  "authorityPages": 21,
+  "authorityPages": 20,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1184,
   "scores": {
@@ -74,7 +74,6 @@
   ],
   "indexableMerchantPages": 1,
   "comparisonPaths": [
-    "/compare/samsung-galaxy-s22/",
     "/compare/samsung-galaxy-s23-ultra/",
     "/compare/nintendo-switch-oled-64/"
   ],
@@ -122,7 +121,7 @@
     "/compare/macbook-air-13/",
     "/compare/samsung-galaxy-s22-ultra/"
   ],
-  "indexableComparisonPages": 3,
+  "indexableComparisonPages": 2,
   "collectionPaths": [
     "/collections/refurbished-electronics/",
     "/collections/refurbished-laptops/",
