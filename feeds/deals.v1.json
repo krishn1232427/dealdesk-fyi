@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T23:29:14.204Z",
+  "generatedAt": "2026-08-31T17:03:49.694Z",
   "canonical": "https://dealdesk.fyi/feeds/deals.v1.json",
-  "total": 54,
+  "total": 55,
   "disclosure": "DealDesk may earn a commission when a user opens a merchant link. Merchant checkout controls final price, tax, shipping, eligibility, and availability.",
   "deals": [
     {
@@ -16,7 +16,7 @@
       "original_price": "$599.95",
       "savings": "Save $473.95",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -30,7 +30,7 @@
       "original_price": "$59.97",
       "savings": "Save $43.97",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -44,7 +44,7 @@
       "original_price": "$129.99",
       "savings": "Save $111.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -58,7 +58,7 @@
       "original_price": "$970.00",
       "savings": "Save $629.56",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -95,12 +95,26 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-255352036778/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/5FwAAOSwDtFoHS8u/s-l225.jpg",
-      "current_price": "$664.99",
+      "image_url": "https://i.ebayimg.com/images/g/ahYAAeSw02JqlZes/s-l225.jpg",
+      "current_price": "$778.74",
       "original_price": "$3094.99",
-      "savings": "Save $2430.00",
+      "savings": "Save $2316.25",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-145829369846-444910334069",
+      "title": "Apple iPhone 15 Fully Unlocked 6.1in - 128GB - eSIM -Good",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-145829369846-444910334069/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/U58AAeSwCqtqjIMZ/s-l225.jpg",
+      "current_price": "$375.00",
+      "original_price": "$1367.99",
+      "savings": "Save $992.99",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -114,7 +128,21 @@
       "original_price": "$1379.99",
       "savings": "Save $989.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-276151052436",
+      "title": "Acer Predator XB273U 27\"Gaming Monitor 360Hz 2560x1440 NVIDIA G-Sync Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-276151052436/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/xS0AAeSwxJ9pK4dm/s-l225.jpg",
+      "current_price": "$313.49",
+      "original_price": "$1099.99",
+      "savings": "Save $786.50",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -128,7 +156,7 @@
       "original_price": "$1299.00",
       "savings": "Save $916.20",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -146,6 +174,20 @@
       "expires_at": null
     },
     {
+      "id": "ebay-item-386178100457",
+      "title": "eufy eufyCam3 Wireless Solar Security Camera System 4K Outdoor Cam Local Storage",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-386178100457/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/nRcAAOSwp1BlIll2/s-l225.jpg",
+      "current_price": "$237.49",
+      "original_price": "$679.99",
+      "savings": "Save $442.50",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
       "id": "ebay-item-325433972802",
       "title": "Yugioh Power of the Elements Factory Sealed Booster Box Unlimited",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-325433972802/",
@@ -156,63 +198,7 @@
       "original_price": "$100.56",
       "savings": "Save $62.61",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-285380809169",
-      "title": "Makita AN454-R 1-3/4\" Pneumatic Coil Roofing Nailer Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-285380809169/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/vOkAAeSwuQVqigRW/s-l225.jpg",
-      "current_price": "$160.99",
-      "original_price": "$419.99",
-      "savings": "Save $259.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-266458531387",
-      "title": "Acer Veriton Z6 - 23.8\" AIO Intel Core i7-11700 2.50GHz 16GB RAM 512GB SSD W10P",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-266458531387/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/ObIAAeSwHn1qefsO/s-l225.jpg",
-      "current_price": "$515.84",
-      "original_price": "$1349.99",
-      "savings": "Save $834.15",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-256339859745",
-      "title": "Acer V6820i Projector UHD DLP 3840x2160 2400 lumens 10,000:1 Contrast Ratio",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256339859745/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/5QwAAOSwxRpm9Y21/s-l225.jpg",
-      "current_price": "$575.86",
-      "original_price": "$1499.99",
-      "savings": "Save $924.13",
-      "terms": "Pre-Owned · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-206389565564",
-      "title": "Saramonic Blink 500 B2+ 2-Person Wireless Clip-On Mic System USB-C & Lightning",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-206389565564/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/NrwAAeSwmo9qRtJC/s-l225.jpg",
-      "current_price": "$49.88",
-      "original_price": "$129.00",
-      "savings": "Save $79.12",
-      "terms": "Open Box · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -221,40 +207,12 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277426426361/",
       "merchant": "eBay",
       "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/fBsAAeSw2HNqj~hh/s-l225.jpg",
-      "current_price": "$399.99",
+      "image_url": "https://i.ebayimg.com/images/g/eAcAAeSwmX1qla8f/s-l225.jpg",
+      "current_price": "$414.99",
       "original_price": "$999.99",
-      "savings": "Save $600.00",
+      "savings": "Save $585.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-277667740756",
-      "title": "Dyson PH02 Pure Humidify + Cool Cryptomic™ | Gunmetal/Bronze | Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277667740756/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/PJUAAeSwuTdqjnJj/s-l225.jpg",
-      "current_price": "$359.99",
-      "original_price": "$899.99",
-      "savings": "Save $540.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-168492244195",
-      "title": "Lenovo - Tab P12 RAM 8GB Storage 256GB  3K Android Tablet ZACH0165U 12.7\" WRTY",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-168492244195/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/A70AAeSwdi1qPVEs/s-l225.jpg",
-      "current_price": "$219.99",
-      "original_price": "$549.99",
-      "savings": "Save $330.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -268,7 +226,63 @@
       "original_price": "$107.76",
       "savings": "Save $62.77",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-256339859745",
+      "title": "Acer V6820i Projector UHD DLP 3840x2160 2400 lumens 10,000:1 Contrast Ratio",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-256339859745/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/1EcAAeSwy-ZqlZet/s-l225.jpg",
+      "current_price": "$624.99",
+      "original_price": "$1499.99",
+      "savings": "Save $875.00",
+      "terms": "Pre-Owned · Free shipping",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-285380809169",
+      "title": "Makita AN454-R 1-3/4\" Pneumatic Coil Roofing Nailer Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-285380809169/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/vOkAAeSwuQVqigRW/s-l225.jpg",
+      "current_price": "$180.24",
+      "original_price": "$419.99",
+      "savings": "Save $239.75",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-277861113726",
+      "title": "SV16 V11 Outsize Cordless Vacuum Cleaner | Nickel | Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277861113726/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/oJ8AAeSwFfJqlYjL/s-l225.jpg",
+      "current_price": "$364.99",
+      "original_price": "$849.99",
+      "savings": "Save $485.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-277946898910",
+      "title": "V11 Outsize Cordless Vacuum Cleaner | Red | Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277946898910/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/oeUAAeSwDFZqlYjg/s-l225.jpg",
+      "current_price": "$364.99",
+      "original_price": "$849.99",
+      "savings": "Save $485.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -286,20 +300,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-386178100457",
-      "title": "eufy eufyCam3 Wireless Solar Security Camera System 4K Outdoor Cam Local Storage",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-386178100457/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/nRcAAOSwp1BlIll2/s-l225.jpg",
-      "current_price": "$299.99",
-      "original_price": "$679.99",
-      "savings": "Save $380.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-393536764736",
       "title": "WX993L Worx 20V (3) PC MAKERX Kit: Rotary Tool, Wood/Metal Crafter, Air Brush-CR",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-393536764736/",
@@ -310,35 +310,21 @@
       "original_price": "$269.99",
       "savings": "Save $150.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
-      "id": "ebay-item-396763872685",
-      "title": "Makita GRU01M1-R 40V max XGT 15\" Cordless String Trimmer Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-396763872685/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/myoAAeSw-dlqjv7s/s-l225.jpg",
-      "current_price": "$227.99",
-      "original_price": "$519.00",
-      "savings": "Save $291.01",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-327261025347",
-      "title": "Sonos Move Battery-powered smart speaker, Wi-Fi and Bluetooth - Black",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-327261025347/",
+      "id": "ebay-item-389725523578",
+      "title": "eufy PoE NVR Security System S4 Max 8CH 16MP Triple Lens Camera 360°PTZ |Refurb",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-389725523578/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/VNEAAeSwUxNqlLq6/s-l225.jpg",
-      "current_price": "$243.00",
-      "original_price": "$529.99",
-      "savings": "Save $286.99",
+      "image_url": "https://i.ebayimg.com/images/g/hZQAAeSw~epprpwQ/s-l225.jpg",
+      "current_price": "$687.49",
+      "original_price": "$1499.99",
+      "savings": "Save $812.50",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -366,7 +352,7 @@
       "original_price": "$799.99",
       "savings": "Save $409.58",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -380,7 +366,21 @@
       "original_price": "$219.99",
       "savings": "Save $110.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-396763872685",
+      "title": "Makita GRU01M1-R 40V max XGT 15\" Cordless String Trimmer Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-396763872685/",
+      "merchant": "eBay",
+      "category": "Home & garden",
+      "image_url": "https://i.ebayimg.com/images/g/myoAAeSw-dlqjv7s/s-l225.jpg",
+      "current_price": "$259.65",
+      "original_price": "$519.00",
+      "savings": "Save $259.35",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -394,35 +394,7 @@
       "original_price": "$899.95",
       "savings": "Save $427.95",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-277944344269",
-      "title": "Dyson Gen5outsize Cordless Vacuum | Nickel/Blue | Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-277944344269/",
-      "merchant": "eBay",
-      "category": "Home & garden",
-      "image_url": "https://i.ebayimg.com/images/g/YY0AAeSwhFRqk4W0/s-l225.jpg",
-      "current_price": "$599.99",
-      "original_price": "$1149.99",
-      "savings": "Save $550.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-389725523578",
-      "title": "eufy PoE NVR Security System S4 Max 8CH 16MP Triple Lens Camera 360°PTZ |Refurb",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-389725523578/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/hZQAAeSw~epprpwQ/s-l225.jpg",
-      "current_price": "$799.99",
-      "original_price": "$1499.99",
-      "savings": "Save $700.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -431,12 +403,12 @@
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-168224689294/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/GtUAAeSw92lqk~xD/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/hDAAAeSwJFFqlbDI/s-l225.jpg",
       "current_price": "$580.00",
       "original_price": "$1099.99",
       "savings": "Save $519.99",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -454,20 +426,6 @@
       "expires_at": null
     },
     {
-      "id": "ebay-item-166819315978-467896873173",
-      "title": "Bose QuietComfort Noise Cancelling Headphones, Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-166819315978-467896873173/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/V4YAAeSwLlVpcTeU/s-l225.jpg",
-      "current_price": "$199.00",
-      "original_price": "$359.00",
-      "savings": "Save $160.00",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
       "id": "ebay-item-317850461363",
       "title": "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar for TV Home Theater with Dolby Atmos",
       "canonical_url": "https://dealdesk.fyi/deals/ebay-item-317850461363/",
@@ -478,7 +436,21 @@
       "original_price": "$1499.99",
       "savings": "Save $660.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-136844738794",
+      "title": "GoPro MAX2 True 8K 360 Video Action Camera Bundle - Black CHDFZ-311-TH",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-136844738794/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/qoUAAeSwDoRpQhO2/s-l225.jpg",
+      "current_price": "$319.99",
+      "original_price": "$569.99",
+      "savings": "Save $250.00",
+      "terms": "Open Box · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -492,7 +464,21 @@
       "original_price": "$219.99",
       "savings": "Save $96.54",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-287070431973",
+      "title": "Lenovo IdeaPad 5i 16\" Touch Ultra 7 255U 32GB 1TB SSD W11H 2in1",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-287070431973/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/dsEAAeSwuzJp1o23/s-l225.jpg",
+      "current_price": "$749.99",
+      "original_price": "$1299.99",
+      "savings": "Save $550.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -506,7 +492,7 @@
       "original_price": "$748.00",
       "savings": "Save $299.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -520,7 +506,7 @@
       "original_price": "$269.00",
       "savings": "Save $100.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -534,7 +520,21 @@
       "original_price": "$210.99",
       "savings": "Save $67.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-326607787034",
+      "title": "Samsung Q Series Soundbar 11.1.4 ch Subwoofer + Rear Speaker 2025",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-326607787034/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/q0MAAeSw-qlqlZ~7/s-l225.jpg",
+      "current_price": "$1095.00",
+      "original_price": "$1597.99",
+      "savings": "Save $502.99",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -548,7 +548,7 @@
       "original_price": "$399.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -562,7 +562,7 @@
       "original_price": "$107.76",
       "savings": "Save $30.81",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -590,7 +590,7 @@
       "original_price": "$449.99",
       "savings": "Save $120.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -604,7 +604,7 @@
       "original_price": "$449.99",
       "savings": "Save $121.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -618,7 +618,7 @@
       "original_price": "$439.99",
       "savings": "Save $110.00",
       "terms": "Open Box · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -632,21 +632,35 @@
       "original_price": "$449.99",
       "savings": "Save $111.11",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
-      "id": "ebay-item-304925257317",
-      "title": "DJI FPV Combo and FPV Backpack -Certified Refurbished",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-304925257317/",
+      "id": "ebay-item-304925257286",
+      "title": "DJI FPV Combo - Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-304925257286/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/RboAAOSw~ixiaaiW/s-l225.jpg",
+      "image_url": "https://i.ebayimg.com/images/g/XuIAAOSwALxgPlko/s-l225.jpg",
       "current_price": "$999.00",
       "original_price": "$1299.00",
       "savings": "Save $300.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-187576160757-695417972097",
+      "title": "Bose SoundLink Max Portable Speaker, Certified Refurbished",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-187576160757-695417972097/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/0LEAAeSwEsVowY83/s-l225.jpg",
+      "current_price": "$319.00",
+      "original_price": "$399.00",
+      "savings": "Save $80.00",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -660,7 +674,7 @@
       "original_price": "$549.00",
       "savings": "Save $100.00",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -674,21 +688,35 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
-      "id": "ebay-item-326210377293-515321894890",
-      "title": "Apple iPhone 14 Plus 128GB Fully Unlocked - VERY GOOD Condition",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-326210377293-515321894890/",
+      "id": "ebay-item-187827718371",
+      "title": "Lenovo ThinkPad T580 15.6” Core i5 8350u 32GB RAM 1TB SSD Win 11 Pro Touchscreen",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-187827718371/",
       "merchant": "eBay",
       "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/0sQAAOSw0Ndl62It/s-l225.jpg",
-      "current_price": "$307.19",
+      "image_url": "https://i.ebayimg.com/images/g/KXkAAeSwmUdpOKy6/s-l225.jpg",
+      "current_price": "$475.00",
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
+      "expires_at": null
+    },
+    {
+      "id": "ebay-item-226447947273-525635725002",
+      "title": "Apple iPhone 14 128GB - 5G Fully Unlocked - VERY GOOD Condition",
+      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-226447947273-525635725002/",
+      "merchant": "eBay",
+      "category": "Electronics",
+      "image_url": "https://i.ebayimg.com/images/g/uOMAAOSwLjtninPj/s-l225.jpg",
+      "current_price": "$297.59",
+      "original_price": null,
+      "savings": "Live eBay price",
+      "terms": "Refurbished · Free shipping",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -702,7 +730,7 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -716,7 +744,7 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -730,7 +758,7 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     },
     {
@@ -744,21 +772,7 @@
       "original_price": null,
       "savings": "Live eBay price",
       "terms": "Confirm condition, shipping, seller, and availability on eBay",
-      "verified_at": "2026-08-30",
-      "expires_at": null
-    },
-    {
-      "id": "ebay-item-187799121843",
-      "title": "Lenovo ThinkPad L14 Core i7 10510U 16GB RAM 512GB SSD Win 11 Pro Touchscreeen",
-      "canonical_url": "https://dealdesk.fyi/deals/ebay-item-187799121843/",
-      "merchant": "eBay",
-      "category": "Electronics",
-      "image_url": "https://i.ebayimg.com/images/g/E8EAAeSwWvdpLh8-/s-l225.jpg",
-      "current_price": "$345.00",
-      "original_price": null,
-      "savings": "Live eBay price",
-      "terms": "Refurbished · Free shipping",
-      "verified_at": "2026-08-30",
+      "verified_at": "2026-08-31",
       "expires_at": null
     }
   ]
