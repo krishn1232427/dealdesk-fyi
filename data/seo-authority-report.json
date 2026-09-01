@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-08-31T17:03:49.000Z",
-  "catalogUpdatedAt": "2026-08-31T17:03:49.694Z",
+  "generatedAt": "2026-09-01T00:37:20.000Z",
+  "catalogUpdatedAt": "2026-09-01T00:37:20.290Z",
   "publicDeals": 1184,
-  "indexableDeals": 55,
-  "browseOnlyDeals": 1129,
+  "indexableDeals": 54,
+  "browseOnlyDeals": 1130,
   "dealsEnriched": 1184,
   "merchants": 10,
   "merchantPages": 45,
@@ -14,7 +14,7 @@
   "collectionGroups": 13,
   "collectionPages": 13,
   "dealsWithCollectionPage": 739,
-  "authorityPages": 22,
+  "authorityPages": 20,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1184,
   "scores": {
@@ -75,8 +75,7 @@
   "indexableMerchantPages": 1,
   "comparisonPaths": [
     "/compare/samsung-galaxy-s23-ultra/",
-    "/compare/nintendo-switch-oled-64/",
-    "/compare/apple-iphone-15/"
+    "/compare/nintendo-switch-oled-64/"
   ],
   "comparisonBrowsePaths": [
     "/compare/lenovo-thinkpad-t14/",
@@ -122,7 +121,7 @@
     "/compare/macbook-air-13/",
     "/compare/samsung-galaxy-s22-ultra/"
   ],
-  "indexableComparisonPages": 3,
+  "indexableComparisonPages": 2,
   "collectionPaths": [
     "/collections/refurbished-electronics/",
     "/collections/refurbished-laptops/",
@@ -133,8 +132,7 @@
     "/collections/security-cameras/",
     "/collections/equipment-attachments/",
     "/collections/makita-tools/",
-    "/collections/soundbars/",
-    "/collections/computer-monitors/"
+    "/collections/soundbars/"
   ],
   "collectionBrowsePaths": [
     "/collections/refurbished-electronics/",
@@ -151,7 +149,7 @@
     "/collections/computer-monitors/",
     "/collections/vpn-deals/"
   ],
-  "indexableCollectionPages": 11,
+  "indexableCollectionPages": 10,
   "staticPaths": [
     "/merchants/",
     "/comparisons/",

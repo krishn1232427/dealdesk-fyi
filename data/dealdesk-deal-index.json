@@ -1,12 +1,12 @@
 {
   "name": "DealDesk Deal Index",
-  "updatedAt": "2026-08-31T17:03:49.694Z",
-  "generatedAt": "2026-08-31T17:03:49.000Z",
+  "updatedAt": "2026-09-01T00:37:20.290Z",
+  "generatedAt": "2026-09-01T00:37:20.000Z",
   "publicDeals": 1184,
   "merchants": 10,
   "categories": 10,
   "medianDisplayedPrice": 295,
-  "medianDisplayedDiscountPercent": 42,
+  "medianDisplayedDiscountPercent": 41,
   "categoryStats": [
     {
       "category": "Electronics",
@@ -14,7 +14,7 @@
       "lowestDisplayedPrice": 14.28,
       "medianDisplayedPrice": 255.99,
       "maximumDisplayedDiscountPercent": 92,
-      "latestVerification": "2026-08-31"
+      "latestVerification": "2026-09-01"
     },
     {
       "category": "Collectibles",
@@ -22,7 +22,7 @@
       "lowestDisplayedPrice": 3.82,
       "medianDisplayedPrice": 272.49,
       "maximumDisplayedDiscountPercent": 79,
-      "latestVerification": "2026-08-31"
+      "latestVerification": "2026-09-01"
     },
     {
       "category": "Toys & hobbies",
@@ -30,7 +30,7 @@
       "lowestDisplayedPrice": 8,
       "medianDisplayedPrice": 350,
       "maximumDisplayedDiscountPercent": 62,
-      "latestVerification": "2026-08-31"
+      "latestVerification": "2026-09-01"
     },
     {
       "category": "Home & garden",
@@ -38,7 +38,7 @@
       "lowestDisplayedPrice": 27.99,
       "medianDisplayedPrice": 224.99,
       "maximumDisplayedDiscountPercent": 67,
-      "latestVerification": "2026-08-31"
+      "latestVerification": "2026-09-01"
     },
     {
       "category": "Sports collectibles",
@@ -54,7 +54,7 @@
       "lowestDisplayedPrice": 131.99,
       "medianDisplayedPrice": 538.49,
       "maximumDisplayedDiscountPercent": 0,
-      "latestVerification": "2026-08-31"
+      "latestVerification": "2026-09-01"
     },
     {
       "category": "Subscriptions",
