@@ -1,11 +1,11 @@
 {
   "build": "2026-08-08-crawl-v3",
-  "generatedAt": "2026-09-01T14:08:52.000Z",
+  "generatedAt": "2026-09-01T23:17:53.000Z",
   "catalogUpdatedAt": "2026-09-01T00:37:20.290Z",
   "publicDeals": 1184,
-  "indexableDeals": 51,
-  "browseOnlyDeals": 1133,
-  "archivePages": 37,
+  "indexableDeals": 0,
+  "browseOnlyDeals": 1184,
+  "archivePages": 38,
   "indexableArchivePages": 1,
   "archivePaths": [
     "/deals/"
@@ -47,18 +47,13 @@
     "/deals/page/34/",
     "/deals/page/35/",
     "/deals/page/36/",
-    "/deals/page/37/"
+    "/deals/page/37/",
+    "/deals/page/38/"
   ],
   "categories": 10,
-  "categoryPages": 46,
-  "indexableCategoryPages": 5,
-  "categoryPaths": [
-    "/category/electronics/",
-    "/category/collectibles/",
-    "/category/toys-and-hobbies/",
-    "/category/home-and-garden/",
-    "/category/business-and-industrial/"
-  ],
+  "categoryPages": 43,
+  "indexableCategoryPages": 0,
+  "categoryPaths": [],
   "categoryBrowsePaths": [
     "/category/electronics/",
     "/category/electronics/page/2/",
@@ -85,13 +80,11 @@
     "/category/collectibles/page/4/",
     "/category/collectibles/page/5/",
     "/category/collectibles/page/6/",
-    "/category/collectibles/page/7/",
     "/category/toys-and-hobbies/",
     "/category/toys-and-hobbies/page/2/",
     "/category/toys-and-hobbies/page/3/",
     "/category/toys-and-hobbies/page/4/",
     "/category/toys-and-hobbies/page/5/",
-    "/category/toys-and-hobbies/page/6/",
     "/category/home-and-garden/",
     "/category/home-and-garden/page/2/",
     "/category/home-and-garden/page/3/",
@@ -101,13 +94,12 @@
     "/category/sports-collectibles/page/3/",
     "/category/business-and-industrial/",
     "/category/business-and-industrial/page/2/",
-    "/category/business-and-industrial/page/3/",
     "/category/subscriptions/",
     "/category/home/",
     "/category/streaming/",
     "/category/grocery/"
   ],
-  "prioritySitemapDeals": 51,
+  "prioritySitemapDeals": 0,
   "sitemapFiles": [
     "sitemap-pages.xml",
     "sitemap-deals-priority.xml"
