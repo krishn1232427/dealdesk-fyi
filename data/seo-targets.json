@@ -1,6 +1,6 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-09-01T00:37:20.000Z",
+  "generatedAt": "2026-09-01T14:08:52.000Z",
   "targets": [
     {
       "id": "amazon-prime-young-adults-20260801",
@@ -1453,7 +1453,7 @@
       "id": "ebay-item-145829369846-444910334069",
       "url": "https://dealdesk.fyi/deals/ebay-item-145829369846-444910334069/",
       "title": "Apple iPhone 15 Fully Unlocked 6.1in -… deal: $375.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Apple iPhone 15 Fully Unlocked 6.1in - 128GB - eSIM -Good deal",
       "secondaryQueries": [
         "Apple iPhone 15 Fully Unlocked 6.1in - 128GB - eSIM -Good price",
@@ -1529,7 +1529,7 @@
       "id": "ebay-item-256413667885-556528799834",
       "url": "https://dealdesk.fyi/deals/ebay-item-256413667885-556528799834/",
       "title": "Samsung Galaxy S23 Ultra 512GB S918U… deal: $390.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Good deal",
       "secondaryQueries": [
         "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Good price",
@@ -1861,7 +1861,7 @@
       "id": "ebay-item-256482045980-557473856184",
       "url": "https://dealdesk.fyi/deals/ebay-item-256482045980-557473856184/",
       "title": "Samsung Galaxy S23 Ultra 512GB S918U… deal: $454.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Excellent deal",
       "secondaryQueries": [
         "Samsung Galaxy S23 Ultra 512GB S918U Unlocked - Excellent price",
@@ -4501,7 +4501,7 @@
       "id": "ebay-item-327261025347",
       "url": "https://dealdesk.fyi/deals/ebay-item-327261025347/",
       "title": "Sonos Move Battery-powered smart speaker,… deal: $279.95 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Sonos Move Battery-powered smart speaker, Wi-Fi and Bluetooth - Black deal",
       "secondaryQueries": [
         "Sonos Move Battery-powered smart speaker, Wi-Fi and Bluetooth - Black price",
@@ -4907,7 +4907,7 @@
       "id": "ebay-item-317850461363",
       "url": "https://dealdesk.fyi/deals/ebay-item-317850461363/",
       "title": "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar… deal: $839.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar for TV Home Theater with Dolby Atmos deal",
       "secondaryQueries": [
         "SONY HTA9000 BRAVIA Theater Bar 9 Soundbar for TV Home Theater with Dolby Atmos price",
@@ -4926,7 +4926,7 @@
       "id": "ebay-item-136844738794",
       "url": "https://dealdesk.fyi/deals/ebay-item-136844738794/",
       "title": "GoPro MAX2 True 8K 360 Video Action Camera… deal: $319.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "GoPro MAX2 True 8K 360 Video Action Camera Bundle - Black CHDFZ-311-TH deal",
       "secondaryQueries": [
         "GoPro MAX2 True 8K 360 Video Action Camera Bundle - Black CHDFZ-311-TH price",
@@ -5297,7 +5297,7 @@
       "id": "ebay-item-287070431973",
       "url": "https://dealdesk.fyi/deals/ebay-item-287070431973/",
       "title": "Lenovo IdeaPad 5i 16\" Touch Ultra 7 255U… deal: $749.99 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Lenovo IdeaPad 5i 16\" Touch Ultra 7 255U 32GB 1TB SSD W11H 2in1 deal",
       "secondaryQueries": [
         "Lenovo IdeaPad 5i 16\" Touch Ultra 7 255U 32GB 1TB SSD W11H 2in1 price",
@@ -5576,7 +5576,7 @@
       "id": "ebay-item-305957914668",
       "url": "https://dealdesk.fyi/deals/ebay-item-305957914668/",
       "title": "DJI Mini 4K Drone 3 Battery Ready To Fly… deal: $449.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "DJI Mini 4K Drone 3 Battery Ready To Fly Vlogger Combo - Certified Refurbished deal",
       "secondaryQueries": [
         "DJI Mini 4K Drone 3 Battery Ready To Fly Vlogger Combo - Certified Refurbished price",
@@ -5967,7 +5967,7 @@
       "id": "ebay-item-315999032882",
       "url": "https://dealdesk.fyi/deals/ebay-item-315999032882/",
       "title": "Datacolor Spyder Pro SP2024PRO Monitor… deal: $169.00 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Datacolor Spyder Pro SP2024PRO Monitor Calibration Colorimeter full warranty deal",
       "secondaryQueries": [
         "Datacolor Spyder Pro SP2024PRO Monitor Calibration Colorimeter full warranty price",
@@ -6959,7 +6959,7 @@
       "id": "ebay-item-326607787034",
       "url": "https://dealdesk.fyi/deals/ebay-item-326607787034/",
       "title": "Samsung Q Series Soundbar 11.1.4 ch… deal: $1095.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Samsung Q Series Soundbar 11.1.4 ch Subwoofer + Rear Speaker 2025 deal",
       "secondaryQueries": [
         "Samsung Q Series Soundbar 11.1.4 ch Subwoofer + Rear Speaker 2025 price",
@@ -7171,7 +7171,7 @@
       "id": "ebay-item-305985346168",
       "url": "https://dealdesk.fyi/deals/ebay-item-305985346168/",
       "title": "DJI Mini SE Drone Fly More Ready To Fly… deal: $349.00 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "DJI Mini SE Drone Fly More Ready To Fly Vlogger Combo - Certified Refurbished deal",
       "secondaryQueries": [
         "DJI Mini SE Drone Fly More Ready To Fly Vlogger Combo - Certified Refurbished price",
@@ -8150,7 +8150,7 @@
       "id": "ebay-item-304925257286",
       "url": "https://dealdesk.fyi/deals/ebay-item-304925257286/",
       "title": "DJI FPV Combo - Certified Refurbished deal: $999.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "DJI FPV Combo - Certified Refurbished deal",
       "secondaryQueries": [
         "DJI FPV Combo - Certified Refurbished price",
@@ -8268,7 +8268,7 @@
       "id": "ebay-item-167475116955",
       "url": "https://dealdesk.fyi/deals/ebay-item-167475116955/",
       "title": "JBL BAR 1300XMK2 11.1.4 Channel 1570W Dolby… deal: $938.00 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "JBL BAR 1300XMK2 11.1.4 Channel 1570W Dolby Atmos Soundbar System deal",
       "secondaryQueries": [
         "JBL BAR 1300XMK2 11.1.4 Channel 1570W Dolby Atmos Soundbar System price",
@@ -8978,7 +8978,7 @@
       "id": "ebay-item-304925257307",
       "url": "https://dealdesk.fyi/deals/ebay-item-304925257307/",
       "title": "DJI Battery for Mini 2/Mini SE/Mini 4K/Mini… deal: $49.00 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "DJI Battery for Mini 2/Mini SE/Mini 4K/Mini 2 SE-DJI Certified Refurbished deal",
       "secondaryQueries": [
         "DJI Battery for Mini 2/Mini SE/Mini 4K/Mini 2 SE-DJI Certified Refurbished price",
@@ -11189,7 +11189,7 @@
       "id": "ebay-item-225773282237",
       "url": "https://dealdesk.fyi/deals/ebay-item-225773282237/",
       "title": "Lenovo ThinkPad T480 14\" FHD i5 8250u 32GB… deal: $399.99 | DealDesk",
-      "indexable": false,
+      "indexable": true,
       "primaryQuery": "Lenovo ThinkPad T480 14\" FHD i5 8250u 32GB 512gb NVME WIFI CAM WIN 11 PRO laptop deal",
       "secondaryQueries": [
         "Lenovo ThinkPad T480 14\" FHD i5 8250u 32GB 512gb NVME WIFI CAM WIN 11 PRO laptop price",
@@ -12669,7 +12669,7 @@
       "id": "ebay-item-226447947273-525635725002",
       "url": "https://dealdesk.fyi/deals/ebay-item-226447947273-525635725002/",
       "title": "Apple iPhone 14 128GB - 5G Fully Unlocked -… deal: $297.59 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "Apple iPhone 14 128GB - 5G Fully Unlocked - VERY GOOD Condition deal",
       "secondaryQueries": [
         "Apple iPhone 14 128GB - 5G Fully Unlocked - VERY GOOD Condition price",
@@ -12688,7 +12688,7 @@
       "id": "ebay-item-278246901009",
       "url": "https://dealdesk.fyi/deals/ebay-item-278246901009/",
       "title": "PSA 10 One Piece Card Roronoa Zoro Flagship… deal: $400.00 | DealDesk",
-      "indexable": true,
+      "indexable": false,
       "primaryQuery": "PSA 10 One Piece Card Roronoa Zoro Flagship Battle Top 8 Promo ST21-015 Japan deal",
       "secondaryQueries": [
         "PSA 10 One Piece Card Roronoa Zoro Flagship Battle Top 8 Promo ST21-015 Japan price",

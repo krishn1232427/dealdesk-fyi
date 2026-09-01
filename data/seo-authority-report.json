@@ -1,10 +1,10 @@
 {
   "build": "2026-08-08-authority-v1",
-  "generatedAt": "2026-09-01T00:37:20.000Z",
+  "generatedAt": "2026-09-01T14:08:52.000Z",
   "catalogUpdatedAt": "2026-09-01T00:37:20.290Z",
   "publicDeals": 1184,
-  "indexableDeals": 54,
-  "browseOnlyDeals": 1130,
+  "indexableDeals": 51,
+  "browseOnlyDeals": 1133,
   "dealsEnriched": 1184,
   "merchants": 10,
   "merchantPages": 45,
@@ -14,7 +14,7 @@
   "collectionGroups": 13,
   "collectionPages": 13,
   "dealsWithCollectionPage": 739,
-  "authorityPages": 20,
+  "authorityPages": 22,
   "authoritySitemap": "sitemap-authority.xml",
   "targetQueries": 1184,
   "scores": {
@@ -128,11 +128,13 @@
     "/collections/unlocked-smartphones/",
     "/collections/pokemon-cards/",
     "/collections/samsung-galaxy/",
+    "/collections/lenovo-thinkpad/",
     "/collections/dji-drones/",
     "/collections/security-cameras/",
     "/collections/equipment-attachments/",
     "/collections/makita-tools/",
-    "/collections/soundbars/"
+    "/collections/soundbars/",
+    "/collections/computer-monitors/"
   ],
   "collectionBrowsePaths": [
     "/collections/refurbished-electronics/",
@@ -149,7 +151,7 @@
     "/collections/computer-monitors/",
     "/collections/vpn-deals/"
   ],
-  "indexableCollectionPages": 10,
+  "indexableCollectionPages": 12,
   "staticPaths": [
     "/merchants/",
     "/comparisons/",
